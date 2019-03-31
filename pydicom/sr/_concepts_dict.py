@@ -9,10 +9,26 @@
 concepts = {}
 
 concepts['SRT'] = \
-{'AConstant': {'F-048FA': ('A-Constant', [4237])},
+{'ACEInhibitor': {'C-80150': ('ACE inhibitor', [3760])},
+ 'AConstant': {'F-048FA': ('A-Constant', [4237])},
  'ASCOBCockerSpanielDogBreed': {'L-80886': ('A.S.C.O.B. cocker spaniel dog '
                                             'breed',
                                             [7480])},
+ 'ATSMCu64': {'C-B07DB': ('ATSM Cu^64^', [4021])},
+ 'AVFistula': {'M-39390': ('AV Fistula', [3413, 3754])},
+ 'AVGrooveContinuationOfCircumflexArtery': {'T-43124': ('AV groove '
+                                                        'continuation of '
+                                                        'Circumflex Artery',
+                                                        [3014,
+                                                         3015,
+                                                         3604,
+                                                         3827,
+                                                         6102,
+                                                         6109,
+                                                         6117,
+                                                         7151,
+                                                         7192,
+                                                         9514])},
  'AVSequentialPacing': {'R-002D9': ('A-V sequential pacing', [3555])},
  'Abdomen': {'T-D4000': ('Abdomen',
                          [12020,
@@ -67,7 +83,7 @@ concepts['SRT'] = \
                                                  [3721])},
  'AblationPower': {'R-10043': ('Ablation power', [3425])},
  'Abnormal': {'R-42037': ('Abnormal', [222, 242, 3120])},
- 'AbnormalEcg': {'F-38002': ('Abnormal ECG', [12246, 3201, 3221, 3677])},
+ 'AbnormalECG': {'F-38002': ('Abnormal ECG', [12246, 3201, 3221, 3677])},
  'AbnormalExerciseToleranceTest': {'F-00103': ('Abnormal exercise tolerance '
                                                'test',
                                                [3201])},
@@ -108,7 +124,6 @@ concepts['SRT'] = \
                                        7192,
                                        9514])},
  'AccidentAndEmergency': {'R-300E3': ('Accident and Emergency', [7030])},
- 'AceInhibitor': {'C-80150': ('ACE inhibitor', [3760])},
  'AcehCattleBreed': {'L-8BB0E': ('Aceh cattle breed', [7480])},
  'Acepromazine': {'C-62960': ('Acepromazine', [623, 626])},
  'Acetabulum': {'T-12390': ('Acetabulum', [1000, 1001, 1005])},
@@ -213,11 +228,11 @@ concepts['SRT'] = \
                                                                     3743])},
  'AdministeredBeforeLabVisit': {'R-0031B': ('Administered before lab visit',
                                             [3741])},
- 'AdministeredBetween3And6HoursBeforePci': {'R-0037A': ('Administered between '
+ 'AdministeredBetween3And6HoursBeforePCI': {'R-0037A': ('Administered between '
                                                         '3 and 6 hours before '
                                                         'PCI',
                                                         [3740])},
- 'AdministeredBetween6HoursAnd7DaysBeforePci': {'R-0037B': ('Administered '
+ 'AdministeredBetween6HoursAnd7DaysBeforePCI': {'R-0037B': ('Administered '
                                                             'between 6 hours '
                                                             'and 7 days before '
                                                             'PCI',
@@ -230,10 +245,10 @@ concepts['SRT'] = \
                                                                     'Coronary '
                                                                     'Intervention',
                                                                     [3742])},
- 'AdministeredLessThan3HoursBeforePci': {'R-0037C': ('Administered less than 3 '
+ 'AdministeredLessThan3HoursBeforePCI': {'R-0037C': ('Administered less than 3 '
                                                      'hours before PCI',
                                                      [3740])},
- 'AdministeredLessThan72HoursBeforePci': {'R-0031E': ('Administered Less than '
+ 'AdministeredLessThan72HoursBeforePCI': {'R-0031E': ('Administered Less than '
                                                       '72 Hours before PCI',
                                                       [3743])},
  'AdministeredPriorToPercutaneousCoronaryIntervention': {'R-0031F': ('Administered '
@@ -286,10 +301,10 @@ concepts['SRT'] = \
  'AkhalTekeHorseBreed': {'L-8A1D5': ('Akhal-Teke horse breed', [7480])},
  'Akinesis': {'F-30004': ('Akinesis', [3703, 3706])},
  'AkitaDog': {'L-80708': ('Akita dog', [7480])},
- 'AksaÎBlackPiedPigBreed': {'L-805D4': ('Aksaî Black Pied pig breed', [7480])},
+ 'AksaîBlackPiedPigBreed': {'L-805D4': ('Aksaî Black Pied pig breed', [7480])},
  'AlaTauCattleBreed': {'L-8BAA4': ('Ala-Tau cattle breed', [7480])},
  'AlambadiCattleBreed': {'L-8BB1D': ('Alambadi cattle breed', [7480])},
- 'AlanoEspaÑOlDogBreed': {'L-80980': ('Alano Español dog breed', [7480])},
+ 'AlanoEspañolDogBreed': {'L-80980': ('Alano Español dog breed', [7480])},
  'AlapahaBluebloodBulldogBreed': {'L-80972': ('Alapaha blueblood bullDog breed',
                                               [7480])},
  'AlaskanKleeKaiDogBreed': {'L-88106': ('Alaskan Klee Kai dog breed', [7480])},
@@ -301,10 +316,10 @@ concepts['SRT'] = \
                                              [7480])},
  'AlbanianNativePigBreed': {'L-8B157': ('Albanian Native pig breed', [7480])},
  'AlbersSchonberg': {'R-10261': ('Albers-Schonberg', [4012])},
- 'AlbertSStain': {'C-2280B': ("Albert's stain", [8112])},
+ 'AlbertStain': {'C-2280B': ("Albert's stain", [8112])},
  'AlbeseCattleBreed': {'L-801BE': ('Albese cattle breed', [7480])},
- 'AlbÈResCattlebreed': {'L-801CA': ('Albères cattlebreed', [7480])},
- 'AlcianBlue8gxStain': {'C-22963': ('alcian blue 8GX stain', [8112])},
+ 'AlbèresCattlebreed': {'L-801CA': ('Albères cattlebreed', [7480])},
+ 'AlcianBlue8GXStain': {'C-22963': ('alcian blue 8GX stain', [8112])},
  'AlcoholConsumption': {'F-02573': ('Alcohol consumption', [3774])},
  'AlcoholSolubleNigrosineStain': {'C-22932': ('alcohol soluble nigrosine stain',
                                               [8112])},
@@ -325,10 +340,10 @@ concepts['SRT'] = \
  'AlizarinCyanineGreenStain': {'C-22959': ('alizarin cyanine green stain',
                                            [8112])},
  'AlizarinRedSStain': {'C-22953': ('alizarin red S stain', [8112])},
- 'AlizarinYellowGgStain': {'C-22813': ('alizarin yellow GG stain', [8112])},
+ 'AlizarinYellowGGStain': {'C-22813': ('alizarin yellow GG stain', [8112])},
  'AlizarinYellowRStain': {'C-22814': ('alizarin yellow R stain', [8112])},
- 'AlkaliBlue5b4bStain': {'C-22903': ('alkali blue 5B (4B) stain', [8112])},
- 'AlkaliBlue6bStain': {'C-22905': ('alkali blue 6B stain', [8112])},
+ 'AlkaliBlue5B4BStain': {'C-22903': ('alkali blue 5B (4B) stain', [8112])},
+ 'AlkaliBlue6BStain': {'C-22905': ('alkali blue 6B stain', [8112])},
  'AlkalinePhosphataseStain': {'C-2285B': ('alkaline phosphatase stain',
                                           [8112])},
  'AllLegs': {'T-D8030': ('All legs', [7482, 7483])},
@@ -495,9 +510,9 @@ concepts['SRT'] = \
  'AngelnSaddlebackPigBreed': {'L-80684': ('Angeln Saddleback pig breed',
                                           [7480])},
  'AnginaClassI': {'D3-12001': ('Angina Class I', [3719])},
- 'AnginaClassIi': {'D3-12002': ('Angina Class II', [3719])},
- 'AnginaClassIii': {'D3-12003': ('Angina Class III', [3719])},
- 'AnginaClassIv': {'D3-12004': ('Angina Class IV', [3719])},
+ 'AnginaClassII': {'D3-12002': ('Angina Class II', [3719])},
+ 'AnginaClassIII': {'D3-12003': ('Angina Class III', [3719])},
+ 'AnginaClassIV': {'D3-12004': ('Angina Class IV', [3719])},
  'AnginaPectoris': {'D3-13012': ('Angina pectoris', [12246, 3201, 64])},
  'Angiography': {'P5-009A0': ('Angiography', [3405, 3428])},
  'Angiolipoma': {'M-88610': ('Angiolipoma', [6030, 6031])},
@@ -508,7 +523,7 @@ concepts['SRT'] = \
  'AngioplastyInflationPressure': {'R-002D0': ('Angioplasty Inflation pressure',
                                               [3425])},
  'Angiosarcoma': {'M-91203': ('Angiosarcoma', [6030, 6033])},
- 'AngiotensinIiReceptorAntagonist': {'C-81300': ('Angiotensin II receptor '
+ 'AngiotensinIIReceptorAntagonist': {'C-81300': ('Angiotensin II receptor '
                                                  'antagonist',
                                                  [3760])},
  'Angle': {'G-A160': ('Angle', [12304])},
@@ -878,8 +893,8 @@ concepts['SRT'] = \
                                               [7480])},
  'ArgentinePoloPonyHorseBreed': {'L-80473': ('Argentine Polo Pony horse breed',
                                              [7480])},
- 'AriÉGeoisDogBreed': {'L-80979': ('Ariégeois dog breed', [7480])},
- 'AriÉGeoisPonyHorseBreed': {'L-80453': ('Ariégeois pony horse breed', [7480])},
+ 'AriégeoisDogBreed': {'L-80979': ('Ariégeois dog breed', [7480])},
+ 'AriégeoisPonyHorseBreed': {'L-80453': ('Ariégeois pony horse breed', [7480])},
  'ArmErgometer': {'A-1002A': ('Arm ergometer', [3203])},
  'ArmantDogBreed': {'L-808F6': ('Armant dog breed', [7480])},
  'ArmoricanCattleBreed': {'L-8B9A2': ('Armorican cattle breed', [7480])},
@@ -887,7 +902,6 @@ concepts['SRT'] = \
  'Arrhythmia': {'D3-30000': ('Arrhythmia',
                              [12246, 3201, 3221, 3413, 3727, 3755, 3756]),
                 'R-FAE6C': ('Arrhythmia', [3700])},
- 'Arsenic_72': {'C-115A2': ('^72^Arsenic', [4020])},
  'ArsiCattleBreed': {'L-8BAF4': ('Arsi cattle breed', [7480])},
  'ArterialBloodStasis': {'R-101B3': ('Arterial Blood Stasis', [3494])},
  'ArterialDissection': {'D3-80086': ('Arterial dissection',
@@ -966,7 +980,7 @@ concepts['SRT'] = \
                                                 'breast',
                                                 [6030, 6031])},
  'AtaxiaOrIncoordination': {'F-A4580': ('Ataxia or incoordination', [3205])},
- 'AtebrinFsStain': {'C-22A03': ('atebrin FS stain', [8112])},
+ 'AtebrinFSStain': {'C-22A03': ('atebrin FS stain', [8112])},
  'Atherectomy': {'P1-30350': ('Atherectomy', [3405, 9])},
  'AtherectomyByLaser': {'P1-30352': ('Atherectomy by laser', [3405, 9])},
  'AtherectomyByRotaryCutter': {'P1-30351': ('Atherectomy by rotary cutter',
@@ -1032,7 +1046,6 @@ concepts['SRT'] = \
  'Atrium': {'T-32100': ('Atrium', [4, 6102, 6109, 6113, 7151, 7192, 9514])},
  'Atropine': {'C-67770': ('Atropine', [10, 3204]),
               'C-677B9': ('Atropine', [4208])},
- 'AtsmCu64': {'C-B07DB': ('ATSM Cu^64^', [4021])},
  'Attending': {'J-005E8': ('Attending', [7450, 7452])},
  'AtypicalAngina': {'R-0038F': ('Atypical Angina', [3202, 3220])},
  'AtypicalAnginaVariantAngina': {'D3-12400': ('Atypical Angina, Variant Angina',
@@ -1109,20 +1122,6 @@ concepts['SRT'] = \
  'AutonomicNerve': {'T-A9605': ('Autonomic nerve', [7151, 7167, 7192, 9514])},
  'AutonomousBreathing': {'F-20030': ('autonomous breathing', [3823])},
  'AuxoisHorseBreed': {'L-80475': ('Auxois horse breed', [7480])},
- 'AvFistula': {'M-39390': ('AV Fistula', [3413, 3754])},
- 'AvGrooveContinuationOfCircumflexArtery': {'T-43124': ('AV groove '
-                                                        'continuation of '
-                                                        'Circumflex Artery',
-                                                        [3014,
-                                                         3015,
-                                                         3604,
-                                                         3827,
-                                                         6102,
-                                                         6109,
-                                                         6117,
-                                                         7151,
-                                                         7192,
-                                                         9514])},
  'AveligneseHorseBreed': {'L-80476': ('Avelignese horse breed', [7480])},
  'AverageDiastolicBloodPressure': {'F-00E22': ('Average diastolic blood '
                                                'pressure',
@@ -1193,7 +1192,7 @@ concepts['SRT'] = \
  'AzerbaijanZebuCattleBreed': {'L-8BAF7': ('Azerbaijan Zebu cattle breed',
                                            [7480])},
  'AzoBlackStain': {'C-22873': ('azo black stain', [8112])},
- 'AzocarmineGGxStain': {'C-22929': ('azocarmine G (GX) stain', [8112])},
+ 'AzocarmineGGXStain': {'C-22929': ('azocarmine G (GX) stain', [8112])},
  'AzophloxinStain': {'C-22842': ('azophloxin stain', [8112])},
  'AzoresHorseBreed': {'L-80478': ('Azores horse breed', [7480])},
  'AzorubinSStain': {'C-22831': ('azorubin S stain', [8112])},
@@ -1215,6 +1214,10 @@ concepts['SRT'] = \
                              7151,
                              7192,
                              9514])},
+ 'BBShotLeadPellet': {'A-32475': ('BB shot (Lead Pellet)',
+                                  [6040, 6401, 7111, 7112, 7151, 7193])},
+ 'BKB1PigBreed': {'L-8069D': ('BKB-1 pig breed', [7480])},
+ 'BSIPigBreed': {'L-806E3': ('BSI pig breed', [7480])},
  'BaXuyenPigBreed': {'L-80664': ('Ba Xuyen pig breed', [7480])},
  'BachaurCattleBreed': {'L-8BACF': ('Bachaur cattle breed', [7480])},
  'Back': {'T-D2100': ('Back', [4, 7151, 7192, 9514])},
@@ -1291,7 +1294,6 @@ concepts['SRT'] = \
                                                    [7480])},
  'Barium': {'C-12200': ('Barium', [13, 300])},
  'BariumSulfate': {'C-12217': ('Barium Sulfate', [12, 3850])},
- 'Barium_133': {'C-122A5': ('^133^Barium', [18])},
  'BarkaZebuCattleBreed': {'L-8BAD0': ('Barka zebu cattle breed', [7480])},
  'BarotseCattleBreed': {'L-8014F': ('Barotse cattle breed', [7480])},
  'BarraDoCuanzoCattleBreed': {'L-8015A': ('Barra do Cuanzo cattle breed',
@@ -1335,7 +1337,7 @@ concepts['SRT'] = \
                               9514])},
  'BasqueBlackPiedPigBreed': {'L-805D8': ('Basque Black Pied pig breed',
                                          [7480])},
- 'BassetArtÉSianNormandDogBreed': {'L-80957': ('Basset Artésian Normand dog '
+ 'BassetArtésianNormandDogBreed': {'L-80957': ('Basset Artésian Normand dog '
                                                'breed',
                                                [7480])},
  'BassetBleuDeGascogneDogBreed': {'L-808BD': ('Basset Bleu de Gascogne dog '
@@ -1344,7 +1346,7 @@ concepts['SRT'] = \
  'BassetFauveDeBretagneDogBreed': {'L-808AB': ('Basset Fauve de Bretagne dog '
                                                'breed',
                                                [7480])},
- 'BassetGriffonVendÉEnDogBreed': {'L-808BB': ('Basset Griffon Vendéen dog '
+ 'BassetGriffonVendéenDogBreed': {'L-808BB': ('Basset Griffon Vendéen dog '
                                               'breed',
                                               [7480])},
  'BassetHound': {'L-80713': ('Basset hound', [7480])},
@@ -1356,9 +1358,9 @@ concepts['SRT'] = \
                                               [7480])},
  'BatangasCattleBreed': {'L-8015D': ('Batangas cattle breed', [7480])},
  'BatardDogBreed': {'L-808BC': ('Batard dog breed', [7480])},
- 'BauerSChromicAcidLeucofuchsinStain': {'C-2286E': ("bauer's chromic acid "
-                                                    'leucofuchsin stain',
-                                                    [8112])},
+ 'BauerChromicAcidLeucofuchsinStain': {'C-2286E': ("bauer's chromic acid "
+                                                   'leucofuchsin stain',
+                                                   [8112])},
  'BavarianForestSheepBreed': {'L-80BA4': ('Bavarian Forest sheep breed',
                                           [7480])},
  'BavarianMountainHoundDogBreed': {'L-80958': ('Bavarian Mountain Hound dog '
@@ -1369,8 +1371,6 @@ concepts['SRT'] = \
  'BavendaCattleBreed': {'L-8015E': ('Bavenda cattle breed', [7480])},
  'BazadaisCattleBreed': {'L-801D8': ('Bazadais cattle breed', [7480])},
  'BaznaPigBreed': {'L-8B145': ('Bazna pig breed', [7480])},
- 'BbShotLeadPellet': {'A-32475': ('BB shot (Lead Pellet)',
-                                  [6040, 6401, 7111, 7112, 7151, 7193])},
  'Beagle': {'L-80714': ('Beagle', [7480])},
  'BeagleElizabethanDogBreed': {'L-80969': ('Beagle, Elizabethan dog breed',
                                            [7480])},
@@ -1416,7 +1416,7 @@ concepts['SRT'] = \
                                             [7480])},
  'BelgianHorseBreed': {'L-80416': ('Belgian horse breed', [7480])},
  'BelgianLaekenDog': {'L-80717': ('Belgian laeken dog', [7480])},
- 'BelgianLandraceBnPigBreed': {'L-805B4': ('Belgian Landrace, BN pig breed',
+ 'BelgianLandraceBNPigBreed': {'L-805B4': ('Belgian Landrace, BN pig breed',
                                            [7480])},
  'BelgianMalinoisDog': {'L-80718': ('Belgian malinois dog', [7480])},
  'BelgianRedCattleBreed': {'L-801DC': ('Belgian Red cattle breed', [7480])},
@@ -1454,7 +1454,6 @@ concepts['SRT'] = \
                                                                     'adenoma)',
                                                                     [6030,
                                                                      6031])},
- 'Benign_2': {'F-037BD': ('2 - Benign', [6026, 6027])},
  'BentheimBlackPiedPigBreed': {'L-806F1': ('Bentheim Black Pied pig breed',
                                            [7480])},
  'BentheimerLandschafSheepBreed': {'L-80C29': ('Bentheimer Landschaf sheep '
@@ -1534,7 +1533,6 @@ concepts['SRT'] = \
                                             [7480])},
  'BiteBlock': {'A-01105': ('Bite block', [7151, 7157, 7193, 9505, 9513, 9520])},
  'BizanianHoundDogBreed': {'L-807E3': ('Bizanian Hound dog breed', [7480])},
- 'Bkb1PigBreed': {'L-8069D': ('BKB-1 pig breed', [7480])},
  'BlackAndTanCoonhoundDogBreed': {'L-80762': ('Black and tan coonhound dog '
                                               'breed',
                                               [7480])},
@@ -1752,7 +1750,7 @@ concepts['SRT'] = \
  'BorderLeicesterSheepBreed': {'L-8033A': ('Border Leicester sheep breed',
                                            [7480])},
  'BorderTerrier': {'L-80724': ('Border terrier', [7480])},
- 'BorderlineNormalEcg': {'F-38056': ('Borderline Normal ECG', [3677])},
+ 'BorderlineNormalECG': {'F-38056': ('Borderline Normal ECG', [3677])},
  'BoreraySheepBreed': {'L-8033B': ('Boreray sheep breed', [7480])},
  'BorghigianaPigBreed': {'L-80623': ('Borghigiana pig breed', [7480])},
  'BorgouXZebuCattleBreed': {'L-8BB7C': ('Borgou X zebu cattle breed', [7480])},
@@ -1778,23 +1776,24 @@ concepts['SRT'] = \
  'BothBreasts': {'T-04080': ('Both breasts', [6022, 6023])},
  'BothEyes': {'T-AA180': ('Both eyes', [4209])},
  'Bottle': {'A-27500': ('Bottle', [68, 69])},
- 'BouinSFluid': {'F-62235': ("Bouin's fluid", [8114])},
+ 'BouinFluid': {'F-62235': ("Bouin's fluid", [8114])},
  'BoulonnaisHorseBreed': {'L-80486': ('Boulonnais horse breed', [7480])},
  'BouvierDesFlandres': {'L-80727': ('Bouvier des Flandres', [7480])},
  'Bovinae': {'L-8B9F9': ('Bovinae', [7454])},
  'BovskaSheepBreed': {'L-8033C': ('Bovska sheep breed', [7480])},
  'BoxerDog': {'L-80728': ('Boxer dog', [7480])},
- 'BoydPerforatingVein': {'T-49424': ('Boyd perforating vein', [3607, 3630])},
- 'BoydSPerforatingVein': {'T-49424': ("Boyd's perforating vein",
-                                      [12103,
-                                       12110,
-                                       3010,
-                                       3827,
-                                       4,
-                                       4042,
-                                       7151,
-                                       7192,
-                                       9514])},
+ 'BoydPerforatingVein': {'T-49424': ("Boyd's perforating vein",
+                                     [12103,
+                                      12110,
+                                      3010,
+                                      3607,
+                                      3630,
+                                      3827,
+                                      4,
+                                      4042,
+                                      7151,
+                                      7192,
+                                      9514])},
  'BoykinSpanielDogBreed': {'L-809B6': ('Boykin Spaniel dog breed', [7480])},
  'BraMaineXZebuCattleBreed': {'L-8BB7F': ('Bra-Maine X zebu cattle breed',
                                           [7480])},
@@ -1873,7 +1872,7 @@ concepts['SRT'] = \
                                                'breed',
                                                [7480])},
  'BraqueBelgeDogBreed': {'L-807EF': ('Braque Belge dog breed', [7480])},
- 'BraqueDAriÉGeDogBreed': {'L-807E8': ("Braque d'Ariége dog breed", [7480])},
+ 'BraqueDAriégeDogBreed': {'L-807E8': ("Braque d'Ariége dog breed", [7480])},
  'BraqueDAuvergneDogBreed': {'L-809AA': ("Braque d'Auvergne dog breed",
                                          [7480])},
  'BraqueDuBourbonnaisDogBreed': {'L-809A5': ('Braque du Bourbonnais dog breed',
@@ -1882,7 +1881,7 @@ concepts['SRT'] = \
  'BraqueFrancaisDePetiteTailleDogBreed': {'L-809A6': ('Braque Francais de '
                                                       'Petite Taille dog breed',
                                                       [7480])},
- 'BraqueFranÇAisDeGrandTailleDogBreed': {'L-80999': ('Braque Français de Grand '
+ 'BraqueFrançaisDeGrandTailleDogBreed': {'L-80999': ('Braque Français de Grand '
                                                      'Taille dog breed',
                                                      [7480])},
  'BraqueSaintGermainDogBreed': {'L-809A7': ('Braque Saint-Germain dog breed',
@@ -1990,9 +1989,6 @@ concepts['SRT'] = \
                                                    'illumination',
                                                    [4203])},
  'Broden': {'R-10267': ('Broden', [4012])},
- 'Bromine_75': {'C-113A1': ('^75^Bromine', [4020])},
- 'Bromine_76': {'C-113A2': ('^76^Bromine', [4020])},
- 'Bromine_77': {'C-113A3': ('^77^Bromine', [4020])},
  'Bronchial': {'R-40939': ('Bronchial', [6129])},
  'BronchialArtery': {'T-46310': ('Bronchial artery',
                                  [6102, 6109, 6117, 7151, 7192, 9514])},
@@ -2012,26 +2008,26 @@ concepts['SRT'] = \
                            7155,
                            7192,
                            9514])},
- 'BroselowLutenBlueZone1923Kg': {'F-051E0': ('Broselow Luten Blue Zone (19-23 '
+ 'BroselowLutenBlueZone1923kg': {'F-051E0': ('Broselow Luten Blue Zone (19-23 '
                                              'kg)',
                                              [7039, 7040])},
- 'BroselowLutenGreenZone3036Kg': {'F-051E6': ('Broselow Luten Green Zone '
+ 'BroselowLutenGreenZone3036kg': {'F-051E6': ('Broselow Luten Green Zone '
                                               '(30-36 kg)',
                                               [7039, 7040])},
- 'BroselowLutenOrangeZone2429Kg': {'F-051E5': ('Broselow Luten Orange Zone '
+ 'BroselowLutenOrangeZone2429kg': {'F-051E5': ('Broselow Luten Orange Zone '
                                                '(24-29 kg)',
                                                [7039, 7040])},
- 'BroselowLutenPinkZone67Kg': {'F-051E3': ('Broselow Luten Pink Zone (6-7 kg)',
+ 'BroselowLutenPinkZone67kg': {'F-051E3': ('Broselow Luten Pink Zone (6-7 kg)',
                                            [7039, 7040])},
- 'BroselowLutenPurpleZone1011Kg': {'F-051E4': ('Broselow Luten Purple Zone '
+ 'BroselowLutenPurpleZone1011kg': {'F-051E4': ('Broselow Luten Purple Zone '
                                                '(10-11 kg)',
                                                [7039, 7040])},
- 'BroselowLutenRedZone89Kg': {'F-051DF': ('Broselow Luten Red Zone (8-9 kg)',
+ 'BroselowLutenRedZone89kg': {'F-051DF': ('Broselow Luten Red Zone (8-9 kg)',
                                           [7039, 7040])},
- 'BroselowLutenWhiteZone1518Kg': {'F-051E7': ('Broselow Luten White Zone '
+ 'BroselowLutenWhiteZone1518kg': {'F-051E7': ('Broselow Luten White Zone '
                                               '(15-18 kg)',
                                               [7039, 7040])},
- 'BroselowLutenYellowZone1214Kg': {'F-051E8': ('Broselow Luten Yellow Zone '
+ 'BroselowLutenYellowZone1214kg': {'F-051E8': ('Broselow Luten Yellow Zone '
                                                '(12-14 kg)',
                                                [7039, 7040])},
  'BrownAtlasCattleBreed': {'L-8B9C5': ('Brown Atlas cattle breed', [7480])},
@@ -2040,7 +2036,6 @@ concepts['SRT'] = \
  'BrownWelshCowBreed': {'L-80175': ('Brown Welsh cow breed', [7480])},
  'BruceProtocol': {'P2-7131A': ('Bruce protocol', [12001, 3261])},
  'BrunoDeJuraDogBreed': {'L-808BF': ('Bruno de Jura dog breed', [7480])},
- 'BsiPigBreed': {'L-806E3': ('BSI pig breed', [7480])},
  'BuccalMucosa': {'T-51305': ('buccal mucosa', [7601])},
  'BuccalRegionOfFace': {'T-D1206': ('Buccal region of face',
                                     [4, 7151, 7192, 9514])},
@@ -2098,10 +2093,19 @@ concepts['SRT'] = \
                                                   [7480])},
  'BypassGraftAngiography': {'P5-30107': ('Bypass graft angiography',
                                          [3405, 3428])},
- 'BÜNdnerGoatBreed': {'L-80281': ('Bündner goat breed', [7480])},
- 'BÜNdnerOberlandSheepBreed': {'L-8031A': ('Bündner Oberland sheep breed',
+ 'BündnerGoatBreed': {'L-80281': ('Bündner goat breed', [7480])},
+ 'BündnerOberlandSheepBreed': {'L-8031A': ('Bündner Oberland sheep breed',
                                            [7480])},
  'C1Vertebra': {'T-11610': ('C1 vertebra', [1000, 1001, 1003])},
+ 'COOPELSO93CattleBreed': {'L-8B9E0': ('COOPELSO 93 cattle breed', [7480])},
+ 'CPFPigBreed': {'L-80550': ('CPF pig breed', [7480])},
+ 'CTAngiographyOfCoronaryArteries': {'P5-00A5C': ('CT angiography of coronary '
+                                                  'arteries',
+                                                  [3757])},
+ 'CTOfAbdominalAorta': {'P5-0802B': ('CT of abdominal aorta', [3820])},
+ 'CTOfBreast': {'P5-0801C': ('CT of breast', [6050, 6083])},
+ 'CTV': {'R-429EB': ('CTV', [9534])},
+ 'CTWithoutContrast': {'P5-0808E': ('CT without contrast', [10014])},
  'CabanninaCattleBreed': {'L-8B9CC': ('Cabannina cattle breed', [7480])},
  'CachenaCattleBreed': {'L-801E3': ('Cachena cattle breed', [7480])},
  'Cachexia': {'F-029F7': ('Cachexia', [3205])},
@@ -2151,7 +2155,6 @@ concepts['SRT'] = \
  'CaliforniaVariegatedMutantSheepBreed': {'L-80398': ('California Variegated '
                                                       'Mutant sheep breed',
                                                       [7480])},
- 'Californium_252': {'C-124B4': ('^252^Californium', [9528])},
  'CallithrixJacchusCommonMarmoset': {'L-001DE': ('Callithrix jacchus (common '
                                                  'marmoset)',
                                                  [7454])},
@@ -2199,23 +2202,23 @@ concepts['SRT'] = \
  'CanaryIslandGoatBreed': {'L-80251': ('Canary Island goat breed', [7480])},
  'CanastraPigBreed': {'L-8058C': ('Canastra pig breed', [7480])},
  'CanastrinhoPigBreed': {'L-8059C': ('Canastrinho pig breed', [7480])},
- 'CanastrÃOCabanoPigBreed': {'L-80599': ('Canastrão, Cabano pig breed',
+ 'CanastrãoCabanoPigBreed': {'L-80599': ('Canastrão, Cabano pig breed',
                                          [7480])},
- 'CanastrÃOCapitÃOChicoPigBreed': {'L-80597': ('Canastrão, Capitão Chico pig '
+ 'CanastrãoCapitãoChicoPigBreed': {'L-80597': ('Canastrão, Capitão Chico pig '
                                                'breed',
                                                [7480])},
- 'CanastrÃOJunqueiraPigBreed': {'L-80596': ('Canastrão, Junqueira pig breed',
+ 'CanastrãoJunqueiraPigBreed': {'L-80596': ('Canastrão, Junqueira pig breed',
                                             [7480])},
- 'CanastrÃOPigBreed': {'L-80595': ('Canastrão pig breed', [7480])},
- 'CanastrÃOVermelhoPigBreed': {'L-8059A': ('Canastrão, Vermelho pig breed',
+ 'CanastrãoPigBreed': {'L-80595': ('Canastrão pig breed', [7480])},
+ 'CanastrãoVermelhoPigBreed': {'L-8059A': ('Canastrão, Vermelho pig breed',
                                            [7480])},
- 'CanastrÃOZabumbaPigBreed': {'L-80598': ('Canastrão, Zabumba pig breed',
+ 'CanastrãoZabumbaPigBreed': {'L-80598': ('Canastrão, Zabumba pig breed',
                                           [7480])},
  'CanchimXZebuCattleBreed': {'L-8BB4D': ('Canchim X zebu cattle breed',
                                          [7480])},
  'CaneCorsoDogBreed': {'L-809A4': ('Cane Corso dog breed', [7480])},
  'CanikHorseBreed': {'L-80493': ('Canik horse breed', [7480])},
- 'CanindÉGoatBreed': {'L-80250': ('Canindé goat breed', [7480])},
+ 'CanindéGoatBreed': {'L-80250': ('Canindé goat breed', [7480])},
  'CanineRegion': {'R-FB35B': ('Canine region', [4017])},
  'Canis': {'L-881FC': ('Canis', [7454])},
  'CanisLupus': {'L-88121': ('Canis lupus', [7454])},
@@ -2244,8 +2247,6 @@ concepts['SRT'] = \
  'CarbonFiber': {'F-61202': ('Carbon Fiber', [10067, 7300])},
  'CarbonMonoxideC11': {'C-B1045': ('Carbon monoxide C^11^', [4021])},
  'CarbonMonoxideO15': {'C-B103A': ('Carbon monoxide O^15^', [4021])},
- 'Carbon_11': {'C-105A1': ('^11^Carbon', [4020])},
- 'Carbon_14': {'C-105A2': ('^14^Carbon', [18])},
  'Carcinogen': {'C-29000': ('Carcinogen', [602])},
  'Carcinoma': {'M-80103': ('Carcinoma', [638, 639])},
  'CarcinomaInSituOfMaleBreast': {'D7-F0902': ('Carcinoma in situ of male '
@@ -2262,6 +2263,9 @@ concepts['SRT'] = \
  'CardiacBloodPoolImagingNuclear': {'P5-D3304': ('Cardiac blood pool imaging '
                                                  '(nuclear)',
                                                  [3206, 3757])},
+ 'CardiacCT': {'P5-08025': ('Cardiac CT', [3757])},
+ 'CardiacCTForCalciumScoring': {'P5-080C2': ('Cardiac CT for calcium scoring',
+                                             [3757])},
  'CardiacCathCoronaryAngiogramAndLeftVentriculogram': {'P5-00A25': ('Cardiac '
                                                                     'cath '
                                                                     'coronary '
@@ -2320,9 +2324,6 @@ concepts['SRT'] = \
  'CardiacCatheterizationTherapyPhase': {'G-7297': ('Cardiac catheterization '
                                                    'therapy phase',
                                                    [3250, 3405])},
- 'CardiacCt': {'P5-08025': ('Cardiac CT', [3757])},
- 'CardiacCtForCalciumScoring': {'P5-080C2': ('Cardiac CT for calcium scoring',
-                                             [3757])},
  'CardiacEjectionFraction': {'F-32070': ('Cardiac ejection fraction',
                                          [12252,
                                           12257,
@@ -2357,8 +2358,8 @@ concepts['SRT'] = \
                                12272,
                                12274])},
  'CardiacIntensiveCare': {'R-30240': ('Cardiac Intensive Care', [7030])},
- 'CardiacMri': {'P5-09011': ('Cardiac MRI', [3206, 3757, 3820])},
- 'CardiacMriStress': {'P0-00CA7': ('Cardiac MRI stress', [3757])},
+ 'CardiacMRI': {'P5-09011': ('Cardiac MRI', [3206, 3757, 3820])},
+ 'CardiacMRIStress': {'P0-00CA7': ('Cardiac MRI stress', [3757])},
  'CardiacMuscle': {'T-1300D': ('Cardiac muscle', [7710])},
  'CardiacOutput': {'F-32100': ('Cardiac Output',
                                [12200,
@@ -2414,7 +2415,7 @@ concepts['SRT'] = \
                                           [60, 9300])},
  'CardiothoracicSurgery': {'R-30280': ('Cardiothoracic Surgery', [7030])},
  'CardiotonicDrug': {'C-80123': ('Cardiotonic drug', [10])},
- 'CardiovascularCt': {'P5-0807F': ('cardiovascular CT', [3820])},
+ 'CardiovascularCT': {'P5-0807F': ('cardiovascular CT', [3820])},
  'CardiovascularOrificeArea': {'G-038E': ('Cardiovascular Orifice Area',
                                           [12200,
                                            12204,
@@ -2492,7 +2493,7 @@ concepts['SRT'] = \
  'CarmineStain': {'C-22971': ('carmine stain', [8112])},
  'CarminicAcidStain': {'C-22972': ('carminic acid stain', [8112])},
  'CarmoisineAStain': {'C-22822': ('carmoisine A stain', [8112])},
- 'CarnoySFluid': {'F-62231': ("Carnoy's fluid", [8114])},
+ 'CarnoyFluid': {'F-62231': ("Carnoy's fluid", [8114])},
  'CarolinaDogBreed': {'L-80984': ('Carolina Dog breed', [7480])},
  'CarotidArtery': {'T-45010': ('Carotid Artery',
                                [1000,
@@ -2589,8 +2590,8 @@ concepts['SRT'] = \
                                            [7480])},
  'Caudad': {'R-10242': ('caudad', [4011, 502])},
  'Caudal': {'G-A108': ('Caudal', [2, 23, 5, 502])},
- 'CaudalLao': {'R-101C4': ('Caudal LAO', [3466])},
- 'CaudalRao': {'R-101C6': ('Caudal RAO', [3466])},
+ 'CaudalLAO': {'R-101C4': ('Caudal LAO', [3466])},
+ 'CaudalRAO': {'R-101C6': ('Caudal RAO', [3466])},
  'CaudateNucleus': {'T-A3200': ('Caudate Nucleus',
                                 [7140, 7151, 7153, 7192, 9514])},
  'CaudoCranial': {'R-10244': ('caudo-cranial', [4010, 501])},
@@ -2726,8 +2727,6 @@ concepts['SRT'] = \
                                        9514])},
  'Cervix': {'T-83200': ('Cervix',
                         [12023, 4, 4040, 6202, 6204, 7151, 7160, 7192, 9514])},
- 'Cesium_131': {'C-142A5': ('^131^Cesium', [9528])},
- 'Cesium_137': {'C-142B2': ('^137^Cesium', [9528])},
  'CeskyFousekDogBreed': {'L-80987': ('Cesky Fousek dog breed', [7480])},
  'CeskyTerrierDogBreed': {'L-80988': ('Cesky Terrier dog breed', [7480])},
  'CestrumParqui': {'L-D9814': ('Cestrum parqui', [7480])},
@@ -2814,13 +2813,13 @@ concepts['SRT'] = \
  'ChianinaPigBreed': {'L-80624': ('Chianina pig breed', [7480])},
  'ChickasawHorseBreed': {'L-80499': ('Chickasaw horse breed', [7480])},
  'ChienDArtoisDogBreed': {'L-80991': ("Chien d'Artois dog breed", [7480])},
- 'ChienFranÇAisBlancEtNoirDogBreed': {'L-80983': ('Chien Français Blanc et '
+ 'ChienFrançaisBlancEtNoirDogBreed': {'L-80983': ('Chien Français Blanc et '
                                                   'Noir dog breed',
                                                   [7480])},
- 'ChienFranÇAisBlancEtOrangeDogBreed': {'L-80998': ('Chien Français Blanc et '
+ 'ChienFrançaisBlancEtOrangeDogBreed': {'L-80998': ('Chien Français Blanc et '
                                                     'Orange dog breed',
                                                     [7480])},
- 'ChienFranÇAisTricoloreDogBreed': {'L-80993': ('Chien Français Tricolore dog '
+ 'ChienFrançaisTricoloreDogBreed': {'L-80993': ('Chien Français Tricolore dog '
                                                 'breed',
                                                 [7480])},
  'ChifordCattleBreed': {'L-8B9DC': ('Chiford cattle breed', [7480])},
@@ -2877,12 +2876,11 @@ concepts['SRT'] = \
  'Chromium51Albumin': {'C-B1012': ('Chromium^51^ albumin', [25])},
  'Chromium51Chloride': {'C-B1013': ('Chromium^51^ chloride', [25])},
  'ChromiumTrioxide': {'C-12916': ('Chromium trioxide', [8114])},
- 'Chromium_51': {'C-129A2': ('^51^Chromium', [18])},
- 'Chromotrope2rStain': {'C-22838': ('chromotrope 2R stain', [8112])},
+ 'Chromotrope2RStain': {'C-22838': ('chromotrope 2R stain', [8112])},
  'Chronic': {'G-A270': ('Chronic', [3770, 6130])},
  'ChronicallyIll': {'F-0600C': ('Chronically ill', [3772])},
  'ChronotropicIncompetence': {'F-380B2': ('Chronotropic incompetence', [3213])},
- 'ChryakPicPigBreed': {'L-8065A': ('Chryak PIC pig breed', [7480])},
+ 'ChryakPICPigBreed': {'L-8065A': ('Chryak PIC pig breed', [7480])},
  'ChrysoidineRStain': {'C-22806': ('chrysoidine R stain', [8112])},
  'ChrysoidineYStain': {'C-22805': ('chrysoidine Y stain', [8112])},
  'ChumbivilcasHorseBreed': {'L-8049D': ('Chumbivilcas horse breed', [7480])},
@@ -2944,11 +2942,11 @@ concepts['SRT'] = \
  'Citrate': {'F-61080': ('Citrate', [218, 4032, 4033, 7180, 7186, 7469])},
  'ClassIAntiarrhythmicAgent': {'F-6181B': ('class I antiarrhythmic agent',
                                            [3762])},
- 'ClassIiAntiarrhythmicAgent': {'F-61861': ('class II antiarrhythmic agent',
+ 'ClassIIAntiarrhythmicAgent': {'F-61861': ('class II antiarrhythmic agent',
                                             [3762])},
- 'ClassIiiAntiarrhythmicAgent': {'F-61995': ('class III antiarrhythmic agent',
+ 'ClassIIIAntiarrhythmicAgent': {'F-61995': ('class III antiarrhythmic agent',
                                              [3762])},
- 'ClassIvAntiarrhythmicAgent': {'F-618AE': ('class IV antiarrhythmic agent',
+ 'ClassIVAntiarrhythmicAgent': {'F-618AE': ('class IV antiarrhythmic agent',
                                             [3762])},
  'Claudication': {'F-18010': ('Claudication', [3220, 3221])},
  'Clavicle': {'T-12310': ('Clavicle',
@@ -3007,9 +3005,6 @@ concepts['SRT'] = \
                                                 'calcification',
                                                 [6010, 6011, 6132])},
  'CobaltChromiumAlloy': {'F-6121C': ('Cobalt-chromium alloy', [300])},
- 'Cobalt_57': {'C-144A3': ('^57^Cobalt', [18])},
- 'Cobalt_58': {'C-144A4': ('^58^Cobalt', [18])},
- 'Cobalt_60': {'C-144A6': ('^60^Cobalt', [18, 9527, 9528])},
  'CoburgerFuchsschafSheepBreed': {'L-8035E': ('Coburger Fuchsschaf sheep breed',
                                               [7480])},
  'Cocaine': {'F-61C76': ('Cocaine', [6089])},
@@ -3017,13 +3012,13 @@ concepts['SRT'] = \
  'Coccyx': {'T-11BF0': ('Coccyx',
                         [4, 4009, 4030, 4031, 4042, 7151, 7192, 9514])},
  'CochinealStain': {'C-22973': ('cochineal stain', [8112])},
- 'CockettSPerforatingVein': {'T-49426': ("Cockett's perforating vein",
-                                         [12103,
-                                          12110,
-                                          3827,
-                                          7151,
-                                          7192,
-                                          9514])},
+ 'CockettPerforatingVein': {'T-49426': ("Cockett's perforating vein",
+                                        [12103,
+                                         12110,
+                                         3827,
+                                         7151,
+                                         7192,
+                                         9514])},
  'CoinLesion': {'F-20172': ('Coin lesion', [6102, 6104])},
  'ColNoirDuValaisGoatBreed': {'L-80289': ('Col Noir du Valais goat breed',
                                           [7480])},
@@ -3177,7 +3172,6 @@ concepts['SRT'] = \
                                    9514])},
  'Complaint': {'F-04BA9': ('Complaint', [3769])},
  'Complete': {'R-404F1': ('Complete', [67])},
- 'CompletePerfusion_3': {'R-00382': ('3: Complete Perfusion', [3713])},
  'CompleteTranspositionOfGreatVessels': {'D4-31010': ('Complete transposition '
                                                       'of great vessels',
                                                       [12248, 12249])},
@@ -3285,7 +3279,7 @@ concepts['SRT'] = \
  'ConstrictedPupil': {'F-0123A': ('Constricted Pupil', [4222])},
  'ConstrictivePericarditis': {'D3-91030': ('Constrictive pericarditis',
                                            [3700, 3728])},
- 'ConstructionOfLvToAortaTunnelWRvToPaValvedConduit': {'P0-00C6B': ('Construction '
+ 'ConstructionOfLVToAortaTunnelWRVToPAValvedConduit': {'P0-00C6B': ('Construction '
                                                                     'of LV to '
                                                                     'aorta '
                                                                     'tunnel w '
@@ -3320,18 +3314,12 @@ concepts['SRT'] = \
  'ConvexNoncontactFundusLens': {'R-1023D': ('Convex noncontact fundus lens',
                                             [4205])},
  'Coonhound': {'L-80760': ('Coonhound', [7480])},
- 'Coopelso93CattleBreed': {'L-8B9E0': ('COOPELSO 93 cattle breed', [7480])},
  'CoopworthSheepBreed': {'L-8037A': ('Coopworth sheep breed', [7480])},
  'Copper64Acetate': {'C-B1017': ('Copper^64^ acetate', [25])},
  'Copper64Versenate': {'C-B1016': ('Copper^64^ versenate', [25])},
  'Copper67Ceruloplasmin': {'C-B1018': ('Copper^67^ ceruloplasmin', [25])},
  'CopperOrCopperCompound': {'C-127F9': ('Copper or Copper compound',
                                         [10006, 10067])},
- 'Copper_60': {'C-127A4': ('^60^Copper', [4020])},
- 'Copper_61': {'C-127A1': ('^61^Copper', [4020])},
- 'Copper_62': {'C-127A5': ('^62^Copper', [4020])},
- 'Copper_64': {'C-127A2': ('^64^Copper', [18, 4020])},
- 'Copper_67': {'C-127A3': ('^67^Copper', [18])},
  'CorTriatriatumOrifice': {'M-20103': ('Cor Triatriatum Orifice', [12283])},
  'CoracoidProcessOfScapula': {'T-12282': ('Coracoid process of scapula',
                                           [6115])},
@@ -3422,12 +3410,12 @@ concepts['SRT'] = \
                                  [6102, 6109, 6113, 7151, 7192, 9514])},
  'CostalGroove': {'T-11308': ('Costal groove', [6115])},
  'CostenoHorseBreed': {'L-8040E': ('Costeno horse breed', [7480])},
- 'CosteÑOConCuernosCattleBreed': {'L-801EC': ('Costeño con Cuernos cattle '
+ 'CosteñoConCuernosCattleBreed': {'L-801EC': ('Costeño con Cuernos cattle '
                                               'breed',
                                               [7480])},
  'CostocervicalTrunk': {'T-46180': ('Costocervical trunk',
                                     [6102, 6109, 6117, 7151, 7192, 9514])},
- 'CotonDeTulÉArDogBreed': {'L-80929': ('Coton de Tuléar dog breed', [7480])},
+ 'CotonDeTuléarDogBreed': {'L-80929': ('Coton de Tuléar dog breed', [7480])},
  'Cotswold16PigBreed': {'L-80549': ('Cotswold 16 pig breed', [7480])},
  'Cotswold29PigBreed': {'L-8054A': ('Cotswold 29 pig breed', [7480])},
  'Cotswold90PigBreed': {'L-8054B': ('Cotswold 90 pig breed', [7480])},
@@ -3436,12 +3424,11 @@ concepts['SRT'] = \
                                           [7480])},
  'CotswoldSheepBreed': {'L-80311': ('Cotswold sheep breed', [7480])},
  'Cough': {'F-24100': ('Cough', [60, 9300])},
- 'CpfPigBreed': {'L-80550': ('CPF pig breed', [7480])},
  'Cranial': {'G-A107': ('Cranial', [5])},
  'CranialCavity': {'T-D1400': ('Cranial Cavity', [7140])},
- 'CranialLao': {'R-101C3': ('Cranial LAO', [3466])},
+ 'CranialLAO': {'R-101C3': ('Cranial LAO', [3466])},
  'CranialNerve': {'T-A8000': ('Cranial nerve', [7151, 7167, 7192, 9514])},
- 'CranialRao': {'R-101C5': ('Cranial RAO', [3466])},
+ 'CranialRAO': {'R-101C5': ('Cranial RAO', [3466])},
  'CranialSubarachnoidSpace': {'T-A1502': ('Cranial Subarachnoid Space',
                                           [7140])},
  'CranialVenousSystem': {'T-A0191': ('Cranial venous system',
@@ -3473,14 +3460,7 @@ concepts['SRT'] = \
  'CriouloHorseBreed': {'L-8A172': ('Crioulo horse breed', [7480])},
  'CroatianRedCattleBreed': {'L-8B9E5': ('Croatian Red cattle breed', [7480])},
  'CrystalPonceauStain': {'C-22833': ('crystal ponceau stain', [8112])},
- 'CrÉOlePigBreed': {'L-805DA': ('Créole pig breed', [7480])},
- 'CtAngiographyOfCoronaryArteries': {'P5-00A5C': ('CT angiography of coronary '
-                                                  'arteries',
-                                                  [3757])},
- 'CtOfAbdominalAorta': {'P5-0802B': ('CT of abdominal aorta', [3820])},
- 'CtOfBreast': {'P5-0801C': ('CT of breast', [6050, 6083])},
- 'CtWithoutContrast': {'P5-0808E': ('CT without contrast', [10014])},
- 'Ctv': {'R-429EB': ('CTV', [9534])},
+ 'CréolePigBreed': {'L-805DA': ('Créole pig breed', [7480])},
  'CubanCriolloXZebuCattleBreed': {'L-8BB9D': ('Cuban Criollo X zebu cattle '
                                               'breed',
                                               [7480])},
@@ -3505,7 +3485,7 @@ concepts['SRT'] = \
  'CurraleiroCattleBreed': {'L-8B9E7': ('Curraleiro cattle breed', [7480])},
  'CurrentSmoker': {'S-32000': ('Current Smoker', [3724])},
  'CutchiCattleBreed': {'L-8BB02': ('Cutchi cattle breed', [7480])},
- 'CuttingBalloonAngioplastyCbaDevice': {'R-002F0': ('Cutting Balloon '
+ 'CuttingBalloonAngioplastyCBADevice': {'R-002F0': ('Cutting Balloon '
                                                     'Angioplasty (CBA) Device',
                                                     [3411, 3429])},
  'CyanocobalaminCo57': {'C-B1021': ('Cyanocobalamin Co^57^', [25])},
@@ -3537,13 +3517,25 @@ concepts['SRT'] = \
                                                            'Small Riding Horse '
                                                            'horse breed',
                                                            [7480])},
- 'CÃODaSerraDeAiresDogBreed': {'L-808C1': ('Cão da Serra de Aires dog breed',
+ 'CãoDaSerraDeAiresDogBreed': {'L-808C1': ('Cão da Serra de Aires dog breed',
                                            [7480])},
- 'CÃODeCastroLaboreiroDogBreed': {'L-808C2': ('Cão de Castro Laboreiro dog '
+ 'CãoDeCastroLaboreiroDogBreed': {'L-808C2': ('Cão de Castro Laboreiro dog '
                                               'breed',
                                               [7480])},
- 'CÃODeFilaMiguelDogBreed': {'L-808C3': ('Cão de Fila Miguel dog breed',
+ 'CãoDeFilaMiguelDogBreed': {'L-808C3': ('Cão de Fila Miguel dog breed',
                                          [7480])},
+ 'DBIPigBreed': {'L-806D4': ('DBI pig breed', [7480])},
+ 'DHSPlate': {'A-12018': ('DHS Plate', [7307, 7309])},
+ 'DKPig30PigBreed': {'L-80561': ('DK pig 30 pig breed', [7480])},
+ 'DKPig31PigBreed': {'L-80562': ('DK pig 31 pig breed', [7480])},
+ 'DKPig33PigBreed': {'L-80563': ('DK pig 33 pig breed', [7480])},
+ 'DKPig51PigBreed': {'L-80564': ('DK pig 51 pig breed', [7480])},
+ 'DKPig61PigBreed': {'L-80565': ('DK pig 61 pig breed', [7480])},
+ 'DKPig63PigBreed': {'L-80566': ('DK pig 63 pig breed', [7480])},
+ 'DKPig77PigBreed': {'L-80567': ('DK pig 77 pig breed', [7480])},
+ 'DKPigBreed': {'L-80560': ('DK pig breed', [7480])},
+ 'DLSSheepBreed': {'L-80C22': ('DLS sheep breed', [7480])},
+ 'DRUTerminalsPigBreed': {'L-8064B': ('DRU™ Terminals pig breed', [7480])},
  'DabieshanCattleBreed': {'L-80168': ('Dabieshan cattle breed', [7480])},
  'DachshundMiniatureDogBreed': {'L-8077A': ('Dachshund, Miniature dog breed',
                                             [7480])},
@@ -3607,8 +3599,7 @@ concepts['SRT'] = \
  'DashtiariCattleBreed': {'L-8BB04': ('Dashtiari cattle breed', [7480])},
  'DatongHorseBreed': {'L-804BD': ('Datong horse breed', [7480])},
  'DaweiziPigBreed': {'L-806B1': ('Daweizi pig breed', [7480])},
- 'DbiPigBreed': {'L-806D4': ('DBI pig breed', [7480])},
- 'DeSÉNarmontCompensator': {'A-00123': ('de Sénarmont compensator', [8124])},
+ 'DeSénarmontCompensator': {'A-00123': ('de Sénarmont compensator', [8124])},
  'DebouilletSheepBreed': {'L-80312': ('Debouillet sheep breed', [7480])},
  'Deceased': {'F-04DA1': ('Deceased', [3772])},
  'DeciduousMandibularLeftCanineTooth': {'T-54780': ('Deciduous mandibular left '
@@ -3797,7 +3788,6 @@ concepts['SRT'] = \
  'Dextran': {'C-A7220': ('Dextran', [10, 3850, 70])},
  'Dextrocardia': {'D4-31B16': ('Dextrocardia', [12248, 12249])},
  'DhanniCattleBreed': {'L-8BAD9': ('Dhanni cattle breed', [7480])},
- 'DhsPlate': {'A-12018': ('DHS Plate', [7307, 7309])},
  'DiabeticOnDietaryTreatment': {'F-02F14': ('Diabetic on Dietary Treatment',
                                             [3722])},
  'DiabeticOnInsulin': {'F-02F16': ('Diabetic on Insulin', [3722])},
@@ -3951,7 +3941,7 @@ concepts['SRT'] = \
  'DipyridamoleStressProtocol': {'P2-3110A': ('Dipyridamole Stress protocol',
                                              [12001, 3261])},
  'DirectOphthalmoscope': {'R-1021E': ('Direct Ophthalmoscope', [4202])},
- 'DirectionalCoronaryAtherectomyDcaDevice': {'R-002FD': ('Directional Coronary '
+ 'DirectionalCoronaryAtherectomyDCADevice': {'R-002FD': ('Directional Coronary '
                                                          'Atherectomy (DCA) '
                                                          'Device',
                                                          [3411, 3429])},
@@ -4023,15 +4013,6 @@ concepts['SRT'] = \
  'DjakoreXZebuCattleBreed': {'L-8BC00': ('Djakore X zebu cattle breed',
                                          [7480])},
  'DjermaHorseBreed': {'L-8A16F': ('Djerma horse breed', [7480])},
- 'DkPig30PigBreed': {'L-80561': ('DK pig 30 pig breed', [7480])},
- 'DkPig31PigBreed': {'L-80562': ('DK pig 31 pig breed', [7480])},
- 'DkPig33PigBreed': {'L-80563': ('DK pig 33 pig breed', [7480])},
- 'DkPig51PigBreed': {'L-80564': ('DK pig 51 pig breed', [7480])},
- 'DkPig61PigBreed': {'L-80565': ('DK pig 61 pig breed', [7480])},
- 'DkPig63PigBreed': {'L-80566': ('DK pig 63 pig breed', [7480])},
- 'DkPig77PigBreed': {'L-80567': ('DK pig 77 pig breed', [7480])},
- 'DkPigBreed': {'L-80560': ('DK pig breed', [7480])},
- 'DlsSheepBreed': {'L-80C22': ('DLS sheep breed', [7480])},
  'DnepropetrovskPigBreed': {'L-805A7': ('Dnepropetrovsk pig breed', [7480])},
  'DnieperCattleBreed': {'L-8016B': ('Dnieper cattle breed', [7480])},
  'DnieperPigBreed': {'L-805AA': ('Dnieper pig breed', [7480])},
@@ -4041,9 +4022,15 @@ concepts['SRT'] = \
  'Dobutamine': {'C-68030': ('Dobutamine', [3204])},
  'DobutamineStressProtocol': {'P2-31108': ('Dobutamine Stress protocol',
                                            [12001, 3261])},
- 'DoddPerforatingVein': {'T-49429': ('Dodd perforating vein', [3607, 3630])},
- 'DoddSPerforatingVein': {'T-49429': ("Dodd's perforating vein",
-                                      [3010, 4, 4042, 7151, 7192, 9514])},
+ 'DoddPerforatingVein': {'T-49429': ("Dodd's perforating vein",
+                                     [3010,
+                                      3607,
+                                      3630,
+                                      4,
+                                      4042,
+                                      7151,
+                                      7192,
+                                      9514])},
  'DomesticLeopardCat': {'L-80A19': ('Domestic leopard cat', [7480])},
  'DomesticLonghairedCat': {'L-80A20': ('Domestic longhaired cat', [7480])},
  'DomesticMediumHairedCat': {'L-8880B': ('Domestic medium-haired cat', [7480])},
@@ -4192,7 +4179,6 @@ concepts['SRT'] = \
  'DroughtmasterXZebuCattleBreed': {'L-8BB4F': ('Droughtmaster X zebu cattle '
                                                'breed',
                                                [7480])},
- 'DruTerminalsPigBreed': {'L-8064B': ('DRU™ Terminals pig breed', [7480])},
  'DrugDiluent': {'C-50013': ('Drug diluent', [621, 622])},
  'DrugInducedDizziness': {'DF-1147C': ('Drug Induced Dizziness', [60, 9300])},
  'DrugInducedFlushing': {'D0-3002F': ('Drug induced Flushing', [60, 9300])},
@@ -4256,8 +4242,13 @@ concepts['SRT'] = \
  'DystrophicCalcification': {'F-01762': ('Dystrophic calcification',
                                          [6010, 6011])},
  'DzumaliaPigBreed': {'L-8B155': ('Dzumalia pig breed', [7480])},
- 'DØLafeCattleBreed': {'L-801F0': ('Dølafe cattle breed', [7480])},
- 'DØLeHorseBreed': {'L-8A16E': ('Døle horse breed', [7480])},
+ 'DølafeCattleBreed': {'L-801F0': ('Dølafe cattle breed', [7480])},
+ 'DøleHorseBreed': {'L-8A16E': ('Døle horse breed', [7480])},
+ 'ECGAnalysis': {'R-41D8B': ('ECG analysis', [3215])},
+ 'ECGEquivocal': {'F-38095': ('ECG Equivocal', [3677])},
+ 'EDTAGa68': {'C-B07DD': ('EDTA Ga^68^', [4021])},
+ 'ELMExternalLimitingMembrane': {'T-AA650': ('ELM - External limiting membrane',
+                                             [4273, 7151, 7192, 9514])},
  'Ear': {'T-AB001': ('Ear', [4, 7151, 7192, 9514])},
  'EarlyDiastole': {'R-40B1B': ('Early Diastole', [12233])},
  'EarlyRepolarization': {'F-380B3': ('Early repolarization', [3230])},
@@ -4284,8 +4275,6 @@ concepts['SRT'] = \
  'EasternNuerCattleBreed': {'L-8016D': ('Eastern Nuer cattle breed', [7480])},
  'Eccentric': {'R-40416': ('Eccentric', [3491, 3806])},
  'EccentricFixation': {'F-02FA4': ('Eccentric Fixation', [4221, 4222])},
- 'EcgAnalysis': {'R-41D8B': ('ECG analysis', [3215])},
- 'EcgEquivocal': {'F-38095': ('ECG Equivocal', [3677])},
  'Echocardiography': {'P5-B3000': ('Echocardiography',
                                    [12001, 3206, 3744, 3757])},
  'Ectatic': {'R-10051': ('Ectatic', [3712])},
@@ -4307,7 +4296,6 @@ concepts['SRT'] = \
  'EdemaOfFetalChestWall': {'F-8612F': ('Edema of fetal chest wall', [12249])},
  'EdemaOfFetalScalp': {'F-0518A': ('Edema of fetal scalp', [12249])},
  'Edge': {'G-A174': ('Edge', [2])},
- 'EdtaGa68': {'C-B07DD': ('EDTA Ga^68^', [4021])},
  'Efferent': {'G-A128': ('Efferent', [2])},
  'Effusion': {'M-36700': ('Effusion', [12280])},
  'EggshellCalcification': {'F-01763': ('Eggshell calcification',
@@ -4351,8 +4339,6 @@ concepts['SRT'] = \
  'Elevated': {'G-A373': ('Elevated', [3642])},
  'EllestadProtocol': {'P2-7131D': ('Ellestad protocol', [12001, 3261])},
  'ElliottdaleSheepBreed': {'L-8034D': ('Elliottdale sheep breed', [7480])},
- 'ElmExternalLimitingMembrane': {'T-AA650': ('ELM - External limiting membrane',
-                                             [4273, 7151, 7192, 9514])},
  'Embolism': {'M-35300': ('embolism', [3805, 3810, 3815])},
  'EmbolizationBall': {'A-25614': ('Embolization ball', [4051, 7151, 7193, 8])},
  'EmbolizationCoil': {'A-25612': ('Embolization coil', [4051, 7151, 7193, 8])},
@@ -4482,7 +4468,7 @@ concepts['SRT'] = \
                                      [6102, 6109, 6116, 7151, 7192, 9514])},
  'ErhulianPigBreed': {'L-806C8': ('Erhulian pig breed', [7480])},
  'ErieGarnetStain': {'C-22852': ('erie garnet stain', [8112])},
- 'EriochromeBlueBlackSeStain': {'C-22839': ('eriochrome blue black SE stain',
+ 'EriochromeBlueBlackSEStain': {'C-22839': ('eriochrome blue black SE stain',
                                             [8112])},
  'EriskayPonyHorseBreed': {'L-80B5B': ('Eriskay Pony horse breed', [7480])},
  'ErlunchunHorseBreed': {'L-804EB': ('Erlunchun horse breed', [7480])},
@@ -4550,17 +4536,17 @@ concepts['SRT'] = \
  'EvaluationOfMurmur': {'R-00302': ('Evaluation of murmur', [3671])},
  'EvaluationProcedure': {'P0-009B4': ('Evaluation procedure', [6028])},
  'EvansBlueStain': {'C-22854': ('Evans blue stain', [8112])},
- 'EvolÈNeCattleBreed': {'L-801F5': ('Evolène cattle breed', [7480])},
+ 'EvolèneCattleBreed': {'L-801F5': ('Evolène cattle breed', [7480])},
  'ExaminationOfBreast': {'P2-4A000': ('Examination of breast', [6050, 6083])},
  'Excision': {'P1-03000': ('Excision', [8109])},
  'Exercise': {'R-40C16': ('Exercise', [3774])},
  'ExerciseChallenge': {'P2-71310': ('Exercise challenge',
                                     [3250, 3271, 3405, 3651, 91])},
- 'ExerciseEcgAbnormal': {'F-00103': ('Exercise ECG abnormal', [3208])},
- 'ExerciseEcgEquivocal': {'F-201B6': ('Exercise ECG equivocal', [3208])},
- 'ExerciseEcgNormal': {'F-00101': ('Exercise ECG normal', [3208])},
+ 'ExerciseECGAbnormal': {'F-00103': ('Exercise ECG abnormal', [3208])},
+ 'ExerciseECGEquivocal': {'F-201B6': ('Exercise ECG equivocal', [3208])},
+ 'ExerciseECGNormal': {'F-00101': ('Exercise ECG normal', [3208])},
  'ExerciseState': {'F-01606': ('Exercise state', [3262, 3602])},
- 'ExerciseStressEcgTest': {'P2-31010': ('Exercise stress ECG test',
+ 'ExerciseStressECGTest': {'P2-31010': ('Exercise stress ECG test',
                                         [12001, 3261])},
  'ExerciseStressEchocardiography': {'P5-B3050': ('Exercise stress '
                                                  'echocardiography',
@@ -4662,6 +4648,17 @@ concepts['SRT'] = \
  'Eyelash': {'T-01530': ('Eyelash', [4029])},
  'Eyelid': {'T-AA810': ('Eyelid', [4, 4209, 7151, 7192, 9514])},
  'EyelidDisease': {'DA-76000': ('Eyelid Disease', [4222])},
+ 'FHCElitePig1PigBreed': {'L-80571': ('FHC elite pig 1 pig breed', [7480])},
+ 'FHCElitePig2PigBreed': {'L-80572': ('FHC elite pig 2 pig breed', [7480])},
+ 'FHCElitePig3PigBreed': {'L-80573': ('FHC elite pig 3 pig breed', [7480])},
+ 'FHCElitePig4PigBreed': {'L-80574': ('FHC elite pig 4 pig breed', [7480])},
+ 'FHCElitePig5PigBreed': {'L-80575': ('FHC elite pig 5 pig breed', [7480])},
+ 'FHCElitePig6PigBreed': {'L-80576': ('FHC elite pig 6 pig breed', [7480])},
+ 'FHCElitePig7PigBreed': {'L-80577': ('FHC elite pig 7 pig breed', [7480])},
+ 'FHCElitePig8PigBreed': {'L-80578': ('FHC elite pig 8 pig breed', [7480])},
+ 'FHCElitePig9PigBreed': {'L-80579': ('FHC elite pig 9 pig breed', [7480])},
+ 'FHCPigBreed': {'L-80570': ('FHC pig breed', [7480])},
+ 'FRSCattleBreed': {'L-8BA04': ('FRS cattle breed', [7480])},
  'FabrianeseSheepBreed': {'L-8034B': ('Fabrianese sheep breed', [7480])},
  'Face': {'T-D1200': ('Face', [4, 7151, 7192, 9514])},
  'FacialArtery': {'T-45240': ('Facial artery',
@@ -4715,14 +4712,14 @@ concepts['SRT'] = \
  'FannongSpottedPigBreed': {'L-806D8': ('Fannong Spotted pig breed', [7480])},
  'FascialLayer': {'T-D0634': ('Fascial layer',
                               [6102, 6109, 6113, 7151, 7192, 9514])},
+ 'FastBlueBBSaltStain': {'C-22881': ('fast blue BB salt stain', [8112])},
  'FastBlueBSaltStain': {'C-22883': ('fast blue B salt stain', [8112])},
- 'FastBlueBbSaltStain': {'C-22881': ('fast blue BB salt stain', [8112])},
- 'FastBlueRrSaltStain': {'C-22878': ('fast blue RR salt stain', [8112])},
- 'FastGarnetGbcSaltStain': {'C-22882': ('fast garnet GBC salt stain', [8112])},
- 'FastGreenFcfStain': {'C-22886': ('fast green FCF stain', [8112])},
+ 'FastBlueRRSaltStain': {'C-22878': ('fast blue RR salt stain', [8112])},
+ 'FastGarnetGBCSaltStain': {'C-22882': ('fast garnet GBC salt stain', [8112])},
+ 'FastGreenFCFStain': {'C-22886': ('fast green FCF stain', [8112])},
  'FastRedBSaltStain': {'C-22876': ('fast red B salt stain', [8112])},
- 'FastRedItrStain': {'C-22877': ('fast red ITR stain', [8112])},
- 'FastRedTrSaltStain': {'C-22875': ('fast red TR salt stain', [8112])},
+ 'FastRedITRStain': {'C-22877': ('fast red ITR stain', [8112])},
+ 'FastRedTRSaltStain': {'C-22875': ('fast red TR salt stain', [8112])},
  'FastSulfonBlackFStain': {'C-22867': ('fast sulfon black F stain', [8112])},
  'FastVioletBSaltStain': {'C-22879': ('fast violet B salt stain', [8112])},
  'Fat': {'T-D008A': ('Fat', [218, 300, 6122, 6211, 7180, 7469])},
@@ -4730,7 +4727,7 @@ concepts['SRT'] = \
                                                 'lesion',
                                                 [6008, 6009])},
  'FatNecrosisOfBreast': {'D7-90434': ('Fat necrosis of breast', [6030, 6031])},
- 'FatRed7bStain': {'C-22859': ('fat red 7B stain', [8112])},
+ 'FatRed7BStain': {'C-22859': ('fat red 7B stain', [8112])},
  'Fatal': {'R-4099D': ('Fatal', [3716])},
  'Fatigue': {'F-01360': ('Fatigue', [3220, 3221])},
  'FattyDegeneration': {'M-50080': ('fatty degeneration', [3802])},
@@ -4800,16 +4797,6 @@ concepts['SRT'] = \
                                              [9])},
  'FeulgenReactionStain': {'C-2280F': ('Feulgen reaction stain', [8112])},
  'Fever': {'F-0A44A': ('Fever', [12246])},
- 'FhcElitePig1PigBreed': {'L-80571': ('FHC elite pig 1 pig breed', [7480])},
- 'FhcElitePig2PigBreed': {'L-80572': ('FHC elite pig 2 pig breed', [7480])},
- 'FhcElitePig3PigBreed': {'L-80573': ('FHC elite pig 3 pig breed', [7480])},
- 'FhcElitePig4PigBreed': {'L-80574': ('FHC elite pig 4 pig breed', [7480])},
- 'FhcElitePig5PigBreed': {'L-80575': ('FHC elite pig 5 pig breed', [7480])},
- 'FhcElitePig6PigBreed': {'L-80576': ('FHC elite pig 6 pig breed', [7480])},
- 'FhcElitePig7PigBreed': {'L-80577': ('FHC elite pig 7 pig breed', [7480])},
- 'FhcElitePig8PigBreed': {'L-80578': ('FHC elite pig 8 pig breed', [7480])},
- 'FhcElitePig9PigBreed': {'L-80579': ('FHC elite pig 9 pig breed', [7480])},
- 'FhcPigBreed': {'L-80570': ('FHC pig breed', [7480])},
  'FiberopticCatheter': {'R-00304': ('Fiberoptic catheter', [3429])},
  'FiberopticCatheterMethod': {'PA-5003D': ('Fiberoptic catheter method',
                                            [3241])},
@@ -4838,8 +4825,8 @@ concepts['SRT'] = \
                          7304,
                          9514])},
  'FibularLymphNode': {'T-C4863': ('fibular lymph node', [7600])},
- 'FieldSStain': {'C-22810': ("field's stain", [8112])},
  'FieldSpanielDogBreed': {'L-80889': ('Field spaniel dog breed', [7480])},
+ 'FieldStain': {'C-22810': ("field's stain", [8112])},
  'FifthLumbarArtery': {'G-0362': ('Fifth Lumbar Artery',
                                   [12103, 12113, 3827, 7151, 7192, 9514])},
  'FifthVentricle': {'T-A1604': ('Fifth Ventricle', [7140])},
@@ -4943,7 +4930,6 @@ concepts['SRT'] = \
  'FluorescentStain': {'C-22A00': ('fluorescent stain', [8112])},
  'FluorethyltyrosinF18': {'C-B07E0': ('Fluorethyltyrosin F^18^', [4021])},
  'FluorexonStain': {'C-22AA1': ('fluorexon stain', [8112])},
- 'Fluorine_18': {'C-111A1': ('^18^Fluorine', [18, 4020])},
  'FluoroLDopaF18': {'C-B1034': ('Fluoro-L-dopa F^18^', [4021])},
  'FluorobenzothiazoleF18': {'C-B07E4': ('Fluorobenzothiazole F^18^', [4021])},
  'FluorocholineF18': {'C-E0273': ('Fluorocholine F^18^', [4021])},
@@ -5072,7 +5058,6 @@ concepts['SRT'] = \
  'FroxfieldPygmyPigBreed': {'L-8068F': ('Froxfield Pygmy pig breed', [7480])},
  'FrozenSectionBreastSample': {'G-8339': ('frozen section breast sample',
                                           [8103, 8104])},
- 'FrsCattleBreed': {'L-8BA04': ('FRS cattle breed', [7480])},
  'FuanSpottedPigBreed': {'L-806A4': ('Fuan Spotted pig breed', [7480])},
  'Fuchs': {'R-10276': ('Fuchs', [4012])},
  'FuchsinAcidStain': {'C-22902': ('fuchsin acid stain', [8112])},
@@ -5091,11 +5076,11 @@ concepts['SRT'] = \
  'FusiformAneurysm': {'M-32350': ('fusiform aneurysm', [3808])},
  'Fusion': {'P0-02125': ('Fusion', [7310])},
  'FuzhouBlackPigBreed': {'L-806A6': ('Fuzhou Black pig breed', [7480])},
+ 'GTV': {'R-429E0': ('GTV', [9534])},
  'GackoCattleBreed': {'L-8BA05': ('Gacko cattle breed', [7480])},
  'GadoDaTerraCattleBreed': {'L-8BA06': ('Gado da Terra cattle breed', [7480])},
  'Gadodiamide': {'C-B03C3': ('Gadodiamide', [12, 3850])},
  'Gadolinium': {'C-17800': ('Gadolinium', [12, 13, 300, 3850])},
- 'Gadolinium_153': {'C-178A8': ('^153^Gadolinium', [18])},
  'GadopentetateDimeglumine': {'C-B014D': ('Gadopentetate dimeglumine',
                                           [12, 3850])},
  'GaitProblem': {'F-18002': ('Gait problem', [3205])},
@@ -5118,9 +5103,6 @@ concepts['SRT'] = \
                               7192,
                               9514])},
  'Gallium67Citrate': {'C-B1041': ('Gallium^67^ citrate', [25])},
- 'Gallium_66': {'C-131A1': ('^66^Gallium', [4020])},
- 'Gallium_67': {'C-131A2': ('^67^Gallium', [18])},
- 'Gallium_68': {'C-131A3': ('^68^Gallium', [4020])},
  'GallocyanineStain': {'C-22935': ('gallocyanine stain', [8112])},
  'GallowayCowBreed': {'L-80130': ('Galloway cow breed', [7480])},
  'GalwaySheepBreed': {'L-8C339': ('Galway sheep breed', [7480])},
@@ -5245,7 +5227,6 @@ concepts['SRT'] = \
                                                  'dog breed',
                                                  [7480])},
  'GermaniumGe68': {'C-B1046': ('Germanium Ge^68^', [4021])},
- 'Germanium_68': {'C-128A2': ('^68^Germanium', [4020])},
  'GhanaSangaXZebuCattleBreed': {'L-8BC03': ('Ghana Sanga X zebu cattle breed',
                                             [7480])},
  'GhanaShorthornCattleBreed': {'L-8BA12': ('Ghana Shorthorn cattle breed',
@@ -5287,8 +5268,6 @@ concepts['SRT'] = \
  'GobraCattleBreed': {'L-8BB12': ('Gobra cattle breed', [7480])},
  'Gold': {'C-14600': ('Gold', [300])},
  'GoldAlloy': {'F-611FC': ('Gold Alloy', [7300])},
- 'Gold_198': {'C-146A9': ('^198^Gold', [18, 9528])},
- 'Gold_199': {'C-146B1': ('^199^Gold', [18])},
  'GoldenAmericanSaddlebredHorseBreed': {'L-8A1C6': ('Golden American '
                                                     'Saddlebred horse breed',
                                                     [7480])},
@@ -5321,7 +5300,7 @@ concepts['SRT'] = \
                                                        'anastomosis',
                                                        [3019])},
  'GramStain': {'C-22830': ('gram stain', [8112])},
- 'GrandAngloFranÇAisDogBreed': {'L-80946': ('Grand Anglo-Français dog breed',
+ 'GrandAngloFrançaisDogBreed': {'L-80946': ('Grand Anglo-Français dog breed',
                                             [7480])},
  'GrandBassettGriffonVendeenDogBreed': {'L-80947': ('Grand Bassett Griffon '
                                                     'Vendeen dog breed',
@@ -5355,7 +5334,7 @@ concepts['SRT'] = \
                                    7192,
                                    9514])},
  'GreatDaneDog': {'L-807B3': ('Great dane dog', [7480])},
- 'GreatMÜNsterlÄNderDogBreed': {'L-807EA': ('Great Münsterländer dog breed',
+ 'GreatMünsterländerDogBreed': {'L-807EA': ('Great Münsterländer dog breed',
                                             [7480])},
  'GreatPyreneeDog': {'L-807B4': ('Great Pyrenee dog', [7480])},
  'GreatSaphenousVein': {'T-49530': ('Great Saphenous Vein',
@@ -5418,7 +5397,6 @@ concepts['SRT'] = \
  'GroupedCalcificationDistribution': {'F-01772': ('Grouped calcification '
                                                   'distribution',
                                                   [6012, 6013])},
- 'Gtv': {'R-429E0': ('GTV', [9534])},
  'GuadarramaGoatBreed': {'L-80295': ('Guadarrama goat breed', [7480])},
  'GuadeloupeCreolePigBreed': {'L-8055E': ('Guadeloupe Creole pig breed',
                                           [7480])},
@@ -5451,11 +5429,12 @@ concepts['SRT'] = \
  'Gynecology': {'R-30264': ('Gynecology', [7030])},
  'Gynecomastia': {'D7-90420': ('Gynecomastia', [6030, 6031])},
  'GypsyVannerHorseBreed': {'L-8A10C': ('Gypsy Vanner horse breed', [7480])},
- 'GÖTtingenMiniaturePigBreed': {'L-806F5': ('Göttingen Miniature pig breed',
+ 'GöttingenMiniaturePigBreed': {'L-806F5': ('Göttingen Miniature pig breed',
                                             [7480])},
- 'GÜSsingForestPigPigBreed': {'L-805C2': ('Güssing Forest Pig pig breed',
+ 'GüssingForestPigPigBreed': {'L-805C2': ('Güssing Forest Pig pig breed',
                                           [7480])},
  'H1Antihistamine': {'C-51071': ('H-1 Antihistamine', [65])},
+ 'HIVPositive': {'F-0331B': ('HIV Positive', [3756])},
  'HaBacPigBreed': {'L-806E9': ('Ha Bac pig breed', [7480])},
  'Haas': {'R-1027A': ('Haas', [4012])},
  'HabenularCommissure': {'T-A4950': ('habenular commissure', [7705, 7710])},
@@ -5481,7 +5460,7 @@ concepts['SRT'] = \
  'HallingdalCattleBreed': {'L-8BABF': ('Hallingdal cattle breed', [7480])},
  'Halothane': {'F-61AFE': ('Halothane', [623, 624])},
  'Hamartoma': {'M-75500': ('Hamartoma', [6030, 6031])},
- 'HamiltonstÖVareDogBreed': {'L-80930': ('Hamiltonstövare dog breed', [7480])},
+ 'HamiltonstövareDogBreed': {'L-80930': ('Hamiltonstövare dog breed', [7480])},
  'HamlinePigBreed': {'L-80544': ('Hamline pig breed', [7480])},
  'HampenPigBreed': {'L-8054C': ('Hampen pig breed', [7480])},
  'HamplinePigBreed': {'L-80557': ('Hampline pig breed', [7480])},
@@ -5510,7 +5489,7 @@ concepts['SRT'] = \
  'HarrierDog': {'L-807C3': ('Harrier dog', [7480])},
  'HarrisBeathAxialProjection': {'R-4080A': ('Harris Beath axial projection',
                                             [4012])},
- 'HartÓNCattleBreed': {'L-801FF': ('Hartón cattle breed', [7480])},
+ 'HartónCattleBreed': {'L-801FF': ('Hartón cattle breed', [7480])},
  'HarvestingOfTissue': {'P1-0D300': ('Harvesting of tissue', [8109])},
  'HarzRedCattleBreed': {'L-8BA25': ('Harz Red cattle breed', [7480])},
  'HashtNagriSheepBreed': {'L-80378': ('Hasht Nagri sheep breed', [7480])},
@@ -5578,7 +5557,7 @@ concepts['SRT'] = \
  'HeldInspiration': {'P2-71314': ('Held inspiration', [3271, 91])},
  'HeldVentilation': {'P2-71316': ('Held ventilation', [3271, 91])},
  'HellenicHoundDogBreed': {'L-808CB': ('Hellenic Hound dog breed', [7480])},
- 'HellySFluid': {'F-62233': ("Helly's fluid", [8114])},
+ 'HellyFluid': {'F-62233': ("Helly's fluid", [8114])},
  'Hemangioma': {'M-91200': ('Hemangioma', [6030, 6031])},
  'HemangiomaOfSubcutaneousTissue': {'D3-F0620': ('Hemangioma of subcutaneous '
                                                  'tissue',
@@ -5670,9 +5649,6 @@ concepts['SRT'] = \
                                              [7600])},
  'HighlandPonyHorseBreed': {'L-8A1C2': ('Highland Pony horse breed', [7480])},
  'HighlySignificant': {'R-0030C': ('Highly significant', [220])},
- 'HighlySuggestiveOfMalignancy_5': {'F-037C1': ('5 - Highly suggestive of '
-                                                'malignancy',
-                                                [6026, 6027])},
  'Hilar': {'G-A170': ('Hilar', [2])},
  'HilarArtery': {'G-035C': ('Hilar Artery',
                             [12103, 12115, 3827, 7151, 7192, 9514])},
@@ -5707,7 +5683,7 @@ concepts['SRT'] = \
  'HistoryOfBetaBlockingAgentsTherapy': {'P0-099F5': ('History of Beta-blocking '
                                                      'agents therapy',
                                                      [64])},
- 'HistoryOfCabg': {'G-03A5': ('History of CABG', [3201])},
+ 'HistoryOfCABG': {'G-03A5': ('History of CABG', [3201])},
  'HistoryOfCardiovascularDisease': {'G-0335': ('History of - cardiovascular '
                                                'disease',
                                                [6087, 6088])},
@@ -5744,9 +5720,8 @@ concepts['SRT'] = \
                                             [6087, 6088])},
  'HistoryOfSubstanceAbuse': {'G-0338': ('History of substance abuse',
                                         [6087, 6088])},
- 'HivPositive': {'F-0331B': ('HIV Positive', [3756])},
- 'HodgkinSDiseaseLymphoma': {'M-96503': ("Hodgkin's disease (lymphoma)",
-                                         [6030, 6033])},
+ 'HodgkinDiseaseLymphoma': {'M-96503': ("Hodgkin's disease (lymphoma)",
+                                        [6030, 6033])},
  'HoffmanModulator': {'A-00121': ('Hoffman modulator', [8124])},
  'HogIslandSheepBreed': {'L-80391': ('Hog Island Sheep breed', [7480])},
  'HokkaidoHorseBreed': {'L-8A1C1': ('Hokkaido horse breed', [7480])},
@@ -5880,6 +5855,10 @@ concepts['SRT'] = \
  'HypotensiveAgent': {'C-81100': ('Hypotensive agent', [10])},
  'HypotensiveEpisode': {'D3-04001': ('Hypotensive episode', [3221])},
  'Hysterectomy': {'P1-8330D': ('Hysterectomy', [6082])},
+ 'IDPlate': {'A-16016': ('ID Plate', [6040, 6401, 7151, 7193])},
+ 'ILMInternalLimitingMembrane': {'T-AA62D': ('ILM - Internal limiting membrane',
+                                             [4273, 7151, 7192, 9514])},
+ 'INRA95CattleBreed': {'L-8BA34': ('INRA 95 cattle breed', [7480])},
  'IbageXZebuCattleBreed': {'L-8BC07': ('Ibage X zebu cattle breed', [7480])},
  'IbanPigBreed': {'L-80BE7': ('Iban pig breed', [7480])},
  'IberianBlackIberianPigBreed': {'L-805AE': ('Iberian, Black Iberian pig breed',
@@ -5897,7 +5876,6 @@ concepts['SRT'] = \
  'IcelandicPigBreed': {'L-80686': ('Icelandic pig breed', [7480])},
  'IcelandicSheepBreed': {'L-80384': ('Icelandic sheep breed', [7480])},
  'IcelandicSheepdogBreed': {'L-80941': ('Icelandic Sheepdog breed', [7480])},
- 'IdPlate': {'A-16016': ('ID Plate', [6040, 6401, 7151, 7193])},
  'IdiopathicHypertrophicSubaorticStenosis': {'D3-2906A': ('Idiopathic '
                                                           'hypertrophic '
                                                           'subaortic stenosis',
@@ -5928,8 +5906,6 @@ concepts['SRT'] = \
                                     [6102, 6109, 6116, 7151, 7192, 9514])},
  'Ilium': {'T-12340': ('Ilium', [4, 4009, 4030, 4031, 4042, 7151, 7192, 9514])},
  'IllawarraCattleBreed': {'L-8B95C': ('Illawarra cattle breed', [7480])},
- 'IlmInternalLimitingMembrane': {'T-AA62D': ('ILM - Internal limiting membrane',
-                                             [4273, 7151, 7192, 9514])},
  'IlocosCattleBreed': {'L-8017C': ('Ilocos cattle breed', [7480])},
  'IloiloCattleBreed': {'L-8017D': ('Iloilo cattle breed', [7480])},
  'ImageAnalysis': {'P3-41910': ('Image analysis', [3215])},
@@ -5989,15 +5965,6 @@ concepts['SRT'] = \
  'IncompleteLeftBundleBranchBlock': {'D3-33122': ('Incomplete Left bundle '
                                                   'branch block',
                                                   [3230])},
- 'IncompleteNeedAdditionalImagingEvaluationPriors_0': {'F-037BB': ('0 - '
-                                                                   'Incomplete '
-                                                                   '- Need '
-                                                                   'additional '
-                                                                   'imaging '
-                                                                   'evaluation '
-                                                                   '+/- priors',
-                                                                   [6026,
-                                                                    6027])},
  'IncompleteRightBundleBranchBlock': {'D3-33112': ('Incomplete Right bundle '
                                                    'branch block',
                                                    [3230])},
@@ -6034,7 +6001,7 @@ concepts['SRT'] = \
  'Indium111CapromabPendetide': {'C-145AB': ('Indium^111 Capromab Pendetide',
                                             [25])},
  'Indium111Chloride': {'C-14512': ('Indium^111 Chloride', [25])},
- 'Indium111FeOh3': {'C-B1065': ('Indium^111^-Fe(OH) >3<', [25])},
+ 'Indium111FeOH3': {'C-B1065': ('Indium^111^-Fe(OH) >3<', [25])},
  'Indium111Oxyquinoline': {'C-B1135': ('Indium^111^oxyquinoline', [25])},
  'Indium111Pentetate': {'C-B1061': ('Indium^111^ pentetate', [25])},
  'Indium111Pentetreotide': {'C-145AA': ('Indium^111 Pentetreotide', [25])},
@@ -6046,14 +6013,13 @@ concepts['SRT'] = \
                                                      'oxoquinoline platelet '
                                                      'label',
                                                      [25])},
- 'Indium113mOxoquinolineRbcLabel': {'C-B1073': ('Indium^113m^ oxoquinoline RBC '
+ 'Indium113mOxoquinolineRBCLabel': {'C-B1073': ('Indium^113m^ oxoquinoline RBC '
                                                 'label',
                                                 [25])},
- 'Indium113mOxoquinolineWbcLabel': {'C-B1071': ('Indium^113m^ oxoquinoline WBC '
+ 'Indium113mOxoquinolineWBCLabel': {'C-B1071': ('Indium^113m^ oxoquinoline WBC '
                                                 'label',
                                                 [25])},
  'Indium113mPentetate': {'C-B1070': ('Indium^113m^ pentetate', [25])},
- 'Indium_111': {'C-145A4': ('^111^Indium', [18])},
  'IndividualCalcification': {'F-01776': ('Individual Calcification',
                                          [6014, 6015, 6016, 6054, 6056])},
  'IndoBrazilianCattleBreed': {'L-8BADD': ('Indo-Brazilian cattle breed',
@@ -6328,7 +6294,6 @@ concepts['SRT'] = \
                                                    [7480])},
  'Inositol': {'F-61A90': ('Inositol', [218, 4032, 4033, 7180, 7186, 7469])},
  'InotropicAgent': {'C-80120': ('Inotropic agent', [10, 621, 622])},
- 'Inra95CattleBreed': {'L-8BA34': ('INRA 95 cattle breed', [7480])},
  'InsertionOfCatheter': {'P1-05535': ('Insertion of catheter', [6050, 6083])},
  'InsertionOfCoronaryArteryStent': {'P1-33530': ('Insertion of coronary artery '
                                                  'stent',
@@ -6340,7 +6305,7 @@ concepts['SRT'] = \
  'Inspiration': {'F-20010': ('Inspiration', [12234, 3823])},
  'InsufficientSample': {'M-09024': ('Insufficient sample', [6063])},
  'Insula': {'T-A2610': ('Insula', [7151, 7153, 7192, 9514])},
- 'InsulinDependentMotherIdm': {'G-0586': ('Insulin dependent mother (IDM)',
+ 'InsulinDependentMotherIDM': {'G-0586': ('Insulin dependent mother (IDM)',
                                           [3756])},
  'InsulinPump': {'A-28040': ('Insulin pump', [3777])},
  'IntensiveCare': {'R-3023D': ('Intensive Care', [7030])},
@@ -6508,7 +6473,7 @@ concepts['SRT'] = \
  'Intima': {'T-1A170': ('Intima', [7151, 7156, 7192, 9514])},
  'IntraAbdominal': {'T-D4010': ('Intra-abdominal', [4])},
  'IntraAorticBalloonPump': {'A-28051': ('Intra-Aortic Balloon Pump', [3553])},
- 'IntraAorticBalloonPumpIabp': {'A-28051': ('Intra-Aortic Balloon Pump (IABP)',
+ 'IntraAorticBalloonPumpIABP': {'A-28051': ('Intra-Aortic Balloon Pump (IABP)',
                                             [3429])},
  'IntraArterialInfusionOfThrombolyticAgent': {'P1-05035': ('Intra-arterial '
                                                            'infusion of '
@@ -6579,7 +6544,7 @@ concepts['SRT'] = \
                                                                [3411, 3429])},
  'IntravascularUltrasound': {'P5-B001D': ('Intravascular ultrasound',
                                           [3405, 3428])},
- 'IntravascularUltrasoundIvusDevice': {'R-00312': ('Intravascular Ultrasound '
+ 'IntravascularUltrasoundIVUSDevice': {'R-00312': ('Intravascular Ultrasound '
                                                    '(IVUS) Device',
                                                    [3411, 3429])},
  'IntravenousRoute': {'G-D101': ('Intravenous route', [11, 613, 614])},
@@ -6627,10 +6592,10 @@ concepts['SRT'] = \
                                                                   '15-(4-Iodophenyl)-3(R,S)-Methylpentadecanoic '
                                                                   'Acid',
                                                                   [25])},
- 'Iodine1233IodobenzylguanidineMibg': {'C-B110E': ('Iodine^123 '
+ 'Iodine1233IodobenzylguanidineMIBG': {'C-B110E': ('Iodine^123 '
                                                    '3-Iodobenzylguanidine MIBG',
                                                    [25])},
- 'Iodine1313IodobenzylguanidineMibg': {'C-B112D': ('Iodine^131 '
+ 'Iodine1313IodobenzylguanidineMIBG': {'C-B112D': ('Iodine^131 '
                                                    '3-Iodobenzylguanidine MIBG',
                                                    [25])},
  'Iodine131Methylnorcholestenol': {'C-114B6': ('Iodine^131 '
@@ -6639,10 +6604,6 @@ concepts['SRT'] = \
  'Iodine131Polyvinylpyrrolidone': {'C-B1109': ('Iodine^131^ '
                                                'polyvinylpyrrolidone',
                                                [25])},
- 'Iodine_123': {'C-114A4': ('^123^Iodine', [18])},
- 'Iodine_124': {'C-114A5': ('^124^Iodine', [4020])},
- 'Iodine_125': {'C-114A6': ('^125^Iodine', [18, 9528])},
- 'Iodine_131': {'C-114B1': ('^131^Iodine', [18])},
  'Iodipamide': {'C-B0318': ('Iodipamide', [12, 3850])},
  'Iodixanol': {'C-B03BC': ('Iodixanol', [12, 3850])},
  'IodizedOil': {'C-B0319': ('Iodized oil', [12, 3850])},
@@ -6672,7 +6633,6 @@ concepts['SRT'] = \
  'Ipodate': {'C-B0335': ('Ipodate', [12, 3850])},
  'IranianZebuCattleBreed': {'L-8BB2D': ('Iranian Zebu cattle breed', [7480])},
  'IraqiXZebuCattleBreed': {'L-8BC08': ('Iraqi X zebu cattle breed', [7480])},
- 'Iridium_192': {'C-151B2': ('^192^Iridium', [9528])},
  'Iris': {'T-AA500': ('Iris', [4029, 4209, 4211])},
  'IrishCobHorseBreed': {'L-804F7': ('Irish Cob horse breed', [7480])},
  'IrishDraftHorseBreed': {'L-804A1': ('Irish Draft horse breed', [7480])},
@@ -6689,8 +6649,6 @@ concepts['SRT'] = \
  'IrishWolfhound': {'L-807C5': ('Irish wolfhound', [7480])},
  'Iron': {'C-130F9': ('Iron', [13, 300])},
  'IronFe59LabeledDextran': {'C-B1124': ('Iron Fe^59^ labeled dextran', [25])},
- 'Iron_52': {'C-130A1': ('^52^Iron', [4020])},
- 'Iron_59': {'C-130A3': ('^59^Iron', [18])},
  'IrradiatedVolume': {'R-429DF': ('Irradiated Volume', [9534])},
  'Irregular': {'G-A402': ('Irregular', [3715, 6004, 6005, 6119])},
  'IrregularBreathing': {'F-21303': ('irregular breathing', [3416])},
@@ -6812,7 +6770,8 @@ concepts['SRT'] = \
  'JuxtaposedAppendage': {'D4-31052': ('Juxtaposed appendage', [3608, 3630])},
  'JuxtaposedAtrialAppendage': {'D4-31052': ('Juxtaposed atrial appendage',
                                             [3010, 4, 4042, 7151, 7192, 9514])},
- 'JÄMthundDogBreed': {'L-808CE': ('Jämthund dog breed', [7480])},
+ 'JämthundDogBreed': {'L-808CE': ('Jämthund dog breed', [7480])},
+ 'KM1PigBreed': {'L-805D3': ('KM-1 pig breed', [7480])},
  'KabardaHorseBreed': {'L-80B66': ('Kabarda horse breed', [7480])},
  'KabotaCattleBreed': {'L-8BB24': ('Kabota cattle breed', [7480])},
  'KabyleCattleBreed': {'L-8BA42': ('Kabyle cattle breed', [7480])},
@@ -6930,7 +6889,6 @@ concepts['SRT'] = \
  'KleenLeenPigBreed': {'L-80590': ('Kleen leen pig breed', [7480])},
  'KleenLeenRedPigBreed': {'L-80592': ('Kleen leen red pig breed', [7480])},
  'KleenLeenWhitePigBreed': {'L-80593': ('Kleen leen white pig breed', [7480])},
- 'Km1PigBreed': {'L-805D3': ('KM-1 pig breed', [7480])},
  'KnabstrupHorseBreed': {'L-8A18E': ('Knabstrup horse breed', [7480])},
  'Knee': {'T-D9200': ('Knee',
                       [4,
@@ -6970,10 +6928,9 @@ concepts['SRT'] = \
                                           [7480])},
  'KrishnagariCattleBreed': {'L-8BB40': ('Krishnagari cattle breed', [7480])},
  'KrolevetsPigBreed': {'L-8B176': ('Krolevets pig breed', [7480])},
- 'KromfohrlÄNderDogBreed': {'L-809E6': ('Kromfohrländer dog breed', [7480])},
+ 'KromfohrländerDogBreed': {'L-809E6': ('Kromfohrländer dog breed', [7480])},
  'KrskopoljePigBreed': {'L-80677': ('Krskopolje pig breed', [7480])},
  'Krypton81m': {'C-173A5': ('Krypton^81m', [25])},
- 'Krypton_85': {'C-173A7': ('^85^Krypton', [18])},
  'Kuchendorf': {'R-10288': ('Kuchendorf', [4012])},
  'KuchinoshimaCattleBreed': {'L-8BA52': ('Kuchinoshima cattle breed', [7480])},
  'KuiMlkDogBreed': {'L-808A5': ('Kui Mlk dog breed', [7480])},
@@ -6993,6 +6950,17 @@ concepts['SRT'] = \
  'KyiApsoDogBreed': {'L-809EC': ('Kyi Apso dog breed', [7480])},
  'KyiLeoDogBreed': {'L-809D8': ('Kyi-Leo dog breed', [7480])},
  'KyogaCattleBreed': {'L-8018C': ('Kyoga cattle breed', [7480])},
+ 'LASEK': {'P1-A3846': ('LASEK', [4234])},
+ 'LASIK': {'P0-0526F': ('LASIK', [4234])},
+ 'LVPeakDiastolicTissueVelocityDuringAtrialSystole': {'G-037C': ('LV Peak '
+                                                                 'Diastolic '
+                                                                 'Tissue '
+                                                                 'Velocity '
+                                                                 'During '
+                                                                 'Atrial '
+                                                                 'Systole',
+                                                                 [12200,
+                                                                  12203])},
  'LaManchaGoatBreed': {'L-80211': ('La Mancha goat breed', [7480])},
  'LaVelasquezCattleBreed': {'L-8BA59': ('La Velasquez cattle breed', [7480])},
  'LabradorRetrieverDogBreed': {'L-80845': ('Labrador retriever dog breed',
@@ -7060,7 +7028,7 @@ concepts['SRT'] = \
                                            [7480])},
  'LargeWhitePigBreed': {'L-80611': ('Large white pig breed', [7480])},
  'LaryngealEdema': {'D2-04460': ('Laryngeal edema', [60, 9300])},
- 'LaryngealMaskAirwayLma': {'P0-05DE2': ('Laryngeal Mask Airway (LMA)',
+ 'LaryngealMaskAirwayLMA': {'P0-05DE2': ('Laryngeal Mask Airway (LMA)',
                                          [617, 618])},
  'Larynx': {'T-24100': ('Larynx',
                         [4,
@@ -7074,11 +7042,9 @@ concepts['SRT'] = \
                          7192,
                          7601,
                          9514])},
- 'Lasek': {'P1-A3846': ('LASEK', [4234])},
  'Laser': {'A-23000': ('Laser', [8125]),
            'A-81080': ('Laser', [3411, 3429, 4051, 7151, 7193, 8])},
  'LaserMicrodissection': {'P3-40004': ('Laser microdissection', [8110])},
- 'Lasik': {'P0-0526F': ('LASIK', [4234])},
  'Lateral': {'G-A104': ('Lateral',
                         [12117, 12281, 2, 26, 3019, 4005, 5, 501, 6065]),
              'R-102CD': ('lateral', [4010, 501])},
@@ -7163,11 +7129,7 @@ concepts['SRT'] = \
                                          [7480])},
  'Law': {'R-1028C': ('Law', [4012])},
  'Lawrence': {'R-1028D': ('Lawrence', [4012])},
- 'LeadEcg_12': {'P2-3120A': ('12-Lead ECG', [3670])},
- 'LeadEcg_15': {'P2-3120E': ('15-Lead ECG', [3670])},
- 'LeadEcg_18': {'P2-3120C': ('18-Lead ECG', [3670])},
  'LeadOrLeadCompound': {'C-132F9': ('Lead or Lead compound', [10006, 10067])},
- 'Lead_203': {'C-132A8': ('^203^Lead', [18])},
  'LebaneseCattleBreed': {'L-8BA60': ('Lebanese cattle breed', [7480])},
  'LebedinCattleBreed': {'L-8BA61': ('Lebedin cattle breed', [7480])},
  'LeeSungPigBreed': {'L-806BB': ('Lee-Sung pig breed', [7480])},
@@ -7896,7 +7858,7 @@ concepts['SRT'] = \
  'LigamentumArteriosum': {'T-42370': ('Ligamentum arteriosum',
                                       [6102, 6109, 6113, 7151, 7192, 9514])},
  'LightEmittingDiode': {'A-00126': ('Light emitting diode', [8125])},
- 'LightGreenSfStain': {'C-22887': ('light green SF stain', [8112])},
+ 'LightGreenSFStain': {'C-22887': ('light green SF stain', [8112])},
  'LijiangHorseBreed': {'L-804B7': ('Lijiang horse breed', [7480])},
  'Lilienfeld': {'R-10290': ('Lilienfeld', [4012])},
  'LimCattleBreed': {'L-8BA65': ('Lim cattle breed', [7480])},
@@ -8145,19 +8107,9 @@ concepts['SRT'] = \
  'LurcherHoundDogBreed': {'L-809DB': ('Lurcher Hound dog breed', [7480])},
  'LusitanoHorseBreed': {'L-8A179': ('Lusitano horse breed', [7480])},
  'LutaiWhitePigBreed': {'L-806DF': ('Lutai White pig breed', [7480])},
- 'Lutetium_177': {'C-101ED': ('^177^Lutetium', [18])},
  'LuxiCattleBreed': {'L-8BA71': ('Luxi cattle breed', [7480])},
  'LuxolFastBlueStain': {'C-2283F': ('luxol fast blue stain', [8112])},
  'LuzeinSheepBreed': {'L-80364': ('Luzein sheep breed', [7480])},
- 'LvPeakDiastolicTissueVelocityDuringAtrialSystole': {'G-037C': ('LV Peak '
-                                                                 'Diastolic '
-                                                                 'Tissue '
-                                                                 'Velocity '
-                                                                 'During '
-                                                                 'Atrial '
-                                                                 'Systole',
-                                                                 [12200,
-                                                                  12203])},
  'Lymph': {'T-C6020': ('Lymph', [645])},
  'LymphNode': {'T-C4000': ('Lymph node',
                            [10044,
@@ -8210,7 +8162,7 @@ concepts['SRT'] = \
  'Lysholm': {'R-10294': ('Lysholm', [4012])},
  'Lysophosphatidylcholine': {'F-63750': ('Lysophosphatidylcholine',
                                          [638, 643])},
- 'LÖWchenDogBreed': {'L-809D3': ('Löwchen dog breed', [7480])},
+ 'LöwchenDogBreed': {'L-809D3': ('Löwchen dog breed', [7480])},
  'M0NoDistantMetastasisBreast': {'R-003DD': ('M0: No distant metastasis '
                                              '(breast)',
                                              [6162])},
@@ -8218,6 +8170,22 @@ concepts['SRT'] = \
                                            [6162])},
  'MBayarHorseBreed': {'L-8A178': ("M'Bayar horse breed", [7480])},
  'MMode': {'G-0394': ('M mode', [12224, 6058])},
+ 'MOSFETRadiationTherapyDosimetrySystemDosimeter': {'R-FCC16': ('MOSFET '
+                                                                'radiation '
+                                                                'therapy '
+                                                                'dosimetry '
+                                                                'system '
+                                                                'dosimeter',
+                                                                [7026,
+                                                                 7027,
+                                                                 7151,
+                                                                 7193])},
+ 'MRIOfBreast': {'P5-0900D': ('MRI of breast', [6028, 6029, 6050, 6083])},
+ 'MXDistantMetastasisCannotBeAssessedBreast': {'R-003DC': ('MX: Distant '
+                                                           'metastasis cannot '
+                                                           'be assessed '
+                                                           '(breast)',
+                                                           [6162])},
  'MacauPigBreed': {'L-8058A': ('Macau pig breed', [7480])},
  'MacedonianBusaCattleBreed': {'L-8BA72': ('Macedonian Busa cattle breed',
                                            [7480])},
@@ -8245,7 +8213,7 @@ concepts['SRT'] = \
                                                  [7030])},
  'Magnification': {'R-102D6': ('Magnification', [4015])},
  'MagnificationViews': {'R-102D6': ('Magnification views', [6028, 6029])},
- 'MagyarAgÅRDogBreed': {'L-808D5': ('Magyar Agår dog breed', [7480])},
+ 'MagyarAgårDogBreed': {'L-808D5': ('Magyar Agår dog breed', [7480])},
  'Main': {'G-A332': ('Main', [12117])},
  'MainPulmonaryArteryPeakVelocity': {'G-038A': ('Main Pulmonary Artery Peak '
                                                 'Velocity',
@@ -8282,7 +8250,7 @@ concepts['SRT'] = \
                            7470])},
  'MakaweliCattleBreed': {'L-8BA73': ('Makaweli cattle breed', [7480])},
  'MalachiteGreenStain': {'C-22890': ('malachite green stain', [8112])},
- 'MalagueÑAGoatBreed': {'L-80277': ('Malagueña goat breed', [7480])},
+ 'MalagueñaGoatBreed': {'L-80277': ('Malagueña goat breed', [7480])},
  'MalakanHorseBreed': {'L-804BB': ('Malakan horse breed', [7480])},
  'MalawiZebuCattleBreed': {'L-8BB48': ('Malawi Zebu cattle breed', [7480])},
  'MaleExternalGenitalia': {'T-90010': ('Male external genitalia',
@@ -8402,7 +8370,6 @@ concepts['SRT'] = \
  'MangalargaPaulistaHorseBreed': {'L-804BE': ('Mangalarga Paulista horse breed',
                                               [7480])},
  'MangalistaPigBreed': {'L-805B2': ('Mangalista pig breed', [7480])},
- 'Manganese_52': {'C-149A1': ('^52^Manganese', [4020])},
  'ManipulationOfJoint': {'P0-05083': ('Manipulation of joint', [93])},
  'ManipuriHorseBreed': {'L-80B6A': ('Manipuri horse breed', [7480])},
  'ManorHybridPigBreed': {'L-80543': ('Manor Hybrid pig breed', [7480])},
@@ -8420,7 +8387,7 @@ concepts['SRT'] = \
  'MaremmanaCattleBreed': {'L-8018E': ('Maremmana cattle breed', [7480])},
  'MaremmanaHorseBreed': {'L-804C1': ('Maremmana horse breed', [7480])},
  'MaremmanaPigBreed': {'L-8062E': ('Maremmana pig breed', [7480])},
- 'MarfanSSyndrome': {'D6-90800': ("Marfan's Syndrome", [3809])},
+ 'MarfanSyndrome': {'D6-90800': ("Marfan's Syndrome", [3809])},
  'Marginal': {'G-A428': ('Marginal', [2])},
  'MarginalCoronaryArtery': {'T-43230': ('Marginal Coronary Artery',
                                         [3014,
@@ -8673,8 +8640,8 @@ concepts['SRT'] = \
  'MethylGreenStain': {'C-22896': ('methyl green stain', [8112])},
  'MethylOrangeStain': {'C-22809': ('methyl orange stain', [8112])},
  'MethylRedStain': {'C-22808': ('methyl red stain', [8112])},
- 'MethylViolet2bStain': {'C-22892': ('methyl violet 2B stain', [8112])},
- 'MethylViolet6bStain': {'C-22894': ('methyl violet 6B stain', [8112])},
+ 'MethylViolet2BStain': {'C-22892': ('methyl violet 2B stain', [8112])},
+ 'MethylViolet6BStain': {'C-22894': ('methyl violet 6B stain', [8112])},
  'MethylVioletStain': {'F-61A76': ('methyl violet stain', [8112])},
  'MethyleneBlue': {'C-22947': ('Methylene blue', [10]),
                    'C-B02C5': ('Methylene blue', [4200])},
@@ -8706,7 +8673,7 @@ concepts['SRT'] = \
  'MiKiDogBreed': {'L-808D7': ('Mi-Ki dog breed', [7480])},
  'MiPigBreed': {'L-806CA': ('Mi pig breed', [7480])},
  'MiamiPigBreed': {'L-8062F': ('Miami pig breed', [7480])},
- 'MichelSMedium': {'F-6220F': ("Michel's medium", [8114])},
+ 'MichelMedium': {'F-6220F': ("Michel's medium", [8114])},
  'MicrocalcificationsOfTheBreast': {'D7-90435': ('Microcalcifications of the '
                                                  'breast',
                                                  [6010, 6011])},
@@ -8924,10 +8891,10 @@ concepts['SRT'] = \
                               7151,
                               7192,
                               9514])},
+ 'MitralValveATDTRatio': {'G-0386': ('Mitral Valve AT/DT Ratio', [12207])},
  'MitralValveAWaveDuration': {'G-0385': ('Mitral Valve A-Wave Duration',
                                          [12207])},
  'MitralValveArea': {'F-02320': ('Mitral Valve Area', [3615])},
- 'MitralValveAtDtRatio': {'G-0386': ('Mitral Valve AT/DT Ratio', [12207])},
  'MitralValveClosureToOpeningTime': {'G-0387': ('Mitral Valve Closure to '
                                                 'Opening Time',
                                                 [12207])},
@@ -8990,7 +8957,7 @@ concepts['SRT'] = \
  'MongallaCattleBreed': {'L-8BB58': ('Mongalla cattle breed', [7480])},
  'MongolianCattleBreed': {'L-8B96D': ('Mongolian cattle breed', [7480])},
  'MongolianHorseBreed': {'L-8A164': ('Mongolian horse breed', [7480])},
- 'MonitoredAnesthesiaCareMac': {'P1-0512E': ('Monitored Anesthesia Care (MAC)',
+ 'MonitoredAnesthesiaCareMAC': {'P1-0512E': ('Monitored Anesthesia Care (MAC)',
                                              [611, 612])},
  'MonoclonalAntibodyI124': {'C-B07E6': ('Monoclonal antibody I^124^', [4021])},
  'MontafonCattleBreed': {'L-8BA85': ('Montafon cattle breed', [7480])},
@@ -9024,28 +8991,17 @@ concepts['SRT'] = \
  'MoscowLonghairedToyTerrierDogBreed': {'L-808DB': ('Moscow Longhaired Toy '
                                                     'Terrier dog breed',
                                                     [7480])},
- 'MosfetRadiationTherapyDosimetrySystemDosimeter': {'R-FCC16': ('MOSFET '
-                                                                'radiation '
-                                                                'therapy '
-                                                                'dosimetry '
-                                                                'system '
-                                                                'dosimeter',
-                                                                [7026,
-                                                                 7027,
-                                                                 7151,
-                                                                 7193])},
  'MostSignificant': {'R-00333': ('Most significant', [220])},
  'MouflonSheepBreed': {'L-80334': ('Mouflon sheep breed', [7480])},
  'MountainCurDogBreed': {'L-808DA': ('Mountain Cur dog breed', [7480])},
  'MouraPigBreed': {'L-8058B': ('Moura pig breed', [7480])},
  'Mouth': {'T-D0662': ('Mouth', [4, 7151, 7192, 9514])},
  'MouthClosed': {'R-421A4': ('Mouth closed', [4011, 502])},
- 'MoxotÓGoatBreed': {'L-80226': ('Moxotó goat breed', [7480])},
+ 'MoxotóGoatBreed': {'L-80226': ('Moxotó goat breed', [7480])},
  'MoyleHorseBreed': {'L-8A176': ('Moyle horse breed', [7480])},
  'MozambiqueAngoniCattleBreed': {'L-8BB60': ('Mozambique Angoni cattle breed',
                                              [7480])},
  'MpwapwaCattleBreed': {'L-8BB61': ('Mpwapwa cattle breed', [7480])},
- 'MriOfBreast': {'P5-0900D': ('MRI of breast', [6028, 6029, 6050, 6083])},
  'MubanPigBreed': {'L-80BE6': ('Muban pig breed', [7480])},
  'MucicarmineStain': {'C-2284B': ('mucicarmine stain', [8112])},
  'MucinousAdenocarcinomaColloidCarcinoma': {'M-84803': ('Mucinous '
@@ -9141,11 +9097,6 @@ concepts['SRT'] = \
                                                          [12282])},
  'MustelaPutoriusFuroFerret': {'L-88423': ('Mustela putorius furo (ferret)',
                                            [7454])},
- 'MxDistantMetastasisCannotBeAssessedBreast': {'R-003DC': ('MX: Distant '
-                                                           'metastasis cannot '
-                                                           'be assessed '
-                                                           '(breast)',
-                                                           [6162])},
  'MycoticAneurysm': {'M-32320': ('mycotic aneurysm', [3808])},
  'Myeloma': {'M-97323': ('Myeloma', [64])},
  'MyeloperoxidaseStain': {'C-2281C': ('myeloperoxidase stain', [8112])},
@@ -9186,7 +9137,7 @@ concepts['SRT'] = \
                                                       '9 axillary lymph '
                                                       'nodes...',
                                                       [6161])},
- 'N2aMetastasisIn4To9AxillaryLymphNodes20Mm': {'R-003D7': ('N2a: Metastasis in '
+ 'N2aMetastasisIn4To9AxillaryLymphNodes20mm': {'R-003D7': ('N2a: Metastasis in '
                                                            '4 to 9 axillary '
                                                            'lymph nodes '
                                                            '(...2.0 mm)...',
@@ -9198,7 +9149,7 @@ concepts['SRT'] = \
                                                                 'internal... '
                                                                 'nodes...',
                                                                 [6161])},
- 'N3MetastasisToIpsilateralInternalMammaryLymphNodeS': {'G-F749': ('N3: '
+ 'N3MetastasisToIpsilateralInternalMammaryLymphNodes': {'G-F749': ('N3: '
                                                                    'Metastasis '
                                                                    'to '
                                                                    'ipsilateral '
@@ -9234,6 +9185,15 @@ concepts['SRT'] = \
  'NDamaSangaCattleBreed': {'L-80198': ("N'Dama Sanga cattle breed", [7480])},
  'NGabouCattleBreed': {'L-8BA92': ("N'Gabou cattle breed", [7480])},
  'NGaoundereCattleBreed': {'L-8BB65': ("N'Gaoundere cattle breed", [7480])},
+ 'NSAID': {'F-61898': ('NSAID', [621, 622])},
+ 'NXRegionalLymphNodesCannotBeAssessed': {'R-003CA': ('NX: Regional lymph '
+                                                      'nodes cannot be '
+                                                      'assessed...',
+                                                      [6161])},
+ 'NYHAClassI': {'F-3018B': ('NYHA Class I', [3736])},
+ 'NYHAClassII': {'F-3018C': ('NYHA Class II', [3736])},
+ 'NYHAClassIII': {'F-3018D': ('NYHA Class III', [3736])},
+ 'NYHAClassIV': {'F-3018E': ('NYHA Class IV', [3736])},
  'NachiGoatBreed': {'L-80228': ('Nachi goat breed', [7480])},
  'NadbuzanskaPigBreed': {'L-8B174': ('Nadbuzanska pig breed', [7480])},
  'NagoriCattleBreed': {'L-8BAE7': ('Nagori cattle breed', [7480])},
@@ -9256,9 +9216,9 @@ concepts['SRT'] = \
  'NanjingBlackPigBreed': {'L-806DA': ('Nanjing Black pig breed', [7480])},
  'NantaisCattleBreed': {'L-8BA90': ('Nantais cattle breed', [7480])},
  'NanyangCattleBreed': {'L-80197': ('Nanyang cattle breed', [7480])},
- 'NaphthaleneBlack12bStain': {'C-22846': ('naphthalene black 12B stain',
+ 'NaphthaleneBlack12BStain': {'C-22846': ('naphthalene black 12B stain',
                                           [8112])},
- 'NaphtholAsDChloracetateEsteraseStain': {'C-2285D': ('naphthol-AS-D-chloracetate '
+ 'NaphtholASDChloracetateEsteraseStain': {'C-2285D': ('naphthol-AS-D-chloracetate '
                                                       'esterase stain',
                                                       [8112])},
  'NaphtholGreenBStain': {'C-22801': ('naphthol green B stain', [8112])},
@@ -9336,7 +9296,6 @@ concepts['SRT'] = \
  'Negative': {'R-40759': ('Negative', [250])},
  'NegativeLowerBodyPressure': {'P2-71308': ('Negative lower body pressure',
                                             [3271, 91])},
- 'Negative_1': {'F-037BC': ('1 - Negative', [6026, 6027])},
  'NegraSerranaGoatBreed': {'L-8021C': ('Negra Serrana goat breed', [7480])},
  'NeijiangPigBreed': {'L-80681': ('Neijiang pig breed', [7480])},
  'NejdiCattleBreed': {'L-8BA91': ('Nejdi cattle breed', [7480])},
@@ -9348,7 +9307,7 @@ concepts['SRT'] = \
  'NeoaorticRoot': {'T-D0883': ('Neoaortic Root', [12289])},
  'NeoaorticValve': {'T-D087A': ('Neoaortic Valve', [12289])},
  'NeonatalIntensiveCare': {'R-305CE': ('Neonatal Intensive Care', [7030])},
- 'NeonatalPulmonaryArteryPrimitivePa': {'T-F7040': ('Neonatal pulmonary artery '
+ 'NeonatalPulmonaryArteryPrimitivePA': {'T-F7040': ('Neonatal pulmonary artery '
                                                     '(primitive PA)',
                                                     [3604, 3606, 3630])},
  'Neoplasm': {'M-8FFFF': ('Neoplasm', [7151, 7159, 7194])},
@@ -9366,10 +9325,10 @@ concepts['SRT'] = \
  'Neurofibromatosis': {'M-95401': ('Neurofibromatosis', [6030, 6031])},
  'Neurohypophysis': {'T-B1200': ('Neurohypophysis', [7151, 7153, 7192, 9514])},
  'Neurology': {'R-3025E': ('Neurology', [7030])},
- 'NeuromuscularBlockingNmbDepolarizing': {'F-6180F': ('NeuroMuscular Blocking '
+ 'NeuromuscularBlockingNMBDepolarizing': {'F-6180F': ('NeuroMuscular Blocking '
                                                       '(NMB) - depolarizing',
                                                       [621, 622])},
- 'NeuromuscularBlockingNmbNonDepolarizing': {'F-61959': ('NeuroMuscular '
+ 'NeuromuscularBlockingNMBNonDepolarizing': {'F-61959': ('NeuroMuscular '
                                                          'Blocking (NMB) - non '
                                                          'depolarizing',
                                                          [621, 622])},
@@ -9423,7 +9382,6 @@ concepts['SRT'] = \
  'NitraHybridPigBreed': {'L-8B167': ('Nitra Hybrid pig breed', [7480])},
  'NitrateVasodilator': {'C-81520': ('Nitrate vasodilator', [3760])},
  'NitrazineYellowStain': {'C-22823': ('nitrazine yellow stain', [8112])},
- 'Nitrogen_13': {'C-107A1': ('^13^Nitrogen', [3107, 4020])},
  'Nitroglycerin': {'C-81560': ('Nitroglycerin', [10])},
  'NitrousOxide': {'C-6A118': ('Nitrous oxide', [623, 624])},
  'NkediCattleBreed': {'L-8BB66': ('Nkedi cattle breed', [7480])},
@@ -9442,7 +9400,6 @@ concepts['SRT'] = \
  'NoHistoryOfSmoking': {'F-9321F': ('No History of Smoking', [3724])},
  'NoMotorResponseToCommand': {'F-100EC': ('No motor response to command',
                                           [60, 9300])},
- 'NoPerfusion_0': {'R-0037E': ('0: No Perfusion', [3713])},
  'NoSignificantChangesInTheFinding': {'F-01723': ('No significant changes in '
                                                   'the finding',
                                                   [6002, 6003, 6134])},
@@ -9456,13 +9413,13 @@ concepts['SRT'] = \
  'NonCalcified': {'G-A265': ('non-calcified', [3802])},
  'NonCoronarySinus': {'T-42230': ('Non-coronary Sinus', [12291])},
  'NonElectricHeatingPad': {'A-2C141': ('Non-electric heating pad', [635])},
- 'NonHodgkinSLymphoma': {'M-95913': ("Non-Hodgkin's lymphoma", [6030, 6033])},
+ 'NonHodgkinLymphoma': {'M-95913': ("Non-Hodgkin's lymphoma", [6030, 6033])},
  'NonRadiopaqueMedium': {'C-B0312': ('Non radiopaque medium', [12, 3850])},
  'NonRestrictive': {'R-0033B': ('Non-restrictive', [3707])},
- 'NonSmallCellCarcinoma': {'M-80463': ('Non-small cell carcinoma', [638, 639])},
- 'NonStElevationMyocardialInfarction': {'D3-1511A': ('Non ST Elevation '
+ 'NonSTElevationMyocardialInfarction': {'D3-1511A': ('Non ST Elevation '
                                                      'Myocardial Infarction',
                                                      [3723])},
+ 'NonSmallCellCarcinoma': {'M-80463': ('Non-small cell carcinoma', [638, 639])},
  'NonSustainedVentricularTachycardia': {'D3-31710': ('Non-sustained '
                                                      'ventricular tachycardia',
                                                      [3230])},
@@ -9472,7 +9429,7 @@ concepts['SRT'] = \
  'NoniusHorseBreed': {'L-8A183': ('Nonius horse breed', [7480])},
  'NonspecificEsteraseStain': {'C-2281E': ('nonspecific esterase stain',
                                           [8112])},
- 'NonspecificStTAbnormality': {'F-38794': ('Nonspecific ST-T abnormality',
+ 'NonspecificSTTAbnormality': {'F-38794': ('Nonspecific ST-T abnormality',
                                            [3230])},
  'NooitgedachtHorseBreed': {'L-8A184': ('Nooitgedacht horse breed', [7480])},
  'NooitgedachtPonyHorseBreed': {'L-8A17C': ('Nooitgedacht Pony horse breed',
@@ -9490,7 +9447,7 @@ concepts['SRT'] = \
             'G-A460': ('Normal', [222, 242, 3119, 3210, 3211])},
  'NormalAorticRoot': {'R-0033C': ('Normal Aortic Root', [3709])},
  'NormalCoronaryArteries': {'R-0033D': ('Normal coronary arteries', [3728])},
- 'NormalEcg': {'F-000B7': ('Normal ECG', [3677])},
+ 'NormalECG': {'F-000B7': ('Normal ECG', [3677])},
  'NormalExtracardiacUptake': {'F-04FA0': ('Normal extracardiac uptake',
                                           [3116])},
  'NormalLeftAndRightHeartHemodynamics': {'R-0033E': ('Normal left and right '
@@ -9587,17 +9544,16 @@ concepts['SRT'] = \
  'NottinghamCombinedGradeI35Points': {'G-F616': ('Nottingham Combined Grade I: '
                                                  '3-5 points',
                                                  [6069])},
- 'NottinghamCombinedGradeIi67Points': {'G-F617': ('Nottingham Combined Grade '
+ 'NottinghamCombinedGradeII67Points': {'G-F617': ('Nottingham Combined Grade '
                                                   'II: 6-7 points',
                                                   [6069])},
- 'NottinghamCombinedGradeIii89Points': {'G-F618': ('Nottingham Combined Grade '
+ 'NottinghamCombinedGradeIII89Points': {'G-F618': ('Nottingham Combined Grade '
                                                    'III: 8-9 points',
                                                    [6069])},
  'NovaScotiaDuckTollingRetrieverDogBreed': {'L-80846': ('Nova Scotia duck '
                                                         'tolling retriever dog '
                                                         'breed',
                                                         [7480])},
- 'Nsaid': {'F-61898': ('NSAID', [621, 622])},
  'NubaMountainXZebuCattleBreed': {'L-8BC19': ('Nuba Mountain X zebu cattle '
                                               'breed',
                                               [7480])},
@@ -9625,31 +9581,12 @@ concepts['SRT'] = \
  'NurasCattleBreed': {'L-8019E': ('Nuras cattle breed', [7480])},
  'Nurse': {'J-07100': ('Nurse', [7450, 7452])},
  'Nutrition': {'F-045CE': ('Nutrition', [3774])},
- 'NxRegionalLymphNodesCannotBeAssessed': {'R-003CA': ('NX: Regional lymph '
-                                                      'nodes cannot be '
-                                                      'assessed...',
-                                                      [6161])},
- 'NyhaClassI': {'F-3018B': ('NYHA Class I', [3736])},
- 'NyhaClassIi': {'F-3018C': ('NYHA Class II', [3736])},
- 'NyhaClassIii': {'F-3018D': ('NYHA Class III', [3736])},
- 'NyhaClassIv': {'F-3018E': ('NYHA Class IV', [3736])},
  'NyoroCattleBreed': {'L-8019F': ('Nyoro cattle breed', [7480])},
- 'OClockPosition_1': {'F-01781': ("1 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_10': {'F-0178A': ("10 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_11': {'F-0178B': ("11 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_12': {'F-0178C': ("12 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_2': {'F-01782': ("2 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_3': {'F-01783': ("3 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_4': {'F-01784': ("4 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_5': {'F-01785': ("5 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_6': {'F-01786': ("6 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_7': {'F-01787': ("7 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_8': {'F-01788': ("8 o'clock position", [6018, 6019, 6205])},
- 'OClockPosition_9': {'F-01789': ("9 o'clock position", [6018, 6019, 6205])},
  'OEAxillaryLymphadenopathy': {'R-20099': ('O/E - axillary lymphadenopathy',
                                            [6055])},
  'OEBreastLumpPalpated': {'R-207D7': ('O/E - Breast lump palpated', [6055])},
  'OELymphadenopathy': {'R-202A9': ('O/E - lymphadenopathy', [6055])},
+ 'OICPigBreed': {'L-80642': ('OIC pig breed', [7480])},
  'OberhasliGoatBreed': {'L-80231': ('Oberhasli goat breed', [7480])},
  'Oblique': {'G-A472': ('Oblique', [501, 502, 6, 6121]),
              'R-102C1': ('oblique', [4010, 501]),
@@ -9688,7 +9625,6 @@ concepts['SRT'] = \
  'OculomotorNerve': {'T-A8070': ('oculomotor nerve', [7706, 7710])},
  'OffAxis': {'G-A13B': ('Off axis', [501, 502, 6])},
  'OhminiPigBreed': {'L-8B126': ('Ohmini pig breed', [7480])},
- 'OicPigBreed': {'L-80642': ('OIC pig breed', [7480])},
  'OilImmersionLens': {'A-0011B': ('Oil immersion lens', [8121])},
  'OilRedOStain': {'C-22863': ('oil red O stain', [8112])},
  'OldDanishBirdDogBreed': {'L-809C5': ('Old Danish Bird Dog breed', [7480])},
@@ -9766,7 +9702,7 @@ concepts['SRT'] = \
  'OralRoute': {'G-D140': ('Oral route', [11])},
  'OralSurgery': {'R-30285': ('Oral Surgery', [7030])},
  'OrangeGStain': {'C-22832': ('orange G stain', [8112])},
- 'OrangeIiStain': {'C-22824': ('orange II stain', [8112])},
+ 'OrangeIIStain': {'C-22824': ('orange II stain', [8112])},
  'Orbit': {'T-D14AE': ('Orbit', [12022])},
  'OrbitalStructure': {'T-D14AE': ('Orbital structure',
                                   [1000,
@@ -9797,9 +9733,9 @@ concepts['SRT'] = \
  'OrlovTrotterHorseBreed': {'L-8A198': ('Orlov Trotter horse breed', [7480])},
  'OrobicaGoatBreed': {'L-8021D': ('Orobica goat breed', [7480])},
  'OropaCattleBreed': {'L-8BA94': ('Oropa cattle breed', [7480])},
- 'OropharyngealTonsilWaldeyerSRing': {'T-C5000': ('oropharyngeal tonsil '
-                                                  "(waldeyer's ring)",
-                                                  [7601])},
+ 'OropharyngealTonsilWaldeyerRing': {'T-C5000': ('oropharyngeal tonsil '
+                                                 "(waldeyer's ring)",
+                                                 [7601])},
  'Oropharynx': {'T-55200': ('oropharynx', [7601])},
  'OrthopedicDevice': {'A-12000': ('Orthopedic device', [1000])},
  'OrthopedicSurgery': {'R-30294': ('Orthopedic Surgery', [7030])},
@@ -9857,25 +9793,37 @@ concepts['SRT'] = \
  'OxygenO15': {'C-B1038': ('Oxygen O^15^', [4021])},
  'OxygenTherapy': {'P2-22500': ('Oxygen Therapy', [617, 618])},
  'OxygenWaterO15': {'C-B1039': ('Oxygen-water O^15^', [4021])},
- 'Oxygen_14': {'C-1018C': ('^14^Oxygen', [4020])},
- 'Oxygen_15': {'C-B1038': ('^15^Oxygen', [4020])},
  'Oxytocic': {'F-61E2A': ('Oxytocic', [621, 622])},
+ 'PETBrainStudy': {'P5-0A001': ('PET brain study', [3108])},
+ 'PETBreastStudy': {'P5-0A00D': ('PET breast study', [3108])},
+ 'PETCTFDGImagingOfWholeBody': {'P5-080FF': ('PET/CT FDG imaging of whole body',
+                                             [100])},
+ 'PETCTMETImagingOfWholeBody': {'P5-08118': ('PET/CT MET imaging of whole body',
+                                             [100])},
+ 'PETHeartStudy': {'P5-0A006': ('PET heart study', [3108, 3206, 3757])},
+ 'PETStudyForLocalizationOfTumor': {'P5-0A00A': ('PET study for localization '
+                                                 'of tumor',
+                                                 [3108])},
+ 'PR1050PigBreed': {'L-8064E': ('PR 1050 pig breed', [7480])},
+ 'PR1075PigBreed': {'L-8064F': ('PR 1075 pig breed', [7480])},
+ 'PRK': {'P1-A3835': ('PRK', [4234])},
+ 'PTSMCu62': {'C-B07E7': ('PTSM Cu^62^', [4021])},
+ 'PTV': {'R-429EC': ('PTV', [9534])},
  'PabnaXZebuCattleBreed': {'L-8BC20': ('Pabna X zebu cattle breed', [7480])},
  'PacedStressTest': {'P2-3110B': ('Paced stress test', [3200])},
  'Pacing': {'P2-35000': ('Pacing', [3271, 3555, 91])},
  'PacingWithMagnet': {'R-00315': ('pacing with magnet', [3555])},
  'PageBlue83Stain': {'C-22901': ('page blue 83 stain', [8112])},
  'PageBlueG90Stain': {'C-22898': ('page blue G-90 stain', [8112])},
- 'PagetSDiseaseMammaryOfTheNipple': {'M-85403': ("Paget's disease, mammary (of "
-                                                 'the nipple)',
-                                                 [6030, 6033])},
+ 'PagetDiseaseMammaryOfTheNipple': {'M-85403': ("Paget's disease, mammary (of "
+                                                'the nipple)',
+                                                [6030, 6033])},
  'PagliarolaSheepBreed': {'L-80441': ('Pagliarola sheep breed', [7480])},
  'PainManagement': {'R-3026A': ('Pain Management', [7030])},
  'PajunaCattleBreed': {'L-8BA96': ('Pajuna cattle breed', [7480])},
  'PalatineBone': {'T-11160': ('Palatine bone', [4028, 7151, 7192, 9514])},
  'PalatineTonsil': {'T-C5100': ('palatine tonsil', [7601])},
  'PalatineUvula': {'T-51130': ('palatine uvula', [7601])},
- 'Palladium_103': {'C-160A3': ('^103^Palladium', [9528])},
  'PalliativeCare': {'R-30260': ('Palliative Care', [7030])},
  'PalliativeIntent': {'R-40642': ('Palliative Intent', [3629])},
  'PallorPaleComplexion': {'F-037AB': ('Pallor (Pale Complexion)', [60, 9300])},
@@ -9969,11 +9917,11 @@ concepts['SRT'] = \
  'Parasagittal': {'G-A189': ('Parasagittal', [5, 501, 502, 6])},
  'Parasternal': {'T-D3136': ('Parasternal', [4, 7151, 7192, 9514])},
  'ParasternalLongAxis': {'G-0396': ('Parasternal long axis', [12226, 501])},
- 'ParasternalLongAxisViewOfTheRvInflowTract': {'G-0577': ('Parasternal long '
+ 'ParasternalLongAxisViewOfTheRVInflowTract': {'G-0577': ('Parasternal long '
                                                           'axis view of the RV '
                                                           'inflow tract',
                                                           [12226, 501])},
- 'ParasternalLongAxisViewOfTheRvOutflowTract': {'G-0578': ('Parasternal long '
+ 'ParasternalLongAxisViewOfTheRVOutflowTract': {'G-0578': ('Parasternal long '
                                                            'axis view of the '
                                                            'RV outflow tract',
                                                            [12226, 501])},
@@ -10028,7 +9976,6 @@ concepts['SRT'] = \
                                                                      'connection '
                                                                      'operation',
                                                                      [12247])},
- 'PartialPerfusion_2': {'R-00381': ('2: Partial Perfusion', [3713])},
  'PartiallyReversibleMyocardialPerfusionDefect': {'F-3014E': ('Partially '
                                                               'Reversible '
                                                               'myocardial '
@@ -10114,7 +10061,7 @@ concepts['SRT'] = \
  'Pedunculated': {'G-A477': ('Pedunculated', [6209])},
  'PeeWeeCattleBreed': {'L-8BA0B': ('Pee Wee cattle breed', [7480])},
  'PekingeseDog': {'L-80813': ('Pekingese dog', [7480])},
- 'PelibÜEySheepBreed': {'L-80BA1': ('Pelibüey sheep breed', [7480])},
+ 'PelibüeySheepBreed': {'L-80BA1': ('Pelibüey sheep breed', [7480])},
  'PeloponnesusCattleBreed': {'L-8BA0C': ('Peloponnesus cattle breed', [7480])},
  'PelvicLymphNode': {'T-C4600': ('pelvic lymph node', [7600])},
  'Pelvis': {'T-12375': ('Pelvis', [7304]),
@@ -10138,15 +10085,12 @@ concepts['SRT'] = \
                                             7151,
                                             7192,
                                             9514])},
- 'PelÓNPigBreed': {'L-80617': ('Pelón pig breed', [7480])},
+ 'PelónPigBreed': {'L-80617': ('Pelón pig breed', [7480])},
  'PembrokeWelshCorgiDogBreed': {'L-80912': ('Pembroke Welsh corgi dog breed',
                                             [7480])},
  'PenArLan77PigBreed': {'L-805B8': ('Pen ar Lan 77 pig breed', [7480])},
  'PenbukPigBreed': {'L-805EE': ('Penbuk pig breed', [7480])},
  'PeneiaHorseBreed': {'L-8A133': ('Peneia horse breed', [7480])},
- 'PenetrationWithoutPerfusion_1': {'R-0037F': ('1: Penetration without '
-                                               'Perfusion',
-                                               [3713])},
  'PenicillinAntibiotic': {'C-0021D': ('Penicillin antibiotic', [621, 622])},
  'Penis': {'T-91000': ('Penis', [4, 7151, 7192, 9514])},
  'Penner': {'R-1029E': ('Penner', [4012])},
@@ -10280,16 +10224,6 @@ concepts['SRT'] = \
                                             [7480])},
  'PeruvianPasoHorseBreed': {'L-80439': ('Peruvian Paso horse breed', [7480])},
  'PesterCattleBreed': {'L-8BA0D': ('Pester cattle breed', [7480])},
- 'PetBrainStudy': {'P5-0A001': ('PET brain study', [3108])},
- 'PetBreastStudy': {'P5-0A00D': ('PET breast study', [3108])},
- 'PetCtFdgImagingOfWholeBody': {'P5-080FF': ('PET/CT FDG imaging of whole body',
-                                             [100])},
- 'PetCtMetImagingOfWholeBody': {'P5-08118': ('PET/CT MET imaging of whole body',
-                                             [100])},
- 'PetHeartStudy': {'P5-0A006': ('PET heart study', [3108, 3206, 3757])},
- 'PetStudyForLocalizationOfTumor': {'P5-0A00A': ('PET study for localization '
-                                                 'of tumor',
-                                                 [3108])},
  'PetisoArgentinoHorseBreed': {'L-8A136': ('Petiso Argentino horse breed',
                                            [7480])},
  'PetitBassetGriffonVendeenDog': {'L-80814': ('Petit basset griffon vendeen '
@@ -10297,7 +10231,7 @@ concepts['SRT'] = \
                                               [7480])},
  'PetitBleuDeGascogneDogBreed': {'L-809CE': ('Petit Bleu de Gascogne dog breed',
                                              [7480])},
- 'PetitBrabaÇOnDogBreed': {'L-808B4': ('Petit Brabaçon dog breed', [7480])},
+ 'PetitBrabaçonDogBreed': {'L-808B4': ('Petit Brabaçon dog breed', [7480])},
  'PetitGasconSaintongeoisDogBreed': {'L-809CF': ('Petit Gascon-Saintongeois '
                                                  'dog breed',
                                                  [7480])},
@@ -10305,7 +10239,7 @@ concepts['SRT'] = \
                                                     'Gascogne dog breed',
                                                     [7480])},
  'Phakic': {'R-2073F': ('Phakic', [4231])},
- 'PhakicIol': {'A-040F7': ('Phakic IOL', [4231])},
+ 'PhakicIOL': {'A-040F7': ('Phakic IOL', [4231])},
  'PharaohHound': {'L-80815': ('Pharaoh hound', [7480])},
  'PharmacologicAndExerciseStressTest': {'P2-31011': ('Pharmacologic and '
                                                      'exercise stress test',
@@ -10340,7 +10274,6 @@ concepts['SRT'] = \
  'Phlebosclerosis': {'M-52500': ('phlebosclerosis', [3817])},
  'PhloxinBStain': {'C-22922': ('phloxin B stain', [8112])},
  'Phonation': {'F-F7100': ('Phonation', [91])},
- 'Phosphorus_32': {'C-106A1': ('^32^Phosphorus', [18, 9528])},
  'PhosphotungsticAcidHematoxylinStain': {'C-2284E': ('phosphotungstic '
                                                      'acid-hematoxylin stain',
                                                      [8112])},
@@ -10368,7 +10301,7 @@ concepts['SRT'] = \
                                                [7480])},
  'PietrainPigBreed': {'L-80654': ('Pietrain pig breed', [7480])},
  'PigghamPigBreed': {'L-80693': ('Piggham pig breed', [7480])},
- 'PiggybackIol': {'F-02087': ('Piggyback IOL', [4231])},
+ 'PiggybackIOL': {'F-02087': ('Piggyback IOL', [4231])},
  'Pin': {'A-12024': ('Pin', [6102, 6138, 6202, 6203, 6404])},
  'PindosHorseBreed': {'L-8A13D': ('Pindos horse breed', [7480])},
  'PindosPonyHorseBreed': {'L-804B0': ('Pindos pony horse breed', [7480])},
@@ -10461,7 +10394,7 @@ concepts['SRT'] = \
  'PolledLincolnRedCattleBreed': {'L-8BA1D': ('Polled Lincoln Red cattle breed',
                                              [7480])},
  'PolledNeloreCattleBreed': {'L-8BB70': ('Polled Nelore cattle breed', [7480])},
- 'PolledShorthornUsCattleBreed': {'L-8BA1E': ('Polled Shorthorn (US) cattle '
+ 'PolledShorthornUSCattleBreed': {'L-8BA1E': ('Polled Shorthorn (US) cattle '
                                               'breed',
                                               [7480])},
  'PolledSimmentalCattleBreed': {'L-8BA1F': ('Polled Simmental cattle breed',
@@ -10485,12 +10418,12 @@ concepts['SRT'] = \
                                                 [7480])},
  'PomeranianDog': {'L-80824': ('Pomeranian dog', [7480])},
  'PomeranianPigBreed': {'L-80698': ('Pomeranian pig breed', [7480])},
- 'Ponceau3rStain': {'C-22829': ('ponceau 3R stain', [8112])},
+ 'Ponceau3RStain': {'C-22829': ('ponceau 3R stain', [8112])},
  'PonceauSStain': {'C-22868': ('ponceau S stain', [8112])},
  'PonceauXylidineStain': {'C-22828': ('ponceau xylidine stain', [8112])},
- 'PontamineSkyBlue5bxStain': {'C-22855': ('pontamine sky blue 5BX stain',
+ 'PontamineSkyBlue5BXStain': {'C-22855': ('pontamine sky blue 5BX stain',
                                           [8112])},
- 'PontamineSkyBlue6bxStain': {'C-22856': ('pontamine sky blue 6BX stain',
+ 'PontamineSkyBlue6BXStain': {'C-22856': ('pontamine sky blue 6BX stain',
                                           [8112])},
  'PontremoleseCattleBreed': {'L-8BA2C': ('Pontremolese cattle breed', [7480])},
  'PonwarCattleBreed': {'L-8BAEB': ('Ponwar cattle breed', [7480])},
@@ -10550,7 +10483,7 @@ concepts['SRT'] = \
  'PostExerciseState': {'F-01608': ('Post-exercise state', [3262, 3602])},
  'PostInfarctionAngina': {'D3-13014': ('Post-infarction angina', [3700])},
  'PostOperative': {'R-413B7': ('Post-operative', [31])},
- 'PostPtca': {'R-00357': ('Post PTCA', [3201])},
+ 'PostPTCA': {'R-00357': ('Post PTCA', [3201])},
  'PostStenoticDilation': {'R-003A1': ('Post Stenotic Dilation', [3709])},
  'PostVitrectomy': {'DA-7930D': ('Post-Vitrectomy', [4232])},
  'PostVolumeChallenge': {'P2-71318': ('Post volume challenge', [3271, 91])},
@@ -10674,9 +10607,6 @@ concepts['SRT'] = \
  'PotassiumChlorideK43': {'C-B1150': ('Potassium chloride K^43^', [25])},
  'PotassiumDichromate': {'C-13518': ('Potassium dichromate', [8114])},
  'PotassiumHydroxideStain': {'C-22870': ('potassium hydroxide stain', [8112])},
- 'Potassium_38': {'C-135A4': ('^38^Potassium', [4020])},
- 'Potassium_42': {'C-135A2': ('^42^Potassium', [18])},
- 'Potassium_43': {'C-135A3': ('^43^Potassium', [18])},
  'PotentialAcuityMeterVisualAcuity': {'F-04ECE': ('Potential Acuity Meter '
                                                   'Visual Acuity',
                                                   [4216])},
@@ -10685,8 +10615,6 @@ concepts['SRT'] = \
                                                       [7480])},
  'PowerDoppler': {'P0-02241': ('Power Doppler',
                                [12224, 218, 6058, 7180, 7469])},
- 'Pr1050PigBreed': {'L-8064E': ('PR 1050 pig breed', [7480])},
- 'Pr1075PigBreed': {'L-8064F': ('PR 1075 pig breed', [7480])},
  'PreAdmission': {'R-41FD9': ('Pre-admission', [31])},
  'PreBiopsyLocalizationOfBreastLesion': {'P1-48011': ('Pre-biopsy localization '
                                                       'of breast lesion',
@@ -10730,13 +10658,11 @@ concepts['SRT'] = \
                                           [3010, 4, 4042, 7151, 7192, 9514])},
  'PriobHorseBreed': {'L-8A138': ('Priob horse breed', [7480])},
  'PrisheksninskPigBreed': {'L-805C9': ('Prisheksninsk pig breed', [7480])},
- 'Prk': {'P1-A3835': ('PRK', [4234])},
- 'ProbablyBenign_3': {'F-037BF': ('3 - Probably Benign', [6026, 6027])},
  'Problem': {'F-01000': ('Problem', [3769])},
  'ProblemResolved': {'F-04B88': ('Problem resolved', [3770])},
  'ProcedureInCardiacCareUnit': {'R-0035A': ('Procedure in Cardiac Care Unit',
                                             [3671])},
- 'ProcionBrilliantBlueMrsStain': {'C-22956': ('procion brilliant blue MRS '
+ 'ProcionBrilliantBlueMRSStain': {'C-22956': ('procion brilliant blue MRS '
                                               'stain',
                                               [8112])},
  'ProfundaFemorisArtery': {'T-47440': ('Profunda Femoris Artery',
@@ -10790,7 +10716,7 @@ concepts['SRT'] = \
                                                     'tissue specimen',
                                                     [8113])},
  'Proton': {'C-10005': ('Proton', [9526])},
- 'ProvenÇAleGoatBreed': {'L-8021B': ('Provençale goat breed', [7480])},
+ 'ProvençaleGoatBreed': {'L-8021B': ('Provençale goat breed', [7480])},
  'Proximal': {'G-A118': ('Proximal', [12116, 12281, 2, 3019, 5])},
  'ProximalCircumflexCoronaryArtery': {'T-43121': ('Proximal Circumflex '
                                                   'Coronary Artery',
@@ -10841,8 +10767,6 @@ concepts['SRT'] = \
  'Pseudophakia': {'DA-73460': ('Pseudophakia', [4231])},
  'Psychiatry': {'R-30275': ('Psychiatry', [7030])},
  'Psychology': {'R-42219': ('Psychology', [7030])},
- 'PtsmCu62': {'C-B07E7': ('PTSM Cu^62^', [4021])},
- 'Ptv': {'R-429EC': ('PTV', [9534])},
  'Pudelpointer': {'L-80835': ('Pudelpointer', [7480])},
  'PuertoRicanCriolloCattleBreed': {'L-8BA2E': ('Puerto Rican Criollo cattle '
                                                'breed',
@@ -11062,6 +10986,12 @@ concepts['SRT'] = \
                                             [8112])},
  'Quinidine': {'C-80460': ('Quinidine', [10])},
  'QuinoloneAntibiotic': {'C-0024C': ('Quinolone antibiotic', [621, 622])},
+ 'RK': {'P1-A3102': ('RK', [4234])},
+ 'RVCardiacIndex': {'F-04F84': ('RV Cardiac Index', [12204])},
+ 'RVCardiacOutput': {'F-04FA5': ('RV Cardiac Output', [12204])},
+ 'RVStrokeIndex': {'F-04FE5': ('RV Stroke Index', [12204])},
+ 'RVStrokeVolume': {'F-04FD8': ('RV Stroke Volume', [12204])},
+ 'RX3CattleBreed': {'L-8B97E': ('RX3 cattle breed', [7480])},
  'RaadPigBreed': {'L-8B116': ('Raad pig breed', [7480])},
  'RaboLargoSheepBreed': {'L-80BB5': ('Rabo Largo sheep breed', [7480])},
  'RacemoseAneurysm': {'M-32410': ('racemose aneurysm', [3808])},
@@ -11087,7 +11017,7 @@ concepts['SRT'] = \
                             [12103, 12108, 3827, 7151, 7192, 9514])},
  'RadiationTherapist': {'J-06173': ('Radiation Therapist', [7450, 7452, 9536])},
  'RadiationTherapy': {'P5-C0000': ('Radiation therapy', [6051, 6083, 6085])},
- 'RadicalAortopulmonaryReconstructWRvToPaValvelessConduit': {'P1-30A31': ('Radical '
+ 'RadicalAortopulmonaryReconstructWRVToPAValvelessConduit': {'P1-30A31': ('Radical '
                                                                           'aortopulmonary '
                                                                           'reconstruct '
                                                                           'w '
@@ -11165,8 +11095,6 @@ concepts['SRT'] = \
                                                      'Adverse Reaction',
                                                      [9300, 9301])},
  'Radiotherapy': {'R-3023C': ('Radiotherapy', [7030])},
- 'Radium_223': {'C-136A2': ('^223^Radium', [18])},
- 'Radium_226': {'C-136A5': ('^226^Radium', [9528])},
  'Radius': {'G-A196': ('Radius',
                        [12218,
                         12250,
@@ -11196,7 +11124,6 @@ concepts['SRT'] = \
                         7470]),
             'T-12420': ('Radius', [12021, 7304])},
  'RadiusAndUlna': {'T-12403': ('Radius and ulna', [7482, 7483])},
- 'Radon_222': {'C-136B6': ('^222^Radon', [9528])},
  'Rafert': {'R-40A94': ('Rafert', [4012])},
  'RafertLong': {'R-40A95': ('Rafert-Long', [4012])},
  'RagamuffinCatBreed': {'L-80A97': ('Ragamuffin cat breed', [7480])},
@@ -11240,7 +11167,7 @@ concepts['SRT'] = \
                                                                  'Ejection '
                                                                  'Time',
                                                                  [12211])},
- 'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave': {'G-037B': ('Ratio of MV '
+ 'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave': {'G-037B': ('Ratio of MV '
                                                                  'Peak '
                                                                  'Velocity to '
                                                                  'LV Peak '
@@ -11263,7 +11190,7 @@ concepts['SRT'] = \
  'Rattus': {'L-877FB': ('Rattus', [7454])},
  'RattusNorvegicusCommonRat': {'L-877FC': ('Rattus norvegicus (common rat)',
                                            [7454])},
- 'RaynaudSDisease': {'D3-80505': ("Raynaud's disease", [3805])},
+ 'RaynaudDisease': {'D3-80505': ("Raynaud's disease", [3805])},
  'RazorBackPigBreed': {'L-80589': ('Razor-Back pig breed', [7480])},
  'RecentMyocardialInfarction': {'G-044D': ('Recent Myocardial infarction',
                                            [3205])},
@@ -11287,9 +11214,9 @@ concepts['SRT'] = \
                          9514])},
  'Recumbent': {'F-10450': ('recumbent', [19])},
  'Recurrent': {'G-A39A': ('Recurrent', [3770])},
- 'RecurrentAnginaPostCabg': {'R-00365': ('Recurrent angina Post-CABG', [3700])},
- 'RecurrentAnginaPostDca': {'R-00367': ('Recurrent angina Post-DCA', [3700])},
- 'RecurrentAnginaPostPtca': {'R-00368': ('Recurrent angina Post-PTCA', [3700])},
+ 'RecurrentAnginaPostCABG': {'R-00365': ('Recurrent angina Post-CABG', [3700])},
+ 'RecurrentAnginaPostDCA': {'R-00367': ('Recurrent angina Post-DCA', [3700])},
+ 'RecurrentAnginaPostPTCA': {'R-00368': ('Recurrent angina Post-PTCA', [3700])},
  'RecurrentAnginaPostRotationalAtherectomy': {'R-00369': ('Recurrent angina '
                                                           'Post-Rotational '
                                                           'Atherectomy',
@@ -11312,7 +11239,7 @@ concepts['SRT'] = \
  'RedKandhariCattleBreed': {'L-8BB77': ('Red Kandhari cattle breed', [7480])},
  'RedOpticalFilter': {'A-010DF': ('Red optical filter', [4204, 8124])},
  'RedPollCowBreed': {'L-80157': ('Red Poll cow breed', [7480])},
- 'RedPolledØStlandCattleBreed': {'L-8B978': ('Red Polled Østland cattle breed',
+ 'RedPolledØstlandCattleBreed': {'L-8B978': ('Red Polled Østland cattle breed',
                                              [7480])},
  'RedSindhiCattleBreed': {'L-8BAEE': ('Red Sindhi cattle breed', [7480])},
  'RedSteppeCattleBreed': {'L-8B979': ('Red Steppe cattle breed', [7480])},
@@ -11481,8 +11408,6 @@ concepts['SRT'] = \
  'RexCatBreed': {'L-80A40': ('Rex cat breed', [7480])},
  'RhaetianGrayCattleBreed': {'L-8BA4A': ('Rhaetian Gray cattle breed', [7480])},
  'RheinbergFilter': {'A-0011C': ('Rheinberg filter', [8124])},
- 'Rhenium_186': {'C-11906': ('^186^Rhenium', [18])},
- 'Rhenium_188': {'C-1018D': ('^188^Rhenium', [18])},
  'Rhese': {'R-102A0': ('Rhese', [4012])},
  'RheumaticFever': {'D3-17100': ('Rheumatic Fever', [12248, 12249])},
  'Rheumatology': {'R-30262': ('Rheumatology', [7030])},
@@ -11726,12 +11651,7 @@ concepts['SRT'] = \
                                                      [6300, 6302, 6303])},
  'RightOblique': {'R-10234': ('right oblique', [4010, 501])},
  'RightPleura': {'T-29100': ('Right Pleura', [12294])},
- 'RightPosteriorApicalTransitionZoneOfProstate': {'R-FFFF3': ('Right posterior '
-                                                              'apical '
-                                                              'transition zone '
-                                                              'of prostate',
-                                                              [6300, 6301])},
- 'RightPosteriorAvCoronaryArtery': {'T-43212': ('Right posterior AV Coronary '
+ 'RightPosteriorAVCoronaryArtery': {'T-43212': ('Right posterior AV Coronary '
                                                 'Artery',
                                                 [3014,
                                                  3015,
@@ -11743,6 +11663,11 @@ concepts['SRT'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
+ 'RightPosteriorApicalTransitionZoneOfProstate': {'R-FFFF3': ('Right posterior '
+                                                              'apical '
+                                                              'transition zone '
+                                                              'of prostate',
+                                                              [6300, 6301])},
  'RightPosteriorBasalTransitionZoneOfProstate': {'R-FFFB1': ('Right posterior '
                                                              'basal transition '
                                                              'zone of prostate',
@@ -11927,7 +11852,6 @@ concepts['SRT'] = \
                                                  [7480])},
  'RiopardenzeXZebuCattleBreed': {'L-8BC27': ('Riopardenze X zebu cattle breed',
                                              [7480])},
- 'Rk': {'P1-A3102': ('RK', [4234])},
  'Robert': {'R-40A96': ('Robert', [4012])},
  'RockAlpineGoatBreed': {'L-80207': ('Rock alpine goat breed', [7480])},
  'RockyMountainHorseHorseBreed': {'L-8A1FB': ('Rocky Mountain Horse horse '
@@ -12016,7 +11940,6 @@ concepts['SRT'] = \
                                                            'Horse horse breed',
                                                            [7480])},
  'RubidiumChlorideRb82': {'C-B1037': ('Rubidium chloride Rb^82^', [4021])},
- 'Rubidium_82': {'C-159A2': ('^82^Rubidium', [3107, 4020])},
  'RuptureOfBreastImplant': {'DD-66544': ('Rupture of breast implant', [6072])},
  'RupturedAneurysm': {'M-32201': ('ruptured aneurysm', [3808])},
  'RupturedSinusOfValsalva': {'D3-83660': ('Ruptured Sinus of Valsalva',
@@ -12044,25 +11967,28 @@ concepts['SRT'] = \
  'RussoLaikaDogBreed': {'L-809AD': ('Russo-Laika dog breed', [7480])},
  'RustaqiXZebuCattleBreed': {'L-8BC28': ('Rustaqi X zebu cattle breed',
                                          [7480])},
- 'Ruthenium_106': {'C-180A5': ('^106^Ruthenium', [9528])},
- 'Ruthenium_97': {'C-180A2': ('^97^Ruthenium', [18])},
- 'RvCardiacIndex': {'F-04F84': ('RV Cardiac Index', [12204])},
- 'RvCardiacOutput': {'F-04FA5': ('RV Cardiac Output', [12204])},
- 'RvStrokeIndex': {'F-04FE5': ('RV Stroke Index', [12204])},
- 'RvStrokeVolume': {'F-04FD8': ('RV Stroke Volume', [12204])},
- 'Rx3CattleBreed': {'L-8B97E': ('RX3 cattle breed', [7480])},
  'RyaSheepBreed': {'L-80B91': ('Rya sheep breed', [7480])},
  'RyelandSheepBreed': {'L-80B27': ('Ryeland sheep breed', [7480])},
  'RygjaSheepBreed': {'L-80B90': ('Rygja sheep breed', [7480])},
- 'RÄTienGrayCattleBreed': {'L-8B975': ('Rätien Gray cattle breed', [7480])},
- 'SPMiPositiveStressForIschemia': {'R-00336': ('s/p MI positive stress for '
+ 'RätienGrayCattleBreed': {'L-8B975': ('Rätien Gray cattle breed', [7480])},
+ 'SL96PigBreed': {'L-8B169': ('SL96 pig breed', [7480])},
+ 'SPECT': {'P5-0A100': ('SPECT', [3206, 3757])},
+ 'SPMIPositiveStressForIschemia': {'R-00336': ('s/p MI positive stress for '
                                                'ischemia',
                                                [3700])},
+ 'SPMPigBreed': {'L-8054D': ('SPM pig breed', [7480])},
+ 'SRDGoatBreed': {'L-80239': ('SRD goat breed', [7480])},
+ 'STDepression': {'F-38278': ('ST depression', [3230, 3233])},
+ 'STElevation': {'F-38277': ('ST elevation', [3230, 3233])},
+ 'STElevationMyocardialInfarction': {'D3-15119': ('ST Elevation Myocardial '
+                                                  'Infarction',
+                                                  [3723])},
+ 'STIntervalNormal': {'F-000C3': ('ST Interval Normal', [3231])},
  'SaanenGoatBreed': {'L-80214': ('Saanen goat breed', [7480])},
  'SableIslandHorseHorseBreed': {'L-8A12F': ('Sable Island Horse horse breed',
                                             [7480])},
  'SabreXZebuCattleBreed': {'L-8BC29': ('Sabre X zebu cattle breed', [7480])},
- 'SabuesosEspaÑOlesDogBreed': {'L-808E3': ('Sabuesos Españoles dog breed',
+ 'SabuesosEspañolesDogBreed': {'L-808E3': ('Sabuesos Españoles dog breed',
                                            [7480])},
  'SaccularAneurysm': {'M-32340': ('saccular aneurysm', [3808])},
  'SacralLymphNode': {'T-C4650': ('sacral lymph node', [7600])},
@@ -12123,7 +12049,6 @@ concepts['SRT'] = \
  'SalornCattleBreed': {'L-8B97F': ('Salorn cattle breed', [7480])},
  'SalukiDog': {'L-80849': ('Saluki dog', [7480])},
  'SalvageProcedure': {'R-41C8D': ('Salvage Procedure', [3414])},
- 'Samarium_153': {'C-B1134': ('^153^Samarium', [18])},
  'SamoyedDog': {'L-80850': ('Samoyed dog', [7480])},
  'SamplingOfTissueSpecimen': {'P3-4000A': ('Sampling of tissue specimen',
                                            [8111])},
@@ -12140,7 +12065,7 @@ concepts['SRT'] = \
  'SantaCruzSheepBreed': {'L-80394': ('Santa Cruz sheep breed', [7480])},
  'SantaCruzXZebuCattleBreed': {'L-8BB6D': ('Santa Cruz X zebu cattle breed',
                                            [7480])},
- 'SantaInÊSSheepBreed': {'L-80B8E': ('Santa Inês sheep breed', [7480])},
+ 'SantaInêsSheepBreed': {'L-80B8E': ('Santa Inês sheep breed', [7480])},
  'SaphenofemoralJunction': {'T-D930A': ('Saphenofemoral Junction',
                                         [12103,
                                          12110,
@@ -12271,7 +12196,7 @@ concepts['SRT'] = \
                                    [12103, 12113, 3827, 7151, 7192, 9514])},
  'SecondMolarRegion': {'R-FB356': ('Second molar region', [4017])},
  'SecondPremolarRegion': {'R-FB359': ('Second premolar region', [4017])},
- 'SecondaryStTAbnormality': {'F-38793': ('Secondary ST-T abnormality', [3230])},
+ 'SecondarySTTAbnormality': {'F-38793': ('Secondary ST-T abnormality', [3230])},
  'SecretoryJuvenileCarcinomaOfTheBreast': {'M-85023': ('Secretory (juvenile) '
                                                        'carcinoma of the '
                                                        'breast',
@@ -12294,9 +12219,7 @@ concepts['SRT'] = \
  'SelectiveEmbolizationOfArtery': {'P1-30530': ('Selective embolization of '
                                                 'artery',
                                                 [3405, 9])},
- 'Selenium75Hcat': {'C-B1172': ('Selenium^75^ HCAT', [25])},
- 'Selenium_73': {'C-116A2': ('^73^Selenium', [4020])},
- 'Selenium_75': {'C-116A3': ('^75^Selenium', [18])},
+ 'Selenium75HCAT': {'C-B1172': ('Selenium^75^ HCAT', [25])},
  'SelenomethionioneSe75': {'C-B1171': ('Selenomethionione Se^75^', [25])},
  'SelkirkRexCatBreed': {'L-80A99': ('Selkirk Rex cat breed', [7480])},
  'SellaTurcica': {'T-D1460': ('Sella turcica',
@@ -12419,18 +12342,6 @@ concepts['SRT'] = \
                                            [7480])},
  'SicilianPigBreed': {'L-8068A': ('Sicilian pig breed', [7480])},
  'SienaBeltedPigBreed': {'L-805BF': ('Siena Belted pig breed', [7480])},
- 'SigmaLowerValueOfPopulation_1': {'R-00347': ('1 Sigma Lower Value of '
-                                               'population',
-                                               [221, 226, 7465])},
- 'SigmaLowerValueOfPopulation_2': {'R-00388': ('2 Sigma Lower Value of '
-                                               'population',
-                                               [221, 226, 7465])},
- 'SigmaUpperValueOfPopulation_1': {'R-00346': ('1 Sigma Upper Value of '
-                                               'population',
-                                               [221, 226, 7465])},
- 'SigmaUpperValueOfPopulation_2': {'R-00387': ('2 Sigma Upper Value of '
-                                               'population',
-                                               [221, 226, 7465])},
  'SigmoidColon': {'T-59470': ('Sigmoid colon',
                               [4, 4040, 6210, 7151, 7192, 9514])},
  'SigmoidLymphNode': {'T-C4512': ('sigmoid lymph node', [7600])},
@@ -12475,7 +12386,7 @@ concepts['SRT'] = \
                                                   'evaluation of',
                                                   [3254])},
  'SiriZebuCattleBreed': {'L-8BAF1': ('Siri zebu cattle breed', [7480])},
- 'SiriusRedF3bStain': {'C-22874': ('sirius red F3B stain', [8112])},
+ 'SiriusRedF3BStain': {'C-22874': ('sirius red F3B stain', [8112])},
  'SiskaPigBreed': {'L-8068D': ('Siska pig breed', [7480])},
  'SistaniCattleBreed': {'L-8BB83': ('Sistani cattle breed', [7480])},
  'Sitting': {'F-103A0': ('sitting', [20])},
@@ -12676,7 +12587,6 @@ concepts['SRT'] = \
  'SkyeTerrier': {'L-80878': ('Skye terrier', [7480])},
  'SkyrosHorseBreed': {'L-8A1AC': ('Skyros horse breed', [7480])},
  'SkyrosPonyHorseBreed': {'L-804C0': ('Skyros pony horse breed', [7480])},
- 'Sl96PigBreed': {'L-8B169': ('SL96 pig breed', [7480])},
  'Slide': {'G-81EA': ('Slide', [8103])},
  'SlideOverviewLens': {'A-00118': ('Slide overview lens', [8121])},
  'SlitLampBiomicroscope': {'A-2B201': ('Slit Lamp Biomicroscope', [4202])},
@@ -12714,7 +12624,7 @@ concepts['SRT'] = \
                                  7154,
                                  7192,
                                  9514])},
- 'SmallMÜNsterlÄNderDogBreed': {'L-809BA': ('Small Münsterländer dog breed',
+ 'SmallMünsterländerDogBreed': {'L-809BA': ('Small Münsterländer dog breed',
                                             [7480])},
  'SmallPolishPrickEaredPigBreed': {'L-8B172': ('Small Polish Prick-Eared pig '
                                                'breed',
@@ -12759,8 +12669,6 @@ concepts['SRT'] = \
                                           [25])},
  'SodiumPhosphateP32': {'C-B1142': ('Sodium phosphate P^32^', [25])},
  'SodiumTyropanoate': {'C-B0314': ('Sodium tyropanoate', [12, 3850])},
- 'Sodium_22': {'C-155A1': ('^22^Sodium', [18, 4020])},
- 'Sodium_24': {'C-155A2': ('^24^Sodium', [18])},
  'SoftCoatedWheatenTerrier': {'L-80879': ('Soft-coated wheaten terrier',
                                           [7480])},
  'SoftPalate': {'T-51120': ('Soft palate', [4028, 7151, 7192, 9514])},
@@ -12769,9 +12677,9 @@ concepts['SRT'] = \
  'SokotoGudaliCattleBreed': {'L-8BB85': ('Sokoto Gudali cattle breed', [7480])},
  'SolealVein': {'G-036B': ('Soleal vein',
                            [12103, 12110, 3827, 7151, 7192, 9514])},
- 'SolochromeAzurineBsStain': {'C-22912': ('solochrome azurine (BS) stain',
+ 'SolochromeAzurineBSStain': {'C-22912': ('solochrome azurine (BS) stain',
                                           [8112])},
- 'SolochromeBlack6bStain': {'C-22821': ('solochrome black 6B stain', [8112])},
+ 'SolochromeBlack6BStain': {'C-22821': ('solochrome black 6B stain', [8112])},
  'SolochromeCyanineRStain': {'C-22909': ('solochrome cyanine R stain', [8112])},
  'SolochromeDarkBlueStain': {'C-22825': ('solochrome dark blue stain', [8112])},
  'SolognoteSheepBreed': {'L-80404': ('Solognote sheep breed', [7480])},
@@ -12928,7 +12836,6 @@ concepts['SRT'] = \
  'SpecimenSteamHeating': {'P3-40009': ('Specimen steam heating', [8113])},
  'SpecimenVial': {'A-01024': ('Specimen vial', [8101, 8102])},
  'SpecimenWell': {'A-01025': ('Specimen well', [8101, 8102])},
- 'Spect': {'P5-0A100': ('SPECT', [3206, 3757])},
  'SpecularMicroscope': {'R-1021C': ('Specular Microscope', [4202])},
  'SpeechAndLanguageTherapy': {'R-42203': ('Speech and Language Therapy',
                                           [7030])},
@@ -13010,23 +12917,15 @@ concepts['SRT'] = \
                               9514])},
  'SpleniumOfCorpusCallosum': {'T-A2710': ('splenium of corpus callosum',
                                           [7705, 7710])},
- 'SpmPigBreed': {'L-8054D': ('SPM pig breed', [7480])},
  'SporeStain': {'C-2282B': ('spore stain', [8112])},
  'SpotCompression': {'R-102D7': ('Spot Compression', [4015, 6028, 6029])},
  'SpottedPigBreed': {'L-80658': ('Spotted pig breed', [7480])},
  'SprecaCattleBreed': {'L-801AE': ('Spreca cattle breed', [7480])},
- 'SpÆLsauSheepBreed': {'L-80B97': ('Spælsau sheep breed', [7480])},
+ 'SpælsauSheepBreed': {'L-80B97': ('Spælsau sheep breed', [7480])},
  'SquamousCellCarcinoma': {'M-80703': ('Squamous cell carcinoma',
                                        [6030, 6033, 638, 639])},
- 'SrdGoatBreed': {'L-80239': ('SRD goat breed', [7480])},
  'StBernardDog': {'L-80895': ('St. Bernard dog', [7480])},
  'StCroixSheepBreed': {'L-80B99': ('St. Croix sheep breed', [7480])},
- 'StDepression': {'F-38278': ('ST depression', [3230, 3233])},
- 'StElevation': {'F-38277': ('ST elevation', [3230, 3233])},
- 'StElevationMyocardialInfarction': {'D3-15119': ('ST Elevation Myocardial '
-                                                  'Infarction',
-                                                  [3723])},
- 'StIntervalNormal': {'F-000C3': ('ST Interval Normal', [3231])},
  'StableAngina': {'D3-13020': ('Stable Angina', [3202, 3220, 3700])},
  'StabyhounDogBreed': {'L-809F3': ('Stabyhoun dog breed', [7480])},
  'StaffordshireBullTerrierDogBreed': {'L-80733': ('Staffordshire bull terrier '
@@ -13194,9 +13093,6 @@ concepts['SRT'] = \
  'StrontiumChlorideSr87': {'C-B1181': ('Strontium chloride Sr^87^', [25])},
  'StrontiumNitrateSr85': {'C-B1182': ('Strontium nitrate Sr^85^', [25])},
  'StrontiumNitrateSr87': {'C-B1183': ('Strontium nitrate Sr^87^', [25])},
- 'Strontium_85': {'C-158A3': ('^85^Strontium', [18])},
- 'Strontium_89': {'C-158A6': ('^89^Strontium', [18])},
- 'Strontium_90': {'C-158A7': ('^90^Strontium', [9528])},
  'StructureSinusOfValsalva': {'T-42200': ('Structure Sinus of Valsalva',
                                           [12291])},
  'Stryker': {'R-40A98': ('Stryker', [4012])},
@@ -13319,9 +13215,9 @@ concepts['SRT'] = \
  'SudanBlueStain': {'C-22958': ('Sudan blue stain', [8112])},
  'SudanCountryBredHorseBreed': {'L-8A1EE': ('Sudan Country-Bred horse breed',
                                             [7480])},
- 'SudanIiStain': {'C-22807': ('Sudan II stain', [8112])},
- 'SudanIiiStain': {'C-22861': ('Sudan III stain', [8112])},
- 'SudanIvStain': {'C-22862': ('Sudan IV stain', [8112])},
+ 'SudanIIIStain': {'C-22861': ('Sudan III stain', [8112])},
+ 'SudanIIStain': {'C-22807': ('Sudan II stain', [8112])},
+ 'SudanIVStain': {'C-22862': ('Sudan IV stain', [8112])},
  'SudanStain': {'C-2282D': ('Sudan stain', [8112])},
  'SudaneseFulaniCattleBreed': {'L-8BB91': ('Sudanese Fulani cattle breed',
                                            [7480])},
@@ -13339,7 +13235,7 @@ concepts['SRT'] = \
  'SunandiniXZebuCattleBreed': {'L-8BC34': ('Sunandini X zebu cattle breed',
                                            [7480])},
  'SunkumaCattleBreed': {'L-801AF': ('Sunkuma cattle breed', [7480])},
- 'SunsetYellowFcfStain': {'C-22827': ('sunset yellow FCF stain', [8112])},
+ 'SunsetYellowFCFStain': {'C-22827': ('sunset yellow FCF stain', [8112])},
  'Superficial': {'G-A139': ('Superficial', [2, 3489])},
  'SuperficialAnteriorCervicalLymphNode': {'T-C401A': ('superficial anterior '
                                                       'cervical lymph node',
@@ -14008,7 +13904,6 @@ concepts['SRT'] = \
  'SusScrofa': {'L-8B100': ('Sus scrofa', [7454])},
  'Suspected': {'G-A47B': ('Suspected', [3770])},
  'Suspended': {'G-D30F': ('Suspended', [3773])},
- 'Suspicious_4': {'F-037C0': ('4 - Suspicious', [6026, 6027])},
  'SussexCattleBreed': {'L-8B98C': ('Sussex cattle breed', [7480])},
  'SussexSpanielDogBreed': {'L-80892': ('Sussex spaniel dog breed', [7480])},
  'Suture': {'A-13500': ('Suture',
@@ -14060,7 +13955,7 @@ concepts['SRT'] = \
  'SymphysisPubis': {'T-15690': ('Symphysis pubis', [1000, 1001, 1005])},
  'SymptomFree': {'R-209F6': ('Symptom free', [3772])},
  'Syncope': {'D3-00006': ('Syncope', [12246, 3201, 3220, 3221])},
- 'SyntheticSl98PigBreed': {'L-8B168': ('Synthetic SL98 pig breed', [7480])},
+ 'SyntheticSL98PigBreed': {'L-8B168': ('Synthetic SL98 pig breed', [7480])},
  'Syringe': {'A-10150': ('Syringe', [4051, 69])},
  'Systemic': {'G-A572': ('Systemic', [6128])},
  'SystemicArterialHypertension': {'D3-02000': ('Systemic arterial hypertension',
@@ -14097,34 +13992,34 @@ concepts['SRT'] = \
  'T0NoEvidenceOfPrimaryTumorBreast': {'R-003B9': ('T0: No evidence of primary '
                                                   'tumor (breast)',
                                                   [6160])},
- 'T1Tumor2CmOrLessInGreatestDimensionBreast': {'R-003BA': ('T1: Tumor 2 cm or '
+ 'T1Tumor2cmOrLessInGreatestDimensionBreast': {'R-003BA': ('T1: Tumor 2 cm or '
                                                            'less in greatest '
                                                            'dimension (breast)',
                                                            [6160])},
- 'T1aTumorMoreThan01CmButNotMoreThan05Cm': {'R-003C0': ('T1a: Tumor more than '
+ 'T1aTumorMoreThan01cmButNotMoreThan05cm': {'R-003C0': ('T1a: Tumor more than '
                                                         '0.1 cm but not more '
                                                         'than 0.5 cm...',
                                                         [6160])},
- 'T1bTumorMoreThan05CmButNotMoreThan1Cm': {'R-003C1': ('T1b: Tumor more than '
+ 'T1bTumorMoreThan05cmButNotMoreThan1cm': {'R-003C1': ('T1b: Tumor more than '
                                                        '0.5 cm but not more '
                                                        'than 1 cm...',
                                                        [6160])},
- 'T1cTumorMoreThan1CmButNotMoreThan2Cm': {'R-003C2': ('T1c: Tumor more than 1 '
+ 'T1cTumorMoreThan1cmButNotMoreThan2cm': {'R-003C2': ('T1c: Tumor more than 1 '
                                                       'cm but not more than 2 '
                                                       'cm...',
                                                       [6160])},
- 'T1micMicroinvasion01CmOrLessInGreatestDimension': {'R-003BF': ('T1mic: '
+ 'T1micMicroinvasion01cmOrLessInGreatestDimension': {'R-003BF': ('T1mic: '
                                                                  'Microinvasion '
                                                                  '0.1 cm or '
                                                                  'less in '
                                                                  'greatest '
                                                                  'dimension...',
                                                                  [6160])},
- 'T2TumorMoreThan2CmButNotMoreThan5Cm': {'R-003C3': ('T2: Tumor more than 2 cm '
+ 'T2TumorMoreThan2cmButNotMoreThan5cm': {'R-003C3': ('T2: Tumor more than 2 cm '
                                                      'but not more than 5 '
                                                      'cm...',
                                                      [6160])},
- 'T3TumorMoreThan5CmInGreatestDimensionBreast': {'R-003C4': ('T3: Tumor more '
+ 'T3TumorMoreThan5cmInGreatestDimensionBreast': {'R-003C4': ('T3: Tumor more '
                                                              'than 5 cm in '
                                                              'greatest '
                                                              'dimension '
@@ -14161,6 +14056,11 @@ concepts['SRT'] = \
                                                                  'chest '
                                                                  'wall...',
                                                                  [6160])},
+ 'TSSH1XZebuCattleBreed': {'L-8BC39': ('TSSH-1 X zebu cattle breed', [7480])},
+ 'TXPrimaryTumorCannotBeAssessedBreast': {'R-003B8': ('TX: Primary tumor '
+                                                      'cannot be assessed '
+                                                      '(breast)',
+                                                      [6160])},
  'TabapuaCattleBreed': {'L-8BB92': ('Tabapua cattle breed', [7480])},
  'Table': {'A-17350': ('Table', [7151, 7157, 7158, 7193, 9505, 9515, 9520])},
  'TachycardiaBradycardia': {'D3-31121': ('Tachycardia-bradycardia',
@@ -14187,7 +14087,6 @@ concepts['SRT'] = \
  'Tantalum': {'C-15600': ('Tantalum', [300])},
  'TantalumOrTantalumCompound': {'C-156F9': ('Tantalum or Tantalum compound',
                                             [10006, 10067])},
- 'Tantalum_178': {'C-156A6': ('^178^Tantalum', [18])},
  'TanzanianZebuCattleBreed': {'L-8BB94': ('Tanzanian Zebu cattle breed',
                                           [7480])},
  'TaoyuanPigBreed': {'L-805F2': ('Taoyuan pig breed', [7480])},
@@ -14210,7 +14109,7 @@ concepts['SRT'] = \
  'Taylor': {'R-102A8': ('Taylor', [4012])},
  'Tc99mSestamibi': {'C-B10A2': ('Tc-99m sestamibi', [3111])},
  'Tc99mTetrofosmin': {'C-B10A4': ('Tc-99m tetrofosmin', [3111])},
- 'Technetium99mDimercaptosuccinicAcidDmsa': {'C-163BD': ('Technetium^99m '
+ 'Technetium99mDimercaptosuccinicAcidDMSA': {'C-163BD': ('Technetium^99m '
                                                          'Dimercaptosuccinic '
                                                          'Acid DMSA',
                                                          [25])},
@@ -14221,14 +14120,14 @@ concepts['SRT'] = \
                                                                             'Albumin '
                                                                             'Diethylenetriamine',
                                                                             [25])},
- 'Technetium99mHydroxymethyleneDiphosphonateHmdp': {'C-163B7': ('Technetium^99m '
+ 'Technetium99mHydroxymethyleneDiphosphonateHMDP': {'C-163B7': ('Technetium^99m '
                                                                 'Hydroxymethylene '
                                                                 'diphosphonate '
                                                                 'HMDP',
                                                                 [25])},
  'Technetium99mLabeledCarbon': {'C-163B9': ('Technetium^99m labeled carbon',
                                             [25])},
- 'Technetium99mMercaptoacetylTriglycineMag3': {'C-163B8': ('Technetium^99m '
+ 'Technetium99mMercaptoacetylTriglycineMAG3': {'C-163B8': ('Technetium^99m '
                                                            'Mercaptoacetyl '
                                                            'triglycine MAG3',
                                                            [25])},
@@ -14381,13 +14280,12 @@ concepts['SRT'] = \
               'T-D0593': ('Thalamus', [7140])},
  'ThalliSheepBreed': {'L-80B2A': ('Thalli sheep breed', [7480])},
  'Thallium201': {'C-B1130': ('Thallium-201', [3111])},
- 'Thallium_201': {'C-138A9': ('^201^Thallium', [18])},
  'ThallousChlorideTl201': {'C-B1231': ('Thallous chloride Tl^201^', [25])},
  'ThanhHoaCattleBreed': {'L-801B3': ('Thanh-Hoa cattle breed', [7480])},
  'TharparkarCattleBreed': {'L-8BAF2': ('Tharparkar cattle breed', [7480])},
- 'TheilerSMurineEncephalomyelitisVirus': {'L-30606': ("Theiler's murine "
-                                                      'encephalomyelitis virus',
-                                                      [638, 641])},
+ 'TheilerMurineEncephalomyelitisVirus': {'L-30606': ("Theiler's murine "
+                                                     'encephalomyelitis virus',
+                                                     [638, 641])},
  'TherapeuticIntent': {'R-41531': ('Therapeutic Intent', [3629])},
  'TherapeuticRadioisotope': {'C-B1010': ('Therapeutic radioisotope', [25])},
  'ThermalBath': {'R-002E5': ('Thermal Bath', [3628])},
@@ -14470,10 +14368,10 @@ concepts['SRT'] = \
  'ThrombinPreparation': {'F-6ACA0': ('Thrombin preparation', [10])},
  'ThrombolyticAgent': {'C-50434': ('Thrombolytic agent', [10])},
  'ThrombolyticTherapy': {'P0-00C29': ('Thrombolytic therapy', [3764])},
- 'ThrombophlebitisOfBreastMondorSDisease': {'D3-87780': ('Thrombophlebitis of '
-                                                         "breast (Mondor's "
-                                                         'disease)',
-                                                         [6030, 6031])},
+ 'ThrombophlebitisOfBreastMondorDisease': {'D3-87780': ('Thrombophlebitis of '
+                                                        "breast (Mondor's "
+                                                        'disease)',
+                                                        [6030, 6031])},
  'Thromboplastin': {'F-D7B50': ('Thromboplastin', [10])},
  'ThrombosedAneurysm': {'M-32202': ('thrombosed aneurysm', [3808])},
  'Thrombosis': {'D3-80515': ('thrombosis', [3815]),
@@ -14491,7 +14389,7 @@ concepts['SRT'] = \
  'Thumb': {'T-D8810': ('Thumb', [4, 4009, 4030, 4031, 4042, 7151, 7192, 9514])},
  'ThuocNhieuPigBreed': {'L-8B109': ('Thuoc Nhieu pig breed', [7480])},
  'ThuringianGoatBreed': {'L-80241': ('Thuringian goat breed', [7480])},
- 'ThymidineFltF18': {'C-B1036': ('Thymidine (FLT) F^18^', [4021])},
+ 'ThymidineFLTF18': {'C-B1036': ('Thymidine (FLT) F^18^', [4021])},
  'Thymus': {'T-C8000': ('Thymus',
                         [10044, 10060, 4, 4030, 7151, 7155, 7192, 9514])},
  'ThymusGland': {'T-C8000': ('Thymus Gland', [6102, 6109, 6113])},
@@ -14537,10 +14435,10 @@ concepts['SRT'] = \
  'TisLobularCarcinomaInSituBreast': {'R-003BD': ('Tis: Lobular carcinoma in '
                                                  'situ (breast)',
                                                  [6160])},
- 'TisPagetSDiseaseOfTheNippleWithNoTumor': {'R-003BE': ("Tis: Paget's disease "
-                                                        'of the nipple with no '
-                                                        'tumor',
-                                                        [6160])},
+ 'TisPagetDiseaseOfTheNippleWithNoTumor': {'R-003BE': ("Tis: Paget's disease "
+                                                       'of the nipple with no '
+                                                       'tumor',
+                                                       [6160])},
  'Tissue': {'T-D0050': ('Tissue', [7150, 7151, 7165, 7166, 7191, 7196])},
  'TissueCassette': {'A-0101E': ('Tissue cassette', [8101, 8102])},
  'TissueDopplerImaging': {'P5-B0128': ('Tissue Doppler Imaging',
@@ -14555,7 +14453,6 @@ concepts['SRT'] = \
  'TissueSpot': {'G-843C': ('Tissue spot', [8103])},
  'TitanYellowStain': {'C-22845': ('titan yellow stain', [8112])},
  'Titanium': {'C-16600': ('Titanium', [300])},
- 'Titanium_45': {'C-166A2': ('^45^Titanium', [4020])},
  'Titterington': {'R-102AA': ('Titterington', [4012])},
  'TobaccoSmokingBehavior': {'F-93109': ('Tobacco Smoking Behavior', [3774])},
  'Toe': {'T-D9800': ('Toe',
@@ -14679,7 +14576,7 @@ concepts['SRT'] = \
                                                             7151,
                                                             7192,
                                                             9514])},
- 'TransluminalExtractionCatheterTec': {'A-26920': ('Transluminal Extraction '
+ 'TransluminalExtractionCatheterTEC': {'A-26920': ('Transluminal Extraction '
                                                    'Catheter (TEC)',
                                                    [3411, 3429])},
  'Transoral': {'G-D00B': ('transoral', [4011, 502])},
@@ -14760,8 +14657,8 @@ concepts['SRT'] = \
                                                     'artery disease.',
                                                     [3728])},
  'TrochlearNerve': {'T-A8110': ('trochlear nerve', [7706, 7710])},
+ 'TropaeolinOOStain': {'C-22812': ('tropaeolin OO stain', [8112])},
  'TropaeolinOStain': {'C-22815': ('tropaeolin O stain', [8112])},
- 'TropaeolinOoStain': {'C-22812': ('tropaeolin OO stain', [8112])},
  'TropicalDairyCattleCattleBreed': {'L-8BA9C': ('Tropical Dairy Cattle cattle '
                                                 'breed',
                                                 [7480])},
@@ -14792,7 +14689,6 @@ concepts['SRT'] = \
  'TrypanBlue': {'C-22853': ('Trypan blue', [4200])},
  'TrypanBlueStain': {'C-22853': ('trypan blue stain', [8112])},
  'TsivilskPigBreed': {'L-805CC': ('Tsivilsk pig breed', [7480])},
- 'Tssh1XZebuCattleBreed': {'L-8BC39': ('TSSH-1 X zebu cattle breed', [7480])},
  'TswanaCattleBreed': {'L-8012F': ('Tswana cattle breed', [7480])},
  'Tuarine': {'F-64460': ('Tuarine', [218, 4032, 4033, 7180, 7186, 7469])},
  'TubalTonsil': {'T-C5330': ('tubal tonsil', [7601])},
@@ -14833,10 +14729,6 @@ concepts['SRT'] = \
  'TuyHoaHairlessPigBreed': {'L-8B105': ('Tuy Hoa Hairless pig breed', [7480])},
  'Twining': {'R-102AC': ('Twining', [4012])},
  'TwoChamber': {'G-A19B': ('Two chamber', [501, 502, 6])},
- 'TxPrimaryTumorCannotBeAssessedBreast': {'R-003B8': ('TX: Primary tumor '
-                                                      'cannot be assessed '
-                                                      '(breast)',
-                                                      [6160])},
  'TypicalAngina': {'D3-13037': ('Typical Angina', [3202, 3220])},
  'TyrolGrayCattleBreed': {'L-8BAA2': ('Tyrol Gray cattle breed', [7480])},
  'TyrolMountainSheepBreed': {'L-80B2E': ('Tyrol Mountain sheep breed', [7480])},
@@ -15052,7 +14944,7 @@ concepts['SRT'] = \
                                                  'factor',
                                                  [638, 642])},
  'VascularGraft': {'A-04140': ('Vascular graft', [4, 7151, 7192, 9514])},
- 'VascularMri': {'P5-0903A': ('vascular MRI', [3820])},
+ 'VascularMRI': {'P5-0903A': ('vascular MRI', [3820])},
  'VascularResistance': {'F-02692': ('Vascular Resistance', [12304]),
                         'F-39790': ('Vascular Resistance', [3641])},
  'VascularSclerosis': {'M-520F8': ('vascular sclerosis',
@@ -15083,7 +14975,7 @@ concepts['SRT'] = \
  'VenaCavaFilter': {'A-14611': ('Vena cava filter',
                                 [6102, 6138, 6202, 6203, 6404, 7151, 7193])},
  'VenaContracta': {'R-421AA': ('Vena Contracta', [12280])},
- 'VendÉEnSheepBreed': {'L-804A7': ('Vendéen sheep breed', [7480])},
+ 'VendéenSheepBreed': {'L-804A7': ('Vendéen sheep breed', [7480])},
  'VenezuelanBlackPigBreed': {'L-80615': ('Venezuelan Black pig breed', [7480])},
  'VenezuelanZebuCattleBreed': {'L-8BB1F': ('Venezuelan Zebu cattle breed',
                                            [7480])},
@@ -15167,8 +15059,8 @@ concepts['SRT'] = \
                                                  [7484])},
  'Verapamil': {'C-80490': ('Verapamil', [10])},
  'VerataGoatBreed': {'L-8022D': ('Verata goat breed', [7480])},
- 'VerhoeffSHematoxylinStain': {'C-22880': ("verhoeff's hematoxylin stain",
-                                           [8112])},
+ 'VerhoeffHematoxylinStain': {'C-22880': ("verhoeff's hematoxylin stain",
+                                          [8112])},
  'VerinesaCattleBreed': {'L-8BAAB': ('Verinesa cattle breed', [7480])},
  'Vertebra': {'T-11510': ('Vertebra', [6102, 6109, 6114, 7151, 7192, 9514])},
  'VertebralArtery': {'T-45700': ('Vertebral Artery',
@@ -15239,7 +15131,7 @@ concepts['SRT'] = \
  'ViaVein': {'G-D052': ('Via vein', [3403, 3746])},
  'VianesaCattleBreed': {'L-8BAAC': ('Vianesa cattle breed', [7480])},
  'VichPigBreed': {'L-8063E': ('Vich pig breed', [7480])},
- 'VictoriaBlue4rStain': {'C-22895': ('victoria blue 4R stain', [8112])},
+ 'VictoriaBlue4RStain': {'C-22895': ('victoria blue 4R stain', [8112])},
  'VictoriaBlueBStain': {'C-22913': ('victoria blue B stain', [8112])},
  'VictoriaXZebuCattleBreed': {'L-8BC40': ('Victoria X zebu cattle breed',
                                           [7480])},
@@ -15336,7 +15228,7 @@ concepts['SRT'] = \
  'WaterSolubleNigrosineStain': {'C-22933': ('water soluble nigrosine stain',
                                             [8112])},
  'Waters': {'R-407B0': ('Waters', [4012])},
- 'WatusiUsaCattleBreed': {'L-801C1': ('Watusi (USA) cattle breed', [7480])},
+ 'WatusiUSACattleBreed': {'L-801C1': ('Watusi (USA) cattle breed', [7480])},
  'WaxolineBlueStain': {'C-22957': ('waxoline blue stain', [8112])},
  'WaysonStain': {'F-61E5A': ('wayson stain', [8112])},
  'WaziriHorseBreed': {'L-8047B': ('Waziri horse breed', [7480])},
@@ -15408,7 +15300,7 @@ concepts['SRT'] = \
  'WhiteBullTerrierDogBreed': {'L-80734': ('White bull terrier dog breed',
                                           [7480])},
  'WhiteColor': {'G-A12B': ('White color', [6067])},
- 'WhiteCÁCeresCattleBreed': {'L-8B994': ('White Cáceres cattle breed', [7480])},
+ 'WhiteCáceresCattleBreed': {'L-8B994': ('White Cáceres cattle breed', [7480])},
  'WhiteFulaniCattleBreed': {'L-8BB2B': ('White Fulani cattle breed', [7480])},
  'WhiteGallowayCattleBreed': {'L-8BAB5': ('White Galloway cattle breed',
                                           [7480])},
@@ -15477,8 +15369,6 @@ concepts['SRT'] = \
  'XRayShield': {'A-2C152': ('X-Ray shield', [10066])},
  'Xenon': {'C-17200': ('Xenon', [13])},
  'XenonArcLamp': {'A-00124': ('Xenon arc lamp', [8125])},
- 'Xenon_127': {'C-172A5': ('^127^Xenon', [18])},
- 'Xenon_133': {'C-172A8': ('^133^Xenon', [18])},
  'XiangPigBreed': {'L-806AC': ('Xiang pig breed', [7480])},
  'XiangxiBlackPigBreed': {'L-806C5': ('Xiangxi Black pig breed', [7480])},
  'XilingolHorseBreed': {'L-804E1': ('Xilingol horse breed', [7480])},
@@ -15495,7 +15385,7 @@ concepts['SRT'] = \
  'XiphoidProcess': {'T-11227': ('Xiphoid Process', [1000, 1001, 1004])},
  'XiphoidProcessOfSternum': {'T-11227': ('Xiphoid process of sternum', [6115])},
  'Xylazine': {'C-640B0': ('Xylazine', [623, 625])},
- 'XyleneCyanolFfStain': {'C-22888': ('xylene cyanol FF stain', [8112])},
+ 'XyleneCyanolFFStain': {'C-22888': ('xylene cyanol FF stain', [8112])},
  'YacumentoCattleBreed': {'L-8BAB8': ('Yacumento cattle breed', [7480])},
  'YakutCattleBreed': {'L-801C3': ('Yakut cattle breed', [7480])},
  'YakutHorseBreed': {'L-8A156': ('Yakut horse breed', [7480])},
@@ -15522,10 +15412,7 @@ concepts['SRT'] = \
                                           [7480])},
  'YorkshirePigBreed': {'L-80662': ('Yorkshire pig breed', [7480])},
  'YorkshireTerrier': {'L-80915': ('Yorkshire terrier', [7480])},
- 'Ytterbium_169': {'C-181A3': ('^169^Ytterbium', [18, 9528])},
  'Yttrium': {'C-16200': ('Yttrium', [300])},
- 'Yttrium_86': {'C-162A3': ('^86^Yttrium', [4020])},
- 'Yttrium_90': {'C-162A7': ('^90^Yttrium', [18, 4020, 9528])},
  'YucaPigBreed': {'L-80663': ('Yuca pig breed', [7480])},
  'YucatanMinaturePigBreed': {'L-8066A': ('Yucatan Minature pig breed', [7480])},
  'YuedongBlackPigBreed': {'L-806AB': ('Yuedong Black pig breed', [7480])},
@@ -15540,26 +15427,76 @@ concepts['SRT'] = \
  'ZanzibarZebuCattleBreed': {'L-8BAF3': ('Zanzibar Zebu cattle breed', [7480])},
  'ZaobeiCattleBreed': {'L-8B998': ('Zaobei cattle breed', [7480])},
  'ZavotCattleBreed': {'L-8B999': ('Zavot cattle breed', [7480])},
- 'ZenkerSFluid': {'F-62234': ("Zenker's fluid", [8114])},
+ 'ZenkerFluid': {'F-62234': ("Zenker's fluid", [8114])},
  'ZhemaichuHorseBreed': {'L-8A154': ('Zhemaichu horse breed', [7480])},
  'ZhongweiGoatBreed': {'L-80243': ('Zhongwei goat breed', [7480])},
  'ZiehlNeelsenStain': {'C-2282C': ('Ziehl-Neelsen stain', [8112])},
- 'Zinc_62': {'C-141A1': ('^62^Zinc', [4020])},
- 'Zirconium_89': {'C-168A4': ('^89^Zirconium', [4020])},
  'ZlotnikiSpottedPigBreed': {'L-8068B': ('Zlotniki Spotted pig breed', [7480])},
  'ZlotnikiWhitePigBreed': {'L-8068C': ('Zlotniki White pig breed', [7480])},
  'ZnamenskCattleBreed': {'L-8B99A': ('Znamensk cattle breed', [7480])},
  'Zolazepam': {'C-64090': ('Zolazepam', [623, 625])},
  'Zygoma': {'T-11166': ('Zygoma',
                         [4, 4009, 4028, 4030, 4031, 4042, 7151, 7192, 9514])},
- 'dMode_2': {'G-03A2': ('2D mode', [12224, 6058])},
- 'dMode_3': {'P0-02242': ('3D mode', [12224, 6058])},
- 'mIndium_113': {'C-145A5': ('^113m^Indium', [18])},
- 'mKrypton_81': {'C-173A5': ('^81m^Krypton', [18])},
- 'mStrontium_87': {'C-158A5': ('^87m^Strontium', [18])},
- 'mTechnetium_94': {'C-163AA': ('^94m^Technetium', [4020])},
- 'mTechnetium_99': {'C-163A8': ('^99m^Technetium', [18])},
- 'ndDiagonalCoronaryArtery_2': {'T-43118': ('2nd Diagonal Coronary Artery',
+ '_0IncompleteNeedAdditionalImagingEvaluationPriors': {'F-037BB': ('0 - '
+                                                                   'Incomplete '
+                                                                   '- Need '
+                                                                   'additional '
+                                                                   'imaging '
+                                                                   'evaluation '
+                                                                   '+/- priors',
+                                                                   [6026,
+                                                                    6027])},
+ '_0NoPerfusion': {'R-0037E': ('0: No Perfusion', [3713])},
+ '_103Palladium': {'C-160A3': ('^103^Palladium', [9528])},
+ '_106Ruthenium': {'C-180A5': ('^106^Ruthenium', [9528])},
+ '_10OClockPosition': {'F-0178A': ("10 o'clock position", [6018, 6019, 6205])},
+ '_10thPercentileValueOfPopulation': {'R-00377': ('10th Percentile Value of '
+                                                  'population',
+                                                  [221, 226, 7465])},
+ '_111Indium': {'C-145A4': ('^111^Indium', [18])},
+ '_113mIndium': {'C-145A5': ('^113m^Indium', [18])},
+ '_11Carbon': {'C-105A1': ('^11^Carbon', [4020])},
+ '_11OClockPosition': {'F-0178B': ("11 o'clock position", [6018, 6019, 6205])},
+ '_123Iodine': {'C-114A4': ('^123^Iodine', [18])},
+ '_124Iodine': {'C-114A5': ('^124^Iodine', [4020])},
+ '_125Iodine': {'C-114A6': ('^125^Iodine', [18, 9528])},
+ '_127Xenon': {'C-172A5': ('^127^Xenon', [18])},
+ '_12LeadECG': {'P2-3120A': ('12-Lead ECG', [3670])},
+ '_12OClockPosition': {'F-0178C': ("12 o'clock position", [6018, 6019, 6205])},
+ '_131Cesium': {'C-142A5': ('^131^Cesium', [9528])},
+ '_131Iodine': {'C-114B1': ('^131^Iodine', [18])},
+ '_133Barium': {'C-122A5': ('^133^Barium', [18])},
+ '_133Xenon': {'C-172A8': ('^133^Xenon', [18])},
+ '_137Cesium': {'C-142B2': ('^137^Cesium', [9528])},
+ '_13Nitrogen': {'C-107A1': ('^13^Nitrogen', [3107, 4020])},
+ '_14Carbon': {'C-105A2': ('^14^Carbon', [18])},
+ '_14Oxygen': {'C-1018C': ('^14^Oxygen', [4020])},
+ '_153Gadolinium': {'C-178A8': ('^153^Gadolinium', [18])},
+ '_153Samarium': {'C-B1134': ('^153^Samarium', [18])},
+ '_15LeadECG': {'P2-3120E': ('15-Lead ECG', [3670])},
+ '_15Oxygen': {'C-B1038': ('^15^Oxygen', [4020])},
+ '_169Ytterbium': {'C-181A3': ('^169^Ytterbium', [18, 9528])},
+ '_177Lutetium': {'C-101ED': ('^177^Lutetium', [18])},
+ '_178Tantalum': {'C-156A6': ('^178^Tantalum', [18])},
+ '_186Rhenium': {'C-11906': ('^186^Rhenium', [18])},
+ '_188Rhenium': {'C-1018D': ('^188^Rhenium', [18])},
+ '_18Fluorine': {'C-111A1': ('^18^Fluorine', [18, 4020])},
+ '_18LeadECG': {'P2-3120C': ('18-Lead ECG', [3670])},
+ '_192Iridium': {'C-151B2': ('^192^Iridium', [9528])},
+ '_198Gold': {'C-146A9': ('^198^Gold', [18, 9528])},
+ '_199Gold': {'C-146B1': ('^199^Gold', [18])},
+ '_1Negative': {'F-037BC': ('1 - Negative', [6026, 6027])},
+ '_1OClockPosition': {'F-01781': ("1 o'clock position", [6018, 6019, 6205])},
+ '_1PenetrationWithoutPerfusion': {'R-0037F': ('1: Penetration without '
+                                               'Perfusion',
+                                               [3713])},
+ '_1SigmaLowerValueOfPopulation': {'R-00347': ('1 Sigma Lower Value of '
+                                               'population',
+                                               [221, 226, 7465])},
+ '_1SigmaUpperValueOfPopulation': {'R-00346': ('1 Sigma Upper Value of '
+                                               'population',
+                                               [221, 226, 7465])},
+ '_1stDiagonalCoronaryArtery': {'T-43117': ('1st Diagonal Coronary Artery',
                                             [3014,
                                              3015,
                                              3604,
@@ -15570,7 +15507,7 @@ concepts['SRT'] = \
                                              7151,
                                              7192,
                                              9514])},
- 'ndLeftPosterolateralCoronaryArtery_2': {'T-4312C': ('2nd Left Posterolateral '
+ '_1stLeftPosterolateralCoronaryArtery': {'T-4312B': ('1st Left Posterolateral '
                                                       'Coronary Artery',
                                                       [3014,
                                                        3015,
@@ -15582,7 +15519,7 @@ concepts['SRT'] = \
                                                        7151,
                                                        7192,
                                                        9514])},
- 'ndMarginalCoronaryArtery_2': {'T-43129': ('2nd Marginal Coronary Artery',
+ '_1stMarginalCoronaryArtery': {'T-43128': ('1st Marginal Coronary Artery',
                                             [3014,
                                              3015,
                                              3604,
@@ -15593,7 +15530,7 @@ concepts['SRT'] = \
                                              7151,
                                              7192,
                                              9514])},
- 'ndRightPosterolateralCoronaryArtery_2': {'T-43214': ('2nd Right '
+ '_1stRightPosterolateralCoronaryArtery': {'T-43213': ('1st Right '
                                                        'posterolateral '
                                                        'Coronary Artery',
                                                        [3014,
@@ -15606,101 +15543,7 @@ concepts['SRT'] = \
                                                         7151,
                                                         7192,
                                                         9514])},
- 'rdDiagonalCoronaryArtery_3': {'T-43119': ('3rd diagonal Coronary Artery',
-                                            [3014,
-                                             3015,
-                                             3604,
-                                             3827,
-                                             6102,
-                                             6109,
-                                             6117,
-                                             7151,
-                                             7192,
-                                             9514])},
- 'rdLeftPosterolateralCoronaryArtery_3': {'T-4312D': ('3rd Left Posterolateral '
-                                                      'Coronary Artery',
-                                                      [3014,
-                                                       3015,
-                                                       3604,
-                                                       3827,
-                                                       6102,
-                                                       6109,
-                                                       6117,
-                                                       7151,
-                                                       7192,
-                                                       9514])},
- 'rdMarginalCoronaryArtery_3': {'T-4312A': ('3rd Marginal Coronary Artery',
-                                            [3014,
-                                             3015,
-                                             3604,
-                                             3827,
-                                             6102,
-                                             6109,
-                                             6117,
-                                             7151,
-                                             7192,
-                                             9514])},
- 'rdRightPosterolateralCoronaryArtery_3': {'T-43215': ('3rd Right '
-                                                       'posterolateral '
-                                                       'Coronary Artery',
-                                                       [3014,
-                                                        3015,
-                                                        3604,
-                                                        3827,
-                                                        6102,
-                                                        6109,
-                                                        6117,
-                                                        7151,
-                                                        7192,
-                                                        9514])},
- 'stDiagonalCoronaryArtery_1': {'T-43117': ('1st Diagonal Coronary Artery',
-                                            [3014,
-                                             3015,
-                                             3604,
-                                             3827,
-                                             6102,
-                                             6109,
-                                             6117,
-                                             7151,
-                                             7192,
-                                             9514])},
- 'stLeftPosterolateralCoronaryArtery_1': {'T-4312B': ('1st Left Posterolateral '
-                                                      'Coronary Artery',
-                                                      [3014,
-                                                       3015,
-                                                       3604,
-                                                       3827,
-                                                       6102,
-                                                       6109,
-                                                       6117,
-                                                       7151,
-                                                       7192,
-                                                       9514])},
- 'stMarginalCoronaryArtery_1': {'T-43128': ('1st Marginal Coronary Artery',
-                                            [3014,
-                                             3015,
-                                             3604,
-                                             3827,
-                                             6102,
-                                             6109,
-                                             6117,
-                                             7151,
-                                             7192,
-                                             9514])},
- 'stRightPosterolateralCoronaryArtery_1': {'T-43213': ('1st Right '
-                                                       'posterolateral '
-                                                       'Coronary Artery',
-                                                       [3014,
-                                                        3015,
-                                                        3604,
-                                                        3827,
-                                                        6102,
-                                                        6109,
-                                                        6117,
-                                                        7151,
-                                                        7192,
-                                                        9514])},
- 'stSeptalCoronaryArtery_1': {'T-43002': ('1st Septal Coronary Artery',
+ '_1stSeptalCoronaryArtery': {'T-43002': ('1st Septal Coronary Artery',
                                           [3014,
                                            3015,
                                            3604,
@@ -15711,36 +15554,250 @@ concepts['SRT'] = \
                                            7151,
                                            7192,
                                            9514])},
- 'thPercentileValueOfPopulation_10': {'R-00377': ('10th Percentile Value of '
-                                                  'population',
-                                                  [221, 226, 7465])},
- 'thPercentileValueOfPopulation_5': {'R-00397': ('5th Percentile Value of '
+ '_201Thallium': {'C-138A9': ('^201^Thallium', [18])},
+ '_203Lead': {'C-132A8': ('^203^Lead', [18])},
+ '_222Radon': {'C-136B6': ('^222^Radon', [9528])},
+ '_223Radium': {'C-136A2': ('^223^Radium', [18])},
+ '_226Radium': {'C-136A5': ('^226^Radium', [9528])},
+ '_22Sodium': {'C-155A1': ('^22^Sodium', [18, 4020])},
+ '_24Sodium': {'C-155A2': ('^24^Sodium', [18])},
+ '_252Californium': {'C-124B4': ('^252^Californium', [9528])},
+ '_2Benign': {'F-037BD': ('2 - Benign', [6026, 6027])},
+ '_2DMode': {'G-03A2': ('2D mode', [12224, 6058])},
+ '_2OClockPosition': {'F-01782': ("2 o'clock position", [6018, 6019, 6205])},
+ '_2PartialPerfusion': {'R-00381': ('2: Partial Perfusion', [3713])},
+ '_2SigmaLowerValueOfPopulation': {'R-00388': ('2 Sigma Lower Value of '
+                                               'population',
+                                               [221, 226, 7465])},
+ '_2SigmaUpperValueOfPopulation': {'R-00387': ('2 Sigma Upper Value of '
+                                               'population',
+                                               [221, 226, 7465])},
+ '_2ndDiagonalCoronaryArtery': {'T-43118': ('2nd Diagonal Coronary Artery',
+                                            [3014,
+                                             3015,
+                                             3604,
+                                             3827,
+                                             6102,
+                                             6109,
+                                             6117,
+                                             7151,
+                                             7192,
+                                             9514])},
+ '_2ndLeftPosterolateralCoronaryArtery': {'T-4312C': ('2nd Left Posterolateral '
+                                                      'Coronary Artery',
+                                                      [3014,
+                                                       3015,
+                                                       3604,
+                                                       3827,
+                                                       6102,
+                                                       6109,
+                                                       6117,
+                                                       7151,
+                                                       7192,
+                                                       9514])},
+ '_2ndMarginalCoronaryArtery': {'T-43129': ('2nd Marginal Coronary Artery',
+                                            [3014,
+                                             3015,
+                                             3604,
+                                             3827,
+                                             6102,
+                                             6109,
+                                             6117,
+                                             7151,
+                                             7192,
+                                             9514])},
+ '_2ndRightPosterolateralCoronaryArtery': {'T-43214': ('2nd Right '
+                                                       'posterolateral '
+                                                       'Coronary Artery',
+                                                       [3014,
+                                                        3015,
+                                                        3604,
+                                                        3827,
+                                                        6102,
+                                                        6109,
+                                                        6117,
+                                                        7151,
+                                                        7192,
+                                                        9514])},
+ '_32Phosphorus': {'C-106A1': ('^32^Phosphorus', [18, 9528])},
+ '_38Potassium': {'C-135A4': ('^38^Potassium', [4020])},
+ '_3CompletePerfusion': {'R-00382': ('3: Complete Perfusion', [3713])},
+ '_3DMode': {'P0-02242': ('3D mode', [12224, 6058])},
+ '_3OClockPosition': {'F-01783': ("3 o'clock position", [6018, 6019, 6205])},
+ '_3ProbablyBenign': {'F-037BF': ('3 - Probably Benign', [6026, 6027])},
+ '_3rdDiagonalCoronaryArtery': {'T-43119': ('3rd diagonal Coronary Artery',
+                                            [3014,
+                                             3015,
+                                             3604,
+                                             3827,
+                                             6102,
+                                             6109,
+                                             6117,
+                                             7151,
+                                             7192,
+                                             9514])},
+ '_3rdLeftPosterolateralCoronaryArtery': {'T-4312D': ('3rd Left Posterolateral '
+                                                      'Coronary Artery',
+                                                      [3014,
+                                                       3015,
+                                                       3604,
+                                                       3827,
+                                                       6102,
+                                                       6109,
+                                                       6117,
+                                                       7151,
+                                                       7192,
+                                                       9514])},
+ '_3rdMarginalCoronaryArtery': {'T-4312A': ('3rd Marginal Coronary Artery',
+                                            [3014,
+                                             3015,
+                                             3604,
+                                             3827,
+                                             6102,
+                                             6109,
+                                             6117,
+                                             7151,
+                                             7192,
+                                             9514])},
+ '_3rdRightPosterolateralCoronaryArtery': {'T-43215': ('3rd Right '
+                                                       'posterolateral '
+                                                       'Coronary Artery',
+                                                       [3014,
+                                                        3015,
+                                                        3604,
+                                                        3827,
+                                                        6102,
+                                                        6109,
+                                                        6117,
+                                                        7151,
+                                                        7192,
+                                                        9514])},
+ '_42Potassium': {'C-135A2': ('^42^Potassium', [18])},
+ '_43Potassium': {'C-135A3': ('^43^Potassium', [18])},
+ '_45Titanium': {'C-166A2': ('^45^Titanium', [4020])},
+ '_4OClockPosition': {'F-01784': ("4 o'clock position", [6018, 6019, 6205])},
+ '_4Suspicious': {'F-037C0': ('4 - Suspicious', [6026, 6027])},
+ '_51Chromium': {'C-129A2': ('^51^Chromium', [18])},
+ '_52Iron': {'C-130A1': ('^52^Iron', [4020])},
+ '_52Manganese': {'C-149A1': ('^52^Manganese', [4020])},
+ '_57Cobalt': {'C-144A3': ('^57^Cobalt', [18])},
+ '_58Cobalt': {'C-144A4': ('^58^Cobalt', [18])},
+ '_59Iron': {'C-130A3': ('^59^Iron', [18])},
+ '_5HighlySuggestiveOfMalignancy': {'F-037C1': ('5 - Highly suggestive of '
+                                                'malignancy',
+                                                [6026, 6027])},
+ '_5OClockPosition': {'F-01785': ("5 o'clock position", [6018, 6019, 6205])},
+ '_5thPercentileValueOfPopulation': {'R-00397': ('5th Percentile Value of '
                                                  'population',
                                                  [221, 226, 7465])},
- 'thPercentileValueOfPopulation_90': {'R-00338': ('90th Percentile Value of '
+ '_60Cobalt': {'C-144A6': ('^60^Cobalt', [18, 9527, 9528])},
+ '_60Copper': {'C-127A4': ('^60^Copper', [4020])},
+ '_61Copper': {'C-127A1': ('^61^Copper', [4020])},
+ '_62Copper': {'C-127A5': ('^62^Copper', [4020])},
+ '_62Zinc': {'C-141A1': ('^62^Zinc', [4020])},
+ '_64Copper': {'C-127A2': ('^64^Copper', [18, 4020])},
+ '_66Gallium': {'C-131A1': ('^66^Gallium', [4020])},
+ '_67Copper': {'C-127A3': ('^67^Copper', [18])},
+ '_67Gallium': {'C-131A2': ('^67^Gallium', [18])},
+ '_68Gallium': {'C-131A3': ('^68^Gallium', [4020])},
+ '_68Germanium': {'C-128A2': ('^68^Germanium', [4020])},
+ '_6OClockPosition': {'F-01786': ("6 o'clock position", [6018, 6019, 6205])},
+ '_72Arsenic': {'C-115A2': ('^72^Arsenic', [4020])},
+ '_73Selenium': {'C-116A2': ('^73^Selenium', [4020])},
+ '_75Bromine': {'C-113A1': ('^75^Bromine', [4020])},
+ '_75Selenium': {'C-116A3': ('^75^Selenium', [18])},
+ '_76Bromine': {'C-113A2': ('^76^Bromine', [4020])},
+ '_77Bromine': {'C-113A3': ('^77^Bromine', [4020])},
+ '_7OClockPosition': {'F-01787': ("7 o'clock position", [6018, 6019, 6205])},
+ '_81mKrypton': {'C-173A5': ('^81m^Krypton', [18])},
+ '_82Rubidium': {'C-159A2': ('^82^Rubidium', [3107, 4020])},
+ '_85Krypton': {'C-173A7': ('^85^Krypton', [18])},
+ '_85Strontium': {'C-158A3': ('^85^Strontium', [18])},
+ '_86Yttrium': {'C-162A3': ('^86^Yttrium', [4020])},
+ '_87mStrontium': {'C-158A5': ('^87m^Strontium', [18])},
+ '_89Strontium': {'C-158A6': ('^89^Strontium', [18])},
+ '_89Zirconium': {'C-168A4': ('^89^Zirconium', [4020])},
+ '_8OClockPosition': {'F-01788': ("8 o'clock position", [6018, 6019, 6205])},
+ '_90Strontium': {'C-158A7': ('^90^Strontium', [9528])},
+ '_90Yttrium': {'C-162A7': ('^90^Yttrium', [18, 4020, 9528])},
+ '_90thPercentileValueOfPopulation': {'R-00338': ('90th Percentile Value of '
                                                   'population',
                                                   [221, 226, 7465])},
- 'thPercentileValueOfPopulation_95': {'R-00337': ('95th Percentile Value of '
+ '_94mTechnetium': {'C-163AA': ('^94m^Technetium', [4020])},
+ '_95thPercentileValueOfPopulation': {'R-00337': ('95th Percentile Value of '
                                                   'population',
                                                   [221, 226, 7465])},
+ '_97Ruthenium': {'C-180A2': ('^97^Ruthenium', [18])},
+ '_99mTechnetium': {'C-163A8': ('^99m^Technetium', [18])},
+ '_9OClockPosition': {'F-01789': ("9 o'clock position", [6018, 6019, 6205])},
  'ÍPigBreed': {'L-806D3': ('Í pig breed', [7480])}}
 
 concepts['DCM'] = \
-{'AWavePeakPressure': {'109016': ('A wave peak pressure', [3337, 3611])},
- 'AWavePressureAverage': {'109017': ('A wave pressure, average', [3337])},
- 'Aapm204ApDimension': {'113935': ('AAPM 204 AP Dimension', [10023])},
- 'Aapm204EffectiveDiameterEstimatedFromPatientAge': {'113937': ('AAPM 204 '
+{'': {'126330': ('tau_m', [218, 4107, 7180, 7469])},
+ 'AAPM204APDimension': {'113935': ('AAPM 204 AP Dimension', [10023])},
+ 'AAPM204EffectiveDiameterEstimatedFromPatientAge': {'113937': ('AAPM 204 '
                                                                 'Effective '
                                                                 'Diameter '
                                                                 'Estimated '
                                                                 'From Patient '
                                                                 'Age',
                                                                 [10023])},
- 'Aapm204LateralDimension': {'113934': ('AAPM 204 Lateral Dimension', [10023])},
- 'Aapm204SumOfLateralAndApDimension': {'113936': ('AAPM 204 Sum of Lateral and '
+ 'AAPM204LateralDimension': {'113934': ('AAPM 204 Lateral Dimension', [10023])},
+ 'AAPM204SumOfLateralAndAPDimension': {'113936': ('AAPM 204 Sum of Lateral and '
                                                   'AP Dimension',
                                                   [10023])},
- 'Aapm220': {'113987': ('AAPM 220', [10024])},
+ 'AAPM220': {'113987': ('AAPM 220', [10024])},
+ 'ACDConstant': {'111768': ('ACD Constant', [4237])},
+ 'ACRAccreditationPhantomCT': {'113682': ('ACR Accreditation Phantom - CT',
+                                          [4051, 4052])},
+ 'ACRAccreditationPhantomECT': {'113686': ('ACR Accreditation Phantom - ECT',
+                                           [4051, 4052])},
+ 'ACRAccreditationPhantomECTPET': {'113688': ('ACR Accreditation Phantom - '
+                                              'ECT/PET',
+                                              [4051, 4052])},
+ 'ACRAccreditationPhantomMR': {'113683': ('ACR Accreditation Phantom - MR',
+                                          [4051, 4052])},
+ 'ACRAccreditationPhantomMammography': {'113684': ('ACR Accreditation Phantom '
+                                                   '- Mammography',
+                                                   [4051, 4052])},
+ 'ACRAccreditationPhantomPET': {'113687': ('ACR Accreditation Phantom - PET',
+                                           [4051, 4052])},
+ 'ACRAccreditationPhantomPETFaceplate': {'113689': ('ACR Accreditation Phantom '
+                                                    '- PET Faceplate',
+                                                    [4051, 4052])},
+ 'ACRAccreditationPhantomStereotacticBreastBiopsy': {'113685': ('ACR '
+                                                                'Accreditation '
+                                                                'Phantom - '
+                                                                'Stereotactic '
+                                                                'Breast Biopsy',
+                                                                [4051, 4052])},
+ 'ACRGuidelinePerformanceOfAdultCTColonography': {'112248': ('ACR Guideline, '
+                                                             'Performance of '
+                                                             'Adult CT '
+                                                             'Colonography',
+                                                             [6208])},
+ 'ACRPositionStatement': {'112036': ('ACR Position Statement', [6136, 6208])},
+ 'ACRStandardCTMedicalPhysicsPerformanceMonitoring': {'112249': ('ACR '
+                                                                 'Standard, CT '
+                                                                 'medical '
+                                                                 'physics '
+                                                                 'performance '
+                                                                 'monitoring',
+                                                                 [6208])},
+ 'AGN15099889Zr': {'126729': ('AGN-150998 ^89^Zr', [4021])},
+ 'AIC': {'126223': ('AIC', [218, 7180, 7469])},
+ 'AIFIgnored': {'126360': ('AIF Ignored', [4103, 4106])},
+ 'AIN76': {'127272': ('AIN76', [607])},
+ 'AIN93G': {'127273': ('AIN93G', [607])},
+ 'AIN93M': {'127274': ('AIN93M', [607])},
+ 'ANGPattern': {'109902': ('ANG Pattern', [8301])},
+ 'AP45': {'112300': ('AP+45', [7303]), '112301': ('AP-45', [7303])},
+ 'ARWave': {'125323': ('AR-wave', [12307])},
+ 'ATSMCu60': {'126700': ('ATSM Cu^60^', [4021])},
+ 'ATSMCu61': {'126701': ('ATSM Cu^61^', [4021])},
+ 'ATSMCu62': {'126702': ('ATSM Cu^62^', [4021])},
+ 'AWavePeakPressure': {'109016': ('A wave peak pressure', [3337, 3611])},
+ 'AWavePressureAverage': {'109017': ('A wave pressure, average', [3337])},
  'AbdominalImagingSpecialty': {'128006': ('Abdominal Imaging Specialty',
                                           [7449])},
  'AbdominalRadiology': {'128170': ('Abdominal Radiology', [7030])},
@@ -15750,7 +15807,7 @@ concepts['DCM'] = \
  'AbnormalDischarge': {'111491': ('Abnormal discharge', [6062])},
  'AbnormalInterstitialPattern': {'112004': ('Abnormal interstitial pattern',
                                             [6102, 6104, 6106])},
- 'AbnormalLines1d': {'112061': ('Abnormal lines (1D)', [6101])},
+ 'AbnormalLines1D': {'112061': ('Abnormal lines (1D)', [6101])},
  'AbnormalLucency': {'112062': ('Abnormal lucency', [6101])},
  'AbnormalOpacity': {'112033': ('Abnormal opacity', [6101])},
  'AbnormalTexture': {'112064': ('Abnormal texture', [6101])},
@@ -15766,7 +15823,6 @@ concepts['DCM'] = \
  'AccumulatedAverageGlandularDoseMammo': {'111637': ('Accumulated Average '
                                                      'Glandular Dose (mammo)',
                                                      [10050])},
- 'AcdConstant': {'111768': ('ACD Constant', [4237])},
  'AcetabularCenterOfRotation': {'112303': ('Acetabular Center of Rotation',
                                            [7305, 7306])},
  'AcetabularCupInsert': {'112306': ('Acetabular Cup Insert', [7307, 7308])},
@@ -15786,42 +15842,6 @@ concepts['DCM'] = \
                                                        'volume',
                                                        [7201])},
  'AcquisitionNumber': {'113608': ('Acquisition Number', [10022])},
- 'AcrAccreditationPhantomCt': {'113682': ('ACR Accreditation Phantom - CT',
-                                          [4051, 4052])},
- 'AcrAccreditationPhantomEct': {'113686': ('ACR Accreditation Phantom - ECT',
-                                           [4051, 4052])},
- 'AcrAccreditationPhantomEctPet': {'113688': ('ACR Accreditation Phantom - '
-                                              'ECT/PET',
-                                              [4051, 4052])},
- 'AcrAccreditationPhantomMammography': {'113684': ('ACR Accreditation Phantom '
-                                                   '- Mammography',
-                                                   [4051, 4052])},
- 'AcrAccreditationPhantomMr': {'113683': ('ACR Accreditation Phantom - MR',
-                                          [4051, 4052])},
- 'AcrAccreditationPhantomPet': {'113687': ('ACR Accreditation Phantom - PET',
-                                           [4051, 4052])},
- 'AcrAccreditationPhantomPetFaceplate': {'113689': ('ACR Accreditation Phantom '
-                                                    '- PET Faceplate',
-                                                    [4051, 4052])},
- 'AcrAccreditationPhantomStereotacticBreastBiopsy': {'113685': ('ACR '
-                                                                'Accreditation '
-                                                                'Phantom - '
-                                                                'Stereotactic '
-                                                                'Breast Biopsy',
-                                                                [4051, 4052])},
- 'AcrGuidelinePerformanceOfAdultCtColonography': {'112248': ('ACR Guideline, '
-                                                             'Performance of '
-                                                             'Adult CT '
-                                                             'Colonography',
-                                                             [6208])},
- 'AcrPositionStatement': {'112036': ('ACR Position Statement', [6136, 6208])},
- 'AcrStandardCtMedicalPhysicsPerformanceMonitoring': {'112249': ('ACR '
-                                                                 'Standard, CT '
-                                                                 'medical '
-                                                                 'physics '
-                                                                 'performance '
-                                                                 'monitoring',
-                                                                 [6208])},
  'ActiveIngredientUndilutedConcentration': {'121380': ('Active Ingredient '
                                                        'Undiluted '
                                                        'Concentration',
@@ -15849,7 +15869,7 @@ concepts['DCM'] = \
  'AdditionalTeachingFileInformation': {'128712': ('Additional Teaching File '
                                                   'Information',
                                                   [7018])},
- 'AdiabaticTissueHomogeneityAthModel': {'126346': ('Adiabatic Tissue '
+ 'AdiabaticTissueHomogeneityATHModel': {'126346': ('Adiabatic Tissue '
                                                    'Homogeneity (ATH) Model',
                                                    [4101, 4106])},
  'AdministeredActivity': {'113507': ('Administered activity', [10050])},
@@ -15865,14 +15885,8 @@ concepts['DCM'] = \
  'AerobicIndex': {'122772': ('Aerobic index', [3238])},
  'AgatstonScoringMethod': {'112055': ('Agatston scoring method', [6140])},
  'AgeCorrected': {'111838': ('Age corrected', [4252])},
- 'Agn15099889Zr': {'126729': ('AGN-150998 ^89^Zr', [4021])},
  'AgreementWithPriorFindings': {'122775': ('Agreement with prior findings',
                                            [3217])},
- 'Aic': {'126223': ('AIC', [218, 7180, 7469])},
- 'AifIgnored': {'126360': ('AIF Ignored', [4103, 4106])},
- 'Ain76': {'127272': ('AIN76', [607])},
- 'Ain93g': {'127273': ('AIN93G', [607])},
- 'Ain93m': {'127274': ('AIN93M', [607])},
  'Air': {'112143': ('Air', [6122])},
  'AirBronchiologram': {'112070': ('Air bronchiologram', [6102, 6105])},
  'AirBronchogram': {'112071': ('Air bronchogram', [6102, 6105])},
@@ -15898,12 +15912,12 @@ concepts['DCM'] = \
  'AlternatePhotometricInterpretationImage': {'121328': ('Alternate Photometric '
                                                         'Interpretation image',
                                                         [7205])},
- 'AlternateSopClassInstance': {'121326': ('Alternate SOP Class instance',
+ 'AlternateSOPClassInstance': {'121326': ('Alternate SOP Class instance',
                                           [7205])},
  'AmbientRoomEnvironment': {'109112': ('Ambient room environment', [3000])},
  'AmbiguousSex': {'121104': ('Ambiguous sex', [7455])},
  'AmericaKennelClub': {'109200': ('America Kennel Club', [7481])},
- 'AmericaSPetRegistryInc': {'109201': ("America's Pet Registry Inc.", [7481])},
+ 'AmericaPetRegistryInc': {'109201': ("America's Pet Registry Inc.", [7481])},
  'AmericanCanineAssociation': {'109202': ('American Canine Association',
                                           [7481])},
  'AmericanPurebredRegistry': {'109203': ('American Purebred Registry', [7481])},
@@ -15920,7 +15934,6 @@ concepts['DCM'] = \
                                       [7305, 7306])},
  'Anechoic': {'111361': ('Anechoic', [6154])},
  'AneurysmOnCitedVessel': {'122101': ('Aneurysm on cited vessel', [3019])},
- 'AngPattern': {'109902': ('ANG Pattern', [8301])},
  'AnginalEquivalent': {'122799': ('Anginal Equivalent', [3202, 3220])},
  'AngioplastyBalloonDeflated': {'122304': ('Angioplasty balloon deflated',
                                            [3412])},
@@ -15940,7 +15953,7 @@ concepts['DCM'] = \
                                      [6102, 6109, 6112, 7151, 7192, 9514])},
  'AnteriorPosterior': {'122675': ('Anterior-Posterior', [12118, 3838])},
  'AnteriorPosteriorAxis': {'110862': ('Anterior-Posterior Axis', [7184])},
- 'AnteriorSurfaceOfTheRpe': {'128297': ('Anterior surface of the RPE',
+ 'AnteriorSurfaceOfTheRPE': {'128297': ('Anterior surface of the RPE',
                                         [4273, 7151, 7192, 9514])},
  'AnteriorToInferior': {'110874': ('Anterior To Inferior', [7185])},
  'AnteriorToPosterior': {'110870': ('Anterior To Posterior', [7185])},
@@ -15960,7 +15973,6 @@ concepts['DCM'] = \
  'AorticIntervention': {'122054': ('Aortic Intervention', [3405, 3406])},
  'AorticKnob': {'112102': ('Aortic knob',
                            [6102, 6109, 6117, 7151, 7192, 9514])},
- 'Ap45': {'112300': ('AP+45', [7303]), '112301': ('AP-45', [7303])},
  'ApertureBlock': {'130123': ('Aperture Block', [9517, 9520])},
  'ApexBaseAxis': {'110863': ('Apex-Base Axis', [7184])},
  'ApexToBase': {'110872': ('Apex To Base', [7185])},
@@ -15987,7 +15999,6 @@ concepts['DCM'] = \
  'ApprovedForUseOnPregnantPatients': {'128605': ('Approved for use on pregnant '
                                                  'patients',
                                                  [800])},
- 'ArWave': {'125323': ('AR-wave', [12307])},
  'ArcBeam': {'130103': ('Arc Beam', [9511, 9524])},
  'ArchOfTheAzygosVein': {'112103': ('Arch of the Azygos vein',
                                     [6102, 6109, 6117, 7151, 7192, 9514])},
@@ -16002,16 +16013,15 @@ concepts['DCM'] = \
  'AreaLengthSinglePlane': {'125205': ('Area-Length Single Plane',
                                       [12227, 12228])},
  'AreaLengthWynne': {'122560': ('Area Length Wynne', [3453])},
- 'AreaOfAClosedNurbs': {'122502': ('Area of a closed NURBS', [7473])},
+ 'AreaOfAClosedNURBS': {'122502': ('Area of a closed NURBS', [7473])},
  'AreaOfClosedIrregularPolygon': {'122501': ('Area of closed irregular polygon',
                                              [7473])},
  'AreaOfVascularCalcification': {'112196': ('Area of Vascular Calcification',
                                             [6142])},
- 'Arsenic_70': {'126602': ('^70^Arsenic', [4020])},
  'ArterialConduitAngiography': {'122058': ('Arterial conduit angiography',
                                            [3405, 3428])},
  'ArterialPulseWaveform': {'109116': ('Arterial Pulse Waveform', [3004])},
- 'ArtifactSOtherThanGridOrDetectorArtifact': {'111215': ('Artifact(s) other '
+ 'ArtifactsOtherThanGridOrDetectorArtifact': {'111215': ('Artifact(s) other '
                                                          'than grid or '
                                                          'detector artifact',
                                                          [6041, 6135, 7011])},
@@ -16026,9 +16036,6 @@ concepts['DCM'] = \
  'AtSurfaceOfPatient': {'113964': ('At Surface of Patient', [10025])},
  'AtrialDiastolicFillingDWave': {'125322': ('Atrial Diastolic Filling (D-wave)',
                                             [12307])},
- 'AtsmCu60': {'126700': ('ATSM Cu^60^', [4021])},
- 'AtsmCu61': {'126701': ('ATSM Cu^61^', [4021])},
- 'AtsmCu62': {'126702': ('ATSM Cu^62^', [4021])},
  'Attach': {'110124': ('Attach', [401, 403])},
  'AttenuationCoefficient': {'112031': ('Attenuation Coefficient',
                                        [10069, 218, 6141, 7180, 7469])},
@@ -16051,10 +16058,10 @@ concepts['DCM'] = \
  'AutomaticWithManualInjectPhase': {'130171': ('Automatic with Manual Inject '
                                                'Phase',
                                                [62])},
- 'AutomaticallyDetectedAifRoi': {'126363': ('Automatically Detected AIF ROI',
+ 'AutomaticallyDetectedAIFROI': {'126363': ('Automatically Detected AIF ROI',
                                             [4103, 4106])},
  'Autorefraction': {'AR': ('Autorefraction', [29, 30])},
- 'AutorefractionMeasurementsSopInstance': {'111784': ('Autorefraction '
+ 'AutorefractionMeasurementsSOPInstance': {'111784': ('Autorefraction '
                                                       'Measurements SOP '
                                                       'Instance',
                                                       [4240])},
@@ -16070,7 +16077,7 @@ concepts['DCM'] = \
  'AvoidanceVolume': {'130058': ('Avoidance Volume', [9535])},
  'AxialDiffusivity': {'113204': ('Axial Diffusivity', [7263])},
  'AxialKurtosis': {'113208': ('Axial Kurtosis', [7263])},
- 'AxialMeasurementsSopInstance': {'111782': ('Axial Measurements SOP Instance',
+ 'AxialMeasurementsSOPInstance': {'111782': ('Axial Measurements SOP Instance',
                                              [4240])},
  'AxillaryNodalMetastases': {'111301': ('Axillary nodal metastases',
                                         [6030, 6033])},
@@ -16089,10 +16096,65 @@ concepts['DCM'] = \
                                                 7151,
                                                 7192,
                                                 9514])},
+ 'BIC': {'126224': ('BIC', [218, 7180, 7469])},
+ 'BN01Pattern': {'109904': ('BN01 Pattern', [8301])},
+ 'BN02Pattern': {'109905': ('BN02 Pattern', [8301])},
+ 'BN03Pattern': {'109906': ('BN03 Pattern', [8301])},
+ 'BN04Pattern': {'109907': ('BN04 Pattern', [8301])},
+ 'BN05Pattern': {'109908': ('BN05 Pattern', [8301])},
+ 'BN06Pattern': {'109909': ('BN06 Pattern', [8301])},
+ 'BN07Pattern': {'109910': ('BN07 Pattern', [8301])},
+ 'BN08Pattern': {'109911': ('BN08 Pattern', [8301])},
+ 'BN09Pattern': {'109912': ('BN09 Pattern', [8301])},
+ 'BN10Pattern': {'109913': ('BN10 Pattern', [8301])},
+ 'BN11Pattern': {'109914': ('BN11 Pattern', [8301])},
+ 'BN12Pattern': {'109915': ('BN12 Pattern', [8301])},
+ 'BN13Pattern': {'109916': ('BN13 Pattern', [8301])},
+ 'BN14Pattern': {'109917': ('BN14 Pattern', [8301])},
+ 'BN15Pattern': {'109918': ('BN15 Pattern', [8301])},
+ 'BN16Pattern': {'109919': ('BN16 Pattern', [8301])},
+ 'BN17Pattern': {'109920': ('BN17 Pattern', [8301])},
+ 'BN18Pattern': {'109921': ('BN18 Pattern', [8301])},
+ 'BRCA1BreastCancerGene': {'111556': ('BRCA1 breast cancer gene',
+                                      [6081, 6087])},
+ 'BRCA2BreastCancerGene': {'111557': ('BRCA2 breast cancer gene',
+                                      [6081, 6087])},
+ 'BRCA3BreastCancerGene': {'111558': ('BRCA3 breast cancer gene',
+                                      [6081, 6087])},
+ 'BREPRadiationTransportModel': {'128406': ('BREP Radiation Transport Model',
+                                            [10065])},
+ 'BSA00004688WT0816800154LogWT': {'122246': ('BSA = '
+                                             '0.0004688*WT^(0.8168-0.0154*log(WT))',
+                                             [3663])},
+ 'BSA0003207WT0728500188LogWTHT03': {'122240': ('BSA = '
+                                                '0.003207*WT^(0.7285-0.0188 '
+                                                'log (WT)) *HT^0.3',
+                                                [3663])},
+ 'BSA0007184WT0425HT0725': {'122241': ('BSA = 0.007184*WT^ 0.425*HT^0.725',
+                                       [3663])},
+ 'BSA0007358WT0425HT0725': {'122266': ('BSA = 0.007358*WT^ 0.425*HT^0.725',
+                                       [3663])},
+ 'BSA0008883WT0444HT0663': {'122268': ('BSA = 0.008883*WT^ 0.444*HT^0.663',
+                                       [3663])},
+ 'BSA0009568WT0473HT0655': {'122270': ('BSA = 0.009568*WT^ 0.473*HT^0.655',
+                                       [3663])},
+ 'BSA0010265WT0423HT0651': {'122267': ('BSA = 0.010265*WT^ 0.423*HT^0.651',
+                                       [3663])},
+ 'BSA00235WT051456Htcm042246': {'122242': ('BSA = 0.0235*WT^0.51456*HTcm^ '
+                                           '0.42246',
+                                           [3663])},
+ 'BSA0024265WT05378Htcm03964': {'122243': ('BSA = '
+                                           '0.024265*WT^0.5378*HTcm^0.3964',
+                                           [3663])},
+ 'BSA0038189WT0423HT0362': {'122269': ('BSA = 0.038189*WT^ 0.423*HT^0.362',
+                                       [3663])},
+ 'BSA1219': {'122572': ('BSA^1.219', [3455])},
+ 'BSA132103433WT': {'122245': ('BSA = 1321+0.3433*WT', [3663])},
+ 'BSAHTWT3605': {'122244': ('BSA = (HT * WT/36) ^0.5', [3663])},
  'BackOfCorneaToFrontOfLens': {'111777': ('Back Of Cornea To Front Of Lens',
                                           [4239])},
  'Background': {'125040': ('Background', [7151, 7165, 7196])},
- 'BackgroundForLesionToBackgroundSuvRatio': {'126040': ('Background for Lesion '
+ 'BackgroundForLesionToBackgroundSUVRatio': {'126040': ('Background for Lesion '
                                                         'to Background SUV '
                                                         'Ratio',
                                                         [7466])},
@@ -16102,7 +16164,7 @@ concepts['DCM'] = \
  'BarrettToric': {'111862': ('Barrett Toric', [4236])},
  'BarrettTrueK': {'111863': ('Barrett True-K', [4236])},
  'BarrettTrueKToric': {'111864': ('Barrett True-K Toric', [4236])},
- 'BarrettUniversalIi': {'111865': ('Barrett Universal II', [4236])},
+ 'BarrettUniversalII': {'111865': ('Barrett Universal II', [4236])},
  'BasalCellCarcinomaOfNipple': {'111307': ('Basal cell carcinoma of nipple',
                                            [6030, 6033])},
  'BaseToApex': {'110873': ('Base To Apex', [7185])},
@@ -16111,9 +16173,9 @@ concepts['DCM'] = \
                                                        'Confidentiality '
                                                        'Profile',
                                                        [7050])},
- 'BatSWingDistribution': {'112154': ("Bat's wing distribution", [6128])},
+ 'BatWingDistribution': {'112154': ("Bat's wing distribution", [6128])},
  'BayesianProbability': {'113270': ('Bayesian-Probability', [7274])},
- 'BazettQtCorrectionAlgorithm': {'122730': ('Bazett QT Correction Algorithm',
+ 'BazettQTCorrectionAlgorithm': {'122730': ('Bazett QT Correction Algorithm',
                                             [3678])},
  'BeadedSeptumSign': {'112066': ('Beaded septum sign', [6102, 6104])},
  'BeamBlock': {'128431': ('Beam Block', [10066])},
@@ -16123,7 +16185,7 @@ concepts['DCM'] = \
  'BeginOxygenAdministration': {'121161': ('Begin oxygen administration',
                                           [3530])},
  'BeginPacing': {'121166': ('Begin Pacing', [3552])},
- 'BeginTransferringDicomInstances': {'110102': ('Begin Transferring DICOM '
+ 'BeginTransferringDICOMInstances': {'110102': ('Begin Transferring DICOM '
                                                 'Instances',
                                                 [400])},
  'BeginVentilation': {'121168': ('Begin Ventilation', [3551])},
@@ -16136,11 +16198,10 @@ concepts['DCM'] = \
                                           [7003])},
  'BestInSet': {'113013': ('Best In Set', [7010])},
  'Bevacizumab89Zr': {'126516': ('Bevacizumab ^89^Zr', [4021])},
- 'BiExponentialIvimDiffusionModel': {'113251': ('Bi-exponential (IVIM) '
+ 'BiExponentialIVIMDiffusionModel': {'113251': ('Bi-exponential (IVIM) '
                                                 'diffusion model',
                                                 [7273])},
  'BiPlaneAngiography': {'122060': ('Bi-plane Angiography', [3748])},
- 'Bic': {'126224': ('BIC', [218, 7180, 7469])},
  'BinarySegmentation': {'110853': ('Binary Segmentation', [218, 7180, 7469])},
  'BiomedicalEngineering': {'128171': ('Biomedical Engineering', [7030])},
  'BiopsyLocalizer': {'121312': ('Biopsy localizer', [7201])},
@@ -16152,7 +16213,7 @@ concepts['DCM'] = \
  'Bioptome': {'122052': ('Bioptome', [3429])},
  'BiplaneEllipse': {'125211': ('Biplane Ellipse', [12227, 12228])},
  'Blinatumomab89Zr': {'126727': ('Blinatumomab ^89^Zr', [4021])},
- 'BlindEstimationOfAif': {'126364': ('Blind Estimation of AIF', [4103, 4106])},
+ 'BlindEstimationOfAIF': {'126364': ('Blind Estimation of AIF', [4103, 4106])},
  'BlindSpotMonitoring': {'111844': ('Blind Spot Monitoring', [4253])},
  'BloodCarbonDioxideSaturation': {'122187': ('Blood Carbon dioxide saturation',
                                              [3526])},
@@ -16190,24 +16251,6 @@ concepts['DCM'] = \
  'BloodVesselVascularInvasion': {'111303': ('Blood vessel (vascular) invasion',
                                             [6030, 6033])},
  'BloomRichardsonGrade': {'111502': ('Bloom-Richardson Grade', [6071])},
- 'Bn01Pattern': {'109904': ('BN01 Pattern', [8301])},
- 'Bn02Pattern': {'109905': ('BN02 Pattern', [8301])},
- 'Bn03Pattern': {'109906': ('BN03 Pattern', [8301])},
- 'Bn04Pattern': {'109907': ('BN04 Pattern', [8301])},
- 'Bn05Pattern': {'109908': ('BN05 Pattern', [8301])},
- 'Bn06Pattern': {'109909': ('BN06 Pattern', [8301])},
- 'Bn07Pattern': {'109910': ('BN07 Pattern', [8301])},
- 'Bn08Pattern': {'109911': ('BN08 Pattern', [8301])},
- 'Bn09Pattern': {'109912': ('BN09 Pattern', [8301])},
- 'Bn10Pattern': {'109913': ('BN10 Pattern', [8301])},
- 'Bn11Pattern': {'109914': ('BN11 Pattern', [8301])},
- 'Bn12Pattern': {'109915': ('BN12 Pattern', [8301])},
- 'Bn13Pattern': {'109916': ('BN13 Pattern', [8301])},
- 'Bn14Pattern': {'109917': ('BN14 Pattern', [8301])},
- 'Bn15Pattern': {'109918': ('BN15 Pattern', [8301])},
- 'Bn16Pattern': {'109919': ('BN16 Pattern', [8301])},
- 'Bn17Pattern': {'109920': ('BN17 Pattern', [8301])},
- 'Bn18Pattern': {'109921': ('BN18 Pattern', [8301])},
  'Boak': {'122563': ('Boak', [3453])},
  'BodyFrame': {'130117': ('Body Frame', [7151, 7157, 7193, 9505, 9513, 9520])},
  'BodyHabitusAttenuation': {'122743': ('Body habitus attenuation', [3115])},
@@ -16222,8 +16265,8 @@ concepts['DCM'] = \
                                                            'general reduction '
                                                            'in sensitivity',
                                                            [4254])},
- 'BorgCr10Scale': {'122735': ('Borg CR10 Scale', [3239])},
- 'BorgRpeScale': {'122734': ('Borg RPE Scale', [3239])},
+ 'BorgCR10Scale': {'122735': ('Borg CR10 Scale', [3239])},
+ 'BorgRPEScale': {'122734': ('Borg RPE Scale', [3239])},
  'BrachytherapyChannel': {'130080': ('Brachytherapy channel',
                                      [7151, 7157, 7193, 9506, 9520])},
  'BrachytherapyChannelShield': {'130079': ('Brachytherapy channel shield',
@@ -16231,12 +16274,6 @@ concepts['DCM'] = \
  'BrachytherapyDevice': {'130045': ('Brachytherapy Device', [9502])},
  'BrachytherapySourceApplicator': {'130078': ('Brachytherapy source applicator',
                                               [7151, 7157, 7193, 9506, 9520])},
- 'Brca1BreastCancerGene': {'111556': ('BRCA1 breast cancer gene',
-                                      [6081, 6087])},
- 'Brca2BreastCancerGene': {'111557': ('BRCA2 breast cancer gene',
-                                      [6081, 6087])},
- 'Brca3BreastCancerGene': {'111558': ('BRCA3 breast cancer gene',
-                                      [6081, 6087])},
  'BreastAttenuation': {'122744': ('Breast attenuation', [3115])},
  'BreastBoard': {'130116': ('Breast Board',
                             [7151, 7157, 7193, 9505, 9513, 9520])},
@@ -16247,39 +16284,9 @@ concepts['DCM'] = \
  'BreastThickness': {'128405': ('Breast Thickness', [10069])},
  'BreastTissueDensity': {'112191': ('Breast tissue density', [6142])},
  'Brentuximab89Zr': {'126735': ('Brentuximab ^89^Zr', [4021])},
- 'BrepRadiationTransportModel': {'128406': ('BREP Radiation Transport Model',
-                                            [10065])},
  'BrightRedColor': {'111453': ('Bright red color', [6067])},
  'BrightfieldIllumination': {'111744': ('Brightfield illumination', [8123])},
  'Bronchovascular': {'112052': ('Bronchovascular', [6100])},
- 'Bsa00004688Wt0816800154LogWt': {'122246': ('BSA = '
-                                             '0.0004688*WT^(0.8168-0.0154*log(WT))',
-                                             [3663])},
- 'Bsa0003207Wt0728500188LogWtHt03': {'122240': ('BSA = '
-                                                '0.003207*WT^(0.7285-0.0188 '
-                                                'log (WT)) *HT^0.3',
-                                                [3663])},
- 'Bsa0007184Wt0425Ht0725': {'122241': ('BSA = 0.007184*WT^ 0.425*HT^0.725',
-                                       [3663])},
- 'Bsa0007358Wt0425Ht0725': {'122266': ('BSA = 0.007358*WT^ 0.425*HT^0.725',
-                                       [3663])},
- 'Bsa0008883Wt0444Ht0663': {'122268': ('BSA = 0.008883*WT^ 0.444*HT^0.663',
-                                       [3663])},
- 'Bsa0009568Wt0473Ht0655': {'122270': ('BSA = 0.009568*WT^ 0.473*HT^0.655',
-                                       [3663])},
- 'Bsa0010265Wt0423Ht0651': {'122267': ('BSA = 0.010265*WT^ 0.423*HT^0.651',
-                                       [3663])},
- 'Bsa00235Wt051456Htcm042246': {'122242': ('BSA = 0.0235*WT^0.51456*HTcm^ '
-                                           '0.42246',
-                                           [3663])},
- 'Bsa0024265Wt05378Htcm03964': {'122243': ('BSA = '
-                                           '0.024265*WT^0.5378*HTcm^0.3964',
-                                           [3663])},
- 'Bsa0038189Wt0423Ht0362': {'122269': ('BSA = 0.038189*WT^ 0.423*HT^0.362',
-                                       [3663])},
- 'Bsa1219': {'122572': ('BSA^1.219', [3455])},
- 'Bsa132103433Wt': {'122245': ('BSA = 1321+0.3433*WT', [3663])},
- 'BsaHtWt3605': {'122244': ('BSA = (HT * WT/36) ^0.5', [3663])},
  'BulletMethod': {'125228': ('Bullet Method', [12227, 12228])},
  'ButterflyDistribution': {'112155': ('Butterfly distribution', [6128])},
  'ButterflyFilter': {'113652': ('Butterfly filter', [10007])},
@@ -16302,6 +16309,39 @@ concepts['DCM'] = \
                                              'Malignant',
                                              [6200])},
  'CArmMount': {'113955': ('C-Arm Mount', [10031])},
+ 'CCNippleNotCenteredOnImage': {'111203': ('CC Nipple not centered on image',
+                                           [6041])},
+ 'CCNotAllMedialTissueVisualized': {'111202': ('CC Not all medial tissue '
+                                               'visualized',
+                                               [6041])},
+ 'CCPosteriorNippleLineDoesNotMeasureWithin1cmOfMLO': {'111204': ('CC '
+                                                                  'Posterior '
+                                                                  'nipple line '
+                                                                  'does not '
+                                                                  'measure '
+                                                                  'within 1 cm '
+                                                                  'of MLO',
+                                                                  [6041])},
+ 'CD': {'110032': ('CD', [405])},
+ 'CDImported': {'110024': ('CD Imported', [7008])},
+ 'CFXRegionInLAOProjection': {'122472': ('CFX Region in LAO Projection',
+                                         [3461])},
+ 'CHARMED': {'113234': ('CHARMED', [7261])},
+ 'CKDEPIFormulaEstimationOfGFR': {'113571': ('CKD-EPI Formula estimation of '
+                                             'GFR',
+                                             [10047])},
+ 'CLR1404I124': {'126715': ('CLR1404 I^124^', [4021])},
+ 'CLR1404I131': {'126716': ('CLR1404 I^131^', [4021])},
+ 'CRTDisplay': {'109991': ('CRT Display', [8303])},
+ 'CRTFrontProjectionSystem': {'109998': ('CRT Front Projection System',
+                                         [8303])},
+ 'CRTRearProjectionSystem': {'109997': ('CRT Rear Projection System', [8303])},
+ 'CTBasedAttenuationCorrection': {'122728': ('CT-based Attenuation Correction',
+                                             [3112])},
+ 'CTDoseLengthProductTotal': {'113813': ('CT Dose Length Product Total',
+                                         [10050])},
+ 'CTVNodal': {'130049': ('CTV Nodal', [9534])},
+ 'CTVPrimary': {'130050': ('CTV Primary', [9534])},
  'CWavePressure': {'122196': ('C wave pressure', [3611])},
  'CalcificationExtentAsPercentOfSurface': {'112018': ('Calcification extent as '
                                                       'percent of surface',
@@ -16333,7 +16373,6 @@ concepts['DCM'] = \
  'CancerElsewhere': {'111480': ('Cancer elsewhere', [6055])},
  'CanineFederationOfCanada': {'109210': ('Canine Federation of Canada',
                                          [7481])},
- 'CarbonNucleus_12': {'130143': ('^12^Carbon nucleus', [9526])},
  'CarcinomaInChildren': {'111304': ('Carcinoma in children', [6030, 6033])},
  'CarcinomaInEctopicBreast': {'111305': ('Carcinoma in ectopic breast',
                                          [6030, 6033])},
@@ -16375,21 +16414,6 @@ concepts['DCM'] = \
  'CavityExtentAsPercentOfVolume': {'112017': ('Cavity extent as percent of '
                                               'volume',
                                               [6142])},
- 'CcNippleNotCenteredOnImage': {'111203': ('CC Nipple not centered on image',
-                                           [6041])},
- 'CcNotAllMedialTissueVisualized': {'111202': ('CC Not all medial tissue '
-                                               'visualized',
-                                               [6041])},
- 'CcPosteriorNippleLineDoesNotMeasureWithin1CmOfMlo': {'111204': ('CC '
-                                                                  'Posterior '
-                                                                  'nipple line '
-                                                                  'does not '
-                                                                  'measure '
-                                                                  'within 1 cm '
-                                                                  'of MLO',
-                                                                  [6041])},
- 'Cd': {'110032': ('CD', [405])},
- 'CdImported': {'110024': ('CD Imported', [7008])},
  'CenterOfGravity': {'122475': ('Center of Gravity', [3458])},
  'CenterOfMass': {'128138': ('Center of Mass', [1011])},
  'CentralBreathingPosition': {'122612': ('central breathing position', [3823])},
@@ -16401,8 +16425,6 @@ concepts['DCM'] = \
  'CessationOfExercise': {'125237': ('Cessation of exercise', [12031])},
  'CessationOfStimulation': {'125239': ('Cessation of stimulation', [12031])},
  'Cetuximab89Zr': {'126513': ('Cetuximab ^89^Zr', [4021])},
- 'CfxRegionInLaoProjection': {'122472': ('CFX Region in LAO Projection',
-                                         [3461])},
  'Cg250FAb289Zr': {'126517': ("cG250-F(ab')(2) ^89^Zr", [4021])},
  'ChairOfProtocolCommittee': {'128671': ('Chair of Protocol Committee',
                                          [7450, 7452])},
@@ -16410,7 +16432,6 @@ concepts['DCM'] = \
  'ChangeOfProcedureForCorrectCharging': {'110509': ('Change of procedure for '
                                                     'correct charging',
                                                     [9300, 9301, 9303])},
- 'Charmed': {'113234': ('CHARMED', [7261])},
  'Checkerboard': {'114216': ('Checkerboard', [8202])},
  'ChestTube': {'112173': ('Chest tube',
                           [6102, 6138, 6202, 6203, 6404, 7151, 7193])},
@@ -16438,9 +16459,6 @@ concepts['DCM'] = \
                                          [4272])},
  'CircularMethod': {'122473': ('Circular method', [3470])},
  'Circumscribed': {'112142': ('Circumscribed', [6120])},
- 'CkdEpiFormulaEstimationOfGfr': {'113571': ('CKD-EPI Formula estimation of '
-                                             'GFR',
-                                             [10047])},
  'CleanDescriptorsOption': {'113105': ('Clean Descriptors Option', [7050])},
  'CleanGraphicsOption': {'113103': ('Clean Graphics Option', [7050])},
  'CleanPixelDataOption': {'113101': ('Clean Pixel Data Option', [7050])},
@@ -16454,13 +16472,11 @@ concepts['DCM'] = \
  'ClinicalTrialSubmissionInputUsed': {'128223': ('Clinical Trial Submission '
                                                  'Input Used',
                                                  [7010])},
- 'Clr1404I124': {'126715': ('CLR1404 I^124^', [4021])},
- 'Clr1404I131': {'126716': ('CLR1404 I^131^', [4021])},
  'ClusterAnalysis': {'123107': ('Cluster Analysis', [7162])},
  'ClusteredMicrocysts': {'111129': ('Clustered microcysts', [6054, 6064])},
  'CmabU3689Zr': {'126746': ('cMAb U36 ^89^Zr', [4021])},
  'Coalescent': {'112157': ('Coalescent', [6128])},
- 'CockroftGaultFormulaEstimationOfGfr': {'113570': ('Cockroft-Gault Formula '
+ 'CockroftGaultFormulaEstimationOfGFR': {'113570': ('Cockroft-Gault Formula '
                                                     'estimation of GFR',
                                                     [10047])},
  'CoilMarker': {'129301': ('Coil Marker', [7111, 7112])},
@@ -16477,10 +16493,10 @@ concepts['DCM'] = \
                                                          [6155])},
  'Comment': {'121106': ('Comment', [12101])},
  'CompactFlash': {'110034': ('Compact Flash', [405])},
- 'ComparativeAverage10YearChdRisk': {'122231': ('Comparative Average10 Year '
+ 'ComparativeAverage10YearCHDRisk': {'122231': ('Comparative Average10 Year '
                                                 'CHD Risk',
                                                 [3667])},
- 'ComparativeLow10YearChdRisk': {'122232': ('Comparative Low10 Year CHD Risk',
+ 'ComparativeLow10YearCHDRisk': {'122232': ('Comparative Low10 Year CHD Risk',
                                             [3667])},
  'ComparisonToPreviousExams': {'111424': ('Comparison to previous exams',
                                           [6052, 6053])},
@@ -16545,7 +16561,7 @@ concepts['DCM'] = \
  'ContinuousTemporary': {'130100': ('Continuous Temporary', [9533])},
  'ContouringInputUsed': {'128219': ('Contouring Input Used', [7010])},
  'ContrastAdministered': {'122086': ('Contrast administered', [3409])},
- 'ContrastAgentAngioMrSignalIntensity': {'110801': ('Contrast Agent Angio MR '
+ 'ContrastAgentAngioMRSignalIntensity': {'110801': ('Contrast Agent Angio MR '
                                                     'Signal Intensity',
                                                     [218, 7180, 7469])},
  'ContrastBolusIngredientOpaque': {'121381': ('Contrast/Bolus Ingredient '
@@ -16559,8 +16575,8 @@ concepts['DCM'] = \
                                                   'Prophylactic Agent',
                                                   [76])},
  'ContrastStart': {'122084': ('Contrast start', [3409])},
- 'CooperSLigamentChanges': {'111111': ("Cooper's ligament changes",
-                                       [6014, 6015, 6016, 6054, 6056])},
+ 'CooperLigamentChanges': {'111111': ("Cooper's ligament changes",
+                                      [6014, 6015, 6016, 6054, 6056])},
  'CoordinateAlignmentImageSeries': {'128187': ('Coordinate Alignment Image '
                                                'Series',
                                                [7010, 7023])},
@@ -16582,10 +16598,10 @@ concepts['DCM'] = \
  'CoronaryLesion50Stenosis': {'122171': ('Coronary lesion > = 50% stenosis',
                                          [3726])},
  'CorrectionFactor': {'128452': ('Correction Factor', [10069])},
+ 'CorrelatesToMRIFindings': {'111383': ('Correlates to MRI findings', [6158])},
  'CorrelatesToMammographyFindings': {'111382': ('Correlates to mammography '
                                                 'findings',
                                                 [6158])},
- 'CorrelatesToMriFindings': {'111383': ('Correlates to MRI findings', [6158])},
  'CorrelatesToOtherImagingFindings': {'111385': ('Correlates to other imaging '
                                                  'findings',
                                                  [6158])},
@@ -16607,15 +16623,7 @@ concepts['DCM'] = \
  'CrossBScanPattern': {'128283': ('Cross B-scan pattern', [4272])},
  'CrossedGrid': {'111645': ('Crossed grid', [10017])},
  'Crosstable': {'111069': ('Crosstable', [4011, 502])},
- 'CrtDisplay': {'109991': ('CRT Display', [8303])},
- 'CrtFrontProjectionSystem': {'109998': ('CRT Front Projection System',
-                                         [8303])},
- 'CrtRearProjectionSystem': {'109997': ('CRT Rear Projection System', [8303])},
- 'CtBasedAttenuationCorrection': {'122728': ('CT-based Attenuation Correction',
-                                             [3112])},
- 'CtDoseLengthProductTotal': {'113813': ('CT Dose Length Product Total',
-                                         [10050])},
- 'CtdifreeairToEConversionViaMcComputation': {'113801': ('CTDIfreeair to E '
+ 'CtdifreeairToEConversionViaMCComputation': {'113801': ('CTDIfreeair to E '
                                                          'conversion via MC '
                                                          'computation',
                                                          [10011])},
@@ -16623,8 +16631,6 @@ concepts['DCM'] = \
                                                        'conversion via '
                                                        'measurement',
                                                        [10011])},
- 'CtvNodal': {'130049': ('CTV Nodal', [9534])},
- 'CtvPrimary': {'130050': ('CTV Primary', [9534])},
  'Cu3689Zr': {'126515': ('cU36 ^89^Zr', [4021])},
  'CubeBScanPattern': {'128279': ('Cube B-scan pattern', [4272])},
  'CubeMethod': {'125206': ('Cube Method', [12227, 12228])},
@@ -16648,6 +16654,29 @@ concepts['DCM'] = \
  'CylinderMarker': {'129303': ('Cylinder Marker', [7111, 7112])},
  'CystFill': {'111430': ('Cyst fill', [6054, 6057])},
  'CytologicAnalysis': {'111147': ('Cytologic analysis', [6028, 6029])},
+ 'DICOMInstancesAccessed': {'110103': ('DICOM Instances Accessed', [400])},
+ 'DICOMInstancesTransferred': {'110104': ('DICOM Instances Transferred',
+                                          [400])},
+ 'DICOMStudyDeleted': {'110105': ('DICOM Study Deleted', [400])},
+ 'DINGeometryPattern': {'109931': ('DIN Geometry Pattern', [8301])},
+ 'DINGrayscalePattern': {'109932': ('DIN Grayscale Pattern', [8301])},
+ 'DINResolutionPattern': {'109933': ('DIN Resolution Pattern', [8301])},
+ 'DKI': {'113222': ('DKI', [7260])},
+ 'DLPFrontProjectionSystem': {'109996': ('DLP Front Projection System',
+                                         [8303])},
+ 'DLPRearProjectionSystem': {'109995': ('DLP Rear Projection System', [8303])},
+ 'DLPToEConversionViaMCComputation': {'113800': ('DLP to E conversion via MC '
+                                                 'computation',
+                                                 [10011])},
+ 'DLPToEConversionViaMeasurement': {'113802': ('DLP to E conversion via '
+                                               'measurement',
+                                               [10011])},
+ 'DN3089Zr': {'126747': ('DN30 ^89^Zr', [4021])},
+ 'DOT': {'113236': ('DOT', [7261])},
+ 'DSI': {'113224': ('DSI', [7260, 7261])},
+ 'DTI': {'113223': ('DTI', [7260])},
+ 'DVD': {'110033': ('DVD', [405])},
+ 'DVDImported': {'110025': ('DVD Imported', [7008])},
  'DW': {'126222': ('D-W', [218, 7180, 7469])},
  'DarkBrownColor': {'111452': ('Dark brown color', [6067])},
  'DarkRedColor': {'111451': ('Dark red color', [6067])},
@@ -16721,22 +16750,22 @@ concepts['DCM'] = \
  'DescriptionOfMaterial': {'121145': ('Description of Material', [3426])},
  'Designator': {'129002': ('Designator', [7453])},
  'DestinationMedia': {'110154': ('Destination Media', [402])},
- 'DestinationRoleId': {'110152': ('Destination Role ID', [402])},
+ 'DestinationRoleID': {'110152': ('Destination Role ID', [402])},
  'DestructionOfMicrobubbles': {'125235': ('Destruction of microbubbles',
                                           [12031])},
  'Detach': {'110125': ('Detach', [401, 403])},
- 'DetectorArtifactS': {'111214': ('Detector artifact(s)', [6041, 6135, 7011])},
+ 'DetectorArtifacts': {'111214': ('Detector artifact(s)', [6041, 6135, 7011])},
  'Deterministic': {'113211': ('Deterministic', [7262])},
  'Device': {'121007': ('Device', [270])},
  'DeviceCrossedLesion': {'122089': ('Device crossed lesion', [3422])},
  'DeviceDeployed': {'122305': ('Device deployed', [3412])},
  'DeviceLocalizer': {'121341': ('Device localizer', [7201])},
  'DeviceSubject': {'121192': ('Device Subject', [271])},
- 'DfCd4589Zr': {'126520': ('Df-CD45 ^89^Zr', [4021])},
- 'DfFk23peg489Zr': {'126763': ('Df-[FK](2)-3PEG(4) ^89^Zr', [4021])},
- 'DfFk289Zr': {'126762': ('Df-[FK](2) ^89^Zr', [4021])},
- 'DfFk89Zr': {'126760': ('Df-FK ^89^Zr', [4021])},
- 'DfFkPeg389Zr': {'126761': ('Df-FK-PEG(3) ^89^Zr', [4021])},
+ 'DfCD4589Zr': {'126520': ('Df-CD45 ^89^Zr', [4021])},
+ 'DfFK23PEG489Zr': {'126763': ('Df-[FK](2)-3PEG(4) ^89^Zr', [4021])},
+ 'DfFK289Zr': {'126762': ('Df-[FK](2) ^89^Zr', [4021])},
+ 'DfFK89Zr': {'126760': ('Df-FK ^89^Zr', [4021])},
+ 'DfFKPEG389Zr': {'126761': ('Df-FK-PEG(3) ^89^Zr', [4021])},
  'Dgn': {'128407': ('DgN', [10069])},
  'DiabeticFibrousMastopathy': {'111259': ('Diabetic fibrous mastopathy',
                                           [6030, 6031])},
@@ -16768,10 +16797,6 @@ concepts['DCM'] = \
  'DiastolicSystolicVelocityRatio': {'122218': ('Diastolic/Systolic velocity '
                                                'ratio',
                                                [3620])},
- 'DicomInstancesAccessed': {'110103': ('DICOM Instances Accessed', [400])},
- 'DicomInstancesTransferred': {'110104': ('DICOM Instances Transferred',
-                                          [400])},
- 'DicomStudyDeleted': {'110105': ('DICOM Study Deleted', [400])},
  'DifferentialInterferenceContrast': {'111748': ('Differential interference '
                                                  'contrast',
                                                  [8123])},
@@ -16797,10 +16822,7 @@ concepts['DCM'] = \
                                   [218, 7180, 7270, 7469])},
  'DigitalMammography': {'111409': ('Digital Mammography', [6050, 6083])},
  'DigitalRadiography': {'DX': ('Digital Radiography', [29, 30])},
- 'DigitalTimecodeNos': {'109001': ('Digital timecode (NOS)', [3090])},
- 'DinGeometryPattern': {'109931': ('DIN Geometry Pattern', [8301])},
- 'DinGrayscalePattern': {'109932': ('DIN Grayscale Pattern', [8301])},
- 'DinResolutionPattern': {'109933': ('DIN Resolution Pattern', [8301])},
+ 'DigitalTimecodeNOS': {'109001': ('Digital timecode (NOS)', [3090])},
  'Diode': {'128704': ('Diode', [7026, 7027, 7151, 7193])},
  'DiodeArray': {'128702': ('Diode Array', [7026, 7027, 7151, 7193])},
  'DirectDetector': {'113948': ('Direct Detector', [10030])},
@@ -16869,24 +16891,13 @@ concepts['DCM'] = \
                                                 'Coefficient',
                                                 [218, 7180, 7272, 7469])},
  'DivideByZero': {'114003': ('Divide by zero', [42])},
- 'Dki': {'113222': ('DKI', [7260])},
- 'DlpFrontProjectionSystem': {'109996': ('DLP Front Projection System',
-                                         [8303])},
- 'DlpRearProjectionSystem': {'109995': ('DLP Rear Projection System', [8303])},
- 'DlpToEConversionViaMcComputation': {'113800': ('DLP to E conversion via MC '
-                                                 'computation',
-                                                 [10011])},
- 'DlpToEConversionViaMeasurement': {'113802': ('DLP to E conversion via '
-                                               'measurement',
-                                               [10011])},
- 'Dn3089Zr': {'126747': ('DN30 ^89^Zr', [4021])},
  'DoctorCanceledProcedure': {'110500': ('Doctor canceled procedure',
                                         [9300, 9301, 9303])},
  'DocumentDigitizerEquipment': {'DOCD': ('Document Digitizer Equipment',
                                          [7005])},
  'DogRegistryOfAmerica': {'109212': ('Dog Registry of America', [7481])},
  'DopplerAudio': {'109113': ('Doppler audio', [3000])},
- 'DopplerOctA': {'128256': ('Doppler OCT-A', [4270])},
+ 'DopplerOCTA': {'128256': ('Doppler OCT-A', [4270])},
  'DopplerVolumeFlow': {'125219': ('Doppler Volume Flow', [12227, 12231])},
  'DoseAreaProductTotal': {'113722': ('Dose Area Product Total', [10050])},
  'DoseCalculationBoundingVolume': {'130065': ('Dose Calculation Bounding '
@@ -16900,43 +16911,38 @@ concepts['DCM'] = \
  'DoseImage': {'121342': ('Dose Image', [10063])},
  'DosePointCloud': {'128496': ('Dose Point Cloud', [10063])},
  'DosimetricResult': {'128190': ('Dosimetric Result', [7010, 7023])},
- 'Dot': {'113236': ('DOT', [7261])},
  'DoubleExposure': {'113026': ('Double exposure', [7011])},
  'DrugAdministered': {'122083': ('Drug administered', [3409])},
  'DrugEnd': {'122082': ('Drug end', [3409])},
  'DrugStart': {'122081': ('Drug start', [3409])},
- 'Dsi': {'113224': ('DSI', [7260, 7261])},
- 'Dti': {'113223': ('DTI', [7260])},
  'DuctNarrowing': {'111429': ('Duct narrowing', [6054, 6057])},
  'DuctalAdenoma': {'111258': ('Ductal adenoma', [6030, 6031])},
  'DuplicateOrder': {'110510': ('Duplicate order', [9300, 9301, 9302, 9303])},
  'DurationOfAdministration': {'122095': ('Duration of administration', [3410])},
  'DuringTransport': {'127102': ('During transport', [634])},
  'DuringVoiding': {'109137': ('During voiding', [91])},
- 'Dvd': {'110033': ('DVD', [405])},
- 'DvdImported': {'110025': ('DVD Imported', [7008])},
- 'DynamicContrastMrMeasurementReport': {'126002': ('Dynamic Contrast MR '
+ 'DynamicContrastMRMeasurementReport': {'126002': ('Dynamic Contrast MR '
                                                    'Measurement Report',
                                                    [7021])},
  'DynamicLight': {'111630': ('Dynamic light', [4203])},
  'DyssynchronyIndex': {'125325': ('Dyssynchrony Index', [12304])},
- 'E4g1089Zr': {'126519': ('E4G10 ^89^Zr', [4021])},
- 'EcgBasedGatingSignalProcessed': {'109002': ('ECG-based gating signal, '
+ 'E4G1089Zr': {'126519': ('E4G10 ^89^Zr', [4021])},
+ 'ECGBasedGatingSignalProcessed': {'109002': ('ECG-based gating signal, '
                                               'processed',
                                               [3090])},
+ 'ECST': {'122656': ('ECST', [3804])},
+ 'EEMCrossSectionalArea': {'122333': ('EEM Cross-Sectional Area', [3482])},
+ 'EEMDiameter': {'122330': ('EEM Diameter', [3481])},
+ 'EEMDiameterRatio': {'122352': ('EEM Diameter Ratio', [3484])},
+ 'EEMVolume': {'122371': ('EEM Volume', [3485])},
  'EchogenicHalo': {'111359': ('Echogenic halo', [6153])},
  'Echogenicity': {'110849': ('Echogenicity', [218, 7180, 7469])},
  'Echovist': {'125902': ('Echovist', [12030])},
  'Ecromeximab89Zr': {'126732': ('Ecromeximab ^89^Zr', [4021])},
- 'Ecst': {'122656': ('ECST', [3804])},
  'EdgeDetection': {'123103': ('Edge Detection', [7162])},
  'EdgeEnhancement': {'113086': ('Edge enhancement', [7203])},
  'EditedModel': {'129010': ('Edited Model', [7062])},
  'EducationalIntent': {'129012': ('Educational Intent', [7064])},
- 'EemCrossSectionalArea': {'122333': ('EEM Cross-Sectional Area', [3482])},
- 'EemDiameter': {'122330': ('EEM Diameter', [3481])},
- 'EemDiameterRatio': {'122352': ('EEM Diameter Ratio', [3484])},
- 'EemVolume': {'122371': ('EEM Volume', [3485])},
  'EffectiveAtomicNumber': {'129320': ('Effective Atomic Number', [301])},
  'EffectiveDose': {'113839': ('Effective Dose', [10050])},
  'EffectiveOrificeArea': {'125326': ('Effective Orifice Area', [12304])},
@@ -16979,8 +16985,8 @@ concepts['DCM'] = \
                                                       [7005])},
  'EntireBodyTargetVolume': {'130055': ('Entire Body Target Volume', [9534])},
  'EntirePullback': {'122384': ('Entire Pullback', [3487])},
- 'EntranceExposureAtRp': {'111636': ('Entrance Exposure at RP', [10050])},
- 'EntranceExposureToA42CmBreastThickness': {'113865': ('Entrance exposure to a '
+ 'EntranceExposureAtRP': {'111636': ('Entrance Exposure at RP', [10050])},
+ 'EntranceExposureToA42cmBreastThickness': {'113865': ('Entrance exposure to a '
                                                        '4.2 cm breast '
                                                        'thickness',
                                                        [10025])},
@@ -17000,7 +17006,7 @@ concepts['DCM'] = \
  'Equivalent2GrayFractionsModel': {'130130': ('Equivalent 2-Gray Fractions '
                                               'Model',
                                               [9539])},
- 'EquivalentCdaDocument': {'121331': ('Equivalent CDA Document', [7006])},
+ 'EquivalentCDADocument': {'121331': ('Equivalent CDA Document', [7006])},
  'EquivalentDose': {'128512': ('Equivalent Dose', [10070, 218, 7180, 7469])},
  'EquivalentKReading': {'111756': ('Equivalent K-reading', [4235, 4242])},
  'ErodedPlaque': {'122390': ('Eroded Plaque', [3491])},
@@ -17027,7 +17033,11 @@ concepts['DCM'] = \
  'ExtravasationVisibleInImage': {'113568': ('Extravasation visible in image',
                                             [10043, 60, 9300])},
  'ExtremelySmall': {'112131': ('Extremely small', [6118])},
- 'Fact': {'113214': ('FACT', [7262])},
+ 'FACT': {'113214': ('FACT', [7262])},
+ 'FLB457C11': {'126706': ('FLB 457 C^11^', [4021])},
+ 'FWPByGACampbell1991': {'128040': ('FWP by GA, Campbell, 1991',
+                                    [12012, 12016])},
+ 'FWPByGAHadlock1991': {'128041': ('FWP by GA, Hadlock, 1991', [12012, 12016])},
  'Failed': {'111224': ('Failed', [6042])},
  'FallyprideC11': {'126704': ('Fallypride C^11^', [4021])},
  'FallyprideF18': {'126705': ('Fallypride F^18^', [4021])},
@@ -17103,7 +17113,7 @@ concepts['DCM'] = \
  'Field1ForJoslin3Field': {'111621': ('Field 1 for Joslin3 field', [4207])},
  'Field2ForJoslin3Field': {'111622': ('Field 2 for Joslin 3 field', [4207])},
  'Field3ForJoslin3Field': {'111623': ('Field 3 for Joslin 3 field', [4207])},
- 'FieldMapMrSignalIntensity': {'110807': ('Field Map MR Signal Intensity',
+ 'FieldMapMRSignalIntensity': {'110807': ('Field Map MR Signal Intensity',
                                           [218, 7180, 7469])},
  'Film': {'110010': ('Film', [405]), '113951': ('Film', [10030])},
  'FilmDigitizer': {'FILMD': ('Film Digitizer', [30, 7005])},
@@ -17114,7 +17124,7 @@ concepts['DCM'] = \
  'Findings': {'121070': ('Findings', [6052])},
  'FinePleomorphicCalcification': {'111344': ('Fine pleomorphic calcification',
                                              [6010, 6011])},
- 'FirstPassLeakageProfileFplpModel': {'126343': ('First Pass Leakage Profile '
+ 'FirstPassLeakageProfileFPLPModel': {'126343': ('First Pass Leakage Profile '
                                                  '(FPLP) Model',
                                                  [4101, 4106])},
  'FixationOrPositioningDevice': {'130044': ('Fixation or Positioning Device',
@@ -17163,9 +17173,8 @@ concepts['DCM'] = \
  'FlashIsNotNearEdgeOfFilm': {'111185': ('Flash is not near edge of film',
                                          [6041])},
  'FlatFilter': {'113653': ('Flat filter', [10007])},
- 'Flb457C11': {'126706': ('FLB 457 C^11^', [4021])},
  'FleischTable': {'122254': ('Fleisch table', [3664])},
- 'FleischnerSLineS': {'112107': ("Fleischner's line(s)", [6102, 6103])},
+ 'FleischnerLines': {'112107': ("Fleischner's line(s)", [6102, 6103])},
  'Flocculent': {'112164': ('Flocculent', [6132])},
  'FlowImageForImageProcessing': {'128251': ('Flow image for image processing',
                                             [7202])},
@@ -17224,16 +17233,16 @@ concepts['DCM'] = \
  'ForPrinting': {'113018': ('For Printing', [7010])},
  'ForProcessingPredecessor': {'121358': ('For Processing predecessor', [7202])},
  'ForPublicationExport': {'128714': ('For Publication Export', [7010, 7014])},
+ 'ForRTPlanSummation': {'128200': ('For RT Plan Summation', [7010, 7024])},
+ 'ForRTPrescription': {'128197': ('For RT Prescription', [7010, 7024])},
+ 'ForRTTreatmentPlanning': {'128198': ('For RT Treatment Planning',
+                                       [7010, 7024])},
+ 'ForRTWorkflow': {'128180': ('For RT Workflow', [7010, 7024])},
  'ForReferringProvider': {'113002': ('For Referring Provider', [7010])},
  'ForReportAttachment': {'113020': ('For Report Attachment', [7010])},
  'ForResearch': {'113009': ('For Research', [7010])},
  'ForResearchCollectionExport': {'128713': ('For Research Collection Export',
                                             [7010, 7014])},
- 'ForRtPlanSummation': {'128200': ('For RT Plan Summation', [7010, 7024])},
- 'ForRtPrescription': {'128197': ('For RT Prescription', [7010, 7024])},
- 'ForRtTreatmentPlanning': {'128198': ('For RT Treatment Planning',
-                                       [7010, 7024])},
- 'ForRtWorkflow': {'128180': ('For RT Workflow', [7010, 7024])},
  'ForSegmentation': {'128196': ('For Segmentation', [7010])},
  'ForSurgery': {'113003': ('For Surgery', [7010])},
  'ForTeaching': {'113004': ('For Teaching', [7010])},
@@ -17276,11 +17285,11 @@ concepts['DCM'] = \
  'FullCardiacCycle': {'125324': ('Full Cardiac Cycle', [12307])},
  'FullFidelityImage': {'121327': ('Full fidelity image', [7205])},
  'FunctionalImage': {'121339': ('Functional image', [7201])},
- 'FwpByGaCampbell1991': {'128040': ('FWP by GA, Campbell, 1991',
-                                    [12012, 12016])},
- 'FwpByGaHadlock1991': {'128041': ('FWP by GA, Hadlock, 1991', [12012, 12016])},
- 'Ga20189Zr': {'126731': ('GA201 ^89^Zr', [4021])},
- 'GammaCapillaryTransitTimeGcttModel': {'126345': ('Gamma Capillary Transit '
+ 'GA20189Zr': {'126731': ('GA201 ^89^Zr', [4021])},
+ 'GDPattern': {'109903': ('GD Pattern', [8301])},
+ 'GTVNodal': {'130051': ('GTV Nodal', [9534])},
+ 'GTVPrimary': {'130052': ('GTV Primary', [9534])},
+ 'GammaCapillaryTransitTimeGCTTModel': {'126345': ('Gamma Capillary Transit '
                                                    'Time (GCTT) Model',
                                                    [4101, 4106])},
  'GammaDistributionMode': {'113297': ('Gamma Distribution Mode',
@@ -17298,13 +17307,12 @@ concepts['DCM'] = \
                                                      'subject matter',
                                                      [7017])},
  'GaussianBlur': {'113088': ('Gaussian blur', [7203])},
- 'GdPattern': {'109903': ('GD Pattern', [8301])},
  'GeneralMicroscopy': {'GM': ('General Microscopy', [29, 30])},
  'GeneralReductionInSensitivity': {'111850': ('General reduction in '
                                               'sensitivity',
                                               [4254])},
- 'Generic2dPlanning': {'112340': ('Generic 2D Planning', [7320])},
- 'Generic3dPlanning': {'112341': ('Generic 3D Planning', [7320])},
+ 'Generic2DPlanning': {'112340': ('Generic 2D Planning', [7320])},
+ 'Generic3DPlanning': {'112341': ('Generic 3D Planning', [7320])},
  'GenericPlanningForHipReplacement': {'112342': ('Generic Planning for Hip '
                                                  'Replacement',
                                                  [7320])},
@@ -17328,7 +17336,7 @@ concepts['DCM'] = \
  'GlembatumumabVedotin89Zr': {'126724': ('Glembatumumab vedotin ^89^Zr',
                                          [4021])},
  'Global': {'113213': ('Global', [7262])},
- 'GlomerularFiltrationRateBlackMdrd': {'113574': ('Glomerular Filtration Rate '
+ 'GlomerularFiltrationRateBlackMDRD': {'113574': ('Glomerular Filtration Rate '
                                                   'black (MDRD)',
                                                   [10047])},
  'GlomerularFiltrationRateCreatinineBasedFormulaSchwartz': {'113577': ('Glomerular '
@@ -17343,13 +17351,13 @@ concepts['DCM'] = \
                                                              'Cystatin-based '
                                                              'formula',
                                                              [10047])},
- 'GlomerularFiltrationRateFemaleMdrd': {'113575': ('Glomerular Filtration Rate '
+ 'GlomerularFiltrationRateFemaleMDRD': {'113575': ('Glomerular Filtration Rate '
                                                    'female (MDRD)',
                                                    [10047])},
- 'GlomerularFiltrationRateMdrd': {'113572': ('Glomerular Filtration Rate '
+ 'GlomerularFiltrationRateMDRD': {'113572': ('Glomerular Filtration Rate '
                                              '(MDRD)',
                                              [10047])},
- 'GlomerularFiltrationRateNonBlackMdrd': {'113573': ('Glomerular Filtration '
+ 'GlomerularFiltrationRateNonBlackMDRD': {'113573': ('Glomerular Filtration '
                                                      'Rate non-black (MDRD)',
                                                      [10047])},
  'GlutamateAndGlutamine': {'113080': ('Glutamate and glutamine',
@@ -17373,15 +17381,13 @@ concepts['DCM'] = \
  'GranularPattern': {'112128': ('Granular pattern', [6102, 6106])},
  'GrayscaleResolutionEvaluation': {'109702': ('Grayscale resolution evaluation',
                                               [8300])},
- 'GridArtifactS': {'111208': ('Grid artifact(s)', [6041, 6135, 7011])},
+ 'GridArtifacts': {'111208': ('Grid artifact(s)', [6041, 6135, 7011])},
  'GridBScanPattern': {'128288': ('Grid B-scan pattern', [4272])},
  'GrossSpecimenImaging': {'112701': ('Gross Specimen Imaging', [8131])},
  'GroundGlassOpacity': {'112120': ('Ground glass opacity', [6102, 6104])},
  'GroupOfFramesForDisplay': {'113036': ('Group of Frames for Display', [7010])},
  'GrowthPercentileRank': {'125012': ('Growth Percentile Rank', [12017])},
  'GrowthZScore': {'125013': ('Growth Z-score', [12017])},
- 'GtvNodal': {'130051': ('GTV Nodal', [9534])},
- 'GtvPrimary': {'130052': ('GTV Primary', [9534])},
  'GuidewireCrossingLesionSuccessful': {'122302': ('Guidewire crossing lesion '
                                                   'successful',
                                                   [3412, 3752])},
@@ -17390,6 +17396,8 @@ concepts['DCM'] = \
                                                     [3412, 3752])},
  'GynecologicCondition': {'111567': ('Gynecologic condition', [6087, 6088])},
  'GynecologicSurgery': {'111568': ('Gynecologic surgery', [6087, 6088])},
+ 'HARDI': {'113221': ('HARDI', [7260])},
+ 'HISBundleWave': {'109040': ('HIS bundle wave', [3339])},
  'HabitualVisualAcuity': {'111686': ('Habitual Visual Acuity', [4216])},
  'Haigis': {'111760': ('Haigis', [4236])},
  'HaigisA0': {'111769': ('Haigis a0', [4237])},
@@ -17401,7 +17409,6 @@ concepts['DCM'] = \
  'HalfValueLayer': {'111634': ('Half Value Layer', [10069])},
  'HaloSign': {'112073': ('Halo sign', [6102, 6105])},
  'HardCopyPrintServer': {'PRINT': ('Hard Copy Print Server', [30])},
- 'Hardi': {'113221': ('HARDI', [7260])},
  'HardwareConfiguration': {'110130': ('Hardware Configuration', [401, 403])},
  'HeadAndNeckImagingSpecialty': {'128008': ('Head and Neck Imaging Specialty',
                                             [7449])},
@@ -17419,8 +17426,6 @@ concepts['DCM'] = \
  'HeatedWaterBlanket': {'127253': ('Heated water blanket', [635])},
  'Height': {'121207': ('Height', [218, 6165, 7469, 7470])},
  'HelicalBeam': {'130108': ('Helical Beam', [9512, 9524])},
- 'HeliumNucleus_3': {'130141': ('^3^Helium nucleus', [9526])},
- 'HeliumNucleus_4': {'130142': ('^4^Helium nucleus', [9526])},
  'HemodynamicResistance': {'110825': ('Hemodynamic Resistance',
                                       [218, 7180, 7469])},
  'HemodynamicResistanceIndex': {'122220': ('Hemodynamic Resistance Index',
@@ -17452,11 +17457,10 @@ concepts['DCM'] = \
                                                                   [6028,
                                                                    6029])},
  'HisBundleElectrogram': {'109007': ('His bundle electrogram', [3240])},
- 'HisBundleWave': {'109040': ('HIS bundle wave', [3339])},
  'HistogramAnalysis': {'123105': ('Histogram Analysis', [7162])},
  'HistologyUsingCoreBiopsy': {'111145': ('Histology using core biopsy',
                                          [6028, 6029])},
- 'HistoricalRtPrescription': {'130135': ('Historical RT Prescription', [9509])},
+ 'HistoricalRTPrescription': {'130135': ('Historical RT Prescription', [9509])},
  'HistoryOfBenignBreastBiopsy': {'111420': ('History of benign breast biopsy',
                                             [6051])},
  'HistoryOfBreastAugmentationAsymptomatic': {'111417': ('History of breast '
@@ -17473,7 +17477,7 @@ concepts['DCM'] = \
                                          [6087, 6088])},
  'HistoryOfOvarianCancer': {'111552': ('History of ovarian cancer',
                                        [6081, 6087])},
- 'HodgesQtCorrectionAlgorithm': {'122731': ('Hodges QT Correction Algorithm',
+ 'HodgesQTCorrectionAlgorithm': {'122731': ('Hodges QT Correction Algorithm',
                                             [3678])},
  'HofferPacdConstant': {'111772': ('Hoffer pACD Constant', [4237])},
  'HofferQ': {'111764': ('Hoffer Q', [4236])},
@@ -17500,58 +17504,61 @@ concepts['DCM'] = \
  'HyperemicRatio': {'122219': ('Hyperemic ratio', [3620])},
  'HypoFractionation': {'130098': ('Hypo-fractionation', [9533])},
  'Hypoechoic': {'111364': ('Hypoechoic', [6154])},
- 'Iauc': {'126320': ('IAUC', [218, 4109, 7180, 7469])},
- 'Iauc180': {'126323': ('IAUC180', [218, 4109, 7180, 7469])},
- 'Iauc180bn': {'126327': ('IAUC180BN', [218, 4109, 7180, 7469])},
- 'Iauc60': {'126321': ('IAUC60', [218, 4109, 7180, 7469])},
- 'Iauc60bn': {'126325': ('IAUC60BN', [218, 4109, 7180, 7469])},
- 'Iauc90': {'126322': ('IAUC90', [218, 4109, 7180, 7469])},
- 'Iauc90bn': {'126326': ('IAUC90BN', [218, 4109, 7180, 7469])},
- 'Iaucbn': {'126324': ('IAUCBN', [218, 4109, 7180, 7469])},
- 'IcrpPub103': {'113841': ('ICRP Pub 103', [10015])},
- 'IcrpPub60': {'113808': ('ICRP Pub 60', [10015])},
- 'IcrpPublication106': {'113523': ('ICRP Publication 106', [10040])},
- 'IcrpPublication53': {'113521': ('ICRP Publication 53', [10040])},
- 'IcrpPublication80': {'113522': ('ICRP Publication 80', [10040])},
- 'Iec61217GantryContinuousPitchAngle': {'126810': ('IEC61217 Gantry Continuous '
+ 'IAUC': {'126320': ('IAUC', [218, 4109, 7180, 7469])},
+ 'IAUC180': {'126323': ('IAUC180', [218, 4109, 7180, 7469])},
+ 'IAUC180BN': {'126327': ('IAUC180BN', [218, 4109, 7180, 7469])},
+ 'IAUC60': {'126321': ('IAUC60', [218, 4109, 7180, 7469])},
+ 'IAUC60BN': {'126325': ('IAUC60BN', [218, 4109, 7180, 7469])},
+ 'IAUC90': {'126322': ('IAUC90', [218, 4109, 7180, 7469])},
+ 'IAUC90BN': {'126326': ('IAUC90BN', [218, 4109, 7180, 7469])},
+ 'IAUCBN': {'126324': ('IAUCBN', [218, 4109, 7180, 7469])},
+ 'ICRPPub103': {'113841': ('ICRP Pub 103', [10015])},
+ 'ICRPPub60': {'113808': ('ICRP Pub 60', [10015])},
+ 'ICRPPublication106': {'113523': ('ICRP Publication 106', [10040])},
+ 'ICRPPublication53': {'113521': ('ICRP Publication 53', [10040])},
+ 'ICRPPublication80': {'113522': ('ICRP Publication 80', [10040])},
+ 'IEC61217GantryContinuousPitchAngle': {'126810': ('IEC61217 Gantry Continuous '
                                                    'Pitch Angle',
                                                    [9401, 9402])},
- 'Iec61217GantryContinuousRollAngle': {'126809': ('IEC61217 Gantry Continuous '
+ 'IEC61217GantryContinuousRollAngle': {'126809': ('IEC61217 Gantry Continuous '
                                                   'Roll Angle',
                                                   [9401, 9402])},
- 'Iec61217GantryContinuousYawAngle': {'126811': ('IEC61217 Gantry Continuous '
+ 'IEC61217GantryContinuousYawAngle': {'126811': ('IEC61217 Gantry Continuous '
                                                  'Yaw Angle',
                                                  [9401, 9402])},
- 'Iec61217PatientSupportContinuousAngle': {'126801': ('IEC61217 Patient '
+ 'IEC61217PatientSupportContinuousAngle': {'126801': ('IEC61217 Patient '
                                                       'Support Continuous '
                                                       'Angle',
                                                       [9401, 9403])},
- 'Iec61217TableTopContinuousEccentricAngle': {'126805': ('IEC61217 Table Top '
+ 'IEC61217TableTopContinuousEccentricAngle': {'126805': ('IEC61217 Table Top '
                                                          'Continuous Eccentric '
                                                          'Angle',
                                                          [9401, 9403])},
- 'Iec61217TableTopContinuousPitchAngle': {'126802': ('IEC61217 Table Top '
+ 'IEC61217TableTopContinuousPitchAngle': {'126802': ('IEC61217 Table Top '
                                                      'Continuous Pitch Angle',
                                                      [9401, 9403])},
- 'Iec61217TableTopContinuousRollAngle': {'126803': ('IEC61217 Table Top '
+ 'IEC61217TableTopContinuousRollAngle': {'126803': ('IEC61217 Table Top '
                                                     'Continuous Roll Angle',
                                                     [9401, 9403])},
- 'Iec61217TableTopEccentricAxisDistance': {'126804': ('IEC61217 Table Top '
+ 'IEC61217TableTopEccentricAxisDistance': {'126804': ('IEC61217 Table Top '
                                                       'Eccentric Axis Distance',
                                                       [9401, 9403])},
- 'Iec61217TableTopLateralPosition': {'126806': ('IEC61217 Table Top Lateral '
+ 'IEC61217TableTopLateralPosition': {'126806': ('IEC61217 Table Top Lateral '
                                                 'Position',
                                                 [9401, 9403])},
- 'Iec61217TableTopLongitudinalPosition': {'126807': ('IEC61217 Table Top '
+ 'IEC61217TableTopLongitudinalPosition': {'126807': ('IEC61217 Table Top '
                                                      'Longitudinal Position',
                                                      [9401, 9403])},
- 'Iec61217TableTopVerticalPosition': {'126808': ('IEC61217 Table Top Vertical '
+ 'IEC61217TableTopVerticalPosition': {'126808': ('IEC61217 Table Top Vertical '
                                                  'Position',
                                                  [9401, 9403])},
- 'IecBodyDosimetryPhantom': {'113691': ('IEC Body Dosimetry Phantom',
+ 'IECBodyDosimetryPhantom': {'113691': ('IEC Body Dosimetry Phantom',
                                         [4051, 4052])},
- 'IecHeadDosimetryPhantom': {'113690': ('IEC Head Dosimetry Phantom',
+ 'IECHeadDosimetryPhantom': {'113690': ('IEC Head Dosimetry Phantom',
                                         [4051, 4052])},
+ 'ILCR': {'126850': ('ILCR', [7490])},
+ 'IRIGBTimecode': {'109003': ('IRIG-B timecode', [3090])},
+ 'ITV': {'130056': ('ITV', [9534])},
  'IfAge18yP50272': {'122259': ('if (age < 18y) P50 = 27.2', [3666])},
  'IfAge1dayP50216': {'122257': ('if (age < 1day) P50 = 21.6', [3666])},
  'IfAge30dayP50246': {'122258': ('if (age < 30day) P50 = 24.6', [3666])},
@@ -17560,11 +17567,10 @@ concepts['DCM'] = \
  'IfPremAge3daysP50199': {'122256': ('if (prem age< 3days) P50 = 19.9',
                                      [3666])},
  'Igloo': {'127220': ('Igloo', [606])},
- 'Ilcr': {'126850': ('ILCR', [7490])},
- 'IllustrationOfRoi': {'121200': ('Illustration of ROI', [7003])},
+ 'IllustrationOfROI': {'121200': ('Illustration of ROI', [7003])},
  'ImageAcquiredDuringTreatment': {'129203': ('Image Acquired during Treatment',
                                              [7201])},
- 'ImageArtifactS': {'111207': ('Image artifact(s)', [7011])},
+ 'ImageArtifacts': {'111207': ('Image artifact(s)', [7011])},
  'ImageCapture': {'CAPTURE': ('Image Capture', [30])},
  'ImageContentBasedAlignment': {'125024': ('Image Content-based Alignment',
                                            [7100])},
@@ -17757,12 +17763,11 @@ concepts['DCM'] = \
  'InvestigationalNewDrug': {'113530': ('Investigational New Drug', [10040])},
  'IonChamber': {'128707': ('Ion Chamber', [7026, 7027, 7151, 7193])},
  'IonChamberArray': {'128703': ('Ion Chamber Array', [7026, 7027, 7151, 7193])},
- 'IrigBTimecode': {'109003': ('IRIG-B timecode', [3090])},
  'IrradiatingDevice': {'113859': ('Irradiating Device', [7445])},
  'IrradiationAdministering': {'113851': ('Irradiation Administering', [7453])},
  'IrradiationAuthorizing': {'113850': ('Irradiation Authorizing', [7453])},
  'IrradiationEvent': {'113852': ('Irradiation Event', [10000])},
- 'IrradiationEventUid': {'113853': ('Irradiation Event UID', [10001])},
+ 'IrradiationEventUID': {'113853': ('Irradiation Event UID', [10001])},
  'IsocentricTreatmentLocationPoint': {'130073': ('Isocentric Treatment '
                                                  'Location Point',
                                                  [9504])},
@@ -17770,7 +17775,6 @@ concepts['DCM'] = \
  'Isoechoic': {'111365': ('Isoechoic', [6154])},
  'IterativeClosestPoint': {'114213': ('Iterative Closest Point', [8203])},
  'IterativeReconstruction': {'113963': ('Iterative Reconstruction', [10033])},
- 'Itv': {'130056': ('ITV', [9534])},
  'J59189Zr': {'126514': ('J591 ^89^Zr', [4021])},
  'JuvenilePapillomatosis': {'111277': ('Juvenile papillomatosis',
                                        [6030, 6031])},
@@ -17778,7 +17782,7 @@ concepts['DCM'] = \
  'KeepVeinOpenStarted': {'130161': ('Keep vein open started', [71])},
  'Kep': {'126313': ('kep', [218, 4107, 7180, 7469])},
  'Keratometry': {'KER': ('Keratometry', [29, 30])},
- 'KeratometryMeasurementsSopInstance': {'111757': ('Keratometry Measurements '
+ 'KeratometryMeasurementsSOPInstance': {'111757': ('Keratometry Measurements '
                                                    'SOP Instance',
                                                    [4240])},
  'KerleyALine': {'112109': ('Kerley A line', [6102, 6103])},
@@ -17800,39 +17804,40 @@ concepts['DCM'] = \
  'KurtosisDiffusionCoefficient': {'113294': ('Kurtosis Diffusion Coefficient',
                                              [218, 7180, 7272, 7469])},
  'KurtosisDiffusionModel': {'113252': ('Kurtosis diffusion model', [7273])},
- 'LactationalChange': {'111279': ('Lactational change', [6030, 6031])},
- 'LadRegionInLaoProjection': {'122470': ('LAD Region in LAO Projection',
+ 'LADRegionInLAOProjection': {'122470': ('LAD Region in LAO Projection',
                                          [3461])},
- 'LadRegionInRaoProjection': {'122464': ('LAD Region in RAO Projection',
+ 'LADRegionInRAOProjection': {'122464': ('LAD Region in RAO Projection',
                                          [3460])},
- 'Large380CmLateralThickness': {'113603': ('Large: > 38.0 cm lateral thickness',
+ 'LDLCholesterolScoreSheetForMen': {'122233': ('LDL Cholesterol Score Sheet '
+                                               'for Men',
+                                               [3668])},
+ 'LDLCholesterolScoreSheetForWomen': {'122234': ('LDL Cholesterol Score Sheet '
+                                                 'for Women',
+                                                 [3668])},
+ 'LSDI': {'113225': ('LSDI', [7260])},
+ 'LactationalChange': {'111279': ('Lactational change', [6030, 6031])},
+ 'Large380cmLateralThickness': {'113603': ('Large: > 38.0 cm lateral thickness',
                                            [7041, 7042])},
  'LargeDuctPapilloma': {'111281': ('Large duct papilloma', [6030, 6031])},
  'LaserCrossHairs': {'128151': ('Laser Cross-hairs', [1015])},
  'LaserScanning': {'114203': ('Laser scanning', [8201])},
- 'LaserScanning3dCamModel': {'129021': ('Laser Scanning 3D CAM model', [7061])},
+ 'LaserScanning3DCAMModel': {'129021': ('Laser Scanning 3D CAM model', [7061])},
  'LateChildBearingAfter30': {'111555': ('Late child bearing (after 30)',
                                         [6081, 6087])},
- 'LdlCholesterolScoreSheetForMen': {'122233': ('LDL Cholesterol Score Sheet '
-                                               'for Men',
-                                               [3668])},
- 'LdlCholesterolScoreSheetForWomen': {'122234': ('LDL Cholesterol Score Sheet '
-                                                 'for Women',
-                                                 [3668])},
  'LeadRadiologicTechnologist': {'128674': ('Lead Radiologic Technologist',
                                            [7450, 7452, 9536])},
- 'LeastMeanSquareLmsDeconvolution': {'126310': ('Least Mean Square (LMS) '
+ 'LeastMeanSquareLMSDeconvolution': {'126310': ('Least Mean Square (LMS) '
                                                 'deconvolution',
                                                 [4105, 4106])},
  'LeastSquaresFitOfMultipleSamples': {'113261': ('Least squares fit of '
                                                  'multiple samples',
                                                  [7274])},
- 'LeftAtrialEdVolume': {'122407': ('Left Atrial ED Volume', [3468, 3835])},
+ 'LeftAtrialEDVolume': {'122407': ('Left Atrial ED Volume', [3468, 3835])},
+ 'LeftAtrialESVolume': {'122408': ('Left Atrial ES Volume', [3469, 3835])},
  'LeftAtrialEjectionFractionByAngiography': {'122406': ('Left Atrial Ejection '
                                                         'Fraction by '
                                                         'Angiography',
                                                         [3467])},
- 'LeftAtrialEsVolume': {'122408': ('Left Atrial ES Volume', [3469, 3835])},
  'LeftFirst': {'126830': ('left first', [21])},
  'LeftHemisphereMostAnterior': {'125035': ('Left Hemisphere Most Anterior',
                                            [7101, 7111])},
@@ -17880,7 +17885,7 @@ concepts['DCM'] = \
  'LesionCompletelyRemoved': {'111447': ('Lesion completely removed', [6066])},
  'LesionPartiallyRemoved': {'111448': ('Lesion partially removed', [6066])},
  'LesionSensitivity': {'111089': ('Lesion Sensitivity', [6048])},
- 'LesionToBackgroundSuvRatio': {'126039': ('Lesion to Background SUV Ratio',
+ 'LesionToBackgroundSUVRatio': {'126039': ('Lesion to Background SUV Ratio',
                                            [7466])},
  'LeukemicInfiltration': {'111318': ('Leukemic infiltration', [6030, 6033])},
  'LevenbergMarquardt': {'113265': ('Levenberg-Marquardt', [7274])},
@@ -17933,7 +17938,6 @@ concepts['DCM'] = \
  'LotIdentifier': {'121149': ('Lot Identifier', [3426])},
  'Low': {'111577': ('Low', [6090])},
  'LowThyroidUptake': {'113561': ('Low Thyroid Uptake', [10045, 64])},
- 'Lsdi': {'113225': ('LSDI', [7260])},
  'Lucency': {'112084': ('Lucency', [6102, 6109, 7151, 7196])},
  'LumenDiameterRatio': {'122350': ('Lumen Diameter Ratio', [3484])},
  'LumenEccentricityIndex': {'122343': ('Lumen Eccentricity Index', [3484])},
@@ -17946,6 +17950,36 @@ concepts['DCM'] = \
                                               [8300])},
  'LympathicVesselInvasion': {'111320': ('Lympathic vessel invasion',
                                         [6030, 6033])},
+ 'MEDI55189Zr': {'126730': ('MEDI-551 ^89^Zr', [4021])},
+ 'MIRDOSE': {'113526': ('MIRDOSE', [10040])},
+ 'MIRDPamphlet1': {'113520': ('MIRD Pamphlet 1', [10040])},
+ 'MLOEvidenceOfMotionBlur': {'111200': ('MLO Evidence of motion blur', [6041])},
+ 'MLOInframammaryFoldIsNotOpen': {'111201': ('MLO Inframammary fold is not '
+                                             'open',
+                                             [6041])},
+ 'MLOInsufficientPectoralMuscle': {'111197': ('MLO Insufficient pectoral '
+                                              'muscle',
+                                              [6041])},
+ 'MLONoFatIsVisualizedPosteriorToFibroglandularTissues': {'111198': ('MLO No '
+                                                                     'fat is '
+                                                                     'visualized '
+                                                                     'posterior '
+                                                                     'to '
+                                                                     'fibroglandular '
+                                                                     'tissues',
+                                                                     [6041])},
+ 'MLOPoorSeparationOfDeepAndSuperficialBreastTissues': {'111199': ('MLO Poor '
+                                                                   'separation '
+                                                                   'of deep '
+                                                                   'and '
+                                                                   'superficial '
+                                                                   'breast '
+                                                                   'tissues',
+                                                                   [6041])},
+ 'MODImported': {'110026': ('MOD Imported', [7008])},
+ 'MPPSContent': {'113858': ('MPPS Content', [10020])},
+ 'MRMarker': {'129308': ('MR Marker', [7111, 7112])},
+ 'MRSignalIntensity': {'110852': ('MR signal intensity', [218, 7180, 7469])},
  'MachineQualityAssuranceInputUsed': {'128216': ('Machine Quality Assurance '
                                                  'Input Used',
                                                  [7010, 7025])},
@@ -17966,12 +18000,11 @@ concepts['DCM'] = \
                                       [6058, 6060])},
  'MammographicGrid': {'111488': ('Mammographic (grid)', [6058, 6060])},
  'Mammography': {'MG': ('Mammography', [29, 30])},
- 'MammographyCad': {'111411': ('Mammography CAD', [6050, 6083])},
- 'MammographyQualityControlManual1999Acr': {'111238': ('Mammography Quality '
+ 'MammographyCAD': {'111411': ('Mammography CAD', [6050, 6083])},
+ 'MammographyQualityControlManual1999ACR': {'111238': ('Mammography Quality '
                                                        'Control Manual 1999, '
                                                        'ACR',
                                                        [6045])},
- 'Manganese_51': {'126601': ('^51^Manganese', [4020])},
  'Manifest': {'113030': ('Manifest', [7010])},
  'ManualAdministration': {'130174': ('Manual Administration', [63])},
  'ManualEntry': {'113857': ('Manual Entry', [10020, 10021, 12303, 4240])},
@@ -18043,7 +18076,6 @@ concepts['DCM'] = \
  'MeasurementNotAttempted': {'114007': ('Measurement not attempted', [42])},
  'MechanicalBeamSteering': {'125258': ('Mechanical beam steering', [12034])},
  'MechanicalFailure': {'111216': ('Mechanical failure', [6041, 6135, 7011])},
- 'Medi55189Zr': {'126730': ('MEDI-551 ^89^Zr', [4021])},
  'MediaCreationDevice': {'MCD': ('Media Creation Device', [30])},
  'MediaFailure': {'110524': ('Media Failure', [9300, 9302])},
  'MediaImport': {'110013': ('Media Import', [9231])},
@@ -18057,7 +18089,7 @@ concepts['DCM'] = \
                                               [10062])},
  'MedicalPhysics': {'128174': ('Medical Physics', [7030])},
  'Medium': {'111576': ('Medium', [6090])},
- 'Medium320380CmLateralThickness': {'113602': ('Medium: 32.0-38.0 cm lateral '
+ 'Medium320380cmLateralThickness': {'113602': ('Medium: 32.0-38.0 cm lateral '
                                                'thickness',
                                                [7041, 7042])},
  'MeshRadiationTransportModel': {'128423': ('Mesh Radiation Transport Model',
@@ -18148,34 +18180,8 @@ concepts['DCM'] = \
  'MinimumRadiationDose': {'130003': ('Minimum Radiation Dose', [9500, 9529])},
  'MinimumSurfaceRadiationDose': {'130001': ('Minimum Surface Radiation Dose',
                                             [9500, 9529])},
- 'MirdPamphlet1': {'113520': ('MIRD Pamphlet 1', [10040])},
- 'Mirdose': {'113526': ('MIRDOSE', [10040])},
- 'MixedModality3dCamModel': {'129019': ('Mixed Modality 3D CAM model', [7061])},
+ 'MixedModality3DCAMModel': {'129019': ('Mixed Modality 3D CAM model', [7061])},
  'MixedSex': {'127146': ('Mixed sex', [7457])},
- 'MloEvidenceOfMotionBlur': {'111200': ('MLO Evidence of motion blur', [6041])},
- 'MloInframammaryFoldIsNotOpen': {'111201': ('MLO Inframammary fold is not '
-                                             'open',
-                                             [6041])},
- 'MloInsufficientPectoralMuscle': {'111197': ('MLO Insufficient pectoral '
-                                              'muscle',
-                                              [6041])},
- 'MloNoFatIsVisualizedPosteriorToFibroglandularTissues': {'111198': ('MLO No '
-                                                                     'fat is '
-                                                                     'visualized '
-                                                                     'posterior '
-                                                                     'to '
-                                                                     'fibroglandular '
-                                                                     'tissues',
-                                                                     [6041])},
- 'MloPoorSeparationOfDeepAndSuperficialBreastTissues': {'111199': ('MLO Poor '
-                                                                   'separation '
-                                                                   'of deep '
-                                                                   'and '
-                                                                   'superficial '
-                                                                   'breast '
-                                                                   'tissues',
-                                                                   [6041])},
- 'ModImported': {'110026': ('MOD Imported', [7008])},
  'ModeAbsorbedRadiationDose': {'128534': ('Mode Absorbed Radiation Dose',
                                           [10061])},
  'ModeEquivalentRadiationDose': {'128538': ('Mode Equivalent Radiation Dose',
@@ -18207,8 +18213,6 @@ concepts['DCM'] = \
  'MonoclonalAntibodyMab89Zr': {'126511': ('Monoclonal Antibody (mAb) ^89^Zr',
                                           [4021])},
  'MonopoleSignal': {'109008': ('Monopole signal', [3240])},
- 'MonthsAgo_3': {'111396': ('< 3 months ago', [6164])},
- 'MonthsTo1YearAgo_4': {'111397': ('4 months to 1 year ago', [6164])},
  'MorphologicalOperations': {'123104': ('Morphological Operations', [7162])},
  'MosaicPattern': {'112130': ('Mosaic pattern', [6102, 6106])},
  'MosaicPerfusion': {'112080': ('Mosaic perfusion', [6108])},
@@ -18223,9 +18227,6 @@ concepts['DCM'] = \
  'MoveableLaserPatientSetupPoint': {'130071': ('Moveable Laser Patient Setup '
                                                'Point',
                                                [9504])},
- 'MppsContent': {'113858': ('MPPS Content', [10020])},
- 'MrMarker': {'129308': ('MR Marker', [7111, 7112])},
- 'MrSignalIntensity': {'110852': ('MR signal intensity', [218, 7180, 7469])},
  'MultiEnergyProportionalWeighting': {'113097': ('Multi-energy proportional '
                                                  'weighting',
                                                  [7203])},
@@ -18240,10 +18241,10 @@ concepts['DCM'] = \
  'MultifocalInvasiveDuctalCarcinoma': {'111332': ('Multifocal invasive ductal '
                                                   'carcinoma',
                                                   [6030, 6033])},
- 'MultiparametricMri': {'126020': ('Multiparametric MRI', [100])},
- 'MultiparametricMriOfProstate': {'126021': ('Multiparametric MRI of prostate',
+ 'MultiparametricMRI': {'126020': ('Multiparametric MRI', [100])},
+ 'MultiparametricMRIOfProstate': {'126021': ('Multiparametric MRI of prostate',
                                              [100])},
- 'MultiparametricMriOfWholeBody': {'126022': ('Multiparametric MRI of whole '
+ 'MultiparametricMRIOfWholeBody': {'126022': ('Multiparametric MRI of whole '
                                               'body',
                                               [100])},
  'MultiplanarReformatting': {'113072': ('Multiplanar reformatting', [7203])},
@@ -18251,13 +18252,13 @@ concepts['DCM'] = \
  'MultipleFixedSources': {'130138': ('Multiple Fixed Sources', [9522, 9524])},
  'MultipleIntraductalPapillomas': {'111285': ('Multiple Intraductal Papillomas',
                                               [6030, 6031])},
- 'MultipleLadRegionInRaoProjection': {'122468': ('Multiple LAD Region in RAO '
+ 'MultipleLADRegionInRAOProjection': {'122468': ('Multiple LAD Region in RAO '
                                                  'Projection',
                                                  [3461])},
- 'MultipleRcaRegionInRaoProjection': {'122469': ('Multiple RCA Region in RAO '
+ 'MultipleRCARegionInRAOProjection': {'122469': ('Multiple RCA Region in RAO '
                                                  'Projection',
                                                  [3461])},
- 'MultipleShotEpi': {'113227': ('Multiple Shot EPI', [7260])},
+ 'MultipleShotEPI': {'113227': ('Multiple Shot EPI', [7260])},
  'MultipleSlices': {'122562': ('Multiple Slices', [3453])},
  'MultispectralProcessing': {'123108': ('Multispectral Processing', [7162])},
  'MusculoskeletalImagingSpecialty': {'128009': ('Musculoskeletal Imaging '
@@ -18268,9 +18269,10 @@ concepts['DCM'] = \
                                                     [7017])},
  'MusculoskeletalRadiology': {'128175': ('Musculoskeletal Radiology', [7030])},
  'MyocardialBiopsy': {'122057': ('Myocardial biopsy', [3405, 3406])},
- 'MÜLlerMethodPlanningForHipReplacement': {'112344': ('Müller Method Planning '
+ 'MüllerMethodPlanningForHipReplacement': {'112344': ('Müller Method Planning '
                                                       'for Hip Replacement',
                                                       [7320])},
+ 'NASCET': {'122655': ('NASCET', [3804])},
  'NAcetylaspartateCholineRatio': {'113083': ('N-acetylaspartate/Choline Ratio',
                                              [218,
                                               4032,
@@ -18286,10 +18288,20 @@ concepts['DCM'] = \
                                                7180,
                                                7186,
                                                7469])},
+ 'NEMAXR212000Phantom': {'113692': ('NEMA XR21-2000 Phantom', [4051, 4052])},
+ 'NIH07': {'127271': ('NIH07', [607])},
+ 'NIH31': {'127270': ('NIH31', [607])},
+ 'NMMyocardialViabilityProcedure': {'122785': ('NM Myocardial Viability '
+                                               'procedure',
+                                               [3110])},
+ 'NMTransmissionAttenuationCorrection': {'122727': ('NM Transmission '
+                                                    'Attenuation Correction',
+                                                    [3112])},
+ 'NURBSRadiationTransportModel': {'128424': ('NURBS Radiation Transport Model',
+                                             [10065])},
  'NanocolloidalAlbumin89Zr': {'126753': ('Nanocolloidal albumin ^89^Zr',
                                          [4021])},
  'NasalCannula': {'127061': ('Nasal cannula', [617, 618])},
- 'Nascet': {'122655': ('NASCET', [3804])},
  'NationalKennelClub': {'109215': ('National Kennel Club', [7481])},
  'NativePlaqueVolume': {'122375': ('Native Plaque Volume', [3485])},
  'Nearline': {'NEARLINE': ('Nearline', [50])},
@@ -18305,7 +18317,6 @@ concepts['DCM'] = \
  'NegativeExponential': {'130252': ('Negative exponential', [73])},
  'NegativeInfinity': {'114001': ('Negative Infinity', [42])},
  'NeighborhoodAnalysis': {'123101': ('Neighborhood Analysis', [7162])},
- 'NemaXr212000Phantom': {'113692': ('NEMA XR21-2000 Phantom', [4051, 4052])},
  'NetworkConfiguration': {'110128': ('Network Configuration', [401, 403])},
  'NetworkEntry': {'110108': ('Network Entry', [400])},
  'NeuroimagingSubjectMatter': {'128733': ('Neuroimaging subject matter',
@@ -18318,20 +18329,11 @@ concepts['DCM'] = \
                                                'position',
                                                [92])},
  'NifeneF18': {'126714': ('Nifene F^18^', [4021])},
- 'Nih07': {'127271': ('NIH07', [607])},
- 'Nih31': {'127270': ('NIH31', [607])},
- 'NilPerOsNpoStatusConfirmed': {'122006': ('Nil Per Os (NPO) status confirmed',
+ 'NilPerOsNPOStatusConfirmed': {'122006': ('Nil Per Os (NPO) status confirmed',
                                            [3402])},
- 'Niobium_90': {'126603': ('^90^Niobium', [4020])},
  'NippleDischargeCytology': {'111564': ('Nipple discharge cytology', [6083])},
  'NippleNotInProfile': {'111205': ('Nipple not in profile', [6041])},
  'NippleRing': {'112177': ('Nipple ring', [6102, 6138, 6404, 7151, 7193])},
- 'NmMyocardialViabilityProcedure': {'122785': ('NM Myocardial Viability '
-                                               'procedure',
-                                               [3110])},
- 'NmTransmissionAttenuationCorrection': {'122727': ('NM Transmission '
-                                                    'Attenuation Correction',
-                                                    [3112])},
  'NoAbnormality': {'111286': ('No abnormality', [6030, 6031])},
  'NoAlgorithmsSucceededWithoutFindings': {'111245': ('No algorithms succeeded; '
                                                      'without findings',
@@ -18355,20 +18357,20 @@ concepts['DCM'] = \
  'NoRealignment': {'122477': ('No Realignment', [3458])},
  'NoSubsequentWorkitems': {'110009': ('No subsequent Workitems', [9231])},
  'NodeAuthentication': {'110126': ('Node Authentication', [401, 403])},
- 'NodeId': {'110182': ('Node ID', [404])},
+ 'NodeID': {'110182': ('Node ID', [404])},
  'NodularPattern': {'112067': ('Nodular pattern', [6102, 6104, 6106])},
  'NominalEmptyTileSuppression': {'112719': ('Nominal empty tile suppression',
                                             [8133])},
  'NonBloodyDischargeFromNipple': {'111478': ('Non-bloody discharge (from '
                                              'nipple)',
                                              [6055])},
- 'NonDiagnosticEcg': {'122753': ('Non-diagnostic ECG', [3677])},
+ 'NonDiagnosticECG': {'122753': ('Non-diagnostic ECG', [3677])},
  'NonDiagnosticLowHeartRate': {'122750': ('Non-diagnostic - low heart rate',
                                           [3231])},
- 'NonDiagnosticRestingStAbnormalities': {'122751': ('Non-diagnostic - resting '
+ 'NonDiagnosticRestingSTAbnormalities': {'122751': ('Non-diagnostic - resting '
                                                     'ST abnormalities',
                                                     [3231])},
- 'NonDiagnosticVentricularPacingOrLbbb': {'122752': ('Non-diagnostic - '
+ 'NonDiagnosticVentricularPacingOrLBBB': {'122752': ('Non-diagnostic - '
                                                      'ventricular pacing or '
                                                      'LBBB',
                                                      [3231])},
@@ -18448,11 +18450,24 @@ concepts['DCM'] = \
  'NuclearMedicineTomographicActivity': {'110821': ('Nuclear Medicine '
                                                    'Tomographic Activity',
                                                    [218, 7180, 7469])},
- 'NurbsRadiationTransportModel': {'128424': ('NURBS Radiation Transport Model',
-                                             [10065])},
  'NursingNote': {'121172': ('Nursing Note', [3401])},
  'NursingUnitCancel': {'110511': ('Nursing unit cancel', [9300, 9301])},
- 'ObGynImagingSpecialty': {'128012': ('OB/Gyn Imaging Specialty', [7449])},
+ 'OBGynImagingSpecialty': {'128012': ('OB/Gyn Imaging Specialty', [7449])},
+ 'OCTAAmplitudeDecorrelation': {'128252': ('OCT-A amplitude decorrelation',
+                                           [4270])},
+ 'OCTAComplexVariance': {'128253': ('OCT-A complex variance', [4270])},
+ 'OCTACorrelationMapping': {'128255': ('OCT-A correlation mapping', [4270])},
+ 'OCTAOneSidedRatioGreater': {'128305': ('OCT-A one-sided ratio (greater)',
+                                         [4270])},
+ 'OCTAOneSidedRatioLesser': {'128304': ('OCT-A one-sided ratio (lesser)',
+                                        [4270])},
+ 'OCTASpeckleVariance': {'128254': ('OCT-A speckle variance', [4270])},
+ 'OCTBScanAnalysis': {'128303': ('OCT B-scan analysis', [7203])},
+ 'OIQPattern': {'109901': ('OIQ Pattern', [8301])},
+ 'OLED': {'109994': ('OLED', [8303])},
+ 'OLINDAEXM': {'113527': ('OLINDA-EXM', [10040])},
+ 'OSEMAlgorithm': {'122720': ('OSEM algorithm', [3117])},
+ 'OSLD': {'128706': ('OSLD', [7026, 7027, 7151, 7193])},
  'Obinituzimab89Zr': {'126721': ('Obinituzimab ^89^Zr', [4021])},
  'ObjectRemoved': {'122307': ('Object removed', [3412])},
  'ObjectSecurityAttributesChanged': {'110135': ('Object Security Attributes '
@@ -18477,32 +18492,15 @@ concepts['DCM'] = \
                                                                          'metastases',
                                                                          [6030,
                                                                           6033])},
- 'OctAAmplitudeDecorrelation': {'128252': ('OCT-A amplitude decorrelation',
-                                           [4270])},
- 'OctAComplexVariance': {'128253': ('OCT-A complex variance', [4270])},
- 'OctACorrelationMapping': {'128255': ('OCT-A correlation mapping', [4270])},
- 'OctAOneSidedRatioGreater': {'128305': ('OCT-A one-sided ratio (greater)',
-                                         [4270])},
- 'OctAOneSidedRatioLesser': {'128304': ('OCT-A one-sided ratio (lesser)',
-                                        [4270])},
- 'OctASpeckleVariance': {'128254': ('OCT-A speckle variance', [4270])},
- 'OctBScanAnalysis': {'128303': ('OCT B-scan analysis', [7203])},
  'OfInterest': {'113000': ('Of Interest', [7010])},
- 'OfThermalDyeDilutionCo_35': {'109014': ('35% of thermal/dye dilution CO',
-                                          [3337])},
- 'OfThermalDyeDilutionCo_70': {'109015': ('70% of thermal/dye dilution CO',
-                                          [3337])},
  'OfficeCalled': {'122045': ('Office called', [3404])},
  'Offline': {'OFFLINE': ('Offline', [50])},
  'OffsetFactor': {'128523': ('Offset Factor', [10069])},
  'OilCystFatNecrosisCyst': {'111290': ('Oil cyst (fat necrosis cyst)',
                                        [6030, 6031])},
- 'OiqPattern': {'109901': ('OIQ Pattern', [8301])},
  'OldFilmsForComparison': {'111138': ('Old films for comparison',
                                       [6028, 6029])},
- 'Oled': {'109994': ('OLED', [8303])},
  'Oligemia': {'112060': ('Oligemia', [6108])},
- 'OlindaExm': {'113527': ('OLINDA-EXM', [10040])},
  'Olsen': {'111765': ('Olsen', [4236])},
  'OnAdmissionToUnit': {'109120': ('On admission to unit', [31])},
  'OnDischarge': {'109121': ('On discharge', [31])},
@@ -18517,7 +18515,7 @@ concepts['DCM'] = \
  'OnsetOfStimulation': {'125238': ('Onset of stimulation', [12031])},
  'Opacity': {'112001': ('Opacity', [6102, 6104])},
  'OperatorError': {'110519': ('Operator Error', [4221, 4222])},
- 'OperatorSNarrative': {'109111': ("Operator's narrative", [3000])},
+ 'OperatorNarrative': {'109111': ("Operator's narrative", [3000])},
  'OphthalmicAxialMeasurements': {'OAM': ('Ophthalmic Axial Measurements',
                                          [29, 30])},
  'OphthalmicMapping': {'OPM': ('Ophthalmic Mapping', [29, 30])},
@@ -18548,8 +18546,6 @@ concepts['DCM'] = \
  'OrthogonalLocationArcOuterMargin': {'113671': ('Orthogonal location arc '
                                                  'outer margin',
                                                  [6166])},
- 'OsemAlgorithm': {'122720': ('OSEM algorithm', [3117])},
- 'Osld': {'128706': ('OSLD', [7026, 7027, 7151, 7193])},
  'Osseous': {'112053': ('Osseous', [6100])},
  'OtherFailure': {'111220': ('Other failure', [6041, 6135, 7011])},
  'OtherImageOfBiplanePair': {'121314': ('Other image of biplane pair', [7201])},
@@ -18566,21 +18562,21 @@ concepts['DCM'] = \
                                                     [4271])},
  'OuterRetinaVasculatureFlow': {'128271': ('Outer retina vasculature flow',
                                            [4271])},
- 'OuterSurfaceOfGcl': {'128290': ('Outer surface of GCL',
+ 'OuterSurfaceOfGCL': {'128290': ('Outer surface of GCL',
                                   [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfHfl': {'128294': ('Outer surface of HFL',
+ 'OuterSurfaceOfHFL': {'128294': ('Outer surface of HFL',
                                   [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfInl': {'128292': ('Outer surface of INL',
+ 'OuterSurfaceOfINL': {'128292': ('Outer surface of INL',
                                   [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfIpl': {'128291': ('Outer surface of IPL',
+ 'OuterSurfaceOfIPL': {'128291': ('Outer surface of IPL',
                                   [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfOpl': {'128293': ('Outer surface of OPL',
+ 'OuterSurfaceOfOPL': {'128293': ('Outer surface of OPL',
                                   [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfRnfl': {'128289': ('Outer surface of RNFL',
+ 'OuterSurfaceOfRNFL': {'128289': ('Outer surface of RNFL',
                                    [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfTheBm': {'128300': ('Outer surface of the BM',
+ 'OuterSurfaceOfTheBM': {'128300': ('Outer surface of the BM',
                                     [4273, 7151, 7192, 9514])},
- 'OuterSurfaceOfTheCc': {'128302': ('Outer surface of the CC',
+ 'OuterSurfaceOfTheCC': {'128302': ('Outer surface of the CC',
                                     [4273, 7151, 7192, 9514])},
  'OutlineOfLobulations': {'113661': ('Outline of lobulations', [6166])},
  'OutlineOfSpiculations': {'113664': ('Outline of spiculations', [6166])},
@@ -18603,11 +18599,35 @@ concepts['DCM'] = \
                                                  [3531])},
  'OxygenExtractionFraction': {'126392': ('Oxygen Extraction Fraction',
                                          [218, 4108, 7180, 7469])},
- 'OxygenNucleus_16': {'130144': ('^16^Oxygen nucleus', [9526])},
  'P05': {'111939': ('p<0.5%', [4265])},
  'P1': {'111938': ('p<1%', [4265])},
  'P2': {'111937': ('p<2%', [4265])},
  'P5': {'111935': ('p>5%', [4265]), '111936': ('p<5%', [4265])},
+ 'PAS': {'113237': ('PAS', [7261])},
+ 'PETMeasurementReport': {'126003': ('PET Measurement Report', [7021])},
+ 'PETMyocardialPerfusionRestAndStress': {'122793': ('PET Myocardial Perfusion, '
+                                                    'Rest and Stress',
+                                                    [3106])},
+ 'PETMyocardialPerfusionRestOnly': {'122791': ('PET Myocardial Perfusion, Rest '
+                                               'only',
+                                               [3106])},
+ 'PETMyocardialPerfusionStressOnly': {'122792': ('PET Myocardial Perfusion, '
+                                                 'Stress only',
+                                                 [3106])},
+ 'PETMyocardialViabilityRestAndStress': {'122797': ('PET Myocardial Viability, '
+                                                    'Rest and Stress',
+                                                    [3106])},
+ 'PETMyocardialViabilityRestOnly': {'122795': ('PET Myocardial Viability, Rest '
+                                               'only',
+                                               [3106])},
+ 'PETMyocardialViabilityStressOnly': {'122796': ('PET Myocardial Viability, '
+                                                 'Stress only',
+                                                 [3106])},
+ 'PISARadius': {'125331': ('PISA Radius', [12304])},
+ 'PSMA1007F18': {'126758': ('PSMA-1007 F^18^', [4021])},
+ 'PSMA617Ga68': {'126759': ('PSMA-617 Ga^68^', [4021])},
+ 'PTVNodal': {'130053': ('PTV Nodal', [9534])},
+ 'PTVPrimary': {'130054': ('PTV Primary', [9534])},
  'PWave': {'109041': ('P wave', [3339])},
  'Paced': {'109083': ('Paced', [3104])},
  'PacingElectricalStimulusVoltage': {'109009': ('Pacing (electrical) stimulus, '
@@ -18637,10 +18657,10 @@ concepts['DCM'] = \
                                                 [7006])},
  'PartialReport': {'121363': ('Partial report', [7009])},
  'PartiallySucceeded': {'111223': ('Partially Succeeded', [6042])},
- 'Pas': {'113237': ('PAS', [7261])},
  'PatencyTestInjection': {'130247': ('Patency Test Injection', [72])},
  'PathLength': {'121211': ('Path length', [218, 6165, 7469, 7470])},
  'Patient': {'121025': ('Patient', [271, 7450])},
+ 'PatientAPDimension': {'128408': ('Patient AP Dimension', [10069])},
  'PatientAdmittedToProcedureRoom': {'122002': ('Patient admitted to procedure '
                                                'room',
                                                [3402])},
@@ -18651,7 +18671,6 @@ concepts['DCM'] = \
                                                'media/contrast',
                                                [64, 9300, 9301])},
  'PatientAnatomyModel': {'130067': ('Patient Anatomy Model', [9507])},
- 'PatientApDimension': {'128408': ('Patient AP Dimension', [10069])},
  'PatientAsleep': {'122028': ('Patient asleep', [3402])},
  'PatientAssistedToTable': {'122007': ('Patient assisted to table', [3402])},
  'PatientCalledToProcedureRoom': {'122001': ('Patient called to procedure room',
@@ -18718,7 +18737,7 @@ concepts['DCM'] = \
  'PatientTakenForTreatmentOrSurgery': {'110506': ('Patient taken for treatment '
                                                   'or surgery',
                                                   [9300, 9301])},
- 'PatientTransferredToCcu': {'122012': ('Patient transferred to CCU', [3402])},
+ 'PatientTransferredToCCU': {'122012': ('Patient transferred to CCU', [3402])},
  'PatientTransferredToHoldingArea': {'122010': ('Patient transferred to '
                                                 'holding area',
                                                 [3402])},
@@ -18736,7 +18755,7 @@ concepts['DCM'] = \
                                                 'output bolus',
                                                 [3337])},
  'PeakTissueVelocity': {'125330': ('Peak Tissue Velocity', [12304])},
- 'PeakValueWithinRoi': {'126031': ('Peak Value Within ROI', [7464])},
+ 'PeakValueWithinROI': {'126031': ('Peak Value Within ROI', [7464])},
  'PediatricCardiacUltrasoundReport': {'125195': ('Pediatric Cardiac Ultrasound '
                                                  'Report',
                                                  [12245])},
@@ -18760,7 +18779,7 @@ concepts['DCM'] = \
                                                  [3739])},
  'PercutaneousSiliconeInjection': {'111483': ('Percutaneous silicone injection',
                                               [6058, 6059])},
- 'PerformanceOfCtForDetectionOfPulmonaryEmbolismInAdults': {'112185': ('Performance '
+ 'PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults': {'112185': ('Performance '
                                                                        'of CT '
                                                                        'for '
                                                                        'Detection '
@@ -18770,14 +18789,14 @@ concepts['DCM'] = \
                                                                        'in '
                                                                        'Adults',
                                                                        [6136])},
- 'PerformanceOfHighResolutionCtOfTheLungsInAdults': {'112186': ('Performance '
+ 'PerformanceOfHighResolutionCTOfTheLungsInAdults': {'112186': ('Performance '
                                                                 'of '
                                                                 'High-Resolution '
                                                                 'CT of the '
                                                                 'Lungs in '
                                                                 'Adults',
                                                                 [6136])},
- 'PerformanceOfPediatricAndAdultChestRadiographyAcr': {'112035': ('Performance '
+ 'PerformanceOfPediatricAndAdultChestRadiographyACR': {'112035': ('Performance '
                                                                   'of '
                                                                   'Pediatric '
                                                                   'and Adult '
@@ -18785,18 +18804,18 @@ concepts['DCM'] = \
                                                                   'Radiography, '
                                                                   'ACR',
                                                                   [6136])},
- 'PerformanceOfPediatricAndAdultThoracicCt': {'112184': ('Performance of '
+ 'PerformanceOfPediatricAndAdultThoracicCT': {'112184': ('Performance of '
                                                          'Pediatric and Adult '
                                                          'Thoracic CT',
                                                          [6136])},
  'PerformedProcedureStep': {'113016': ('Performed Procedure Step',
                                        [10000, 7012])},
- 'PerformedProcedureStepSopInstanceUid': {'121126': ('Performed Procedure Step '
+ 'PerformedProcedureStepSOPInstanceUID': {'121126': ('Performed Procedure Step '
                                                      'SOP Instance UID',
                                                      [10001])},
  'Performing': {'121094': ('Performing', [7453])},
  'Perfusion': {'110831': ('Perfusion', [218, 7180, 7469])},
- 'PerfusionAnalysisByArterialSpinLabelingMrTechnique': {'126302': ('Perfusion '
+ 'PerfusionAnalysisByArterialSpinLabelingMRTechnique': {'126302': ('Perfusion '
                                                                    'analysis '
                                                                    'by '
                                                                    'Arterial '
@@ -18806,7 +18825,7 @@ concepts['DCM'] = \
                                                                    'technique',
                                                                    [4102,
                                                                     4106])},
- 'PerfusionAnalysisByIvIodinatedContrastCtTechnique': {'126301': ('Perfusion '
+ 'PerfusionAnalysisByIVIodinatedContrastCTTechnique': {'126301': ('Perfusion '
                                                                   'analysis by '
                                                                   'IV '
                                                                   'Iodinated '
@@ -18814,11 +18833,11 @@ concepts['DCM'] = \
                                                                   'technique',
                                                                   [4102,
                                                                    4106])},
- 'PerfusionAnalysisByStableXenonCtTechnique': {'126300': ('Perfusion analysis '
+ 'PerfusionAnalysisByStableXenonCTTechnique': {'126300': ('Perfusion analysis '
                                                           'by Stable Xenon CT '
                                                           'technique',
                                                           [4102, 4106])},
- 'PerfusionAnalysisBySusceptibilityMrTechnique': {'126303': ('Perfusion '
+ 'PerfusionAnalysisBySusceptibilityMRTechnique': {'126303': ('Perfusion '
                                                              'analysis by '
                                                              'Susceptibility '
                                                              'MR technique',
@@ -18859,25 +18878,6 @@ concepts['DCM'] = \
                                                             [6051])},
  'PersonnelArrived': {'122041': ('Personnel Arrived', [3404])},
  'PersonnelDeparted': {'122042': ('Personnel Departed', [3404])},
- 'PetMeasurementReport': {'126003': ('PET Measurement Report', [7021])},
- 'PetMyocardialPerfusionRestAndStress': {'122793': ('PET Myocardial Perfusion, '
-                                                    'Rest and Stress',
-                                                    [3106])},
- 'PetMyocardialPerfusionRestOnly': {'122791': ('PET Myocardial Perfusion, Rest '
-                                               'only',
-                                               [3106])},
- 'PetMyocardialPerfusionStressOnly': {'122792': ('PET Myocardial Perfusion, '
-                                                 'Stress only',
-                                                 [3106])},
- 'PetMyocardialViabilityRestAndStress': {'122797': ('PET Myocardial Viability, '
-                                                    'Rest and Stress',
-                                                    [3106])},
- 'PetMyocardialViabilityRestOnly': {'122795': ('PET Myocardial Viability, Rest '
-                                               'only',
-                                               [3106])},
- 'PetMyocardialViabilityStressOnly': {'122796': ('PET Myocardial Viability, '
-                                                 'Stress only',
-                                                 [3106])},
  'Phantom': {'113681': ('Phantom',
                         [10060,
                          4,
@@ -18897,7 +18897,7 @@ concepts['DCM'] = \
                                           [8123])},
  'PhasedBeamSteering': {'125259': ('Phased beam steering', [12034])},
  'Phonocardiogram': {'109114': ('Phonocardiogram', [3000])},
- 'PhotogrammetricImaging3dCamModel': {'129020': ('Photogrammetric Imaging 3D '
+ 'PhotogrammetricImaging3DCAMModel': {'129020': ('Photogrammetric Imaging 3D '
                                                  'CAM model',
                                                  [7061])},
  'PhotonEnergy': {'110857': ('Photon Energy', [7182])},
@@ -18914,7 +18914,6 @@ concepts['DCM'] = \
  'PineChipBedding': {'127234': ('Pine chip bedding', [605])},
  'PineShavingBedding': {'127235': ('Pine shaving bedding', [605])},
  'Pinning': {'112318': ('Pinning', [7310])},
- 'PisaRadius': {'125331': ('PISA Radius', [12304])},
  'PittsburghCompoundBC11': {'126500': ('Pittsburgh compound B C^11^', [4021])},
  'PixelByPixelAddition': {'113042': ('Pixel by pixel addition', [7203])},
  'PixelByPixelDivision': {'113046': ('Pixel by pixel division', [7203])},
@@ -18971,16 +18970,6 @@ concepts['DCM'] = \
  'PlasmaDisplay': {'109993': ('Plasma Display', [8303])},
  'Pleonemia': {'112081': ('Pleonemia', [6108])},
  'PointCloudAlgorithmic': {'114208': ('Point Cloud Algorithmic', [8201])},
- 'PointSegmentFindingScaleWithGradedHypokinesis_5': {'125225': ('5 Point '
-                                                                'Segment '
-                                                                'Finding Scale '
-                                                                'With Graded '
-                                                                'Hypokinesis',
-                                                                [12238])},
- 'PointSegmentFindingScale_4': {'125223': ('4 Point Segment Finding Scale',
-                                           [12238])},
- 'PointSegmentFindingScale_5': {'125224': ('5 Point Segment Finding Scale',
-                                           [12238])},
  'PolarToRectangularScanConversion': {'113093': ('Polar to Rectangular Scan '
                                                  'Conversion',
                                                  [7203])},
@@ -18989,7 +18978,7 @@ concepts['DCM'] = \
  'PolyurethaneImplant': {'111482': ('Polyurethane implant', [6058, 6059])},
  'PoorImageQuality': {'122742': ('Poor image quality', [3114])},
  'PoorlyDemarcated': {'112141': ('Poorly demarcated', [6120])},
- 'PopulationAveragedAif': {'126361': ('Population Averaged AIF', [4103, 4106])},
+ 'PopulationAveragedAIF': {'126361': ('Population Averaged AIF', [4103, 4106])},
  'PortableMediaImporterEquipment': {'MEDIM': ('Portable Media Importer '
                                               'Equipment',
                                               [7005])},
@@ -19017,7 +19006,7 @@ concepts['DCM'] = \
                                       [6102, 6109, 6112, 7151, 7192, 9514])},
  'PosteriorLens': {'111779': ('Posterior Lens', [4233])},
  'PosteriorShadowing': {'111369': ('Posterior shadowing', [6155])},
- 'PosteriorSurfaceOfTheRpe': {'128299': ('Posterior surface of the RPE',
+ 'PosteriorSurfaceOfTheRPE': {'128299': ('Posterior surface of the RPE',
                                          [4273, 7151, 7192, 9514])},
  'PosteriorToAnterior': {'110871': ('Posterior To Anterior', [7185])},
  'PosteriorTrachealStripe': {'112092': ('Posterior tracheal stripe',
@@ -19065,9 +19054,9 @@ concepts['DCM'] = \
                                                   'malformation/syndrome',
                                                   [6087, 6088])},
  'PreviousFinding': {'121069': ('Previous Finding', [7002])},
- 'PreviousLbwOrIugrBirth': {'111569': ('Previous LBW or IUGR birth',
+ 'PreviousLBWOrIUGRBirth': {'111569': ('Previous LBW or IUGR birth',
                                        [6087, 6088])},
- 'PreviousRhNegativeOrBloodDyscrasiaAtBirth': {'111571': ('Previous RH '
+ 'PreviousRHNegativeOrBloodDyscrasiaAtBirth': {'111571': ('Previous RH '
                                                           'negative or blood '
                                                           'dyscrasia at birth',
                                                           [6087, 6088])},
@@ -19094,7 +19083,7 @@ concepts['DCM'] = \
  'ProstheticShaftAugment': {'112316': ('Prosthetic Shaft Augment',
                                        [7307, 7308])},
  'ProtonDensity': {'113058': ('Proton Density', [218, 7180, 7469])},
- 'ProtonDensityWeightedMrSignalIntensity': {'110803': ('Proton Density '
+ 'ProtonDensityWeightedMRSignalIntensity': {'110803': ('Proton Density '
                                                        'Weighted MR Signal '
                                                        'Intensity',
                                                        [218, 7180, 7469])},
@@ -19107,10 +19096,6 @@ concepts['DCM'] = \
                                                     'hyperplasia',
                                                     [6030, 6031])},
  'Pseudoplaque': {'112068': ('Pseudoplaque', [6102, 6104])},
- 'Psma1007F18': {'126758': ('PSMA-1007 F^18^', [4021])},
- 'Psma617Ga68': {'126759': ('PSMA-617 Ga^68^', [4021])},
- 'PtvNodal': {'130053': ('PTV Nodal', [9534])},
- 'PtvPrimary': {'130054': ('PTV Primary', [9534])},
  'PulmonaryArterialContentFcpa': {'122188': ('Pulmonary Arterial Content '
                                              '(FCpa)',
                                              [3529])},
@@ -19132,7 +19117,21 @@ concepts['DCM'] = \
  'R2': {'126394': ('R2', [218, 7180, 7469]),
         '126395': ('R2*', [218, 7180, 7469])},
  'R2Coefficient': {'126220': ('R2-Coefficient', [218, 7180, 7469])},
+ 'RCARegionInLAOProjection': {'122471': ('RCA Region in LAO Projection',
+                                         [3461])},
+ 'RCARegionInRAOProjection': {'122465': ('RCA Region in RAO Projection',
+                                         [3460])},
  'RCoefficient': {'113057': ('R-Coefficient', [218, 7180, 7469])},
+ 'RECIST10': {'126080': ('RECIST 1.0', [6147])},
+ 'RECIST11': {'126081': ('RECIST 1.1', [6147])},
+ 'RGBBComponent': {'110836': ('RGB B Component', [218, 7180, 7186, 7469])},
+ 'RGBGComponent': {'110835': ('RGB G Component', [218, 7180, 7186, 7469])},
+ 'RGBRComponent': {'110834': ('RGB R Component', [218, 7180, 7186, 7469])},
+ 'RO532344189Zr': {'126755': ('RO5323441 ^89^Zr', [4021])},
+ 'RO54290889Zr': {'126756': ('RO542908 ^89^Zr', [4021])},
+ 'RO692496311C': {'126719': ('RO6924963 ^11^C', [4021])},
+ 'RO693164311C': {'126720': ('RO6931643 ^11^C', [4021])},
+ 'RO695894818F': {'126757': ('RO6958948 ^18^F', [4021])},
  'RRInterval': {'122182': ('R-R interval',
                            [12254,
                             12257,
@@ -19151,6 +19150,169 @@ concepts['DCM'] = \
                             12272,
                             12274,
                             3613])},
+ 'RTBrachyTreatment': {'121735': ('RT Brachy Treatment', [9241])},
+ 'RTDoseCalculationStructure': {'130042': ('RT Dose Calculation Structure',
+                                           [9502, 9503])},
+ 'RTGeometricInformation': {'130043': ('RT Geometric Information', [9502])},
+ 'RTMachineQA': {'121730': ('RT Machine QA', [9241])},
+ 'RTPatientPositionAcquisitionCTKv': {'121707': ('RT Patient Position '
+                                                 'Acquisition, CT kV',
+                                                 [9242])},
+ 'RTPatientPositionAcquisitionCTMV': {'121708': ('RT Patient Position '
+                                                 'Acquisition, CT MV',
+                                                 [9242])},
+ 'RTPatientPositionAcquisitionDualPlaneKv': {'121705': ('RT Patient Position '
+                                                        'Acquisition, dual '
+                                                        'plane kV',
+                                                        [9242])},
+ 'RTPatientPositionAcquisitionDualPlaneKvMV': {'121706': ('RT Patient Position '
+                                                          'Acquisition, dual '
+                                                          'plane kV/MV',
+                                                          [9242])},
+ 'RTPatientPositionAcquisitionDualPlaneMV': {'121703': ('RT Patient Position '
+                                                        'Acquisition, dual '
+                                                        'plane MV',
+                                                        [9242])},
+ 'RTPatientPositionAcquisitionOptical': {'121709': ('RT Patient Position '
+                                                    'Acquisition, Optical',
+                                                    [9242])},
+ 'RTPatientPositionAcquisitionSinglePlaneKv': {'121704': ('RT Patient Position '
+                                                          'Acquisition, single '
+                                                          'plane kV',
+                                                          [9242])},
+ 'RTPatientPositionAcquisitionSinglePlaneMV': {'121702': ('RT Patient Position '
+                                                          'Acquisition, single '
+                                                          'plane MV',
+                                                          [9242])},
+ 'RTPatientPositionAcquisitionSpatialFiducials': {'121711': ('RT Patient '
+                                                             'Position '
+                                                             'Acquisition, '
+                                                             'Spatial '
+                                                             'Fiducials',
+                                                             [9242])},
+ 'RTPatientPositionAcquisitionUltrasound': {'121710': ('RT Patient Position '
+                                                       'Acquisition, '
+                                                       'Ultrasound',
+                                                       [9242])},
+ 'RTPatientPositionAdjustment': {'121722': ('RT Patient Position Adjustment',
+                                            [9241])},
+ 'RTPatientPositionInTreatmentSessionReview': {'121723': ('RT Patient Position '
+                                                          'In-treatment-session '
+                                                          'Review',
+                                                          [9241])},
+ 'RTPatientPositionRegistration2DOn3DReference': {'121718': ('RT Patient '
+                                                             'Position '
+                                                             'Registration, 2D '
+                                                             'on 3D reference',
+                                                             [9243])},
+ 'RTPatientPositionRegistration3DCTGeneral': {'121714': ('RT Patient Position '
+                                                         'Registration, 3D CT '
+                                                         'general',
+                                                         [9243])},
+ 'RTPatientPositionRegistration3DCTMarkerBased': {'121715': ('RT Patient '
+                                                             'Position '
+                                                             'Registration, 3D '
+                                                             'CT marker-based',
+                                                             [9243])},
+ 'RTPatientPositionRegistration3DCTVolumeBased': {'121716': ('RT Patient '
+                                                             'Position '
+                                                             'Registration, 3D '
+                                                             'CT volume-based',
+                                                             [9243])},
+ 'RTPatientPositionRegistration3DOn2DReference': {'121717': ('RT Patient '
+                                                             'Position '
+                                                             'Registration, 3D '
+                                                             'on 2D reference',
+                                                             [9243])},
+ 'RTPatientPositionRegistrationDualPlane': {'121713': ('RT Patient Position '
+                                                       'Registration, dual '
+                                                       'plane',
+                                                       [9243])},
+ 'RTPatientPositionRegistrationOptical': {'121719': ('RT Patient Position '
+                                                     'Registration, Optical',
+                                                     [9243])},
+ 'RTPatientPositionRegistrationSinglePlane': {'121712': ('RT Patient Position '
+                                                         'Registration, single '
+                                                         'plane',
+                                                         [9243])},
+ 'RTPatientPositionRegistrationSpatialFiducials': {'121721': ('RT Patient '
+                                                              'Position '
+                                                              'Registration, '
+                                                              'Spatial '
+                                                              'Fiducials',
+                                                              [9243])},
+ 'RTPatientPositionRegistrationUltrasound': {'121720': ('RT Patient Position '
+                                                        'Registration, '
+                                                        'Ultrasound',
+                                                        [9243])},
+ 'RTPatientSetup': {'121701': ('RT Patient Setup', [9241])},
+ 'RTPlanSummationInputUsed': {'128212': ('RT Plan Summation Input Used',
+                                         [7010, 7025])},
+ 'RTPlanningResult': {'128189': ('RT Planning Result', [7010, 7023])},
+ 'RTPreTreatmentConsistencyCheck': {'121374': ('RT Pre-Treatment Consistency '
+                                               'Check',
+                                               [701, 702])},
+ 'RTPreTreatmentDoseCheck': {'121373': ('RT Pre-Treatment Dose Check',
+                                        [701, 702])},
+ 'RTPrescriptionInputImages': {'130136': ('RT Prescription Input Images',
+                                          [9509])},
+ 'RTPrescriptionInputUsed': {'128210': ('RT Prescription Input Used',
+                                        [7010, 7025])},
+ 'RTPrescriptionResult': {'128185': ('RT Prescription Result', [7010, 7023]),
+                          '128186': ('RT Prescription Result', [9510])},
+ 'RTTarget': {'130041': ('RT Target', [9502, 9503])},
+ 'RTTreatmentCourseSummary': {'128193': ('RT Treatment Course Summary',
+                                         [7010, 7023])},
+ 'RTTreatmentPlanForThePositionBeingVerified': {'121310': ('RT treatment plan '
+                                                           'for the position '
+                                                           'being verified',
+                                                           [7022])},
+ 'RTTreatmentPlanningInputImages': {'130137': ('RT Treatment Planning Input '
+                                               'Images',
+                                               [9510])},
+ 'RTTreatmentPlanningInputUsed': {'128211': ('RT Treatment Planning Input Used',
+                                             [7010, 7025])},
+ 'RTTreatmentQAByRTIonPlanDifferenceCheck': {'121734': ('RT Treatment QA by RT '
+                                                        'Ion Plan Difference '
+                                                        'Check',
+                                                        [9241])},
+ 'RTTreatmentQAByRTIonPlanDoseCheck': {'121733': ('RT Treatment QA by RT Ion '
+                                                  'Plan Dose Check',
+                                                  [9241])},
+ 'RTTreatmentQAByRTPlanDifferenceCheck': {'121732': ('RT Treatment QA by RT '
+                                                     'Plan Difference Check',
+                                                     [9241])},
+ 'RTTreatmentQAByRTPlanDoseCheck': {'121731': ('RT Treatment QA by RT Plan '
+                                               'Dose Check',
+                                               [9241])},
+ 'RTTreatmentQAResult': {'128194': ('RT Treatment QA Result', [7010, 7023])},
+ 'RTTreatmentQAWithExternalVerification': {'121729': ('RT Treatment QA with '
+                                                      'External Verification',
+                                                      [9241])},
+ 'RTTreatmentQAWithInternalVerification': {'121728': ('RT Treatment QA with '
+                                                      'Internal Verification',
+                                                      [9241])},
+ 'RTTreatmentSessionResult': {'128192': ('RT Treatment Session Result',
+                                         [7010, 7023])},
+ 'RTTreatmentSimulationResult': {'128188': ('RT Treatment Simulation Result',
+                                            [7010, 7023])},
+ 'RTTreatmentSimulationWithExternalVerification': {'121725': ('RT Treatment '
+                                                              'Simulation with '
+                                                              'External '
+                                                              'Verification',
+                                                              [9241])},
+ 'RTTreatmentSimulationWithInternalVerification': {'121724': ('RT Treatment '
+                                                              'Simulation with '
+                                                              'Internal '
+                                                              'Verification',
+                                                              [9241])},
+ 'RTTreatmentWithExternalVerification': {'121727': ('RT Treatment with '
+                                                    'External Verification',
+                                                    [9241])},
+ 'RTTreatmentWithInternalVerification': {'121726': ('RT Treatment with '
+                                                    'Internal Verification',
+                                                    [9241])},
+ 'RTWorkflowInputUsed': {'128209': ('RT Workflow Input Used', [7010, 7025])},
  'RWave': {'109043': ('R wave', [3339])},
  'RadialBScanPattern': {'128282': ('Radial B-scan pattern', [4272])},
  'RadialDiffusivity': {'113203': ('Radial Diffusivity', [7263])},
@@ -19207,10 +19369,6 @@ concepts['DCM'] = \
                                                                    'oxygen '
                                                                    'consumption',
                                                                    [3238])},
- 'RcaRegionInLaoProjection': {'122471': ('RCA Region in LAO Projection',
-                                         [3461])},
- 'RcaRegionInRaoProjection': {'122465': ('RCA Region in RAO Projection',
-                                         [3460])},
  'RealTimeAcquisition': {'109080': ('Real time acquisition', [3104])},
  'ReasonForProcedure': {'111401': ('Reason for procedure', [6052, 6053])},
  'RecallForImagingFindings': {'111591': ('Recall for imaging findings',
@@ -19222,8 +19380,6 @@ concepts['DCM'] = \
  'RecallForTechnicalReasons': {'111590': ('Recall for technical reasons',
                                           [6051])},
  'ReciprocatingGrid': {'111643': ('Reciprocating grid', [10017])},
- 'Recist10': {'126080': ('RECIST 1.0', [6147])},
- 'Recist11': {'126081': ('RECIST 1.1', [6147])},
  'Recommendation': {'121075': ('Recommendation', [3419, 6053, 7002])},
  'Recommendations': {'121074': ('Recommendations', [6052])},
  'Recording': {'121097': ('Recording', [7445, 7453])},
@@ -19240,7 +19396,7 @@ concepts['DCM'] = \
                                                   'topographer',
                                                   [4210])},
  'ReflectionIllumination': {'111742': ('Reflection illumination', [8123])},
- 'RefractiveMeasurementsSopInstance': {'111783': ('Refractive Measurements SOP '
+ 'RefractiveMeasurementsSOPInstance': {'111783': ('Refractive Measurements SOP '
                                                   'Instance',
                                                   [4240])},
  'RegionalBloodFlow': {'126390': ('Regional Blood Flow',
@@ -19373,9 +19529,6 @@ concepts['DCM'] = \
  'ReverseOsmosisPurifiedWater': {'127290': ('Reverse osmosis purified water',
                                             [610])},
  'ReviewOfAnOutsideStudy': {'111418': ('Review of an outside study', [6051])},
- 'RgbBComponent': {'110836': ('RGB B Component', [218, 7180, 7186, 7469])},
- 'RgbGComponent': {'110835': ('RGB G Component', [218, 7180, 7186, 7469])},
- 'RgbRComponent': {'110834': ('RGB R Component', [218, 7180, 7186, 7469])},
  'RibScaleneTubercle': {'112096': ('Rib Scalene Tubercle', [6115])},
  'RightFirst': {'126831': ('right first', [21])},
  'RightHemisphereMostAnterior': {'125031': ('Right Hemisphere Most Anterior',
@@ -19405,183 +19558,28 @@ concepts['DCM'] = \
                                                  'geometry',
                                                  [12033])},
  'Rituximab89Zr': {'126737': ('Rituximab ^89^Zr', [4021])},
- 'Ro532344189Zr': {'126755': ('RO5323441 ^89^Zr', [4021])},
- 'Ro54290889Zr': {'126756': ('RO542908 ^89^Zr', [4021])},
- 'Ro692496311C': {'126719': ('RO6924963 ^11^C', [4021])},
- 'Ro693164311C': {'126720': ('RO6931643 ^11^C', [4021])},
- 'Ro695894818F': {'126757': ('RO6958948 ^18^F', [4021])},
  'RobertsonReidTable': {'122253': ('Robertson & Reid table', [3664])},
  'Roledumab89Zr': {'126733': ('Roledumab ^89^Zr', [4021])},
  'RoomLaserPatientSetupPoint': {'130070': ('Room Laser Patient Setup Point',
                                            [9504])},
- 'RootAngularSecondMomentOfGlcm': {'126061': ('Root Angular Second Moment of '
+ 'RootAngularSecondMomentOfGLCM': {'126061': ('Root Angular Second Moment of '
                                               'GLCM',
                                               [218, 7467, 7468])},
  'RotationalAcquisition': {'113613': ('Rotational Acquisition', [10002])},
- 'RtBrachyTreatment': {'121735': ('RT Brachy Treatment', [9241])},
- 'RtDoseCalculationStructure': {'130042': ('RT Dose Calculation Structure',
-                                           [9502, 9503])},
- 'RtGeometricInformation': {'130043': ('RT Geometric Information', [9502])},
- 'RtMachineQa': {'121730': ('RT Machine QA', [9241])},
- 'RtPatientPositionAcquisitionCtKv': {'121707': ('RT Patient Position '
-                                                 'Acquisition, CT kV',
-                                                 [9242])},
- 'RtPatientPositionAcquisitionCtMv': {'121708': ('RT Patient Position '
-                                                 'Acquisition, CT MV',
-                                                 [9242])},
- 'RtPatientPositionAcquisitionDualPlaneKv': {'121705': ('RT Patient Position '
-                                                        'Acquisition, dual '
-                                                        'plane kV',
-                                                        [9242])},
- 'RtPatientPositionAcquisitionDualPlaneKvMv': {'121706': ('RT Patient Position '
-                                                          'Acquisition, dual '
-                                                          'plane kV/MV',
-                                                          [9242])},
- 'RtPatientPositionAcquisitionDualPlaneMv': {'121703': ('RT Patient Position '
-                                                        'Acquisition, dual '
-                                                        'plane MV',
-                                                        [9242])},
- 'RtPatientPositionAcquisitionOptical': {'121709': ('RT Patient Position '
-                                                    'Acquisition, Optical',
-                                                    [9242])},
- 'RtPatientPositionAcquisitionSinglePlaneKv': {'121704': ('RT Patient Position '
-                                                          'Acquisition, single '
-                                                          'plane kV',
-                                                          [9242])},
- 'RtPatientPositionAcquisitionSinglePlaneMv': {'121702': ('RT Patient Position '
-                                                          'Acquisition, single '
-                                                          'plane MV',
-                                                          [9242])},
- 'RtPatientPositionAcquisitionSpatialFiducials': {'121711': ('RT Patient '
-                                                             'Position '
-                                                             'Acquisition, '
-                                                             'Spatial '
-                                                             'Fiducials',
-                                                             [9242])},
- 'RtPatientPositionAcquisitionUltrasound': {'121710': ('RT Patient Position '
-                                                       'Acquisition, '
-                                                       'Ultrasound',
-                                                       [9242])},
- 'RtPatientPositionAdjustment': {'121722': ('RT Patient Position Adjustment',
-                                            [9241])},
- 'RtPatientPositionInTreatmentSessionReview': {'121723': ('RT Patient Position '
-                                                          'In-treatment-session '
-                                                          'Review',
-                                                          [9241])},
- 'RtPatientPositionRegistration2dOn3dReference': {'121718': ('RT Patient '
-                                                             'Position '
-                                                             'Registration, 2D '
-                                                             'on 3D reference',
-                                                             [9243])},
- 'RtPatientPositionRegistration3dCtGeneral': {'121714': ('RT Patient Position '
-                                                         'Registration, 3D CT '
-                                                         'general',
-                                                         [9243])},
- 'RtPatientPositionRegistration3dCtMarkerBased': {'121715': ('RT Patient '
-                                                             'Position '
-                                                             'Registration, 3D '
-                                                             'CT marker-based',
-                                                             [9243])},
- 'RtPatientPositionRegistration3dCtVolumeBased': {'121716': ('RT Patient '
-                                                             'Position '
-                                                             'Registration, 3D '
-                                                             'CT volume-based',
-                                                             [9243])},
- 'RtPatientPositionRegistration3dOn2dReference': {'121717': ('RT Patient '
-                                                             'Position '
-                                                             'Registration, 3D '
-                                                             'on 2D reference',
-                                                             [9243])},
- 'RtPatientPositionRegistrationDualPlane': {'121713': ('RT Patient Position '
-                                                       'Registration, dual '
-                                                       'plane',
-                                                       [9243])},
- 'RtPatientPositionRegistrationOptical': {'121719': ('RT Patient Position '
-                                                     'Registration, Optical',
-                                                     [9243])},
- 'RtPatientPositionRegistrationSinglePlane': {'121712': ('RT Patient Position '
-                                                         'Registration, single '
-                                                         'plane',
-                                                         [9243])},
- 'RtPatientPositionRegistrationSpatialFiducials': {'121721': ('RT Patient '
-                                                              'Position '
-                                                              'Registration, '
-                                                              'Spatial '
-                                                              'Fiducials',
-                                                              [9243])},
- 'RtPatientPositionRegistrationUltrasound': {'121720': ('RT Patient Position '
-                                                        'Registration, '
-                                                        'Ultrasound',
-                                                        [9243])},
- 'RtPatientSetup': {'121701': ('RT Patient Setup', [9241])},
- 'RtPlanSummationInputUsed': {'128212': ('RT Plan Summation Input Used',
-                                         [7010, 7025])},
- 'RtPlanningResult': {'128189': ('RT Planning Result', [7010, 7023])},
- 'RtPreTreatmentConsistencyCheck': {'121374': ('RT Pre-Treatment Consistency '
-                                               'Check',
-                                               [701, 702])},
- 'RtPreTreatmentDoseCheck': {'121373': ('RT Pre-Treatment Dose Check',
-                                        [701, 702])},
- 'RtPrescriptionInputImages': {'130136': ('RT Prescription Input Images',
-                                          [9509])},
- 'RtPrescriptionInputUsed': {'128210': ('RT Prescription Input Used',
-                                        [7010, 7025])},
- 'RtPrescriptionResult': {'128185': ('RT Prescription Result', [7010, 7023]),
-                          '128186': ('RT Prescription Result', [9510])},
- 'RtTarget': {'130041': ('RT Target', [9502, 9503])},
- 'RtTreatmentCourseSummary': {'128193': ('RT Treatment Course Summary',
-                                         [7010, 7023])},
- 'RtTreatmentPlanForThePositionBeingVerified': {'121310': ('RT treatment plan '
-                                                           'for the position '
-                                                           'being verified',
-                                                           [7022])},
- 'RtTreatmentPlanningInputImages': {'130137': ('RT Treatment Planning Input '
-                                               'Images',
-                                               [9510])},
- 'RtTreatmentPlanningInputUsed': {'128211': ('RT Treatment Planning Input Used',
-                                             [7010, 7025])},
- 'RtTreatmentQaByRtIonPlanDifferenceCheck': {'121734': ('RT Treatment QA by RT '
-                                                        'Ion Plan Difference '
-                                                        'Check',
-                                                        [9241])},
- 'RtTreatmentQaByRtIonPlanDoseCheck': {'121733': ('RT Treatment QA by RT Ion '
-                                                  'Plan Dose Check',
-                                                  [9241])},
- 'RtTreatmentQaByRtPlanDifferenceCheck': {'121732': ('RT Treatment QA by RT '
-                                                     'Plan Difference Check',
-                                                     [9241])},
- 'RtTreatmentQaByRtPlanDoseCheck': {'121731': ('RT Treatment QA by RT Plan '
-                                               'Dose Check',
-                                               [9241])},
- 'RtTreatmentQaResult': {'128194': ('RT Treatment QA Result', [7010, 7023])},
- 'RtTreatmentQaWithExternalVerification': {'121729': ('RT Treatment QA with '
-                                                      'External Verification',
-                                                      [9241])},
- 'RtTreatmentQaWithInternalVerification': {'121728': ('RT Treatment QA with '
-                                                      'Internal Verification',
-                                                      [9241])},
- 'RtTreatmentSessionResult': {'128192': ('RT Treatment Session Result',
-                                         [7010, 7023])},
- 'RtTreatmentSimulationResult': {'128188': ('RT Treatment Simulation Result',
-                                            [7010, 7023])},
- 'RtTreatmentSimulationWithExternalVerification': {'121725': ('RT Treatment '
-                                                              'Simulation with '
-                                                              'External '
-                                                              'Verification',
-                                                              [9241])},
- 'RtTreatmentSimulationWithInternalVerification': {'121724': ('RT Treatment '
-                                                              'Simulation with '
-                                                              'Internal '
-                                                              'Verification',
-                                                              [9241])},
- 'RtTreatmentWithExternalVerification': {'121727': ('RT Treatment with '
-                                                    'External Verification',
-                                                    [9241])},
- 'RtTreatmentWithInternalVerification': {'121726': ('RT Treatment with '
-                                                    'Internal Verification',
-                                                    [9241])},
- 'RtWorkflowInputUsed': {'128209': ('RT Workflow Input Used', [7010, 7025])},
  'RungeKutta': {'113219': ('Runge-Kutta', [7262])},
+ 'SAR341989Zr': {'126741': ('SAR3419 ^89^Zr', [4021])},
+ 'SMILE': {'111681': ('SMILE', [4234])},
+ 'SMPTEPattern': {'109943': ('SMPTE Pattern', [8301])},
+ 'SOPClassUID': {'110181': ('SOP Class UID', [404])},
+ 'SPECTCTOfWholeBody': {'127902': ('SPECT CT of whole body', [646])},
+ 'SPECTOfWholeBody': {'127901': ('SPECT of whole body', [646])},
+ 'SRKII': {'111766': ('SRKII', [4236])},
+ 'SRKT': {'111767': ('SRK-T', [4236])},
+ 'SSDEConversionFactor': {'128410': ('SSDE Conversion Factor', [10069])},
+ 'STDepressionDownsloping': {'122759': ('ST Depression - Downsloping', [3233])},
+ 'STDepressionHorizontal': {'122757': ('ST Depression - Horizontal', [3233])},
+ 'STDepressionUpsloping': {'122758': ('ST Depression - Upsloping', [3233])},
+ 'STHRIndex': {'122773': ('ST/HR Index', [3238])},
  'SWave': {'109044': ('S wave', [3339])},
  'SalineImplant': {'111481': ('Saline implant', [6058, 6059])},
  'SameAcquisitionAtDifferentFocalDepth': {'121352': ('Same acquisition at '
@@ -19599,9 +19597,6 @@ concepts['DCM'] = \
                                                  [8120])},
  'SameAnatomy': {'122401': ('Same Anatomy', [7210])},
  'SameIndication': {'122402': ('Same Indication', [7210])},
- 'Sar341989Zr': {'126741': ('SAR3419 ^89^Zr', [4021])},
- 'Scandium_43': {'126605': ('^43^Scandium', [4020])},
- 'Scandium_44': {'126600': ('^44^Scandium', [4020])},
  'ScapularInfraspinatusFossa': {'112101': ('Scapular Infraspinatus Fossa',
                                            [6115])},
  'ScapularSpine': {'112099': ('Scapular Spine', [6115])},
@@ -19627,12 +19622,12 @@ concepts['DCM'] = \
                                [6014, 6016, 6054, 6101, 6201])},
  'SeptalDefectIntervention': {'122055': ('Septal Defect Intervention',
                                          [3405, 3406])},
- 'SeptalLineS': {'112114': ('Septal line(s)', [6102, 6103])},
+ 'SeptalLines': {'112114': ('Septal line(s)', [6102, 6103])},
  'SeptumToWall': {'110876': ('Septum To Wall', [7185])},
  'SeptumWallAxis': {'110865': ('Septum-Wall Axis', [7184])},
  'SequencedAcquisition': {'113804': ('Sequenced Acquisition', [10013])},
  'Series': {'113015': ('Series', [10000, 7012])},
- 'SeriesInstanceUid': {'112002': ('Series Instance UID', [10001])},
+ 'SeriesInstanceUID': {'112002': ('Series Instance UID', [10001])},
  'SeriesNumber': {'113607': ('Series Number', [10022])},
  'SessionStart': {'110145': ('Session start', [401, 403])},
  'SessionStop': {'110146': ('Session stop', [401, 403])},
@@ -19644,10 +19639,8 @@ concepts['DCM'] = \
  'SharplyDefined': {'112137': ('Sharply defined', [6120])},
  'SharplyDemarcated': {'112140': ('Sharply demarcated', [6120])},
  'SheetFilmDigitized': {'110020': ('Sheet Film Digitized', [7008])},
- 'ShutterSpeedModelSsm': {'126344': ('Shutter-Speed Model (SSM)',
+ 'ShutterSpeedModelSSM': {'126344': ('Shutter-Speed Model (SSM)',
                                      [4101, 4106])},
- 'SigmaDeviationOfPopulation_2': {'121417': ('2 Sigma deviation of population',
-                                             [221, 226, 7465])},
  'SignalBaselineEnd': {'122639': ('Signal Baseline End', [3836])},
  'SignalBaselineStart': {'122638': ('Signal Baseline Start', [3836])},
  'SignalChange': {'113059': ('Signal change', [218, 7180, 7469])},
@@ -19674,7 +19667,7 @@ concepts['DCM'] = \
                                                   'Waveform',
                                                   [7004])},
  'SimultaneousDoppler': {'121301': ('Simultaneous Doppler', [7004])},
- 'SimultaneousEcg': {'121303': ('Simultaneous ECG', [7004])},
+ 'SimultaneousECG': {'121303': ('Simultaneous ECG', [7004])},
  'SimultaneousHemodynamic': {'121302': ('Simultaneous Hemodynamic', [7004])},
  'SimultaneousPhonocardiographicWaveform': {'121307': ('Simultaneous '
                                                        'Phonocardiographic '
@@ -19687,7 +19680,7 @@ concepts['DCM'] = \
                                            [7004])},
  'SimultaneouslyAcquired': {'122400': ('Simultaneously Acquired', [7210])},
  'SingleFraction': {'130096': ('Single Fraction', [9533])},
- 'SingleLadRegionInRaoProjection': {'122466': ('Single LAD Region in RAO '
+ 'SingleLADRegionInRAOProjection': {'122466': ('Single LAD Region in RAO '
                                                'Projection',
                                                [3461])},
  'SingleLuminance': {'111840': ('Single luminance', [4252])},
@@ -19695,15 +19688,15 @@ concepts['DCM'] = \
  'SinglePlane': {'113622': ('Single Plane', [10003])},
  'SinglePlaneAngiography': {'122059': ('Single plane Angiography', [3748])},
  'SinglePlaneEllipse': {'125226': ('Single Plane Ellipse', [12227, 12228])},
- 'SingleRcaRegionInRaoProjection': {'122467': ('Single RCA Region in RAO '
+ 'SingleRCARegionInRAOProjection': {'122467': ('Single RCA Region in RAO '
                                                'Projection',
                                                [3461])},
- 'SingleShotEpi': {'113226': ('Single Shot EPI', [7260])},
+ 'SingleShotEPI': {'113226': ('Single Shot EPI', [7260])},
  'SingleSubjectExtractedFromGroup': {'113132': ('Single subject extracted from '
                                                 'group',
                                                 [7151, 7165, 7196])},
  'SingleTensor': {'113231': ('Single Tensor', [7261])},
- 'SingularValueDecompositionSvdDeconvolution': {'126311': ('Singular Value '
+ 'SingularValueDecompositionSVDDeconvolution': {'126311': ('Singular Value '
                                                            'Decomposition '
                                                            '(SVD) '
                                                            'deconvolution',
@@ -19778,14 +19771,12 @@ concepts['DCM'] = \
  'SlidingWindowBeam': {'130106': ('Sliding Window Beam', [9511, 9524])},
  'SlowDiffusionCoefficient': {'113291': ('Slow Diffusion Coefficient',
                                          [218, 7180, 7272, 7469])},
- 'Small320CmLateralThickness': {'113601': ('Small: < 32.0 cm lateral thickness',
+ 'Small320cmLateralThickness': {'113601': ('Small: < 32.0 cm lateral thickness',
                                            [7041, 7042])},
  'SmallIrregularOpacities': {'112125': ('Small irregular opacities',
                                         [6102, 6104, 6106])},
  'SmallRoundedOpacities': {'112126': ('Small rounded opacities', [6102, 6104])},
- 'Smile': {'111681': ('SMILE', [4234])},
  'Smoothing': {'113087': ('Smoothing', [7203])},
- 'SmptePattern': {'109943': ('SMPTE Pattern', [8301])},
  'SoftPlaque': {'122356': ('Soft plaque', [3491])},
  'SoftTissue': {'112144': ('Soft tissue', [6122, 6211])},
  'SoftwareConfiguration': {'110131': ('Software Configuration', [401, 403])},
@@ -19794,7 +19785,6 @@ concepts['DCM'] = \
  'Sonazoid': {'125905': ('Sonazoid', [12030])},
  'Sonologist': {'121092': ('Sonologist', [7450, 7452])},
  'Sonovue': {'125906': ('SonoVue', [12030])},
- 'SopClassUid': {'110181': ('SOP Class UID', [404])},
  'SourceDocument': {'121335': ('Source Document', [7006])},
  'SourceDoseForComposingCurrentDose': {'121372': ('Source dose for composing '
                                                   'current dose',
@@ -19813,7 +19803,7 @@ concepts['DCM'] = \
  'SourceRealWorldValueMap': {'128227': ('Source real world value map',
                                         [7013, 7019, 7060])},
  'SourceReport': {'128225': ('Source report', [7013, 7060])},
- 'SourceRoleId': {'110153': ('Source Role ID', [402])},
+ 'SourceRoleID': {'110153': ('Source Role ID', [402])},
  'SourceSeriesForImageProcessingOperation': {'121323': ('Source series for '
                                                         'image processing '
                                                         'operation',
@@ -19842,8 +19832,6 @@ concepts['DCM'] = \
                                           [9500])},
  'Specimen': {'121027': ('Specimen', [271])},
  'SpecimenStorage': {'111729': ('Specimen storage', [8111])},
- 'SpectCtOfWholeBody': {'127902': ('SPECT CT of whole body', [646])},
- 'SpectOfWholeBody': {'127901': ('SPECT of whole body', [646])},
  'SpectralDomain': {'111921': ('Spectral domain', [4261])},
  'SpectralFilteredImage': {'121340': ('Spectral filtered image', [7201])},
  'Spectroscopy': {'121317': ('Spectroscopy', [7201])},
@@ -19856,30 +19844,23 @@ concepts['DCM'] = \
  'SphericalDeconvolution': {'113238': ('Spherical Deconvolution', [7261])},
  'SphericalProjection': {'111791': ('Spherical projection', [4245])},
  'Spiculated': {'112136': ('Spiculated', [6119])},
- 'SpinTaggingPerfusionMrSignalIntensity': {'110800': ('Spin Tagging Perfusion '
+ 'SpinTaggingPerfusionMRSignalIntensity': {'110800': ('Spin Tagging Perfusion '
                                                       'MR Signal Intensity',
                                                       [218, 7180, 7469])},
  'SpontaneousAbortion': {'111566': ('Spontaneous Abortion', [6087, 6088])},
- 'SpotMagnificationViewS': {'111136': ('Spot magnification view(s)',
+ 'SpotMagnificationViews': {'111136': ('Spot magnification view(s)',
                                        [6028, 6029])},
  'SquamousCellCarcinomaOfTheNipple': {'111340': ('Squamous cell carcinoma of '
                                                  'the nipple',
                                                  [6030, 6033])},
- 'SrkT': {'111767': ('SRK-T', [4236])},
- 'Srkii': {'111766': ('SRKII', [4236])},
- 'SsdeConversionFactor': {'128410': ('SSDE Conversion Factor', [10069])},
- 'StDepressionDownsloping': {'122759': ('ST Depression - Downsloping', [3233])},
- 'StDepressionHorizontal': {'122757': ('ST Depression - Horizontal', [3233])},
- 'StDepressionUpsloping': {'122758': ('ST Depression - Upsloping', [3233])},
- 'StHrIndex': {'122773': ('ST/HR Index', [3238])},
  'Stage0': {'111494': ('Stage 0', [6068])},
  'StageI': {'111495': ('Stage I', [6068])},
- 'StageIia': {'111496': ('Stage IIA', [6068])},
- 'StageIib': {'111497': ('Stage IIB', [6068])},
- 'StageIiia': {'111498': ('Stage IIIA', [6068])},
- 'StageIiib': {'111499': ('Stage IIIB', [6068])},
- 'StageIiic': {'111500': ('Stage IIIC', [6068])},
- 'StageIv': {'111501': ('Stage IV', [6068])},
+ 'StageIIA': {'111496': ('Stage IIA', [6068])},
+ 'StageIIB': {'111497': ('Stage IIB', [6068])},
+ 'StageIIIA': {'111498': ('Stage IIIA', [6068])},
+ 'StageIIIB': {'111499': ('Stage IIIB', [6068])},
+ 'StageIIIC': {'111500': ('Stage IIIC', [6068])},
+ 'StageIV': {'111501': ('Stage IV', [6068])},
  'StageView': {'113017': ('Stage-View', [7012])},
  'StagingPriorToImaging': {'127103': ('Staging prior to imaging', [634])},
  'StandardDeviationDistanceOfCalcificationsInACluster': {'112201': ('Standard '
@@ -19926,7 +19907,7 @@ concepts['DCM'] = \
                                               [12031])},
  'StartOfExpiration': {'109029': ('Start of expiration', [3337])},
  'StartOfInspiration': {'109030': ('Start of inspiration', [3337])},
- 'StartOfThermalCo': {'109031': ('Start of thermal CO', [3337])},
+ 'StartOfThermalCO': {'109031': ('Start of thermal CO', [3337])},
  'StartProcedureAction': {'121130': ('Start Procedure Action', [3421])},
  'StaticBeam': {'130102': ('Static Beam', [9511, 9524])},
  'StationaryAcquisition': {'113611': ('Stationary Acquisition', [10002]),
@@ -19962,17 +19943,17 @@ concepts['DCM'] = \
  'StripFilter': {'113650': ('Strip filter', [10007])},
  'Stripe': {'112094': ('Stripe', [6102, 6109, 6113, 7151, 7192, 9514])},
  'StronglyPositive': {'122755': ('Strongly positive', [3231])},
- 'StronglyPositiveStElevation': {'122756': ('Strongly positive - ST elevation',
+ 'StronglyPositiveSTElevation': {'122756': ('Strongly positive - ST elevation',
                                             [3231])},
  'StructuralImageForImageProcessing': {'128250': ('Structural image for image '
                                                   'processing',
                                                   [7202])},
  'StructureOfTheFindingSite': {'125311': ('Structure of the Finding Site',
                                           [12302])},
- 'StudentSTTest': {'113068': ("Student's T-test", [218, 7180, 7469])},
+ 'StudentTTest': {'113068': ("Student's T-test", [218, 7180, 7469])},
  'StudiesImported': {'110027': ('Studies Imported', [7008])},
  'Study': {'113014': ('Study', [10000, 7012])},
- 'StudyInstanceUid': {'110180': ('Study Instance UID', [10001, 404])},
+ 'StudyInstanceUID': {'110180': ('Study Instance UID', [10001, 404])},
  'SubjectiveRefraction': {'SRF': ('Subjective Refraction', [29, 30])},
  'SuboptimalContrastTiming': {'128554': ('Suboptimal contrast timing',
                                          [10034])},
@@ -19998,10 +19979,10 @@ concepts['DCM'] = \
  'SuperiorLongitudinalFasciculusI': {'110703': ('superior longitudinal '
                                                 'fasciculus I',
                                                 [7703, 7710])},
- 'SuperiorLongitudinalFasciculusIi': {'110704': ('superior longitudinal '
+ 'SuperiorLongitudinalFasciculusII': {'110704': ('superior longitudinal '
                                                  'fasciculus II',
                                                  [7703, 7710])},
- 'SuperiorLongitudinalFasciculusIii': {'110705': ('superior longitudinal '
+ 'SuperiorLongitudinalFasciculusIII': {'110705': ('superior longitudinal '
                                                   'fasciculus III',
                                                   [7703, 7710])},
  'SuperolateralToInferomedial': {'111434': ('Superolateral to inferomedial',
@@ -20021,12 +20002,12 @@ concepts['DCM'] = \
                                                                         7192,
                                                                         9514])},
  'SurfaceContourMapping': {'111792': ('Surface contour mapping', [4245])},
- 'SurfaceOfTheCenterOfTheRpe': {'128298': ('Surface of the center of the RPE',
+ 'SurfaceOfTheCenterOfTheRPE': {'128298': ('Surface of the center of the RPE',
                                            [4273, 7151, 7192, 9514])},
  'SurfaceOfTheChoroidScleraInterface': {'128301': ('Surface of the '
                                                    'choroid-sclera interface',
                                                    [4273, 7151, 7192, 9514])},
- 'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRpe': {'128296': ('Surface of '
+ 'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRPE': {'128296': ('Surface of '
                                                                    'the '
                                                                    'interdigitating '
                                                                    'zone '
@@ -20078,7 +20059,7 @@ concepts['DCM'] = \
                                       [4100, 4106])},
  'T1ByMultipleFlipAngles': {'126350': ('T1 by Multiple Flip Angles',
                                        [4100, 4106])},
- 'T1WeightedDynamicContrastEnhancedMrSignalIntensity': {'110816': ('T1 '
+ 'T1WeightedDynamicContrastEnhancedMRSignalIntensity': {'110816': ('T1 '
                                                                    'Weighted '
                                                                    'Dynamic '
                                                                    'Contrast '
@@ -20088,13 +20069,13 @@ concepts['DCM'] = \
                                                                    [218,
                                                                     7180,
                                                                     7469])},
- 'T1WeightedMrSignalIntensity': {'110804': ('T1 Weighted MR Signal Intensity',
+ 'T1WeightedMRSignalIntensity': {'110804': ('T1 Weighted MR Signal Intensity',
                                             [218, 7180, 7469])},
  'T1Worst': {'122367': ('T-1 Worst', [3493])},
  'T2': {'113064': ('T2*', [218, 7180, 7469]),
         '113065': ('T2', [218, 7180, 7469])},
  'T2Secondary': {'122368': ('T-2 Secondary', [3493])},
- 'T2WeightedDynamicContrastEnhancedMrSignalIntensity': {'110817': ('T2 '
+ 'T2WeightedDynamicContrastEnhancedMRSignalIntensity': {'110817': ('T2 '
                                                                    'Weighted '
                                                                    'Dynamic '
                                                                    'Contrast '
@@ -20114,13 +20095,97 @@ concepts['DCM'] = \
                                                                    [218,
                                                                     7180,
                                                                     7469])},
- 'T2WeightedMrSignalIntensity': {'110805': ('T2 Weighted MR Signal Intensity',
+ 'T2WeightedMRSignalIntensity': {'110805': ('T2 Weighted MR Signal Intensity',
                                             [218, 7180, 7469]),
                                  '110806': ('T2* Weighted MR Signal Intensity',
                                             [218, 7180, 7469])},
  'T3Secondary': {'122369': ('T-3 Secondary', [3493])},
  'T4Secondary': {'122370': ('T-4 Secondary', [3493])},
  'T807F18': {'126502': ('T807 F^18^', [4021])},
+ 'TEND': {'113216': ('TEND', [7262])},
+ 'TG18ADPattern': {'109845': ('TG18-AD Pattern', [8301])},
+ 'TG18AFCPattern': {'109861': ('TG18-AFC Pattern', [8301])},
+ 'TG18BRPattern': {'109802': ('TG18-BR Pattern', [8301])},
+ 'TG18CHImage': {'109878': ('TG18-CH Image', [8301])},
+ 'TG18CTPattern': {'109804': ('TG18-CT Pattern', [8301])},
+ 'TG18CXPattern': {'109854': ('TG18-CX Pattern', [8301])},
+ 'TG18GA03Pattern': {'109870': ('TG18-GA03 Pattern', [8301])},
+ 'TG18GA05Pattern': {'109871': ('TG18-GA05 Pattern', [8301])},
+ 'TG18GA08Pattern': {'109872': ('TG18-GA08 Pattern', [8301])},
+ 'TG18GA10Pattern': {'109873': ('TG18-GA10 Pattern', [8301])},
+ 'TG18GA15Pattern': {'109874': ('TG18-GA15 Pattern', [8301])},
+ 'TG18GA20Pattern': {'109875': ('TG18-GA20 Pattern', [8301])},
+ 'TG18GA25Pattern': {'109876': ('TG18-GA25 Pattern', [8301])},
+ 'TG18GA30Pattern': {'109877': ('TG18-GA30 Pattern', [8301])},
+ 'TG18GQBPattern': {'109869': ('TG18-GQB Pattern', [8301])},
+ 'TG18GQNPattern': {'109868': ('TG18-GQN Pattern', [8301])},
+ 'TG18GQPattern': {'109867': ('TG18-GQ Pattern', [8301])},
+ 'TG18GVNPattern': {'109866': ('TG18-GVN Pattern', [8301])},
+ 'TG18GVPattern': {'109865': ('TG18-GV Pattern', [8301])},
+ 'TG18KNImage': {'109879': ('TG18-KN Image', [8301])},
+ 'TG18LN1201Pattern': {'109823': ('TG18-LN12-01 Pattern', [8301])},
+ 'TG18LN1202Pattern': {'109824': ('TG18-LN12-02 Pattern', [8301])},
+ 'TG18LN1203Pattern': {'109825': ('TG18-LN12-03 Pattern', [8301])},
+ 'TG18LN1204Pattern': {'109826': ('TG18-LN12-04 Pattern', [8301])},
+ 'TG18LN1205Pattern': {'109827': ('TG18-LN12-05 Pattern', [8301])},
+ 'TG18LN1206Pattern': {'109828': ('TG18-LN12-06 Pattern', [8301])},
+ 'TG18LN1207Pattern': {'109829': ('TG18-LN12-07 Pattern', [8301])},
+ 'TG18LN1208Pattern': {'109830': ('TG18-LN12-08 Pattern', [8301])},
+ 'TG18LN1209Pattern': {'109831': ('TG18-LN12-09 Pattern', [8301])},
+ 'TG18LN1210Pattern': {'109832': ('TG18-LN12-10 Pattern', [8301])},
+ 'TG18LN1211Pattern': {'109833': ('TG18-LN12-11 Pattern', [8301])},
+ 'TG18LN1212Pattern': {'109834': ('TG18-LN12-12 Pattern', [8301])},
+ 'TG18LN1213Pattern': {'109835': ('TG18-LN12-13 Pattern', [8301])},
+ 'TG18LN1214Pattern': {'109836': ('TG18-LN12-14 Pattern', [8301])},
+ 'TG18LN1215Pattern': {'109837': ('TG18-LN12-15 Pattern', [8301])},
+ 'TG18LN1216Pattern': {'109838': ('TG18-LN12-16 Pattern', [8301])},
+ 'TG18LN1217Pattern': {'109839': ('TG18-LN12-17 Pattern', [8301])},
+ 'TG18LN1218Pattern': {'109840': ('TG18-LN12-18 Pattern', [8301])},
+ 'TG18LN801Pattern': {'109805': ('TG18-LN8-01 Pattern', [8301])},
+ 'TG18LN802Pattern': {'109806': ('TG18-LN8-02 Pattern', [8301])},
+ 'TG18LN803Pattern': {'109807': ('TG18-LN8-03 Pattern', [8301])},
+ 'TG18LN804Pattern': {'109808': ('TG18-LN8-04 Pattern', [8301])},
+ 'TG18LN805Pattern': {'109809': ('TG18-LN8-05 Pattern', [8301])},
+ 'TG18LN806Pattern': {'109810': ('TG18-LN8-06 Pattern', [8301])},
+ 'TG18LN807Pattern': {'109811': ('TG18-LN8-07 Pattern', [8301])},
+ 'TG18LN808Pattern': {'109812': ('TG18-LN8-08 Pattern', [8301])},
+ 'TG18LN809Pattern': {'109813': ('TG18-LN8-09 Pattern', [8301])},
+ 'TG18LN810Pattern': {'109814': ('TG18-LN8-10 Pattern', [8301])},
+ 'TG18LN811Pattern': {'109815': ('TG18-LN8-11 Pattern', [8301])},
+ 'TG18LN812Pattern': {'109816': ('TG18-LN8-12 Pattern', [8301])},
+ 'TG18LN813Pattern': {'109817': ('TG18-LN8-13 Pattern', [8301])},
+ 'TG18LN814Pattern': {'109818': ('TG18-LN8-14 Pattern', [8301])},
+ 'TG18LN815Pattern': {'109819': ('TG18-LN8-15 Pattern', [8301])},
+ 'TG18LN816Pattern': {'109820': ('TG18-LN8-16 Pattern', [8301])},
+ 'TG18LN817Pattern': {'109821': ('TG18-LN8-17 Pattern', [8301])},
+ 'TG18LN818Pattern': {'109822': ('TG18-LN8-18 Pattern', [8301])},
+ 'TG18LPH10Pattern': {'109855': ('TG18-LPH10 Pattern', [8301])},
+ 'TG18LPH50Pattern': {'109856': ('TG18-LPH50 Pattern', [8301])},
+ 'TG18LPH89Pattern': {'109857': ('TG18-LPH89 Pattern', [8301])},
+ 'TG18LPV10Pattern': {'109858': ('TG18-LPV10 Pattern', [8301])},
+ 'TG18LPV50Pattern': {'109859': ('TG18-LPV50 Pattern', [8301])},
+ 'TG18LPV89Pattern': {'109860': ('TG18-LPV89 Pattern', [8301])},
+ 'TG18MM1Image': {'109880': ('TG18-MM1 Image', [8301])},
+ 'TG18MM2Image': {'109881': ('TG18-MM2 Image', [8301])},
+ 'TG18MPPattern': {'109846': ('TG18-MP Pattern', [8301])},
+ 'TG18NS10Pattern': {'109862': ('TG18-NS10 Pattern', [8301])},
+ 'TG18NS50Pattern': {'109863': ('TG18-NS50 Pattern', [8301])},
+ 'TG18NS89Pattern': {'109864': ('TG18-NS89 Pattern', [8301])},
+ 'TG18PQCPattern': {'109803': ('TG18-PQC Pattern', [8301])},
+ 'TG18PXPattern': {'109853': ('TG18-PX Pattern', [8301])},
+ 'TG18QCPattern': {'109801': ('TG18-QC Pattern', [8301])},
+ 'TG18RH10Pattern': {'109847': ('TG18-RH10 Pattern', [8301])},
+ 'TG18RH50Pattern': {'109848': ('TG18-RH50 Pattern', [8301])},
+ 'TG18RH89Pattern': {'109849': ('TG18-RH89 Pattern', [8301])},
+ 'TG18RV10Pattern': {'109850': ('TG18-RV10 Pattern', [8301])},
+ 'TG18RV50Pattern': {'109851': ('TG18-RV50 Pattern', [8301])},
+ 'TG18RV89Pattern': {'109852': ('TG18-RV89 Pattern', [8301])},
+ 'TG18UN10Pattern': {'109841': ('TG18-UN10 Pattern', [8301])},
+ 'TG18UN80Pattern': {'109842': ('TG18-UN80 Pattern', [8301])},
+ 'TG18UNL10Pattern': {'109843': ('TG18-UNL10 Pattern', [8301, 8302])},
+ 'TG18UNL80Pattern': {'109844': ('TG18-UNL80 Pattern', [8301, 8302])},
+ 'TRC10589Zr': {'126749': ('TRC105 ^89^Zr', [4021])},
+ 'TSPyramid': {'122564': ('TS Pyramid', [3453])},
  'TWave': {'109051': ('T wave', [3339])},
  'Table': {'128459': ('Table', [10066])},
  'TableCore': {'128460': ('Table Core', [10066])},
@@ -20202,7 +20267,6 @@ concepts['DCM'] = \
                      12274,
                      3337,
                      3613])},
- 'TauM': {'126330': ('tau_m', [218, 4107, 7180, 7469])},
  'TechNote': {'121171': ('Tech Note', [3401])},
  'TechnicalFactorsMissing': {'111194': ('Technical factors missing', [6041])},
  'Teichholz': {'125209': ('Teichholz', [12227, 12228])},
@@ -20221,8 +20285,6 @@ concepts['DCM'] = \
                                                                     'set of '
                                                                     'volumes',
                                                                     [7203])},
- 'Tend': {'113216': ('TEND', [7262])},
- 'Terbium_152': {'126606': ('^152^Terbium', [4020])},
  'TerminatedByScanner': {'130177': ('Terminated by scanner', [67, 71])},
  'TerminatedDueToAirDetected': {'130176': ('Terminated due to air detected',
                                            [67, 71])},
@@ -20259,87 +20321,6 @@ concepts['DCM'] = \
                                                           'unspecified '
                                                           'injector failure',
                                                           [67, 71])},
- 'Tg18AdPattern': {'109845': ('TG18-AD Pattern', [8301])},
- 'Tg18AfcPattern': {'109861': ('TG18-AFC Pattern', [8301])},
- 'Tg18BrPattern': {'109802': ('TG18-BR Pattern', [8301])},
- 'Tg18ChImage': {'109878': ('TG18-CH Image', [8301])},
- 'Tg18CtPattern': {'109804': ('TG18-CT Pattern', [8301])},
- 'Tg18CxPattern': {'109854': ('TG18-CX Pattern', [8301])},
- 'Tg18Ga03Pattern': {'109870': ('TG18-GA03 Pattern', [8301])},
- 'Tg18Ga05Pattern': {'109871': ('TG18-GA05 Pattern', [8301])},
- 'Tg18Ga08Pattern': {'109872': ('TG18-GA08 Pattern', [8301])},
- 'Tg18Ga10Pattern': {'109873': ('TG18-GA10 Pattern', [8301])},
- 'Tg18Ga15Pattern': {'109874': ('TG18-GA15 Pattern', [8301])},
- 'Tg18Ga20Pattern': {'109875': ('TG18-GA20 Pattern', [8301])},
- 'Tg18Ga25Pattern': {'109876': ('TG18-GA25 Pattern', [8301])},
- 'Tg18Ga30Pattern': {'109877': ('TG18-GA30 Pattern', [8301])},
- 'Tg18GqPattern': {'109867': ('TG18-GQ Pattern', [8301])},
- 'Tg18GqbPattern': {'109869': ('TG18-GQB Pattern', [8301])},
- 'Tg18GqnPattern': {'109868': ('TG18-GQN Pattern', [8301])},
- 'Tg18GvPattern': {'109865': ('TG18-GV Pattern', [8301])},
- 'Tg18GvnPattern': {'109866': ('TG18-GVN Pattern', [8301])},
- 'Tg18KnImage': {'109879': ('TG18-KN Image', [8301])},
- 'Tg18Ln1201Pattern': {'109823': ('TG18-LN12-01 Pattern', [8301])},
- 'Tg18Ln1202Pattern': {'109824': ('TG18-LN12-02 Pattern', [8301])},
- 'Tg18Ln1203Pattern': {'109825': ('TG18-LN12-03 Pattern', [8301])},
- 'Tg18Ln1204Pattern': {'109826': ('TG18-LN12-04 Pattern', [8301])},
- 'Tg18Ln1205Pattern': {'109827': ('TG18-LN12-05 Pattern', [8301])},
- 'Tg18Ln1206Pattern': {'109828': ('TG18-LN12-06 Pattern', [8301])},
- 'Tg18Ln1207Pattern': {'109829': ('TG18-LN12-07 Pattern', [8301])},
- 'Tg18Ln1208Pattern': {'109830': ('TG18-LN12-08 Pattern', [8301])},
- 'Tg18Ln1209Pattern': {'109831': ('TG18-LN12-09 Pattern', [8301])},
- 'Tg18Ln1210Pattern': {'109832': ('TG18-LN12-10 Pattern', [8301])},
- 'Tg18Ln1211Pattern': {'109833': ('TG18-LN12-11 Pattern', [8301])},
- 'Tg18Ln1212Pattern': {'109834': ('TG18-LN12-12 Pattern', [8301])},
- 'Tg18Ln1213Pattern': {'109835': ('TG18-LN12-13 Pattern', [8301])},
- 'Tg18Ln1214Pattern': {'109836': ('TG18-LN12-14 Pattern', [8301])},
- 'Tg18Ln1215Pattern': {'109837': ('TG18-LN12-15 Pattern', [8301])},
- 'Tg18Ln1216Pattern': {'109838': ('TG18-LN12-16 Pattern', [8301])},
- 'Tg18Ln1217Pattern': {'109839': ('TG18-LN12-17 Pattern', [8301])},
- 'Tg18Ln1218Pattern': {'109840': ('TG18-LN12-18 Pattern', [8301])},
- 'Tg18Ln801Pattern': {'109805': ('TG18-LN8-01 Pattern', [8301])},
- 'Tg18Ln802Pattern': {'109806': ('TG18-LN8-02 Pattern', [8301])},
- 'Tg18Ln803Pattern': {'109807': ('TG18-LN8-03 Pattern', [8301])},
- 'Tg18Ln804Pattern': {'109808': ('TG18-LN8-04 Pattern', [8301])},
- 'Tg18Ln805Pattern': {'109809': ('TG18-LN8-05 Pattern', [8301])},
- 'Tg18Ln806Pattern': {'109810': ('TG18-LN8-06 Pattern', [8301])},
- 'Tg18Ln807Pattern': {'109811': ('TG18-LN8-07 Pattern', [8301])},
- 'Tg18Ln808Pattern': {'109812': ('TG18-LN8-08 Pattern', [8301])},
- 'Tg18Ln809Pattern': {'109813': ('TG18-LN8-09 Pattern', [8301])},
- 'Tg18Ln810Pattern': {'109814': ('TG18-LN8-10 Pattern', [8301])},
- 'Tg18Ln811Pattern': {'109815': ('TG18-LN8-11 Pattern', [8301])},
- 'Tg18Ln812Pattern': {'109816': ('TG18-LN8-12 Pattern', [8301])},
- 'Tg18Ln813Pattern': {'109817': ('TG18-LN8-13 Pattern', [8301])},
- 'Tg18Ln814Pattern': {'109818': ('TG18-LN8-14 Pattern', [8301])},
- 'Tg18Ln815Pattern': {'109819': ('TG18-LN8-15 Pattern', [8301])},
- 'Tg18Ln816Pattern': {'109820': ('TG18-LN8-16 Pattern', [8301])},
- 'Tg18Ln817Pattern': {'109821': ('TG18-LN8-17 Pattern', [8301])},
- 'Tg18Ln818Pattern': {'109822': ('TG18-LN8-18 Pattern', [8301])},
- 'Tg18Lph10Pattern': {'109855': ('TG18-LPH10 Pattern', [8301])},
- 'Tg18Lph50Pattern': {'109856': ('TG18-LPH50 Pattern', [8301])},
- 'Tg18Lph89Pattern': {'109857': ('TG18-LPH89 Pattern', [8301])},
- 'Tg18Lpv10Pattern': {'109858': ('TG18-LPV10 Pattern', [8301])},
- 'Tg18Lpv50Pattern': {'109859': ('TG18-LPV50 Pattern', [8301])},
- 'Tg18Lpv89Pattern': {'109860': ('TG18-LPV89 Pattern', [8301])},
- 'Tg18Mm1Image': {'109880': ('TG18-MM1 Image', [8301])},
- 'Tg18Mm2Image': {'109881': ('TG18-MM2 Image', [8301])},
- 'Tg18MpPattern': {'109846': ('TG18-MP Pattern', [8301])},
- 'Tg18Ns10Pattern': {'109862': ('TG18-NS10 Pattern', [8301])},
- 'Tg18Ns50Pattern': {'109863': ('TG18-NS50 Pattern', [8301])},
- 'Tg18Ns89Pattern': {'109864': ('TG18-NS89 Pattern', [8301])},
- 'Tg18PqcPattern': {'109803': ('TG18-PQC Pattern', [8301])},
- 'Tg18PxPattern': {'109853': ('TG18-PX Pattern', [8301])},
- 'Tg18QcPattern': {'109801': ('TG18-QC Pattern', [8301])},
- 'Tg18Rh10Pattern': {'109847': ('TG18-RH10 Pattern', [8301])},
- 'Tg18Rh50Pattern': {'109848': ('TG18-RH50 Pattern', [8301])},
- 'Tg18Rh89Pattern': {'109849': ('TG18-RH89 Pattern', [8301])},
- 'Tg18Rv10Pattern': {'109850': ('TG18-RV10 Pattern', [8301])},
- 'Tg18Rv50Pattern': {'109851': ('TG18-RV50 Pattern', [8301])},
- 'Tg18Rv89Pattern': {'109852': ('TG18-RV89 Pattern', [8301])},
- 'Tg18Un10Pattern': {'109841': ('TG18-UN10 Pattern', [8301])},
- 'Tg18Un80Pattern': {'109842': ('TG18-UN80 Pattern', [8301])},
- 'Tg18Unl10Pattern': {'109843': ('TG18-UNL10 Pattern', [8301, 8302])},
- 'Tg18Unl80Pattern': {'109844': ('TG18-UNL80 Pattern', [8301, 8302])},
  'ThicknessDeviationCategoryFromNormativeData': {'111931': ('Thickness '
                                                             'deviation '
                                                             'category from '
@@ -20357,7 +20338,7 @@ concepts['DCM'] = \
  'TimeCourseOfSignal': {'113066': ('Time course of signal', [218, 7180, 7469])},
  'TimeDomain': {'111920': ('Time domain', [4261])},
  'TimeOfFlight': {'114201': ('Time of flight', [8201])},
- 'TimeOfFlightAngioMrSignalIntensity': {'110802': ('Time Of Flight Angio MR '
+ 'TimeOfFlightAngioMRSignalIntensity': {'110802': ('Time Of Flight Angio MR '
                                                    'Signal Intensity',
                                                    [218, 7180, 7469])},
  'TimeOfLeadingHalfPeakConcentration': {'126372': ('Time of Leading Half-Peak '
@@ -20374,7 +20355,7 @@ concepts['DCM'] = \
  'TissueAirRatio': {'128433': ('Tissue Air Ratio', [10069])},
  'TissueFraction': {'128526': ('Tissue Fraction', [10069])},
  'TissueVelocity': {'110827': ('Tissue Velocity', [218, 7180, 7469])},
- 'Title21CfrSection900SubpartB': {'111239': ('Title 21 CFR Section 900, '
+ 'Title21CFRSection900SubpartB': {'111239': ('Title 21 CFR Section 900, '
                                              'Subpart B',
                                              [6045])},
  'Tmax': {'113084': ('Tmax', [218, 4108, 7180, 7469])},
@@ -20401,13 +20382,13 @@ concepts['DCM'] = \
                                                 [10050])},
  'TotalPlaqueVolume': {'122376': ('Total Plaque Volume', [3485])},
  'TotalPulmonaryResistance': {'122215': ('Total Pulmonary Resistance', [3619])},
- 'TotalRetinalThicknessIlmToBm': {'111929': ('Total retinal thickness (ILM to '
+ 'TotalRetinalThicknessILMToBM': {'111929': ('Total retinal thickness (ILM to '
                                              'BM)',
                                              [4262])},
- 'TotalRetinalThicknessIlmToIsOs': {'111927': ('Total retinal thickness (ILM '
+ 'TotalRetinalThicknessILMToISOS': {'111927': ('Total retinal thickness (ILM '
                                                'to IS-OS)',
                                                [4262])},
- 'TotalRetinalThicknessIlmToRpe': {'111928': ('Total retinal thickness (ILM to '
+ 'TotalRetinalThicknessILMToRPE': {'111928': ('Total retinal thickness (ILM to '
                                               'RPE)',
                                               [4262])},
  'TotalVascularResistance': {'122216': ('Total Vascular Resistance', [3619])},
@@ -20423,7 +20404,6 @@ concepts['DCM'] = \
  'TransmitFrequency': {'122098': ('Transmit Frequency', [3423])},
  'TransponderMarker': {'129306': ('Transponder Marker', [7111, 7112])},
  'Trastuzumab89Zr': {'126512': ('Trastuzumab ^89^Zr', [4021])},
- 'Trc10589Zr': {'126749': ('TRC105 ^89^Zr', [4021])},
  'TreatedVolume': {'130059': ('Treated Volume', [9534])},
  'TreatmentDeliveryType': {'121740': ('Treatment Delivery Type', [9250])},
  'TreeInBudSign': {'112127': ('Tree-in-bud sign', [6102, 6104])},
@@ -20432,17 +20412,19 @@ concepts['DCM'] = \
                                                 'model',
                                                 [7273])},
  'TrustRegion': {'113266': ('Trust-Region', [7274])},
- 'TsPyramid': {'122564': ('TS Pyramid', [3453])},
  'TubularShadow': {'112117': ('Tubular shadow', [6102, 6103])},
  'TumorBoardInputUsed': {'128221': ('Tumor Board Input Used', [7010])},
  'TumorGraft': {'127460': ('Tumor Graft', [637])},
  'TumorRegistryInputUsed': {'128222': ('Tumor Registry Input Used', [7010])},
  'TurntableScanMethod': {'114209': ('Turntable Scan Method', [8202])},
  'TwoChamber': {'122565': ('Two Chamber', [3453])},
- 'TwoCompartmentExchange2cxModel': {'126347': ('Two Compartment Exchange (2CX) '
+ 'TwoCompartmentExchange2CXModel': {'126347': ('Two Compartment Exchange (2CX) '
                                                'Model',
                                                [4101, 4106])},
  'TwoDimensionalMethod': {'112188': ('Two-dimensional method', [6140])},
+ 'URI': {'110037': ('URI', [405])},
+ 'US3DCAMModel': {'129018': ('US 3D CAM model', [7061])},
+ 'USBDiskEmulation': {'110030': ('USB Disk Emulation', [405])},
  'Ublituximab89Zr': {'126739': ('Ublituximab ^89^Zr', [4021])},
  'Ultrasound': {'US': ('Ultrasound', [29, 30])},
  'UltrasoundAttenuation': {'110833': ('Ultrasound Attenuation',
@@ -20486,8 +20468,6 @@ concepts['DCM'] = \
                                                     [3114, 6044])},
  'Unused': {'127177': ('Unused', [604])},
  'UprightStandMount': {'113954': ('Upright Stand Mount', [10031])},
- 'Uri': {'110037': ('URI', [405])},
- 'Us3dCamModel': {'129018': ('US 3D CAM model', [7061])},
  'UsableDoesNotMeetTheQualityControlStandard': {'111236': ('Usable - Does not '
                                                            'meet the quality '
                                                            'control standard',
@@ -20495,18 +20475,23 @@ concepts['DCM'] = \
  'UsableMeetsTheQualityControlStandard': {'111237': ('Usable - Meets the '
                                                      'quality control standard',
                                                      [6044])},
- 'UsbDiskEmulation': {'110030': ('USB Disk Emulation', [405])},
  'UseOfRestrictedFunction': {'110132': ('Use of Restricted Function',
                                         [401, 403])},
  'UserAuthentication': {'110114': ('User Authentication', [400])},
  'UserChosenValue': {'121410': ('User chosen value', [12301, 224, 4241, 4252])},
- 'UserDefinedAifRoi': {'126362': ('User-defined AIF ROI', [4103, 4106])},
+ 'UserDefinedAIFROI': {'126362': ('User-defined AIF ROI', [4103, 4106])},
  'UserSecurityAttributesChanged': {'110137': ('User Security Attributes '
                                               'Changed',
                                               [401, 403])},
  'UserSelectedMethod': {'122575': ('User selected method', [3456])},
  'UterineMalformations': {'111565': ('Uterine malformations', [6087, 6088])},
+ 'VMAT': {'130107': ('VMAT', [9511, 9524])},
  'VMaxMyocardial': {'109073': ('V max myocardial', [3337])},
+ 'VO2152BSA': {'122250': ('VO2 = 152 * BSA', [3664])},
+ 'VO2175BSA': {'122251': ('VO2 = 175 * BSA', [3664])},
+ 'VO2176BSA': {'122252': ('VO2 = 176 * BSA', [3664])},
+ 'VO2Vestpd10FIO2FE02': {'122249': ('VO2 = VeSTPD * 10 * (FIO2 - FE02)',
+                                    [3664])},
  'VWave': {'109052': ('V wave', [3339])},
  'VWaveOfNextBeat': {'109053': ('V wave of next beat', [3339])},
  'VWavePeakPressure': {'109034': ('V wave peak pressure', [3337, 3611])},
@@ -20611,22 +20596,26 @@ concepts['DCM'] = \
                                          [4250])},
  'VisualField102TestPattern': {'111801': ('Visual Field 10-2 Test Pattern',
                                           [4250])},
- 'VisualField1LtTestStrategy': {'111828': ('Visual Field 1-LT Test Strategy',
+ 'VisualField1LTTestStrategy': {'111828': ('Visual Field 1-LT Test Strategy',
                                            [4251])},
  'VisualField242TestPattern': {'111800': ('Visual Field 24-2 Test Pattern',
                                           [4250])},
- 'VisualField2LtTestStrategy': {'111829': ('Visual Field 2-LT Test Strategy',
-                                           [4251])},
- 'VisualField2ltDynamicTestStrategy': {'111833': ('Visual Field 2LT-Dynamic '
+ 'VisualField2LTDynamicTestStrategy': {'111833': ('Visual Field 2LT-Dynamic '
                                                   'Test Strategy',
                                                   [4251])},
- 'VisualField2ltNormalTestStrategy': {'111834': ('Visual Field 2LT-Normal Test '
+ 'VisualField2LTNormalTestStrategy': {'111834': ('Visual Field 2LT-Normal Test '
                                                  'Strategy',
                                                  [4251])},
+ 'VisualField2LTTestStrategy': {'111829': ('Visual Field 2-LT Test Strategy',
+                                           [4251])},
  'VisualField302TestPattern': {'111802': ('Visual Field 30-2 Test Pattern',
                                           [4250])},
  'VisualField604TestPattern': {'111803': ('Visual Field 60-4 Test Pattern',
                                           [4250])},
+ 'VisualFieldCLASSStrategy': {'111837': ('Visual Field CLASS Strategy',
+                                         [4251])},
+ 'VisualFieldCLIPTestStrategy': {'111836': ('Visual Field CLIP Test Strategy',
+                                            [4251])},
  'VisualFieldCentral40PointTestPattern': {'111805': ('Visual Field Central 40 '
                                                      'Point Test Pattern',
                                                      [4250])},
@@ -20636,10 +20625,6 @@ concepts['DCM'] = \
  'VisualFieldCentralTestPattern': {'111814': ('Visual Field Central Test '
                                               'Pattern',
                                               [4250])},
- 'VisualFieldClassStrategy': {'111837': ('Visual Field CLASS Strategy',
-                                         [4251])},
- 'VisualFieldClipTestStrategy': {'111836': ('Visual Field CLIP Test Strategy',
-                                            [4251])},
  'VisualFieldDynamicTestStrategy': {'111826': ('Visual Field Dynamic Test '
                                                'Strategy',
                                                [4251])},
@@ -20663,22 +20648,22 @@ concepts['DCM'] = \
  'VisualFieldFullThresholdTestStrategy': {'111818': ('Visual Field Full '
                                                      'Threshold Test Strategy',
                                                      [4251])},
- 'VisualFieldGTestPattern': {'111810': ('Visual Field G Test Pattern', [4250])},
- 'VisualFieldGateTestStrategy': {'111831': ('Visual Field GATE Test Strategy',
+ 'VisualFieldGATETestStrategy': {'111831': ('Visual Field GATE Test Strategy',
                                             [4251])},
+ 'VisualFieldGTestPattern': {'111810': ('Visual Field G Test Pattern', [4250])},
  'VisualFieldGateiTestStrategy': {'111832': ('Visual Field GATEi Test Strategy',
                                              [4251])},
  'VisualFieldIndex': {'111852': ('Visual Field Index', [4257])},
+ 'VisualFieldLVCTestPattern': {'111813': ('Visual Field LVC Test Pattern',
+                                          [4250])},
+ 'VisualFieldLVSTestStrategy': {'111830': ('Visual Field LVS Test Strategy',
+                                           [4251])},
  'VisualFieldLossDueToDiffuseDefect': {'111853': ('Visual Field Loss Due to '
                                                   'Diffuse Defect',
                                                   [4257])},
  'VisualFieldLossDueToLocalDefect': {'111854': ('Visual Field Loss Due to '
                                                 'Local Defect',
                                                 [4257])},
- 'VisualFieldLvcTestPattern': {'111813': ('Visual Field LVC Test Pattern',
-                                          [4250])},
- 'VisualFieldLvsTestStrategy': {'111830': ('Visual Field LVS Test Strategy',
-                                           [4251])},
  'VisualFieldMTestPattern': {'111811': ('Visual Field M Test Pattern', [4250])},
  'VisualFieldMaculaTestPattern': {'111804': ('Visual Field Macula Test Pattern',
                                              [4250])},
@@ -20696,21 +20681,21 @@ concepts['DCM'] = \
                                                        'Quantify-Defects Test '
                                                        'Strategy',
                                                        [4251])},
- 'VisualFieldSitaFastTestStrategy': {'111817': ('Visual Field SITA-Fast Test '
+ 'VisualFieldSITAFastTestStrategy': {'111817': ('Visual Field SITA-Fast Test '
                                                 'Strategy',
                                                 [4251])},
- 'VisualFieldSitaStandardTestStrategy': {'111815': ('Visual Field '
+ 'VisualFieldSITASWAPTestStrategy': {'111816': ('Visual Field SITA-SWAP Test '
+                                                'Strategy',
+                                                [4251])},
+ 'VisualFieldSITAStandardTestStrategy': {'111815': ('Visual Field '
                                                     'SITA-Standard Test '
                                                     'Strategy',
                                                     [4251])},
- 'VisualFieldSitaSwapTestStrategy': {'111816': ('Visual Field SITA-SWAP Test '
-                                                'Strategy',
-                                                [4251])},
+ 'VisualFieldTOPTestStrategy': {'111825': ('Visual Field TOP Test Strategy',
+                                           [4251])},
  'VisualFieldThreeZoneTestStrategy': {'111823': ('Visual Field Three-Zone Test '
                                                  'Strategy',
                                                  [4251])},
- 'VisualFieldTopTestStrategy': {'111825': ('Visual Field TOP Test Strategy',
-                                           [4251])},
  'VisualFieldTwoZoneTestStrategy': {'111822': ('Visual Field Two-Zone Test '
                                                'Strategy',
                                                [4251])},
@@ -20718,17 +20703,11 @@ concepts['DCM'] = \
                                                  'reflectance map',
                                                  [4271])},
  'VitreousVasculatureFlow': {'128261': ('Vitreous vasculature flow', [4271])},
- 'Vmat': {'130107': ('VMAT', [9511, 9524])},
- 'Vo2152Bsa': {'122250': ('VO2 = 152 * BSA', [3664])},
- 'Vo2175Bsa': {'122251': ('VO2 = 175 * BSA', [3664])},
- 'Vo2176Bsa': {'122252': ('VO2 = 176 * BSA', [3664])},
- 'Vo2Vestpd10Fio2Fe02': {'122249': ('VO2 = VeSTPD * 10 * (FIO2 - FE02)',
-                                    [3664])},
- 'Vo2femaleBsa13811704LogeAge0378Hrf': {'122248': ('VO2female = BSA (138.1 - '
+ 'Vo2femaleBSA13811704LogeAge0378Hrf': {'122248': ('VO2female = BSA (138.1 - '
                                                    '17.04 * loge(age) + '
                                                    '0.378*HRf)',
                                                    [3664])},
- 'Vo2maleBsa13811149LogeAge0378Hrf': {'122247': ('VO2male = BSA (138.1 - 11.49 '
+ 'Vo2maleBSA13811149LogeAge0378Hrf': {'122247': ('VO2male = BSA (138.1 - 11.49 '
                                                  '* loge(age) + 0.378*HRf)',
                                                  [3664])},
  'Voice': {'109110': ('Voice', [3000])},
@@ -20749,10 +20728,10 @@ concepts['DCM'] = \
                                                                        'frames',
                                                                        [7201])},
  'VolumeEditing': {'113077': ('Volume editing', [7203])},
- 'VolumeEstimatedFromSingle2dRegion': {'121216': ('Volume estimated from '
+ 'VolumeEstimatedFromSingle2DRegion': {'121216': ('Volume estimated from '
                                                   'single 2D region',
                                                   [218, 3471, 7469, 7472])},
- 'VolumeEstimatedFromThreeOrMoreNonCoplanar2dRegions': {'121217': ('Volume '
+ 'VolumeEstimatedFromThreeOrMoreNonCoplanar2DRegions': {'121217': ('Volume '
                                                                    'estimated '
                                                                    'from three '
                                                                    'or more '
@@ -20761,7 +20740,7 @@ concepts['DCM'] = \
                                                                    [218,
                                                                     7469,
                                                                     7472])},
- 'VolumeEstimatedFromTwoNonCoplanar2dRegions': {'121218': ('Volume estimated '
+ 'VolumeEstimatedFromTwoNonCoplanar2DRegions': {'121218': ('Volume estimated '
                                                            'from two '
                                                            'non-coplanar 2D '
                                                            'regions',
@@ -20846,6 +20825,9 @@ concepts['DCM'] = \
                                            [7275])},
  'Vp': {'126331': ('vp', [218, 4107, 7180, 7469])},
  'VulnerablePlaque': {'122389': ('Vulnerable Plaque', [3491])},
+ 'WHO': {'112029': ('WHO', [6147])},
+ 'WSI20XRGB': {'112704': ('WSI 20X RGB', [8131])},
+ 'WSI40XRGB': {'112705': ('WSI 40X RGB', [8131])},
  'WallMass': {'122447': ('Wall Mass',
                          [12255, 12257, 12258, 12259, 12265, 12271])},
  'WallToSeptum': {'110877': ('Wall To Septum', [7185])},
@@ -20883,7 +20865,6 @@ concepts['DCM'] = \
  'WhiteMatterT2Hyperintensity': {'110702': ('White Matter T2 Hyperintensity',
                                             [7140])},
  'WhitePattern': {'109941': ('White Pattern', [8301])},
- 'Who': {'112029': ('WHO', [6147])},
  'WholeBodyPod': {'130119': ('Whole Body Pod',
                              [7151, 7157, 7193, 9505, 9513, 9520])},
  'WholeEyeStructuralReflectanceMap': {'128278': ('Whole eye structural '
@@ -20905,8 +20886,6 @@ concepts['DCM'] = \
  'Workstation': {'WSD': ('Workstation', [30])},
  'WorldKennelClub': {'109221': ('World Kennel Club', [7481])},
  'WorldWideKennelClub': {'109222': ('World Wide Kennel Club', [7481])},
- 'Wsi20xRgb': {'112704': ('WSI 20X RGB', [8131])},
- 'Wsi40xRgb': {'112705': ('WSI 40X RGB', [8131])},
  'XDescentPressure': {'122208': ('x-descent pressure', [3611])},
  'XRayAngiography': {'XA': ('X-Ray Angiography', [29, 30])},
  'XRayAttenuation': {'110850': ('X-Ray Attenuation', [218, 7180, 7469])},
@@ -20915,67 +20894,106 @@ concepts['DCM'] = \
  'XRayOnTrigger': {'109005': ('X-Ray On Trigger', [3090])},
  'XRayReadingDevice': {'113942': ('X-Ray Reading Device', [7445])},
  'Xmab557489Zr': {'126734': ('XmAb5574 ^89^Zr', [4021])},
- 'YDescentPressure': {'122209': ('y-descent pressure', [3611])},
- 'YbrFullCbComponent': {'110838': ('YBR FULL CB Component',
+ 'YBRFULLCBComponent': {'110838': ('YBR FULL CB Component',
                                    [218, 7180, 7186, 7469])},
- 'YbrFullCrComponent': {'110839': ('YBR FULL CR Component',
+ 'YBRFULLCRComponent': {'110839': ('YBR FULL CR Component',
                                    [218, 7180, 7186, 7469])},
- 'YbrFullYComponent': {'110837': ('YBR FULL Y Component',
+ 'YBRFULLYComponent': {'110837': ('YBR FULL Y Component',
                                   [218, 7180, 7186, 7469])},
- 'YbrIctCbComponent': {'110844': ('YBR ICT CB Component',
+ 'YBRICTCBComponent': {'110844': ('YBR ICT CB Component',
                                   [218, 7180, 7186, 7469])},
- 'YbrIctCrComponent': {'110845': ('YBR ICT CR Component',
+ 'YBRICTCRComponent': {'110845': ('YBR ICT CR Component',
                                   [218, 7180, 7186, 7469])},
- 'YbrIctYComponent': {'110843': ('YBR ICT Y Component',
+ 'YBRICTYComponent': {'110843': ('YBR ICT Y Component',
                                  [218, 7180, 7186, 7469])},
- 'YbrPartialCbComponent': {'110841': ('YBR PARTIAL CB Component',
+ 'YBRPARTIALCBComponent': {'110841': ('YBR PARTIAL CB Component',
                                       [218, 7180, 7186, 7469])},
- 'YbrPartialCrComponent': {'110842': ('YBR PARTIAL CR Component',
+ 'YBRPARTIALCRComponent': {'110842': ('YBR PARTIAL CR Component',
                                       [218, 7180, 7186, 7469])},
- 'YbrPartialYComponent': {'110840': ('YBR PARTIAL Y Component',
+ 'YBRPARTIALYComponent': {'110840': ('YBR PARTIAL Y Component',
                                      [218, 7180, 7186, 7469])},
- 'YbrRctCbComponent': {'110847': ('YBR RCT CB Component',
+ 'YBRRCTCBComponent': {'110847': ('YBR RCT CB Component',
                                   [218, 7180, 7186, 7469])},
- 'YbrRctCrComponent': {'110848': ('YBR RCT CR Component',
+ 'YBRRCTCRComponent': {'110848': ('YBR RCT CR Component',
                                   [218, 7180, 7186, 7469])},
- 'YbrRctYComponent': {'110846': ('YBR RCT Y Component',
+ 'YBRRCTYComponent': {'110846': ('YBR RCT Y Component',
                                  [218, 7180, 7186, 7469])},
- 'YearAgo_1': {'111398': ('> 1 year ago', [6164])},
- 'YearChdRisk_10': {'122230': ('10 Year CHD Risk', [3667])},
+ 'YDescentPressure': {'122209': ('y-descent pressure', [3611])},
  'ZPointPressure': {'122210': ('z-point pressure', [3611])},
  'ZScore': {'113071': ('Z-score', [218, 7180, 7469])},
  'ZScoreOfMeasurement': {'121416': ('Z-Score of measurement',
                                     [221, 227, 7465])},
- 'cmAboveTabletop_1': {'113862': ('1cm above Tabletop', [10025])},
- 'cmAboveTabletop_30': {'113863': ('30cm above Tabletop', [10025])},
- 'cmFromIsocenterTowardSource_15': {'113860': ('15cm from Isocenter toward '
+ '_10X': {'112716': ('10X', [8132])},
+ '_10YearCHDRisk': {'122230': ('10 Year CHD Risk', [3667])},
+ '_12CarbonNucleus': {'130143': ('^12^Carbon nucleus', [9526])},
+ '_152Terbium': {'126606': ('^152^Terbium', [4020])},
+ '_15cmFromIsocenterTowardSource': {'113860': ('15cm from Isocenter toward '
                                                'Source',
                                                [10025])},
- 'cmFromTableCenterline_15': {'113864': ('15cm from Table Centerline',
+ '_15cmFromTableCenterline': {'113864': ('15cm from Table Centerline',
                                          [10025])},
- 'cmInFrontOfImageInputSurface_30': {'113861': ('30cm in Front of Image Input '
+ '_16OxygenNucleus': {'130144': ('^16^Oxygen nucleus', [9526])},
+ '_191mIridium': {'126604': ('^191m^Iridium', [18])},
+ '_1YearAgo': {'111398': ('> 1 year ago', [6164])},
+ '_1cmAboveTabletop': {'113862': ('1cm above Tabletop', [10025])},
+ '_1stWeek': {'111392': ('1st week', [6163])},
+ '_20X': {'112717': ('20X', [8132])},
+ '_28H189Zr': {'126752': ('28H1 ^89^Zr', [4021])},
+ '_2FAF18': {'126713': ('2FA F^18^', [4021])},
+ '_2SigmaDeviationOfPopulation': {'121417': ('2 Sigma deviation of population',
+                                             [221, 226, 7465])},
+ '_2ndWeek': {'111393': ('2nd week', [6163])},
+ '_30cmAboveTabletop': {'113863': ('30cm above Tabletop', [10025])},
+ '_30cmInFrontOfImageInputSurface': {'113861': ('30cm in Front of Image Input '
                                                 'Surface',
                                                 [10025])},
- 'd1289Zr_7': {'126751': ('7D12 ^89^Zr', [4021])},
- 'dDoseMap_3': {'128487': ('3D Dose Map', [10063])},
- 'dGel_3': {'128701': ('3D Gel', [7026])},
- 'dManufacturingModelingSystem_3': {'M3D': ('3D Manufacturing Modeling System',
+ '_35OfThermalDyeDilutionCO': {'109014': ('35% of thermal/dye dilution CO',
+                                          [3337])},
+ '_3DDoseMap': {'128487': ('3D Dose Map', [10063])},
+ '_3DGel': {'128701': ('3D Gel', [7026])},
+ '_3DManufacturingModelingSystem': {'M3D': ('3D Manufacturing Modeling System',
                                             [30])},
- 'e1189Zr_7': {'126750': ('7E11 ^89^Zr', [4021])},
- 'faF18_2': {'126713': ('2FA F^18^', [4021])},
- 'h189Zr_28': {'126752': ('28H1 ^89^Zr', [4021])},
- 'mIridium_191': {'126604': ('^191m^Iridium', [18])},
- 'mManganese_52': {'126607': ('^52m^Manganese', [4020])},
- 'ndWeek_2': {'111393': ('2nd week', [6163])},
- 'rdWeek_3': {'111394': ('3rd week', [6163])},
- 'stWeek_1': {'111392': ('1st week', [6163])},
- 'x_10': {'112716': ('10X', [8132])},
- 'x_20': {'112717': ('20X', [8132])},
- 'x_40': {'112718': ('40X', [8132])},
- 'x_5': {'112715': ('5X', [8132])}}
+ '_3HeliumNucleus': {'130141': ('^3^Helium nucleus', [9526])},
+ '_3MonthsAgo': {'111396': ('< 3 months ago', [6164])},
+ '_3rdWeek': {'111394': ('3rd week', [6163])},
+ '_40X': {'112718': ('40X', [8132])},
+ '_43Scandium': {'126605': ('^43^Scandium', [4020])},
+ '_44Scandium': {'126600': ('^44^Scandium', [4020])},
+ '_4HeliumNucleus': {'130142': ('^4^Helium nucleus', [9526])},
+ '_4MonthsTo1YearAgo': {'111397': ('4 months to 1 year ago', [6164])},
+ '_4PointSegmentFindingScale': {'125223': ('4 Point Segment Finding Scale',
+                                           [12238])},
+ '_51Manganese': {'126601': ('^51^Manganese', [4020])},
+ '_52mManganese': {'126607': ('^52m^Manganese', [4020])},
+ '_5PointSegmentFindingScale': {'125224': ('5 Point Segment Finding Scale',
+                                           [12238])},
+ '_5PointSegmentFindingScaleWithGradedHypokinesis': {'125225': ('5 Point '
+                                                                'Segment '
+                                                                'Finding Scale '
+                                                                'With Graded '
+                                                                'Hypokinesis',
+                                                                [12238])},
+ '_5X': {'112715': ('5X', [8132])},
+ '_70Arsenic': {'126602': ('^70^Arsenic', [4020])},
+ '_70OfThermalDyeDilutionCO': {'109015': ('70% of thermal/dye dilution CO',
+                                          [3337])},
+ '_7D1289Zr': {'126751': ('7D12 ^89^Zr', [4021])},
+ '_7E1189Zr': {'126750': ('7E11 ^89^Zr', [4021])},
+ '_90Niobium': {'126603': ('^90^Niobium', [4020])}}
 
 concepts['LN'] = \
-{'ACInterval': {'59103-2': ('A-C Interval',
+{'ACASUM2000': {'33072-0': ('AC, ASUM 2000', [12012, 12013])},
+ 'ACByGAASUM2000': {'33145-4': ('AC by GA, ASUM 2000', [12012, 12015])},
+ 'ACByGAHadlock1984': {'33146-2': ('AC by GA, Hadlock 1984', [12012, 12015])},
+ 'ACByGAMerz1988': {'33148-8': ('AC by GA, Merz 1988', [12012, 12015])},
+ 'ACByGAShinozuka1996': {'33149-6': ('AC by GA, Shinozuka 1996',
+                                     [12012, 12015])},
+ 'ACCampbell1975': {'11889-3': ('AC, Campbell 1975', [12012, 12013])},
+ 'ACDerivedByGAChitty1994': {'33546-3': ('AC (derived) by GA, Chitty 1994',
+                                         [12012, 12015])},
+ 'ACHadlock1984': {'11892-7': ('AC, Hadlock 1984', [12012, 12013])},
+ 'ACHansmann1985': {'33073-8': ('AC, Hansmann1985', [12012, 12013])},
+ 'ACInterval': {'59103-2': ('A-C Interval',
                             [12200,
                              12204,
                              12207,
@@ -21004,6 +21022,14 @@ concepts['LN'] = \
                              12274,
                              12275,
                              12276])},
+ 'ACJeanty1982': {'33537-2': ('AC, Jeanty 1982', [12012, 12013])},
+ 'ACJeanty1984': {'11893-5': ('AC, Jeanty 1984', [12012, 12013])},
+ 'ACLessoway1998': {'33074-6': ('AC, Lessoway 1998', [12012, 12013])},
+ 'ACMeasuredByGAChitty1994': {'33147-0': ('AC (measured) by GA, Chitty 1994',
+                                          [12012, 12015])},
+ 'ACMertz1988': {'33075-3': ('AC, Mertz 1988', [12012, 12013])},
+ 'ACShinozuka1996': {'33076-1': ('AC, Shinozuka 1996', [12012, 12013])},
+ 'APADTAD': {'33191-8': ('APAD * TAD', [12005])},
  'APAbdominalDiameterLessoway1998': {'33077-9': ('A-P Abdominal Diameter, '
                                                  'Lessoway 1998',
                                                  [12012, 12013])},
@@ -21057,24 +21083,6 @@ concepts['LN'] = \
                                     12276])},
  'AbdominalCircumference': {'11979-2': ('Abdominal Circumference',
                                         [12005, 12279])},
- 'AcAsum2000': {'33072-0': ('AC, ASUM 2000', [12012, 12013])},
- 'AcByGaAsum2000': {'33145-4': ('AC by GA, ASUM 2000', [12012, 12015])},
- 'AcByGaHadlock1984': {'33146-2': ('AC by GA, Hadlock 1984', [12012, 12015])},
- 'AcByGaMerz1988': {'33148-8': ('AC by GA, Merz 1988', [12012, 12015])},
- 'AcByGaShinozuka1996': {'33149-6': ('AC by GA, Shinozuka 1996',
-                                     [12012, 12015])},
- 'AcCampbell1975': {'11889-3': ('AC, Campbell 1975', [12012, 12013])},
- 'AcDerivedByGaChitty1994': {'33546-3': ('AC (derived) by GA, Chitty 1994',
-                                         [12012, 12015])},
- 'AcHadlock1984': {'11892-7': ('AC, Hadlock 1984', [12012, 12013])},
- 'AcHansmann1985': {'33073-8': ('AC, Hansmann1985', [12012, 12013])},
- 'AcJeanty1982': {'33537-2': ('AC, Jeanty 1982', [12012, 12013])},
- 'AcJeanty1984': {'11893-5': ('AC, Jeanty 1984', [12012, 12013])},
- 'AcLessoway1998': {'33074-6': ('AC, Lessoway 1998', [12012, 12013])},
- 'AcMeasuredByGaChitty1994': {'33147-0': ('AC (measured) by GA, Chitty 1994',
-                                          [12012, 12015])},
- 'AcMertz1988': {'33075-3': ('AC, Mertz 1988', [12012, 12013])},
- 'AcShinozuka1996': {'33076-1': ('AC, Shinozuka 1996', [12012, 12013])},
  'AccelerationIndex': {'20167-3': ('Acceleration Index', [12119, 12121])},
  'AccelerationSlope': {'20167-3': ('Acceleration Slope',
                                    [12200,
@@ -21183,36 +21191,36 @@ concepts['LN'] = \
  'AorticRegurgitantFlow': {'79941-1': ('Aortic regurgitant flow', [12300])},
  'AorticRegurgitantFraction': {'79942-9': ('Aortic regurgitant fraction',
                                            [12300])},
- 'AorticRegurgitantJetAreaLvotArea': {'79943-7': ('Aortic regurgitant jet '
+ 'AorticRegurgitantJetAreaLVOTArea': {'79943-7': ('Aortic regurgitant jet '
                                                   'area/LVOT area %',
                                                   [12300])},
- 'AorticRegurgitantJetWidthLvotWidth': {'79944-5': ('Aortic regurgitant jet '
+ 'AorticRegurgitantJetWidthLVOTWidth': {'79944-5': ('Aortic regurgitant jet '
                                                     'width/LVOT width %',
                                                     [12300])},
- 'AorticRegurgitationPisaRadius': {'79945-2': ('Aortic regurgitation PISA '
+ 'AorticRegurgitationPISARadius': {'79945-2': ('Aortic regurgitation PISA '
                                                'radius',
                                                [12300])},
- 'AorticRegurgitationPisaVelocity': {'79946-0': ('Aortic regurgitation PISA '
+ 'AorticRegurgitationPISAVelocity': {'79946-0': ('Aortic regurgitation PISA '
                                                  'velocity',
                                                  [12300])},
  'AorticRegurgitationPressureHalfTime': {'79947-8': ('Aortic regurgitation '
                                                      'pressure half-time',
                                                      [12300])},
+ 'AorticRegurgitationVTI': {'79952-8': ('Aortic regurgitation VTI', [12300])},
  'AorticRegurgitationVenaContractaWidth': {'79948-6': ('Aortic regurgitation '
                                                        'vena contracta width',
                                                        [12300])},
  'AorticRegurgitationVmax': {'79949-4': ('Aortic regurgitation Vmax', [12300])},
- 'AorticRegurgitationVolumeContinuityVti': {'79950-2': ('Aortic regurgitation '
+ 'AorticRegurgitationVolumeContinuityVTI': {'79950-2': ('Aortic regurgitation '
                                                         'volume (Continuity '
                                                         'VTI)',
                                                         [12300])},
- 'AorticRegurgitationVolumePisa': {'79951-0': ('Aortic regurgitation volume '
+ 'AorticRegurgitationVolumePISA': {'79951-0': ('Aortic regurgitation volume '
                                                '(PISA)',
                                                [12300])},
- 'AorticRegurgitationVti': {'79952-8': ('Aortic regurgitation VTI', [12300])},
  'AorticRootDiameter': {'18015-8': ('Aortic Root Diameter', [12212]),
                         '79953-6': ('Aortic root diameter', [12300])},
- 'AorticRootDiameterBsa': {'79954-4': ('Aortic root diameter / BSA', [12300])},
+ 'AorticRootDiameterBSA': {'79954-4': ('Aortic root diameter / BSA', [12300])},
  'AorticRootOxygenContent': {'10232-7': ('Aortic Root Oxygen content', [3525])},
  'AorticSinotubularJunctionDimension': {'79955-1': ('Aortic sinotubular '
                                                     'junction dimension',
@@ -21222,18 +21230,18 @@ concepts['LN'] = \
                                                             'Junction to '
                                                             'Aortic Root Ratio',
                                                             [12273, 12274])},
+ 'AorticValveAreaContinuityVTI': {'79958-5': ('Aortic valve area (Continuity '
+                                              'VTI)',
+                                              [12300])},
+ 'AorticValveAreaContinuityVTIBSA': {'79959-3': ('Aortic valve area '
+                                                 '(Continuity VTI) / BSA',
+                                                 [12300])},
  'AorticValveAreaContinuityVmax': {'79956-9': ('Aortic valve area (Continuity '
                                                'Vmax)',
                                                [12300])},
- 'AorticValveAreaContinuityVmaxBsa': {'79957-7': ('Aortic valve area '
+ 'AorticValveAreaContinuityVmaxBSA': {'79957-7': ('Aortic valve area '
                                                   '(Continuity Vmax) / BSA',
                                                   [12300])},
- 'AorticValveAreaContinuityVti': {'79958-5': ('Aortic valve area (Continuity '
-                                              'VTI)',
-                                              [12300])},
- 'AorticValveAreaContinuityVtiBsa': {'79959-3': ('Aortic valve area '
-                                                 '(Continuity VTI) / BSA',
-                                                 [12300])},
  'AorticValveCuspSeparation': {'17996-0': ('Aortic Valve Cusp Separation',
                                            [12211,
                                             12270,
@@ -21255,9 +21263,8 @@ concepts['LN'] = \
  'AorticValvePeakInstantaneousGradient': {'79963-5': ('Aortic valve peak '
                                                       'instantaneous gradient',
                                                       [12300])},
+ 'AorticValveVTI': {'79965-0': ('Aortic valve VTI', [12300])},
  'AorticValveVmax': {'79964-3': ('Aortic valve Vmax', [12300])},
- 'AorticValveVti': {'79965-0': ('Aortic valve VTI', [12300])},
- 'ApadTad': {'33191-8': ('APAD * TAD', [12005])},
  'ArterialBloodBaseExcess': {'1925-7': ('Arterial Blood Base Excess', [3527])},
  'ArterialBloodCarbonDioxideContent': {'2026-3': ('Arterial Blood Carbon '
                                                   'dioxide content',
@@ -21282,11 +21289,43 @@ concepts['LN'] = \
  'AscendingAorticDiameter': {'18012-5': ('Ascending Aortic Diameter', [12212])},
  'AverageUltrasoundAge': {'11884-4': ('Average Ultrasound Age',
                                       [12012, 12013])},
- 'AxtByGaShinozuka1996': {'33150-4': ('AxT by GA, Shinozuka 1996',
+ 'AxtByGAShinozuka1996': {'33150-4': ('AxT by GA, Shinozuka 1996',
                                       [12012, 12015])},
  'AxtShinozuka1996': {'33078-7': ('AxT, Shinozuka 1996', [12012, 12013])},
  'BCSlope': {'59126-3': ('B-C Slope', [12262, 12263, 12271, 12272])},
- 'BdJeanty1982': {'33545-5': ('BD, Jeanty 1982', [12012, 12013])},
+ 'BDJeanty1982': {'33545-5': ('BD, Jeanty 1982', [12012, 12013])},
+ 'BPDASUM1989': {'33079-5': ('BPD, ASUM 1989', [12012, 12013])},
+ 'BPDAreaCorrected': {'11824-0': ('BPD area corrected', [12005, 12279])},
+ 'BPDByGAASUM2000': {'33151-2': ('BPD by GA, ASUM 2000', [12012, 12015])},
+ 'BPDByGAHadlock1984': {'33198-3': ('BPD by GA, Hadlock 1984', [12012, 12015])},
+ 'BPDByGAJeanty1982': {'33153-8': ('BPD by GA, Jeanty 1982', [12012, 12015])},
+ 'BPDByGAMerz1988': {'33154-6': ('BPD by GA, Merz 1988', [12012, 12015])},
+ 'BPDByGARempen1991': {'33155-3': ('BPD by GA, Rempen 1991', [12012, 12015])},
+ 'BPDByGAShinozuka1996': {'33156-1': ('BPD by GA, Shinozuka 1996',
+                                      [12012, 12015])},
+ 'BPDDoubilet1993': {'11900-8': ('BPD, Doubilet 1993', [12012, 12013])},
+ 'BPDHadlock1984': {'11902-4': ('BPD, Hadlock 1984', [12012, 12013])},
+ 'BPDHansmann1985': {'11903-2': ('BPD, Hansmann 1985', [12012, 12013])},
+ 'BPDHansmann1986': {'33538-0': ('BPD, Hansmann 1986', [12012, 12013])},
+ 'BPDJeanty1982': {'33539-8': ('BPD, Jeanty 1982', [12012, 12013])},
+ 'BPDJeanty1984': {'11905-7': ('BPD, Jeanty 1984', [12012, 12013])},
+ 'BPDKurtz1980': {'11906-5': ('BPD, Kurtz 1980', [12012, 12013])},
+ 'BPDLessoway1998': {'33080-3': ('BPD, Lessoway 1998', [12012, 12013])},
+ 'BPDMertz1988': {'33081-1': ('BPD, Mertz 1988', [12012, 12013])},
+ 'BPDOiChitty1997': {'33086-0': ('BPD-oi, Chitty 1997', [12012, 12013])},
+ 'BPDOoChitty1997': {'33087-8': ('BPD-oo, Chitty 1997', [12012, 12013])},
+ 'BPDOsaka1989': {'33082-9': ('BPD, Osaka 1989', [12012, 12013])},
+ 'BPDOuterInnerByGAChitty1994': {'33556-2': ('BPD outer-inner by GA, Chitty '
+                                             '1994',
+                                             [12012, 12015])},
+ 'BPDOuterOuterByGAChitty1994': {'33152-0': ('BPD outer-outer by GA, Chitty '
+                                             '1994',
+                                             [12012, 12015])},
+ 'BPDRempen1991': {'33083-7': ('BPD, Rempen 1991', [12012, 12013])},
+ 'BPDSabbagha1978': {'11907-3': ('BPD, Sabbagha 1978', [12012, 12013])},
+ 'BPDShinozuka1996': {'33084-5': ('BPD, Shinozuka 1996', [12012, 12013])},
+ 'BPDTokyo1986': {'33085-2': ('BPD, Tokyo 1986', [12012, 12013])},
+ 'BSA': {'8277-6': ('BSA', [3455])},
  'BiparietalDiameter': {'11820-8': ('Biparietal Diameter', [12005, 12279])},
  'BloodBaseExcess': {'11555-0': ('Blood Base Excess', [3527])},
  'BloodCarbonDioxideContent': {'20565-8': ('Blood Carbon dioxide content',
@@ -21298,41 +21337,10 @@ concepts['LN'] = \
                                             [3524])},
  'BloodOxygenSaturation': {'20564-1': ('Blood Oxygen saturation', [3526])},
  'BloodPh': {'11558-4': ('Blood pH', [3528])},
- 'BpdAreaCorrected': {'11824-0': ('BPD area corrected', [12005, 12279])},
- 'BpdAsum1989': {'33079-5': ('BPD, ASUM 1989', [12012, 12013])},
- 'BpdByGaAsum2000': {'33151-2': ('BPD by GA, ASUM 2000', [12012, 12015])},
- 'BpdByGaHadlock1984': {'33198-3': ('BPD by GA, Hadlock 1984', [12012, 12015])},
- 'BpdByGaJeanty1982': {'33153-8': ('BPD by GA, Jeanty 1982', [12012, 12015])},
- 'BpdByGaMerz1988': {'33154-6': ('BPD by GA, Merz 1988', [12012, 12015])},
- 'BpdByGaRempen1991': {'33155-3': ('BPD by GA, Rempen 1991', [12012, 12015])},
- 'BpdByGaShinozuka1996': {'33156-1': ('BPD by GA, Shinozuka 1996',
-                                      [12012, 12015])},
- 'BpdDoubilet1993': {'11900-8': ('BPD, Doubilet 1993', [12012, 12013])},
- 'BpdHadlock1984': {'11902-4': ('BPD, Hadlock 1984', [12012, 12013])},
- 'BpdHansmann1985': {'11903-2': ('BPD, Hansmann 1985', [12012, 12013])},
- 'BpdHansmann1986': {'33538-0': ('BPD, Hansmann 1986', [12012, 12013])},
- 'BpdJeanty1982': {'33539-8': ('BPD, Jeanty 1982', [12012, 12013])},
- 'BpdJeanty1984': {'11905-7': ('BPD, Jeanty 1984', [12012, 12013])},
- 'BpdKurtz1980': {'11906-5': ('BPD, Kurtz 1980', [12012, 12013])},
- 'BpdLessoway1998': {'33080-3': ('BPD, Lessoway 1998', [12012, 12013])},
- 'BpdMertz1988': {'33081-1': ('BPD, Mertz 1988', [12012, 12013])},
- 'BpdOiChitty1997': {'33086-0': ('BPD-oi, Chitty 1997', [12012, 12013])},
- 'BpdOoChitty1997': {'33087-8': ('BPD-oo, Chitty 1997', [12012, 12013])},
- 'BpdOsaka1989': {'33082-9': ('BPD, Osaka 1989', [12012, 12013])},
- 'BpdOuterInnerByGaChitty1994': {'33556-2': ('BPD outer-inner by GA, Chitty '
-                                             '1994',
-                                             [12012, 12015])},
- 'BpdOuterOuterByGaChitty1994': {'33152-0': ('BPD outer-outer by GA, Chitty '
-                                             '1994',
-                                             [12012, 12015])},
- 'BpdRempen1991': {'33083-7': ('BPD, Rempen 1991', [12012, 12013])},
- 'BpdSabbagha1978': {'11907-3': ('BPD, Sabbagha 1978', [12012, 12013])},
- 'BpdShinozuka1996': {'33084-5': ('BPD, Shinozuka 1996', [12012, 12013])},
- 'BpdTokyo1986': {'33085-2': ('BPD, Tokyo 1986', [12012, 12013])},
  'BpdaHadlock1982': {'11901-6': ('BPDa, Hadlock 1982', [12012, 12013])},
- 'BrainMri': {'24590-2': ('Brain MRI', [646])},
- 'BrainPet': {'44138-6': ('Brain PET', [646])},
- 'BrainSpect': {'39632-5': ('Brain SPECT', [646])},
+ 'BrainMRI': {'24590-2': ('Brain MRI', [646])},
+ 'BrainPET': {'44138-6': ('Brain PET', [646])},
+ 'BrainSPECT': {'39632-5': ('Brain SPECT', [646])},
  'BreastBilateralMammogram': {'36626-0': ('breast - bilateral mammogram',
                                           [6050, 6083])},
  'BreastBilateralMr': {'30795-9': ('breast - bilateral mr', [6050, 6083])},
@@ -21373,7 +21381,6 @@ concepts['LN'] = \
  'BreastUnilateralMrWoContrast': {'46333-1': ('breast - unilateral mr wo '
                                               'contrast',
                                               [6050, 6083])},
- 'Bsa': {'8277-6': ('BSA', [3455])},
  'CEDistance': {'59122-2': ('C-E Distance',
                             [12251,
                              12262,
@@ -21383,6 +21390,36 @@ concepts['LN'] = \
                              12268,
                              12271,
                              12272])},
+ 'CKDEPIFormulaEstimationOfGFR': {'62238-1': ('CKD-EPI Formula estimation of '
+                                              'GFR',
+                                              [10046])},
+ 'CRLASUM1991': {'33089-4': ('CRL, ASUM 1991', [12012, 12013])},
+ 'CRLASUM2000': {'33090-2': ('CRL, ASUM 2000', [12012, 12013])},
+ 'CRLByGAASUM2000': {'33159-5': ('CRL by GA ASUM 2000', [12012, 12015])},
+ 'CRLByGARempen1991': {'33160-3': ('CRL by GA, Rempen1991', [12012, 12015])},
+ 'CRLByGAShinozuka1996': {'33161-1': ('CRL by GA, Shinozuka 1996',
+                                      [12012, 12015])},
+ 'CRLDaya1993': {'33091-0': ('CRL, Daya 1993', [12012, 12013])},
+ 'CRLHadlock1992': {'11910-7': ('CRL, Hadlock 1992', [12012, 12013])},
+ 'CRLHansmann1985': {'11911-5': ('CRL, Hansmann 1985', [12012, 12013])},
+ 'CRLHansmann1986': {'33540-6': ('CRL, Hansmann 1986', [12012, 12013])},
+ 'CRLJeanty1982': {'33092-8': ('CRL, Jeanty 1982', [12012, 12013])},
+ 'CRLJeanty1984': {'11917-2': ('CRL, Jeanty 1984', [12012, 12013])},
+ 'CRLNelson1981': {'11913-1': ('CRL, Nelson 1981', [12012, 12013])},
+ 'CRLOsaka1989': {'33093-6': ('CRL, Osaka 1989', [12012, 12013])},
+ 'CRLRempen1991': {'33094-4': ('CRL, Rempen 1991', [12012, 12013])},
+ 'CRLRobinson1975': {'11914-9': ('CRL, Robinson 1975', [12012, 12013])},
+ 'CRLShinozuka1996': {'33095-1': ('CRL, Shinozuka 1996', [12012, 12013])},
+ 'CRLTokyo1986': {'33096-9': ('CRL, Tokyo 1986', [12012, 12013])},
+ 'CT3DCAMModel': {'85040-4': ('CT 3D CAM model', [7061])},
+ 'CTAbdomenReport': {'11540-2': ('CT Abdomen Report', [7000])},
+ 'CTChestReport': {'11538-6': ('CT Chest Report', [7000])},
+ 'CTHeadReport': {'11539-4': ('CT Head Report', [7000])},
+ 'CTPerfusionHeadWithContrastIV': {'39142-5': ('CT perfusion head with '
+                                               'contrast IV',
+                                               [100])},
+ 'CTReport': {'18747-6': ('CT Report', [7000])},
+ 'CTUnspecifiedBodyRegion': {'25045-6': ('CT unspecified body region', [100])},
  'CapillaryBloodOxygenSaturation': {'2709-4': ('Capillary Blood Oxygen '
                                                'Saturation',
                                                [3526])},
@@ -21392,10 +21429,10 @@ concepts['LN'] = \
                                                          [3526])},
  'CardiacCatheterizationReport': {'18745-0': ('Cardiac Catheterization Report',
                                               [7000])},
- 'CardiacCircumferenceTransverseByUs': {'59073-7': ('Cardiac Circumference, '
+ 'CardiacCircumferenceTransverseByUS': {'59073-7': ('Cardiac Circumference, '
                                                     'transverse by US',
                                                     [12279])},
- 'CardiacCrossSectionalAreaTransverseByUs': {'59075-2': ('Cardiac '
+ 'CardiacCrossSectionalAreaTransverseByUS': {'59075-2': ('Cardiac '
                                                          'Cross-sectional '
                                                          'Area, transverse by '
                                                          'US',
@@ -21409,18 +21446,15 @@ concepts['LN'] = \
                                                   'Circumference Ratio',
                                                   [12279])},
  'CephalicIndex': {'11823-2': ('Cephalic Index', [12004, 12279])},
- 'CephalicIndexByGaChitty1994': {'33157-9': ('Cephalic Index by GA, Chitty '
+ 'CephalicIndexByGAChitty1994': {'33157-9': ('Cephalic Index by GA, Chitty '
                                              '1994',
                                              [12012, 12015])},
- 'CephalicIndexByGaHadlock1981': {'33158-7': ('Cephalic Index by GA, Hadlock '
+ 'CephalicIndexByGAHadlock1981': {'33158-7': ('Cephalic Index by GA, Hadlock '
                                               '1981',
                                               [12012, 12015])},
  'CervixLength': {'11961-0': ('Cervix Length', [12011])},
  'CisternaMagna': {'11860-4': ('Cisterna Magna', [12005, 12279])},
  'CisternaMagnaLength': {'11860-4': ('Cisterna Magna length', [12007])},
- 'CkdEpiFormulaEstimationOfGfr': {'62238-1': ('CKD-EPI Formula estimation of '
-                                              'GFR',
-                                              [10046])},
  'ClavicleLength': {'11962-8': ('Clavicle length', [12006])},
  'ClavicleLengthYarkoni1985': {'33088-6': ('Clavicle length, Yarkoni 1985',
                                            [12012, 12013])},
@@ -21442,7 +21476,7 @@ concepts['LN'] = \
                                        12271,
                                        12272,
                                        12274])},
- 'CockroftGaultFormulaEstimationOfGfr': {'35591-7': ('Cockroft-Gault Formula '
+ 'CockroftGaultFormulaEstimationOfGFR': {'35591-7': ('Cockroft-Gault Formula '
                                                      'estimation of GFR',
                                                      [10046])},
  'CommunicationOfCriticalResults': {'73568-8': ('Communication of Critical '
@@ -21452,34 +21486,7 @@ concepts['LN'] = \
  'CompositeUltrasoundAge': {'11888-5': ('Composite Ultrasound Age', [12019])},
  'ConceptionDate': {'33067-0': ('Conception Date', [12003])},
  'Conclusions': {'55110-1': ('Conclusions', [7001])},
- 'CrlAsum1991': {'33089-4': ('CRL, ASUM 1991', [12012, 12013])},
- 'CrlAsum2000': {'33090-2': ('CRL, ASUM 2000', [12012, 12013])},
- 'CrlByGaAsum2000': {'33159-5': ('CRL by GA ASUM 2000', [12012, 12015])},
- 'CrlByGaRempen1991': {'33160-3': ('CRL by GA, Rempen1991', [12012, 12015])},
- 'CrlByGaShinozuka1996': {'33161-1': ('CRL by GA, Shinozuka 1996',
-                                      [12012, 12015])},
- 'CrlDaya1993': {'33091-0': ('CRL, Daya 1993', [12012, 12013])},
- 'CrlHadlock1992': {'11910-7': ('CRL, Hadlock 1992', [12012, 12013])},
- 'CrlHansmann1985': {'11911-5': ('CRL, Hansmann 1985', [12012, 12013])},
- 'CrlHansmann1986': {'33540-6': ('CRL, Hansmann 1986', [12012, 12013])},
- 'CrlJeanty1982': {'33092-8': ('CRL, Jeanty 1982', [12012, 12013])},
- 'CrlJeanty1984': {'11917-2': ('CRL, Jeanty 1984', [12012, 12013])},
- 'CrlNelson1981': {'11913-1': ('CRL, Nelson 1981', [12012, 12013])},
- 'CrlOsaka1989': {'33093-6': ('CRL, Osaka 1989', [12012, 12013])},
- 'CrlRempen1991': {'33094-4': ('CRL, Rempen 1991', [12012, 12013])},
- 'CrlRobinson1975': {'11914-9': ('CRL, Robinson 1975', [12012, 12013])},
- 'CrlShinozuka1996': {'33095-1': ('CRL, Shinozuka 1996', [12012, 12013])},
- 'CrlTokyo1986': {'33096-9': ('CRL, Tokyo 1986', [12012, 12013])},
  'CrownRumpLength': {'11957-8': ('Crown Rump Length', [12009])},
- 'Ct3dCamModel': {'85040-4': ('CT 3D CAM model', [7061])},
- 'CtAbdomenReport': {'11540-2': ('CT Abdomen Report', [7000])},
- 'CtChestReport': {'11538-6': ('CT Chest Report', [7000])},
- 'CtHeadReport': {'11539-4': ('CT Head Report', [7000])},
- 'CtPerfusionHeadWithContrastIv': {'39142-5': ('CT perfusion head with '
-                                               'contrast IV',
-                                               [100])},
- 'CtReport': {'18747-6': ('CT Report', [7000])},
- 'CtUnspecifiedBodyRegion': {'25045-6': ('CT unspecified body region', [100])},
  'CurrentProcedureDescriptions': {'55111-9': ('Current Procedure Descriptions',
                                               [7001])},
  'DEExcursion': {'59091-9': ('D-E Excursion',
@@ -21520,6 +21527,9 @@ concepts['LN'] = \
                           12274,
                           12275,
                           12276])},
+ 'DEXASkeletalSystemStudyReport': {'38269-7': ('DEXA Skeletal System Study '
+                                               'Report',
+                                               [7000])},
  'DecelerationSlope': {'20216-8': ('Deceleration Slope',
                                    [12200,
                                     12204,
@@ -21583,15 +21593,12 @@ concepts['LN'] = \
                                    12304])},
  'DescendingAorticDiameter': {'18013-3': ('Descending Aortic Diameter',
                                           [12212])},
- 'DexaSkeletalSystemStudyReport': {'38269-7': ('DEXA Skeletal System Study '
-                                               'Report',
-                                               [7000])},
  'DiagnosticImagingReport': {'18748-4': ('Diagnostic Imaging Report', [7000])},
  'DiagnosticInterventionalRadiologyReport': {'47048-4': ('Diagnostic '
                                                          'Interventional '
                                                          'Radiology Report',
                                                          [7000])},
- 'DpDtByUs': {'59120-6': ('dP/dt by US',
+ 'DpDtByUS': {'59120-6': ('dP/dt by US',
                           [12254,
                            12257,
                            12258,
@@ -21609,6 +21616,12 @@ concepts['LN'] = \
                            12272,
                            12274,
                            12304])},
+ 'ECGReport': {'11524-0': ('ECG Report', [7000])},
+ 'EDD': {'11778-8': ('EDD', [12003])},
+ 'EDDFromAverageUltrasoundAge': {'11781-2': ('EDD from average ultrasound age',
+                                             [12003])},
+ 'EDDFromLMP': {'11779-6': ('EDD from LMP', [12003])},
+ 'EDDFromOvulationDate': {'11780-4': ('EDD from ovulation date', [12003])},
  'EFSlope': {'59128-9': ('E-F Slope',
                          [12200,
                           12204,
@@ -21638,6 +21651,41 @@ concepts['LN'] = \
                           12274,
                           12275,
                           12276])},
+ 'EFW1ByShinozuka1996': {'33141-3': ('EFW1 by Shinozuka 1996', [12012, 12014])},
+ 'EFW2ByShinozuka1996': {'33142-1': ('EFW2 by Shinozuka 1996', [12012, 12014])},
+ 'EFW3ByShinozuka1996': {'33143-9': ('EFW3 by Shinozuka 1996', [12012, 12014])},
+ 'EFWByACAndBPDShepard1982': {'11739-0': ('EFW by AC and BPD, Shepard 1982',
+                                          [12012, 12014])},
+ 'EFWByACBPDFLHCHadlock1985': {'11732-5': ('EFW by AC, BPD, FL, HC, Hadlock '
+                                           '1985',
+                                           [12012, 12014])},
+ 'EFWByACBPDFLHadlock1984': {'11734-1': ('EFW by AC, BPD, FL, Hadlock 1984',
+                                         [12012, 12014])},
+ 'EFWByACBPDFLHadlock1985': {'11735-8': ('EFW by AC, BPD, FL, Hadlock 1985',
+                                         [12012, 12014])},
+ 'EFWByACBPDHadlock1984': {'11738-2': ('EFW by AC, BPD, Hadlock 1984',
+                                       [12012, 12014])},
+ 'EFWByACCampbell1975': {'11756-4': ('EFW by AC, Campbell 1975',
+                                     [12012, 12014])},
+ 'EFWByACFLHCHadlock1985': {'11746-5': ('EFW by AC, FL, HC, Hadlock 1985',
+                                        [12012, 12014])},
+ 'EFWByACFLHadlock1984': {'11750-7': ('EFW by AC, FL, Hadlock 1984',
+                                      [12012, 12014])},
+ 'EFWByACFLHadlock1985': {'11751-5': ('EFW by AC, FL, Hadlock 1985',
+                                      [12012, 12014])},
+ 'EFWByACHCHadlock1984': {'11754-9': ('EFW by AC, HC Hadlock 1984',
+                                      [12012, 12014])},
+ 'EFWByBPDAPADTADFLTokyo1987': {'33144-7': ('EFW by BPD, APAD, TAD, FL, Tokyo '
+                                            '1987',
+                                            [12012, 12014])},
+ 'EFWByBPDFTAFLOsaka1990': {'33140-5': ('EFW by BPD, FTA, FL, Osaka 1990',
+                                        [12012, 12014])},
+ 'EFWByBPDTTDHansmann1986': {'33139-7': ('EFW by BPD, TTD, Hansmann 1986',
+                                         [12012, 12014])},
+ 'EFWByGAHadlock1991': {'33162-9': ('EFW by GA, Hadlock 1991', [12012, 12015])},
+ 'EFWByGAHansmann1986': {'33163-7': ('EFW by GA, Hansmann 1986',
+                                     [12012, 12015])},
+ 'EFWPercentileRank': {'11767-1': ('EFW percentile rank', [12019])},
  'EVelocityToAnnulusEVelocityRatio': {'59111-5': ('E Velocity to Annulus E '
                                                   'Velocity Ratio',
                                                   [12200,
@@ -21697,48 +21745,7 @@ concepts['LN'] = \
                                     12274,
                                     12275,
                                     12276])},
- 'EcgReport': {'11524-0': ('ECG Report', [7000])},
  'EchocardiographyReport': {'11522-0': ('Echocardiography Report', [7000])},
- 'Edd': {'11778-8': ('EDD', [12003])},
- 'EddFromAverageUltrasoundAge': {'11781-2': ('EDD from average ultrasound age',
-                                             [12003])},
- 'EddFromLmp': {'11779-6': ('EDD from LMP', [12003])},
- 'EddFromOvulationDate': {'11780-4': ('EDD from ovulation date', [12003])},
- 'Efw1ByShinozuka1996': {'33141-3': ('EFW1 by Shinozuka 1996', [12012, 12014])},
- 'Efw2ByShinozuka1996': {'33142-1': ('EFW2 by Shinozuka 1996', [12012, 12014])},
- 'Efw3ByShinozuka1996': {'33143-9': ('EFW3 by Shinozuka 1996', [12012, 12014])},
- 'EfwByAcAndBpdShepard1982': {'11739-0': ('EFW by AC and BPD, Shepard 1982',
-                                          [12012, 12014])},
- 'EfwByAcBpdFlHadlock1984': {'11734-1': ('EFW by AC, BPD, FL, Hadlock 1984',
-                                         [12012, 12014])},
- 'EfwByAcBpdFlHadlock1985': {'11735-8': ('EFW by AC, BPD, FL, Hadlock 1985',
-                                         [12012, 12014])},
- 'EfwByAcBpdFlHcHadlock1985': {'11732-5': ('EFW by AC, BPD, FL, HC, Hadlock '
-                                           '1985',
-                                           [12012, 12014])},
- 'EfwByAcBpdHadlock1984': {'11738-2': ('EFW by AC, BPD, Hadlock 1984',
-                                       [12012, 12014])},
- 'EfwByAcCampbell1975': {'11756-4': ('EFW by AC, Campbell 1975',
-                                     [12012, 12014])},
- 'EfwByAcFlHadlock1984': {'11750-7': ('EFW by AC, FL, Hadlock 1984',
-                                      [12012, 12014])},
- 'EfwByAcFlHadlock1985': {'11751-5': ('EFW by AC, FL, Hadlock 1985',
-                                      [12012, 12014])},
- 'EfwByAcFlHcHadlock1985': {'11746-5': ('EFW by AC, FL, HC, Hadlock 1985',
-                                        [12012, 12014])},
- 'EfwByAcHcHadlock1984': {'11754-9': ('EFW by AC, HC Hadlock 1984',
-                                      [12012, 12014])},
- 'EfwByBpdApadTadFlTokyo1987': {'33144-7': ('EFW by BPD, APAD, TAD, FL, Tokyo '
-                                            '1987',
-                                            [12012, 12014])},
- 'EfwByBpdFtaFlOsaka1990': {'33140-5': ('EFW by BPD, FTA, FL, Osaka 1990',
-                                        [12012, 12014])},
- 'EfwByBpdTtdHansmann1986': {'33139-7': ('EFW by BPD, TTD, Hansmann 1986',
-                                         [12012, 12014])},
- 'EfwByGaHadlock1991': {'33162-9': ('EFW by GA, Hadlock 1991', [12012, 12015])},
- 'EfwByGaHansmann1986': {'33163-7': ('EFW by GA, Hansmann 1986',
-                                     [12012, 12015])},
- 'EfwPercentileRank': {'11767-1': ('EFW percentile rank', [12019])},
  'EjectionTime': {'20222-6': ('Ejection Time',
                               [12254,
                                12257,
@@ -21815,14 +21822,43 @@ concepts['LN'] = \
                                  12265,
                                  12271,
                                  12304])},
- 'EstimatedLmpByEdd': {'33066-2': ('Estimated LMP by EDD', [12003])},
+ 'EstimatedLMPByEDD': {'33066-2': ('Estimated LMP by EDD', [12003])},
  'EstimatedWeight': {'11727-5': ('Estimated Weight', [12019])},
  'ExerciseStressTestReport': {'18752-6': ('Exercise Stress Test Report',
                                           [7000])},
- 'FemaleSingletonBwpByGaArbuckle1993': {'33187-6': ('Female Singleton BWP by '
+ 'FLAC': {'11871-1': ('FL/AC', [12004, 12279])},
+ 'FLBPD': {'11872-9': ('FL/BPD', [12004, 12279])},
+ 'FLByGAASUM2000': {'33165-2': ('FL by GA, ASUM 2000', [12012, 12015])},
+ 'FLByGAChitty1994': {'33167-8': ('FL by GA, Chitty 1994', [12012, 12015])},
+ 'FLByGAHadlock1984': {'33166-0': ('FL by GA, Hadlock 1984', [12012, 12015])},
+ 'FLByGAJeanty1982': {'33168-6': ('FL by GA, Jeanty 1982', [12012, 12015])},
+ 'FLByGAMerz1988': {'33169-4': ('FL by GA, Merz 1988', [12012, 12015])},
+ 'FLByGAShinozuka1996': {'33170-2': ('FL by GA, Shinozuka 1996',
+                                     [12012, 12015])},
+ 'FLChitty1997': {'33098-5': ('FL, Chitty 1997', [12012, 12013])},
+ 'FLHC': {'11873-7': ('FL/HC', [12004, 12279])},
+ 'FLHadlock1984': {'11920-6': ('FL, Hadlock 1984', [12012, 12013])},
+ 'FLHansmann1985': {'11921-4': ('FL, Hansmann 1985', [12012, 12013])},
+ 'FLHansmann1986': {'33541-4': ('FL, Hansmann 1986', [12012, 12013])},
+ 'FLHohler1982': {'11922-2': ('FL, Hohler 1982', [12012, 12013])},
+ 'FLJeanty1982': {'33099-3': ('FL, Jeanty 1982', [12012, 12013])},
+ 'FLJeanty1984': {'11923-0': ('FL, Jeanty 1984', [12012, 12013])},
+ 'FLLessoway1998': {'33100-9': ('FL, Lessoway 1998', [12012, 12013])},
+ 'FLMerz1987': {'11924-8': ('FL, Merz 1987', [12012, 12013])},
+ 'FLMerz1988': {'33542-2': ('FL, Merz 1988', [12012, 12013])},
+ 'FLOsaka1989': {'33101-7': ('FL, Osaka 1989', [12012, 12013])},
+ 'FLShinozuka1996': {'33102-5': ('FL, Shinozuka 1996', [12012, 12013])},
+ 'FLTokyo1986': {'33103-3': ('FL, Tokyo 1986', [12012, 12013])},
+ 'FWPByGAAlexander1996': {'33185-0': ('FWP by GA, Alexander, 1996',
+                                      [12012, 12016])},
+ 'FWPByGABrenner1976': {'33189-2': ('FWP by GA, Brenner 1976', [12012, 12016])},
+ 'FWPByGAHadlock1985': {'33190-0': ('FWP by GA, Hadlock 1985', [12012, 12016])},
+ 'FWPByGAWilliams1982': {'33184-3': ('FWP by GA, Williams, 1982',
+                                     [12012, 12016])},
+ 'FemaleSingletonBWPByGAArbuckle1993': {'33187-6': ('Female Singleton BWP by '
                                                     'GA, Arbuckle 1993',
                                                     [12012, 12016])},
- 'FemaleTwinsBwpByGaArbuckle1993': {'33188-4': ('Female Twins BWP by GA, '
+ 'FemaleTwinsBWPByGAArbuckle1993': {'33188-4': ('Female Twins BWP by GA, '
                                                 'Arbuckle 1993',
                                                 [12012, 12016])},
  'FemurLength': {'11963-6': ('Femur Length', [12005, 12006, 12279])},
@@ -21831,7 +21867,7 @@ concepts['LN'] = \
                                                        'Cross-Sectional Area, '
                                                        'Osaka 1989',
                                                        [12012, 12013])},
- 'FibulaByGaJeanty1983': {'33164-5': ('Fibula by GA, Jeanty 1983',
+ 'FibulaByGAJeanty1983': {'33164-5': ('Fibula by GA, Jeanty 1983',
                                       [12012, 12015])},
  'FibulaJeanty1983': {'33097-7': ('Fibula, Jeanty 1983', [12012, 12013])},
  'FibulaLength': {'11964-4': ('Fibula length', [12006])},
@@ -21855,29 +21891,6 @@ concepts['LN'] = \
                               12274])},
  'Findings': {'59776-5': ('Findings', [7001])},
  'FirstQuadrantDiameter': {'11624-4': ('First Quadrant Diameter', [12008])},
- 'FlAc': {'11871-1': ('FL/AC', [12004, 12279])},
- 'FlBpd': {'11872-9': ('FL/BPD', [12004, 12279])},
- 'FlByGaAsum2000': {'33165-2': ('FL by GA, ASUM 2000', [12012, 12015])},
- 'FlByGaChitty1994': {'33167-8': ('FL by GA, Chitty 1994', [12012, 12015])},
- 'FlByGaHadlock1984': {'33166-0': ('FL by GA, Hadlock 1984', [12012, 12015])},
- 'FlByGaJeanty1982': {'33168-6': ('FL by GA, Jeanty 1982', [12012, 12015])},
- 'FlByGaMerz1988': {'33169-4': ('FL by GA, Merz 1988', [12012, 12015])},
- 'FlByGaShinozuka1996': {'33170-2': ('FL by GA, Shinozuka 1996',
-                                     [12012, 12015])},
- 'FlChitty1997': {'33098-5': ('FL, Chitty 1997', [12012, 12013])},
- 'FlHadlock1984': {'11920-6': ('FL, Hadlock 1984', [12012, 12013])},
- 'FlHansmann1985': {'11921-4': ('FL, Hansmann 1985', [12012, 12013])},
- 'FlHansmann1986': {'33541-4': ('FL, Hansmann 1986', [12012, 12013])},
- 'FlHc': {'11873-7': ('FL/HC', [12004, 12279])},
- 'FlHohler1982': {'11922-2': ('FL, Hohler 1982', [12012, 12013])},
- 'FlJeanty1982': {'33099-3': ('FL, Jeanty 1982', [12012, 12013])},
- 'FlJeanty1984': {'11923-0': ('FL, Jeanty 1984', [12012, 12013])},
- 'FlLessoway1998': {'33100-9': ('FL, Lessoway 1998', [12012, 12013])},
- 'FlMerz1987': {'11924-8': ('FL, Merz 1987', [12012, 12013])},
- 'FlMerz1988': {'33542-2': ('FL, Merz 1988', [12012, 12013])},
- 'FlOsaka1989': {'33101-7': ('FL, Osaka 1989', [12012, 12013])},
- 'FlShinozuka1996': {'33102-5': ('FL, Shinozuka 1996', [12012, 12013])},
- 'FlTokyo1986': {'33103-3': ('FL, Tokyo 1986', [12012, 12013])},
  'FlowArea': {'20226-7': ('Flow Area',
                           [12253,
                            12257,
@@ -21949,20 +21962,22 @@ concepts['LN'] = \
                                        12272,
                                        12274,
                                        12304])},
- 'FwpByGaAlexander1996': {'33185-0': ('FWP by GA, Alexander, 1996',
-                                      [12012, 12016])},
- 'FwpByGaBrenner1976': {'33189-2': ('FWP by GA, Brenner 1976', [12012, 12016])},
- 'FwpByGaHadlock1985': {'33190-0': ('FWP by GA, Hadlock 1985', [12012, 12016])},
- 'FwpByGaWilliams1982': {'33184-3': ('FWP by GA, Williams, 1982',
-                                     [12012, 12016])},
+ 'GSByGARempen1991': {'33171-0': ('GS by GA, Rempen 1991', [12012, 12015])},
+ 'GSDaya1991': {'33104-1': ('GS, Daya 1991', [12012, 12013])},
+ 'GSHansmann1979': {'33105-8': ('GS, Hansmann 1979', [12012, 12013])},
+ 'GSHansmann1982': {'33106-6': ('GS, Hansmann 1982', [12012, 12013])},
+ 'GSHellman1969': {'11928-9': ('GS, Hellman 1969', [12012, 12013])},
+ 'GSNyberg1992': {'33107-4': ('GS, Nyberg 1992', [12012, 12013])},
+ 'GSRempen1991': {'11929-7': ('GS, Rempen 1991', [12012, 12013])},
+ 'GSTokyo1986': {'33108-2': ('GS, Tokyo 1986', [12012, 12013])},
  'GestationalAge': {'18185-9': ('Gestational Age', [12019])},
- 'GestationalAgeByLmp': {'11885-1': ('Gestational Age by LMP',
+ 'GestationalAgeByLMP': {'11885-1': ('Gestational Age by LMP',
                                      [12012, 12013, 12019])},
  'GestationalAgeByOvulationDate': {'11886-9': ('Gestational Age by ovulation '
                                                'date',
                                                [12018])},
  'GestationalSacDiameter': {'11850-5': ('Gestational Sac Diameter', [12009])},
- 'GlomerularFiltrationRateBlackMdrd': {'48643-1': ('Glomerular Filtration Rate '
+ 'GlomerularFiltrationRateBlackMDRD': {'48643-1': ('Glomerular Filtration Rate '
                                                    'black (MDRD)',
                                                    [10046])},
  'GlomerularFiltrationRateCreatinineBasedFormulaSchwartz': {'50384-7': ('Glomerular '
@@ -21977,46 +21992,58 @@ concepts['LN'] = \
                                                               'Cystatin-based '
                                                               'formula',
                                                               [10046])},
- 'GlomerularFiltrationRateFemaleMdrd': {'50044-7': ('Glomerular Filtration '
+ 'GlomerularFiltrationRateFemaleMDRD': {'50044-7': ('Glomerular Filtration '
                                                     'Rate female (MDRD)',
                                                     [10046])},
- 'GlomerularFiltrationRateMdrd': {'33914-3': ('Glomerular Filtration Rate '
+ 'GlomerularFiltrationRateMDRD': {'33914-3': ('Glomerular Filtration Rate '
                                               '(MDRD)',
                                               [10046])},
- 'GlomerularFiltrationRateNonBlackMdrd': {'48642-3': ('Glomerular Filtration '
+ 'GlomerularFiltrationRateNonBlackMDRD': {'48642-3': ('Glomerular Filtration '
                                                       'Rate non-black (MDRD)',
                                                       [10046])},
- 'GsByGaRempen1991': {'33171-0': ('GS by GA, Rempen 1991', [12012, 12015])},
- 'GsDaya1991': {'33104-1': ('GS, Daya 1991', [12012, 12013])},
- 'GsHansmann1979': {'33105-8': ('GS, Hansmann 1979', [12012, 12013])},
- 'GsHansmann1982': {'33106-6': ('GS, Hansmann 1982', [12012, 12013])},
- 'GsHellman1969': {'11928-9': ('GS, Hellman 1969', [12012, 12013])},
- 'GsNyberg1992': {'33107-4': ('GS, Nyberg 1992', [12012, 12013])},
- 'GsRempen1991': {'11929-7': ('GS, Rempen 1991', [12012, 12013])},
- 'GsTokyo1986': {'33108-2': ('GS, Tokyo 1986', [12012, 12013])},
- 'HcAc': {'11947-9': ('HC/AC', [12004, 12279])},
- 'HcAcByGaCampbell1977': {'33182-7': ('HC/AC by GA, Campbell 1977',
+ 'HCAC': {'11947-9': ('HC/AC', [12004, 12279])},
+ 'HCACByGACampbell1977': {'33182-7': ('HC/AC by GA, Campbell 1977',
                                       [12012, 12015])},
- 'HcAsum2000': {'33109-0': ('HC, ASUM 2000', [12012, 12013])},
- 'HcByGaAsum2000': {'33172-8': ('HC by GA, ASUM 2000', [12012, 12015])},
- 'HcByGaHadlock1984': {'33173-6': ('HC by GA, Hadlock 1984', [12012, 12015])},
- 'HcByGaJeanty1982': {'33175-1': ('HC by GA, Jeanty 1982', [12012, 12015])},
- 'HcByGaMerz1988': {'33176-9': ('HC by GA, Merz 1988', [12012, 12015])},
- 'HcDerivedByGaChitty1994': {'33174-4': ('HC derived by GA, Chitty 1994',
+ 'HCASUM2000': {'33109-0': ('HC, ASUM 2000', [12012, 12013])},
+ 'HCByGAASUM2000': {'33172-8': ('HC by GA, ASUM 2000', [12012, 12015])},
+ 'HCByGAHadlock1984': {'33173-6': ('HC by GA, Hadlock 1984', [12012, 12015])},
+ 'HCByGAJeanty1982': {'33175-1': ('HC by GA, Jeanty 1982', [12012, 12015])},
+ 'HCByGAMerz1988': {'33176-9': ('HC by GA, Merz 1988', [12012, 12015])},
+ 'HCDerivedByGAChitty1994': {'33174-4': ('HC derived by GA, Chitty 1994',
                                          [12012, 12015])},
- 'HcDerivedChitty1997': {'33111-6': ('HC derived, Chitty 1997',
+ 'HCDerivedChitty1997': {'33111-6': ('HC derived, Chitty 1997',
                                      [12012, 12013])},
- 'HcHadlock1984': {'11932-1': ('HC, Hadlock 1984', [12012, 12013])},
- 'HcHansmann1985': {'33112-4': ('HC, Hansmann 1985', [12012, 12013])},
- 'HcHansmann1986': {'33543-0': ('HC, Hansmann 1986', [12012, 12013])},
- 'HcJeanty1982': {'33113-2': ('HC, Jeanty 1982', [12012, 12013])},
- 'HcJeanty1984': {'11934-7': ('HC, Jeanty 1984', [12012, 12013])},
- 'HcLessoway1998': {'33114-0': ('HC, Lessoway 1998', [12012, 12013])},
- 'HcMeasuredChitty1997': {'33110-8': ('HC measured, Chitty 1997',
+ 'HCHadlock1984': {'11932-1': ('HC, Hadlock 1984', [12012, 12013])},
+ 'HCHansmann1985': {'33112-4': ('HC, Hansmann 1985', [12012, 12013])},
+ 'HCHansmann1986': {'33543-0': ('HC, Hansmann 1986', [12012, 12013])},
+ 'HCJeanty1982': {'33113-2': ('HC, Jeanty 1982', [12012, 12013])},
+ 'HCJeanty1984': {'11934-7': ('HC, Jeanty 1984', [12012, 12013])},
+ 'HCLessoway1998': {'33114-0': ('HC, Lessoway 1998', [12012, 12013])},
+ 'HCMeasuredChitty1997': {'33110-8': ('HC measured, Chitty 1997',
                                       [12012, 12013])},
- 'HcMerz1988': {'33115-7': ('HC Merz, 1988', [12012, 12013])},
+ 'HCMerz1988': {'33115-7': ('HC Merz, 1988', [12012, 12013])},
+ 'HRCorrectedMeanVelocityOfCircumferentialFiberShortening': {'59118-0': ('HR-Corrected '
+                                                                         'Mean '
+                                                                         'Velocity '
+                                                                         'of '
+                                                                         'Circumferential '
+                                                                         'Fiber '
+                                                                         'Shortening',
+                                                                         [12252,
+                                                                          12257,
+                                                                          12259,
+                                                                          12262,
+                                                                          12263,
+                                                                          12264,
+                                                                          12266,
+                                                                          12267,
+                                                                          12268,
+                                                                          12270,
+                                                                          12271,
+                                                                          12272,
+                                                                          12274])},
+ 'HeadCT': {'24725-4': ('Head CT', [646])},
  'HeadCircumference': {'11984-2': ('Head Circumference', [12005, 12279])},
- 'HeadCt': {'24725-4': ('Head CT', [646])},
  'HeartRate': {'8867-4': ('Heart rate',
                           [12200,
                            12204,
@@ -22109,36 +22136,18 @@ concepts['LN'] = \
                                                      [12216])},
  'History': {'11329-0': ('History', [7001, 7002])},
  'HolterStudyReport': {'18754-2': ('Holter Study Report', [7000])},
- 'HrCorrectedMeanVelocityOfCircumferentialFiberShortening': {'59118-0': ('HR-Corrected '
-                                                                         'Mean '
-                                                                         'Velocity '
-                                                                         'of '
-                                                                         'Circumferential '
-                                                                         'Fiber '
-                                                                         'Shortening',
-                                                                         [12252,
-                                                                          12257,
-                                                                          12259,
-                                                                          12262,
-                                                                          12263,
-                                                                          12264,
-                                                                          12266,
-                                                                          12267,
-                                                                          12268,
-                                                                          12270,
-                                                                          12271,
-                                                                          12272,
-                                                                          12274])},
  'HumerusJeanty1984': {'11936-2': ('Humerus, Jeanty 1984', [12012, 12013])},
  'HumerusLength': {'11966-9': ('Humerus length', [12006])},
- 'HumerusLengthAsum2000': {'33116-5': ('Humerus Length, ASUM 2000',
+ 'HumerusLengthASUM2000': {'33116-5': ('Humerus Length, ASUM 2000',
                                        [12012, 12013])},
- 'HumerusLengthByGaAsum2000': {'33177-7': ('Humerus Length by GA, ASUM 2000',
+ 'HumerusLengthByGAASUM2000': {'33177-7': ('Humerus Length by GA, ASUM 2000',
                                            [12012, 12015])},
  'HumerusLengthOsaka1989': {'33117-3': ('Humerus Length, Osaka 1989',
                                         [12012, 12013])},
  'HumerusMerz1987': {'11937-0': ('Humerus, Merz 1987', [12012, 12013])},
- 'IcaCcaVelocityRatio': {'33868-1': ('ICA/CCA velocity ratio', [12123])},
+ 'ICACCAVelocityRatio': {'33868-1': ('ICA/CCA velocity ratio', [12123])},
+ 'IODMayden1982': {'33122-3': ('IOD, Mayden 1982', [12012, 12013])},
+ 'IODTrout1994': {'33123-1': ('IOD, Trout 1994', [12012, 12013])},
  'Impressions': {'19005-8': ('Impressions', [6052, 7001])},
  'IndicationsForProcedure': {'18785-6': ('Indications for Procedure', [7001])},
  'InferiorVenaCavaCollapse': {'18050-5': ('Inferior Vena Cava % Collapse',
@@ -22149,11 +22158,11 @@ concepts['LN'] = \
                                           [12300])},
  'InnerOrbitalDiameter': {'33070-4': ('Inner Orbital Diameter', [12007])},
  'InternalDimension': {'59090-1': ('Internal Dimension', [12304])},
- 'InterventricularSeptumDiastolicDimension2d': {'79969-2': ('Interventricular '
+ 'InterventricularSeptumDiastolicDimension2D': {'79969-2': ('Interventricular '
                                                             'septum diastolic '
                                                             'dimension 2D',
                                                             [12300])},
- 'InterventricularSeptumDiastolicDimensionMm': {'79968-4': ('Interventricular '
+ 'InterventricularSeptumDiastolicDimensionMM': {'79968-4': ('Interventricular '
                                                             'septum diastolic '
                                                             'dimension MM',
                                                             [12300])},
@@ -22161,11 +22170,11 @@ concepts['LN'] = \
                                                           'Septum Diastolic '
                                                           'Thickness',
                                                           [12200, 12201])},
- 'InterventricularSeptumSystolicDimension2d': {'79971-8': ('Interventricular '
+ 'InterventricularSeptumSystolicDimension2D': {'79971-8': ('Interventricular '
                                                            'septum systolic '
                                                            'dimension 2D',
                                                            [12300])},
- 'InterventricularSeptumSystolicDimensionMm': {'79970-0': ('Interventricular '
+ 'InterventricularSeptumSystolicDimensionMM': {'79970-0': ('Interventricular '
                                                            'septum systolic '
                                                            'dimension MM',
                                                            [12300])},
@@ -22199,8 +22208,6 @@ concepts['LN'] = \
  'IntravascularSystolicBloodPressure': {'8480-6': ('Intravascular Systolic '
                                                    'Blood pressure',
                                                    [3611])},
- 'IodMayden1982': {'33122-3': ('IOD, Mayden 1982', [12012, 12013])},
- 'IodTrout1994': {'33123-1': ('IOD, Trout 1994', [12012, 12013])},
  'IsovolumicContractionTime': {'59084-4': ('Isovolumic Contraction Time',
                                            [12254,
                                             12257,
@@ -22254,6 +22261,64 @@ concepts['LN'] = \
                           12272,
                           12274])},
  'KeyImages': {'55113-5': ('Key Images', [7001])},
+ 'LMP': {'11955-2': ('LMP', [12003])},
+ 'LVBasalAnteriorTimeToSVmaxTsBasalAnterior': {'80036-7': ('LV basal anterior '
+                                                           'time to S Vmax '
+                                                           '(Ts-basal '
+                                                           'anterior)',
+                                                           [12300])},
+ 'LVBasalAnteroseptalTimeToSVmaxTSBasalAnteroseptal': {'80037-5': ('LV basal '
+                                                                   'anteroseptal '
+                                                                   'time to S '
+                                                                   'Vmax '
+                                                                   '(TS-basal '
+                                                                   'anteroseptal)',
+                                                                   [12300])},
+ 'LVBasalInferiorTimeToSVmaxTsBasalInferior': {'80038-3': ('LV basal inferior '
+                                                           'time to S Vmax '
+                                                           '(Ts-basal '
+                                                           'inferior)',
+                                                           [12300])},
+ 'LVBasalLateralTimeToSVmaxTsBasalLateral': {'80039-1': ('LV basal lateral '
+                                                         'time to S Vmax '
+                                                         '(Ts-basal lateral)',
+                                                         [12300])},
+ 'LVBasalPosteriorTimeToSVmaxTsBasalPosterior': {'80040-9': ('LV basal '
+                                                             'posterior time '
+                                                             'to S Vmax '
+                                                             '(Ts-basal '
+                                                             'posterior)',
+                                                             [12300])},
+ 'LVBasalSeptalTimeToSVmaxTsBasalSeptal': {'80041-7': ('LV basal septal time '
+                                                       'to S Vmax (Ts-basal '
+                                                       'septal)',
+                                                       [12300])},
+ 'LVMidAnteriorTimeToSVmaxTsMidAnterior': {'80042-5': ('LV mid anterior time '
+                                                       'to S Vmax (Ts-mid '
+                                                       'anterior)',
+                                                       [12300])},
+ 'LVMidAnteroseptalTimeToSVmaxTsMidAnteroseptal': {'80043-3': ('LV mid '
+                                                               'anteroseptal '
+                                                               'time to S Vmax '
+                                                               '(Ts-mid '
+                                                               'anteroseptal)',
+                                                               [12300])},
+ 'LVMidInferiorTimeToSVmaxTsMidInferior': {'80044-1': ('LV mid inferior time '
+                                                       'to S Vmax (Ts-mid '
+                                                       'inferior)',
+                                                       [12300])},
+ 'LVMidLateralTimeToSVmaxTsMidLateral': {'80045-8': ('LV mid lateral time to S '
+                                                     'Vmax (Ts-mid lateral)',
+                                                     [12300])},
+ 'LVMidPosteriorTimeToSVmaxTsMidPosterior': {'80046-6': ('LV mid posterior '
+                                                         'time to S Vmax '
+                                                         '(Ts-mid posterior)',
+                                                         [12300])},
+ 'LVMidSeptalTimeToSVmaxTsMidSeptal': {'80047-4': ('LV mid septal time to S '
+                                                   'Vmax (Ts-mid septal)',
+                                                   [12300])},
+ 'LVTsSDDyssynchronyIndex': {'80048-2': ('LV Ts-SD (Dyssynchrony Index)',
+                                         [12300])},
  'LateralVentricleWidth': {'12171-5': ('Lateral Ventricle width', [12007])},
  'LeafletSeparation': {'59109-9': ('Leaflet Separation',
                                    [12251,
@@ -22276,28 +22341,28 @@ concepts['LN'] = \
  'LeftAtrialAppendagePeakVelocity': {'29486-8': ('Left Atrial Appendage Peak '
                                                  'Velocity',
                                                  [12205])},
- 'LeftAtrialEndSystolicArea2c': {'79973-4': ('Left atrial end systolic area 2C',
+ 'LeftAtrialEndSystolicArea2C': {'79973-4': ('Left atrial end systolic area 2C',
                                              [12300])},
- 'LeftAtrialEndSystolicArea4c': {'79974-2': ('Left atrial end systolic area 4C',
+ 'LeftAtrialEndSystolicArea4C': {'79974-2': ('Left atrial end systolic area 4C',
                                              [12300])},
- 'LeftAtrialEndSystolicDiameterAp2d': {'79975-9': ('Left atrial end systolic '
+ 'LeftAtrialEndSystolicDiameterAP2D': {'79975-9': ('Left atrial end systolic '
                                                    'diameter (AP) 2D',
                                                    [12300])},
- 'LeftAtrialEndSystolicDiameterAp2dBsa': {'79976-7': ('Left atrial end '
+ 'LeftAtrialEndSystolicDiameterAP2DBSA': {'79976-7': ('Left atrial end '
                                                       'systolic diameter (AP) '
                                                       '2D / BSA',
                                                       [12300])},
- 'LeftAtrialEndSystolicDiameterApMm': {'79977-5': ('Left atrial end systolic '
+ 'LeftAtrialEndSystolicDiameterAPMM': {'79977-5': ('Left atrial end systolic '
                                                    'diameter (AP) MM',
                                                    [12300])},
- 'LeftAtrialEndSystolicDiameterApMmBsa': {'79978-3': ('Left atrial end '
+ 'LeftAtrialEndSystolicDiameterAPMMBSA': {'79978-3': ('Left atrial end '
                                                       'systolic diameter (AP) '
                                                       'MM / BSA',
                                                       [12300])},
- 'LeftAtrialEndSystolicLength2c': {'79979-1': ('Left atrial end systolic '
+ 'LeftAtrialEndSystolicLength2C': {'79979-1': ('Left atrial end systolic '
                                                'length 2C',
                                                [12300])},
- 'LeftAtrialEndSystolicLength4c': {'79980-9': ('Left atrial end systolic '
+ 'LeftAtrialEndSystolicLength4C': {'79980-9': ('Left atrial end systolic '
                                                'length 4C',
                                                [12300])},
  'LeftAtrialEndSystolicVolumeBiplaneAreaLength': {'79981-7': ('Left atrial end '
@@ -22305,27 +22370,27 @@ concepts['LN'] = \
                                                               'biplane '
                                                               '(area-length)',
                                                               [12300])},
- 'LeftAtrialEndSystolicVolumeBiplaneAreaLengthBsa': {'79982-5': ('Left atrial '
+ 'LeftAtrialEndSystolicVolumeBiplaneAreaLengthBSA': {'79982-5': ('Left atrial '
                                                                  'end systolic '
                                                                  'volume '
                                                                  'biplane '
                                                                  '(area-length) '
                                                                  '/ BSA',
                                                                  [12300])},
- 'LeftAtrialEndSystolicVolumeBiplaneMod': {'79983-3': ('Left atrial end '
+ 'LeftAtrialEndSystolicVolumeBiplaneMOD': {'79983-3': ('Left atrial end '
                                                        'systolic volume '
                                                        'biplane (MOD)',
                                                        [12300])},
- 'LeftAtrialEndSystolicVolumeBiplaneModBsa': {'79984-1': ('Left atrial end '
+ 'LeftAtrialEndSystolicVolumeBiplaneMODBSA': {'79984-1': ('Left atrial end '
                                                           'systolic volume '
                                                           'biplane (MOD) / BSA',
                                                           [12300])},
- 'LeftAtrialEndSystolicVolumeSinglePlane2cMod': {'79985-8': ('Left atrial end '
+ 'LeftAtrialEndSystolicVolumeSinglePlane2CMOD': {'79985-8': ('Left atrial end '
                                                              'systolic volume '
                                                              'single plane 2C '
                                                              '(MOD)',
                                                              [12300])},
- 'LeftAtrialEndSystolicVolumeSinglePlane4cMod': {'79986-6': ('Left atrial end '
+ 'LeftAtrialEndSystolicVolumeSinglePlane4CMOD': {'79986-6': ('Left atrial end '
                                                              'systolic volume '
                                                              'single plane 4C '
                                                              '(MOD)',
@@ -22335,7 +22400,7 @@ concepts['LN'] = \
                                                             'Systolic '
                                                             'Dimension',
                                                             [12205])},
- 'LeftAtriumAreaA4cView': {'17977-0': ('Left Atrium Area A4C view', [12205])},
+ 'LeftAtriumAreaA4CView': {'17977-0': ('Left Atrium Area A4C view', [12205])},
  'LeftAtriumToAorticRootRatio': {'17985-3': ('Left Atrium to Aortic Root Ratio',
                                              [12205, 12265])},
  'LeftAtriumVolumeToRightAtriumVolumeRatio': {'59131-3': ('Left Atrium Volume '
@@ -22397,12 +22462,14 @@ concepts['LN'] = \
  'LeftVentricleSystolicMajorAxis': {'18076-0': ('Left Ventricle systolic major '
                                                 'axis',
                                                 [12200, 12201])},
- 'LeftVentricularEdVolume': {'8821-1': ('Left Ventricular ED Volume',
+ 'LeftVentricularEDVolume': {'8821-1': ('Left Ventricular ED Volume',
                                         [3468, 3835])},
- 'LeftVentricularEjectionFraction3d': {'79990-8': ('Left ventricular ejection '
+ 'LeftVentricularESVolume': {'8823-7': ('Left Ventricular ES Volume',
+                                        [3469, 3835])},
+ 'LeftVentricularEjectionFraction3D': {'79990-8': ('Left ventricular ejection '
                                                    'fraction 3D',
                                                    [12300])},
- 'LeftVentricularEjectionFractionBiplaneMod': {'79991-6': ('Left ventricular '
+ 'LeftVentricularEjectionFractionBiplaneMOD': {'79991-6': ('Left ventricular '
                                                            'ejection fraction '
                                                            'biplane (MOD)',
                                                            [12300])},
@@ -22411,59 +22478,59 @@ concepts['LN'] = \
                                                              'Fraction by '
                                                              'Angiography',
                                                              [3467])},
- 'LeftVentricularEjectionFractionByCt': {'8810-4': ('Left ventricular ejection '
+ 'LeftVentricularEjectionFractionByCT': {'8810-4': ('Left ventricular ejection '
                                                     'fraction by CT',
                                                     [3833])},
- 'LeftVentricularEjectionFractionByMr': {'8811-2': ('Left ventricular ejection '
+ 'LeftVentricularEjectionFractionByMR': {'8811-2': ('Left ventricular ejection '
                                                     'fraction by MR',
                                                     [3833])},
- 'LeftVentricularEjectionFractionByUs': {'18043-0': ('Left Ventricular '
+ 'LeftVentricularEjectionFractionByUS': {'18043-0': ('Left Ventricular '
                                                      'Ejection Fraction by US',
                                                      [12200, 12202])},
- 'LeftVentricularEjectionFractionSinglePlane2cMod': {'79992-4': ('Left '
+ 'LeftVentricularEjectionFractionSinglePlane2CMOD': {'79992-4': ('Left '
                                                                  'ventricular '
                                                                  'ejection '
                                                                  'fraction '
                                                                  'single plane '
                                                                  '2C (MOD)',
                                                                  [12300])},
- 'LeftVentricularEjectionFractionSinglePlane4cMod': {'79993-2': ('Left '
+ 'LeftVentricularEjectionFractionSinglePlane4CMOD': {'79993-2': ('Left '
                                                                  'ventricular '
                                                                  'ejection '
                                                                  'fraction '
                                                                  'single plane '
                                                                  '4C (MOD)',
                                                                  [12300])},
- 'LeftVentricularEjectionFractionTeichholz2d': {'77891-0': ('Left ventricular '
+ 'LeftVentricularEjectionFractionTeichholz2D': {'77891-0': ('Left ventricular '
                                                             'ejection fraction '
                                                             '(Teichholz) 2D',
                                                             [12300])},
- 'LeftVentricularEjectionFractionTeichholzMm': {'18049-7': ('Left ventricular '
+ 'LeftVentricularEjectionFractionTeichholzMM': {'18049-7': ('Left ventricular '
                                                             'ejection fraction '
                                                             '(Teichholz) MM',
                                                             [12300])},
- 'LeftVentricularEndDiastolicLength4c': {'79994-0': ('Left ventricular end '
+ 'LeftVentricularEndDiastolicLength4C': {'79994-0': ('Left ventricular end '
                                                      'diastolic length 4C',
                                                      [12300])},
  'LeftVentricularEndDiastolicVolume': {'18026-5': ('Left Ventricular End '
                                                    'Diastolic Volume',
                                                    [12200, 12202])},
- 'LeftVentricularEndDiastolicVolume3d': {'79995-7': ('Left ventricular end '
+ 'LeftVentricularEndDiastolicVolume3D': {'79995-7': ('Left ventricular end '
                                                      'diastolic volume (3D)',
                                                      [12300])},
- 'LeftVentricularEndDiastolicVolumeBiplaneMod': {'79996-5': ('Left ventricular '
+ 'LeftVentricularEndDiastolicVolumeBiplaneMOD': {'79996-5': ('Left ventricular '
                                                              'end diastolic '
                                                              'volume biplane '
                                                              '(MOD)',
                                                              [12300])},
- 'LeftVentricularEndDiastolicVolumeBiplaneModBsa': {'79997-3': ('Left '
+ 'LeftVentricularEndDiastolicVolumeBiplaneMODBSA': {'79997-3': ('Left '
                                                                 'ventricular '
                                                                 'end diastolic '
                                                                 'volume '
                                                                 'biplane (MOD) '
                                                                 '/ BSA',
                                                                 [12300])},
- 'LeftVentricularEndDiastolicVolumeSinglePlane2cMod': {'79998-1': ('Left '
+ 'LeftVentricularEndDiastolicVolumeSinglePlane2CMOD': {'79998-1': ('Left '
                                                                    'ventricular '
                                                                    'end '
                                                                    'diastolic '
@@ -22472,7 +22539,7 @@ concepts['LN'] = \
                                                                    'plane 2C '
                                                                    '(MOD)',
                                                                    [12300])},
- 'LeftVentricularEndDiastolicVolumeSinglePlane4cMod': {'79999-9': ('Left '
+ 'LeftVentricularEndDiastolicVolumeSinglePlane4CMOD': {'79999-9': ('Left '
                                                                    'ventricular '
                                                                    'end '
                                                                    'diastolic '
@@ -22484,21 +22551,21 @@ concepts['LN'] = \
  'LeftVentricularEndSystolicVolume': {'18148-7': ('Left Ventricular End '
                                                   'Systolic Volume',
                                                   [12200, 12202])},
- 'LeftVentricularEndSystolicVolume3d': {'80000-3': ('Left ventricular end '
+ 'LeftVentricularEndSystolicVolume3D': {'80000-3': ('Left ventricular end '
                                                     'systolic volume (3D)',
                                                     [12300])},
- 'LeftVentricularEndSystolicVolumeBiplaneMod': {'80001-1': ('Left ventricular '
+ 'LeftVentricularEndSystolicVolumeBiplaneMOD': {'80001-1': ('Left ventricular '
                                                             'end systolic '
                                                             'volume biplane '
                                                             '(MOD)',
                                                             [12300])},
- 'LeftVentricularEndSystolicVolumeBiplaneModBsa': {'80002-9': ('Left '
+ 'LeftVentricularEndSystolicVolumeBiplaneMODBSA': {'80002-9': ('Left '
                                                                'ventricular '
                                                                'end systolic '
                                                                'volume biplane '
                                                                '(MOD) / BSA',
                                                                [12300])},
- 'LeftVentricularEndSystolicVolumeSinglePlane2cMod': {'80003-7': ('Left '
+ 'LeftVentricularEndSystolicVolumeSinglePlane2CMOD': {'80003-7': ('Left '
                                                                   'ventricular '
                                                                   'end '
                                                                   'systolic '
@@ -22507,7 +22574,7 @@ concepts['LN'] = \
                                                                   'plane 2C '
                                                                   '(MOD)',
                                                                   [12300])},
- 'LeftVentricularEndSystolicVolumeSinglePlane4cMod': {'80004-5': ('Left '
+ 'LeftVentricularEndSystolicVolumeSinglePlane4CMOD': {'80004-5': ('Left '
                                                                   'ventricular '
                                                                   'end '
                                                                   'systolic '
@@ -22516,39 +22583,37 @@ concepts['LN'] = \
                                                                   'plane 4C '
                                                                   '(MOD)',
                                                                   [12300])},
- 'LeftVentricularEndocardialAreaSaxPmLevel': {'80005-2': ('Left ventricular '
+ 'LeftVentricularEndocardialAreaSAXPMLevel': {'80005-2': ('Left ventricular '
                                                           'endocardial area '
                                                           'SAX PM level',
                                                           [12300])},
- 'LeftVentricularEpicardialAreaSaxPmLevel': {'80006-0': ('Left ventricular '
+ 'LeftVentricularEpicardialAreaSAXPMLevel': {'80006-0': ('Left ventricular '
                                                          'epicardial area SAX '
                                                          'PM level',
                                                          [12300])},
- 'LeftVentricularEsVolume': {'8823-7': ('Left Ventricular ES Volume',
-                                        [3469, 3835])},
  'LeftVentricularFractionalShortening': {'18051-3': ('Left Ventricular '
                                                      'Fractional Shortening',
                                                      [12200, 12201])},
- 'LeftVentricularFractionalShorteningOfMinorAxis2d': {'29434-8': ('Left '
+ 'LeftVentricularFractionalShorteningOfMinorAxis2D': {'29434-8': ('Left '
                                                                   'ventricular '
                                                                   'fractional '
                                                                   'shortening '
                                                                   '(of minor '
                                                                   'axis) (2D)',
                                                                   [12300])},
- 'LeftVentricularFractionalShorteningOfMinorAxisMm': {'29435-5': ('Left '
+ 'LeftVentricularFractionalShorteningOfMinorAxisMM': {'29435-5': ('Left '
                                                                   'ventricular '
                                                                   'fractional '
                                                                   'shortening '
                                                                   '(of minor '
                                                                   'axis) (MM)',
                                                                   [12300])},
- 'LeftVentricularInternalDiastolicDimension2d': {'80007-8': ('Left ventricular '
+ 'LeftVentricularInternalDiastolicDimension2D': {'80007-8': ('Left ventricular '
                                                              'internal '
                                                              'diastolic '
                                                              'dimension - 2D',
                                                              [12300])},
- 'LeftVentricularInternalDiastolicDimensionBsa': {'80009-4': ('Left '
+ 'LeftVentricularInternalDiastolicDimensionBSA': {'80009-4': ('Left '
                                                               'ventricular '
                                                               'internal '
                                                               'diastolic '
@@ -22560,16 +22625,16 @@ concepts['LN'] = \
                                                               'diastolic '
                                                               'dimension / BSA',
                                                               [12300])},
- 'LeftVentricularInternalDiastolicDimensionMm': {'80008-6': ('Left ventricular '
+ 'LeftVentricularInternalDiastolicDimensionMM': {'80008-6': ('Left ventricular '
                                                              'internal '
                                                              'diastolic '
                                                              'dimension - MM',
                                                              [12300])},
- 'LeftVentricularInternalSystolicDimension2d': {'80011-0': ('Left ventricular '
+ 'LeftVentricularInternalSystolicDimension2D': {'80011-0': ('Left ventricular '
                                                             'internal systolic '
                                                             'dimension - 2D',
                                                             [12300])},
- 'LeftVentricularInternalSystolicDimensionBsa': {'80013-6': ('Left ventricular '
+ 'LeftVentricularInternalSystolicDimensionBSA': {'80013-6': ('Left ventricular '
                                                              'internal '
                                                              'systolic '
                                                              'dimension / BSA',
@@ -22579,7 +22644,7 @@ concepts['LN'] = \
                                                              'systolic '
                                                              'dimension / BSA',
                                                              [12300])},
- 'LeftVentricularInternalSystolicDimensionMm': {'80012-8': ('Left ventricular '
+ 'LeftVentricularInternalSystolicDimensionMM': {'80012-8': ('Left ventricular '
                                                             'internal systolic '
                                                             'dimension - MM',
                                                             [12300])},
@@ -22594,7 +22659,7 @@ concepts['LN'] = \
                                                                   'time by '
                                                                   'Doppler',
                                                                   [12300])},
- 'LeftVentricularIsovolumicRelaxationTimeByTdi': {'80015-1': ('Left '
+ 'LeftVentricularIsovolumicRelaxationTimeByTDI': {'80015-1': ('Left '
                                                               'ventricular '
                                                               'isovolumic '
                                                               'relaxation time '
@@ -22603,34 +22668,34 @@ concepts['LN'] = \
  'LeftVentricularMassAreaLength': {'80016-9': ('Left ventricular mass '
                                                '(area-length)',
                                                [12300])},
- 'LeftVentricularMassAreaLengthBsa': {'80017-7': ('Left ventricular mass '
+ 'LeftVentricularMassAreaLengthBSA': {'80017-7': ('Left ventricular mass '
                                                   '(area-length) / BSA',
                                                   [12300])},
  'LeftVentricularMassAreaLengthHeight27': {'80018-5': ('Left ventricular mass '
                                                        '(area-length) / '
                                                        'height^^2.7',
                                                        [12300])},
- 'LeftVentricularMassDimensionMethod2d': {'80019-3': ('Left ventricular mass '
+ 'LeftVentricularMassDimensionMethod2D': {'80019-3': ('Left ventricular mass '
                                                       '(dimension method) 2D',
                                                       [12300])},
- 'LeftVentricularMassDimensionMethod2dBsa': {'80020-1': ('Left ventricular '
+ 'LeftVentricularMassDimensionMethod2DBSA': {'80020-1': ('Left ventricular '
                                                          'mass (dimension '
                                                          'method) 2D / BSA',
                                                          [12300])},
- 'LeftVentricularMassDimensionMethod2dHeight27': {'80021-9': ('Left '
+ 'LeftVentricularMassDimensionMethod2DHeight27': {'80021-9': ('Left '
                                                               'ventricular '
                                                               'mass (dimension '
                                                               'method) 2D / '
                                                               'height^^2.7',
                                                               [12300])},
- 'LeftVentricularMassDimensionMethodMm': {'80022-7': ('Left ventricular mass '
+ 'LeftVentricularMassDimensionMethodMM': {'80022-7': ('Left ventricular mass '
                                                       '(dimension method) MM',
                                                       [12300])},
- 'LeftVentricularMassDimensionMethodMmBsa': {'80023-5': ('Left ventricular '
+ 'LeftVentricularMassDimensionMethodMMBSA': {'80023-5': ('Left ventricular '
                                                          'mass (dimension '
                                                          'method) MM / BSA',
                                                          [12300])},
- 'LeftVentricularMassDimensionMethodMmHeight27': {'80024-3': ('Left '
+ 'LeftVentricularMassDimensionMethodMMHeight27': {'80024-3': ('Left '
                                                               'ventricular '
                                                               'mass (dimension '
                                                               'method) MM / '
@@ -22639,7 +22704,7 @@ concepts['LN'] = \
  'LeftVentricularMassTruncatedEllipse': {'80025-0': ('Left ventricular mass '
                                                      '(truncated ellipse)',
                                                      [12300])},
- 'LeftVentricularMassTruncatedEllipseBsa': {'80026-8': ('Left ventricular mass '
+ 'LeftVentricularMassTruncatedEllipseBSA': {'80026-8': ('Left ventricular mass '
                                                         '(truncated ellipse) / '
                                                         'BSA',
                                                         [12300])},
@@ -22648,16 +22713,16 @@ concepts['LN'] = \
                                                              'ellipse) / '
                                                              'height^^2.7',
                                                              [12300])},
- 'LeftVentricularOutflowTractDimension2d': {'80028-4': ('Left ventricular '
+ 'LeftVentricularOutflowTractDimension2D': {'80028-4': ('Left ventricular '
                                                         'outflow tract '
                                                         'dimension (2D)',
                                                         [12300])},
+ 'LeftVentricularOutflowTractVTI': {'80030-0': ('Left ventricular outflow '
+                                                'tract VTI',
+                                                [12300])},
  'LeftVentricularOutflowTractVmax': {'80029-2': ('Left ventricular outflow '
                                                  'tract Vmax',
                                                  [12300])},
- 'LeftVentricularOutflowTractVti': {'80030-0': ('Left ventricular outflow '
-                                                'tract VTI',
-                                                [12300])},
  'LeftVentricularPosteriorWallDiastolicThickness': {'80031-8': ('Left '
                                                                 'ventricular '
                                                                 'posterior '
@@ -22687,78 +22752,27 @@ concepts['LN'] = \
  'LeftVentricularPreEjectionPeriod': {'79989-0': ('Left ventricular '
                                                   'pre-ejection period',
                                                   [12300])},
- 'LeftVentricularStrokeVolume3d': {'80035-9': ('Left ventricular stroke volume '
+ 'LeftVentricularStrokeVolume3D': {'80035-9': ('Left ventricular stroke volume '
                                                '3D',
                                                [12300])},
  'LengthOfVertebraTokyo1986': {'33118-1': ('Length of Vertebra, Tokyo 1986',
                                            [12012, 12013])},
- 'Lmp': {'11955-2': ('LMP', [12003])},
- 'LvBasalAnteriorTimeToSVmaxTsBasalAnterior': {'80036-7': ('LV basal anterior '
-                                                           'time to S Vmax '
-                                                           '(Ts-basal '
-                                                           'anterior)',
-                                                           [12300])},
- 'LvBasalAnteroseptalTimeToSVmaxTsBasalAnteroseptal': {'80037-5': ('LV basal '
-                                                                   'anteroseptal '
-                                                                   'time to S '
-                                                                   'Vmax '
-                                                                   '(TS-basal '
-                                                                   'anteroseptal)',
-                                                                   [12300])},
- 'LvBasalInferiorTimeToSVmaxTsBasalInferior': {'80038-3': ('LV basal inferior '
-                                                           'time to S Vmax '
-                                                           '(Ts-basal '
-                                                           'inferior)',
-                                                           [12300])},
- 'LvBasalLateralTimeToSVmaxTsBasalLateral': {'80039-1': ('LV basal lateral '
-                                                         'time to S Vmax '
-                                                         '(Ts-basal lateral)',
-                                                         [12300])},
- 'LvBasalPosteriorTimeToSVmaxTsBasalPosterior': {'80040-9': ('LV basal '
-                                                             'posterior time '
-                                                             'to S Vmax '
-                                                             '(Ts-basal '
-                                                             'posterior)',
-                                                             [12300])},
- 'LvBasalSeptalTimeToSVmaxTsBasalSeptal': {'80041-7': ('LV basal septal time '
-                                                       'to S Vmax (Ts-basal '
-                                                       'septal)',
-                                                       [12300])},
- 'LvMidAnteriorTimeToSVmaxTsMidAnterior': {'80042-5': ('LV mid anterior time '
-                                                       'to S Vmax (Ts-mid '
-                                                       'anterior)',
-                                                       [12300])},
- 'LvMidAnteroseptalTimeToSVmaxTsMidAnteroseptal': {'80043-3': ('LV mid '
-                                                               'anteroseptal '
-                                                               'time to S Vmax '
-                                                               '(Ts-mid '
-                                                               'anteroseptal)',
-                                                               [12300])},
- 'LvMidInferiorTimeToSVmaxTsMidInferior': {'80044-1': ('LV mid inferior time '
-                                                       'to S Vmax (Ts-mid '
-                                                       'inferior)',
-                                                       [12300])},
- 'LvMidLateralTimeToSVmaxTsMidLateral': {'80045-8': ('LV mid lateral time to S '
-                                                     'Vmax (Ts-mid lateral)',
-                                                     [12300])},
- 'LvMidPosteriorTimeToSVmaxTsMidPosterior': {'80046-6': ('LV mid posterior '
-                                                         'time to S Vmax '
-                                                         '(Ts-mid posterior)',
-                                                         [12300])},
- 'LvMidSeptalTimeToSVmaxTsMidSeptal': {'80047-4': ('LV mid septal time to S '
-                                                   'Vmax (Ts-mid septal)',
-                                                   [12300])},
- 'LvTsSdDyssynchronyIndex': {'80048-2': ('LV Ts-SD (Dyssynchrony Index)',
-                                         [12300])},
+ 'MR3DCAMModel': {'85041-2': ('MR 3D CAM model', [7061])},
+ 'MRIHeadReport': {'11541-0': ('MRI Head Report', [7000])},
+ 'MRIReport': {'18755-9': ('MRI Report', [7000])},
+ 'MRISpineReport': {'18756-7': ('MRI Spine Report', [7000])},
+ 'MRIUnspecifiedBodyRegion': {'25056-3': ('MRI unspecified body region',
+                                          [100])},
+ 'MRIWholeBody': {'46358-8': ('MRI whole body', [646])},
  'MainPulmonaryArteryDiameter': {'18020-8': ('Main Pulmonary Artery Diameter',
                                              [12210]),
                                  '80049-0': ('Main pulmonary artery diameter',
                                              [12300])},
  'MainPulmonaryArteryVmax': {'': ('Main pulmonary artery Vmax', [12300])},
- 'MaleSingletonBwpByGaArbuckle1993': {'33186-8': ('Male Singleton BWP by GA, '
+ 'MaleSingletonBWPByGAArbuckle1993': {'33186-8': ('Male Singleton BWP by GA, '
                                                   'Arbuckle 1993',
                                                   [12012, 12016])},
- 'MaleTwinsBwpByGaArbuckle1993': {'33199-1': ('Male Twins BWP by GA, Arbuckle '
+ 'MaleTwinsBWPByGAArbuckle1993': {'33199-1': ('Male Twins BWP by GA, Arbuckle '
                                               '1993',
                                               [12012, 12016])},
  'MammographyScreeningReport': {'24606-6': ('Mammography Screening Report',
@@ -22822,25 +22836,25 @@ concepts['LN'] = \
  'MedicationsAdministered': {'29549-3': ('Medications Administered', [7001])},
  'MinimumDiastolicVelocity': {'11665-7': ('Minimum Diastolic Velocity',
                                           [12119, 12120])},
- 'MitralAnnulusDiastolicDiameterA2c': {'80050-8': ('Mitral annulus diastolic '
+ 'MitralAnnulusDiastolicDiameterA2C': {'80050-8': ('Mitral annulus diastolic '
                                                    'diameter - A2C',
                                                    [12300])},
- 'MitralAnnulusDiastolicDiameterA4c': {'80051-6': ('Mitral annulus diastolic '
+ 'MitralAnnulusDiastolicDiameterA4C': {'80051-6': ('Mitral annulus diastolic '
                                                    'diameter - A4C',
                                                    [12300])},
- 'MitralAnnulusDiastolicDiameterPlax': {'80052-4': ('Mitral annulus diastolic '
+ 'MitralAnnulusDiastolicDiameterPLAX': {'80052-4': ('Mitral annulus diastolic '
                                                     'diameter - PLAX',
                                                     [12300])},
- 'MitralAnnulusVti': {'80053-2': ('Mitral annulus VTI', [12300])},
+ 'MitralAnnulusVTI': {'80053-2': ('Mitral annulus VTI', [12300])},
  'MitralLateralEPrimeVmax': {'80054-0': ('Mitral lateral e-prime Vmax',
                                          [12300])},
- 'MitralRegurgitantFlowPisa': {'80057-3': ('Mitral regurgitant flow (PISA)',
+ 'MitralRegurgitantFlowPISA': {'80057-3': ('Mitral regurgitant flow (PISA)',
                                            [12300])},
- 'MitralRegurgitantFractionContinuityVti': {'80055-7': ('Mitral regurgitant '
+ 'MitralRegurgitantFractionContinuityVTI': {'80055-7': ('Mitral regurgitant '
                                                         'fraction (Continuity '
                                                         'VTI)',
                                                         [12300])},
- 'MitralRegurgitantFractionPisa': {'80056-5': ('Mitral regurgitant fraction '
+ 'MitralRegurgitantFractionPISA': {'80056-5': ('Mitral regurgitant fraction '
                                                '(PISA)',
                                                [12300])},
  'MitralRegurgitationDpDtDerivedFromMitralRegVelocity': {'18035-6': ('Mitral '
@@ -22854,24 +22868,24 @@ concepts['LN'] = \
                                                                      [12207,
                                                                       12266,
                                                                       12268])},
- 'MitralRegurgitationPeakGradient': {'80058-1': ('Mitral regurgitation peak '
-                                                 'gradient',
-                                                 [12300])},
- 'MitralRegurgitationPisaRadius': {'80059-9': ('Mitral regurgitation PISA '
+ 'MitralRegurgitationPISARadius': {'80059-9': ('Mitral regurgitation PISA '
                                                'radius',
                                                [12300])},
- 'MitralRegurgitationPisaVelocity': {'80060-7': ('Mitral regurgitation PISA '
+ 'MitralRegurgitationPISAVelocity': {'80060-7': ('Mitral regurgitation PISA '
                                                  'velocity',
+                                                 [12300])},
+ 'MitralRegurgitationPeakGradient': {'80058-1': ('Mitral regurgitation peak '
+                                                 'gradient',
                                                  [12300])},
  'MitralRegurgitationVenaContractaWidth': {'80061-5': ('Mitral regurgitation '
                                                        'vena contracta width',
                                                        [12300])},
  'MitralRegurgitationVmax': {'80062-3': ('Mitral regurgitation Vmax', [12300])},
- 'MitralRegurgitationVolumeContinuityVti': {'80063-1': ('Mitral regurgitation '
+ 'MitralRegurgitationVolumeContinuityVTI': {'80063-1': ('Mitral regurgitation '
                                                         'volume (Continuity '
                                                         'VTI)',
                                                         [12300])},
- 'MitralRegurgitationVolumePisa': {'80064-9': ('Mitral regurgitation volume '
+ 'MitralRegurgitationVolumePISA': {'80064-9': ('Mitral regurgitation volume '
                                                '(PISA)',
                                                [12300])},
  'MitralSeptalEPrimeVmax': {'79911-4': ('Mitral septal e-prime Vmax', [12300])},
@@ -22881,7 +22895,7 @@ concepts['LN'] = \
                                               'Velocity',
                                               [12207])},
  'MitralValveAWaveVmax': {'80066-4': ('Mitral valve A-wave Vmax', [12300])},
- 'MitralValveAreaPisa': {'80067-2': ('Mitral valve area (PISA)', [12300])},
+ 'MitralValveAreaPISA': {'80067-2': ('Mitral valve area (PISA)', [12300])},
  'MitralValveAreaPlanimetry': {'80068-0': ('Mitral valve area (Planimetry)',
                                            [12300])},
  'MitralValveAreaPressureHalfTime': {'80069-8': ('Mitral valve area (Pressure '
@@ -22896,6 +22910,8 @@ concepts['LN'] = \
                                                                [12207])},
  'MitralValveEFSlopeByMMode': {'18040-6': ('Mitral Valve E-F Slope by M-Mode',
                                            [12207])},
+ 'MitralValveEPSSEWave': {'18036-4': ('Mitral Valve EPSS, E wave',
+                                      [12207, 12266, 12268])},
  'MitralValveESeptalSeparation': {'59098-4': ('Mitral Valve E-septal '
                                               'Separation',
                                               [12266, 12268])},
@@ -22905,14 +22921,12 @@ concepts['LN'] = \
                                               'Velocity',
                                               [12207])},
  'MitralValveEWaveVmax': {'80070-6': ('Mitral valve E-wave Vmax', [12300])},
- 'MitralValveEffectiveRegurgitantOrificeAreaPisa': {'80071-4': ('Mitral valve '
+ 'MitralValveEffectiveRegurgitantOrificeAreaPISA': {'80071-4': ('Mitral valve '
                                                                 'effective '
                                                                 'regurgitant '
                                                                 'orifice area '
                                                                 '(PISA)',
                                                                 [12300])},
- 'MitralValveEpssEWave': {'18036-4': ('Mitral Valve EPSS, E wave',
-                                      [12207, 12266, 12268])},
  'MitralValveFlowPropagationVelocityVp': {'80072-2': ('Mitral valve flow '
                                                       'propagation velocity '
                                                       '(Vp)',
@@ -22924,15 +22938,8 @@ concepts['LN'] = \
                                                       [12300])},
  'MitralValvePressureHalfTime': {'79912-2': ('Mitral valve pressure half-time',
                                              [12300])},
+ 'MitralValveVTI': {'79914-8': ('Mitral valve VTI', [12300])},
  'MitralValveVmax': {'79913-0': ('Mitral valve Vmax', [12300])},
- 'MitralValveVti': {'79914-8': ('Mitral valve VTI', [12300])},
- 'Mr3dCamModel': {'85041-2': ('MR 3D CAM model', [7061])},
- 'MriHeadReport': {'11541-0': ('MRI Head Report', [7000])},
- 'MriReport': {'18755-9': ('MRI Report', [7000])},
- 'MriSpineReport': {'18756-7': ('MRI Spine Report', [7000])},
- 'MriUnspecifiedBodyRegion': {'25056-3': ('MRI unspecified body region',
-                                          [100])},
- 'MriWholeBody': {'46358-8': ('MRI whole body', [646])},
  'MyocardialPerformanceIndexTei': {'59099-2': ('Myocardial Performance Index '
                                                '(Tei)',
                                                [12255,
@@ -22942,7 +22949,7 @@ concepts['LN'] = \
                                                 12265,
                                                 12271,
                                                 12304])},
- 'NmUnspecifiedBodyRegion': {'49118-3': ('NM unspecified body region', [100])},
+ 'NMUnspecifiedBodyRegion': {'49118-3': ('NM unspecified body region', [100])},
  'NuchalFoldThickness': {'12146-7': ('Nuchal Fold thickness', [12007])},
  'NuchalTranslucency': {'33069-6': ('Nuchal Translucency',
                                     [12007, 12009, 12279])},
@@ -22950,26 +22957,30 @@ concepts['LN'] = \
  'NuclearMedicineThyroidScanReport': {'17787-3': ('Nuclear Medicine Thyroid '
                                                   'Scan Report',
                                                   [7000])},
- 'NumberOfFetusesByUs': {'11878-6': ('Number of Fetuses by US', [12018])},
+ 'NumberOfFetusesByUS': {'11878-6': ('Number of Fetuses by US', [12018])},
+ 'OFDASUM2000': {'33119-9': ('OFD, ASUM 2000', [12012, 12013])},
+ 'OFDByGAASUM2000': {'33178-5': ('OFD by GA, ASUM 2000', [12012, 12015])},
+ 'OFDByGAChitty1994': {'33179-3': ('OFD by GA, Chitty 1994', [12012, 12015])},
+ 'OFDHansmann1985': {'33544-8': ('OFD, Hansmann 1985', [12012, 12013])},
+ 'OFDHansmann1986': {'33120-7': ('OFD, Hansmann 1986', [12012, 12013])},
+ 'OFDLessoway1998': {'33121-5': ('OFD, Lessoway 1998', [12012, 12013])},
+ 'OODMayden1982': {'33124-9': ('OOD, Mayden, 1982', [12012, 12013])},
+ 'OODTrout1994': {'33125-6': ('OOD, Trout 1994', [12012, 12013])},
  'OccipitalFrontalDiameter': {'11851-3': ('Occipital-Frontal Diameter',
                                           [12005, 12279])},
- 'OfdAsum2000': {'33119-9': ('OFD, ASUM 2000', [12012, 12013])},
- 'OfdByGaAsum2000': {'33178-5': ('OFD by GA, ASUM 2000', [12012, 12015])},
- 'OfdByGaChitty1994': {'33179-3': ('OFD by GA, Chitty 1994', [12012, 12015])},
- 'OfdHansmann1985': {'33544-8': ('OFD, Hansmann 1985', [12012, 12013])},
- 'OfdHansmann1986': {'33120-7': ('OFD, Hansmann 1986', [12012, 12013])},
- 'OfdLessoway1998': {'33121-5': ('OFD, Lessoway 1998', [12012, 12013])},
- 'OodMayden1982': {'33124-9': ('OOD, Mayden, 1982', [12012, 12013])},
- 'OodTrout1994': {'33125-6': ('OOD, Trout 1994', [12012, 12013])},
  'OuterOrbitalDiameter': {'11629-3': ('Outer Orbital Diameter', [12007])},
  'OvulationDate': {'11976-8': ('Ovulation date', [12003])},
  'OxygenPartialPressureAt50SaturationP50': {'19217-9': ('Oxygen partial '
                                                         'pressure at 50% '
                                                         'saturation (P50)',
                                                         [3524])},
+ 'PETScanReport': {'18758-3': ('PET Scan Report', [7000])},
+ 'PETUnspecifiedBodyRegion': {'44136-0': ('PET unspecified body region',
+                                          [100])},
+ 'PETWholeBody': {'44139-4': ('PET whole body', [100, 646])},
  'PatientPresentation': {'55108-5': ('Patient Presentation', [7001])},
  'PeakBloodVelocity': {'11726-7': ('Peak Blood Velocity', [12304])},
- 'PeakEWavePeakAWaveByUs': {'59104-0': ('Peak E wave/Peak A wave by US',
+ 'PeakEWavePeakAWaveByUS': {'59104-0': ('Peak E wave/Peak A wave by US',
                                         [12200,
                                          12204,
                                          12207,
@@ -23125,10 +23136,6 @@ concepts['LN'] = \
                                        12276])},
  'PeakTissueVelocity': {'59133-9': ('Peak Tissue Velocity',
                                     [12257, 12259, 12271])},
- 'PetScanReport': {'18758-3': ('PET Scan Report', [7000])},
- 'PetUnspecifiedBodyRegion': {'44136-0': ('PET unspecified body region',
-                                          [100])},
- 'PetWholeBody': {'44139-4': ('PET whole body', [100, 646])},
  'PosteriorHornLateralVentricularWidth': {'33196-7': ('Posterior Horn Lateral '
                                                       'ventricular width',
                                                       [12007])},
@@ -23201,7 +23208,7 @@ concepts['LN'] = \
  'PreviousFindings': {'18834-2': ('Previous Findings', [7001])},
  'PriorProcedureDescriptions': {'55114-3': ('Prior Procedure Descriptions',
                                             [7001])},
- 'PulmVeinADurationToMvADurationDifference': {'59114-9': ('Pulm Vein A '
+ 'PulmVeinADurationToMVADurationDifference': {'59114-9': ('Pulm Vein A '
                                                           'duration to MV A '
                                                           'duration difference',
                                                           [12261, 12263])},
@@ -23226,7 +23233,7 @@ concepts['LN'] = \
                                                                  'Ratio',
                                                                  [12261,
                                                                   12263])},
- 'PulmonaryVeinAVtiToMitralValveVtiRatio': {'59113-1': ('Pulmonary Vein A VTI '
+ 'PulmonaryVeinAVTIToMitralValveVTIRatio': {'59113-1': ('Pulmonary Vein A VTI '
                                                         'to Mitral Valve VTI '
                                                         'Ratio',
                                                         [12261, 12263])},
@@ -23277,147 +23284,10 @@ concepts['LN'] = \
                                            [12209, 12300])},
  'PulmonicValvePeakGradient': {'79935-3': ('Pulmonic valve peak gradient',
                                            [12300])},
+ 'PulmonicValveVTI': {'79910-6': ('Pulmonic valve VTI', [12300])},
  'PulmonicValveVmax': {'79920-5': ('Pulmonic valve Vmax', [12300])},
- 'PulmonicValveVti': {'79910-6': ('Pulmonic valve VTI', [12300])},
  'PulsatilityIndex': {'12008-9': ('Pulsatility Index', [12119, 12121])},
- 'RadiationExposureAndProtectionInformation': {'73569-6': ('Radiation Exposure '
-                                                           'and Protection '
-                                                           'Information',
-                                                           [7001])},
- 'RadiologyReport': {'11528-7': ('Radiology Report', [7000])},
- 'RadionuclideBrainScan': {'24730-4': ('Radionuclide brain scan', [646])},
- 'RadionuclideScanOfWholeBody': {'42175-0': ('Radionuclide scan of whole body',
-                                             [646])},
- 'RadiusByGaJeanty1983': {'33180-1': ('Radius by GA, Jeanty 1983',
-                                      [12012, 12015])},
- 'RadiusJeanty1983': {'33126-4': ('Radius, Jeanty 1983', [12012, 12013])},
- 'RadiusLength': {'11967-7': ('Radius length', [12006])},
- 'RadiusMerz1987': {'11939-6': ('Radius, Merz 1987', [12012, 12013])},
- 'Recommendations': {'18783-1': ('Recommendations', [7001])},
- 'RelevantDiagnosticTestsAndOrLaboratoryData': {'30954-2': ('Relevant '
-                                                            'Diagnostic Tests '
-                                                            'and/or Laboratory '
-                                                            'Data',
-                                                            [9509])},
- 'RenalArteryAortaVelocityRatio': {'33869-9': ('Renal Artery/Aorta velocity '
-                                               'ratio',
-                                               [12124])},
- 'Request': {'55115-0': ('Request', [7001, 7002])},
- 'ResistivityIndex': {'12023-8': ('Resistivity Index', [12119, 12121])},
- 'RespirationRhythm': {'9304-7': ('Respiration Rhythm', [3441])},
- 'RightAtrialEndSystolicArea4c': {'80075-5': ('Right atrial end systolic area '
-                                              '4C',
-                                              [12300])},
- 'RightAtrialMajorAxisDimension4c': {'80076-3': ('Right atrial major axis '
-                                                 'dimension 4C',
-                                                 [12300])},
- 'RightAtrialMinorAxisDimension4c': {'80077-1': ('Right atrial minor axis '
-                                                 'dimension 4C',
-                                                 [12300])},
- 'RightAtrialMinorAxisDimension4cBsa': {'80078-9': ('Right atrial minor axis '
-                                                    'dimension 4C / BSA',
-                                                    [12300])},
- 'RightAtriumAreaA4cView': {'17988-7': ('Right Atrium Area A4C view', [12206])},
- 'RightAtriumSystolicPressure': {'18070-3': ('Right Atrium Systolic Pressure',
-                                             [12206])},
- 'RightKidneyLength': {'11836-4': ('Right Kidney length', [12005])},
- 'RightKidneyThickness': {'11855-4': ('Right Kidney thickness', [12005])},
- 'RightKidneyWidth': {'11827-3': ('Right Kidney width', [12005])},
- 'RightPulmonaryArteryDiameter': {'18021-6': ('Right Pulmonary Artery Diameter',
-                                              [12210]),
-                                  '80079-7': ('Right pulmonary artery diameter',
-                                              [12300])},
- 'RightVentricularAnteriorWallDiastolicThickness': {'18153-7': ('Right '
-                                                                'Ventricular '
-                                                                'Anterior Wall '
-                                                                'Diastolic '
-                                                                'Thickness',
-                                                                [12204])},
- 'RightVentricularAnteriorWallSystolicThickness': {'18157-8': ('Right '
-                                                               'Ventricular '
-                                                               'Anterior Wall '
-                                                               'Systolic '
-                                                               'Thickness',
-                                                               [12204])},
- 'RightVentricularBasalDimension4c': {'80080-5': ('Right ventricular basal '
-                                                  'dimension 4C',
-                                                  [12300])},
- 'RightVentricularEdVolume': {'8822-9': ('Right Ventricular ED Volume',
-                                         [3468, 3835])},
- 'RightVentricularEjectionFractionByAngiography': {'8815-3': ('Right '
-                                                              'Ventricular '
-                                                              'Ejection '
-                                                              'Fraction by '
-                                                              'Angiography',
-                                                              [3467])},
- 'RightVentricularEjectionFractionByCt': {'8817-9': ('Right ventricular '
-                                                     'ejection fraction by CT',
-                                                     [3833])},
- 'RightVentricularEjectionFractionByMr': {'8818-7': ('Right ventricular '
-                                                     'ejection fraction by MR',
-                                                     [3833])},
- 'RightVentricularEjectionTime': {'79929-6': ('Right ventricular ejection time',
-                                              [12300])},
- 'RightVentricularEndDiastolicArea4c': {'80081-3': ('Right ventricular end '
-                                                    'diastolic area 4C',
-                                                    [12300])},
- 'RightVentricularEndSystolicArea4c': {'80082-1': ('Right ventricular end '
-                                                   'systolic area 4C',
-                                                   [12300])},
- 'RightVentricularEsVolume': {'8824-5': ('Right Ventricular ES Volume',
-                                         [3469, 3835])},
- 'RightVentricularFractionalAreaChange': {'79936-1': ('Right ventricular '
-                                                      'fractional area change',
-                                                      [12300])},
- 'RightVentricularFreeWallThickness2d': {'80083-9': ('Right ventricular free '
-                                                     'wall thickness 2D',
-                                                     [12300])},
- 'RightVentricularFreeWallThicknessMm': {'80084-7': ('Right ventricular free '
-                                                     'wall thickness MM',
-                                                     [12300])},
- 'RightVentricularInternalDiastolicDimension': {'20304-2': ('Right Ventricular '
-                                                            'Internal '
-                                                            'Diastolic '
-                                                            'Dimension',
-                                                            [12204])},
- 'RightVentricularInternalSystolicDimension': {'20305-9': ('Right Ventricular '
-                                                           'Internal Systolic '
-                                                           'Dimension',
-                                                           [12204])},
- 'RightVentricularMidCavityDimension4c': {'80085-4': ('Right ventricular '
-                                                      'mid-cavity dimension 4C',
-                                                      [12300])},
- 'RightVentricularMyocardialPerformanceIndex': {'80086-2': ('Right ventricular '
-                                                            'myocardial '
-                                                            'performance index',
-                                                            [12300])},
- 'RightVentricularOutflowTractDiameterAtPulmonicValveRvotDistal': {'80087-0': ('Right '
-                                                                               'ventricular '
-                                                                               'outflow '
-                                                                               'tract '
-                                                                               'diameter '
-                                                                               'at '
-                                                                               'pulmonic '
-                                                                               'valve '
-                                                                               '(RVOT-Distal)',
-                                                                               [12300])},
- 'RightVentricularOutflowTractDiameterAtSubvalvularLevelRvotProximal': {'80088-8': ('Right '
-                                                                                    'ventricular '
-                                                                                    'outflow '
-                                                                                    'tract '
-                                                                                    'diameter '
-                                                                                    'at '
-                                                                                    'subvalvular '
-                                                                                    'level '
-                                                                                    '(RVOT-Proximal)',
-                                                                                    [12300])},
- 'RightVentricularOutflowTractVti': {'80089-6': ('Right ventricular outflow '
-                                                 'tract VTI',
-                                                 [12300])},
- 'RightVentricularPreEjectionPeriod': {'80090-4': ('Right ventricular '
-                                                   'pre-ejection period',
-                                                   [12300])},
- 'RoiInternalDimensionByUs': {'59090-1': ('ROI Internal Dimension by US',
+ 'ROIInternalDimensionByUS': {'59090-1': ('ROI Internal Dimension by US',
                                           [12218,
                                            12250,
                                            12251,
@@ -23440,7 +23310,7 @@ concepts['LN'] = \
                                            12274,
                                            12275,
                                            12277])},
- 'RoiThicknessByUs': {'59089-3': ('ROI Thickness by US',
+ 'ROIThicknessByUS': {'59089-3': ('ROI Thickness by US',
                                   [12218,
                                    12250,
                                    12251,
@@ -23463,8 +23333,145 @@ concepts['LN'] = \
                                    12274,
                                    12275,
                                    12277])},
+ 'RadiationExposureAndProtectionInformation': {'73569-6': ('Radiation Exposure '
+                                                           'and Protection '
+                                                           'Information',
+                                                           [7001])},
+ 'RadiologyReport': {'11528-7': ('Radiology Report', [7000])},
+ 'RadionuclideBrainScan': {'24730-4': ('Radionuclide brain scan', [646])},
+ 'RadionuclideScanOfWholeBody': {'42175-0': ('Radionuclide scan of whole body',
+                                             [646])},
+ 'RadiusByGAJeanty1983': {'33180-1': ('Radius by GA, Jeanty 1983',
+                                      [12012, 12015])},
+ 'RadiusJeanty1983': {'33126-4': ('Radius, Jeanty 1983', [12012, 12013])},
+ 'RadiusLength': {'11967-7': ('Radius length', [12006])},
+ 'RadiusMerz1987': {'11939-6': ('Radius, Merz 1987', [12012, 12013])},
+ 'Recommendations': {'18783-1': ('Recommendations', [7001])},
+ 'RelevantDiagnosticTestsAndOrLaboratoryData': {'30954-2': ('Relevant '
+                                                            'Diagnostic Tests '
+                                                            'and/or Laboratory '
+                                                            'Data',
+                                                            [9509])},
+ 'RenalArteryAortaVelocityRatio': {'33869-9': ('Renal Artery/Aorta velocity '
+                                               'ratio',
+                                               [12124])},
+ 'Request': {'55115-0': ('Request', [7001, 7002])},
+ 'ResistivityIndex': {'12023-8': ('Resistivity Index', [12119, 12121])},
+ 'RespirationRhythm': {'9304-7': ('Respiration Rhythm', [3441])},
+ 'RightAtrialEndSystolicArea4C': {'80075-5': ('Right atrial end systolic area '
+                                              '4C',
+                                              [12300])},
+ 'RightAtrialMajorAxisDimension4C': {'80076-3': ('Right atrial major axis '
+                                                 'dimension 4C',
+                                                 [12300])},
+ 'RightAtrialMinorAxisDimension4C': {'80077-1': ('Right atrial minor axis '
+                                                 'dimension 4C',
+                                                 [12300])},
+ 'RightAtrialMinorAxisDimension4CBSA': {'80078-9': ('Right atrial minor axis '
+                                                    'dimension 4C / BSA',
+                                                    [12300])},
+ 'RightAtriumAreaA4CView': {'17988-7': ('Right Atrium Area A4C view', [12206])},
+ 'RightAtriumSystolicPressure': {'18070-3': ('Right Atrium Systolic Pressure',
+                                             [12206])},
+ 'RightKidneyLength': {'11836-4': ('Right Kidney length', [12005])},
+ 'RightKidneyThickness': {'11855-4': ('Right Kidney thickness', [12005])},
+ 'RightKidneyWidth': {'11827-3': ('Right Kidney width', [12005])},
+ 'RightPulmonaryArteryDiameter': {'18021-6': ('Right Pulmonary Artery Diameter',
+                                              [12210]),
+                                  '80079-7': ('Right pulmonary artery diameter',
+                                              [12300])},
+ 'RightVentricularAnteriorWallDiastolicThickness': {'18153-7': ('Right '
+                                                                'Ventricular '
+                                                                'Anterior Wall '
+                                                                'Diastolic '
+                                                                'Thickness',
+                                                                [12204])},
+ 'RightVentricularAnteriorWallSystolicThickness': {'18157-8': ('Right '
+                                                               'Ventricular '
+                                                               'Anterior Wall '
+                                                               'Systolic '
+                                                               'Thickness',
+                                                               [12204])},
+ 'RightVentricularBasalDimension4C': {'80080-5': ('Right ventricular basal '
+                                                  'dimension 4C',
+                                                  [12300])},
+ 'RightVentricularEDVolume': {'8822-9': ('Right Ventricular ED Volume',
+                                         [3468, 3835])},
+ 'RightVentricularESVolume': {'8824-5': ('Right Ventricular ES Volume',
+                                         [3469, 3835])},
+ 'RightVentricularEjectionFractionByAngiography': {'8815-3': ('Right '
+                                                              'Ventricular '
+                                                              'Ejection '
+                                                              'Fraction by '
+                                                              'Angiography',
+                                                              [3467])},
+ 'RightVentricularEjectionFractionByCT': {'8817-9': ('Right ventricular '
+                                                     'ejection fraction by CT',
+                                                     [3833])},
+ 'RightVentricularEjectionFractionByMR': {'8818-7': ('Right ventricular '
+                                                     'ejection fraction by MR',
+                                                     [3833])},
+ 'RightVentricularEjectionTime': {'79929-6': ('Right ventricular ejection time',
+                                              [12300])},
+ 'RightVentricularEndDiastolicArea4C': {'80081-3': ('Right ventricular end '
+                                                    'diastolic area 4C',
+                                                    [12300])},
+ 'RightVentricularEndSystolicArea4C': {'80082-1': ('Right ventricular end '
+                                                   'systolic area 4C',
+                                                   [12300])},
+ 'RightVentricularFractionalAreaChange': {'79936-1': ('Right ventricular '
+                                                      'fractional area change',
+                                                      [12300])},
+ 'RightVentricularFreeWallThickness2D': {'80083-9': ('Right ventricular free '
+                                                     'wall thickness 2D',
+                                                     [12300])},
+ 'RightVentricularFreeWallThicknessMM': {'80084-7': ('Right ventricular free '
+                                                     'wall thickness MM',
+                                                     [12300])},
+ 'RightVentricularInternalDiastolicDimension': {'20304-2': ('Right Ventricular '
+                                                            'Internal '
+                                                            'Diastolic '
+                                                            'Dimension',
+                                                            [12204])},
+ 'RightVentricularInternalSystolicDimension': {'20305-9': ('Right Ventricular '
+                                                           'Internal Systolic '
+                                                           'Dimension',
+                                                           [12204])},
+ 'RightVentricularMidCavityDimension4C': {'80085-4': ('Right ventricular '
+                                                      'mid-cavity dimension 4C',
+                                                      [12300])},
+ 'RightVentricularMyocardialPerformanceIndex': {'80086-2': ('Right ventricular '
+                                                            'myocardial '
+                                                            'performance index',
+                                                            [12300])},
+ 'RightVentricularOutflowTractDiameterAtPulmonicValveRVOTDistal': {'80087-0': ('Right '
+                                                                               'ventricular '
+                                                                               'outflow '
+                                                                               'tract '
+                                                                               'diameter '
+                                                                               'at '
+                                                                               'pulmonic '
+                                                                               'valve '
+                                                                               '(RVOT-Distal)',
+                                                                               [12300])},
+ 'RightVentricularOutflowTractDiameterAtSubvalvularLevelRVOTProximal': {'80088-8': ('Right '
+                                                                                    'ventricular '
+                                                                                    'outflow '
+                                                                                    'tract '
+                                                                                    'diameter '
+                                                                                    'at '
+                                                                                    'subvalvular '
+                                                                                    'level '
+                                                                                    '(RVOT-Proximal)',
+                                                                                    [12300])},
+ 'RightVentricularOutflowTractVTI': {'80089-6': ('Right ventricular outflow '
+                                                 'tract VTI',
+                                                 [12300])},
+ 'RightVentricularPreEjectionPeriod': {'80090-4': ('Right ventricular '
+                                                   'pre-ejection period',
+                                                   [12300])},
+ 'SPECTBrain': {'39632-5': ('SPECT brain', [100])},
  'SecondQuadrantDiameter': {'11626-9': ('Second Quadrant Diameter', [12008])},
- 'SpectBrain': {'39632-5': ('SPECT brain', [100])},
  'SpineLength': {'33071-2': ('Spine Length', [12009])},
  'SpineLengthTokyo1989': {'33127-2': ('Spine Length, Tokyo, 1989',
                                       [12012, 12013])},
@@ -23559,15 +23566,15 @@ concepts['LN'] = \
                                                    12274,
                                                    12275,
                                                    12276])},
- 'TadEriksen1985': {'33128-0': ('TAD, Eriksen 1985', [12012, 12013])},
- 'TadHansmann1979': {'33129-8': ('TAD Hansmann, 1979', [12012, 12013])},
- 'TadTokyo1986': {'33130-6': ('TAD, Tokyo 1986', [12012, 12013])},
- 'TcdByGaGoldstein1987': {'33181-9': ('TCD by GA Goldstein 1987',
+ 'TADEriksen1985': {'33128-0': ('TAD, Eriksen 1985', [12012, 12013])},
+ 'TADHansmann1979': {'33129-8': ('TAD Hansmann, 1979', [12012, 12013])},
+ 'TADTokyo1986': {'33130-6': ('TAD, Tokyo 1986', [12012, 12013])},
+ 'TCDByGAGoldstein1987': {'33181-9': ('TCD by GA Goldstein 1987',
                                       [12012, 12015])},
- 'TcdChitty1994': {'33132-2': ('TCD, Chitty 1994', [12012, 12013])},
- 'TcdGoldstein1987': {'33133-0': ('TCD, Goldstein 1987', [12012, 12013])},
- 'TcdHill1990': {'33134-8': ('TCD, Hill 1990', [12012, 12013])},
- 'TcdNimrod1986': {'33135-5': ('TCD, Nimrod 1986', [12012, 12013])},
+ 'TCDChitty1994': {'33132-2': ('TCD, Chitty 1994', [12012, 12013])},
+ 'TCDGoldstein1987': {'33133-0': ('TCD, Goldstein 1987', [12012, 12013])},
+ 'TCDHill1990': {'33134-8': ('TCD, Hill 1990', [12012, 12013])},
+ 'TCDNimrod1986': {'33135-5': ('TCD, Nimrod 1986', [12012, 12013])},
  'ThcChitkara1987': {'33131-4': ('ThC, Chitkara 1987', [12012, 12013])},
  'Thickening': {'59092-7': ('% Thickening',
                             [12252,
@@ -23682,7 +23689,7 @@ concepts['LN'] = \
  'TimeToLeftVentricleSTissueVelocity': {'59095-0': ('Time to Left Ventricle S '
                                                     'Tissue Velocity',
                                                     [12257, 12259, 12271])},
- 'TimeToPeakByUs': {'59121-4': ('Time to Peak by US',
+ 'TimeToPeakByUS': {'59121-4': ('Time to Peak by US',
                                 [12254,
                                  12257,
                                  12258,
@@ -23699,7 +23706,7 @@ concepts['LN'] = \
                                  12271,
                                  12272,
                                  12274])},
- 'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleAWave': {'59125-5': ('Tissue '
+ 'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleAWave': {'59125-5': ('Tissue '
                                                                                 'Velocity '
                                                                                 'Time '
                                                                                 'Integral '
@@ -23715,7 +23722,7 @@ concepts['LN'] = \
                                                                                 [12257,
                                                                                  12259,
                                                                                  12271])},
- 'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleEWave': {'59124-8': ('Tissue '
+ 'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave': {'59124-8': ('Tissue '
                                                                                 'Velocity '
                                                                                 'Time '
                                                                                 'Integral '
@@ -23745,7 +23752,7 @@ concepts['LN'] = \
                                                         [12012, 12013])},
  'TranverseAbdominalDiameter': {'11862-0': ('Tranverse Abdominal Diameter',
                                             [12005, 12279])},
- 'TricuspidAnnularPlaneSystolicExcursionTapse': {'77903-3': ('Tricuspid '
+ 'TricuspidAnnularPlaneSystolicExcursionTAPSE': {'77903-3': ('Tricuspid '
                                                              'Annular Plane '
                                                              'Systolic '
                                                              'Excursion '
@@ -23755,12 +23762,12 @@ concepts['LN'] = \
                                           [12300])},
  'TricuspidRegurgitationDpDt': {'18034-9': ('Tricuspid Regurgitation dP/dt',
                                             [12208])},
+ 'TricuspidRegurgitationPISARadius': {'79932-0': ('Tricuspid regurgitation '
+                                                  'PISA radius',
+                                                  [12300])},
  'TricuspidRegurgitationPeakGradient': {'79937-9': ('Tricuspid regurgitation '
                                                     'peak gradient',
                                                     [12300])},
- 'TricuspidRegurgitationPisaRadius': {'79932-0': ('Tricuspid regurgitation '
-                                                  'PISA radius',
-                                                  [12300])},
  'TricuspidRegurgitationVenaContractaWidth': {'79933-8': ('Tricuspid '
                                                           'regurgitation vena '
                                                           'contracta width',
@@ -23780,7 +23787,7 @@ concepts['LN'] = \
  'TricuspidValveDecelerationTime': {'79931-2': ('Tricuspid valve deceleration '
                                                 'time',
                                                 [12300])},
- 'TricuspidValveDiastolicVti': {'18175-0': ('Tricuspid valve diastolic VTI',
+ 'TricuspidValveDiastolicVTI': {'18175-0': ('Tricuspid valve diastolic VTI',
                                             [12300])},
  'TricuspidValveEPrimeVmax': {'79924-7': ('Tricuspid valve e-prime Vmax',
                                           [12300])},
@@ -23918,26 +23925,27 @@ concepts['LN'] = \
                              12275,
                              12276])},
  'VolumeFlowRate': {'33878-0': ('Volume Flow Rate', [12304])},
- 'WholeBodyCt': {'46305-9': ('whole body ct', [6050, 6083, 646])},
+ 'WholeBodyCT': {'46305-9': ('Whole body CT', [646])},
+ 'WholeBodyCt': {'46305-9': ('whole body ct', [6050, 6083])},
  'WholeBodyPtWRncIv': {'44139-4': ('whole body pt w rnc iv', [6050, 6083])},
  'WidthOfHemisphere': {'12170-7': ('Width of Hemisphere', [12007])},
  'XRayReport': {'43468-8': ('X-Ray Report', [7000])},
  'YolkSacLength': {'11816-6': ('Yolk Sac length', [12009])}}
 
 concepts['RADLEX'] = \
-{'AcrCategory1ActionableFinding': {'RID49480': ('ACR Category 1 Actionable '
+{'ACRCategory1ActionableFinding': {'RID49480': ('ACR Category 1 Actionable '
                                                 'Finding',
                                                 [7035])},
- 'AcrCategory2ActionableFinding': {'RID49481': ('ACR Category 2 Actionable '
+ 'ACRCategory2ActionableFinding': {'RID49481': ('ACR Category 2 Actionable '
                                                 'Finding',
                                                 [7035])},
- 'AcrCategory3ActionableFinding': {'RID49482': ('ACR Category 3 Actionable '
+ 'ACRCategory3ActionableFinding': {'RID49482': ('ACR Category 3 Actionable '
                                                 'Finding',
                                                 [7035])},
  'BeamHardeningArtifact': {'RID11327': ('Beam-hardening artifact', [6135])},
  'DiagnosticQuality': {'RID12': ('Diagnostic quality', [7036])},
  'LimitedQuality': {'RID13': ('Limited quality', [7036])},
- 'NmHeadPerfusionBrainPetCtAv45': {'RPID5427': ('NM head perfusion brain '
+ 'NMHeadPerfusionBrainPETCTAV45': {'RPID5427': ('NM head perfusion brain '
                                                 'PET-CT AV-45',
                                                 [100])},
  'NonDiagnosticQuality': {'RID14': ('Non-diagnostic quality', [7036])}}
@@ -24043,7 +24051,7 @@ concepts['NCIt'] = \
  'BronchioloalveolarAdenocarcinoma': {'C2923': ('Bronchioloalveolar '
                                                 'adenocarcinoma',
                                                 [638, 639])},
- 'DcfbcF18': {'C96234': ('DCFBC F^18^', [4021])},
+ 'DCFBCF18': {'C96234': ('DCFBC F^18^', [4021])},
  'DcfpylF18': {'C116352': ('DCFPyL F^18^', [4021])},
  'Enrollment': {'C37948': ('Enrollment', [280])},
  'Erect': {'C86043': ('erect', [19])},
@@ -24054,8 +24062,8 @@ concepts['NCIt'] = \
                                                      'Pacific Islander',
                                                      [6099])},
  'NoEvidenceOfDisease': {'C40413': ('No Evidence of Disease', [6098])},
- 'Psma11Ga68': {'C118961': ('PSMA-11 Ga^68^', [4021])},
- 'Rano': {'C114879': ('RANO', [6147])},
+ 'PSMA11Ga68': {'C118961': ('PSMA-11 Ga^68^', [4021])},
+ 'RANO': {'C114879': ('RANO', [6147])},
  'Reader': {'C28747': ('Reader', [7453])},
  'RecurrentDisease': {'C38155': ('Recurrent Disease', [6098])},
  'ReferenceRegion': {'C94970': ('Reference Region', [7151, 7165, 7196])},
@@ -24075,7 +24083,6 @@ concepts['UCUM'] = \
  'Centimeter2Milliliter': {'cm2/ml': ('Centimeter**2/milliliter',
                                       [7181, 83, 84])},
  'CentimeterSecond': {'cm/s': ('centimeter/second', [7181])},
- 'Cm': {'cm': ('cm', [7063])},
  'Counts': {'{counts}': ('Counts', [7181, 83, 84])},
  'CountsPerSecond': {'{counts}/s': ('Counts per second', [7181, 83, 84])},
  'CubicCentimeter': {'cm3': ('cubic centimeter', [7181, 7462])},
@@ -24087,8 +24094,8 @@ concepts['UCUM'] = \
  'Degree': {'deg': ('Degree', [7183])},
  'DegreesCelsius': {'Cel': ('degrees Celsius', [7181])},
  'Diopters': {'diop': ('diopters', [4267])},
- 'DynSCm5': {'dyn.s.cm-5': ('dyn.s.cm-5', [3502, 7181])},
- 'DynSCm5M2': {'dyn.s.cm-5/m2': ('dyn.s.cm-5/m2', [3503, 7181])},
+ 'DynScm5': {'dyn.s.cm-5': ('dyn.s.cm-5', [3502, 7181])},
+ 'DynScm5M2': {'dyn.s.cm-5/m2': ('dyn.s.cm-5/m2', [3503, 7181])},
  'ElectronDensity': {'10*23/ml': ('Electron Density', [301])},
  'French': {'[Ch]': ('french', [3510])},
  'Gy': {'Gy': ('Gy', [10071, 7181])},
@@ -24096,14 +24103,11 @@ concepts['UCUM'] = \
  'HounsfieldUnit': {"[hnsf'U]": ('Hounsfield Unit', [301, 7181, 83])},
  'Hour': {'h': ('hour', [7456])},
  'Kilovolt': {'kV': ('Kilovolt', [9521])},
- 'KmH': {'km/h': ('km/h', [3212])},
  'Kpa': {'kPa': ('kPa', [3500, 7181])},
  'M': {'m': ('m', [7063])},
  'Megabecquerel': {'MBq': ('megabecquerel', [3083])},
  'Megaelectronvolt': {'MeV': ('Megaelectronvolt', [9521])},
  'Megavolt': {'MV': ('Megavolt', [9521])},
- 'MgCm3': {'mg/cm3': ('mg/cm^3', [301])},
- 'MgMl': {'mg/ml': ('mg/ml', [301, 4244])},
  'Micrometer': {'um': ('micrometer', [4260, 4267, 7181, 7183, 7460])},
  'MicromoleMilliliter': {'umol/ml': ('Micromole/milliliter', [7181, 83, 84])},
  'MicromoleMinuteMilliliter': {'umol/min/ml': ('Micromole/minute/milliliter',
@@ -24123,16 +24127,14 @@ concepts['UCUM'] = \
  'MilliliterPerSecond': {'ml/s': ('milliliter per second', [7181])},
  'Millimeter': {'mm': ('millimeter', [7181, 7183, 7460])},
  'MillimeterSecond': {'mm/s': ('millimeter/second', [7181])},
- 'MillimolesPerKgWetWeight': {'mmol/kg{WetWeight}': ('millimoles per kg wet '
+ 'MillimolesPerkgWetWeight': {'mmol/kg{WetWeight}': ('millimoles per kg wet '
                                                      'weight',
                                                      [7181])},
  'Millisecond': {'ms': ('millisecond', [7181, 7183])},
  'Millitesla': {'mT': ('milliTesla', [7181])},
  'Min': {'/min': ('/min', [7181])},
  'Minute': {'min': ('minute', [7456])},
- 'Mm': {'mm': ('mm', [3510, 4267, 7063])},
  'Mm2S': {'mm2/s': ('mm2/s', [7181, 7277])},
- 'Mm2S_106': {'10-6.mm2/s': ('10-6.mm2/s', [7181, 7277])},
  'Mmhg': {'mm[Hg]': ('mmHg', [3500, 7181])},
  'Month': {'mo': ('month', [6046, 7456])},
  'Mph': {'[mi_i]/h': ('mph', [3212])},
@@ -24213,40 +24215,57 @@ concepts['UCUM'] = \
                                                                        84,
                                                                        85])},
  'Sv': {'Sv': ('Sv', [10071, 7181])},
- 'Um': {'um': ('um', [7063])},
- 'Um2Ms': {'um2/ms': ('um2/ms', [7181, 7277])},
  'Um2S': {'um2/s': ('um2/s', [7181, 7277])},
+ 'Um2ms': {'um2/ms': ('um2/ms', [7181, 7277])},
  'Week': {'wk': ('week', [6046, 7456])},
  'WoodU': {"[wood'U]": ('Wood U', [3502, 7181])},
  'WoodUM2': {"[wood'U]/m2": ('Wood U/m2', [3503, 7181])},
- 'Year': {'a': ('year', [6046, 7456])}}
+ 'Year': {'a': ('year', [6046, 7456])},
+ '_106Mm2S': {'10-6.mm2/s': ('10-6.mm2/s', [7181, 7277])},
+ 'cm': {'cm': ('cm', [7063])},
+ 'kmH': {'km/h': ('km/h', [3212])},
+ 'mgcm3': {'mg/cm3': ('mg/cm^3', [301])},
+ 'mgml': {'mg/ml': ('mg/ml', [301, 4244])},
+ 'mm': {'mm': ('mm', [3510, 4267, 7063])},
+ 'um': {'um': ('um', [7063])}}
 
 concepts['NDC'] = \
 {'Definity': {'11994-011-04': ('Definity', [12030])},
  'Optison': {'0407-2707-03': ('Optison', [12030])}}
 
 concepts['MDC'] = \
-{'AberratedAtrialPrematureBeatAshmanBeat': {'10:8304': ('Aberrated atrial '
+{'AVDissociation': {'10:9712': ('AV Dissociation', [3415])},
+ 'AVDissociationWithInterference': {'10:9728': ('AV dissociation with '
+                                                'interference',
+                                                [3415])},
+ 'AVJunctionalNodalEscapeRhythm': {'10:9552': ('AV junctional (nodal) escape '
+                                               'rhythm',
+                                               [3415])},
+ 'AVJunctionalNodalRhythm': {'10:9536': ('AV junctional (nodal) rhythm',
+                                         [3415])},
+ 'AVReciprocatingTachycardia': {'10:9600': ('AV reciprocating tachycardia',
+                                            [3415])},
+ 'AberratedAtrialPrematureBeatAshmanBeat': {'10:8304': ('Aberrated atrial '
                                                         'premature beat '
                                                         '(Ashman beat)',
                                                         [3335])},
  'AbnormalBeat': {'10:8224': ('Abnormal beat', [3335])},
- 'AcceleratedAvJunctionalNodalRhythm': {'10:9568': ('Accelerated AV junctional '
+ 'AcceleratedAVJunctionalNodalRhythm': {'10:9568': ('Accelerated AV junctional '
                                                     '(nodal) rhythm',
                                                     [3415])},
  'AcceleratedIdioventricularRhythm': {'10:9888': ('Accelerated idioventricular '
                                                   'rhythm',
                                                   [3415])},
- 'AmplitudeAt20MsIntoStSegmentPerLead': {'2:14848': ('Amplitude at 20 ms into '
+ 'AmplitudeAt20msIntoSTSegmentPerLead': {'2:14848': ('Amplitude at 20 ms into '
                                                      'ST segment, per lead',
                                                      [3688])},
- 'AmplitudeAt40MsIntoStSegmentPerLead': {'2:15104': ('Amplitude at 40 ms into '
+ 'AmplitudeAt40msIntoSTSegmentPerLead': {'2:15104': ('Amplitude at 40 ms into '
                                                      'ST segment, per lead',
                                                      [3688])},
- 'AmplitudeAt60MsIntoStSegmentPerLead': {'2:14336': ('Amplitude at 60 ms into '
+ 'AmplitudeAt60msIntoSTSegmentPerLead': {'2:14336': ('Amplitude at 60 ms into '
                                                      'ST segment, per lead',
                                                      [3688])},
- 'AmplitudeAt80MsIntoStSegmentPerLead': {'2:14592': ('Amplitude at 80 ms into '
+ 'AmplitudeAt80msIntoSTSegmentPerLead': {'2:14592': ('Amplitude at 80 ms into '
                                                      'ST segment, per lead',
                                                      [3688])},
  'AntiTachycardiaPacing': {'10:10304': ('Anti-Tachycardia Pacing', [3415])},
@@ -24286,17 +24305,6 @@ concepts['MDC'] = \
  'AuxiliaryUnipolarLead2': {'2:76': ('Auxiliary unipolar lead 2', [3001])},
  'AuxiliaryUnipolarLead3': {'2:77': ('Auxiliary unipolar lead 3', [3001])},
  'AuxiliaryUnipolarLead4': {'2:78': ('Auxiliary unipolar lead 4', [3001])},
- 'AvDissociation': {'10:9712': ('AV Dissociation', [3415])},
- 'AvDissociationWithInterference': {'10:9728': ('AV dissociation with '
-                                                'interference',
-                                                [3415])},
- 'AvJunctionalNodalEscapeRhythm': {'10:9552': ('AV junctional (nodal) escape '
-                                               'rhythm',
-                                               [3415])},
- 'AvJunctionalNodalRhythm': {'10:9536': ('AV junctional (nodal) rhythm',
-                                         [3415])},
- 'AvReciprocatingTachycardia': {'10:9600': ('AV reciprocating tachycardia',
-                                            [3415])},
  'AvfAugmentedVoltageFoot': {'2:64': ('aVF, augmented voltage, foot', [3001])},
  'AvlAugmentedVoltageLeft': {'2:63': ('aVL, augmented voltage, left', [3001])},
  'Avr': {'2:65': ('−aVR', [3001])},
@@ -24307,7 +24315,7 @@ concepts['MDC'] = \
  'BilateralBundleBranchBlockBeat': {'10:8592': ('bilateral bundle-branch block '
                                                 'beat',
                                                 [3335])},
- 'BipolarUncorrectedXyzLeadSystem': {'10:11277': ('Bipolar uncorrected XYZ '
+ 'BipolarUncorrectedXYZLeadSystem': {'10:11277': ('Bipolar uncorrected XYZ '
                                                   'lead system',
                                                   [3263])},
  'Bradycardia': {'10:10432': ('Bradycardia', [3415])},
@@ -24350,25 +24358,25 @@ concepts['MDC'] = \
                                                                 [3001])},
  'CardioversionSpike': {'10:7168': ('Cardioversion spike', [3335])},
  'ChestLead': {'2:86': ('Chest lead', [3001])},
- 'ChestLeadPerV1AndV1rPlacement': {'2:99': ('Chest lead per V1 and V1R '
+ 'ChestLeadPerV1AndV1RPlacement': {'2:99': ('Chest lead per V1 and V1R '
                                             'placement',
                                             [3001])},
- 'ChestLeadPerV2AndV2rPlacement': {'2:100': ('Chest lead per V2 and V2R '
+ 'ChestLeadPerV2AndV2RPlacement': {'2:100': ('Chest lead per V2 and V2R '
                                              'placement',
                                              [3001])},
- 'ChestLeadPerV3AndV3rPlacement': {'2:101': ('Chest lead per V3 and V3R '
+ 'ChestLeadPerV3AndV3RPlacement': {'2:101': ('Chest lead per V3 and V3R '
                                              'placement',
                                              [3001])},
- 'ChestLeadPerV4AndV4rPlacement': {'2:102': ('Chest lead per V4 and V4R '
+ 'ChestLeadPerV4AndV4RPlacement': {'2:102': ('Chest lead per V4 and V4R '
                                              'placement',
                                              [3001])},
- 'ChestLeadPerV5AndV5rPlacement': {'2:19': ('Chest lead per V5 and V5R '
+ 'ChestLeadPerV5AndV5RPlacement': {'2:19': ('Chest lead per V5 and V5R '
                                             'placement',
                                             [3001])},
- 'ChestLeadPerV6AndV6rPlacement': {'2:103': ('Chest lead per V6 and V6R '
+ 'ChestLeadPerV6AndV6RPlacement': {'2:103': ('Chest lead per V6 and V6R '
                                              'placement',
                                              [3001])},
- 'ChestLeadPerV7AndV8rPlacement': {'2:104': ('Chest lead per V7 and V8R '
+ 'ChestLeadPerV7AndV8RPlacement': {'2:104': ('Chest lead per V7 and V8R '
                                              'placement',
                                              [3001])},
  'ChestLeadSymmetricPlacement': {'2:98': ('Chest lead (symmetric placement)',
@@ -24395,8 +24403,8 @@ concepts['MDC'] = \
  'ChestManubriumLeadPerV7Placement': {'2:121': ('Chest-manubrium lead per V7 '
                                                 'placement',
                                                 [3001])},
- 'CompleteAvDissociation': {'10:9760': ('Complete AV dissociation', [3415])},
- 'CubeXyzLeadSystem': {'10:11276': ('Cube XYZ lead system', [3263])},
+ 'CompleteAVDissociation': {'10:9760': ('Complete AV dissociation', [3415])},
+ 'CubeXYZLeadSystem': {'10:11276': ('Cube XYZ lead system', [3263])},
  'DefibrillationSpike': {'10:8192': ('Defibrillation spike', [3335])},
  'DefibrillatorLeadAnteriorLateral': {'2:73': ('Defibrillator lead: '
                                                'anterior-lateral',
@@ -24406,8 +24414,8 @@ concepts['MDC'] = \
  'DerivedLeadAvl': {'2:113': ('Derived Lead aVL', [3001])},
  'DerivedLeadAvr': {'2:112': ('Derived Lead aVR', [3001])},
  'DerivedLeadI': {'2:31': ('Derived Lead I', [3001])},
- 'DerivedLeadIi': {'2:32': ('Derived Lead II', [3001])},
- 'DerivedLeadIii': {'2:111': ('Derived Lead III', [3001])},
+ 'DerivedLeadII': {'2:32': ('Derived Lead II', [3001])},
+ 'DerivedLeadIII': {'2:111': ('Derived Lead III', [3001])},
  'DerivedLeadV1': {'2:33': ('Derived Lead V1', [3001])},
  'DerivedLeadV2': {'2:34': ('Derived Lead V2', [3001])},
  'DerivedLeadV3': {'2:35': ('Derived Lead V3', [3001])},
@@ -24415,23 +24423,23 @@ concepts['MDC'] = \
  'DerivedLeadV5': {'2:37': ('Derived Lead V5', [3001])},
  'DerivedLeadV6': {'2:38': ('Derived Lead V6', [3001])},
  'DominantBeat': {'10:8240': ('Dominant beat', [3335])},
- 'EasiLeadAi': {'2:133': ('EASI Lead AI', [3001])},
- 'EasiLeadAs': {'2:132': ('EASI Lead AS', [3001])},
- 'EasiLeadEs': {'2:131': ('EASI Lead ES', [3001])},
- 'EasiUpperSternumLead': {'2:134': ('EASI upper sternum lead', [3001])},
+ 'EASILeadAI': {'2:133': ('EASI Lead AI', [3001])},
+ 'EASILeadAS': {'2:132': ('EASI Lead AS', [3001])},
+ 'EASILeadES': {'2:131': ('EASI Lead ES', [3001])},
+ 'EASIUpperSternumLead': {'2:134': ('EASI upper sternum lead', [3001])},
  'EntireBeatPonToToffExcludingU': {'10:1472': ('Entire Beat (Pon to Toff, '
                                                'excluding U)',
                                                [3335])},
  'EntireBeatQonToToffExcludingPAndU': {'10:1536': ('Entire Beat (Qon to Toff, '
                                                    'excluding P and U)',
                                                    [3335])},
- 'EntireQrsExcludingPTAndU': {'10:1600': ('Entire QRS (excluding P, T and U)',
+ 'EntireQRSExcludingPTAndU': {'10:1600': ('Entire QRS (excluding P, T and U)',
                                           [3335])},
  'ExternalPacingLeadAnteriorPosterior': {'2:74': ('External pacing lead: '
                                                   'anterior-posterior',
                                                   [3001])},
- 'FirstDegreeAvBlock': {'10:9632': ('First Degree AV Block', [3415])},
- 'FirstDegreeSaBlock': {'10:9776': ('First Degree SA Block', [3415])},
+ 'FirstDegreeAVBlock': {'10:9632': ('First Degree AV Block', [3415])},
+ 'FirstDegreeSABlock': {'10:9776': ('First Degree SA Block', [3415])},
  'FrankLeadA': {'2:27': ('Frank Lead A', [3001])},
  'FrankLeadC': {'2:26': ('Frank Lead C', [3001])},
  'FrankLeadE': {'2:25': ('Frank Lead E', [3001])},
@@ -24439,7 +24447,7 @@ concepts['MDC'] = \
  'FrankLeadH': {'2:30': ('Frank Lead H', [3001])},
  'FrankLeadI': {'2:24': ('Frank Lead I', [3001])},
  'FrankLeadM': {'2:28': ('Frank Lead M', [3001])},
- 'FrankXyzLeadSystem': {'10:11274': ('Frank XYZ lead system', [3263])},
+ 'FrankXYZLeadSystem': {'10:11274': ('Frank XYZ lead system', [3263])},
  'FusionOfVentricularAndNormalBeat': {'10:8352': ('Fusion of ventricular and '
                                                   'normal beat',
                                                   [3335])},
@@ -24458,14 +24466,14 @@ concepts['MDC'] = \
                                                       [3335])},
  'Interpolator': {'10:11414': ('Interpolator', [3691])},
  'InterpolatorDescription': {'10:11416': ('Interpolator description', [3691])},
- 'InterpolatorSnr': {'10:11418': ('Interpolator SNR', [3690])},
+ 'InterpolatorSNR': {'10:11418': ('Interpolator SNR', [3690])},
  'IntraventricularConductionDisturbance': {'10:8608': ('intraventricular '
                                                        'conduction disturbance',
                                                        [3335])},
  'IrregularRhythm': {'10:10352': ('Irregular rhythm', [3415])},
  'IsoelectricPointOrSegment': {'10:1856': ('Isoelectric point or segment',
                                            [3335])},
- 'IsoelectricRegionFromGlobalQrsOnsetToSpecificLeadOnset': {'10:1280': ('Isoelectric '
+ 'IsoelectricRegionFromGlobalQRSOnsetToSpecificLeadOnset': {'10:1280': ('Isoelectric '
                                                                         'region '
                                                                         'from '
                                                                         'global '
@@ -24476,7 +24484,7 @@ concepts['MDC'] = \
                                                                         'lead '
                                                                         'onset',
                                                                         [3335])},
- 'IsoelectricRegionFromSpecificLeadQrsOffsetToGlobalOffset': {'10:1344': ('Isoelectric '
+ 'IsoelectricRegionFromSpecificLeadQRSOffsetToGlobalOffset': {'10:1344': ('Isoelectric '
                                                                           'region '
                                                                           'from '
                                                                           'specific '
@@ -24487,8 +24495,8 @@ concepts['MDC'] = \
                                                                           'global '
                                                                           'offset',
                                                                           [3335])},
- 'IsolatedQrsLikeArtifact': {'10:2176': ('Isolated QRS-like artifact', [3335])},
- 'IsorhythmicAvDissociation': {'10:9744': ('Isorhythmic AV dissociation',
+ 'IsolatedQRSLikeArtifact': {'10:2176': ('Isolated QRS-like artifact', [3335])},
+ 'IsorhythmicAVDissociation': {'10:9744': ('Isorhythmic AV dissociation',
                                            [3415])},
  'JPoint': {'10:2048': ('J-point', [3335])},
  'JPointAmplitudePerLead': {'2:1024': ('J point Amplitude, per lead', [3688])},
@@ -24499,82 +24507,37 @@ concepts['MDC'] = \
                                                      [3335])},
  'JunctionalTachycardia': {'10:9584': ('Junctional Tachycardia', [3415])},
  'LeadANehbAnterior': {'2:71': ('Lead A (Nehb - Anterior)', [3001])},
- 'LeadCh5': {'2:122': ('Lead CH5', [3001])},
- 'LeadCr5': {'2:125': ('Lead CR5', [3001])},
+ 'LeadCH5': {'2:122': ('Lead CH5', [3001])},
+ 'LeadCR5': {'2:125': ('Lead CR5', [3001])},
  'LeadDNehbDorsal': {'2:70': ('Lead D (Nehb - Dorsal)', [3001])},
- 'LeadDerivedFromFrankXyzLeads_12': {'10:11269': ('12-lead derived from Frank '
-                                                  'XYZ leads',
-                                                  [3263])},
- 'LeadDerivedFromNonStandardLeads_12': {'10:11270': ('12-lead derived from '
-                                                     'non-standard leads',
-                                                     [3263])},
- 'LeadElectrodePad_12': {'10:11268': ('12-lead electrode pad', [3263])},
- 'LeadForBicycleExerciseTestingLimbLeadsOnBackOfPatient_12': {'10:11271': ('12-lead '
-                                                                           'for '
-                                                                           'bicycle '
-                                                                           'exercise '
-                                                                           'testing, '
-                                                                           'limb '
-                                                                           'leads '
-                                                                           'on '
-                                                                           'back '
-                                                                           'of '
-                                                                           'patient',
-                                                                           [3263])},
- 'LeadFromEasiLeadsEsAsAiByDowerEasiTransformation_12': {'10:11284': ('12-lead '
-                                                                      'from '
-                                                                      'EASI '
-                                                                      'leads '
-                                                                      '(ES, '
-                                                                      'AS, AI) '
-                                                                      'by '
-                                                                      'Dower/EASI '
-                                                                      'transformation',
-                                                                      [3263])},
- 'LeadFromFrankLeadsXyzLeadsByDowerTransformation_12': {'10:11283': ('12-lead '
-                                                                     'from '
-                                                                     'Frank '
-                                                                     'leads '
-                                                                     'XYZ '
-                                                                     'leads by '
-                                                                     'Dower '
-                                                                     'transformation',
-                                                                     [3263])},
- 'LeadFromLimbLeadsIIiAndOneOrMoreVLeads_12': {'10:11285': ('12-lead from Limb '
-                                                            'Leads (I, II) and '
-                                                            'one or more V '
-                                                            'leads',
-                                                            [3263])},
  'LeadI': {'2:1': ('Lead I', [3001])},
- 'LeadIi': {'2:2': ('Lead II', [3001])},
- 'LeadIii': {'2:61': ('Lead III', [3001])},
+ 'LeadII': {'2:2': ('Lead II', [3001])},
+ 'LeadIII': {'2:61': ('Lead III', [3001])},
  'LeadJNehbInferior': {'2:72': ('Lead J (Nehb - Inferior)', [3001])},
- 'LeadSystemCc5Cm5Ch5_3': {'10:11282': ('3-lead system, CC5-CM5-CH5', [3263])},
- 'LeadSystemCc5Cm5Ml_3': {'10:11281': ('3-lead system, CC5-CM5-ML', [3263])},
  'LeadV1': {'2:3': ('Lead V1', [3001])},
  'LeadV2': {'2:4': ('Lead V2', [3001])},
- 'LeadV2r': {'2:10': ('Lead V2R', [3001])},
+ 'LeadV2R': {'2:10': ('Lead V2R', [3001])},
  'LeadV3': {'2:5': ('Lead V3', [3001])},
- 'LeadV3r': {'2:11': ('Lead V3R', [3001])},
+ 'LeadV3R': {'2:11': ('Lead V3R', [3001])},
  'LeadV4': {'2:6': ('Lead V4', [3001])},
- 'LeadV4r': {'2:12': ('Lead V4R', [3001])},
+ 'LeadV4R': {'2:12': ('Lead V4R', [3001])},
  'LeadV5': {'2:7': ('Lead V5', [3001])},
- 'LeadV5r': {'2:13': ('Lead V5R', [3001])},
+ 'LeadV5R': {'2:13': ('Lead V5R', [3001])},
  'LeadV6': {'2:8': ('Lead V6', [3001])},
- 'LeadV6r': {'2:14': ('Lead V6R', [3001])},
+ 'LeadV6R': {'2:14': ('Lead V6R', [3001])},
  'LeadV7': {'2:9': ('Lead V7', [3001])},
- 'LeadV7r': {'2:15': ('Lead V7R', [3001])},
+ 'LeadV7R': {'2:15': ('Lead V7R', [3001])},
  'LeadV8': {'2:66': ('Lead V8', [3001])},
- 'LeadV8r': {'2:68': ('Lead V8R', [3001])},
+ 'LeadV8R': {'2:68': ('Lead V8R', [3001])},
  'LeadV9': {'2:67': ('Lead V9', [3001])},
- 'LeadV9r': {'2:69': ('Lead V9R', [3001])},
- 'LeadVfNonaugmentedVoltageVectorOfLl': {'2:90': ('Lead VF, nonaugmented '
+ 'LeadV9R': {'2:69': ('Lead V9R', [3001])},
+ 'LeadVFNonaugmentedVoltageVectorOfLL': {'2:90': ('Lead VF, nonaugmented '
                                                   'voltage, vector of LL',
                                                   [3001])},
- 'LeadVlNonaugmentedVoltageVectorOfLa': {'2:89': ('Lead VL, nonaugmented '
+ 'LeadVLNonaugmentedVoltageVectorOfLA': {'2:89': ('Lead VL, nonaugmented '
                                                   'voltage, vector of LA',
                                                   [3001])},
- 'LeadVrNonaugmentedVoltageVectorOfRa': {'2:88': ('Lead VR, nonaugmented '
+ 'LeadVRNonaugmentedVoltageVectorOfRA': {'2:88': ('Lead VR, nonaugmented '
                                                   'voltage, vector of RA',
                                                   [3001])},
  'LeadX': {'2:16': ('Lead X', [3001])},
@@ -24618,7 +24581,7 @@ concepts['MDC'] = \
                                                             'positions, V1-V6 '
                                                             'in electrode pad',
                                                             [3263])},
- 'McfeeParungaoXyzLeadSystem': {'10:11275': ('McFee-Parungao XYZ lead system',
+ 'McfeeParungaoXYZLeadSystem': {'10:11275': ('McFee-Parungao XYZ lead system',
                                              [3263])},
  'ModerateNoise': {'10:11216': ('Moderate noise', [3680])},
  'ModerateNoiseBeatsCanBeDetectedButCannotBeClassified': {'10:11216': ('Moderate '
@@ -24655,13 +24618,13 @@ concepts['MDC'] = \
  'ModifiedLimbLead': {'2:126': ('Modified limb lead', [3001])},
  'MultifocalAtrialTachycardia': {'10:9424': ('Multifocal Atrial Tachycardia',
                                              [3415])},
+ 'NEHBLeadSystem': {'10:11280': ('NEHB lead system', [3263])},
  'NegativeLowRightScapulaLead': {'2:124': ('negative: low right scapula Lead',
                                            [3001])},
  'NegativeRightInfraclavicularFossa': {'2:123': ('negative: right '
                                                  'infraclavicular fossa',
                                                  [3001])},
- 'NehbLeadSystem': {'10:11280': ('NEHB lead system', [3263])},
- 'NoEcgSignalIsAvailable': {'10:11248': ('No ECG signal is available', [3335])},
+ 'NoECGSignalIsAvailable': {'10:11248': ('No ECG signal is available', [3335])},
  'NoNoise': {'10:11200': ('No Noise', [3335, 3680])},
  'NoSignal': {'10:11248': ('No signal', [3680])},
  'NonConductedPWaveBlocked': {'10:8320': ('Non-conducted p-wave (blocked)',
@@ -24692,7 +24655,7 @@ concepts['MDC'] = \
                                          [3688])},
  'PMinimumAmplitudePerLead': {'2:1536': ('P minimum amplitude, per lead',
                                          [3688])},
- 'POffsetToQrsOnsetDurationPerLead': {'2:7168': ('P offset to QRS onset '
+ 'POffsetToQRSOnsetDurationPerLead': {'2:7168': ('P offset to QRS onset '
                                                  'duration, per lead',
                                                  [3687])},
  'POnsetToP1DurationPerLead': {'2:4608': ('P onset to P1 duration, per lead',
@@ -24701,6 +24664,20 @@ concepts['MDC'] = \
                                           [3687])},
  'POnsetToP3DurationPerLead': {'2:5120': ('P onset to P3 duration, per lead',
                                           [3687])},
+ 'PPIntervalGlobal': {'2:16140': ('PP interval global', [3228])},
+ 'PPIntervalPerLead': {'2:32768': ('PP interval per lead', [3228])},
+ 'PPTimePeriodGlobal': {'2:16140': ('PP time period, global', [3689])},
+ 'PPTimePeriodPerLead': {'2:32768': ('PP time period, per lead', [3687])},
+ 'PQSegmentTimePeriodGlobal': {'2:16148': ('PQ segment time period, global',
+                                           [3689])},
+ 'PQSegmentTimePeriodPerLead': {'2:33536': ('PQ segment time period, per lead',
+                                            [3687])},
+ 'PQTimePeriodGlobal': {'2:16144': ('PQ time period, global', [3689])},
+ 'PQTimePeriodPerLead': {'2:33280': ('PQ time period, per lead', [3687])},
+ 'PRIntervalGlobal': {'2:15872': ('PR interval global', [3228])},
+ 'PRIntervalPerLead': {'2:7168': ('PR interval per lead', [3228])},
+ 'PRSegment': {'10:1920': ('PR Segment', [3335])},
+ 'PRTimePeriodGlobal': {'2:15872': ('PR time period, global', [3689])},
  'PWave': {'10:256': ('P wave', [3335])},
  'PWaveSecondDeflectionInPWave': {'10:320': ("P' wave (second deflection in P "
                                              'wave)',
@@ -24716,37 +24693,25 @@ concepts['MDC'] = \
  'PolymorphicVentricularTachycardia': {'10:10064': ('Polymorphic Ventricular '
                                                     'Tachycardia',
                                                     [3415])},
- 'PpIntervalGlobal': {'2:16140': ('PP interval global', [3228])},
- 'PpIntervalPerLead': {'2:32768': ('PP interval per lead', [3228])},
- 'PpTimePeriodGlobal': {'2:16140': ('PP time period, global', [3689])},
- 'PpTimePeriodPerLead': {'2:32768': ('PP time period, per lead', [3687])},
- 'PqSegmentTimePeriodGlobal': {'2:16148': ('PQ segment time period, global',
-                                           [3689])},
- 'PqSegmentTimePeriodPerLead': {'2:33536': ('PQ segment time period, per lead',
-                                            [3687])},
- 'PqTimePeriodGlobal': {'2:16144': ('PQ time period, global', [3689])},
- 'PqTimePeriodPerLead': {'2:33280': ('PQ time period, per lead', [3687])},
- 'PrIntervalGlobal': {'2:15872': ('PR interval global', [3228])},
- 'PrIntervalPerLead': {'2:7168': ('PR interval per lead', [3228])},
- 'PrSegment': {'10:1920': ('PR Segment', [3335])},
- 'PrTimePeriodGlobal': {'2:15872': ('PR time period, global', [3689])},
  'PreExcitation': {'10:10096': ('pre-excitation', [3415]),
                    '10:8624': ('pre-excitation', [3335])},
  'PrecordialLead': {'2:87': ('Precordial lead', [3001])},
- 'PseudoOrthogonalXyzLeadSystem': {'10:11278': ('Pseudo-orthogonal XYZ lead '
+ 'PseudoOrthogonalXYZLeadSystem': {'10:11278': ('Pseudo-orthogonal XYZ lead '
                                                 'system',
                                                 [3263])},
  'QAmplitudePerLead': {'2:1792': ('Q amplitude, per lead', [3688])},
  'QDurationPerLead': {'2:7680': ('Q duration, per lead', [3687])},
+ 'QRSAxis': {'2:16132': ('QRS axis', [3229])},
+ 'QRSDurationGlobal': {'2:16156': ('QRS duration global', [3228, 3689])},
+ 'QRSDurationPerLead': {'2:7936': ('QRS duration per lead', [3228, 3687])},
+ 'QSWave': {'10:512': ('QS wave', [3335])},
+ 'QTDurationGlobal': {'2:16160': ('QT duration, global', [3689])},
+ 'QTDurationPerLead': {'2:8192': ('QT duration, per lead', [3687])},
+ 'QTIntervalGlobal': {'2:16160': ('QT interval global', [3228])},
+ 'QTIntervalPerLead': {'2:8192': ('QT interval per lead', [3228])},
+ 'QTUTimePeriodGlobal': {'2:16004': ('QTU time period, global', [3689])},
+ 'QTUTimePeriodPerLead': {'2:34560': ('QTU time period, per lead', [3687])},
  'QWave': {'10:448': ('Q wave', [3335])},
- 'QrsAxis': {'2:16132': ('QRS axis', [3229])},
- 'QrsDurationGlobal': {'2:16156': ('QRS duration global', [3228, 3689])},
- 'QrsDurationPerLead': {'2:7936': ('QRS duration per lead', [3228, 3687])},
- 'QsWave': {'10:512': ('QS wave', [3335])},
- 'QtDurationGlobal': {'2:16160': ('QT duration, global', [3689])},
- 'QtDurationPerLead': {'2:8192': ('QT duration, per lead', [3687])},
- 'QtIntervalGlobal': {'2:16160': ('QT interval global', [3228])},
- 'QtIntervalPerLead': {'2:8192': ('QT interval per lead', [3228])},
  'QtcGlobalUsingBazettFormula': {'2:15880': ('QTc global using Bazett formula',
                                              [3227])},
  'QtcGlobalUsingFredericiaFormula': {'2:15892': ('QTc global using Fredericia '
@@ -24760,8 +24725,6 @@ concepts['MDC'] = \
  'QtcPerLeadUsingFredericiaFormula': {'2:34304': ('QTc per lead using '
                                                   'Fredericia formula',
                                                   [3227])},
- 'QtuTimePeriodGlobal': {'2:16004': ('QTU time period, global', [3689])},
- 'QtuTimePeriodPerLead': {'2:34560': ('QTU time period, per lead', [3687])},
  'R1AmplitudePerLead': {'2:12800': ('R1 amplitude, per lead', [3688])},
  'R1DurationPerLead': {'2:11264': ('R1 duration, per lead', [3687])},
  'R2AmplitudePerLead': {'2:13056': ('R2 amplitude, per lead', [3688])},
@@ -24772,6 +24735,10 @@ concepts['MDC'] = \
  'ROnTPrematureVentricularBeat': {'10:8368': ('R-on-T premature ventricular '
                                               'beat',
                                               [3335])},
+ 'RRIntervalGlobal': {'2:16168': ('RR interval global', [3228])},
+ 'RRIntervalPerLead': {'2:33024': ('RR interval per lead', [3228])},
+ 'RRTimePeriodGlobal': {'2:16000': ('RR time period, global', [3689])},
+ 'RRTimePeriodPerLead': {'2:33024': ('RR time period, per lead', [3687])},
  'RWave': {'10:576': ('R wave', [3335])},
  'RWaveSecondDeflectionInRWave': {'10:640': ("R' wave (second deflection in R "
                                              'Wave)',
@@ -24779,7 +24746,7 @@ concepts['MDC'] = \
  'RWaveThirdDeflectionInRWave': {'10:704': ("R'' wave (third deflection in R "
                                             'Wave)',
                                             [3335])},
- 'ReentrantAvNodalTachycardia': {'10:9616': ('Reentrant AV nodal tachycardia',
+ 'ReentrantAVNodalTachycardia': {'10:9616': ('Reentrant AV nodal tachycardia',
                                              [3415])},
  'RespiratorySinusArrhythmia': {'10:9296': ('Respiratory Sinus Arrhythmia',
                                             [3415])},
@@ -24795,10 +24762,6 @@ concepts['MDC'] = \
                                                         'Antibradycardia pace '
                                                         'spike',
                                                         [3335])},
- 'RrIntervalGlobal': {'2:16168': ('RR interval global', [3228])},
- 'RrIntervalPerLead': {'2:33024': ('RR interval per lead', [3228])},
- 'RrTimePeriodGlobal': {'2:16000': ('RR time period, global', [3689])},
- 'RrTimePeriodPerLead': {'2:33024': ('RR time period, per lead', [3687])},
  'S1AmplitudePerLead': {'2:13568': ('S1 amplitude, per lead', [3688])},
  'S1DurationPerLead': {'2:12032': ('S1 duration, per lead', [3687])},
  'S2AmplitudePerLead': {'2:13824': ('S2 amplitude, per lead', [3688])},
@@ -24806,6 +24769,10 @@ concepts['MDC'] = \
  'S3AmplitudePerLead': {'2:14080': ('S3 amplitude, per lead', [3688])},
  'S3DurationPerLead': {'2:12544': ('S3 duration, per lead', [3687])},
  'SAmplitudePerLead': {'2:2304': ('S amplitude, per lead', [3688])},
+ 'STAmplitudePerLead': {'2:768': ('ST amplitude, per lead', [3688])},
+ 'STChange': {'10:2304': ('ST change', [3335])},
+ 'STMeasurementPoint': {'10:2112': ('ST measurement point', [3335])},
+ 'STSegment': {'10:1984': ('ST Segment', [3335])},
  'SWave': {'10:832': ('S wave', [3335])},
  'SWaveSecondDeflectionInSWave': {'10:896': ("S' wave (second deflection in S "
                                              'Wave)',
@@ -24815,23 +24782,23 @@ concepts['MDC'] = \
                                             [3335])},
  'SampleRate': {'10:11393': ('Sample rate', [3690])},
  'SampleSkew': {'10:11399': ('Sample skew', [3690])},
- 'SecondDegreeAvBlock': {'10:9648': ('Second Degree AV Block', [3415])},
- 'SecondDegreeAvBlockTypeIWenckebachOrMobitzTypeI': {'10:9664': ('Second '
+ 'SecondDegreeAVBlock': {'10:9648': ('Second Degree AV Block', [3415])},
+ 'SecondDegreeAVBlockTypeIIMobitzTypeII': {'10:9680': ('Second Degree AV Block '
+                                                       'Type II (Mobitz Type '
+                                                       'II)',
+                                                       [3415])},
+ 'SecondDegreeAVBlockTypeIWenckebachOrMobitzTypeI': {'10:9664': ('Second '
                                                                  'Degree AV '
                                                                  'Block Type I '
                                                                  '(Wenckebach, '
                                                                  'or Mobitz '
                                                                  'Type I)',
                                                                  [3415])},
- 'SecondDegreeAvBlockTypeIiMobitzTypeIi': {'10:9680': ('Second Degree AV Block '
-                                                       'Type II (Mobitz Type '
-                                                       'II)',
-                                                       [3415])},
- 'SecondDegreeSaBlockTypeIWenckebach': {'10:9792': ('Second Degree SA Block '
+ 'SecondDegreeSABlockTypeII': {'10:9808': ('Second Degree SA Block Type II',
+                                           [3415])},
+ 'SecondDegreeSABlockTypeIWenckebach': {'10:9792': ('Second Degree SA Block '
                                                     'Type I (Wenckebach)',
                                                     [3415])},
- 'SecondDegreeSaBlockTypeIi': {'10:9808': ('Second Degree SA Block Type II',
-                                           [3415])},
  'Sensitivity': {'10:11394': ('Sensitivity', [3690])},
  'SevereNoise': {'10:11232': ('Severe noise', [3680])},
  'SevereNoiseBeatsCannotBeDetectedOrClassified': {'10:11232': ('Severe Noise, '
@@ -24849,21 +24816,17 @@ concepts['MDC'] = \
                                                                       '(Idioventricular '
                                                                       'Tachycardia)',
                                                                       [3415])},
- 'StAmplitudePerLead': {'2:768': ('ST amplitude, per lead', [3688])},
- 'StChange': {'10:2304': ('ST change', [3335])},
- 'StMeasurementPoint': {'10:2112': ('ST measurement point', [3335])},
- 'StSegment': {'10:1984': ('ST Segment', [3335])},
- 'Standard12LeadAndCc5Cm5Ml': {'10:11288': ('Standard 12-lead and CC5-CM5-ML',
+ 'Standard12LeadAndCC5CM5ML': {'10:11288': ('Standard 12-lead and CC5-CM5-ML',
                                             [3263])},
- 'Standard12LeadAndCm5Cc5Ch5': {'10:11289': ('Standard 12-lead and CM5-CC5-CH5',
+ 'Standard12LeadAndCM5CC5CH5': {'10:11289': ('Standard 12-lead and CM5-CC5-CH5',
                                              [3263])},
- 'Standard12LeadAndNehb': {'10:11287': ('Standard 12-lead and NEHB', [3263])},
- 'Standard12LeadAndXyz': {'10:11286': ('Standard 12-lead and XYZ', [3263])},
+ 'Standard12LeadAndNEHB': {'10:11287': ('Standard 12-lead and NEHB', [3263])},
+ 'Standard12LeadAndXYZ': {'10:11286': ('Standard 12-lead and XYZ', [3263])},
  'Standard12LeadExtendedToTheLeftByV7V8V9': {'10:11292': ('Standard 12-lead '
                                                           'extended to the '
                                                           'left by V7, V8, V9',
                                                           [3263])},
- 'Standard12LeadExtendedToTheRightByV5rV4rV3r': {'10:11291': ('Standard '
+ 'Standard12LeadExtendedToTheRightByV5RV4RV3R': {'10:11291': ('Standard '
                                                               '12-lead '
                                                               'extended to the '
                                                               'right by V5R, '
@@ -24925,16 +24888,17 @@ concepts['MDC'] = \
                                          [3688])},
  'TMinimumAmplitudePerLead': {'2:2816': ('T minimum amplitude, per lead',
                                          [3688])},
+ 'TUFusedWave': {'10:1664': ('TU fused wave', [3335])},
  'TWave': {'10:1024': ('T wave', [3335])},
  'TWaveAlternans': {'10:10416': ('T-wave alternans', [3415])},
  'TWaveChange': {'10:2368': ('T-wave change', [3335])},
  'TWaveSecondDeflectionInTWave': {'10:1088': ("T' wave (second deflection in T "
                                               'Wave)',
                                               [3335])},
- 'ThirdDegreeAvBlockCompleteAvBlock': {'10:9696': ('Third Degree AV Block '
+ 'ThirdDegreeAVBlockCompleteAVBlock': {'10:9696': ('Third Degree AV Block '
                                                    '(complete AV block)',
                                                    [3415])},
- 'ThirdDegreeSaBlockCompleteSaBlock': {'10:9824': ('Third Degree SA Block '
+ 'ThirdDegreeSABlockCompleteSABlock': {'10:9824': ('Third Degree SA Block '
                                                    '(complete SA block)',
                                                    [3415])},
  'TimeOffset': {'10:11400': ('Time offset', [3690])},
@@ -24958,13 +24922,12 @@ concepts['MDC'] = \
                                                   'Defibrillation spike',
                                                   [3335])},
  'TrifascicularBlockBeat': {'10:8576': ('trifascicular block beat', [3335])},
- 'TuFusedWave': {'10:1664': ('TU fused wave', [3335])},
  'UWave': {'10:1152': ('U wave', [3335])},
  'UnclassifiableBeat': {'10:8736': ('Unclassifiable beat', [3335])},
  'Unspecified12LeadSystem': {'10:11264': ('Unspecified 12-lead system',
                                           [3263])},
  'UnspecifiedLead': {'2:0': ('Unspecified lead', [3001])},
- 'UnspecifiedXyzLeadSystem': {'10:11273': ('Unspecified XYZ lead system',
+ 'UnspecifiedXYZLeadSystem': {'10:11273': ('Unspecified XYZ lead system',
                                            [3263])},
  'VentricleAntitachycardiaPaceSpike': {'10:6656': ('ventricle Antitachycardia '
                                                    'pace spike',
@@ -25020,10 +24983,55 @@ concepts['MDC'] = \
                                              [3415]),
                                 '10:8640': ('Wolf-Parkinson-White syndrome',
                                             [3335])},
- 'XyzLeadsDerivedFromStandard12Lead': {'10:11279': ('XYZ leads derived from '
+ 'XYZLeadsDerivedFromStandard12Lead': {'10:11279': ('XYZ leads derived from '
                                                     'standard 12-lead',
                                                     [3263])},
- 'ZeroOffset': {'10:11395': ('Zero offset', [3690])}}
+ 'ZeroOffset': {'10:11395': ('Zero offset', [3690])},
+ '_12LeadDerivedFromFrankXYZLeads': {'10:11269': ('12-lead derived from Frank '
+                                                  'XYZ leads',
+                                                  [3263])},
+ '_12LeadDerivedFromNonStandardLeads': {'10:11270': ('12-lead derived from '
+                                                     'non-standard leads',
+                                                     [3263])},
+ '_12LeadElectrodePad': {'10:11268': ('12-lead electrode pad', [3263])},
+ '_12LeadForBicycleExerciseTestingLimbLeadsOnBackOfPatient': {'10:11271': ('12-lead '
+                                                                           'for '
+                                                                           'bicycle '
+                                                                           'exercise '
+                                                                           'testing, '
+                                                                           'limb '
+                                                                           'leads '
+                                                                           'on '
+                                                                           'back '
+                                                                           'of '
+                                                                           'patient',
+                                                                           [3263])},
+ '_12LeadFromEASILeadsESASAIByDowerEASITransformation': {'10:11284': ('12-lead '
+                                                                      'from '
+                                                                      'EASI '
+                                                                      'leads '
+                                                                      '(ES, '
+                                                                      'AS, AI) '
+                                                                      'by '
+                                                                      'Dower/EASI '
+                                                                      'transformation',
+                                                                      [3263])},
+ '_12LeadFromFrankLeadsXYZLeadsByDowerTransformation': {'10:11283': ('12-lead '
+                                                                     'from '
+                                                                     'Frank '
+                                                                     'leads '
+                                                                     'XYZ '
+                                                                     'leads by '
+                                                                     'Dower '
+                                                                     'transformation',
+                                                                     [3263])},
+ '_12LeadFromLimbLeadsIIIAndOneOrMoreVLeads': {'10:11285': ('12-lead from Limb '
+                                                            'Leads (I, II) and '
+                                                            'one or more V '
+                                                            'leads',
+                                                            [3263])},
+ '_3LeadSystemCC5CM5CH5': {'10:11282': ('3-lead system, CC5-CM5-CH5', [3263])},
+ '_3LeadSystemCC5CM5ML': {'10:11281': ('3-lead system, CC5-CM5-ML', [3263])}}
 
 concepts['BARI'] = \
 {'PosteriorDescendingSeptalPerforators': {'9': ('Posterior descending septal '
@@ -25049,7 +25057,7 @@ concepts['BARI'] = \
                             7151,
                             7192,
                             9514])},
- 'ndDiagonalCoronaryArteryLaterals_2': {'16A': ('2nd Diagonal Coronary Artery '
+ '_1stDiagonalCoronaryArteryLaterals': {'15A': ('1st Diagonal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25061,7 +25069,7 @@ concepts['BARI'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
- 'ndMarginalCoronaryArteryLaterals_2': {'21A': ('2nd Marginal Coronary Artery '
+ '_1stMarginalCoronaryArteryLaterals': {'20A': ('1st Marginal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25073,7 +25081,7 @@ concepts['BARI'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
- 'rdDiagonalCoronaryArteryLaterals_3': {'29A': ('3rd Diagonal Coronary Artery '
+ '_2ndDiagonalCoronaryArteryLaterals': {'16A': ('2nd Diagonal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25085,7 +25093,7 @@ concepts['BARI'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
- 'rdMarginalCoronaryArteryLaterals_3': {'22A': ('3rd Marginal Coronary Artery '
+ '_2ndMarginalCoronaryArteryLaterals': {'21A': ('2nd Marginal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25097,7 +25105,7 @@ concepts['BARI'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
- 'stDiagonalCoronaryArteryLaterals_1': {'15A': ('1st Diagonal Coronary Artery '
+ '_3rdDiagonalCoronaryArteryLaterals': {'29A': ('3rd Diagonal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25109,7 +25117,7 @@ concepts['BARI'] = \
                                                  7151,
                                                  7192,
                                                  9514])},
- 'stMarginalCoronaryArteryLaterals_1': {'20A': ('1st Marginal Coronary Artery '
+ '_3rdMarginalCoronaryArteryLaterals': {'22A': ('3rd Marginal Coronary Artery '
                                                 'Laterals',
                                                 [3014,
                                                  3015,
@@ -25137,24 +25145,24 @@ concepts['UMLS'] = \
  'EthidiumBromide': {'C0019873': ('Ethidium Bromide', [638, 643])},
  'FlortaucipirF18': {'C4547429': ('Flortaucipir F^18^', [4021])},
  'Fluanisone': {'C0060473': ('Fluanisone', [623, 625])},
- 'FluoroestradiolFesF18': {'C1831937': ('Fluoroestradiol (FES) F^18^', [4021])},
+ 'FluoroestradiolFESF18': {'C1831937': ('Fluoroestradiol (FES) F^18^', [4021])},
  'FluoroetanidazoleF18': {'C1541539': ('Fluoroetanidazole F^18^', [4021])},
- 'FluoropropylDihydrotetrabenazineDtbzF18': {'C2934038': ('Fluoropropyl-dihydrotetrabenazine '
+ 'FluoropropylDihydrotetrabenazineDTBZF18': {'C2934038': ('Fluoropropyl-dihydrotetrabenazine '
                                                           '(DTBZ) F^18^',
                                                           [4021])},
  'H2Antagonist': {'C0019593': ('H2 antagonist', [621, 622])},
  'HeatLamp': {'C0181514': ('Heat lamp', [635])},
+ 'ISO1F18': {'C2981788': ('ISO-1 F^18^', [4021])},
  'InfantOfMotherWithGestationalDiabetes': {'C0456029': ('Infant of mother with '
                                                         'gestational diabetes',
                                                         [3756])},
  'Intern': {'C1144859': ('Intern', [7450, 7452])},
  'InverseRatioVentilation': {'C2223982': ('Inverse ratio ventilation',
                                           [619, 620])},
- 'Iso1F18': {'C2981788': ('ISO-1 F^18^', [4021])},
+ 'MK6240F18': {'C4506764': ('MK-6240 F^18^', [4021])},
  'Mastectomy': {'C0024881': ('Mastectomy', [6058, 6060])},
  'MedicalPhysicist': {'C1708969': ('Medical Physicist', [7450, 7452, 9536])},
  'Metomidate': {'C0025856': ('Metomidate', [623, 625])},
- 'Mk6240F18': {'C4506764': ('MK-6240 F^18^', [4021])},
  'Nadir': {'C1708760': ('Nadir', [6146])},
  'NarcoticAnalgesic': {'C0027409': ('Narcotic analgesic', [621, 622])},
  'Neuroradiology': {'C2183225': ('Neuroradiology', [7030])},
@@ -25166,13 +25174,13 @@ concepts['UMLS'] = \
  'RoomAir': {'C3846005': ('Room air', [623, 629])},
  'RootMeanSquare': {'C2347976': ('Root Mean Square', [7464])},
  'Sonographer': {'C1954848': ('Sonographer', [7450, 7452])},
+ 'THK5317F18': {'C4550127': ('THK5317 F^18^', [4021])},
+ 'THK5351F18': {'C4279748': ('THK5351 F^18^', [4021])},
  'Thermography': {'C0039810': ('Thermography', [636])},
- 'Thk5317F18': {'C4550127': ('THK5317 F^18^', [4021])},
- 'Thk5351F18': {'C4279748': ('THK5351 F^18^', [4021])},
  'TransgenicAnimal': {'C0003069': ('Transgenic animal', [602])},
  'Tyrosine3OctreotateGa68': {'C1742831': ('tyrosine-3-octreotate Ga^68^',
                                           [4021])},
- 'UcbJC11': {'C4506788': ('UCB-J C^11^', [4021])},
+ 'UCBJC11': {'C4506788': ('UCB-J C^11^', [4021])},
  'UnknownPrimaryNeoplasiaSite': {'C0221297': ('unknown primary neoplasia site',
                                               [7601])},
  'Unscheduled': {'C1699701': ('Unscheduled', [6146])},
@@ -25187,7 +25195,7 @@ concepts['SCT'] = \
  'Syringe': {'733020007': ('Syringe', [68])}}
 
 concepts['PUBCHEM_CID'] = \
-{'Hydroxydopamine_6': {'4624': ('6-hydroxydopamine', [638, 643])}}
+{'_6Hydroxydopamine': {'4624': ('6-hydroxydopamine', [638, 643])}}
 
 concepts['ITIS_TSN'] = \
 {'PeromyscusLeucopusAmericanWhiteFootedMouse': {'180278': ('Peromyscus '
@@ -25206,9 +25214,9 @@ concepts['NEU'] = \
  'ArcuateFasciculus': {'2063': ('arcuate fasciculus', [7703, 7710])},
  'CorticobulbarTract': {'1319': ('corticobulbar tract', [7702, 7710])},
  'CorticospinalTract': {'1320': ('corticospinal tract', [7702, 7710])},
- 'InferiorOpticRadiationMeyerSLoop': {'1466': ('inferior optic radiation '
-                                               "(Meyer's loop)",
-                                               [7702, 7710])},
+ 'InferiorOpticRadiationMeyerLoop': {'1466': ('inferior optic radiation '
+                                              "(Meyer's loop)",
+                                              [7702, 7710])},
  'InferiorThalamicRadiation': {'2082': ('inferior thalamic radiation',
                                         [7702, 7710])},
  'PosteriorThalamicRadiation': {'2083': ('posterior thalamic radiation',
@@ -25216,8 +25224,8 @@ concepts['NEU'] = \
  'StriaTerminalis': {'286': ('stria terminalis', [7704, 7710])},
  'SuperiorLongitudinalFasciculus': {'2080': ('superior longitudinal fasciculus',
                                              [7703, 7710])},
- 'SuperiorOpticRadiationBaumSLoop': {'3473': ('superior optic radiation '
-                                              "(Baum's loop)",
-                                              [7702, 7710])},
+ 'SuperiorOpticRadiationBaumLoop': {'3473': ("superior optic radiation (Baum's "
+                                             'loop)',
+                                             [7702, 7710])},
  'SuperiorThalamicRadiation': {'2081': ('superior thalamic radiation',
                                         [7702, 7710])}}

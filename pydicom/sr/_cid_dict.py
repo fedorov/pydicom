@@ -5,8 +5,10 @@
 #   {scheme designator: <list of keywords for current cid>
 #    scheme_designator: ...}
 
+name_for_cid = {}
 cid_concepts = {}
 
+name_for_cid[10] = 'InterventionalDrug'
 cid_concepts[10] = \
 {'SRT': ['Epinephrine',
          'TolazolineHydrocholoride',
@@ -50,25 +52,27 @@ cid_concepts[10] = \
          'Heparin',
          'Lidocaine']}
 
+name_for_cid[100] = 'QuantitativeDiagnosticImagingProcedures'
 cid_concepts[100] = \
-{'DCM': ['MultiparametricMriOfProstate',
-         'MultiparametricMriOfWholeBody',
-         'MultiparametricMri'],
- 'LN': ['NmUnspecifiedBodyRegion',
-        'PetWholeBody',
-        'SpectBrain',
-        'MriUnspecifiedBodyRegion',
-        'PetUnspecifiedBodyRegion',
-        'CtUnspecifiedBodyRegion',
-        'CtPerfusionHeadWithContrastIv'],
- 'RADLEX': ['NmHeadPerfusionBrainPetCtAv45'],
+{'DCM': ['MultiparametricMRIOfProstate',
+         'MultiparametricMRIOfWholeBody',
+         'MultiparametricMRI'],
+ 'LN': ['NMUnspecifiedBodyRegion',
+        'PETWholeBody',
+        'SPECTBrain',
+        'MRIUnspecifiedBodyRegion',
+        'PETUnspecifiedBodyRegion',
+        'CTUnspecifiedBodyRegion',
+        'CTPerfusionHeadWithContrastIV'],
+ 'RADLEX': ['NMHeadPerfusionBrainPETCTAV45'],
  'SRT': ['MagneticResonanceImagingGuidance',
          'ImagingProcedure',
-         'PetCtFdgImagingOfWholeBody',
-         'PetCtMetImagingOfWholeBody',
+         'PETCTFDGImagingOfWholeBody',
+         'PETCTMETImagingOfWholeBody',
          'DynamicMagneticResonanceImagingOfKnee',
          'DynamicMagneticResonanceImagingOfPelvis']}
 
+name_for_cid[1000] = 'CTTransversePlaneReferenceBasis'
 cid_concepts[1000] = \
 {'DCM': ['AcquiredVolume'],
  'FMA': ['Nasion'],
@@ -157,6 +161,7 @@ cid_concepts[1000] = \
          'Lung',
          'IliacCrest']}
 
+name_for_cid[10000] = 'ScopeofAccumulation'
 cid_concepts[10000] = \
 {'DCM': ['ProcedureStepToThisPoint',
          'Study',
@@ -164,24 +169,29 @@ cid_concepts[10000] = \
          'PerformedProcedureStep',
          'IrradiationEvent']}
 
+name_for_cid[10001] = 'UIDTypes'
 cid_concepts[10001] = \
-{'DCM': ['StudyInstanceUid',
-         'PerformedProcedureStepSopInstanceUid',
-         'SeriesInstanceUid',
-         'IrradiationEventUid']}
+{'DCM': ['StudyInstanceUID',
+         'PerformedProcedureStepSOPInstanceUID',
+         'SeriesInstanceUID',
+         'IrradiationEventUID']}
 
+name_for_cid[10002] = 'IrradiationEventTypes'
 cid_concepts[10002] = \
 {'DCM': ['StationaryAcquisition',
          'SteppingAcquisition',
          'RotationalAcquisition'],
  'SRT': ['Fluoroscopy']}
 
+name_for_cid[10003] = 'EquipmentPlaneIdentification'
 cid_concepts[10003] = \
 {'DCM': ['AllPlanes', 'PlaneA', 'PlaneB', 'SinglePlane']}
 
+name_for_cid[10004] = 'FluoroModes'
 cid_concepts[10004] = \
 {'DCM': ['Continuous', 'Pulsed']}
 
+name_for_cid[10006] = 'XRayFilterMaterials'
 cid_concepts[10006] = \
 {'SRT': ['MolybdenumOrMolybdenumCompound',
          'CopperOrCopperCompound',
@@ -194,6 +204,7 @@ cid_concepts[10006] = \
          'EuropiumOrEuropiumCompound',
          'NiobiumOrNiobiumCompound']}
 
+name_for_cid[10007] = 'XRayFilterTypes'
 cid_concepts[10007] = \
 {'DCM': ['StripFilter',
          'NoFilter',
@@ -201,6 +212,7 @@ cid_concepts[10007] = \
          'ButterflyFilter',
          'FlatFilter']}
 
+name_for_cid[10008] = 'DoseRelatedDistanceMeasurements'
 cid_concepts[10008] = \
 {'DCM': ['DistanceSourceToTablePlane',
          'DistanceSourceToDetector',
@@ -219,9 +231,11 @@ cid_concepts[10008] = \
          'DistanceSourceToReferencePoint',
          'TableLongitudinalEndPosition']}
 
+name_for_cid[10009] = 'Measured/Calculated'
 cid_concepts[10009] = \
 {'SRT': ['Measured', 'Estimated', 'Calculated']}
 
+name_for_cid[1001] = 'AnatomicalReferenceBasis'
 cid_concepts[1001] = \
 {'FMA': ['Nasion'],
  'SRT': ['ExternalAuditoryMeatus',
@@ -304,15 +318,18 @@ cid_concepts[1001] = \
          'Lung',
          'IliacCrest']}
 
+name_for_cid[10010] = 'DoseMeasurementDevices'
 cid_concepts[10010] = \
 {'SRT': ['Dosimeter']}
 
+name_for_cid[10011] = 'EffectiveDoseEvaluationMethod'
 cid_concepts[10011] = \
-{'DCM': ['DlpToEConversionViaMcComputation',
-         'DlpToEConversionViaMeasurement',
-         'CtdifreeairToEConversionViaMcComputation',
+{'DCM': ['DLPToEConversionViaMCComputation',
+         'DLPToEConversionViaMeasurement',
+         'CtdifreeairToEConversionViaMCComputation',
          'CtdifreeairToEConversionViaMeasurement']}
 
+name_for_cid[10013] = 'CTAcquisitionType'
 cid_concepts[10013] = \
 {'DCM': ['StationaryAcquisition',
          'ConstantAngleAcquisition',
@@ -320,17 +337,21 @@ cid_concepts[10013] = \
          'SequencedAcquisition'],
  'SRT': ['ConeBeamAcquisition', 'SpiralAcquisition']}
 
+name_for_cid[10014] = 'ContrastImagingTechnique'
 cid_concepts[10014] = \
-{'SRT': ['DiagnosticRadiographyWithContrastMedia', 'CtWithoutContrast']}
+{'SRT': ['DiagnosticRadiographyWithContrastMedia', 'CTWithoutContrast']}
 
+name_for_cid[10015] = 'CTDoseReferenceAuthorities'
 cid_concepts[10015] = \
-{'DCM': ['IcrpPub60', 'IcrpPub103']}
+{'DCM': ['ICRPPub60', 'ICRPPub103']}
 
+name_for_cid[10016] = 'AnodeTargetMaterial'
 cid_concepts[10016] = \
 {'SRT': ['MolybdenumOrMolybdenumCompound',
          'TungstenOrTungstenCompound',
          'RhodiumOrRhodiumCompound']}
 
+name_for_cid[10017] = 'XRayGrid'
 cid_concepts[10017] = \
 {'DCM': ['FixedGrid',
          'FocusedGrid',
@@ -339,6 +360,7 @@ cid_concepts[10017] = \
          'CrossedGrid',
          'NoGrid']}
 
+name_for_cid[1002] = 'AnatomicalReferenceBasisHead'
 cid_concepts[1002] = \
 {'FMA': ['Nasion'],
  'SRT': ['FrontalSinus',
@@ -357,6 +379,7 @@ cid_concepts[1002] = \
          'MastoidCellsAndAntra',
          'LateralCanthus']}
 
+name_for_cid[10020] = 'SourceofProjectionXRayDoseInformation'
 cid_concepts[10020] = \
 {'DCM': ['SystemCalculated',
          'CopiedFromImageAttributes',
@@ -364,9 +387,10 @@ cid_concepts[10020] = \
          'DerivedFromHumanReadableReports',
          'AutomatedDataCollection',
          'ComputedFromImageAttributes',
-         'MppsContent'],
+         'MPPSContent'],
  'SRT': ['Dosimeter']}
 
+name_for_cid[10021] = 'SourceofCTDoseInformation'
 cid_concepts[10021] = \
 {'DCM': ['CopiedFromImageAttributes',
          'ManualEntry',
@@ -374,32 +398,37 @@ cid_concepts[10021] = \
          'AutomatedDataCollection',
          'ComputedFromImageAttributes']}
 
+name_for_cid[10022] = 'LabelTypes'
 cid_concepts[10022] = \
 {'DCM': ['SeriesNumber', 'AcquisitionNumber', 'InstanceNumber']}
 
+name_for_cid[10023] = 'SizeSpecificDoseEstimationMethodforCT'
 cid_concepts[10023] = \
-{'DCM': ['Aapm204EffectiveDiameterEstimatedFromPatientAge',
+{'DCM': ['AAPM204EffectiveDiameterEstimatedFromPatientAge',
          'WaterEquivalentDiameterRepresentativeValue',
          'WaterEquivalentDiameterFromRawData',
          'WaterEquivalentDiameterIntegratedAcrossScanRange',
          'WaterEquivalentDiameterFromLocalizer',
-         'Aapm204LateralDimension',
-         'Aapm204SumOfLateralAndApDimension',
-         'Aapm204ApDimension']}
+         'AAPM204LateralDimension',
+         'AAPM204SumOfLateralAndAPDimension',
+         'AAPM204APDimension']}
 
+name_for_cid[10024] = 'WaterEquivalentDiameterMethod'
 cid_concepts[10024] = \
-{'DCM': ['Aapm220']}
+{'DCM': ['AAPM220']}
 
+name_for_cid[10025] = 'RadiationDoseReferencePoints'
 cid_concepts[10025] = \
-{'DCM': ['cmFromIsocenterTowardSource_15',
-         'cmAboveTabletop_1',
-         'cmInFrontOfImageInputSurface_30',
-         'cmFromTableCenterline_15',
+{'DCM': ['_15cmFromIsocenterTowardSource',
+         '_1cmAboveTabletop',
+         '_30cmInFrontOfImageInputSurface',
+         '_15cmFromTableCenterline',
          'InDetectorPlane',
-         'cmAboveTabletop_30',
-         'EntranceExposureToA42CmBreastThickness',
+         '_30cmAboveTabletop',
+         'EntranceExposureToA42cmBreastThickness',
          'AtSurfaceOfPatient']}
 
+name_for_cid[1003] = 'AnatomicalReferenceBasisSpine'
 cid_concepts[1003] = \
 {'SRT': ['LevelOfT12L1IntervertebralDisc',
          'LevelOfT3T4IntervertebralDisc',
@@ -426,23 +455,29 @@ cid_concepts[1003] = \
          'LevelOfC4C5IntervertebralDisc',
          'LevelOfC3C4IntervertebralDisc']}
 
+name_for_cid[10030] = 'DetectorTypes'
 cid_concepts[10030] = \
 {'DCM': ['IndirectDetector', 'DirectDetector', 'StorageDetector', 'Film']}
 
+name_for_cid[10031] = 'CR/DRMechanicalConfiguration'
 cid_concepts[10031] = \
 {'DCM': ['TableMount', 'UprightStandMount', 'UnmountedDetector', 'CArmMount']}
 
+name_for_cid[10032] = 'ProjectionXRayAcquisitionDeviceTypes'
 cid_concepts[10032] = \
 {'DCM': ['CassetteBasedProjectionRadiographySystem',
          'IntegratedProjectionRadiographySystem',
          'FluoroscopyGuidedProjectionRadiographySystem']}
 
+name_for_cid[10033] = 'CTReconstructionAlgorithm'
 cid_concepts[10033] = \
 {'DCM': ['IterativeReconstruction', 'FilteredBackProjection']}
 
+name_for_cid[10034] = 'ReasonforRepeatingAcquisition'
 cid_concepts[10034] = \
 {'DCM': ['SuboptimalContrastTiming', 'PatientMotion']}
 
+name_for_cid[1004] = 'AnatomicalReferenceBasisChest'
 cid_concepts[1004] = \
 {'SRT': ['CoronaryArteryGraft',
          'Scapula',
@@ -460,20 +495,23 @@ cid_concepts[1004] = \
          'AorticArch',
          'Carina']}
 
+name_for_cid[10040] = 'RadiopharmaceuticalOrganDoseReferenceAuthority'
 cid_concepts[10040] = \
 {'DCM': ['InvestigationalNewDrug',
-         'MirdPamphlet1',
-         'IcrpPublication53',
-         'IcrpPublication80',
-         'IcrpPublication106',
-         'Mirdose',
-         'OlindaExm',
+         'MIRDPamphlet1',
+         'ICRPPublication53',
+         'ICRPPublication80',
+         'ICRPPublication106',
+         'MIRDOSE',
+         'OLINDAEXM',
          'PackageInsert',
          'InstitutionallyApprovedEstimates']}
 
+name_for_cid[10041] = 'SourceofRadioisotopeActivityInformation'
 cid_concepts[10041] = \
 {'DCM': ['DoseCalibrator', 'InfusionSystem', 'RadioisotopeGenerator']}
 
+name_for_cid[10043] = 'IntravenousExtravasationSymptoms'
 cid_concepts[10043] = \
 {'DCM': ['ExtravasationVisibleInImage'],
  'SRT': ['InjectionSiteSterileAbscess',
@@ -507,6 +545,7 @@ cid_concepts[10043] = \
          'InjectionSiteFibrosis',
          'InjectionSiteInduration']}
 
+name_for_cid[10044] = 'RadiosensitiveOrgans'
 cid_concepts[10044] = \
 {'SRT': ['Prostate',
          'Testis',
@@ -538,6 +577,7 @@ cid_concepts[10044] = \
          'Skin',
          'EyeLenses']}
 
+name_for_cid[10045] = 'RadiopharmaceuticalPatientState'
 cid_concepts[10045] = \
 {'DCM': ['CardiacStressState',
          'AcuteUnilateralRenalBlockage',
@@ -546,26 +586,29 @@ cid_concepts[10045] = \
          'SeverelyJaundiced'],
  'SRT': ['AbnormalRenalFunction', 'RestingState']}
 
+name_for_cid[10046] = 'GFRMeasurements'
 cid_concepts[10046] = \
-{'LN': ['GlomerularFiltrationRateBlackMdrd',
-        'CockroftGaultFormulaEstimationOfGfr',
+{'LN': ['GlomerularFiltrationRateBlackMDRD',
+        'CockroftGaultFormulaEstimationOfGFR',
         'GlomerularFiltrationRateCystatinBasedFormula',
-        'CkdEpiFormulaEstimationOfGfr',
-        'GlomerularFiltrationRateMdrd',
+        'CKDEPIFormulaEstimationOfGFR',
+        'GlomerularFiltrationRateMDRD',
         'GlomerularFiltrationRateCreatinineBasedFormulaSchwartz',
-        'GlomerularFiltrationRateNonBlackMdrd',
-        'GlomerularFiltrationRateFemaleMdrd']}
+        'GlomerularFiltrationRateNonBlackMDRD',
+        'GlomerularFiltrationRateFemaleMDRD']}
 
+name_for_cid[10047] = 'GFRMeasurementMethods'
 cid_concepts[10047] = \
-{'DCM': ['CockroftGaultFormulaEstimationOfGfr',
-         'CkdEpiFormulaEstimationOfGfr',
-         'GlomerularFiltrationRateMdrd',
-         'GlomerularFiltrationRateNonBlackMdrd',
-         'GlomerularFiltrationRateBlackMdrd',
-         'GlomerularFiltrationRateFemaleMdrd',
+{'DCM': ['CockroftGaultFormulaEstimationOfGFR',
+         'CKDEPIFormulaEstimationOfGFR',
+         'GlomerularFiltrationRateMDRD',
+         'GlomerularFiltrationRateNonBlackMDRD',
+         'GlomerularFiltrationRateBlackMDRD',
+         'GlomerularFiltrationRateFemaleMDRD',
          'GlomerularFiltrationRateCystatinBasedFormula',
          'GlomerularFiltrationRateCreatinineBasedFormulaSchwartz']}
 
+name_for_cid[1005] = 'AnatomicalReferenceBasisAbdomen/Pelvis'
 cid_concepts[1005] = \
 {'SRT': ['CommonIliacArteryBifurcation',
          'Acetabulum',
@@ -581,19 +624,21 @@ cid_concepts[1005] = \
          'Liver',
          'IliacCrest']}
 
+name_for_cid[10050] = 'SummaryRadiationExposureQuantities'
 cid_concepts[10050] = \
 {'DCM': ['EffectiveDose',
          'TotalFluoroTime',
          'TotalNumberOfRadiographicFrames',
          'MeanCtdivol',
          'DoseAreaProductTotal',
-         'CtDoseLengthProductTotal',
-         'EntranceExposureAtRp',
+         'CTDoseLengthProductTotal',
+         'EntranceExposureAtRP',
          'AcquisitionDoseAreaProductTotal',
          'AccumulatedAverageGlandularDoseMammo',
          'FluoroDoseAreaProductTotal',
          'AdministeredActivity']}
 
+name_for_cid[1006] = 'AnatomicalReferenceBasisExtremities'
 cid_concepts[1006] = \
 {'SRT': ['Toe',
          'Foot',
@@ -608,6 +653,7 @@ cid_concepts[1006] = \
          'KneeJoint',
          'Patella']}
 
+name_for_cid[10060] = 'OrgansforRadiationDoseEstimates'
 cid_concepts[10060] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -641,6 +687,7 @@ cid_concepts[10060] = \
          'Skin',
          'EyeLenses']}
 
+name_for_cid[10061] = 'AbsorbedRadiationDoseTypes'
 cid_concepts[10061] = \
 {'DCM': ['MinimumAbsorbedRadiationDose',
          'MaximumAbsorbedRadiationDose',
@@ -648,6 +695,7 @@ cid_concepts[10061] = \
          'MeanAbsorbedRadiationDose',
          'MedianAbsorbedRadiationDose']}
 
+name_for_cid[10062] = 'EquivalentRadiationDoseTypes'
 cid_concepts[10062] = \
 {'DCM': ['MedianEquivalentRadiationDose',
          'MinimumEquivalentRadiationDose',
@@ -655,25 +703,29 @@ cid_concepts[10062] = \
          'ModeEquivalentRadiationDose',
          'MeanEquivalentRadiationDose']}
 
+name_for_cid[10063] = 'RadiationDoseEstimateDistributionRepresentation'
 cid_concepts[10063] = \
 {'DCM': ['SkinDoseMap',
          'DosePointCloud',
          'DoseGradient',
-         'dDoseMap_3',
+         '_3DDoseMap',
          'DoseImage',
          'Isodose']}
 
+name_for_cid[10064] = 'PatientModelType'
 cid_concepts[10064] = \
 {'DCM': ['AnthropomorphicModel', 'SimpleObjectModel', 'PatientSegmentedModel']}
 
+name_for_cid[10065] = 'RadiationTransportModelType'
 cid_concepts[10065] = \
 {'DCM': ['MeasuredRadiationDose',
          'VoxelizedRadiationTransportModel',
          'GeometricRadiationTransportModel',
-         'NurbsRadiationTransportModel',
+         'NURBSRadiationTransportModel',
          'MeshRadiationTransportModel',
-         'BrepRadiationTransportModel']}
+         'BREPRadiationTransportModel']}
 
+name_for_cid[10066] = 'AttenuatorCategory'
 cid_concepts[10066] = \
 {'DCM': ['BeamBlock',
          'XRayFilters',
@@ -684,6 +736,7 @@ cid_concepts[10066] = \
          'TableOuterLiner'],
  'SRT': ['XRayShield', 'ShieldingBlock']}
 
+name_for_cid[10067] = 'RadiationAttenuatorMaterials'
 cid_concepts[10067] = \
 {'SRT': ['MolybdenumOrMolybdenumCompound',
          'CopperOrCopperCompound',
@@ -697,10 +750,12 @@ cid_concepts[10067] = \
          'EuropiumOrEuropiumCompound',
          'NiobiumOrNiobiumCompound']}
 
+name_for_cid[10068] = 'EstimateMethodTypes'
 cid_concepts[10068] = \
 {'DCM': ['TabularDataAlgorithm', 'AnalyticalAlgorithm', 'EmpiricalAlgorithm'],
  'MSH': ['MonteCarloMethod']}
 
+name_for_cid[10069] = 'RadiationDoseEstimationParameter'
 cid_concepts[10069] = \
 {'DCM': ['Distance',
          'AttenuationCoefficient',
@@ -711,7 +766,7 @@ cid_concepts[10069] = \
          'DistanceCorrection',
          'BreastThickness',
          'TissueFraction',
-         'PatientApDimension',
+         'PatientAPDimension',
          'Dgn',
          'PatientLateralDimension',
          'CurveFitParameter',
@@ -719,19 +774,22 @@ cid_concepts[10069] = \
          'Backscatter',
          'TissueAirRatio',
          'HomogeneityFactor',
-         'SsdeConversionFactor',
+         'SSDEConversionFactor',
          'OffsetFactor',
          'NormalizationFactor',
          'WaterEquivalentDiameterFromLocalizer',
          'HalfValueLayer'],
  'NCIt': ['UnitConversionFactor']}
 
+name_for_cid[10070] = 'RadiationDoseTypes'
 cid_concepts[10070] = \
 {'DCM': ['EquivalentDose', 'AbsorbedDose']}
 
+name_for_cid[10071] = 'RadiationDoseUnits'
 cid_concepts[10071] = \
 {'UCUM': ['Sv', 'Gy']}
 
+name_for_cid[1010] = 'ReferenceGeometryPlanes'
 cid_concepts[1010] = \
 {'DCM': ['PlaneThroughDistalExtent',
          'PlaneThroughProximalExtent',
@@ -745,12 +803,15 @@ cid_concepts[1010] = \
          'PlaneThroughInferiorExtent',
          'PlaneThroughSuperiorExtent']}
 
+name_for_cid[1011] = 'ReferenceGeometryPoints'
 cid_concepts[1011] = \
 {'DCM': ['CenterOfMass', 'GeometricCenterpoint']}
 
+name_for_cid[1015] = 'PatientAlignmentMethods'
 cid_concepts[1015] = \
 {'DCM': ['LaserCrossHairs']}
 
+name_for_cid[11] = 'RouteofAdministration'
 cid_concepts[11] = \
 {'DCM': ['RetroOrbitalRoute'],
  'NCIt': ['IntraepithelialRoute', 'ExtraluminalRoute', 'TransluminalRoute'],
@@ -775,6 +836,7 @@ cid_concepts[11] = \
          'IntracoronaryRoute',
          'IntratumorRoute']}
 
+name_for_cid[12] = 'RadiographicContrastAgent'
 cid_concepts[12] = \
 {'DCM': ['NonIonicIodinatedContrastAgent'],
  'SRT': ['Gadolinium',
@@ -822,12 +884,14 @@ cid_concepts[12] = \
          'Ipodate',
          'IodizedOil']}
 
+name_for_cid[1200] = 'ContraindicationsForCTImaging'
 cid_concepts[1200] = \
 {'SRT': ['ContrastMediaAllergy',
          'XRayContrastMediaAllergy',
          'ImpairedRenalFunction',
          'PatientCurrentlyPregnant']}
 
+name_for_cid[12001] = 'UltrasoundProtocolTypes'
 cid_concepts[12001] = \
 {'SRT': ['AdenosineStressProtocol',
          'Echocardiography',
@@ -846,7 +910,7 @@ cid_concepts[12001] = \
          'IntraoperativeEchocardiography',
          'PharmacologicAndExerciseStressTest',
          'IntravascularEchocardiography',
-         'ExerciseStressEcgTest',
+         'ExerciseStressECGTest',
          'IntracardiacEchocardiography',
          'TransthoracicEchocardiography',
          'ExerciseStressEchocardiography',
@@ -857,6 +921,7 @@ cid_concepts[12001] = \
          'EpicardialEchocardiography',
          'StressTestUsingBicycleErgometer']}
 
+name_for_cid[12002] = 'UltrasoundProtocolStageTypes'
 cid_concepts[12002] = \
 {'SRT': ['CardiacPacing',
          'ValsalvaManeuver',
@@ -870,24 +935,27 @@ cid_concepts[12002] = \
          'Hyperventilation',
          'AfterProcedure']}
 
+name_for_cid[12003] = 'OBGYNDates'
 cid_concepts[12003] = \
 {'LN': ['ConceptionDate',
-        'EstimatedLmpByEdd',
-        'EddFromAverageUltrasoundAge',
-        'EddFromOvulationDate',
-        'Edd',
-        'Lmp',
-        'EddFromLmp',
+        'EstimatedLMPByEDD',
+        'EDDFromAverageUltrasoundAge',
+        'EDDFromOvulationDate',
+        'EDD',
+        'LMP',
+        'EDDFromLMP',
         'OvulationDate']}
 
+name_for_cid[12004] = 'FetalBiometryRatios'
 cid_concepts[12004] = \
-{'LN': ['HcAc', 'FlAc', 'CephalicIndex', 'FlBpd', 'FlHc']}
+{'LN': ['HCAC', 'FLAC', 'CephalicIndex', 'FLBPD', 'FLHC']}
 
+name_for_cid[12005] = 'FetalBiometryMeasurements'
 cid_concepts[12005] = \
 {'LN': ['OccipitalFrontalDiameter',
-        'BpdAreaCorrected',
+        'BPDAreaCorrected',
         'TranverseAbdominalDiameter',
-        'ApadTad',
+        'APADTAD',
         'CisternaMagna',
         'AbdominalCircumference',
         'FemurLength',
@@ -907,6 +975,7 @@ cid_concepts[12005] = \
         'TransCerebellarDiameter',
         'RightKidneyLength']}
 
+name_for_cid[12006] = 'FetalLongBonesBiometryMeasurements'
 cid_concepts[12006] = \
 {'LN': ['ClavicleLength',
         'FemurLength',
@@ -916,6 +985,7 @@ cid_concepts[12006] = \
         'TibiaLength',
         'UlnaLength']}
 
+name_for_cid[12007] = 'FetalCranium'
 cid_concepts[12007] = \
 {'LN': ['NuchalFoldThickness',
         'InnerOrbitalDiameter',
@@ -928,6 +998,7 @@ cid_concepts[12007] = \
         'NuchalTranslucency',
         'TransCerebellarDiameter']}
 
+name_for_cid[12008] = 'OBGYNAmnioticSac'
 cid_concepts[12008] = \
 {'LN': ['ThirdQuadrantDiameter',
         'SecondQuadrantDiameter',
@@ -935,6 +1006,7 @@ cid_concepts[12008] = \
         'FirstQuadrantDiameter'],
  'SRT': ['Diameter']}
 
+name_for_cid[12009] = 'EarlyGestationBiometryMeasurements'
 cid_concepts[12009] = \
 {'LN': ['GestationalSacDiameter',
         'CrownRumpLength',
@@ -942,385 +1014,395 @@ cid_concepts[12009] = \
         'YolkSacLength',
         'NuchalTranslucency']}
 
+name_for_cid[12011] = 'UltrasoundPelvisandUterus'
 cid_concepts[12011] = \
 {'LN': ['EndometriumThickness', 'CervixLength']}
 
+name_for_cid[12012] = 'OBEquationsandTables'
 cid_concepts[12012] = \
-{'DCM': ['FwpByGaCampbell1991', 'FwpByGaHadlock1991'],
- 'LN': ['AcJeanty1984',
-        'CrlByGaRempen1991',
-        'AcJeanty1982',
-        'OfdAsum2000',
-        'FibulaByGaJeanty1983',
-        'CrlHansmann1985',
-        'FemaleSingletonBwpByGaArbuckle1993',
+{'DCM': ['FWPByGACampbell1991', 'FWPByGAHadlock1991'],
+ 'LN': ['ACJeanty1984',
+        'CRLByGARempen1991',
+        'ACJeanty1982',
+        'OFDASUM2000',
+        'FibulaByGAJeanty1983',
+        'CRLHansmann1985',
+        'FemaleSingletonBWPByGAArbuckle1993',
         'FetalTrunkCrossSectionalAreaOsaka1989',
-        'BpdMertz1988',
-        'HcJeanty1984',
-        'EfwByAcFlHcHadlock1985',
-        'FlByGaJeanty1982',
-        'HcMerz1988',
+        'BPDMertz1988',
+        'HCJeanty1984',
+        'EFWByACFLHCHadlock1985',
+        'FLByGAJeanty1982',
+        'HCMerz1988',
         'RadiusJeanty1983',
-        'CephalicIndexByGaChitty1994',
-        'FlTokyo1986',
-        'EfwByAcBpdFlHadlock1984',
-        'CrlHansmann1986',
-        'AcByGaAsum2000',
-        'BpdTokyo1986',
-        'IodMayden1982',
+        'CephalicIndexByGAChitty1994',
+        'FLTokyo1986',
+        'EFWByACBPDFLHadlock1984',
+        'CRLHansmann1986',
+        'ACByGAASUM2000',
+        'BPDTokyo1986',
+        'IODMayden1982',
         'TibiaJeanty1984',
-        'CrlAsum1991',
-        'Efw1ByShinozuka1996',
-        'GestationalAgeByLmp',
-        'MaleTwinsBwpByGaArbuckle1993',
-        'BdJeanty1982',
-        'HcByGaAsum2000',
-        'BpdByGaJeanty1982',
-        'BpdDoubilet1993',
-        'GsTokyo1986',
-        'EfwByAcBpdHadlock1984',
-        'HcByGaMerz1988',
-        'TcdHill1990',
-        'CrlOsaka1989',
-        'HcDerivedChitty1997',
-        'BpdOuterInnerByGaChitty1994',
-        'TadTokyo1986',
-        'AcLessoway1998',
+        'CRLASUM1991',
+        'EFW1ByShinozuka1996',
+        'GestationalAgeByLMP',
+        'MaleTwinsBWPByGAArbuckle1993',
+        'BDJeanty1982',
+        'HCByGAASUM2000',
+        'BPDByGAJeanty1982',
+        'BPDDoubilet1993',
+        'GSTokyo1986',
+        'EFWByACBPDHadlock1984',
+        'HCByGAMerz1988',
+        'TCDHill1990',
+        'CRLOsaka1989',
+        'HCDerivedChitty1997',
+        'BPDOuterInnerByGAChitty1994',
+        'TADTokyo1986',
+        'ACLessoway1998',
         'AxtShinozuka1996',
         'FibulaJeanty1983',
         'RadiusMerz1987',
-        'HcAcByGaCampbell1977',
-        'EfwByGaHansmann1986',
-        'MaleSingletonBwpByGaArbuckle1993',
-        'FlByGaChitty1994',
-        'OodTrout1994',
-        'EfwByAcFlHadlock1984',
-        'EfwByBpdApadTadFlTokyo1987',
-        'BpdLessoway1998',
-        'FlHansmann1986',
-        'FlShinozuka1996',
-        'OfdLessoway1998',
-        'BpdShinozuka1996',
-        'FlJeanty1984',
+        'HCACByGACampbell1977',
+        'EFWByGAHansmann1986',
+        'MaleSingletonBWPByGAArbuckle1993',
+        'FLByGAChitty1994',
+        'OODTrout1994',
+        'EFWByACFLHadlock1984',
+        'EFWByBPDAPADTADFLTokyo1987',
+        'BPDLessoway1998',
+        'FLHansmann1986',
+        'FLShinozuka1996',
+        'OFDLessoway1998',
+        'BPDShinozuka1996',
+        'FLJeanty1984',
         'ClavicleLengthYarkoni1985',
-        'EfwByBpdFtaFlOsaka1990',
-        'FlMerz1987',
-        'GsByGaRempen1991',
-        'BpdJeanty1984',
-        'BpdOuterOuterByGaChitty1994',
-        'GsHellman1969',
-        'HcByGaJeanty1982',
-        'BpdByGaShinozuka1996',
-        'BpdByGaHadlock1984',
-        'OfdByGaChitty1994',
-        'EfwByAcHcHadlock1984',
-        'FlHadlock1984',
-        'EfwByAcBpdFlHadlock1985',
+        'EFWByBPDFTAFLOsaka1990',
+        'FLMerz1987',
+        'GSByGARempen1991',
+        'BPDJeanty1984',
+        'BPDOuterOuterByGAChitty1994',
+        'GSHellman1969',
+        'HCByGAJeanty1982',
+        'BPDByGAShinozuka1996',
+        'BPDByGAHadlock1984',
+        'OFDByGAChitty1994',
+        'EFWByACHCHadlock1984',
+        'FLHadlock1984',
+        'EFWByACBPDFLHadlock1985',
         'BpdaHadlock1982',
-        'AcByGaShinozuka1996',
-        'GsNyberg1992',
-        'EfwByAcAndBpdShepard1982',
+        'ACByGAShinozuka1996',
+        'GSNyberg1992',
+        'EFWByACAndBPDShepard1982',
         'LengthOfVertebraTokyo1986',
-        'CrlJeanty1982',
-        'HcMeasuredChitty1997',
+        'CRLJeanty1982',
+        'HCMeasuredChitty1997',
         'TransverseThoracicDiameterLessoway1998',
-        'HcLessoway1998',
-        'BpdHansmann1986',
-        'TcdGoldstein1987',
-        'AcHansmann1985',
+        'HCLessoway1998',
+        'BPDHansmann1986',
+        'TCDGoldstein1987',
+        'ACHansmann1985',
         'APAbdominalDiameterLessoway1998',
-        'CrlTokyo1986',
-        'FwpByGaHadlock1985',
-        'FwpByGaAlexander1996',
-        'FlByGaHadlock1984',
-        'CrlNelson1981',
-        'FwpByGaBrenner1976',
+        'CRLTokyo1986',
+        'FWPByGAHadlock1985',
+        'FWPByGAAlexander1996',
+        'FLByGAHadlock1984',
+        'CRLNelson1981',
+        'FWPByGABrenner1976',
         'HumerusJeanty1984',
-        'TcdByGaGoldstein1987',
-        'EfwByGaHadlock1991',
-        'BpdJeanty1982',
-        'CrlJeanty1984',
-        'FlOsaka1989',
-        'HcAsum2000',
-        'Efw3ByShinozuka1996',
-        'FlMerz1988',
-        'TadEriksen1985',
-        'EfwByAcFlHadlock1985',
-        'BpdRempen1991',
-        'OfdHansmann1986',
-        'AcMeasuredByGaChitty1994',
-        'AcDerivedByGaChitty1994',
-        'BpdOoChitty1997',
-        'FlByGaShinozuka1996',
-        'BpdKurtz1980',
-        'BpdByGaAsum2000',
-        'GsRempen1991',
-        'HcDerivedByGaChitty1994',
-        'FlHansmann1985',
-        'CrlDaya1993',
-        'BpdByGaRempen1991',
-        'TadHansmann1979',
-        'BpdHadlock1984',
-        'GsHansmann1982',
-        'AcByGaMerz1988',
-        'OfdByGaAsum2000',
-        'EfwByAcBpdFlHcHadlock1985',
+        'TCDByGAGoldstein1987',
+        'EFWByGAHadlock1991',
+        'BPDJeanty1982',
+        'CRLJeanty1984',
+        'FLOsaka1989',
+        'HCASUM2000',
+        'EFW3ByShinozuka1996',
+        'FLMerz1988',
+        'TADEriksen1985',
+        'EFWByACFLHadlock1985',
+        'BPDRempen1991',
+        'OFDHansmann1986',
+        'ACMeasuredByGAChitty1994',
+        'ACDerivedByGAChitty1994',
+        'BPDOoChitty1997',
+        'FLByGAShinozuka1996',
+        'BPDKurtz1980',
+        'BPDByGAASUM2000',
+        'GSRempen1991',
+        'HCDerivedByGAChitty1994',
+        'FLHansmann1985',
+        'CRLDaya1993',
+        'BPDByGARempen1991',
+        'TADHansmann1979',
+        'BPDHadlock1984',
+        'GSHansmann1982',
+        'ACByGAMerz1988',
+        'OFDByGAASUM2000',
+        'EFWByACBPDFLHCHadlock1985',
         'UlnaJeanty1984',
-        'CrlByGaAsum2000',
+        'CRLByGAASUM2000',
         'HumerusLengthOsaka1989',
-        'AcAsum2000',
+        'ACASUM2000',
         'TransverseThoracicDiameterHansmann1985',
-        'HcHadlock1984',
-        'HcJeanty1982',
-        'AcShinozuka1996',
-        'CrlShinozuka1996',
-        'TcdChitty1994',
-        'FlJeanty1982',
-        'CrlByGaShinozuka1996',
-        'AcHadlock1984',
-        'CrlRobinson1975',
-        'FwpByGaWilliams1982',
-        'FlByGaAsum2000',
+        'HCHadlock1984',
+        'HCJeanty1982',
+        'ACShinozuka1996',
+        'CRLShinozuka1996',
+        'TCDChitty1994',
+        'FLJeanty1982',
+        'CRLByGAShinozuka1996',
+        'ACHadlock1984',
+        'CRLRobinson1975',
+        'FWPByGAWilliams1982',
+        'FLByGAASUM2000',
         'HumerusMerz1987',
-        'FemaleTwinsBwpByGaArbuckle1993',
+        'FemaleTwinsBWPByGAArbuckle1993',
         'FibulaMerz1987',
-        'EfwByBpdTtdHansmann1986',
-        'CrlHadlock1992',
-        'FlByGaMerz1988',
-        'HumerusLengthAsum2000',
-        'BpdOiChitty1997',
-        'CephalicIndexByGaHadlock1981',
-        'FlLessoway1998',
-        'HcHansmann1986',
+        'EFWByBPDTTDHansmann1986',
+        'CRLHadlock1992',
+        'FLByGAMerz1988',
+        'HumerusLengthASUM2000',
+        'BPDOiChitty1997',
+        'CephalicIndexByGAHadlock1981',
+        'FLLessoway1998',
+        'HCHansmann1986',
         'SpineLengthTokyo1989',
-        'GsDaya1991',
-        'AcByGaHadlock1984',
-        'IodTrout1994',
-        'Efw2ByShinozuka1996',
-        'BpdOsaka1989',
-        'RadiusByGaJeanty1983',
-        'AcCampbell1975',
-        'BpdSabbagha1978',
+        'GSDaya1991',
+        'ACByGAHadlock1984',
+        'IODTrout1994',
+        'EFW2ByShinozuka1996',
+        'BPDOsaka1989',
+        'RadiusByGAJeanty1983',
+        'ACCampbell1975',
+        'BPDSabbagha1978',
         'AverageUltrasoundAge',
-        'AxtByGaShinozuka1996',
+        'AxtByGAShinozuka1996',
         'UlnaMerz1987',
-        'FlHohler1982',
-        'HcByGaHadlock1984',
-        'CrlAsum2000',
-        'OfdHansmann1985',
-        'BpdHansmann1985',
-        'BpdByGaMerz1988',
+        'FLHohler1982',
+        'HCByGAHadlock1984',
+        'CRLASUM2000',
+        'OFDHansmann1985',
+        'BPDHansmann1985',
+        'BPDByGAMerz1988',
         'FootLengthMercer1987',
-        'HumerusLengthByGaAsum2000',
-        'GsHansmann1979',
-        'OodMayden1982',
-        'EfwByAcCampbell1975',
-        'CrlRempen1991',
-        'TcdNimrod1986',
-        'AcMertz1988',
-        'HcHansmann1985',
+        'HumerusLengthByGAASUM2000',
+        'GSHansmann1979',
+        'OODMayden1982',
+        'EFWByACCampbell1975',
+        'CRLRempen1991',
+        'TCDNimrod1986',
+        'ACMertz1988',
+        'HCHansmann1985',
         'ThcChitkara1987',
-        'FlChitty1997',
-        'BpdAsum1989']}
+        'FLChitty1997',
+        'BPDASUM1989']}
 
+name_for_cid[12013] = 'GestationalAgeEquationsandTables'
 cid_concepts[12013] = \
-{'LN': ['AcJeanty1984',
-        'AcJeanty1982',
-        'OfdAsum2000',
-        'CrlHansmann1985',
+{'LN': ['ACJeanty1984',
+        'ACJeanty1982',
+        'OFDASUM2000',
+        'CRLHansmann1985',
         'FetalTrunkCrossSectionalAreaOsaka1989',
-        'BpdMertz1988',
-        'HcJeanty1984',
-        'HcMerz1988',
+        'BPDMertz1988',
+        'HCJeanty1984',
+        'HCMerz1988',
         'RadiusJeanty1983',
-        'FlTokyo1986',
-        'CrlHansmann1986',
-        'BpdTokyo1986',
-        'IodMayden1982',
+        'FLTokyo1986',
+        'CRLHansmann1986',
+        'BPDTokyo1986',
+        'IODMayden1982',
         'TibiaJeanty1984',
-        'CrlAsum1991',
-        'GestationalAgeByLmp',
-        'BdJeanty1982',
-        'BpdDoubilet1993',
-        'GsTokyo1986',
-        'TcdHill1990',
-        'CrlOsaka1989',
-        'HcDerivedChitty1997',
-        'TadTokyo1986',
-        'AcLessoway1998',
+        'CRLASUM1991',
+        'GestationalAgeByLMP',
+        'BDJeanty1982',
+        'BPDDoubilet1993',
+        'GSTokyo1986',
+        'TCDHill1990',
+        'CRLOsaka1989',
+        'HCDerivedChitty1997',
+        'TADTokyo1986',
+        'ACLessoway1998',
         'AxtShinozuka1996',
         'FibulaJeanty1983',
         'RadiusMerz1987',
-        'OodTrout1994',
-        'BpdLessoway1998',
-        'FlHansmann1986',
-        'FlShinozuka1996',
-        'OfdLessoway1998',
-        'BpdShinozuka1996',
-        'FlJeanty1984',
+        'OODTrout1994',
+        'BPDLessoway1998',
+        'FLHansmann1986',
+        'FLShinozuka1996',
+        'OFDLessoway1998',
+        'BPDShinozuka1996',
+        'FLJeanty1984',
         'ClavicleLengthYarkoni1985',
-        'FlMerz1987',
-        'BpdJeanty1984',
-        'GsHellman1969',
-        'FlHadlock1984',
+        'FLMerz1987',
+        'BPDJeanty1984',
+        'GSHellman1969',
+        'FLHadlock1984',
         'BpdaHadlock1982',
-        'GsNyberg1992',
+        'GSNyberg1992',
         'LengthOfVertebraTokyo1986',
-        'CrlJeanty1982',
-        'HcMeasuredChitty1997',
+        'CRLJeanty1982',
+        'HCMeasuredChitty1997',
         'TransverseThoracicDiameterLessoway1998',
-        'HcLessoway1998',
-        'BpdHansmann1986',
-        'TcdGoldstein1987',
-        'AcHansmann1985',
+        'HCLessoway1998',
+        'BPDHansmann1986',
+        'TCDGoldstein1987',
+        'ACHansmann1985',
         'APAbdominalDiameterLessoway1998',
-        'CrlTokyo1986',
-        'CrlNelson1981',
+        'CRLTokyo1986',
+        'CRLNelson1981',
         'HumerusJeanty1984',
-        'BpdJeanty1982',
-        'CrlJeanty1984',
-        'FlOsaka1989',
-        'HcAsum2000',
-        'FlMerz1988',
-        'TadEriksen1985',
-        'BpdRempen1991',
-        'OfdHansmann1986',
-        'BpdOoChitty1997',
-        'BpdKurtz1980',
-        'GsRempen1991',
-        'FlHansmann1985',
-        'CrlDaya1993',
-        'TadHansmann1979',
-        'BpdHadlock1984',
-        'GsHansmann1982',
+        'BPDJeanty1982',
+        'CRLJeanty1984',
+        'FLOsaka1989',
+        'HCASUM2000',
+        'FLMerz1988',
+        'TADEriksen1985',
+        'BPDRempen1991',
+        'OFDHansmann1986',
+        'BPDOoChitty1997',
+        'BPDKurtz1980',
+        'GSRempen1991',
+        'FLHansmann1985',
+        'CRLDaya1993',
+        'TADHansmann1979',
+        'BPDHadlock1984',
+        'GSHansmann1982',
         'UlnaJeanty1984',
         'HumerusLengthOsaka1989',
-        'AcAsum2000',
+        'ACASUM2000',
         'TransverseThoracicDiameterHansmann1985',
-        'HcHadlock1984',
-        'HcJeanty1982',
-        'AcShinozuka1996',
-        'CrlShinozuka1996',
-        'TcdChitty1994',
-        'FlJeanty1982',
-        'AcHadlock1984',
-        'CrlRobinson1975',
+        'HCHadlock1984',
+        'HCJeanty1982',
+        'ACShinozuka1996',
+        'CRLShinozuka1996',
+        'TCDChitty1994',
+        'FLJeanty1982',
+        'ACHadlock1984',
+        'CRLRobinson1975',
         'HumerusMerz1987',
         'FibulaMerz1987',
-        'CrlHadlock1992',
-        'HumerusLengthAsum2000',
-        'BpdOiChitty1997',
-        'FlLessoway1998',
-        'HcHansmann1986',
+        'CRLHadlock1992',
+        'HumerusLengthASUM2000',
+        'BPDOiChitty1997',
+        'FLLessoway1998',
+        'HCHansmann1986',
         'SpineLengthTokyo1989',
-        'GsDaya1991',
-        'IodTrout1994',
-        'BpdOsaka1989',
-        'AcCampbell1975',
-        'BpdSabbagha1978',
+        'GSDaya1991',
+        'IODTrout1994',
+        'BPDOsaka1989',
+        'ACCampbell1975',
+        'BPDSabbagha1978',
         'AverageUltrasoundAge',
         'UlnaMerz1987',
-        'FlHohler1982',
-        'CrlAsum2000',
-        'OfdHansmann1985',
-        'BpdHansmann1985',
+        'FLHohler1982',
+        'CRLASUM2000',
+        'OFDHansmann1985',
+        'BPDHansmann1985',
         'FootLengthMercer1987',
-        'GsHansmann1979',
-        'OodMayden1982',
-        'CrlRempen1991',
-        'TcdNimrod1986',
-        'AcMertz1988',
-        'HcHansmann1985',
+        'GSHansmann1979',
+        'OODMayden1982',
+        'CRLRempen1991',
+        'TCDNimrod1986',
+        'ACMertz1988',
+        'HCHansmann1985',
         'ThcChitkara1987',
-        'FlChitty1997',
-        'BpdAsum1989']}
+        'FLChitty1997',
+        'BPDASUM1989']}
 
+name_for_cid[12014] = 'OBFetalBodyWeightEquationsandTables'
 cid_concepts[12014] = \
-{'LN': ['EfwByAcHcHadlock1984',
-        'EfwByAcBpdFlHadlock1985',
-        'EfwByBpdTtdHansmann1986',
-        'EfwByAcBpdFlHcHadlock1985',
-        'EfwByAcFlHcHadlock1985',
-        'EfwByAcBpdHadlock1984',
-        'EfwByAcCampbell1975',
-        'EfwByAcAndBpdShepard1982',
-        'EfwByAcFlHadlock1984',
-        'Efw3ByShinozuka1996',
-        'EfwByBpdApadTadFlTokyo1987',
-        'EfwByAcBpdFlHadlock1984',
-        'EfwByAcFlHadlock1985',
-        'EfwByBpdFtaFlOsaka1990',
-        'Efw1ByShinozuka1996',
-        'Efw2ByShinozuka1996']}
+{'LN': ['EFWByACHCHadlock1984',
+        'EFWByACBPDFLHadlock1985',
+        'EFWByBPDTTDHansmann1986',
+        'EFWByACBPDFLHCHadlock1985',
+        'EFWByACFLHCHadlock1985',
+        'EFWByACBPDHadlock1984',
+        'EFWByACCampbell1975',
+        'EFWByACAndBPDShepard1982',
+        'EFWByACFLHadlock1984',
+        'EFW3ByShinozuka1996',
+        'EFWByBPDAPADTADFLTokyo1987',
+        'EFWByACBPDFLHadlock1984',
+        'EFWByACFLHadlock1985',
+        'EFWByBPDFTAFLOsaka1990',
+        'EFW1ByShinozuka1996',
+        'EFW2ByShinozuka1996']}
 
+name_for_cid[12015] = 'FetalGrowthEquationsandTables'
 cid_concepts[12015] = \
-{'LN': ['CrlByGaShinozuka1996',
-        'CrlByGaRempen1991',
-        'FlByGaHadlock1984',
-        'HcAcByGaCampbell1977',
-        'FlByGaAsum2000',
-        'FibulaByGaJeanty1983',
-        'TcdByGaGoldstein1987',
-        'EfwByGaHansmann1986',
-        'EfwByGaHadlock1991',
-        'FlByGaMerz1988',
-        'FlByGaJeanty1982',
-        'FlByGaChitty1994',
-        'CephalicIndexByGaHadlock1981',
-        'CephalicIndexByGaChitty1994',
-        'AcByGaAsum2000',
-        'AcByGaHadlock1984',
-        'AcMeasuredByGaChitty1994',
-        'AcDerivedByGaChitty1994',
-        'RadiusByGaJeanty1983',
-        'FlByGaShinozuka1996',
-        'GsByGaRempen1991',
-        'BpdOuterOuterByGaChitty1994',
-        'BpdByGaAsum2000',
-        'HcByGaJeanty1982',
-        'AxtByGaShinozuka1996',
-        'HcDerivedByGaChitty1994',
-        'BpdByGaShinozuka1996',
-        'HcByGaAsum2000',
-        'BpdByGaRempen1991',
-        'HcByGaHadlock1984',
-        'BpdByGaHadlock1984',
-        'OfdByGaChitty1994',
-        'BpdByGaMerz1988',
-        'BpdByGaJeanty1982',
-        'HumerusLengthByGaAsum2000',
-        'AcByGaMerz1988',
-        'OfdByGaAsum2000',
-        'AcByGaShinozuka1996',
-        'CrlByGaAsum2000',
-        'HcByGaMerz1988',
-        'BpdOuterInnerByGaChitty1994']}
+{'LN': ['CRLByGAShinozuka1996',
+        'CRLByGARempen1991',
+        'FLByGAHadlock1984',
+        'HCACByGACampbell1977',
+        'FLByGAASUM2000',
+        'FibulaByGAJeanty1983',
+        'TCDByGAGoldstein1987',
+        'EFWByGAHansmann1986',
+        'EFWByGAHadlock1991',
+        'FLByGAMerz1988',
+        'FLByGAJeanty1982',
+        'FLByGAChitty1994',
+        'CephalicIndexByGAHadlock1981',
+        'CephalicIndexByGAChitty1994',
+        'ACByGAASUM2000',
+        'ACByGAHadlock1984',
+        'ACMeasuredByGAChitty1994',
+        'ACDerivedByGAChitty1994',
+        'RadiusByGAJeanty1983',
+        'FLByGAShinozuka1996',
+        'GSByGARempen1991',
+        'BPDOuterOuterByGAChitty1994',
+        'BPDByGAASUM2000',
+        'HCByGAJeanty1982',
+        'AxtByGAShinozuka1996',
+        'HCDerivedByGAChitty1994',
+        'BPDByGAShinozuka1996',
+        'HCByGAASUM2000',
+        'BPDByGARempen1991',
+        'HCByGAHadlock1984',
+        'BPDByGAHadlock1984',
+        'OFDByGAChitty1994',
+        'BPDByGAMerz1988',
+        'BPDByGAJeanty1982',
+        'HumerusLengthByGAASUM2000',
+        'ACByGAMerz1988',
+        'OFDByGAASUM2000',
+        'ACByGAShinozuka1996',
+        'CRLByGAASUM2000',
+        'HCByGAMerz1988',
+        'BPDOuterInnerByGAChitty1994']}
 
+name_for_cid[12016] = 'EstimatedFetalWeightPercentileEquationsandTables'
 cid_concepts[12016] = \
-{'DCM': ['FwpByGaCampbell1991', 'FwpByGaHadlock1991'],
- 'LN': ['FwpByGaAlexander1996',
-        'FwpByGaWilliams1982',
-        'MaleTwinsBwpByGaArbuckle1993',
-        'FwpByGaBrenner1976',
-        'FemaleSingletonBwpByGaArbuckle1993',
-        'FemaleTwinsBwpByGaArbuckle1993',
-        'MaleSingletonBwpByGaArbuckle1993',
-        'FwpByGaHadlock1985']}
+{'DCM': ['FWPByGACampbell1991', 'FWPByGAHadlock1991'],
+ 'LN': ['FWPByGAAlexander1996',
+        'FWPByGAWilliams1982',
+        'MaleTwinsBWPByGAArbuckle1993',
+        'FWPByGABrenner1976',
+        'FemaleSingletonBWPByGAArbuckle1993',
+        'FemaleTwinsBWPByGAArbuckle1993',
+        'MaleSingletonBWPByGAArbuckle1993',
+        'FWPByGAHadlock1985']}
 
+name_for_cid[12017] = 'GrowthDistributionRank'
 cid_concepts[12017] = \
 {'DCM': ['GrowthZScore', 'GrowthPercentileRank']}
 
+name_for_cid[12018] = 'OBGYNSummary'
 cid_concepts[12018] = \
-{'LN': ['NumberOfFetusesByUs', 'GestationalAgeByOvulationDate']}
+{'LN': ['NumberOfFetusesByUS', 'GestationalAgeByOvulationDate']}
 
+name_for_cid[12019] = 'OBGYNFetusSummary'
 cid_concepts[12019] = \
-{'LN': ['EfwPercentileRank',
+{'LN': ['EFWPercentileRank',
         'FetalHeartRate',
-        'GestationalAgeByLmp',
+        'GestationalAgeByLMP',
         'GestationalAge',
         'EstimatedWeight',
         'CompositeUltrasoundAge']}
 
+name_for_cid[12020] = 'FetalBiometryAnatomicSites'
 cid_concepts[12020] = \
 {'SRT': ['Abdomen',
          'Femur',
@@ -1332,9 +1414,11 @@ cid_concepts[12020] = \
          'Skull',
          'CisternaMagna']}
 
+name_for_cid[12021] = 'FetalLongBoneAnatomicSites'
 cid_concepts[12021] = \
 {'SRT': ['Femur', 'Ulna', 'Clavicle', 'Fibula', 'Radius', 'Tibia']}
 
+name_for_cid[12022] = 'FetalCraniumAnatomicSites'
 cid_concepts[12022] = \
 {'SRT': ['OccipitalRegionOfScalp',
          'AnteriorHornLateralVentricle',
@@ -1345,9 +1429,11 @@ cid_concepts[12022] = \
          'LateralVentricle',
          'CisternaMagna']}
 
+name_for_cid[12023] = 'PelvisandUterusAnatomicSites'
 cid_concepts[12023] = \
 {'SRT': ['Cervix', 'Uterus', 'Endometrium']}
 
+name_for_cid[12030] = 'UltrasoundContrast/BolusAgents'
 cid_concepts[12030] = \
 {'DCM': ['Sonazoid',
          'Sonovue',
@@ -1359,6 +1445,7 @@ cid_concepts[12030] = \
          'Levovist'],
  'NDC': ['Definity', 'Optison']}
 
+name_for_cid[12031] = 'ProtocolIntervalEvents'
 cid_concepts[12031] = \
 {'DCM': ['CessationOfStimulation',
          'OnsetOfStimulation',
@@ -1368,9 +1455,11 @@ cid_concepts[12031] = \
          'StartOfContrastAgentAdministration',
          'StartOfDrugDoseAdministration']}
 
+name_for_cid[12032] = 'TransducerScanPattern'
 cid_concepts[12032] = \
 {'DCM': ['VolumeScanPattern', 'PlaneScanPattern', 'LineScanPattern']}
 
+name_for_cid[12033] = 'UltrasoundTransducerGeometry'
 cid_concepts[12033] = \
 {'DCM': ['RingUltrasoundTransducerGeometry',
          'RadialUltrasoundTransducerGeometry',
@@ -1379,9 +1468,11 @@ cid_concepts[12033] = \
          'LinearUltrasoundTransducerGeometry',
          'NonImagingDopplerUltrasoundTransducerGeometry']}
 
+name_for_cid[12034] = 'UltrasoundTransducerBeamSteering'
 cid_concepts[12034] = \
 {'DCM': ['PhasedBeamSteering', 'MechanicalBeamSteering', 'FixedBeamDirection']}
 
+name_for_cid[12035] = 'UltrasoundTransducerApplication'
 cid_concepts[12035] = \
 {'DCM': ['ExternalTransducer',
          'IntravascularTransducer',
@@ -1389,12 +1480,15 @@ cid_concepts[12035] = \
          'EndovaginalTransducer',
          'TransesophagealTransducer']}
 
+name_for_cid[12101] = 'VascularSummary'
 cid_concepts[12101] = \
 {'DCM': ['Comment']}
 
+name_for_cid[12102] = 'TemporalPeriodsRelatingtoProcedureorTherapy'
 cid_concepts[12102] = \
 {'SRT': ['BeforeProcedure', 'DuringProcedure', 'AfterProcedure']}
 
+name_for_cid[12103] = 'VascularUltrasoundAnatomicLocation'
 cid_concepts[12103] = \
 {'SRT': ['InternalIliacArtery',
          'SuperficialPalmarVenousArch',
@@ -1489,9 +1583,9 @@ cid_concepts[12103] = \
          'SuperiorVenaCava',
          'UmbilicalArtery',
          'CommonCarotidArtery',
-         'CockettSPerforatingVein',
+         'CockettPerforatingVein',
          'CommonFemoralArtery',
-         'BoydSPerforatingVein',
+         'BoydPerforatingVein',
          'SubclavianVein',
          'ProfundaFemorisVein',
          'SuperficialPalmarArch',
@@ -1534,6 +1628,7 @@ cid_concepts[12103] = \
          'SegmentalArtery',
          'MiddleCerebralArtery']}
 
+name_for_cid[12104] = 'ExtracranialArteries'
 cid_concepts[12104] = \
 {'SRT': ['CommonCarotidArtery',
          'ExternalCarotidArtery',
@@ -1543,6 +1638,7 @@ cid_concepts[12104] = \
          'CarotidBifurcation',
          'VertebralArtery']}
 
+name_for_cid[12105] = 'IntracranialCerebralVessels'
 cid_concepts[12105] = \
 {'SRT': ['AnteriorCerebralArtery',
          'CentralRetinalArtery',
@@ -1564,9 +1660,11 @@ cid_concepts[12105] = \
          'InternalCarotidArteryC5Segment',
          'PosteriorCerebralArteryP2Segment']}
 
+name_for_cid[12106] = 'IntracranialCerebralVessels(Unilateral)'
 cid_concepts[12106] = \
 {'SRT': ['BasilarArtery']}
 
+name_for_cid[12107] = 'UpperExtremityArteries'
 cid_concepts[12107] = \
 {'SRT': ['RadialArtery',
          'DeepPalmarArchOfRadialArtery',
@@ -1578,6 +1676,7 @@ cid_concepts[12107] = \
          'BrachialArtery',
          'SuperficialPalmarArch']}
 
+name_for_cid[12108] = 'UpperExtremityVeins'
 cid_concepts[12108] = \
 {'SRT': ['SuperiorVenaCava',
          'InnominateVein',
@@ -1593,6 +1692,7 @@ cid_concepts[12108] = \
          'InternalJugularVein',
          'DeepPalmarVenousArch']}
 
+name_for_cid[12109] = 'LowerExtremityArteries'
 cid_concepts[12109] = \
 {'SRT': ['DorsalisPedisArtery',
          'InternalIliacArtery',
@@ -1608,6 +1708,7 @@ cid_concepts[12109] = \
          'SuperficialFemoralArtery',
          'ExternalIliacArtery']}
 
+name_for_cid[12110] = 'LowerExtremityVeins'
 cid_concepts[12110] = \
 {'SRT': ['InternalIliacVein',
          'CommonIliacVein',
@@ -1620,10 +1721,10 @@ cid_concepts[12110] = \
          'GiacominiVein',
          'SaphenopoplitealJunction',
          'PosteriorArchVein',
-         'CockettSPerforatingVein',
+         'CockettPerforatingVein',
          'GreatSaphenousVeinOfThigh',
          'ExternalIliacVein',
-         'BoydSPerforatingVein',
+         'BoydPerforatingVein',
          'SaphenofemoralJunction',
          'PosteriorTibialVein',
          'PeronealVein',
@@ -1636,6 +1737,7 @@ cid_concepts[12110] = \
          'SaphenousVein',
          'HunterianPerforatingVein']}
 
+name_for_cid[12111] = 'AbdominalArteries(Lateral)'
 cid_concepts[12111] = \
 {'SRT': ['AccessoryRenalArtery',
          'TesticularArtery',
@@ -1644,6 +1746,7 @@ cid_concepts[12111] = \
          'OvarianArtery',
          'UterineArtery']}
 
+name_for_cid[12112] = 'AbdominalArteries(Unilateral)'
 cid_concepts[12112] = \
 {'SRT': ['CommonHepaticArtery',
          'InferiorMesentericArtery',
@@ -1660,6 +1763,7 @@ cid_concepts[12112] = \
          'CommonIliacArtery',
          'LeftBranchOfHepaticArtery']}
 
+name_for_cid[12113] = 'AbdominalVeins(Lateral)'
 cid_concepts[12113] = \
 {'SRT': ['FifthLumbarArtery',
          'SixthLumbarArtery',
@@ -1673,6 +1777,7 @@ cid_concepts[12113] = \
          'OvarianVein',
          'IlealVein']}
 
+name_for_cid[12114] = 'AbdominalVeins(Unilateral)'
 cid_concepts[12114] = \
 {'SRT': ['HepaticVein',
          'SuperiorMesentericVein',
@@ -1689,6 +1794,7 @@ cid_concepts[12114] = \
          'RightHepaticVein',
          'RightMainBranchOfPortalVein']}
 
+name_for_cid[12115] = 'RenalVessels'
 cid_concepts[12115] = \
 {'SRT': ['LobarArtery',
          'AccessoryRenalArtery',
@@ -1700,6 +1806,7 @@ cid_concepts[12115] = \
          'RenalArtery',
          'PerforatingArteryOfKidney']}
 
+name_for_cid[12116] = 'VesselSegmentModifiers'
 cid_concepts[12116] = \
 {'SRT': ['Distal',
          'OriginOfVessel',
@@ -1707,6 +1814,7 @@ cid_concepts[12116] = \
          'DilatedPortionOfSegment',
          'MidLongitudinal']}
 
+name_for_cid[12117] = 'VesselBranchModifiers'
 cid_concepts[12117] = \
 {'SRT': ['CollateralBranchOfVessel',
          'Inferior',
@@ -1717,9 +1825,11 @@ cid_concepts[12117] = \
          'Lateral',
          'Medial']}
 
+name_for_cid[12118] = 'MeasurementOrientation'
 cid_concepts[12118] = \
 {'DCM': ['AnteriorPosterior'], 'SRT': ['Transverse', 'Longitudinal']}
 
+name_for_cid[12119] = 'VascularUltrasoundProperty'
 cid_concepts[12119] = \
 {'LN': ['MinimumDiastolicVelocity',
         'ResistivityIndex',
@@ -1746,6 +1856,7 @@ cid_concepts[12119] = \
          'LumenAreaStenosis',
          'LumenDiameterStenosis']}
 
+name_for_cid[12120] = 'BloodVelocityMeasurementsbyUltrasound'
 cid_concepts[12120] = \
 {'LN': ['MinimumDiastolicVelocity',
         'TimeAveragedPeakVelocity',
@@ -1753,6 +1864,7 @@ cid_concepts[12120] = \
         'EndDiastolicVelocity',
         'TimeAveragedMeanVelocity']}
 
+name_for_cid[12121] = 'VascularIndicesandRatios'
 cid_concepts[12121] = \
 {'LN': ['AccelerationIndex',
         'ResistivityIndex',
@@ -1761,6 +1873,7 @@ cid_concepts[12121] = \
         'PulsatilityIndex'],
  'SRT': ['LumenAreaStenosis', 'LumenDiameterStenosis']}
 
+name_for_cid[12122] = 'OtherVascularProperties'
 cid_concepts[12122] = \
 {'LN': ['DecelerationTime',
         'PeakGradient',
@@ -1775,12 +1888,15 @@ cid_concepts[12122] = \
          'VesselDepthFromSurface',
          'VesselIntimalCrossSectionalArea']}
 
+name_for_cid[12123] = 'CarotidRatios'
 cid_concepts[12123] = \
-{'LN': ['IcaCcaVelocityRatio']}
+{'LN': ['ICACCAVelocityRatio']}
 
+name_for_cid[12124] = 'RenalRatios'
 cid_concepts[12124] = \
 {'LN': ['RenalArteryAortaVelocityRatio']}
 
+name_for_cid[12140] = 'PelvicVasculatureAnatomicalLocation'
 cid_concepts[12140] = \
 {'SRT': ['UmbilicalArtery',
          'OvarianArtery',
@@ -1792,6 +1908,7 @@ cid_concepts[12140] = \
          'UmbilicalVein',
          'VitellineVeinOfPlacenta']}
 
+name_for_cid[12141] = 'FetalVasculatureAnatomicalLocation'
 cid_concepts[12141] = \
 {'SRT': ['Aorta',
          'PulmonaryArtery',
@@ -1799,9 +1916,10 @@ cid_concepts[12141] = \
          'DescendingAorta',
          'MiddleCerebralArtery']}
 
+name_for_cid[12200] = 'EchocardiographyLeftVentricle'
 cid_concepts[12200] = \
 {'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -1810,7 +1928,7 @@ cid_concepts[12200] = \
         'LeftVentricleMass',
         'VolumeFlow',
         'FlowRadius',
-        'LeftVentricularEjectionFractionByUs',
+        'LeftVentricularEjectionFractionByUS',
         'LeftVentricleInternalSystolicDimension',
         'InterventricularSeptumSystolicThickness',
         'HeartRate',
@@ -1857,15 +1975,16 @@ cid_concepts[12200] = \
          'StrokeVolume',
          'CardiacOutput',
          'StrokeIndex',
-         'LvPeakDiastolicTissueVelocityDuringAtrialSystole',
+         'LVPeakDiastolicTissueVelocityDuringAtrialSystole',
          'LeftVentricularPeakSystolicTissueVelocity',
          'LeftVentricularPeakEarlyDiastolicTissueVelocity',
-         'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave',
+         'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave',
          'LeftVentricularIsovolumicContractionTime',
          'LeftVentricularIndexOfMyocardialPerformance',
          'LeftVentricleEpicardialDiastolicAreaPsaxPapView',
          'CardiacIndex']}
 
+name_for_cid[12201] = 'LeftVentricleLinear'
 cid_concepts[12201] = \
 {'LN': ['LeftVentricleInternalEndDiastolicDimension',
         'LeftVentricleDiastolicMajorAxis',
@@ -1882,24 +2001,27 @@ cid_concepts[12201] = \
  'SRT': ['LeftVentricleSemiMajorAxisDiastolicDimension',
          'LeftVentricleTruncatedSemiMajorAxisDiastolicDimension']}
 
+name_for_cid[12202] = 'LeftVentricleVolume'
 cid_concepts[12202] = \
-{'LN': ['LeftVentricularEjectionFractionByUs',
+{'LN': ['LeftVentricularEjectionFractionByUS',
         'LeftVentricularEndSystolicVolume',
         'LeftVentricularEndDiastolicVolume']}
 
+name_for_cid[12203] = 'LeftVentricleOther'
 cid_concepts[12203] = \
 {'LN': ['LeftVentricularIsovolumicRelaxationTime', 'LeftVentricleMass'],
- 'SRT': ['LvPeakDiastolicTissueVelocityDuringAtrialSystole',
+ 'SRT': ['LVPeakDiastolicTissueVelocityDuringAtrialSystole',
          'LeftVentricularPeakSystolicTissueVelocity',
          'LeftVentricularPeakEarlyDiastolicTissueVelocity',
-         'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave',
+         'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave',
          'LeftVentricularIsovolumicContractionTime',
          'LeftVentricularIndexOfMyocardialPerformance']}
 
+name_for_cid[12204] = 'EchocardiographyRightVentricle'
 cid_concepts[12204] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -1933,28 +2055,31 @@ cid_concepts[12204] = \
  'SRT': ['RegurgitantFraction',
          'CardiovascularOrificeArea',
          'CardiovascularOrificeDiameter',
-         'RvCardiacOutput',
-         'RvStrokeIndex',
+         'RVCardiacOutput',
+         'RVStrokeIndex',
          'RightVentricularPeakSystolicPressure',
          'RightVentricularIndexOfMyocardialPerformance',
-         'RvCardiacIndex',
-         'RvStrokeVolume']}
+         'RVCardiacIndex',
+         'RVStrokeVolume']}
 
+name_for_cid[12205] = 'EchocardiographyLeftAtrium'
 cid_concepts[12205] = \
-{'LN': ['LeftAtriumAreaA4cView',
+{'LN': ['LeftAtriumAreaA4CView',
         'LeftAtriumToAorticRootRatio',
         'HeartRate',
         'LeftAtrialAppendagePeakVelocity',
         'LeftAtriumAnteroPosteriorSystolicDimension'],
  'SRT': ['LeftAtriumSystolicVolume']}
 
+name_for_cid[12206] = 'EchocardiographyRightAtrium'
 cid_concepts[12206] = \
-{'LN': ['RightAtriumSystolicPressure', 'RightAtriumAreaA4cView', 'HeartRate']}
+{'LN': ['RightAtriumSystolicPressure', 'RightAtriumAreaA4CView', 'HeartRate']}
 
+name_for_cid[12207] = 'EchocardiographyMitralValve'
 cid_concepts[12207] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -1971,7 +2096,7 @@ cid_concepts[12207] = \
         'EndDiastolicVelocity',
         'VelocityOfFlowPropagation',
         'PeakGradient',
-        'MitralValveEpssEWave',
+        'MitralValveEPSSEWave',
         'MitralValveEWavePeakVelocity',
         'MitralRegurgitationDpDtDerivedFromMitralRegVelocity',
         'AliasVelocity',
@@ -1996,14 +2121,15 @@ cid_concepts[12207] = \
          'MitralValveAWaveDuration',
          'CardiacOutput',
          'StrokeIndex',
-         'MitralValveAtDtRatio',
+         'MitralValveATDTRatio',
          'MitralValveClosureToOpeningTime',
          'CardiacIndex']}
 
+name_for_cid[12208] = 'EchocardiographyTricuspidValve'
 cid_concepts[12208] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2040,10 +2166,11 @@ cid_concepts[12208] = \
          'CardiovascularOrificeDiameter',
          'TricuspidValveClosureToOpeningTime']}
 
+name_for_cid[12209] = 'EchocardiographyPulmonicValve'
 cid_concepts[12209] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2078,6 +2205,7 @@ cid_concepts[12209] = \
          'CardiovascularOrificeDiameter',
          'RatioOfPulmonicValveAccelerationTimeToEjectionTime']}
 
+name_for_cid[12210] = 'EchocardiographyPulmonaryArtery'
 cid_concepts[12210] = \
 {'LN': ['HeartRate',
         'MainPulmonaryArteryDiameter',
@@ -2085,10 +2213,11 @@ cid_concepts[12210] = \
         'RightPulmonaryArteryDiameter'],
  'SRT': ['MainPulmonaryArteryPeakVelocity']}
 
+name_for_cid[12211] = 'EchocardiographyAorticValve'
 cid_concepts[12211] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2122,6 +2251,7 @@ cid_concepts[12211] = \
          'CardiovascularOrificeDiameter',
          'RatioOfAorticValveAccelerationTimeToEjectionTime']}
 
+name_for_cid[12212] = 'EchocardiographyAorta'
 cid_concepts[12212] = \
 {'LN': ['AorticRootDiameter',
         'HeartRate',
@@ -2132,6 +2262,7 @@ cid_concepts[12212] = \
         'DescendingAorticDiameter',
         'ThoracicAortaCoarctationSystolicPeakInstantaneousGradient']}
 
+name_for_cid[12214] = 'EchocardiographyPulmonaryVeins'
 cid_concepts[12214] = \
 {'LN': ['PulmonaryVeinSystolicPeakVelocity',
         'PulmonaryVeinDiastolicPeakVelocity',
@@ -2142,9 +2273,11 @@ cid_concepts[12214] = \
          'PulmonaryVeinAWaveDuration',
          'PulmonaryVeinSWaveVelocityTimeIntegral']}
 
+name_for_cid[12215] = 'EchocardiographyVenaCavae'
 cid_concepts[12215] = \
 {'LN': ['InferiorVenaCavaDiameter', 'InferiorVenaCavaCollapse', 'HeartRate']}
 
+name_for_cid[12216] = 'EchocardiographyHepaticVeins'
 cid_concepts[12216] = \
 {'LN': ['HepaticVeinAtrialContractionReversalPeakVelocity',
         'HepaticVeinSystolicToDiastolicRatio',
@@ -2152,13 +2285,15 @@ cid_concepts[12216] = \
         'HeartRate',
         'HepaticVeinSystolicPeakVelocity']}
 
+name_for_cid[12217] = 'EchocardiographyCardiacShunt'
 cid_concepts[12217] = \
 {'LN': ['PulmonaryToSystemicShuntFlowRatio', 'HeartRate']}
 
+name_for_cid[12218] = 'EchocardiographyCongenital'
 cid_concepts[12218] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2170,9 +2305,9 @@ cid_concepts[12218] = \
         'FlowRadius',
         'HeartRate',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'EndDiastolicVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'VelocityOfFlowPropagation',
         'PeakGradient',
         'AliasVelocity',
@@ -2197,15 +2332,18 @@ cid_concepts[12218] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12219] = 'PulmonaryVeinModifiers'
 cid_concepts[12219] = \
 {'SRT': ['RightLowerSegment',
          'LeftLowerSegment',
          'LeftUpperSegment',
          'RightUpperSegment']}
 
+name_for_cid[12220] = 'EchocardiographyCommonMeasurements'
 cid_concepts[12220] = \
 {'LN': ['HeartRate']}
 
+name_for_cid[12221] = 'FlowDirection'
 cid_concepts[12221] = \
 {'SRT': ['AntegradeFlow',
          'RetrogradeFlow',
@@ -2213,10 +2351,11 @@ cid_concepts[12221] = \
          'LeftToRightCardiovascularShunt',
          'RightToLeftCardiovascularShunt']}
 
+name_for_cid[12222] = 'OrificeFlowProperties'
 cid_concepts[12222] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2246,6 +2385,7 @@ cid_concepts[12222] = \
          'CardiovascularOrificeArea',
          'CardiovascularOrificeDiameter']}
 
+name_for_cid[12223] = 'EchocardiographyStrokeVolumeOrigin'
 cid_concepts[12223] = \
 {'SRT': ['RightVentricleOutflowTract',
          'LeftVentricleOutflowTract',
@@ -2253,16 +2393,18 @@ cid_concepts[12223] = \
          'Aorta',
          'LeftVentricle']}
 
+name_for_cid[12224] = 'UltrasoundImageModes'
 cid_concepts[12224] = \
 {'SRT': ['MMode',
-         'dMode_2',
+         '_2DMode',
          'PowerDoppler',
-         'dMode_3',
+         '_3DMode',
          'DopplerContinuousWave',
          'DopplerColorFlow',
          'TissueDopplerImaging',
          'DopplerPulsed']}
 
+name_for_cid[12226] = 'EchocardiographyImageView'
 cid_concepts[12226] = \
 {'SRT': ['ApicalLongAxis',
          'ParasternalLongAxis',
@@ -2287,11 +2429,12 @@ cid_concepts[12226] = \
          'SubcostalShortAxisViewAtVenousInflowLevel',
          'SuprasternalLongAxisViewOfAorticArch',
          'SubcostalShortAxisViewAtPapillaryMuscleLevel',
-         'ParasternalLongAxisViewOfTheRvInflowTract',
-         'ParasternalLongAxisViewOfTheRvOutflowTract',
+         'ParasternalLongAxisViewOfTheRVInflowTract',
+         'ParasternalLongAxisViewOfTheRVOutflowTract',
          'ParasternalShortAxisAtTheMitralValveLevel',
          'ParasternalShortAxisAtThePapillaryMuscleLevel']}
 
+name_for_cid[12227] = 'EchocardiographyMeasurementMethod'
 cid_concepts[12227] = \
 {'DCM': ['Teichholz',
          'MethodOfDisksSinglePlane',
@@ -2321,6 +2464,7 @@ cid_concepts[12227] = \
          'AreaByPressureHalfTime',
          'LeftVentricleMassByAreaLengthAdjustedByHeight']}
 
+name_for_cid[12228] = 'EchocardiographyVolumeMethods'
 cid_concepts[12228] = \
 {'DCM': ['Teichholz',
          'MethodOfDisksSinglePlane',
@@ -2333,6 +2477,7 @@ cid_concepts[12228] = \
          'SinglePlaneEllipse',
          'BiplaneEllipse']}
 
+name_for_cid[12229] = 'EchocardiographyAreaMethods'
 cid_concepts[12229] = \
 {'DCM': ['ProximalIsovelocitySurfaceArea',
          'ContinuityEquationByVelocityTimeIntegral',
@@ -2342,12 +2487,15 @@ cid_concepts[12229] = \
          'AreaByPressureHalfTime',
          'Planimetry']}
 
+name_for_cid[12230] = 'GradientMethods'
 cid_concepts[12230] = \
 {'DCM': ['SimplifiedBernoulli', 'FullBernoulli']}
 
+name_for_cid[12231] = 'VolumeFlowMethods'
 cid_concepts[12231] = \
 {'DCM': ['DopplerVolumeFlow', 'ProximalIsovelocitySurfaceArea']}
 
+name_for_cid[12232] = 'MyocardiumMassMethods'
 cid_concepts[12232] = \
 {'DCM': ['LeftVentricleMassByTruncatedEllipseAdjustedByHeight',
          'LeftVentricleMassByMModeAdjustedByHeight',
@@ -2356,6 +2504,7 @@ cid_concepts[12232] = \
          'LeftVentricleMassByMMode',
          'LeftVentricleMassByAreaLengthAdjustedByHeight']}
 
+name_for_cid[12233] = 'CardiacPhase'
 cid_concepts[12233] = \
 {'SRT': ['VentricularIsovolumicRelaxation',
          'Diastasis',
@@ -2371,12 +2520,15 @@ cid_concepts[12233] = \
          'VentricularEjection',
          'VentricularSystole']}
 
+name_for_cid[12234] = 'RespirationState'
 cid_concepts[12234] = \
 {'SRT': ['Expiration', 'Inspiration']}
 
+name_for_cid[12235] = 'MitralValveAnatomicSites'
 cid_concepts[12235] = \
 {'SRT': ['MitralAnnulus', 'MedialMitralAnnulus', 'LateralMitralAnnulus']}
 
+name_for_cid[12236] = 'EchoAnatomicSites'
 cid_concepts[12236] = \
 {'SRT': ['VentricularSeptalDefect',
          'ThoracicAorticCoarctation',
@@ -2393,43 +2545,53 @@ cid_concepts[12236] = \
          'MitralValve',
          'TricuspidAnnulus']}
 
+name_for_cid[12237] = 'EchocardiographyAnatomicSiteModifiers'
 cid_concepts[12237] = \
 {'SRT': ['RightLowerSegment',
          'LeftLowerSegment',
          'LeftUpperSegment',
          'RightUpperSegment']}
 
+name_for_cid[12238] = 'WallMotionScoringSchemes'
 cid_concepts[12238] = \
-{'DCM': ['PointSegmentFindingScaleWithGradedHypokinesis_5',
-         'PointSegmentFindingScale_5',
-         'PointSegmentFindingScale_4']}
+{'DCM': ['_5PointSegmentFindingScaleWithGradedHypokinesis',
+         '_5PointSegmentFindingScale',
+         '_4PointSegmentFindingScale']}
 
+name_for_cid[12239] = 'CardiacOutputProperties'
 cid_concepts[12239] = \
 {'SRT': ['CardiacOutput', 'StrokeIndex', 'CardiacIndex', 'StrokeVolume']}
 
+name_for_cid[12240] = 'LeftVentricleArea'
 cid_concepts[12240] = \
 {'SRT': ['LeftVentricularSystolicArea',
          'LeftVentricularDiastolicArea',
          'LeftVentricularFractionalAreaChange',
          'LeftVentricleEpicardialDiastolicAreaPsaxPapView']}
 
+name_for_cid[12241] = 'TricuspidValveFindingSites'
 cid_concepts[12241] = \
 {'SRT': ['TricuspidAnnulus']}
 
+name_for_cid[12242] = 'AorticValveFindingSites'
 cid_concepts[12242] = \
 {'SRT': ['AorticValveRing']}
 
+name_for_cid[12243] = 'LeftVentricleFindingSites'
 cid_concepts[12243] = \
 {'SRT': ['LeftVentricleOutflowTract']}
 
+name_for_cid[12244] = 'CongenitalFindingSites'
 cid_concepts[12244] = \
 {'SRT': ['VentricularSeptalDefect', 'AtrialSeptalDefect']}
 
+name_for_cid[12245] = 'CardiacUltrasoundReportTitles'
 cid_concepts[12245] = \
 {'DCM': ['PediatricCardiacUltrasoundReport',
          'AdultCongenitalCardiacUltrasoundReport',
          'FetalCardiacUltrasoundReport']}
 
+name_for_cid[12246] = 'CardiacUltrasoundIndicationforStudy'
 cid_concepts[12246] = \
 {'SRT': ['CoronaryArteryDisease',
          'Dyspnea',
@@ -2442,7 +2604,7 @@ cid_concepts[12246] = \
          'Hypertension',
          'Palpitations',
          'ValvularHeartDisease',
-         'AbnormalEcg',
+         'AbnormalECG',
          'Arrhythmia',
          'Syncope',
          'LeftBundleBranchBlock',
@@ -2450,6 +2612,7 @@ cid_concepts[12246] = \
          'SupraventricularTachycardia',
          'ChestPain']}
 
+name_for_cid[12247] = 'Pediatric,FetalandCongenitalCardiacSurgicalInterventions'
 cid_concepts[12247] = \
 {'SRT': ['ImplantationOfHeartValveWithTissueGraft',
          'ImplantationOfBaffleAtrialOrInteratrial',
@@ -2475,16 +2638,17 @@ cid_concepts[12247] = \
          'BlalockTaussigShuntPulmonarySubclavianArteryAnastomosis',
          'PercutaneousProstheticClosureOfAtrialSeptalDefect',
          'CoarctationOfTheAortaAngioplastyWithImplantOfStent',
-         'RadicalAortopulmonaryReconstructWRvToPaValvelessConduit',
+         'RadicalAortopulmonaryReconstructWRVToPAValvelessConduit',
          'PatentDuctusArteriosusCoilOrDeviceClosure',
          'SanoProcedure',
          'RepairOfCoarctationOfAorta',
-         'ConstructionOfLvToAortaTunnelWRvToPaValvedConduit',
+         'ConstructionOfLVToAortaTunnelWRVToPAValvedConduit',
          'PartialAnomalousPulmonaryVenousConnectionOperation',
          'AtrialSeptalDefectRepair',
          'VentricularSeptalDefectDeviceClosure',
          'RepairOfDefectOfTheAtrioventricularSeptum']}
 
+name_for_cid[12248] = 'CardiacUltrasoundSummaryCodes'
 cid_concepts[12248] = \
 {'SRT': ['CorrectedTranspositionOfGreatVessels',
          'Dextrocardia',
@@ -2514,6 +2678,7 @@ cid_concepts[12248] = \
          'MitralRegurgitation',
          'PulmonaryAtresiaWithVentricularSeptalDefect']}
 
+name_for_cid[12249] = 'CardiacUltrasoundFetalSummaryCodes'
 cid_concepts[12249] = \
 {'SRT': ['CorrectedTranspositionOfGreatVessels',
          'Dextrocardia',
@@ -2545,8 +2710,9 @@ cid_concepts[12249] = \
          'PulmonaryAtresiaWithVentricularSeptalDefect',
          'EdemaOfFetalChestWall']}
 
+name_for_cid[12250] = 'CardiacUltrasoundCommonLinearMeasurements'
 cid_concepts[12250] = \
-{'LN': ['RoiInternalDimensionByUs', 'RoiThicknessByUs'],
+{'LN': ['ROIInternalDimensionByUS', 'ROIThicknessByUS'],
  'SRT': ['Diameter',
          'MajorAxis',
          'Circumference',
@@ -2554,11 +2720,12 @@ cid_concepts[12250] = \
          'Radius',
          'Length']}
 
+name_for_cid[12251] = 'CardiacUltrasoundLinearValveMeasurements'
 cid_concepts[12251] = \
 {'LN': ['LeafletThickness',
         'LeafletSeparation',
-        'RoiInternalDimensionByUs',
-        'RoiThicknessByUs',
+        'ROIInternalDimensionByUS',
+        'ROIThicknessByUS',
         'CEDistance',
         'DEExcursion'],
  'SRT': ['Diameter',
@@ -2568,24 +2735,27 @@ cid_concepts[12251] = \
          'Radius',
          'Length']}
 
+name_for_cid[12252] = 'CardiacUltrasoundCardiacFunction'
 cid_concepts[12252] = \
-{'LN': ['HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
+{'LN': ['HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'MeanVelocityOfCircumferentialFiberShorteningMeanVcfv',
         'FractionalShortening',
         'Thickening'],
  'SRT': ['CardiacEjectionFraction']}
 
+name_for_cid[12253] = 'CardiacUltrasoundAreaMeasurements'
 cid_concepts[12253] = \
 {'LN': ['JetArea', 'FlowArea'], 'SRT': ['Area']}
 
+name_for_cid[12254] = 'CardiacUltrasoundHemodynamicMeasurements'
 cid_concepts[12254] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['PreEjectionPeriod',
         'EjectionTime',
         'AWaveDuration',
         'EnvelopeDuration',
-        'TimeToPeakByUs',
-        'DpDtByUs',
+        'TimeToPeakByUS',
+        'DpDtByUS',
         'HeartRateCorrectedEjectionTime',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
@@ -2595,15 +2765,17 @@ cid_concepts[12254] = \
         'IsovolumicRelaxationTime'],
  'SRT': ['BloodPressure']}
 
+name_for_cid[12255] = 'CardiacUltrasoundMyocardiumMeasurements'
 cid_concepts[12255] = \
 {'DCM': ['WallMass'],
  'LN': ['EndocardialArea', 'EpicardialArea', 'MyocardialPerformanceIndexTei']}
 
+name_for_cid[12257] = 'CardiacUltrasoundLeftVentricle'
 cid_concepts[12257] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval', 'WallMass'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleAWave',
+        'PeakEWavePeakAWaveByUS',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleAWave',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2611,7 +2783,7 @@ cid_concepts[12257] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2620,10 +2792,10 @@ cid_concepts[12257] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'EndocardialArea',
         'PeakTissueVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -2635,14 +2807,14 @@ cid_concepts[12257] = \
         'Thickening',
         'ACInterval',
         'PreEjectionPeriod',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleEWave',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave',
         'AWavePeakVelocity',
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'InterventricularSeptumToPosteriorWallThicknessRatio',
@@ -2677,14 +2849,15 @@ cid_concepts[12257] = \
          'Diameter',
          'CardiacOutput',
          'StrokeIndex',
-         'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave',
+         'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave',
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12258] = 'CardiacUltrasoundRightVentricle'
 cid_concepts[12258] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval', 'WallMass'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2692,7 +2865,7 @@ cid_concepts[12258] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2702,7 +2875,7 @@ cid_concepts[12258] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'EndocardialArea',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -2716,9 +2889,9 @@ cid_concepts[12258] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -2745,11 +2918,12 @@ cid_concepts[12258] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12259] = 'CardiacUltrasoundVentriclesMeasurements'
 cid_concepts[12259] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval', 'WallMass'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleAWave',
+        'PeakEWavePeakAWaveByUS',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleAWave',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2757,7 +2931,7 @@ cid_concepts[12259] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2766,10 +2940,10 @@ cid_concepts[12259] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'EndocardialArea',
         'PeakTissueVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -2781,14 +2955,14 @@ cid_concepts[12259] = \
         'Thickening',
         'ACInterval',
         'PreEjectionPeriod',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleEWave',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave',
         'AWavePeakVelocity',
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'InterventricularSeptumToPosteriorWallThicknessRatio',
@@ -2823,14 +2997,15 @@ cid_concepts[12259] = \
          'Diameter',
          'CardiacOutput',
          'StrokeIndex',
-         'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave',
+         'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave',
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12260] = 'CardiacUltrasoundPulmonaryArtery'
 cid_concepts[12260] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2838,7 +3013,7 @@ cid_concepts[12260] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2847,7 +3022,7 @@ cid_concepts[12260] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -2861,9 +3036,9 @@ cid_concepts[12260] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -2887,6 +3062,7 @@ cid_concepts[12260] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12261] = 'CardiacUltrasoundPulmonaryVein'
 cid_concepts[12261] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -2899,14 +3075,14 @@ cid_concepts[12261] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
         'StenosisPeakGradient',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2914,7 +3090,7 @@ cid_concepts[12261] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'PulmVeinADurationToMvADurationDifference',
+        'PulmVeinADurationToMVADurationDifference',
         'PeakGradient',
         'EjectionTime',
         'PulmonaryVeinADurationMitralValveADurationRatio',
@@ -2929,14 +3105,14 @@ cid_concepts[12261] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
         'VelocityOfFlowPropagation',
         'AliasVelocity',
-        'PulmonaryVeinAVtiToMitralValveVtiRatio',
+        'PulmonaryVeinAVTIToMitralValveVTIRatio',
         'PressureHalfTime',
         'EVelocityToAnnulusEVelocityRatio',
         'AccelerationSlope',
@@ -2948,10 +3124,11 @@ cid_concepts[12261] = \
          'CardiovascularOrificeArea',
          'CardiovascularOrificeDiameter']}
 
+name_for_cid[12262] = 'CardiacUltrasoundPulmonaryValve'
 cid_concepts[12262] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -2960,7 +3137,7 @@ cid_concepts[12262] = \
         'EnvelopeDuration',
         'AWaveAmplitude',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -2970,8 +3147,8 @@ cid_concepts[12262] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -2991,9 +3168,9 @@ cid_concepts[12262] = \
         'TimeFromQWaveToPulmonicValveCloses',
         'CEDistance',
         'PulmonaryArteryPressureUsingAccelTime',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3025,6 +3202,7 @@ cid_concepts[12262] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12263] = 'CardiacUltrasoundVenousReturnPulmonaryMeasurements'
 cid_concepts[12263] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -3037,7 +3215,7 @@ cid_concepts[12263] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3046,7 +3224,7 @@ cid_concepts[12263] = \
         'EnvelopeDuration',
         'AWaveAmplitude',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3056,10 +3234,10 @@ cid_concepts[12263] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
-        'PulmVeinADurationToMvADurationDifference',
+        'PulmVeinADurationToMVADurationDifference',
         'EjectionTime',
         'PulmonaryVeinADurationMitralValveADurationRatio',
         'PeakInstantaneousFlowRate',
@@ -3079,9 +3257,9 @@ cid_concepts[12263] = \
         'TimeFromQWaveToPulmonicValveCloses',
         'CEDistance',
         'PulmonaryArteryPressureUsingAccelTime',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3089,7 +3267,7 @@ cid_concepts[12263] = \
         'VelocityOfFlowPropagation',
         'FractionalShortening',
         'AliasVelocity',
-        'PulmonaryVeinAVtiToMitralValveVtiRatio',
+        'PulmonaryVeinAVTIToMitralValveVTIRatio',
         'PressureHalfTime',
         'EVelocityToAnnulusEVelocityRatio',
         'AccelerationSlope',
@@ -3114,6 +3292,7 @@ cid_concepts[12263] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12264] = 'CardiacUltrasoundVenousReturnSystemicMeasurements'
 cid_concepts[12264] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -3126,7 +3305,7 @@ cid_concepts[12264] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3134,7 +3313,7 @@ cid_concepts[12264] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3143,8 +3322,8 @@ cid_concepts[12264] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3159,9 +3338,9 @@ cid_concepts[12264] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3192,10 +3371,11 @@ cid_concepts[12264] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12265] = 'CardiacUltrasoundAtriaandAtrialSeptumMeasurements'
 cid_concepts[12265] = \
 {'DCM': ['WallMass'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3208,7 +3388,7 @@ cid_concepts[12265] = \
         'FlowArea',
         'EndDiastolicVelocity',
         'EndocardialArea',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'LeftAtriumVolumeToRightAtriumVolumeRatio',
         'PeakInstantaneousFlowRate',
@@ -3221,7 +3401,7 @@ cid_concepts[12265] = \
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'VelocityOfFlowPropagation',
         'AliasVelocity',
         'PressureHalfTime',
@@ -3244,6 +3424,7 @@ cid_concepts[12265] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12266] = 'CardiacUltrasoundMitralValve'
 cid_concepts[12266] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -3256,7 +3437,7 @@ cid_concepts[12266] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3264,7 +3445,7 @@ cid_concepts[12266] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3274,8 +3455,8 @@ cid_concepts[12266] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'MitralRegurgitationDpDtDerivedFromMitralRegVelocity',
@@ -3294,15 +3475,15 @@ cid_concepts[12266] = \
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
         'CEDistance',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
         'MeanVelocityOfCircumferentialFiberShorteningMeanVcfv',
         'VelocityOfFlowPropagation',
-        'MitralValveEpssEWave',
+        'MitralValveEPSSEWave',
         'FractionalShortening',
         'AliasVelocity',
         'PressureHalfTime',
@@ -3329,6 +3510,7 @@ cid_concepts[12266] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12267] = 'CardiacUltrasoundTricuspidValve'
 cid_concepts[12267] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -3341,7 +3523,7 @@ cid_concepts[12267] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3350,7 +3532,7 @@ cid_concepts[12267] = \
         'EnvelopeDuration',
         'TimeFromQWaveToTricuspidValveOpens',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3360,8 +3542,8 @@ cid_concepts[12267] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3378,9 +3560,9 @@ cid_concepts[12267] = \
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
         'CEDistance',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3413,6 +3595,7 @@ cid_concepts[12267] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12268] = 'CardiacUltrasoundAtrioventricularValvesMeasurements'
 cid_concepts[12268] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -3425,7 +3608,7 @@ cid_concepts[12268] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3433,7 +3616,7 @@ cid_concepts[12268] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'TimeFromQWaveToTricuspidValveOpens',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
@@ -3444,8 +3627,8 @@ cid_concepts[12268] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'MitralRegurgitationDpDtDerivedFromMitralRegVelocity',
@@ -3464,15 +3647,15 @@ cid_concepts[12268] = \
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
         'CEDistance',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
         'MeanVelocityOfCircumferentialFiberShorteningMeanVcfv',
         'VelocityOfFlowPropagation',
-        'MitralValveEpssEWave',
+        'MitralValveEPSSEWave',
         'FractionalShortening',
         'AliasVelocity',
         'PressureHalfTime',
@@ -3500,10 +3683,11 @@ cid_concepts[12268] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12269] = 'CardiacUltrasoundInterventricularSeptumMeasurements'
 cid_concepts[12269] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3516,10 +3700,10 @@ cid_concepts[12269] = \
         'FlowRadius',
         'HeartRate',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FlowArea',
         'EndDiastolicVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'VelocityOfFlowPropagation',
         'PeakGradient',
         'AliasVelocity',
@@ -3545,10 +3729,11 @@ cid_concepts[12269] = \
          'Diameter',
          'Area']}
 
+name_for_cid[12270] = 'CardiacUltrasoundAorticValve'
 cid_concepts[12270] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3556,7 +3741,7 @@ cid_concepts[12270] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3565,8 +3750,8 @@ cid_concepts[12270] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3581,9 +3766,9 @@ cid_concepts[12270] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3615,11 +3800,12 @@ cid_concepts[12270] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12271] = 'CardiacUltrasoundOutflowTractsMeasurements'
 cid_concepts[12271] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval', 'WallMass'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleAWave',
+        'PeakEWavePeakAWaveByUS',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleAWave',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3627,7 +3813,7 @@ cid_concepts[12271] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'AWaveAmplitude',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
@@ -3638,10 +3824,10 @@ cid_concepts[12271] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'EndocardialArea',
         'PeakTissueVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3655,17 +3841,17 @@ cid_concepts[12271] = \
         'ACInterval',
         'BCSlope',
         'PreEjectionPeriod',
-        'TissueVelocityTimeIntegralVtiForTheAreaUnderLeftVentricleEWave',
+        'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave',
         'AWavePeakVelocity',
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
         'TimeFromQWaveToPulmonicValveCloses',
         'CEDistance',
-        'DpDtByUs',
+        'DpDtByUS',
         'PulmonaryArteryPressureUsingAccelTime',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'InterventricularSeptumToPosteriorWallThicknessRatio',
@@ -3702,14 +3888,15 @@ cid_concepts[12271] = \
          'Diameter',
          'CardiacOutput',
          'StrokeIndex',
-         'RatioOfMvPeakVelocityToLvPeakTissueVelocityEWave',
+         'RatioOfMVPeakVelocityToLVPeakTissueVelocityEWave',
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12272] = 'CardiacUltrasoundSemilunarValves,AnnulateandSinusesMeasurements'
 cid_concepts[12272] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3717,7 +3904,7 @@ cid_concepts[12272] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'AWaveAmplitude',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
@@ -3728,8 +3915,8 @@ cid_concepts[12272] = \
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
         'LeafletThickness',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
-        'RoiInternalDimensionByUs',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3748,10 +3935,10 @@ cid_concepts[12272] = \
         'StenosisPeakVelocity',
         'TimeFromQWaveToPulmonicValveCloses',
         'CEDistance',
-        'DpDtByUs',
+        'DpDtByUS',
         'PulmonaryArteryPressureUsingAccelTime',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3784,10 +3971,11 @@ cid_concepts[12272] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12273] = 'CardiacUltrasoundAorticSinotubularJunction'
 cid_concepts[12273] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3799,10 +3987,10 @@ cid_concepts[12273] = \
         'FlowRadius',
         'HeartRate',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'EndDiastolicVelocity',
         'AorticSinotubularJunctionToAorticRootRatio',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'VelocityOfFlowPropagation',
         'PeakGradient',
         'AliasVelocity',
@@ -3827,10 +4015,11 @@ cid_concepts[12273] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12274] = 'CardiacUltrasoundAortaMeasurements'
 cid_concepts[12274] = \
 {'DCM': ['Tau', 'IndicatorMeanTransitTime', 'RRInterval'],
  'LN': ['DESlope',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3838,7 +4027,7 @@ cid_concepts[12274] = \
         'JetArea',
         'EnvelopeDuration',
         'VolumeFlow',
-        'TimeToPeakByUs',
+        'TimeToPeakByUS',
         'FlowRadius',
         'HeartRateCorrectedEjectionTime',
         'HeartRate',
@@ -3847,9 +4036,9 @@ cid_concepts[12274] = \
         'EndDiastolicVelocity',
         'IsovolumicContractionTime',
         'ClosureToOpeningTime',
-        'HrCorrectedMeanVelocityOfCircumferentialFiberShortening',
+        'HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'AorticSinotubularJunctionToAorticRootRatio',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'PeakGradient',
         'EjectionTime',
         'PeakInstantaneousFlowRate',
@@ -3864,9 +4053,9 @@ cid_concepts[12274] = \
         'AWaveDuration',
         'PeakSystolicVelocity',
         'StenosisPeakVelocity',
-        'DpDtByUs',
+        'DpDtByUS',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'FillingTime',
         'HeartRateCorrectedPreEjectionPeriod',
         'IsovolumicRelaxationTime',
@@ -3898,10 +4087,11 @@ cid_concepts[12274] = \
          'CardiacIndex',
          'CardiacEjectionFraction']}
 
+name_for_cid[12275] = 'CardiacUltrasoundCoronaryArteriesMeasurements'
 cid_concepts[12275] = \
 {'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'EWavePeakVelocity',
         'MeanGradient',
         'VelocityTimeIntegral',
@@ -3913,9 +4103,9 @@ cid_concepts[12275] = \
         'FlowRadius',
         'HeartRate',
         'TimeAveragedPeakVelocity',
-        'RoiThicknessByUs',
+        'ROIThicknessByUS',
         'EndDiastolicVelocity',
-        'RoiInternalDimensionByUs',
+        'ROIInternalDimensionByUS',
         'VelocityOfFlowPropagation',
         'PeakGradient',
         'AliasVelocity',
@@ -3940,6 +4130,7 @@ cid_concepts[12275] = \
          'CardiovascularOrificeDiameter',
          'Diameter']}
 
+name_for_cid[12276] = 'CardiacUltrasoundAortoPulmonaryConnectionsMeasurements'
 cid_concepts[12276] = \
 {'DCM': ['BloodVelocityPeak',
          'BloodVelocityMean',
@@ -3950,7 +4141,7 @@ cid_concepts[12276] = \
          'DiastolicBloodVelocityPeak'],
  'LN': ['DESlope',
         'ACInterval',
-        'PeakEWavePeakAWaveByUs',
+        'PeakEWavePeakAWaveByUS',
         'PulmonaryToSystemicShuntFlowRatio',
         'EWavePeakVelocity',
         'MeanGradient',
@@ -3982,8 +4173,9 @@ cid_concepts[12276] = \
          'CardiovascularOrificeArea',
          'CardiovascularOrificeDiameter']}
 
+name_for_cid[12277] = 'CardiacUltrasoundPericardiumandPleuraMeasurements'
 cid_concepts[12277] = \
-{'LN': ['RoiInternalDimensionByUs', 'RoiThicknessByUs'],
+{'LN': ['ROIInternalDimensionByUS', 'ROIThicknessByUS'],
  'SRT': ['Diameter',
          'MajorAxis',
          'Circumference',
@@ -3991,9 +4183,10 @@ cid_concepts[12277] = \
          'Radius',
          'Length']}
 
+name_for_cid[12279] = 'CardiacUltrasoundFetalGeneralMeasurements'
 cid_concepts[12279] = \
 {'LN': ['OccipitalFrontalDiameter',
-        'FlAc',
+        'FLAC',
         'AbdominalCircumference',
         'HeadCircumference',
         'BiparietalDiameter',
@@ -4002,24 +4195,25 @@ cid_concepts[12279] = \
         'TransverseThoracicDiameter',
         'ThoracicArea',
         'TransCerebellarDiameter',
-        'HcAc',
-        'BpdAreaCorrected',
+        'HCAC',
+        'BPDAreaCorrected',
         'TranverseAbdominalDiameter',
         'CisternaMagna',
         'FemurLength',
         'ThoracicCircumference',
         'LeftVentricleRightVentricleDiameterRatio',
         'ForamenOvaleDiameterAorticRootDiameter',
-        'CardiacCircumferenceTransverseByUs',
+        'CardiacCircumferenceTransverseByUS',
         'CardiothoracicAreaRatio',
-        'FlBpd',
-        'CardiacCrossSectionalAreaTransverseByUs',
+        'FLBPD',
+        'CardiacCrossSectionalAreaTransverseByUS',
         'AnteriorPosteriorAbdominalDiameter',
-        'FlHc',
+        'FLHC',
         'AnteriorPosteriorTrunkDiameter',
         'CardiothoracicCircumferenceRatio'],
  'SRT': ['NumberOfUmbilicalArteries']}
 
+name_for_cid[12280] = 'CardiacUltrasoundTargetSites'
 cid_concepts[12280] = \
 {'SRT': ['AnteriorWall',
          'CardiacValveAnnulus',
@@ -4043,6 +4237,7 @@ cid_concepts[12280] = \
          'TransverseAorticArch',
          'PulmonaryVeinRightMiddleSegment']}
 
+name_for_cid[12281] = 'CardiacUltrasoundTargetSiteModifiers'
 cid_concepts[12281] = \
 {'SRT': ['Distal',
          'Proximal',
@@ -4053,6 +4248,7 @@ cid_concepts[12281] = \
          'Medial',
          'Anterior']}
 
+name_for_cid[12282] = 'CardiacUltrasoundVenousReturnSystemicFindingSites'
 cid_concepts[12282] = \
 {'SRT': ['SuperiorVenaCava',
          'HepaticVein',
@@ -4070,6 +4266,7 @@ cid_concepts[12282] = \
          'FontanInferiorVenaCavaPathway',
          'FontanPathway']}
 
+name_for_cid[12283] = 'CardiacUltrasoundVenousReturnPulmonaryFindingSites'
 cid_concepts[12283] = \
 {'SRT': ['PulmonaryVeinGreatVessel',
          'PulmonaryVeinToAtriumConnection',
@@ -4077,6 +4274,7 @@ cid_concepts[12283] = \
          'PulmonaryVein',
          'MustardOrSenningPulmonaryVenousPathway']}
 
+name_for_cid[12284] = 'CardiacUltrasoundAtriaandAtrialSeptumFindingSites'
 cid_concepts[12284] = \
 {'SRT': ['RightAuricularAppendage',
          'RightAtrium',
@@ -4090,19 +4288,23 @@ cid_concepts[12284] = \
          'AtrialSeptalDefect',
          'PatentForamenOvale']}
 
+name_for_cid[12285] = 'CardiacUltrasoundAtrioventricularValvesFindingSites'
 cid_concepts[12285] = \
 {'SRT': ['MitralValve',
          'TricuspidValve',
          'CommonNonMitralNonTricuspidAtrioventricularValveStructure']}
 
+name_for_cid[12286] = 'CardiacUltrasoundInterventricularSeptumFindingSites'
 cid_concepts[12286] = \
 {'SRT': ['VentricularSeptalDefect',
          'BulboventricularForamen',
          'InterventricularSeptum']}
 
+name_for_cid[12287] = 'CardiacUltrasoundVentriclesFindingSites'
 cid_concepts[12287] = \
 {'SRT': ['CommonVentricle', 'LeftVentricle', 'RightVentricle']}
 
+name_for_cid[12288] = 'CardiacUltrasoundOutflowTractsFindingSites'
 cid_concepts[12288] = \
 {'SRT': ['AorticValve',
          'RastelliInterventricularTunnel',
@@ -4112,6 +4314,7 @@ cid_concepts[12288] = \
          'LeftVentricle',
          'RightVentricle']}
 
+name_for_cid[12289] = 'CardiacUltrasoundSemilunarValves,AnnulusandSinusesFindingSites'
 cid_concepts[12289] = \
 {'SRT': ['AorticValve',
          'PulmonicValve',
@@ -4120,11 +4323,13 @@ cid_concepts[12289] = \
          'NeoaorticRoot',
          'NeoaorticValve']}
 
+name_for_cid[12290] = 'CardiacUltrasoundPulmonaryArteriesFindingSites'
 cid_concepts[12290] = \
 {'SRT': ['AortaToPulmonaryArteryConnection',
          'PulmonaryTrunk',
          'PulmonaryArtery']}
 
+name_for_cid[12291] = 'CardiacUltrasoundAortaFindingSites'
 cid_concepts[12291] = \
 {'SRT': ['RightSinusOfValsalva',
          'AscendingAorta',
@@ -4146,6 +4351,7 @@ cid_concepts[12291] = \
          'StructureSinusOfValsalva',
          'AorticIsthmus']}
 
+name_for_cid[12292] = 'CardiacUltrasoundCoronaryArteriesFindingSites'
 cid_concepts[12292] = \
 {'SRT': ['PosteriorDescendingCoronaryArtery',
          'SeptalArtery',
@@ -4157,220 +4363,226 @@ cid_concepts[12292] = \
          'MidCircumflexCoronaryArtery',
          'LeftMainCoronaryArtery']}
 
+name_for_cid[12293] = 'CardiacUltrasoundAortopulmonaryConnectionsFindingSites'
 cid_concepts[12293] = \
 {'SRT': ['AortaToPulmonaryArteryConnection',
          'ArteriovenousFistula',
          'PatentDuctusArteriosus']}
 
+name_for_cid[12294] = 'CardiacUltrasoundPericardiumandPleuraFindingSites'
 cid_concepts[12294] = \
 {'SRT': ['RightPleura', 'LeftPleura', 'Pericardium', 'Pleura']}
 
+name_for_cid[12300] = 'CoreEchoMeasurements'
 cid_concepts[12300] = \
-{'LN': ['TricuspidValveDiastolicVti',
+{'LN': ['TricuspidValveDiastolicVTI',
         'MitralValvePeakInstantaneousGradient',
         'LeftAtrialEndSystolicVolumeBiplaneAreaLength',
-        'LeftVentricularInternalSystolicDimensionBsa',
+        'LeftVentricularInternalSystolicDimensionBSA',
         'LeftVentricularPreEjectionPeriod',
-        'LvBasalAnteriorTimeToSVmaxTsBasalAnterior',
-        'MitralRegurgitationPisaRadius',
+        'LVBasalAnteriorTimeToSVmaxTsBasalAnterior',
+        'MitralRegurgitationPISARadius',
         'PulmonicValveVmax',
         'PulmonaryVeinSWaveVmax',
-        'LeftAtrialEndSystolicDiameterApMmBsa',
-        'RightVentricularMidCavityDimension4c',
-        'LeftVentricularEndSystolicVolumeBiplaneMod',
+        'LeftAtrialEndSystolicDiameterAPMMBSA',
+        'RightVentricularMidCavityDimension4C',
+        'LeftVentricularEndSystolicVolumeBiplaneMOD',
         'MitralRegurgitationVmax',
-        'LeftVentricularEjectionFractionSinglePlane4cMod',
-        'InterventricularSeptumSystolicDimensionMm',
-        'LeftVentricularMassDimensionMethodMmHeight27',
-        'LvMidSeptalTimeToSVmaxTsMidSeptal',
+        'LeftVentricularEjectionFractionSinglePlane4CMOD',
+        'InterventricularSeptumSystolicDimensionMM',
+        'LeftVentricularMassDimensionMethodMMHeight27',
+        'LVMidSeptalTimeToSVmaxTsMidSeptal',
         'AorticSinotubularJunctionDimension',
-        'LeftVentricularInternalDiastolicDimensionBsa',
-        'TricuspidRegurgitationPisaRadius',
+        'LeftVentricularInternalDiastolicDimensionBSA',
+        'TricuspidRegurgitationPISARadius',
         'InferiorVenaCavaDiameter',
-        'AorticRegurgitantJetWidthLvotWidth',
+        'AorticRegurgitantJetWidthLVOTWidth',
         'MitralValveMeanGradient',
         'RightVentricularEjectionTime',
-        'MitralAnnulusDiastolicDiameterA2c',
-        'LeftAtrialEndSystolicVolumeBiplaneAreaLengthBsa',
+        'MitralAnnulusDiastolicDiameterA2C',
+        'LeftAtrialEndSystolicVolumeBiplaneAreaLengthBSA',
         'MitralRegurgitationPeakGradient',
-        'LeftVentricularInternalSystolicDimensionMm',
-        'LeftVentricularStrokeVolume3d',
+        'LeftVentricularInternalSystolicDimensionMM',
+        'LeftVentricularStrokeVolume3D',
         'TricuspidRegurgitationVmax',
         'AorticValveAreaContinuityVmax',
         'TricuspidRegurgitationVenaContractaWidth',
-        'PulmonicValveVti',
+        'PulmonicValveVTI',
         'PulmonicRegurgitationEndDiastolicVelocity',
         'MitralRegurgitationVenaContractaWidth',
-        'LeftVentricularEndSystolicVolume3d',
-        'LeftVentricularMassDimensionMethodMmBsa',
+        'LeftVentricularEndSystolicVolume3D',
+        'LeftVentricularMassDimensionMethodMMBSA',
         'MitralValveDecelerationTime',
-        'RightVentricularFreeWallThicknessMm',
-        'LeftAtrialEndSystolicLength2c',
-        'LvMidPosteriorTimeToSVmaxTsMidPosterior',
-        'InterventricularSeptumSystolicDimension2d',
-        'LeftVentricularFractionalShorteningOfMinorAxisMm',
-        'LeftVentricularInternalDiastolicDimensionMm',
+        'RightVentricularFreeWallThicknessMM',
+        'LeftAtrialEndSystolicLength2C',
+        'LVMidPosteriorTimeToSVmaxTsMidPosterior',
+        'InterventricularSeptumSystolicDimension2D',
+        'LeftVentricularFractionalShorteningOfMinorAxisMM',
+        'LeftVentricularInternalDiastolicDimensionMM',
         'MitralValveAreaPressureHalfTime',
         'TricuspidValvePressureHalfTime',
-        'LeftVentricularEndDiastolicLength4c',
-        'InterventricularSeptumDiastolicDimensionMm',
+        'LeftVentricularEndDiastolicLength4C',
+        'InterventricularSeptumDiastolicDimensionMM',
         'MitralValveFlowPropagationVelocityVp',
-        'LeftVentricularInternalSystolicDimension2d',
+        'LeftVentricularInternalSystolicDimension2D',
         'AorticValveEffectiveRegurgitantOrificeArea',
-        'MitralRegurgitantFlowPisa',
+        'MitralRegurgitantFlowPISA',
         'LeftVentricularPosteriorWallSystolicThickness',
-        'LeftAtrialEndSystolicVolumeBiplaneMod',
-        'LeftVentricularEjectionFractionTeichholzMm',
+        'LeftAtrialEndSystolicVolumeBiplaneMOD',
+        'LeftVentricularEjectionFractionTeichholzMM',
         'TricuspidValveAPrimeVmax',
-        'AorticRegurgitationPisaRadius',
-        'LeftVentricularMassDimensionMethod2d',
-        'AorticValveAreaContinuityVmaxBsa',
+        'AorticRegurgitationPISARadius',
+        'LeftVentricularMassDimensionMethod2D',
+        'AorticValveAreaContinuityVmaxBSA',
         'MitralSeptalEPrimeVmax',
         'PulmonicRegurgitationEndDiastolicPeakGradient',
         'MitralValveAreaPlanimetry',
-        'MitralRegurgitationPisaVelocity',
+        'MitralRegurgitationPISAVelocity',
         'PulmonicRegurgitationVmax',
-        'LvMidLateralTimeToSVmaxTsMidLateral',
-        'LeftVentricularMassDimensionMethodMm',
-        'RightVentricularFreeWallThickness2d',
-        'LeftVentricularEndDiastolicVolume3d',
+        'LVMidLateralTimeToSVmaxTsMidLateral',
+        'LeftVentricularMassDimensionMethodMM',
+        'RightVentricularFreeWallThickness2D',
+        'LeftVentricularEndDiastolicVolume3D',
         'InterventricularSeptumTimeToPeakDisplacement',
-        'LeftVentricularFractionalShorteningOfMinorAxis2d',
-        'LeftVentricularInternalDiastolicDimension2d',
+        'LeftVentricularFractionalShorteningOfMinorAxis2D',
+        'LeftVentricularInternalDiastolicDimension2D',
         'TricuspidValveAWaveVmax',
-        'InterventricularSeptumDiastolicDimension2d',
+        'InterventricularSeptumDiastolicDimension2D',
         'AorticValveMeanBloodVelocity',
-        'MitralValveEffectiveRegurgitantOrificeAreaPisa',
-        'LeftVentricularInternalDiastolicDimensionBsa',
+        'MitralValveEffectiveRegurgitantOrificeAreaPISA',
+        'LeftVentricularInternalDiastolicDimensionBSA',
         'LeftVentricularPosteriorWallSystolicThickness',
-        'LeftAtrialEndSystolicVolumeBiplaneModBsa',
-        'MitralRegurgitantFractionPisa',
+        'LeftAtrialEndSystolicVolumeBiplaneMODBSA',
+        'MitralRegurgitantFractionPISA',
         'RightPulmonaryArteryDiameter',
-        'AorticRegurgitationPisaVelocity',
+        'AorticRegurgitationPISAVelocity',
         'LeftVentricularMassAreaLengthHeight27',
-        'AorticValveAreaContinuityVti',
+        'AorticValveAreaContinuityVTI',
         'PulmonicValveEjectionTime',
         'PulmonicValvePeakGradient',
-        'LvMidInferiorTimeToSVmaxTsMidInferior',
-        'RightVentricularEndSystolicArea4c',
-        'LeftVentricularEpicardialAreaSaxPmLevel',
-        'MitralValveAreaPisa',
-        'LeftAtrialEndSystolicArea2c',
-        'LeftVentricularMassDimensionMethod2dHeight27',
-        'LeftVentricularEndDiastolicVolumeBiplaneMod',
+        'LVMidInferiorTimeToSVmaxTsMidInferior',
+        'RightVentricularEndSystolicArea4C',
+        'LeftVentricularEpicardialAreaSAXPMLevel',
+        'MitralValveAreaPISA',
+        'LeftAtrialEndSystolicArea2C',
+        'LeftVentricularMassDimensionMethod2DHeight27',
+        'LeftVentricularEndDiastolicVolumeBiplaneMOD',
         'LeftVentricularOutflowTractVmax',
         'MitralValvePressureHalfTime',
-        'AorticRegurgitationVolumeContinuityVti',
+        'AorticRegurgitationVolumeContinuityVTI',
         'MitralValveEToARatio',
         'TricuspidValveEPrimeVmax',
         'AorticRegurgitationPressureHalfTime',
-        'LeftAtrialEndSystolicVolumeSinglePlane2cMod',
+        'LeftAtrialEndSystolicVolumeSinglePlane2CMOD',
         'PulmonicAnnulusDiameter',
         'MitralValveEWaveVmax',
         'LeftVentricularPosteriorWallDiastolicThickness',
-        'RightAtrialMinorAxisDimension4cBsa',
-        'MitralRegurgitantFractionContinuityVti',
+        'RightAtrialMinorAxisDimension4CBSA',
+        'MitralRegurgitantFractionContinuityVTI',
         'AorticValveMeanGradient',
-        'LeftVentricularMassAreaLengthBsa',
-        'AorticValveAreaContinuityVtiBsa',
-        'LeftVentricularEjectionFractionTeichholz2d',
+        'LeftVentricularMassAreaLengthBSA',
+        'AorticValveAreaContinuityVTIBSA',
+        'LeftVentricularEjectionFractionTeichholz2D',
         'RightVentricularFractionalAreaChange',
-        'LeftVentricularMassDimensionMethod2dBsa',
-        'LvMidAnteroseptalTimeToSVmaxTsMidAnteroseptal',
-        'RightVentricularEndDiastolicArea4c',
-        'RightVentricularOutflowTractVti',
+        'LeftVentricularMassDimensionMethod2DBSA',
+        'LVMidAnteroseptalTimeToSVmaxTsMidAnteroseptal',
+        'RightVentricularEndDiastolicArea4C',
+        'RightVentricularOutflowTractVTI',
         'MitralValveAWaveVmax',
-        'LeftAtrialEndSystolicArea4c',
-        'LeftVentricularEndocardialAreaSaxPmLevel',
-        'LeftVentricularEndDiastolicVolumeBiplaneModBsa',
-        'LeftVentricularOutflowTractDimension2d',
+        'LeftAtrialEndSystolicArea4C',
+        'LeftVentricularEndocardialAreaSAXPMLevel',
+        'LeftVentricularEndDiastolicVolumeBiplaneMODBSA',
+        'LeftVentricularOutflowTractDimension2D',
         'MitralValveVmax',
-        'AorticRegurgitationVolumePisa',
+        'AorticRegurgitationVolumePISA',
         'AorticRegurgitationVenaContractaWidth',
         'TricuspidValveEWaveVmax',
-        'LeftAtrialEndSystolicVolumeSinglePlane4cMod',
-        'RightAtrialMinorAxisDimension4c',
+        'LeftAtrialEndSystolicVolumeSinglePlane4CMOD',
+        'RightAtrialMinorAxisDimension4C',
         'MitralLateralEPrimeVmax',
         'LeftVentricularPosteriorWallDiastolicThickness',
-        'LvBasalLateralTimeToSVmaxTsBasalLateral',
+        'LVBasalLateralTimeToSVmaxTsBasalLateral',
         'PulmonaryVeinAWaveDuration',
         'AorticValvePeakInstantaneousGradient',
         'LeftVentricularMassAreaLength',
         'AorticAnnulusDiameter',
-        'MitralValveVti',
-        'AorticRegurgitationVti',
-        'LeftAtrialEndSystolicDiameterAp2d',
-        'RightVentricularBasalDimension4c',
+        'MitralValveVTI',
+        'AorticRegurgitationVTI',
+        'LeftAtrialEndSystolicDiameterAP2D',
+        'RightVentricularBasalDimension4C',
         'TricuspidRegurgitationPeakGradient',
         'MitralValveAWaveDuration',
-        'RightVentricularOutflowTractDiameterAtSubvalvularLevelRvotProximal',
-        'LvMidAnteriorTimeToSVmaxTsMidAnterior',
-        'LeftVentricularEjectionFraction3d',
-        'LeftVentricularEndDiastolicVolumeSinglePlane2cMod',
-        'LeftVentricularEndSystolicVolumeSinglePlane4cMod',
+        'RightVentricularOutflowTractDiameterAtSubvalvularLevelRVOTProximal',
+        'LVMidAnteriorTimeToSVmaxTsMidAnterior',
+        'LeftVentricularEjectionFraction3D',
+        'LeftVentricularEndDiastolicVolumeSinglePlane2CMOD',
+        'LeftVentricularEndSystolicVolumeSinglePlane4CMOD',
         'LeftVentricularMassTruncatedEllipseHeight27',
         'AorticRegurgitationVmax',
         'TricuspidAnnulusDiameter',
         'TricuspidValveSPrimeVmax',
-        'LeftVentricularOutflowTractVti',
-        'RightAtrialMajorAxisDimension4c',
-        'MitralAnnulusVti',
+        'LeftVentricularOutflowTractVTI',
+        'RightAtrialMajorAxisDimension4C',
+        'MitralAnnulusVTI',
         'MainPulmonaryArteryVmax',
-        'LeftVentricularIsovolumicRelaxationTimeByTdi',
+        'LeftVentricularIsovolumicRelaxationTimeByTDI',
         'LeftPulmonaryArteryDiameter',
-        'LvBasalInferiorTimeToSVmaxTsBasalInferior',
+        'LVBasalInferiorTimeToSVmaxTsBasalInferior',
         'AorticValveVmax',
         'AorticRegurgitantFlow',
         'PulmonaryVeinAWaveVmax',
         'AorticRootDiameter',
-        'RightVentricularOutflowTractDiameterAtPulmonicValveRvotDistal',
-        'LeftAtrialEndSystolicDiameterAp2dBsa',
-        'LeftVentricularEndDiastolicVolumeSinglePlane4cMod',
+        'RightVentricularOutflowTractDiameterAtPulmonicValveRVOTDistal',
+        'LeftAtrialEndSystolicDiameterAP2DBSA',
+        'LeftVentricularEndDiastolicVolumeSinglePlane4CMOD',
         'TricuspidValveMeanGradient',
         'MainPulmonaryArteryDiameter',
-        'LeftVentricularEjectionFractionBiplaneMod',
-        'LvBasalSeptalTimeToSVmaxTsBasalSeptal',
-        'LeftVentricularEndSystolicVolumeSinglePlane2cMod',
-        'MitralRegurgitationVolumePisa',
-        'LeftVentricularMassTruncatedEllipseBsa',
+        'LeftVentricularEjectionFractionBiplaneMOD',
+        'LVBasalSeptalTimeToSVmaxTsBasalSeptal',
+        'LeftVentricularEndSystolicVolumeSinglePlane2CMOD',
+        'MitralRegurgitationVolumePISA',
+        'LeftVentricularMassTruncatedEllipseBSA',
         'TricuspidValveClosureToOpeningTime',
         'TricuspidValveVmax',
         'AorticRegurgitantFraction',
         'LeftVentricularIsovolumicRelaxationTimeByDoppler',
-        'MitralAnnulusDiastolicDiameterPlax',
+        'MitralAnnulusDiastolicDiameterPLAX',
         'RightVentricularPreEjectionPeriod',
-        'RightAtrialEndSystolicArea4c',
-        'LvBasalAnteroseptalTimeToSVmaxTsBasalAnteroseptal',
-        'LeftAtrialEndSystolicLength4c',
-        'LeftVentricularInternalSystolicDimensionBsa',
+        'RightAtrialEndSystolicArea4C',
+        'LVBasalAnteroseptalTimeToSVmaxTSBasalAnteroseptal',
+        'LeftAtrialEndSystolicLength4C',
+        'LeftVentricularInternalSystolicDimensionBSA',
         'LeftVenticularPosteriorWallTimeToPeakDisplacement',
-        'AorticValveVti',
-        'TricuspidAnnularPlaneSystolicExcursionTapse',
+        'AorticValveVTI',
+        'TricuspidAnnularPlaneSystolicExcursionTAPSE',
         'PulmonaryVeinDWaveVmax',
         'TricuspidValvePeakGradient',
-        'MitralRegurgitationVolumeContinuityVti',
-        'LeftAtrialEndSystolicDiameterApMm',
+        'MitralRegurgitationVolumeContinuityVTI',
+        'LeftAtrialEndSystolicDiameterAPMM',
         'RightVentricularMyocardialPerformanceIndex',
-        'LvBasalPosteriorTimeToSVmaxTsBasalPosterior',
-        'LeftVentricularEjectionFractionSinglePlane2cMod',
+        'LVBasalPosteriorTimeToSVmaxTsBasalPosterior',
+        'LeftVentricularEjectionFractionSinglePlane2CMOD',
         'LeftVentricularMassTruncatedEllipse',
-        'LvTsSdDyssynchronyIndex',
-        'AorticRootDiameterBsa',
-        'LeftVentricularEndSystolicVolumeBiplaneModBsa',
+        'LVTsSDDyssynchronyIndex',
+        'AorticRootDiameterBSA',
+        'LeftVentricularEndSystolicVolumeBiplaneMODBSA',
         'TricuspidValveDecelerationTime',
         'AscendingAortaDimension',
-        'AorticRegurgitantJetAreaLvotArea',
-        'MitralAnnulusDiastolicDiameterA4c',
+        'AorticRegurgitantJetAreaLVOTArea',
+        'MitralAnnulusDiastolicDiameterA4C',
         'PulmonicValveAccelerationTime']}
 
+name_for_cid[12301] = 'MeasurementSelectionReasons'
 cid_concepts[12301] = \
 {'DCM': ['MostRecentValueChosen', 'MeanValueChosen', 'UserChosenValue'],
  'SRT': ['Maximum', 'Minimum']}
 
+name_for_cid[12302] = 'EchoFindingObservationTypes'
 cid_concepts[12302] = \
 {'DCM': ['BehaviorOfTheFindingSite', 'StructureOfTheFindingSite'],
  'SRT': ['HemodynamicMeasurements']}
 
+name_for_cid[12303] = 'EchoMeasurementTypes'
 cid_concepts[12303] = \
 {'DCM': ['DirectlyMeasured',
          'Calculated',
@@ -4379,6 +4591,7 @@ cid_concepts[12303] = \
          'ManualEntry'],
  'SRT': ['Ratio']}
 
+name_for_cid[12304] = 'EchoMeasuredProperties'
 cid_concepts[12304] = \
 {'DCM': ['PeakBloodPressure',
          'MaximumOrificeArea',
@@ -4388,13 +4601,13 @@ cid_concepts[12304] = \
          'VenaContractaWidth',
          'RegurgitationJetWidth',
          'RegurgitationJetArea',
-         'PisaRadius',
+         'PISARadius',
          'PeakTissueVelocity'],
  'LN': ['MeanGradientPressureByDoppler',
         'VelocityTimeIntegral',
         'PeakBloodVelocity',
         'VolumeFlowRate',
-        'DpDtByUs',
+        'DpDtByUS',
         'Thickness',
         'InternalDimension',
         'PeakGradientPressure',
@@ -4422,6 +4635,7 @@ cid_concepts[12304] = \
          'Interval',
          'CardiacEjectionFraction']}
 
+name_for_cid[12305] = 'BasicEchoAnatomicSites'
 cid_concepts[12305] = \
 {'DCM': ['RightVentricleAnteriorWall',
          'RightVentricleOutflowTractProximal',
@@ -4468,12 +4682,14 @@ cid_concepts[12305] = \
          'LeftVentricleBasalInferolateralSegment',
          'LeftVentricleMidInferoseptalSegment']}
 
+name_for_cid[12306] = 'EchoFlowDirections'
 cid_concepts[12306] = \
 {'SRT': ['AntegradeDirection', 'RetrogradeDirection']}
 
+name_for_cid[12307] = 'CardiacPhasesandTimePoints'
 cid_concepts[12307] = \
 {'DCM': ['FullCardiacCycle',
-         'ArWave',
+         'ARWave',
          'AtrialDiastolicFillingDWave',
          'PreEjectionPeriod',
          'ElectromechanicalDelay'],
@@ -4488,6 +4704,7 @@ cid_concepts[12307] = \
          'VentricularIsovolumicContraction',
          'VentricularEjectionSWave']}
 
+name_for_cid[13] = 'RadiographicContrastAgentIngredient'
 cid_concepts[13] = \
 {'SRT': ['Gadolinium',
          'Iodine',
@@ -4499,56 +4716,59 @@ cid_concepts[13] = \
          'Xenon',
          'Water']}
 
+name_for_cid[18] = 'IsotopesinRadiopharmaceuticals'
 cid_concepts[18] = \
-{'DCM': ['mIridium_191'],
- 'SRT': ['Gold_198',
-         'Chromium_51',
-         'Copper_64',
-         'Copper_67',
-         'Cobalt_60',
-         'mIndium_113',
-         'Barium_133',
-         'Carbon_14',
-         'Phosphorus_32',
-         'Indium_111',
-         'mTechnetium_99',
-         'Lutetium_177',
-         'Samarium_153',
-         'Yttrium_90',
-         'Cobalt_58',
-         'Iodine_131',
-         'Cobalt_57',
-         'Ruthenium_97',
-         'Rhenium_188',
-         'Ytterbium_169',
-         'Iodine_125',
-         'Iodine_123',
-         'Selenium_75',
-         'Lead_203',
-         'Potassium_43',
-         'Radium_223',
-         'Strontium_85',
-         'Tantalum_178',
-         'mStrontium_87',
-         'Strontium_89',
-         'Gadolinium_153',
-         'Thallium_201',
-         'Xenon_127',
-         'Sodium_22',
-         'Sodium_24',
-         'mKrypton_81',
-         'Krypton_85',
-         'Xenon_133',
-         'Potassium_42',
-         'Fluorine_18',
-         'Gold_199',
-         'Iron_59',
-         'Gallium_67',
-         'Rhenium_186']}
+{'DCM': ['_191mIridium'],
+ 'SRT': ['_198Gold',
+         '_51Chromium',
+         '_64Copper',
+         '_67Copper',
+         '_60Cobalt',
+         '_113mIndium',
+         '_133Barium',
+         '_14Carbon',
+         '_32Phosphorus',
+         '_111Indium',
+         '_99mTechnetium',
+         '_177Lutetium',
+         '_153Samarium',
+         '_90Yttrium',
+         '_58Cobalt',
+         '_131Iodine',
+         '_57Cobalt',
+         '_97Ruthenium',
+         '_188Rhenium',
+         '_169Ytterbium',
+         '_125Iodine',
+         '_123Iodine',
+         '_75Selenium',
+         '_203Lead',
+         '_43Potassium',
+         '_223Radium',
+         '_85Strontium',
+         '_178Tantalum',
+         '_87mStrontium',
+         '_89Strontium',
+         '_153Gadolinium',
+         '_201Thallium',
+         '_127Xenon',
+         '_22Sodium',
+         '_24Sodium',
+         '_81mKrypton',
+         '_85Krypton',
+         '_133Xenon',
+         '_42Potassium',
+         '_18Fluorine',
+         '_199Gold',
+         '_59Iron',
+         '_67Gallium',
+         '_186Rhenium']}
 
+name_for_cid[19] = 'PatientOrientation'
 cid_concepts[19] = \
 {'NCIt': ['Erect'], 'SRT': ['SemiErect', 'Recumbent']}
 
+name_for_cid[2] = 'AnatomicModifier'
 cid_concepts[2] = \
 {'SRT': ['Internal',
          'Capsular',
@@ -4597,6 +4817,7 @@ cid_concepts[2] = \
          'Median',
          'Medial']}
 
+name_for_cid[20] = 'PatientOrientationModifier'
 cid_concepts[20] = \
 {'SRT': ['RightLateralDecubitus',
          'LateralDecubitus',
@@ -4617,10 +4838,12 @@ cid_concepts[20] = \
          'Kneeling',
          'Sitting']}
 
+name_for_cid[21] = 'PatientEquipmentRelationship'
 cid_concepts[21] = \
 {'DCM': ['LeftFirst', 'RightFirst', 'PosteriorFirst', 'AnteriorFirst'],
  'SRT': ['FeetFirst', 'Headfirst', 'Oblique', 'Transverse']}
 
+name_for_cid[218] = 'QuantitativeImageFeatures'
 cid_concepts[218] = \
 {'DCM': ['WaterFatOutOfPhase',
          'FractionalOccupancySegmentation',
@@ -4628,31 +4851,31 @@ cid_concepts[218] = \
          'FractionalProbabilisticSegmentation',
          'BinarySegmentation',
          'WaterFraction',
-         'MrSignalIntensity',
+         'MRSignalIntensity',
          'XRayAttenuation',
          'FatFraction',
-         'YbrIctCrComponent',
-         'YbrIctCbComponent',
-         'YbrIctYComponent',
-         'YbrPartialCrComponent',
-         'YbrPartialCbComponent',
-         'YbrPartialYComponent',
-         'RootAngularSecondMomentOfGlcm',
+         'YBRICTCRComponent',
+         'YBRICTCBComponent',
+         'YBRICTYComponent',
+         'YBRPARTIALCRComponent',
+         'YBRPARTIALCBComponent',
+         'YBRPARTIALYComponent',
+         'RootAngularSecondMomentOfGLCM',
          'Echogenicity',
-         'YbrRctCrComponent',
-         'YbrRctCbComponent',
-         'YbrRctYComponent',
-         'RgbRComponent',
+         'YBRRCTCRComponent',
+         'YBRRCTCBComponent',
+         'YBRRCTYComponent',
+         'RGBRComponent',
          'UltrasoundAttenuation',
          'SpeedOfSound',
          'Perfusion',
          'Elasticity',
-         'YbrFullCrComponent',
+         'YBRFULLCRComponent',
          'FractalDimension',
-         'YbrFullCbComponent',
-         'YbrFullYComponent',
-         'RgbBComponent',
-         'RgbGComponent',
+         'YBRFULLCBComponent',
+         'YBRFULLYComponent',
+         'RGBBComponent',
+         'RGBGComponent',
          'CreatineCholineCitrateRatio',
          'MagnetizationTransferRatio',
          'CreatineAndCholine',
@@ -4685,30 +4908,30 @@ cid_concepts[218] = \
          'DiffusionCoefficient',
          'VolumeOfCircumscribedSphere',
          'VolumeOfEllipsoid',
-         'VolumeEstimatedFromThreeOrMoreNonCoplanar2dRegions',
-         'VolumeEstimatedFromTwoNonCoplanar2dRegions',
-         'VolumeEstimatedFromSingle2dRegion',
+         'VolumeEstimatedFromThreeOrMoreNonCoplanar2DRegions',
+         'VolumeEstimatedFromTwoNonCoplanar2DRegions',
+         'VolumeEstimatedFromSingle2DRegion',
          'PathLength',
          'VolumeOfBoundingThreeDimensionalRegion',
          'R2Coefficient',
          'ChiSquare',
          'DW',
-         'Aic',
-         'Bic',
+         'AIC',
+         'BIC',
          'Distance',
          'Height',
-         'TauM',
+         '',
          'Vp',
          'EquivalentDose',
          'AbsorbedDose',
-         'Iauc90bn',
-         'Iauc180bn',
-         'Iauc',
-         'Iauc60',
-         'Iauc90',
-         'Iauc180',
-         'Iaucbn',
-         'Iauc60bn',
+         'IAUC90BN',
+         'IAUC180BN',
+         'IAUC',
+         'IAUC60',
+         'IAUC90',
+         'IAUC180',
+         'IAUCBN',
+         'IAUC60BN',
          'GlutamateAndGlutamine',
          'CholineCreatineRatio',
          'NAcetylaspartateCreatineRatio',
@@ -4720,10 +4943,10 @@ cid_concepts[218] = \
          'VolumetricDiffusionDxyComponent',
          'VolumetricDiffusionDxxComponent',
          'BloodOxygenationLevel',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodFlow',
-         'T1WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T1WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodVolume',
          'VolumetricDiffusionDzzComponent',
          'OxygenExtractionFraction',
@@ -4733,22 +4956,22 @@ cid_concepts[218] = \
          'VolumetricDiffusionDyyComponent',
          'VelocityEncoded',
          'ZScore',
-         'ContrastAgentAngioMrSignalIntensity',
-         'SpinTaggingPerfusionMrSignalIntensity',
+         'ContrastAgentAngioMRSignalIntensity',
+         'SpinTaggingPerfusionMRSignalIntensity',
          'RelativeAnisotropy',
          'FractionalAnisotropy',
-         'FieldMapMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T1WeightedMrSignalIntensity',
-         'ProtonDensityWeightedMrSignalIntensity',
-         'TimeOfFlightAngioMrSignalIntensity',
+         'FieldMapMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T1WeightedMRSignalIntensity',
+         'ProtonDensityWeightedMRSignalIntensity',
+         'TimeOfFlightAngioMRSignalIntensity',
          'T1',
          'T2',
          'T2',
          'TimeCourseOfSignal',
          'TemperatureEncoded',
-         'StudentSTTest',
+         'StudentTTest',
          'TimeToPeak',
          'SignalToNoise',
          'TemporalDerivativeThreshold',
@@ -4804,6 +5027,7 @@ cid_concepts[218] = \
          'AreaOfDefinedRegion',
          'Length']}
 
+name_for_cid[220] = 'LevelofSignificance'
 cid_concepts[220] = \
 {'SRT': ['HighlySignificant',
          'MostSignificant',
@@ -4811,22 +5035,24 @@ cid_concepts[220] = \
          'SignificanceUndetermined',
          'Significant']}
 
+name_for_cid[221] = 'MeasurementRangeConcepts'
 cid_concepts[221] = \
 {'DCM': ['PercentileRankingOfMeasurement',
          'ZScoreOfMeasurement',
          'StandardDeviationOfPopulation',
-         'SigmaDeviationOfPopulation_2'],
- 'SRT': ['thPercentileValueOfPopulation_10',
-         'SigmaLowerValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_1',
-         'thPercentileValueOfPopulation_5',
+         '_2SigmaDeviationOfPopulation'],
+ 'SRT': ['_10thPercentileValueOfPopulation',
+         '_2SigmaLowerValueOfPopulation',
+         '_2SigmaUpperValueOfPopulation',
+         '_1SigmaUpperValueOfPopulation',
+         '_5thPercentileValueOfPopulation',
          'MedianValueOfPopulation',
-         'thPercentileValueOfPopulation_95',
-         'SigmaLowerValueOfPopulation_1',
+         '_95thPercentileValueOfPopulation',
+         '_1SigmaLowerValueOfPopulation',
          'MeanValueOfPopulation',
-         'thPercentileValueOfPopulation_90']}
+         '_90thPercentileValueOfPopulation']}
 
+name_for_cid[222] = 'NormalityCodes'
 cid_concepts[222] = \
 {'SRT': ['NormalityUndetermined',
          'AbnormallyHigh',
@@ -4834,33 +5060,39 @@ cid_concepts[222] = \
          'AbnormallyLow',
          'Abnormal']}
 
+name_for_cid[223] = 'NormalRangeValues'
 cid_concepts[223] = \
 {'SRT': ['NormalRangeUpperLimit', 'NormalRangeLowerLimit']}
 
+name_for_cid[224] = 'SelectionMethod'
 cid_concepts[224] = \
 {'DCM': ['MostRecentValueChosen', 'MeanValueChosen', 'UserChosenValue']}
 
+name_for_cid[225] = 'MeasurementUncertaintyConcepts'
 cid_concepts[225] = \
 {'SRT': ['RangeOfLowerMeasurementUncertainty',
          'RangeOfUpperMeasurementUncertainty',
          'RangeOfMeasurementUncertainty']}
 
+name_for_cid[226] = 'PopulationStatisticalDescriptors'
 cid_concepts[226] = \
-{'DCM': ['StandardDeviationOfPopulation', 'SigmaDeviationOfPopulation_2'],
+{'DCM': ['StandardDeviationOfPopulation', '_2SigmaDeviationOfPopulation'],
  'SRT': ['MedianValueOfPopulation',
-         'thPercentileValueOfPopulation_95',
-         'SigmaLowerValueOfPopulation_1',
+         '_95thPercentileValueOfPopulation',
+         '_1SigmaLowerValueOfPopulation',
          'MeanValueOfPopulation',
-         'thPercentileValueOfPopulation_90',
-         'thPercentileValueOfPopulation_10',
-         'SigmaLowerValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_1',
-         'thPercentileValueOfPopulation_5']}
+         '_90thPercentileValueOfPopulation',
+         '_10thPercentileValueOfPopulation',
+         '_2SigmaLowerValueOfPopulation',
+         '_2SigmaUpperValueOfPopulation',
+         '_1SigmaUpperValueOfPopulation',
+         '_5thPercentileValueOfPopulation']}
 
+name_for_cid[227] = 'SampleStatisticalDescriptors'
 cid_concepts[227] = \
 {'DCM': ['PercentileRankingOfMeasurement', 'ZScoreOfMeasurement']}
 
+name_for_cid[228] = 'EquationorTable'
 cid_concepts[228] = \
 {'DCM': ['TableOfValues',
          'TableOfValuesCitation',
@@ -4868,30 +5100,39 @@ cid_concepts[228] = \
          'Equation',
          'EquationCitation']}
 
+name_for_cid[23] = 'CranioCaudadAngulation'
 cid_concepts[23] = \
 {'SRT': ['Caudal', 'Cephalic']}
 
+name_for_cid[230] = 'YesNo'
 cid_concepts[230] = \
 {'SRT': ['Undetermined', 'No', 'Yes']}
 
+name_for_cid[231] = 'YesNoOnly'
 cid_concepts[231] = \
 {'SRT': ['No', 'Yes']}
 
+name_for_cid[240] = 'PresentAbsent'
 cid_concepts[240] = \
 {'SRT': ['Absent', 'Undetermined', 'Present']}
 
+name_for_cid[241] = 'PresentAbsentOnly'
 cid_concepts[241] = \
 {'SRT': ['Absent', 'Present']}
 
+name_for_cid[242] = 'NormalAbnormal'
 cid_concepts[242] = \
 {'SRT': ['NormalityUndetermined', 'Normal', 'Abnormal']}
 
+name_for_cid[244] = 'Laterality'
 cid_concepts[244] = \
 {'SRT': ['Right', 'Bilateral', 'Left', 'Unilateral']}
 
+name_for_cid[245] = 'LateralitywithMedian'
 cid_concepts[245] = \
 {'SRT': ['Right', 'Median', 'Bilateral', 'Left', 'Unilateral']}
 
+name_for_cid[25] = 'Radiopharmaceuticals'
 cid_concepts[25] = \
 {'NCIt': ['Technetium99mTrofolastat'],
  'SRT': ['Indium111CapromabPendetide',
@@ -4941,11 +5182,11 @@ cid_concepts[25] = \
          'CholylCarbon14Glycine',
          'Indium113mPentetate',
          'Indium113mOxoquinolinePlateletLabel',
-         'Indium113mOxoquinolineWbcLabel',
-         'Iodine1233IodobenzylguanidineMibg',
+         'Indium113mOxoquinolineWBCLabel',
+         'Iodine1233IodobenzylguanidineMIBG',
          'IodinatedI131GammaGlobulin',
          'ThallousChlorideTl201',
-         'Indium113mOxoquinolineRbcLabel',
+         'Indium113mOxoquinolineRBCLabel',
          'SodiumIodideI123',
          'OleicAcidI125',
          'FibrinogenI123',
@@ -4961,7 +5202,7 @@ cid_concepts[25] = \
          'IodocholesterolI131',
          'SodiumIodideI131',
          'Krypton81m',
-         'Iodine1313IodobenzylguanidineMibg',
+         'Iodine1313IodobenzylguanidineMIBG',
          'SelenomethionioneSe75',
          'TechnetiumTc99mSestamibi',
          'TechnetiumTc99mTeboroxime',
@@ -4971,7 +5212,7 @@ cid_concepts[25] = \
          'SodiumChlorideNa22',
          'TechnetiumTc99mStannousEtidronate',
          'ColloidalGoldAu198',
-         'Selenium75Hcat',
+         'Selenium75HCAT',
          'SodiumChlorideNa24',
          'TechnetiumTc99mMedronate',
          'TechnetiumTc99mOxidronate',
@@ -4985,7 +5226,7 @@ cid_concepts[25] = \
          'StrontiumNitrateSr85',
          'Technetium99mStannousColloid',
          'StrontiumChlorideSr87',
-         'Technetium99mDimercaptosuccinicAcidDmsa',
+         'Technetium99mDimercaptosuccinicAcidDMSA',
          'Indium111Transferrin',
          'IodinatedI125HumanSerumAlbumin',
          'TechnetiumTc99mSuccimer',
@@ -4999,26 +5240,30 @@ cid_concepts[25] = \
          'ColloidalIndium111',
          'DisodiumIndium111',
          'StrontiumNitrateSr87',
-         'Indium111FeOh3',
+         'Indium111FeOH3',
          'IofetamineI123Hydrochloride',
          'Iodine131Polyvinylpyrrolidone',
          'TechnetiumTc99mNSubstitutedIminodiacetate',
          'TechnetiumTc99mTaggedRedCells',
          'Technetium99mGalactosylHumanSerumAlbuminDiethylenetriamine',
-         'Technetium99mHydroxymethyleneDiphosphonateHmdp',
+         'Technetium99mHydroxymethyleneDiphosphonateHMDP',
          'IodohippurateI125Sodium',
-         'Technetium99mMercaptoacetylTriglycineMag3',
+         'Technetium99mMercaptoacetylTriglycineMAG3',
          'TechnetiumTc99mPentetate']}
 
+name_for_cid[250] = 'PositiveNegative'
 cid_concepts[250] = \
 {'SRT': ['Negative', 'Positive']}
 
+name_for_cid[251] = 'SeverityofComplication'
 cid_concepts[251] = \
 {'SRT': ['Minor', 'Major']}
 
+name_for_cid[252] = 'SMLSizeDescriptor'
 cid_concepts[252] = \
 {'SRT': ['Small', 'Medium', 'Large']}
 
+name_for_cid[26] = 'NuclearMedicineProjections'
 cid_concepts[26] = \
 {'SRT': ['AnteriorProjection',
          'PosteriorProjection',
@@ -5043,18 +5288,23 @@ cid_concepts[26] = \
          'RightPosteriorOblique',
          'LeftPosteriorOblique']}
 
+name_for_cid[27] = 'BasicCardiacViews'
 cid_concepts[27] = \
 {'SRT': ['HorizontalLongAxis', 'VerticalLongAxis', 'ShortAxis']}
 
+name_for_cid[270] = 'ObserverType'
 cid_concepts[270] = \
 {'DCM': ['Person', 'Device']}
 
+name_for_cid[271] = 'ObservationSubjectClass'
 cid_concepts[271] = \
 {'DCM': ['Fetus', 'Specimen', 'Patient', 'DeviceSubject']}
 
+name_for_cid[280] = 'LongitudinalTemporalEventTypes'
 cid_concepts[280] = \
 {'DCM': ['Baseline'], 'NCIt': ['Enrollment']}
 
+name_for_cid[29] = 'AcquisitionModality'
 cid_concepts[29] = \
 {'DCM': ['OphthalmicVisualField',
          'DigitalRadiography',
@@ -5096,6 +5346,7 @@ cid_concepts[29] = \
          'OphthalmicRefraction',
          'OphthalmicTomographyBScanVolumeAnalysis']}
 
+name_for_cid[30] = 'DICOMDevices'
 cid_concepts[30] = \
 {'DCM': ['BoneMineralDensitometry',
          'SlideMicroscopy',
@@ -5116,7 +5367,7 @@ cid_concepts[30] = \
          'OphthalmicTomographyEnFace',
          'HemodynamicWaveform',
          'OpticalCoherenceTomography',
-         'dManufacturingModelingSystem_3',
+         '_3DManufacturingModelingSystem',
          'UltrasoundBoneDensitometry',
          'PositronEmissionTomography',
          'CardiacElectrophysiology',
@@ -5149,6 +5400,7 @@ cid_concepts[30] = \
          'RadiationTherapyDevice',
          'SubjectiveRefraction']}
 
+name_for_cid[300] = 'MultienergyRelevantMaterials'
 cid_concepts[300] = \
 {'SRT': ['Yttrium',
          'Fat',
@@ -5174,14 +5426,16 @@ cid_concepts[300] = \
          'Iron',
          'Silicone']}
 
+name_for_cid[3000] = 'AudioChannelSource'
 cid_concepts[3000] = \
 {'DCM': ['PhysiologicalAudioSignal',
          'Phonocardiogram',
-         'OperatorSNarrative',
+         'OperatorNarrative',
          'Voice',
          'DopplerAudio',
          'AmbientRoomEnvironment']}
 
+name_for_cid[3001] = 'ECGLeads'
 cid_concepts[3001] = \
 {'MDC': ['FrankLeadC',
          'FrankLeadA',
@@ -5199,23 +5453,23 @@ cid_concepts[3001] = \
          'DerivedLeadV6',
          'FrankLeadH',
          'DerivedLeadI',
-         'DerivedLeadIi',
+         'DerivedLeadII',
          'DerivedLeadV1',
          'DerivedLeadV2',
          'DerivedLeadV3',
          'DerivedLeadV4',
-         'EasiLeadAs',
-         'EasiLeadAi',
-         'EasiUpperSternumLead',
+         'EASILeadAS',
+         'EASILeadAI',
+         'EASIUpperSternumLead',
          'AuxiliaryBipolarLead4',
-         'EasiLeadEs',
+         'EASILeadES',
          'RightLegLead',
          'CanineFifthRightIntercostalSpaceNearEdgeOfSternum',
          'CanineSixthLeftIntercostalSpaceNearEdgeOfSternum',
          'LeadI',
          'UnspecifiedLead',
          'LeadV1',
-         'LeadIi',
+         'LeadII',
          'LeadV3',
          'LeadV2',
          'LeadV5',
@@ -5226,24 +5480,24 @@ cid_concepts[3001] = \
          'AvrAugmentedVoltageRight',
          'ChestManubriumLeadPerV6Placement',
          'AvlAugmentedVoltageLeft',
-         'DerivedLeadIii',
+         'DerivedLeadIII',
          'AvfAugmentedVoltageFoot',
          'DerivedLeadAvr',
          'Avr',
          'DerivedLeadAvl',
          'LeadV8',
          'LeadV9',
-         'LeadV8r',
-         'LeadV9r',
-         'LeadIii',
+         'LeadV8R',
+         'LeadV9R',
+         'LeadIII',
          'AuxiliaryBipolarLead3',
-         'LeadCr5',
+         'LeadCR5',
          'ModifiedLimbLead',
          'AuxiliaryBipolarLead1',
          'AuxiliaryBipolarLead2',
          'ChestManubriumLeadPerV7Placement',
          'DefibrillatorLeadAnteriorLateral',
-         'LeadCh5',
+         'LeadCH5',
          'ExternalPacingLeadAnteriorPosterior',
          'AuxiliaryUnipolarLead1',
          'NegativeRightInfraclavicularFossa',
@@ -5256,39 +5510,40 @@ cid_concepts[3001] = \
          'LeadJNehbInferior',
          'ChestLead',
          'PrecordialLead',
-         'LeadVrNonaugmentedVoltageVectorOfRa',
-         'LeadVlNonaugmentedVoltageVectorOfLa',
+         'LeadVRNonaugmentedVoltageVectorOfRA',
+         'LeadVLNonaugmentedVoltageVectorOfLA',
          'ChestManubriumLeadPerV2Placement',
-         'LeadV7r',
+         'LeadV7R',
          'ChestManubriumLeadPerV3Placement',
          'LeadX',
          'ChestManubriumLeadPerV4Placement',
          'LeadY',
          'LeadZ',
-         'ChestLeadPerV5AndV5rPlacement',
-         'ChestLeadPerV6AndV6rPlacement',
-         'ChestLeadPerV7AndV8rPlacement',
+         'ChestLeadPerV5AndV5RPlacement',
+         'ChestLeadPerV6AndV6RPlacement',
+         'ChestLeadPerV7AndV8RPlacement',
          'ChestManubriumLead',
          'ChestManubriumLeadPerV1Placement',
          'ModifiedChestLeadPerV4Placement',
-         'ChestLeadPerV2AndV2rPlacement',
+         'ChestLeadPerV2AndV2RPlacement',
          'ModifiedChestLeadPerV5Placement',
-         'ChestLeadPerV3AndV3rPlacement',
+         'ChestLeadPerV3AndV3RPlacement',
          'ModifiedChestLeadPerV6Placement',
          'ChestLeadSymmetricPlacement',
-         'ChestLeadPerV4AndV4rPlacement',
-         'LeadV2r',
-         'ChestLeadPerV1AndV1rPlacement',
-         'LeadV3r',
-         'LeadV4r',
-         'LeadV5r',
-         'LeadV6r',
-         'LeadVfNonaugmentedVoltageVectorOfLl',
+         'ChestLeadPerV4AndV4RPlacement',
+         'LeadV2R',
+         'ChestLeadPerV1AndV1RPlacement',
+         'LeadV3R',
+         'LeadV4R',
+         'LeadV5R',
+         'LeadV6R',
+         'LeadVFNonaugmentedVoltageVectorOfLL',
          'ModifiedChestLeadLeftArmIndifferent',
          'ModifiedChestLeadPerV1Placement',
          'ModifiedChestLeadPerV2Placement',
          'ModifiedChestLeadPerV3Placement']}
 
+name_for_cid[3003] = 'HemodynamicWaveformSources'
 cid_concepts[3003] = \
 {'SRT': ['LeftAtriumPressureWaveform',
          'RightAtriumPressureWaveform',
@@ -5316,16 +5571,20 @@ cid_concepts[3003] = \
          'TemperatureWaveform',
          'RespirationImpedanceWaveform']}
 
+name_for_cid[3004] = 'ArterialPulseWaveform'
 cid_concepts[3004] = \
 {'DCM': ['ArterialPulseWaveform']}
 
+name_for_cid[3005] = 'RespirationWaveform'
 cid_concepts[3005] = \
 {'DCM': ['RespirationWaveform']}
 
+name_for_cid[301] = 'MultienergyMaterialUnits'
 cid_concepts[301] = \
 {'DCM': ['ModifiedHounsfieldUnit', 'EffectiveAtomicNumber'],
- 'UCUM': ['MgCm3', 'HounsfieldUnit', 'ElectronDensity', 'Percent', 'MgMl']}
+ 'UCUM': ['mgcm3', 'HounsfieldUnit', 'ElectronDensity', 'Percent', 'mgml']}
 
+name_for_cid[3010] = 'CardiovascularAnatomicLocations'
 cid_concepts[3010] = \
 {'SRT': ['AnteriorCommunicatingArtery',
          'InternalIliacArtery',
@@ -5421,7 +5680,7 @@ cid_concepts[3010] = \
          'SuperiorVenaCava',
          'UmbilicalArtery',
          'CommonFemoralArtery',
-         'BoydSPerforatingVein',
+         'BoydPerforatingVein',
          'JuxtaposedAtrialAppendage',
          'SubclavianVein',
          'BodyConduit',
@@ -5434,7 +5693,7 @@ cid_concepts[3010] = \
          'PrimitiveAorta',
          'SystemicVenousAtrium',
          'CommonIliacArtery',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'SuperficialFemoralArtery',
          'InferiorMesentericArtery',
          'TruncusCoeliacus',
@@ -5461,6 +5720,7 @@ cid_concepts[3010] = \
          'RightVentricleInflow',
          'SaphenousVein']}
 
+name_for_cid[3011] = 'ElectrophysiologyAnatomicLocations'
 cid_concepts[3011] = \
 {'SRT': ['InferiorLeftPulmonaryVein',
          'Epicardium',
@@ -5504,13 +5764,14 @@ cid_concepts[3011] = \
          'TricuspidRing',
          'PulmonicRing']}
 
+name_for_cid[3014] = 'CoronaryArterySegments'
 cid_concepts[3014] = \
-{'BARI': ['ndMarginalCoronaryArteryLaterals_2',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'stMarginalCoronaryArteryLaterals_1',
-          'rdMarginalCoronaryArteryLaterals_3',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_2ndMarginalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_1stMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'SRT': ['DistalLeftAnteriorDescendingCoronaryArtery',
@@ -5518,40 +5779,41 @@ cid_concepts[3014] = \
          'ProximalLeftAnteriorDescendingCoronaryArtery',
          'MarginalCoronaryArtery',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
+         '_3rdLeftPosterolateralCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
-         'stSeptalCoronaryArtery_1',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
+         '_1stSeptalCoronaryArtery',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
          'MidRightCoronaryArtery',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'LeftMainCoronaryArteryOstium',
          'MidCircumflexCoronaryArtery',
          'DistalRightCoronaryArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'ProximalRightCoronaryArtery',
          'IntermediateArteryRamus',
-         'ndMarginalCoronaryArtery_2',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainCoronaryArtery',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightCoronaryArteryOstium']}
 
+name_for_cid[3015] = 'CoronaryArteries'
 cid_concepts[3015] = \
-{'BARI': ['ndMarginalCoronaryArteryLaterals_2',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'stMarginalCoronaryArteryLaterals_1',
-          'rdMarginalCoronaryArteryLaterals_3',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_2ndMarginalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_1stMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'SRT': ['DistalLeftAnteriorDescendingCoronaryArtery',
@@ -5560,43 +5822,45 @@ cid_concepts[3015] = \
          'LeftAnteriorDescendingCoronaryArtery',
          'MarginalCoronaryArtery',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
+         '_3rdLeftPosterolateralCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'RightCoronaryArtery',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
          'CircumflexCoronaryArtery',
          'MidRightCoronaryArtery',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'LeftMainCoronaryArteryOstium',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
          'DistalRightCoronaryArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'ProximalRightCoronaryArtery',
          'IntermediateArteryRamus',
-         'ndMarginalCoronaryArtery_2',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainCoronaryArtery',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightCoronaryArteryOstium']}
 
+name_for_cid[3016] = 'MajorCoronaryArteries'
 cid_concepts[3016] = \
 {'SRT': ['RightCoronaryArtery',
          'LeftAnteriorDescendingCoronaryArtery',
          'CircumflexCoronaryArtery',
          'LeftMainCoronaryArtery']}
 
+name_for_cid[3019] = 'CardiovascularAnatomicLocationModifiers'
 cid_concepts[3019] = \
 {'DCM': ['GraftToCitedSegmentDistalSection',
          'GraftToCitedSegmentProximalSection',
@@ -5620,16 +5884,19 @@ cid_concepts[3019] = \
          'EntireVessel',
          'Superior']}
 
+name_for_cid[3083] = 'UnitsofRadioactivity'
 cid_concepts[3083] = \
 {'UCUM': ['Millicurie', 'Becquerel', 'Megabecquerel']}
 
+name_for_cid[3090] = 'TimeSynchronizationChannelTypes'
 cid_concepts[3090] = \
 {'DCM': ['XRayOnTrigger',
          'XRayFluoroscopyOnSignal',
-         'DigitalTimecodeNos',
-         'IrigBTimecode',
-         'EcgBasedGatingSignalProcessed']}
+         'DigitalTimecodeNOS',
+         'IRIGBTimecode',
+         'ECGBasedGatingSignalProcessed']}
 
+name_for_cid[31] = 'AbstractPriors'
 cid_concepts[31] = \
 {'DCM': ['AtLastAppointment',
          'OnDischargeFromUnit',
@@ -5645,77 +5912,89 @@ cid_concepts[31] = \
          'PostOperative',
          'PreOperative']}
 
+name_for_cid[3101] = 'CardiacProceduralStateValues'
 cid_concepts[3101] = \
 {'DCM': ['ReinjectionState',
          'DelayedRedistributionState',
          'RedistributionState'],
  'SRT': ['RestingState', 'CardiacStressState']}
 
+name_for_cid[3102] = 'RestStress'
 cid_concepts[3102] = \
 {'DCM': ['CardiacStressState'], 'SRT': ['RestingState']}
 
+name_for_cid[3104] = 'CardiacSynchronizationTechnique'
 cid_concepts[3104] = \
 {'DCM': ['ProspectiveGating',
          'RealTimeAcquisition',
          'Paced',
          'RetrospectiveGating']}
 
+name_for_cid[3106] = 'PETCardiologyProtocols'
 cid_concepts[3106] = \
-{'DCM': ['PetMyocardialViabilityRestAndStress',
-         'PetMyocardialViabilityRestOnly',
-         'PetMyocardialViabilityStressOnly',
-         'PetMyocardialPerfusionRestAndStress',
-         'PetMyocardialPerfusionRestOnly',
-         'PetMyocardialPerfusionStressOnly']}
+{'DCM': ['PETMyocardialViabilityRestAndStress',
+         'PETMyocardialViabilityRestOnly',
+         'PETMyocardialViabilityStressOnly',
+         'PETMyocardialPerfusionRestAndStress',
+         'PETMyocardialPerfusionRestOnly',
+         'PETMyocardialPerfusionStressOnly']}
 
+name_for_cid[3107] = 'PETCardiologyRadiopharmaceuticals'
 cid_concepts[3107] = \
-{'SRT': ['Nitrogen_13', 'Rubidium_82', 'FluorodeoxyglucoseF18']}
+{'SRT': ['_13Nitrogen', '_82Rubidium', 'FluorodeoxyglucoseF18']}
 
+name_for_cid[3108] = 'NM/PETProcedures'
 cid_concepts[3108] = \
 {'SRT': ['RadioisotopeStudyOfEndocrineSystem',
          'RadioisotopeStudyOfGenitourinarySystem',
-         'PetHeartStudy',
+         'PETHeartStudy',
          'RadionuclideLocalizationOfTumor',
          'RadioisotopeStudyOfGastrointestinalSystem',
          'RadionuclideStudyForLocalizationOfInflammatoryDisease',
          'RadioisotopeStudyOfRespiratorySystem',
          'NuclearMedicineCardiovascularStudy',
-         'PetStudyForLocalizationOfTumor',
+         'PETStudyForLocalizationOfTumor',
          'NuclearMedicineDiagnosticProcedureOnNervousSystem',
-         'PetBreastStudy',
+         'PETBreastStudy',
          'RadioisotopeStudyOfMusculoskeletalSystem',
          'RadioisotopeStudyOfHematopoieticSystem',
-         'PetBrainStudy']}
+         'PETBrainStudy']}
 
+name_for_cid[3110] = 'NuclearCardiologyProtocols'
 cid_concepts[3110] = \
 {'DCM': ['StressTechnetiumRestTechnetium1DayProcedure',
-         'NmMyocardialViabilityProcedure',
+         'NMMyocardialViabilityProcedure',
          'RestTechnetiumStressTechnetium1DayProcedure',
          'RestTechnetiumStressTechnetium2DayProcedure',
          'RestThalliumStressTechnetiumProcedure'],
  'SRT': ['StressThalliumProcedure']}
 
+name_for_cid[3111] = 'NuclearCardiologyRadiopharmaceuticals'
 cid_concepts[3111] = \
 {'SRT': ['Tc99mSestamibi', 'Tc99mTetrofosmin', 'Thallium201']}
 
+name_for_cid[3112] = 'AttenuationCorrection'
 cid_concepts[3112] = \
-{'DCM': ['CtBasedAttenuationCorrection',
+{'DCM': ['CTBasedAttenuationCorrection',
          'NoAttenuationCorrection',
          'AlgorithmicAttenuationCorrection',
-         'NmTransmissionAttenuationCorrection']}
+         'NMTransmissionAttenuationCorrection']}
 
+name_for_cid[3113] = 'TypesofPerfusionDefects'
 cid_concepts[3113] = \
 {'DCM': ['FalsePositiveDefectFinding'],
  'SRT': ['FixedMyocardialPerfusionDefect',
          'ReversibleMyocardialPerfusionDefect',
          'PartiallyReversibleMyocardialPerfusionDefect']}
 
+name_for_cid[3114] = 'StudyQuality'
 cid_concepts[3114] = \
 {'DCM': ['PoorImageQuality',
          'ExcellentImageQuality',
          'GoodImageQuality',
          'UnusableQualityRendersImageUnusable']}
 
+name_for_cid[3115] = 'StressImagingQualityIssues'
 cid_concepts[3115] = \
 {'DCM': ['BreastAttenuation',
          'DiaphragmaticAttenuation',
@@ -5723,14 +6002,17 @@ cid_concepts[3115] = \
          'MotionBlur'],
  'SRT': ['SubdiaphragmaticUptake']}
 
+name_for_cid[3116] = 'NMExtracardiacFindings'
 cid_concepts[3116] = \
 {'SRT': ['AbnormalExtracardiacUptake',
          'NormalExtracardiacUptake',
          'IncreasedLungUptake']}
 
+name_for_cid[3117] = 'AttenuationCorrectionMethods'
 cid_concepts[3117] = \
-{'DCM': ['OsemAlgorithm', 'ChangMethod']}
+{'DCM': ['OSEMAlgorithm', 'ChangMethod']}
 
+name_for_cid[3118] = 'LevelofRisk'
 cid_concepts[3118] = \
 {'SRT': ['ModerateToHighRisk',
          'LowToModerateRisk',
@@ -5740,29 +6022,35 @@ cid_concepts[3118] = \
          'ModerateRisk',
          'LowRisk']}
 
+name_for_cid[3119] = 'LVFunction'
 cid_concepts[3119] = \
 {'SRT': ['ImpairedLeftVentricularFunction', 'Normal']}
 
+name_for_cid[3120] = 'PerfusionFindings'
 cid_concepts[3120] = \
 {'SRT': ['MyocardialPerfusionNormal', 'Abnormal', 'Equivocal']}
 
+name_for_cid[3121] = 'PerfusionMorphology'
 cid_concepts[3121] = \
 {'SRT': ['MyocardialIschemia',
          'MyocardialInfarction',
          'MixedIschemiaAndInfarction']}
 
+name_for_cid[3122] = 'VentricularEnlargement'
 cid_concepts[3122] = \
 {'SRT': ['MarkedlyEnlargedCardiacChamber',
          'NormalSizeCardiacChamber',
          'MildlyEnlargedCardiacChamber',
          'ModeratelyEnlargedCardiacChamber']}
 
+name_for_cid[3200] = 'StressTestProcedure'
 cid_concepts[3200] = \
 {'SRT': ['ExerciseStressTest',
          'PharmacologicStressTest',
          'PacedStressTest',
          'PharmacologicAndExerciseStressTest']}
 
+name_for_cid[3201] = 'IndicationsforStressTest'
 cid_concepts[3201] = \
 {'SRT': ['CoronaryArteryDisease',
          'Dyspnea',
@@ -5770,13 +6058,13 @@ cid_concepts[3201] = \
          'OccupationalRequirement',
          'AnginaPectoris',
          'HeartFailure',
-         'HistoryOfCabg',
-         'PostPtca',
+         'HistoryOfCABG',
+         'PostPTCA',
          'HeartDiseaseRiskFactors',
          'Hypertension',
          'Palpitations',
          'ValvularHeartDisease',
-         'AbnormalEcg',
+         'AbnormalECG',
          'Arrhythmia',
          'AbnormalExerciseToleranceTest',
          'Syncope',
@@ -5785,6 +6073,7 @@ cid_concepts[3201] = \
          'SupraventricularTachycardia',
          'ChestPain']}
 
+name_for_cid[3202] = 'ChestPain'
 cid_concepts[3202] = \
 {'DCM': ['AnginalEquivalent'],
  'SRT': ['StableAngina',
@@ -5794,9 +6083,11 @@ cid_concepts[3202] = \
          'UnstableAngina',
          'AtypicalAngina']}
 
+name_for_cid[3203] = 'ExerciserDevice'
 cid_concepts[3203] = \
 {'SRT': ['ArmErgometer', 'Treadmill', 'BicycleErgometer']}
 
+name_for_cid[3204] = 'StressAgents'
 cid_concepts[3204] = \
 {'SRT': ['Adenosine',
          'Atropine',
@@ -5804,6 +6095,7 @@ cid_concepts[3204] = \
          'Dobutamine',
          'AdenosineA2ReceptorAgonist']}
 
+name_for_cid[3205] = 'IndicationsforPharmacologicalStressTest'
 cid_concepts[3205] = \
 {'DCM': ['PatientWeightExceedsEquipmentLimit'],
  'SRT': ['CannotReachTargetHeartRate',
@@ -5824,14 +6116,16 @@ cid_concepts[3205] = \
          'FractureOfLowerLimb',
          'PulmonaryDisease']}
 
+name_for_cid[3206] = 'NoninvasiveCardiacImagingProcedures'
 cid_concepts[3206] = \
 {'SRT': ['Echocardiography',
-         'PetHeartStudy',
-         'CardiacMri',
+         'PETHeartStudy',
+         'CardiacMRI',
          'NuclearMedicineCardiovascularStudy',
-         'Spect',
+         'SPECT',
          'CardiacBloodPoolImagingNuclear']}
 
+name_for_cid[3207] = 'StressTestProcedurePhases'
 cid_concepts[3207] = \
 {'SRT': ['PeakCardiacStressState',
          'RestingState',
@@ -5839,38 +6133,47 @@ cid_concepts[3207] = \
          'CardiacStressState',
          'Hyperventilation']}
 
+name_for_cid[3208] = 'SummaryCodesExerciseECG'
 cid_concepts[3208] = \
-{'SRT': ['ExerciseEcgEquivocal',
+{'SRT': ['ExerciseECGEquivocal',
          'NotPerformed',
-         'ExerciseEcgAbnormal',
-         'ExerciseEcgNormal']}
+         'ExerciseECGAbnormal',
+         'ExerciseECGNormal']}
 
+name_for_cid[3209] = 'SummaryCodesStressImaging'
 cid_concepts[3209] = \
 {'SRT': ['ImagingResultAbnormal',
          'ImagingResultEquivocal',
          'NotPerformed',
          'ImagingResultNormal']}
 
+name_for_cid[3210] = 'SpeedofResponse'
 cid_concepts[3210] = \
 {'SRT': ['Blunted', 'Normal', 'Accentuated']}
 
+name_for_cid[3211] = 'BPResponse'
 cid_concepts[3211] = \
 {'SRT': ['Hypertensive', 'Hypotensive', 'Blunted', 'Normal']}
 
+name_for_cid[3212] = 'TreadmillSpeed'
 cid_concepts[3212] = \
-{'UCUM': ['KmH', 'Mph']}
+{'UCUM': ['kmH', 'Mph']}
 
+name_for_cid[3213] = 'StressHemodynamicFindings'
 cid_concepts[3213] = \
 {'SRT': ['ExertionalHypotension',
          'ChronotropicIncompetence',
          'ExertionalHypertension']}
 
+name_for_cid[3215] = 'PerfusionFindingMethod'
 cid_concepts[3215] = \
-{'SRT': ['EcgAnalysis', 'ImageAnalysis']}
+{'SRT': ['ECGAnalysis', 'ImageAnalysis']}
 
+name_for_cid[3217] = 'ComparisonFinding'
 cid_concepts[3217] = \
 {'DCM': ['AgreementWithPriorFindings', 'DisagreementWithPriorFindings']}
 
+name_for_cid[3220] = 'StressSymptoms'
 cid_concepts[3220] = \
 {'DCM': ['AnginalEquivalent'],
  'SRT': ['Fatigue',
@@ -5889,12 +6192,13 @@ cid_concepts[3220] = \
          'ChestPain',
          'AtypicalAngina']}
 
+name_for_cid[3221] = 'StressTestTerminationReasons'
 cid_concepts[3221] = \
 {'SRT': ['Fatigue',
          'EndOfProtocol',
          'HypotensiveEpisode',
          'TargetHeartRateAchieved',
-         'AbnormalEcg',
+         'AbnormalECG',
          'Dyspnea',
          'Arrhythmia',
          'Syncope',
@@ -5903,6 +6207,7 @@ cid_concepts[3221] = \
          'HypertensiveEpisode',
          'PatientRefusedExerciseTest']}
 
+name_for_cid[3227] = 'QTcMeasurements'
 cid_concepts[3227] = \
 {'MDC': ['QtcPerLeadUsingFredericiaFormula',
          'QtcIntervalPerLead',
@@ -5911,23 +6216,26 @@ cid_concepts[3227] = \
          'QtcGlobalUsingBazettFormula',
          'QtcPerLeadUsingBazettFormula']}
 
+name_for_cid[3228] = 'ECGTimingMeasurements'
 cid_concepts[3228] = \
 {'MDC': ['PDurationGlobal',
-         'PpIntervalGlobal',
-         'PpIntervalPerLead',
-         'QtIntervalGlobal',
-         'QrsDurationPerLead',
-         'QtIntervalPerLead',
+         'PPIntervalGlobal',
+         'PPIntervalPerLead',
+         'QTIntervalGlobal',
+         'QRSDurationPerLead',
+         'QTIntervalPerLead',
          'PDurationPerLead',
-         'QrsDurationGlobal',
-         'PrIntervalGlobal',
-         'PrIntervalPerLead',
-         'RrIntervalPerLead',
-         'RrIntervalGlobal']}
+         'QRSDurationGlobal',
+         'PRIntervalGlobal',
+         'PRIntervalPerLead',
+         'RRIntervalPerLead',
+         'RRIntervalGlobal']}
 
+name_for_cid[3229] = 'ECGAxisMeasurements'
 cid_concepts[3229] = \
-{'MDC': ['QrsAxis', 'PAxis', 'TAxis']}
+{'MDC': ['QRSAxis', 'PAxis', 'TAxis']}
 
+name_for_cid[3230] = 'ECGFindings'
 cid_concepts[3230] = \
 {'SRT': ['EarlyRepolarization',
          'SecondDegreeAtrioventricularBlock',
@@ -5943,11 +6251,11 @@ cid_concepts[3230] = \
          'LeftAnteriorFascicularBlock',
          'AtrialPrematureContraction',
          'NonSustainedVentricularTachycardia',
-         'SecondaryStTAbnormality',
-         'StElevation',
-         'NonspecificStTAbnormality',
+         'SecondarySTTAbnormality',
+         'STElevation',
+         'NonspecificSTTAbnormality',
          'ThirdDegreeAtrioventricularBlock',
-         'StDepression',
+         'STDepression',
          'FirstDegreeAtrioventricularBlock',
          'IncompleteRightBundleBranchBlock',
          'VentricularPreExcitation',
@@ -5955,14 +6263,16 @@ cid_concepts[3230] = \
          'SupraventricularTachycardia',
          'LeftPosteriorFascicularBlock']}
 
+name_for_cid[3231] = 'STSegmentFindings'
 cid_concepts[3231] = \
 {'DCM': ['StronglyPositive',
-         'StronglyPositiveStElevation',
-         'NonDiagnosticRestingStAbnormalities',
-         'NonDiagnosticVentricularPacingOrLbbb',
+         'StronglyPositiveSTElevation',
+         'NonDiagnosticRestingSTAbnormalities',
+         'NonDiagnosticVentricularPacingOrLBBB',
          'NonDiagnosticLowHeartRate'],
- 'SRT': ['WeaklyPositive', 'StIntervalNormal', 'Positive']}
+ 'SRT': ['WeaklyPositive', 'STIntervalNormal', 'Positive']}
 
+name_for_cid[3232] = 'STSegmentLocation'
 cid_concepts[3232] = \
 {'SRT': ['LeftVentricleSeptalSegment',
          'LeftVentricleApicalSegment',
@@ -5970,12 +6280,14 @@ cid_concepts[3232] = \
          'LeftVentricleLateralSegment',
          'LeftVentricleInferiorSegment']}
 
+name_for_cid[3233] = 'STSegmentMorphology'
 cid_concepts[3233] = \
-{'DCM': ['StDepressionHorizontal',
-         'StDepressionUpsloping',
-         'StDepressionDownsloping'],
- 'SRT': ['StElevation', 'StDepression']}
+{'DCM': ['STDepressionHorizontal',
+         'STDepressionUpsloping',
+         'STDepressionDownsloping'],
+ 'SRT': ['STElevation', 'STDepression']}
 
+name_for_cid[3234] = 'EctopicBeatMorphology'
 cid_concepts[3234] = \
 {'SRT': ['UnifocalPvcs',
          'VentricularBigeminy',
@@ -5983,6 +6295,7 @@ cid_concepts[3234] = \
          'VentricularTachycardia',
          'MultifocalPvcs']}
 
+name_for_cid[3235] = 'PerfusionComparisonFindings'
 cid_concepts[3235] = \
 {'SRT': ['LessIschemia',
          'ResolutionOfIschemia',
@@ -5991,22 +6304,27 @@ cid_concepts[3235] = \
          'MoreIschemia',
          'NoChange']}
 
+name_for_cid[3236] = 'ToleranceComparisonFindings'
 cid_concepts[3236] = \
 {'SRT': ['IncreasedTolerance', 'DecreasedTolerance', 'NoChange']}
 
+name_for_cid[3237] = 'WallMotionComparisonFindings'
 cid_concepts[3237] = \
 {'SRT': ['ImprovementOfWallMotion', 'NoChange', 'NewWallMotionAbnormality']}
 
+name_for_cid[3238] = 'StressScoringScales'
 cid_concepts[3238] = \
-{'DCM': ['StHrIndex',
+{'DCM': ['STHRIndex',
          'RatioOfAchievedToPredictedFunctionalCapacity',
          'AerobicIndex',
          'RatioOfAchievedToPredictedMaximalOxygenConsumption'],
  'SRT': ['DukeTreadmillScore']}
 
+name_for_cid[3239] = 'PerceivedExertionScales'
 cid_concepts[3239] = \
-{'DCM': ['BorgCr10Scale', 'BorgRpeScale']}
+{'DCM': ['BorgCR10Scale', 'BorgRPEScale']}
 
+name_for_cid[3240] = 'ElectrophysiologyMeasurementFunctionsandTechniques'
 cid_concepts[3240] = \
 {'DCM': ['PacingElectricalStimulusVoltage',
          'MonopoleSignal',
@@ -6017,6 +6335,7 @@ cid_concepts[3240] = \
          'VoltageMeasurement',
          'RadioFrequencyAblationPower']}
 
+name_for_cid[3241] = 'HemodynamicMeasurementTechniques'
 cid_concepts[3241] = \
 {'SRT': ['FiberopticCatheterMethod',
          'DopplerCatheterMethod',
@@ -6034,6 +6353,7 @@ cid_concepts[3241] = \
          'ThermistorCatheterMethod',
          'HallCatheterMethod']}
 
+name_for_cid[3250] = 'CatheterizationProcedurePhase'
 cid_concepts[3250] = \
 {'SRT': ['CardiacCatheterizationPostContrastPhase',
          'TransseptalCatheterization',
@@ -6053,6 +6373,7 @@ cid_concepts[3250] = \
          'ExerciseChallenge',
          'CardiacCatheterizationTestChallengePhase']}
 
+name_for_cid[3254] = 'ElectrophysiologyProcedurePhase'
 cid_concepts[3254] = \
 {'SRT': ['PostDefibrillationProcedurePhase',
          'ElectrophysiologyMappingPhase',
@@ -6064,6 +6385,7 @@ cid_concepts[3254] = \
          'RadiofrequencyAblationProcedurePhase',
          'VentricularEffectiveRefractoryPeriodEvaluationOf']}
 
+name_for_cid[3261] = 'StressProtocols'
 cid_concepts[3261] = \
 {'SRT': ['AdenosineStressProtocol',
          'PharmacologicStressProtocol',
@@ -6080,8 +6402,9 @@ cid_concepts[3261] = \
          'NaughtonProtocol',
          'StressTestUsingBicycleErgometer',
          'PharmacologicAndExerciseStressTest',
-         'ExerciseStressEcgTest']}
+         'ExerciseStressECGTest']}
 
+name_for_cid[3262] = 'ECGPatientStateValues'
 cid_concepts[3262] = \
 {'SRT': ['PostExerciseState',
          'ExerciseState',
@@ -6089,37 +6412,39 @@ cid_concepts[3262] = \
          'RestingState',
          'BaselineState']}
 
+name_for_cid[3263] = 'ElectrodePlacementValues'
 cid_concepts[3263] = \
-{'MDC': ['LeadFromLimbLeadsIIiAndOneOrMoreVLeads_12',
+{'MDC': ['_12LeadFromLimbLeadsIIIAndOneOrMoreVLeads',
          'Unspecified12LeadSystem',
-         'Standard12LeadAndXyz',
+         'Standard12LeadAndXYZ',
          'Standard12LeadPositionsElectrodesPlacedIndividually',
-         'Standard12LeadAndNehb',
+         'Standard12LeadAndNEHB',
          'MasonLikarLeadPositionsElectrodesPlacedIndividually',
-         'Standard12LeadAndCc5Cm5Ml',
+         'Standard12LeadAndCC5CM5ML',
          'MasonLikarLeadPositionsV1V6InElectrodePad',
-         'Standard12LeadAndCm5Cc5Ch5',
-         'LeadElectrodePad_12',
-         'LeadDerivedFromFrankXyzLeads_12',
+         'Standard12LeadAndCM5CC5CH5',
+         '_12LeadElectrodePad',
+         '_12LeadDerivedFromFrankXYZLeads',
          'Standard12LeadWithExtraLeadsToTheRightAndOrLeftSides',
-         'Standard12LeadExtendedToTheRightByV5rV4rV3r',
-         'LeadDerivedFromNonStandardLeads_12',
+         'Standard12LeadExtendedToTheRightByV5RV4RV3R',
+         '_12LeadDerivedFromNonStandardLeads',
          'Standard12LeadExtendedToTheLeftByV7V8V9',
-         'LeadForBicycleExerciseTestingLimbLeadsOnBackOfPatient_12',
+         '_12LeadForBicycleExerciseTestingLimbLeadsOnBackOfPatient',
          'Standard12LeadPositionsOneIntercostalSpaceHigher',
-         'UnspecifiedXyzLeadSystem',
-         'FrankXyzLeadSystem',
-         'McfeeParungaoXyzLeadSystem',
-         'CubeXyzLeadSystem',
-         'BipolarUncorrectedXyzLeadSystem',
-         'PseudoOrthogonalXyzLeadSystem',
-         'XyzLeadsDerivedFromStandard12Lead',
-         'NehbLeadSystem',
-         'LeadSystemCc5Cm5Ml_3',
-         'LeadSystemCc5Cm5Ch5_3',
-         'LeadFromFrankLeadsXyzLeadsByDowerTransformation_12',
-         'LeadFromEasiLeadsEsAsAiByDowerEasiTransformation_12']}
+         'UnspecifiedXYZLeadSystem',
+         'FrankXYZLeadSystem',
+         'McfeeParungaoXYZLeadSystem',
+         'CubeXYZLeadSystem',
+         'BipolarUncorrectedXYZLeadSystem',
+         'PseudoOrthogonalXYZLeadSystem',
+         'XYZLeadsDerivedFromStandard12Lead',
+         'NEHBLeadSystem',
+         '_3LeadSystemCC5CM5ML',
+         '_3LeadSystemCC5CM5CH5',
+         '_12LeadFromFrankLeadsXYZLeadsByDowerTransformation',
+         '_12LeadFromEASILeadsESASAIByDowerEASITransformation']}
 
+name_for_cid[3271] = 'HemodynamicPhysiologicalChallenges'
 cid_concepts[3271] = \
 {'SRT': ['Pacing',
          'ValsalvaManeuver',
@@ -6134,6 +6459,7 @@ cid_concepts[3271] = \
          'VagalStimulation',
          'ExerciseChallenge']}
 
+name_for_cid[3335] = 'ECGAnnotations'
 cid_concepts[3335] = \
 {'MDC': ['CalibrationPulseIndividualPulse',
          'AtriumAntitachycardiaPaceSpike',
@@ -6152,27 +6478,27 @@ cid_concepts[3335] = \
          'NoNoise',
          'VentricleDefibrillationSpike',
          'LeftAtriumAntibradycardiaPaceSpike',
-         'NoEcgSignalIsAvailable',
+         'NoECGSignalIsAvailable',
          'SWave',
-         'QsWave',
+         'QSWave',
          'FusionOfVentricularAndNormalBeat',
          'AtrialPrematureContractionBeat',
          'BilateralBundleBranchBlockBeat',
          'DefibrillationSpike',
          'AtriumCardioversionSpike',
          'ModerateNoiseBeatsCanBeDetectedButCannotBeClassified',
-         'IsoelectricRegionFromGlobalQrsOnsetToSpecificLeadOnset',
+         'IsoelectricRegionFromGlobalQRSOnsetToSpecificLeadOnset',
          'IncompleteRightBundleBranchBlockBeat',
          'VentricularAntibradycardiaPaceSpike',
          'VentricularEscapeBeat',
          'TWaveSecondDeflectionInTWave',
          'PacemakerLearningBeat',
-         'IsolatedQrsLikeArtifact',
+         'IsolatedQRSLikeArtifact',
          'WolfParkinsonTypeB',
          'AtriumAntibradycardiaPaceSpike',
          'VentricleAntitachycardiaPaceSpike',
-         'PrSegment',
-         'EntireQrsExcludingPTAndU',
+         'PRSegment',
+         'EntireQRSExcludingPTAndU',
          'TransthoracicAntibradycardiaPaceSpike',
          'VentricularFlutterWave',
          'OsborneWave',
@@ -6200,7 +6526,7 @@ cid_concepts[3335] = \
          'LeftAnteriorFascicularBlockBeat',
          'EntireBeatQonToToffExcludingPAndU',
          'DeltaWave',
-         'StChange',
+         'STChange',
          'NormalBeatSinusBeatNormalConduction',
          'RightAtriumAntibradycardiaPaceSpike',
          'SWaveSecondDeflectionInSWave',
@@ -6209,15 +6535,15 @@ cid_concepts[3335] = \
          'RWave',
          'WolfParkinsonTypeA',
          'VentricularPrematureContractionBeat',
-         'StMeasurementPoint',
+         'STMeasurementPoint',
          'AntibradycardiaPaceSpike',
          'SupraventricularPrematureContraction',
          'CardioversionSpike',
          'TrifascicularBlockBeat',
          'RightBundleBranchBlockBeat',
-         'StSegment',
-         'TuFusedWave',
-         'IsoelectricRegionFromSpecificLeadQrsOffsetToGlobalOffset',
+         'STSegment',
+         'TUFusedWave',
+         'IsoelectricRegionFromSpecificLeadQRSOffsetToGlobalOffset',
          'SevereNoiseBeatsCannotBeDetectedOrClassified',
          'TWave',
          'VentricularActivationTime',
@@ -6228,20 +6554,21 @@ cid_concepts[3335] = \
          'SupraventricularEscapeBeat',
          'PWaveThirdDeflectionInPWave']}
 
+name_for_cid[3337] = 'HemodynamicAnnotations'
 cid_concepts[3337] = \
 {'DCM': ['BeatDetectedRejected',
          'AWavePeakPressure',
-         'OfThermalDyeDilutionCo_70',
+         '_70OfThermalDyeDilutionCO',
          'ValveOpen',
          'BeatDetectedAccepted',
          'AWavePressureAverage',
          'VWavePeakPressure',
-         'OfThermalDyeDilutionCo_35',
+         '_35OfThermalDyeDilutionCO',
          'ValveClose',
          'VWavePressureAverage',
          'StartOfInspiration',
          'VMaxMyocardial',
-         'StartOfThermalCo',
+         'StartOfThermalCO',
          'EndOfSystole',
          'Tau',
          'IndicatorMeanTransitTime',
@@ -6258,6 +6585,7 @@ cid_concepts[3337] = \
          'EndDiastole',
          'MinimumDiastolicBloodPressure']}
 
+name_for_cid[3339] = 'ElectrophysiologyAnnotations'
 cid_concepts[3339] = \
 {'DCM': ['StimulationAtRate4Interval',
          'AblationOff',
@@ -6270,15 +6598,17 @@ cid_concepts[3339] = \
          'StartOfAtrialContractionSubsequent',
          'PWave',
          'VWave',
-         'HisBundleWave',
+         'HISBundleWave',
          'TWave',
          'RWave',
          'QWave',
          'VWaveOfNextBeat']}
 
+name_for_cid[3400] = 'ProcedureLogTitles'
 cid_concepts[3400] = \
 {'DCM': ['CathLabProcedureLog']}
 
+name_for_cid[3401] = 'TypesofLogNotes'
 cid_concepts[3401] = \
 {'DCM': ['PatientStatusOrEvent',
          'ProcedureNote',
@@ -6286,12 +6616,13 @@ cid_concepts[3401] = \
          'PhysicianNote',
          'TechNote']}
 
+name_for_cid[3402] = 'PatientStatusandEvents'
 cid_concepts[3402] = \
 {'DCM': ['PatientPronouncedDead',
          'PatientTransferredToMorgue',
          'PatientGivenPostProcedureInstruction',
          'PatientDischargedFromDepartment',
-         'PatientTransferredToCcu',
+         'PatientTransferredToCCU',
          'HemostasisNotAchievedOozing',
          'HemostasisNotAchievedActivelyBleeding',
          'PatientTransferredToHoldingArea',
@@ -6306,7 +6637,7 @@ cid_concepts[3402] = \
          'PatientPreppedAndDraped',
          'PatientAdvanceDirectiveGiven',
          'PatientSedated',
-         'NilPerOsNpoStatusConfirmed',
+         'NilPerOsNPOStatusConfirmed',
          'PatientAsleep',
          'PatientGivenPreProcedureInstruction',
          'PatientAlert',
@@ -6320,6 +6651,7 @@ cid_concepts[3402] = \
          'PatientReportsDiscomfort',
          'PatientDisoriented']}
 
+name_for_cid[3403] = 'PercutaneousEntry'
 cid_concepts[3403] = \
 {'SRT': ['ViaFemoralVein',
          'ViaRadialArtery',
@@ -6329,6 +6661,7 @@ cid_concepts[3403] = \
          'ViaFemoralArtery',
          'ViaBrachialArtery']}
 
+name_for_cid[3404] = 'StaffActions'
 cid_concepts[3404] = \
 {'DCM': ['OfficeCalled',
          'PageSentTo',
@@ -6336,6 +6669,7 @@ cid_concepts[3404] = \
          'PersonnelArrived',
          'PersonnelDeparted']}
 
+name_for_cid[3405] = 'ProcedureActionValues'
 cid_concepts[3405] = \
 {'DCM': ['ArterialConduitAngiography',
          'VascularIntervention',
@@ -6383,6 +6717,7 @@ cid_concepts[3405] = \
          'Angiography',
          'PercutaneousTransluminalBalloonAngioplasty']}
 
+name_for_cid[3406] = 'NoncoronaryTranscatheterInterventions'
 cid_concepts[3406] = \
 {'DCM': ['VascularIntervention',
          'MyocardialBiopsy',
@@ -6390,17 +6725,20 @@ cid_concepts[3406] = \
          'SeptalDefectIntervention',
          'ValvularIntervention']}
 
+name_for_cid[3407] = 'PurposeofReferencetoObject'
 cid_concepts[3407] = \
 {'DCM': ['PriorReportForCurrentPatient',
          'PreProcedureLog',
          'AnalysisOrMeasurementsForCurrentProcedure']}
 
+name_for_cid[3408] = 'ActionsWithConsumables'
 cid_concepts[3408] = \
 {'DCM': ['RemainingConsumableDisposed',
          'ConsumableUnusable',
          'ConsumableTakenFromInventory',
          'ConsumableReturnedToInventory']}
 
+name_for_cid[3409] = 'AdministrationofDrugs/Contrast'
 cid_concepts[3409] = \
 {'DCM': ['DrugStart',
          'DrugEnd',
@@ -6411,6 +6749,7 @@ cid_concepts[3409] = \
          'DrugAdministered',
          'ContrastStart']}
 
+name_for_cid[3410] = 'NumericParametersofDrugs/Contrast'
 cid_concepts[3410] = \
 {'DCM': ['UndilutedDoseAdministered',
          'Concentration',
@@ -6421,24 +6760,26 @@ cid_concepts[3410] = \
          'RateOfAdministration',
          'DurationOfAdministration']}
 
+name_for_cid[3411] = 'IntracoronaryDevices'
 cid_concepts[3411] = \
 {'SRT': ['Stent',
          'RotationalAtherectomyDevice',
          'PercutaneousTransluminalAngioplastyBalloon',
          'GuidingCatheter',
-         'TransluminalExtractionCatheterTec',
+         'TransluminalExtractionCatheterTEC',
          'IntracoronaryPressureGuideWire',
          'IntracoronaryDopplerGuideWire',
          'BrachytherapyDevice',
-         'IntravascularUltrasoundIvusDevice',
+         'IntravascularUltrasoundIVUSDevice',
          'RadiofrequencyAblationDevice',
-         'DirectionalCoronaryAtherectomyDcaDevice',
-         'CuttingBalloonAngioplastyCbaDevice',
+         'DirectionalCoronaryAtherectomyDCADevice',
+         'CuttingBalloonAngioplastyCBADevice',
          'Laser',
          'IntravascularOpticalCoherenceTomographyDevice',
          'SalineThrombectomy',
          'GuideWire']}
 
+name_for_cid[3412] = 'InterventionActionsandStatus'
 cid_concepts[3412] = \
 {'DCM': ['StentReExpanded',
          'ObjectRemoved',
@@ -6454,6 +6795,7 @@ cid_concepts[3412] = \
          'RadiationRemoved',
          'InterventionalDevicePlacementUnsuccessful']}
 
+name_for_cid[3413] = 'AdverseOutcomes'
 cid_concepts[3413] = \
 {'DCM': ['DeathDuringCatheterization'],
  'SRT': ['CardiacArrest',
@@ -6461,7 +6803,7 @@ cid_concepts[3413] = \
          'ContrastMediaAdverseReaction',
          'CongestiveHeartFailure',
          'ArterialDissection',
-         'AvFistula',
+         'AVFistula',
          'EmergencyCoronaryArteryBypass',
          'LossOfDistalPulse',
          'OcclusionOfArtery',
@@ -6473,27 +6815,29 @@ cid_concepts[3413] = \
          'Arrhythmia',
          'CardiogenicShock']}
 
+name_for_cid[3414] = 'ProcedureUrgency'
 cid_concepts[3414] = \
 {'SRT': ['EmergentProcedure',
          'SalvageProcedure',
          'ElectiveProcedure',
          'UrgentProcedure']}
 
+name_for_cid[3415] = 'CardiacRhythms'
 cid_concepts[3415] = \
-{'MDC': ['AvDissociation',
+{'MDC': ['AVDissociation',
          'VentricularCouplet',
-         'FirstDegreeAvBlock',
+         'FirstDegreeAVBlock',
          'NonRespiratorySinusArrhythmia',
          'VentricularParasystole',
          'NonsustainedVentricularTachycardiaParoxysmal',
-         'AvJunctionalNodalEscapeRhythm',
+         'AVJunctionalNodalEscapeRhythm',
          'IrregularRhythm',
          'WolfParkinsonWhiteSyndrome',
          'Bradycardia',
          'LownGanongLevineSyndrome',
-         'CompleteAvDissociation',
+         'CompleteAVDissociation',
          'AutomaticAtrialTachycardia',
-         'SecondDegreeAvBlockTypeIiMobitzTypeIi',
+         'SecondDegreeAVBlockTypeIIMobitzTypeII',
          'AtrialEctopicRhythm',
          'TorsadesDePointesVentricularTachycardia',
          'SinusArrhythmia',
@@ -6501,55 +6845,56 @@ cid_concepts[3415] = \
          'AcceleratedIdioventricularRhythm',
          'SustainedMonomorphicVentricularTachycardia',
          'WolfParkinsonTypeA',
-         'AcceleratedAvJunctionalNodalRhythm',
+         'AcceleratedAVJunctionalNodalRhythm',
          'VentricularBigeminy',
          'CalibrationSignalSustained',
          'SinusBradycardia',
-         'AvReciprocatingTachycardia',
+         'AVReciprocatingTachycardia',
          'SupraventricularAtrialOrJunctionalEctopicRhythm',
          'VentricularRhythm',
          'VentricularFlutter',
          'SupraventricularParoxsysmalTachycardia',
          'VentricularDemandModePacing',
-         'SecondDegreeSaBlockTypeIi',
-         'AvDissociationWithInterference',
+         'SecondDegreeSABlockTypeII',
+         'AVDissociationWithInterference',
          'ParoxsysmalAtrialTachycardia',
          'VentricularRun',
-         'SecondDegreeAvBlock',
+         'SecondDegreeAVBlock',
          'LowHeartRateVariability',
          'PreExcitation',
          'RespiratorySinusArrhythmia',
          'IdioventricularVentricularEscapeRhythm',
          'VentricularFibrillation',
          'Asystole',
-         'AvJunctionalNodalRhythm',
+         'AVJunctionalNodalRhythm',
          'SinusRhythm',
-         'FirstDegreeSaBlock',
+         'FirstDegreeSABlock',
          'TWaveAlternans',
          'AtrialFlutter',
-         'ThirdDegreeAvBlockCompleteAvBlock',
+         'ThirdDegreeAVBlockCompleteAVBlock',
          'AtrialBigeminy',
          'AtrialDemandModePacing',
          'VentricularTrigeminy',
-         'ReentrantAvNodalTachycardia',
+         'ReentrantAVNodalTachycardia',
          'JunctionalTachycardia',
          'SinusTachycardia',
          'SupraventricularTachycardiaAtrialOrJunctional',
          'AntiTachycardiaPacing',
-         'IsorhythmicAvDissociation',
+         'IsorhythmicAVDissociation',
          'MultifocalAtrialTachycardia',
          'VentricularTachycardiaNonparoxysmal',
-         'SecondDegreeAvBlockTypeIWenckebachOrMobitzTypeI',
+         'SecondDegreeAVBlockTypeIWenckebachOrMobitzTypeI',
          'WanderingPacemakerBetweenTheSinusNodeAndTheAVNode',
          'PolymorphicVentricularTachycardia',
          'WolfParkinsonTypeB',
          'SlowVentricularTachycardiaIdioventricularTachycardia',
-         'ThirdDegreeSaBlockCompleteSaBlock',
+         'ThirdDegreeSABlockCompleteSABlock',
          'NormalSinusRhythm',
-         'SecondDegreeSaBlockTypeIWenckebach',
+         'SecondDegreeSABlockTypeIWenckebach',
          'AtrialFibrillation',
          'AtrialTachycardia']}
 
+name_for_cid[3416] = 'RespirationRhythms'
 cid_concepts[3416] = \
 {'SRT': ['IrregularBreathing',
          'NormalRespiratoryRhythm',
@@ -6557,18 +6902,22 @@ cid_concepts[3416] = \
          'RespirationIntermittent',
          'GaspingRespiration']}
 
+name_for_cid[3418] = 'LesionRisk'
 cid_concepts[3418] = \
 {}
 
+name_for_cid[3419] = 'FindingsTitles'
 cid_concepts[3419] = \
 {'DCM': ['Recommendation', 'Impression', 'Finding']}
 
+name_for_cid[3421] = 'ProcedureAction'
 cid_concepts[3421] = \
 {'DCM': ['SuspendProcedureAction',
          'ResumeProcedureAction',
          'StartProcedureAction',
          'EndProcedureAction']}
 
+name_for_cid[3422] = 'DeviceUseActions'
 cid_concepts[3422] = \
 {'DCM': ['DeviceCrossedLesion'],
  'SRT': ['DeviceUsed',
@@ -6578,10 +6927,12 @@ cid_concepts[3422] = \
          'DeviceInsertedIntoSheath',
          'DeviceWithdrawnRemoved']}
 
+name_for_cid[3423] = 'NumericDeviceCharacteristics'
 cid_concepts[3423] = \
 {'DCM': ['TransmitFrequency', 'CatheterCurve', 'InterMarkerDistance'],
  'SRT': ['Volume', 'Diameter', 'Length']}
 
+name_for_cid[3425] = 'InterventionParameters'
 cid_concepts[3425] = \
 {'SRT': ['AblationFrequency',
          'AblationPower',
@@ -6590,15 +6941,18 @@ cid_concepts[3425] = \
          'DeliveredRadiationDose',
          'RotationalAtherectomySpeed']}
 
+name_for_cid[3426] = 'ConsumablesParameters'
 cid_concepts[3426] = \
 {'DCM': ['LotIdentifier', 'UnitSerialIdentifier', 'DescriptionOfMaterial']}
 
+name_for_cid[3427] = 'EquipmentEvents'
 cid_concepts[3427] = \
 {'DCM': ['EquipmentFailure',
          'EquipmentRemoved',
          'EquipmentBroughtToProcedureRoom',
          'EquipmentReady']}
 
+name_for_cid[3428] = 'ImagingProcedures'
 cid_concepts[3428] = \
 {'DCM': ['ArterialConduitAngiography'],
  'SRT': ['TransthoracicEchocardiography',
@@ -6614,14 +6968,15 @@ cid_concepts[3428] = \
          'Angiography',
          'IntracardiacEchocardiography']}
 
+name_for_cid[3429] = 'CatheterizationDevices'
 cid_concepts[3429] = \
 {'DCM': ['Bioptome'],
  'SRT': ['Stent',
          'PercutaneousTransluminalAngioplastyBalloon',
          'TipManometer',
          'RadiofrequencyAblationDevice',
-         'DirectionalCoronaryAtherectomyDcaDevice',
-         'IntraAorticBalloonPumpIabp',
+         'DirectionalCoronaryAtherectomyDCADevice',
+         'IntraAorticBalloonPumpIABP',
          'FiberopticCatheter',
          'FluidFilledCatheter',
          'SalineThrombectomy',
@@ -6629,22 +6984,24 @@ cid_concepts[3429] = \
          'TransseptalCatheter',
          'RotationalAtherectomyDevice',
          'GuidingCatheter',
-         'TransluminalExtractionCatheterTec',
+         'TransluminalExtractionCatheterTEC',
          'IntracoronaryPressureGuideWire',
          'IntracoronaryDopplerGuideWire',
          'BrachytherapyDevice',
          'ThermistorCatheter',
          'Sheath',
-         'IntravascularUltrasoundIvusDevice',
+         'IntravascularUltrasoundIVUSDevice',
          'SwannGanzCatheter',
-         'CuttingBalloonAngioplastyCbaDevice',
+         'CuttingBalloonAngioplastyCBADevice',
          'Laser',
          'IntravascularOpticalCoherenceTomographyDevice',
          'GuideWire']}
 
+name_for_cid[3430] = 'DateTimeQualifiers'
 cid_concepts[3430] = \
 {'DCM': ['DatetimeUnsynchronized', 'DatetimeEstimated']}
 
+name_for_cid[3440] = 'PeripheralPulseLocations'
 cid_concepts[3440] = \
 {'SRT': ['FemoralArtery',
          'DorsalisPedisArtery',
@@ -6655,15 +7012,18 @@ cid_concepts[3440] = \
          'UlnarArtery',
          'BrachialArtery']}
 
+name_for_cid[3441] = 'PatientAssessments'
 cid_concepts[3441] = \
 {'LN': ['RespirationRhythm', 'CardiacRhythm'],
  'SRT': ['RespirationAssessment',
          'SkinConditionAssessment',
          'PatientMentalStateAssessment']}
 
+name_for_cid[3442] = 'PeripheralPulseMethods'
 cid_concepts[3442] = \
 {'SRT': ['Palpation', 'Doppler']}
 
+name_for_cid[3446] = 'SkinCondition'
 cid_concepts[3446] = \
 {'DCM': ['SkinConditionMottled',
          'SkinConditionPale',
@@ -6675,112 +7035,136 @@ cid_concepts[3446] = \
          'SkinConditionCold',
          'SkinConditionWarm']}
 
+name_for_cid[3448] = 'AirwayAssessment'
 cid_concepts[3448] = \
 {'DCM': ['AirwaySeverelyObstructed',
          'AirwayUnobstructed',
          'AirwayPartiallyObstructed']}
 
+name_for_cid[3451] = 'CalibrationObjects'
 cid_concepts[3451] = \
 {'DCM': ['Sphere'], 'SRT': ['MeasuringRuler', 'Catheter']}
 
+name_for_cid[3452] = 'CalibrationMethods'
 cid_concepts[3452] = \
 {'DCM': ['GeometricNonIsocenter',
          'CalibrationObjectUsed',
          'GeometricIsocenter']}
 
+name_for_cid[3453] = 'CardiacVolumeMethods'
 cid_concepts[3453] = \
 {'DCM': ['AreaLengthDodge',
          'AreaLengthKennedy',
          'Parallelepiped',
-         'TsPyramid',
+         'TSPyramid',
          'TwoChamber',
          'MultipleSlices',
          'Boak',
          'AreaLengthWynne']}
 
+name_for_cid[3455] = 'IndexMethods'
 cid_concepts[3455] = \
-{'DCM': ['Bsa1219'], 'LN': ['Bsa']}
+{'DCM': ['BSA1219'], 'LN': ['BSA']}
 
+name_for_cid[3456] = 'SubsegmentMethods'
 cid_concepts[3456] = \
 {'DCM': ['UserSelectedMethod', 'EquidistantMethod']}
 
+name_for_cid[3458] = 'ContourRealignment'
 cid_concepts[3458] = \
 {'DCM': ['LongAxisBased', 'NoRealignment', 'CenterOfGravity']}
 
+name_for_cid[3460] = 'CircumferentialExtent'
 cid_concepts[3460] = \
-{'DCM': ['RcaRegionInRaoProjection', 'LadRegionInRaoProjection']}
+{'DCM': ['RCARegionInRAOProjection', 'LADRegionInRAOProjection']}
 
+name_for_cid[3461] = 'RegionalExtent'
 cid_concepts[3461] = \
-{'DCM': ['MultipleRcaRegionInRaoProjection',
-         'SingleRcaRegionInRaoProjection',
-         'MultipleLadRegionInRaoProjection',
-         'SingleLadRegionInRaoProjection',
-         'CfxRegionInLaoProjection',
-         'LadRegionInLaoProjection',
-         'RcaRegionInLaoProjection']}
+{'DCM': ['MultipleRCARegionInRAOProjection',
+         'SingleRCARegionInRAOProjection',
+         'MultipleLADRegionInRAOProjection',
+         'SingleLADRegionInRAOProjection',
+         'CFXRegionInLAOProjection',
+         'LADRegionInLAOProjection',
+         'RCARegionInLAOProjection']}
 
+name_for_cid[3462] = 'ChamberIdentification'
 cid_concepts[3462] = \
 {'SRT': ['RightAtrium', 'LeftAtrium', 'LeftVentricle', 'RightVentricle']}
 
+name_for_cid[3463] = 'VentricleIdentification'
 cid_concepts[3463] = \
 {'SRT': ['LeftVentricle', 'RightVentricle']}
 
+name_for_cid[3465] = 'QAReferenceMethods'
 cid_concepts[3465] = \
 {'DCM': ['CurveFittedReference',
          'InterpolatedLocalReference',
          'MeanLocalReference']}
 
+name_for_cid[3466] = 'PlaneIdentification'
 cid_concepts[3466] = \
 {'SRT': ['AnteroPosterior',
          'LeftLateral',
          'LeftAnteriorOblique',
          'RightAnteriorOblique',
-         'CaudalRao',
-         'CranialRao',
-         'CaudalLao',
-         'CranialLao']}
+         'CaudalRAO',
+         'CranialRAO',
+         'CaudalLAO',
+         'CranialLAO']}
 
+name_for_cid[3467] = 'EjectionFraction'
 cid_concepts[3467] = \
 {'DCM': ['LeftAtrialEjectionFractionByAngiography'],
  'LN': ['RightVentricularEjectionFractionByAngiography',
         'LeftVentricularEjectionFractionByAngiography']}
 
+name_for_cid[3468] = 'EDVolume'
 cid_concepts[3468] = \
-{'DCM': ['LeftAtrialEdVolume'],
- 'LN': ['RightVentricularEdVolume', 'LeftVentricularEdVolume']}
+{'DCM': ['LeftAtrialEDVolume'],
+ 'LN': ['RightVentricularEDVolume', 'LeftVentricularEDVolume']}
 
+name_for_cid[3469] = 'ESVolume'
 cid_concepts[3469] = \
-{'DCM': ['LeftAtrialEsVolume'],
- 'LN': ['RightVentricularEsVolume', 'LeftVentricularEsVolume']}
+{'DCM': ['LeftAtrialESVolume'],
+ 'LN': ['RightVentricularESVolume', 'LeftVentricularESVolume']}
 
+name_for_cid[3470] = 'VesselLumenCrosssectionalAreaCalculationMethods'
 cid_concepts[3470] = \
 {'DCM': ['DensitometricMethod', 'CircularMethod']}
 
+name_for_cid[3471] = 'EstimatedVolumes'
 cid_concepts[3471] = \
-{'DCM': ['VolumeEstimatedFromTwoNonCoplanar2dRegions',
-         'VolumeEstimatedFromSingle2dRegion']}
+{'DCM': ['VolumeEstimatedFromTwoNonCoplanar2DRegions',
+         'VolumeEstimatedFromSingle2DRegion']}
 
+name_for_cid[3472] = 'CardiacContractionPhase'
 cid_concepts[3472] = \
 {'SRT': ['Systolic', 'Diastolic']}
 
+name_for_cid[3480] = 'IVUSProcedurePhases'
 cid_concepts[3480] = \
 {'SRT': ['CardiacCatheterizationPostInterventionPhase',
          'CardiacCatheterizationPreInterventionPhase']}
 
+name_for_cid[3481] = 'IVUSDistanceMeasurements'
 cid_concepts[3481] = \
-{'DCM': ['PlaquePlusMediaThickness', 'LumenPerimeter', 'EemDiameter'],
+{'DCM': ['PlaquePlusMediaThickness', 'LumenPerimeter', 'EEMDiameter'],
  'SRT': ['VesselLumenDiameter', 'StentDiameter']}
 
+name_for_cid[3482] = 'IVUSAreaMeasurements'
 cid_concepts[3482] = \
 {'DCM': ['InStentNeointimalCrossSectionalArea',
-         'EemCrossSectionalArea',
+         'EEMCrossSectionalArea',
          'PlaquePlusMediaCrossSectionalArea'],
  'SRT': ['StentCrossSectionalArea', 'VesselLumenCrossSectionalArea']}
 
+name_for_cid[3483] = 'IVUSLongitudinalMeasurements'
 cid_concepts[3483] = \
 {'DCM': ['StentGap', 'CalciumLength'],
  'SRT': ['StentLength', 'StenoticLesionLength']}
 
+name_for_cid[3484] = 'IVUSIndicesandRatios'
 cid_concepts[3484] = \
 {'DCM': ['LumenShapeIndex',
          'StentSymmetryIndex',
@@ -6789,23 +7173,26 @@ cid_concepts[3484] = \
          'RemodelingIndex',
          'LumenEccentricityIndex',
          'StentDiameterRatio',
-         'EemDiameterRatio',
+         'EEMDiameterRatio',
          'LumenDiameterRatio']}
 
+name_for_cid[3485] = 'IVUSVolumeMeasurements'
 cid_concepts[3485] = \
 {'DCM': ['NativePlaqueVolume',
          'TotalPlaqueVolume',
          'InStentNeointimalVolume',
-         'EemVolume',
+         'EEMVolume',
          'LumenVolume'],
  'SRT': ['StentVolume']}
 
+name_for_cid[3486] = 'VascularMeasurementSites'
 cid_concepts[3486] = \
 {'DCM': ['SiteOfLumenMaximum',
          'SiteOfLumenMinimum',
          'ProximalReference',
          'DistalReference']}
 
+name_for_cid[3487] = 'IntravascularVolumetricRegions'
 cid_concepts[3487] = \
 {'DCM': ['DistalStentMargin',
          'EntirePullback',
@@ -6813,12 +7200,15 @@ cid_concepts[3487] = \
          'StentedRegion'],
  'SRT': ['MorphologicallyAbnormalStructure', 'Lesion', 'CulpritLesion']}
 
+name_for_cid[3488] = 'Min/Max/Mean'
 cid_concepts[3488] = \
 {'SRT': ['Maximum', 'Minimum', 'Mean']}
 
+name_for_cid[3489] = 'CalciumDistribution'
 cid_concepts[3489] = \
 {'SRT': ['Superficial', 'Deep']}
 
+name_for_cid[3491] = 'IVUSLesionMorphologies'
 cid_concepts[3491] = \
 {'DCM': ['InStentNeointima',
          'SoftPlaque',
@@ -6837,6 +7227,7 @@ cid_concepts[3491] = \
          'PseudoAneurysm',
          'Thrombus']}
 
+name_for_cid[3492] = 'VascularDissectionClassifications'
 cid_concepts[3492] = \
 {'DCM': ['MedialDissection',
          'IntraStentDissection',
@@ -6844,19 +7235,23 @@ cid_concepts[3492] = \
          'IntimalDissection'],
  'SRT': ['IntramuralHematoma']}
 
+name_for_cid[3493] = 'IVUSRelativeStenosisSeverities'
 cid_concepts[3493] = \
 {'DCM': ['T2Secondary', 'T3Secondary', 'T1Worst', 'T4Secondary']}
 
+name_for_cid[3494] = 'IVUSNonMorphologicalFindings'
 cid_concepts[3494] = \
 {'DCM': ['TrueLumen'],
  'SRT': ['AcquiredIncompleteStentApposition',
          'IncompleteStentApposition',
          'ArterialBloodStasis']}
 
+name_for_cid[3495] = 'IVUSPlaqueComposition'
 cid_concepts[3495] = \
 {'DCM': ['NecroticLipidicPlaque', 'FibroLipidicPlaque'],
  'SRT': ['VascularCalcification', 'Thrombus', 'FibrousPlaque']}
 
+name_for_cid[3496] = 'IVUSFiducialPoints'
 cid_concepts[3496] = \
 {'SRT': ['Stent',
          'VesselOrigin',
@@ -6865,6 +7260,7 @@ cid_concepts[3496] = \
          'CollateralBranchOfVessel',
          'FibrousPlaque']}
 
+name_for_cid[3497] = 'IVUSArterialMorphology'
 cid_concepts[3497] = \
 {'DCM': ['NecroticLipidicPlaque', 'FibroLipidicPlaque'],
  'SRT': ['ExternalElasticMembrane',
@@ -6873,29 +7269,36 @@ cid_concepts[3497] = \
          'LumenOfArtery',
          'FibrousPlaque']}
 
+name_for_cid[3500] = 'PressureUnits'
 cid_concepts[3500] = \
 {'UCUM': ['Mmhg', 'Kpa']}
 
+name_for_cid[3502] = 'HemodynamicResistanceUnits'
 cid_concepts[3502] = \
-{'UCUM': ['WoodU', 'PRU', 'DynSCm5']}
+{'UCUM': ['WoodU', 'PRU', 'DynScm5']}
 
+name_for_cid[3503] = 'IndexedHemodynamicResistanceUnits'
 cid_concepts[3503] = \
-{'UCUM': ['WoodUM2', 'DynSCm5M2', 'PRUM2']}
+{'UCUM': ['WoodUM2', 'DynScm5M2', 'PRUM2']}
 
+name_for_cid[3510] = 'CatheterSizeUnits'
 cid_concepts[3510] = \
-{'UCUM': ['French', 'Mm']}
+{'UCUM': ['French', 'mm']}
 
+name_for_cid[3515] = 'SpecimenCollection'
 cid_concepts[3515] = \
 {'SRT': ['BloodSamplingFromExtracorporealBloodCircuit',
          'SpecimenCollection',
          'CollectionOfBloodSpecimenForLaboratory']}
 
+name_for_cid[3520] = 'BloodSourceType'
 cid_concepts[3520] = \
 {'SRT': ['PulmonaryVeinBlood',
          'SystemicArteryBlood',
          'MixedVenousBlood',
          'PulmonaryArteryBlood']}
 
+name_for_cid[3524] = 'BloodGasPressures'
 cid_concepts[3524] = \
 {'LN': ['BloodCarbonDioxidePartialPressure',
         'BloodOxygenPartialPressure',
@@ -6907,6 +7310,7 @@ cid_concepts[3524] = \
         'ArterialOxygenPartialPressure',
         'ArterialBloodCarbonDioxidePartialPressure']}
 
+name_for_cid[3525] = 'BloodGasContent'
 cid_concepts[3525] = \
 {'DCM': ['BloodOxygenContent'],
  'LN': ['ArterialOxygenContent',
@@ -6918,6 +7322,7 @@ cid_concepts[3525] = \
         'AorticRootOxygenContent',
         'VenousOxygenContent']}
 
+name_for_cid[3526] = 'BloodGasSaturation'
 cid_concepts[3526] = \
 {'DCM': ['BloodCarbonDioxideSaturation'],
  'LN': ['CapillaryBloodOxygenSaturation',
@@ -6926,32 +7331,41 @@ cid_concepts[3526] = \
         'CapillaryBloodOxygenSaturationByOximetry',
         'BloodOxygenSaturation']}
 
+name_for_cid[3527] = 'BloodBaseExcess'
 cid_concepts[3527] = \
 {'LN': ['BloodBaseExcess', 'VenousBloodBaseExcess', 'ArterialBloodBaseExcess']}
 
+name_for_cid[3528] = 'BloodpH'
 cid_concepts[3528] = \
 {'LN': ['BloodPh', 'VenousBloodPh', 'ArterialBloodPh']}
 
+name_for_cid[3529] = 'Arterial/VenousContent'
 cid_concepts[3529] = \
 {'DCM': ['PulmonaryArterialContentFcpa', 'PulmonaryVenousContentFcpv'],
  'LN': ['ArterialContentFca', 'VenousContentFcv']}
 
+name_for_cid[3530] = 'OxygenAdministrationActions'
 cid_concepts[3530] = \
 {'DCM': ['BeginOxygenAdministration', 'EndOxygenAdministration']}
 
+name_for_cid[3531] = 'OxygenAdministration'
 cid_concepts[3531] = \
 {'DCM': ['OxygenAdministrationByVentilator'],
  'SRT': ['OxygenAdministrationByMask', 'OxygenAdministrationByNasalCannula']}
 
+name_for_cid[3550] = 'CirculatorySupportActions'
 cid_concepts[3550] = \
 {'DCM': ['EndCirculatorySupport', 'BeginCirculatorySupport']}
 
+name_for_cid[3551] = 'VentilationActions'
 cid_concepts[3551] = \
 {'DCM': ['EndVentilation', 'BeginVentilation']}
 
+name_for_cid[3552] = 'PacingActions'
 cid_concepts[3552] = \
 {'DCM': ['EndPacing', 'BeginPacing']}
 
+name_for_cid[3553] = 'CirculatorySupport'
 cid_concepts[3553] = \
 {'SRT': ['CardiopulmonaryBypass',
          'IntraAorticBalloonPump',
@@ -6959,9 +7373,11 @@ cid_concepts[3553] = \
          'LeftVentricularAssistDevice',
          'ExtraCorporealCirculation']}
 
+name_for_cid[3554] = 'Ventilation'
 cid_concepts[3554] = \
 {'SRT': ['PressureSupportVentilator', 'AmbuBag', 'VolumeSupportVentilator']}
 
+name_for_cid[3555] = 'Pacing'
 cid_concepts[3555] = \
 {'SRT': ['Pacing',
          'TemporaryTranscutaneousPacing',
@@ -6970,12 +7386,15 @@ cid_concepts[3555] = \
          'PacingWithMagnet',
          'AVSequentialPacing']}
 
+name_for_cid[3560] = 'BloodPressureMethods'
 cid_concepts[3560] = \
 {'SRT': ['BloodPressureCuffMethod']}
 
+name_for_cid[3600] = 'RelativeTimes'
 cid_concepts[3600] = \
 {'SRT': ['After', 'During', 'Before']}
 
+name_for_cid[3602] = 'HemodynamicPatientState'
 cid_concepts[3602] = \
 {'SRT': ['PostExerciseState',
          'ExerciseState',
@@ -6983,14 +7402,15 @@ cid_concepts[3602] = \
          'RestingState',
          'BaselineState']}
 
+name_for_cid[3604] = 'ArterialLesionLocations'
 cid_concepts[3604] = \
-{'BARI': ['stDiagonalCoronaryArteryLaterals_1',
-          'stMarginalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_1stDiagonalCoronaryArteryLaterals',
+          '_1stMarginalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'rdMarginalCoronaryArteryLaterals_3',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'SRT': ['AnteriorCommunicatingArtery',
          'LacrimalArtery',
@@ -7008,12 +7428,12 @@ cid_concepts[3604] = \
          'TruncusArteriosusCommunis',
          'MidLeftAnteriorDescendingCoronaryArtery',
          'AorticArch',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'InternalCarotidArtery',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'ProfundaFemorisArtery',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
@@ -7022,19 +7442,19 @@ cid_concepts[3604] = \
          'BrachialArtery',
          'FistulaCoronaryToLeftVentricle',
          'AorticFistula',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
          'TibialArtery',
-         'rdMarginalCoronaryArtery_3',
+         '_3rdMarginalCoronaryArtery',
          'FistulaCoronaryToLeftAtrium',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
-         'NeonatalPulmonaryArteryPrimitivePa',
-         'ndMarginalCoronaryArtery_2',
+         'NeonatalPulmonaryArteryPrimitivePA',
+         '_2ndMarginalCoronaryArtery',
          'VertebralArtery',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'InternalMammaryArtery',
          'LumbarArtery',
          'RightFemoralArtery',
@@ -7044,11 +7464,11 @@ cid_concepts[3604] = \
          'LingualArtery',
          'LateralPlantarArtery',
          'GeniculateArtery',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
          'DescendingAorta',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'RenalArtery',
          'RadialArtery',
          'OphthalmicArtery',
@@ -7086,7 +7506,7 @@ cid_concepts[3604] = \
          'FistulaCoronaryToRightVentricle',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
          'SuperficialTemporalArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'PulmonaryArteriovenousFistula',
          'PosteriorCommunicatingArtery',
          'PoplitealArtery',
@@ -7094,6 +7514,7 @@ cid_concepts[3604] = \
          'BrachiocephalicTrunk',
          'AxillaryArtery']}
 
+name_for_cid[3606] = 'ArterialSourceLocations'
 cid_concepts[3606] = \
 {'SRT': ['HepaticArtery',
          'SuperiorThyroidArtery',
@@ -7133,7 +7554,7 @@ cid_concepts[3606] = \
          'TibialArtery',
          'NeoAortaPrimitiveAorta',
          'FistulaCoronaryToLeftAtrium',
-         'NeonatalPulmonaryArteryPrimitivePa',
+         'NeonatalPulmonaryArteryPrimitivePA',
          'SuperficialFemoralArtery',
          'VertebralArtery',
          'InternalMammaryArtery',
@@ -7161,6 +7582,7 @@ cid_concepts[3606] = \
          'AxillaryArtery',
          'BasilarArtery']}
 
+name_for_cid[3607] = 'VenousSourceLocations'
 cid_concepts[3607] = \
 {'SRT': ['HepaticVein',
          'PosteriorMedialTributary',
@@ -7195,6 +7617,7 @@ cid_concepts[3607] = \
          'HunterianPerforatingVein',
          'DoddPerforatingVein']}
 
+name_for_cid[3608] = 'AtrialSourceLocations'
 cid_concepts[3608] = \
 {'SRT': ['CoronarySinus',
          'JuxtaposedAppendage',
@@ -7208,6 +7631,7 @@ cid_concepts[3608] = \
          'PulmonaryArteryWedge',
          'PulmonaryCapillaryWedge']}
 
+name_for_cid[3609] = 'VentricularSourceLocations'
 cid_concepts[3609] = \
 {'SRT': ['RightVentricleOutflowTract',
          'LeftVentricleInflow',
@@ -7219,6 +7643,7 @@ cid_concepts[3609] = \
          'LeftVentricle',
          'RightVentricle']}
 
+name_for_cid[3610] = 'GradientSourceLocations'
 cid_concepts[3610] = \
 {'SRT': ['AorticValve',
          'RightVentricleOutflowTract',
@@ -7231,6 +7656,7 @@ cid_concepts[3610] = \
          'CoarctationOfAorta',
          'AtrialSeptalDefect']}
 
+name_for_cid[3611] = 'PressureMeasurements'
 cid_concepts[3611] = \
 {'DCM': ['XDescentPressure',
          'YDescentPressure',
@@ -7250,6 +7676,7 @@ cid_concepts[3611] = \
          'MinimumDiastolicBloodPressure',
          'MeanBloodPressure']}
 
+name_for_cid[3612] = 'BloodVelocityMeasurements'
 cid_concepts[3612] = \
 {'DCM': ['BloodVelocityPeak',
          'BloodVelocityMean',
@@ -7259,6 +7686,7 @@ cid_concepts[3612] = \
          'DiastolicBloodVelocityMean',
          'DiastolicBloodVelocityPeak']}
 
+name_for_cid[3613] = 'HemodynamicTimeMeasurements'
 cid_concepts[3613] = \
 {'DCM': ['Tau',
          'IndicatorMeanTransitTime',
@@ -7268,10 +7696,12 @@ cid_concepts[3613] = \
          'LeftVentricularEjectionTime',
          'RRInterval']}
 
+name_for_cid[3614] = 'ValveAreas,Nonmitral'
 cid_concepts[3614] = \
 {'DCM': ['DerivedNonValveArea'],
  'SRT': ['TricuspidValveArea', 'PulmonicValveArea', 'AorticValveArea']}
 
+name_for_cid[3615] = 'ValveAreas'
 cid_concepts[3615] = \
 {'DCM': ['DerivedNonValveArea'],
  'SRT': ['TricuspidValveArea',
@@ -7279,6 +7709,7 @@ cid_concepts[3615] = \
          'MitralValveArea',
          'AorticValveArea']}
 
+name_for_cid[3616] = 'HemodynamicPeriodMeasurements'
 cid_concepts[3616] = \
 {'SRT': ['TricuspidDiastolicFillingPeriodDfpt',
          'MitralDiastolicFillingPeriodDfpm',
@@ -7286,6 +7717,7 @@ cid_concepts[3616] = \
          'DerivedPeriodNonValve',
          'AorticSystolicEjectionPeriodSepa']}
 
+name_for_cid[3617] = 'ValveFlows'
 cid_concepts[3617] = \
 {'SRT': ['PulmonaryValveFlow',
          'MitralValveFlow',
@@ -7293,13 +7725,16 @@ cid_concepts[3617] = \
          'AorticValveFlow',
          'TricuspidValveFlow']}
 
+name_for_cid[3618] = 'HemodynamicFlows'
 cid_concepts[3618] = \
 {'DCM': ['SystemicFlow', 'PulmonaryFlow']}
 
+name_for_cid[3619] = 'HemodynamicResistanceMeasurements'
 cid_concepts[3619] = \
 {'DCM': ['TotalVascularResistance', 'TotalPulmonaryResistance'],
  'SRT': ['PulmonaryVascularResistance', 'SystemicVascularResistance']}
 
+name_for_cid[3620] = 'HemodynamicRatios'
 cid_concepts[3620] = \
 {'DCM': ['DiastolicSystolicVelocityRatio',
          'HyperemicRatio',
@@ -7312,11 +7747,13 @@ cid_concepts[3620] = \
          'FractionalFlowReserveUsingIntravenousInfusion',
          'PulsatilityIndex']}
 
+name_for_cid[3621] = 'FractionalFlowReserve'
 cid_concepts[3621] = \
 {'SRT': ['FractionalFlowReserveUsingIntracoronaryBolus',
          'FractionalFlowReserve',
          'FractionalFlowReserveUsingIntravenousInfusion']}
 
+name_for_cid[3627] = 'MeasurementType'
 cid_concepts[3627] = \
 {'SRT': ['Median',
          'Measured',
@@ -7329,9 +7766,11 @@ cid_concepts[3627] = \
          'Calculated',
          'PeakToPeak']}
 
+name_for_cid[3628] = 'CardiacOutputMethods'
 cid_concepts[3628] = \
 {'SRT': ['DyeDilution', 'ThermalBath', 'ThermalInline']}
 
+name_for_cid[3629] = 'ProcedureIntent'
 cid_concepts[3629] = \
 {'DCM': ['QualityControlIntent'],
  'SRT': ['CombinedDiagnosticAndTherapeuticProcedure',
@@ -7350,6 +7789,7 @@ cid_concepts[3629] = \
          'DiagnosticIntent',
          'StagingIntent']}
 
+name_for_cid[3630] = 'CardiovascularAnatomicLocations'
 cid_concepts[3630] = \
 {'SRT': ['AnteriorCommunicatingArtery',
          'LacrimalArtery',
@@ -7385,7 +7825,7 @@ cid_concepts[3630] = \
          'RightAtrium',
          'TibialArtery',
          'FistulaCoronaryToLeftAtrium',
-         'NeonatalPulmonaryArteryPrimitivePa',
+         'NeonatalPulmonaryArteryPrimitivePA',
          'VertebralArtery',
          'InternalMammaryArtery',
          'InnominateVein',
@@ -7475,9 +7915,11 @@ cid_concepts[3630] = \
          'RightVentricleInflow',
          'SaphenousVein']}
 
+name_for_cid[3640] = 'Hypertension'
 cid_concepts[3640] = \
 {'SRT': ['SystemicArterialHypertension', 'PulmonaryHypertension']}
 
+name_for_cid[3641] = 'HemodynamicAssessments'
 cid_concepts[3641] = \
 {'SRT': ['PulmonaryVascularResistance',
          'RightVentricularSystolicPressure',
@@ -7490,9 +7932,11 @@ cid_concepts[3641] = \
          'RightAtrialPressure',
          'DiastolicPressure']}
 
+name_for_cid[3642] = 'DegreeFindings'
 cid_concepts[3642] = \
 {'SRT': ['Decreased', 'SeverelyElevated', 'Elevated', 'NormalRange']}
 
+name_for_cid[3651] = 'HemodynamicMeasurementPhase'
 cid_concepts[3651] = \
 {'SRT': ['CardiacCatheterizationPostContrastPhase',
          'DrugInfusionChallenge',
@@ -7503,31 +7947,34 @@ cid_concepts[3651] = \
          'CardiacCatheterizationTestChallengePhase',
          'CardiacCatheterizationGradientAssessmentPhase']}
 
+name_for_cid[3663] = 'BodySurfaceAreaEquations'
 cid_concepts[3663] = \
-{'DCM': ['Bsa0038189Wt0423Ht0362',
-         'Bsa132103433Wt',
-         'Bsa0010265Wt0423Ht0651',
-         'Bsa00004688Wt0816800154LogWt',
-         'Bsa0008883Wt0444Ht0663',
-         'Bsa0024265Wt05378Htcm03964',
-         'BsaHtWt3605',
-         'Bsa0007358Wt0425Ht0725',
-         'Bsa0007184Wt0425Ht0725',
-         'Bsa00235Wt051456Htcm042246',
-         'Bsa0003207Wt0728500188LogWtHt03',
-         'Bsa0009568Wt0473Ht0655']}
+{'DCM': ['BSA0038189WT0423HT0362',
+         'BSA132103433WT',
+         'BSA0010265WT0423HT0651',
+         'BSA00004688WT0816800154LogWT',
+         'BSA0008883WT0444HT0663',
+         'BSA0024265WT05378Htcm03964',
+         'BSAHTWT3605',
+         'BSA0007358WT0425HT0725',
+         'BSA0007184WT0425HT0725',
+         'BSA00235WT051456Htcm042246',
+         'BSA0003207WT0728500188LogWTHT03',
+         'BSA0009568WT0473HT0655']}
 
+name_for_cid[3664] = 'OxygenConsumptionEquationsandTables'
 cid_concepts[3664] = \
-{'DCM': ['Vo2Vestpd10Fio2Fe02',
-         'Vo2maleBsa13811149LogeAge0378Hrf',
-         'Vo2femaleBsa13811704LogeAge0378Hrf',
+{'DCM': ['VO2Vestpd10FIO2FE02',
+         'Vo2maleBSA13811149LogeAge0378Hrf',
+         'Vo2femaleBSA13811704LogeAge0378Hrf',
          'FleischTable',
          'BoothbyTable',
-         'Vo2176Bsa',
+         'VO2176BSA',
          'RobertsonReidTable',
-         'Vo2152Bsa',
-         'Vo2175Bsa']}
+         'VO2152BSA',
+         'VO2175BSA']}
 
+name_for_cid[3666] = 'P50Equations'
 cid_concepts[3666] = \
 {'DCM': ['IfAge30dayP50246',
          'IfAge18yP50272',
@@ -7536,20 +7983,24 @@ cid_concepts[3666] = \
          'IfAge60yP50293',
          'IfAge40yP50274']}
 
+name_for_cid[3667] = 'FraminghamScores'
 cid_concepts[3667] = \
-{'DCM': ['ComparativeLow10YearChdRisk',
-         'YearChdRisk_10',
-         'ComparativeAverage10YearChdRisk']}
+{'DCM': ['ComparativeLow10YearCHDRisk',
+         '_10YearCHDRisk',
+         'ComparativeAverage10YearCHDRisk']}
 
+name_for_cid[3668] = 'FraminghamTables'
 cid_concepts[3668] = \
 {'DCM': ['TotalCholesterolScoreSheetForWomen',
-         'LdlCholesterolScoreSheetForWomen',
+         'LDLCholesterolScoreSheetForWomen',
          'TotalCholesterolScoreSheetForMen',
-         'LdlCholesterolScoreSheetForMen']}
+         'LDLCholesterolScoreSheetForMen']}
 
+name_for_cid[3670] = 'ECGProcedureTypes'
 cid_concepts[3670] = \
-{'SRT': ['LeadEcg_15', 'LeadEcg_18', 'LeadEcg_12']}
+{'SRT': ['_15LeadECG', '_18LeadECG', '_12LeadECG']}
 
+name_for_cid[3671] = 'ReasonforECGExam'
 cid_concepts[3671] = \
 {'SRT': ['OutpatientProcedure',
          'EmergencyProcedure',
@@ -7559,80 +8010,88 @@ cid_concepts[3671] = \
          'EvaluationOfMurmur',
          'ProcedureInCardiacCareUnit']}
 
+name_for_cid[3676] = 'LeadMeasurementTechnique'
 cid_concepts[3676] = \
 {'SRT': ['Median', 'Averaged', 'SingleBeats', 'Representative', 'Routine']}
 
+name_for_cid[3677] = 'SummaryCodesECG'
 cid_concepts[3677] = \
-{'DCM': ['NonDiagnosticEcg'],
- 'SRT': ['BorderlineNormalEcg', 'AbnormalEcg', 'NormalEcg', 'EcgEquivocal']}
+{'DCM': ['NonDiagnosticECG'],
+ 'SRT': ['BorderlineNormalECG', 'AbnormalECG', 'NormalECG', 'ECGEquivocal']}
 
+name_for_cid[3678] = 'QTCorrectionAlgorithms'
 cid_concepts[3678] = \
 {'DCM': ['FraminghamQtcAlgorithm',
-         'HodgesQtCorrectionAlgorithm',
+         'HodgesQTCorrectionAlgorithm',
          'FridericiaQtcAlgorithm',
-         'BazettQtCorrectionAlgorithm']}
+         'BazettQTCorrectionAlgorithm']}
 
+name_for_cid[3680] = 'ECGLeadNoiseDescriptions'
 cid_concepts[3680] = \
 {'MDC': ['ModerateNoise', 'SevereNoise', 'NoNoise', 'NoSignal']}
 
+name_for_cid[3687] = 'ElectrophysiologyWaveformDurations'
 cid_concepts[3687] = \
 {'MDC': ['R3DurationPerLead',
          'POnsetToP1DurationPerLead',
          'S3DurationPerLead',
-         'PqSegmentTimePeriodPerLead',
-         'PpTimePeriodPerLead',
-         'QrsDurationPerLead',
+         'PQSegmentTimePeriodPerLead',
+         'PPTimePeriodPerLead',
+         'QRSDurationPerLead',
          'VentricularActivationTimePerLead',
          'S1DurationPerLead',
-         'QtuTimePeriodPerLead',
+         'QTUTimePeriodPerLead',
          'PDurationPerLead',
          'POnsetToP2DurationPerLead',
          'R2DurationPerLead',
-         'POffsetToQrsOnsetDurationPerLead',
+         'POffsetToQRSOnsetDurationPerLead',
          'S2DurationPerLead',
-         'RrTimePeriodPerLead',
+         'RRTimePeriodPerLead',
          'R1DurationPerLead',
          'POnsetToP3DurationPerLead',
          'QDurationPerLead',
-         'PqTimePeriodPerLead',
-         'QtDurationPerLead']}
+         'PQTimePeriodPerLead',
+         'QTDurationPerLead']}
 
+name_for_cid[3688] = 'ElectrophysiologyWaveformVoltages'
 cid_concepts[3688] = \
 {'MDC': ['PMinimumAmplitudePerLead',
          'R1AmplitudePerLead',
          'S2AmplitudePerLead',
-         'AmplitudeAt20MsIntoStSegmentPerLead',
-         'StAmplitudePerLead',
+         'AmplitudeAt20msIntoSTSegmentPerLead',
+         'STAmplitudePerLead',
          'TMinimumAmplitudePerLead',
          'SAmplitudePerLead',
          'S1AmplitudePerLead',
-         'AmplitudeAt40MsIntoStSegmentPerLead',
+         'AmplitudeAt40msIntoSTSegmentPerLead',
          'QAmplitudePerLead',
          'RAmplitudePerLead',
          'R3AmplitudePerLead',
-         'AmplitudeAt60MsIntoStSegmentPerLead',
+         'AmplitudeAt60msIntoSTSegmentPerLead',
          'TMaximumAmplitudePerLead',
          'JPointAmplitudePerLead',
          'R2AmplitudePerLead',
          'P3AmplitudePerLead',
-         'AmplitudeAt80MsIntoStSegmentPerLead',
+         'AmplitudeAt80msIntoSTSegmentPerLead',
          'S3AmplitudePerLead',
          'PMaximumAmplitudePerLead']}
 
+name_for_cid[3689] = 'ECGGlobalWaveformDurations'
 cid_concepts[3689] = \
 {'MDC': ['PDurationGlobal',
-         'PpTimePeriodGlobal',
-         'RrTimePeriodGlobal',
-         'QtDurationGlobal',
-         'PqSegmentTimePeriodGlobal',
-         'QrsDurationGlobal',
-         'PqTimePeriodGlobal',
-         'PrTimePeriodGlobal',
-         'QtuTimePeriodGlobal']}
+         'PPTimePeriodGlobal',
+         'RRTimePeriodGlobal',
+         'QTDurationGlobal',
+         'PQSegmentTimePeriodGlobal',
+         'QRSDurationGlobal',
+         'PQTimePeriodGlobal',
+         'PRTimePeriodGlobal',
+         'QTUTimePeriodGlobal']}
 
+name_for_cid[3690] = 'ECGControlVariablesNumeric'
 cid_concepts[3690] = \
 {'MDC': ['LowPassFilterCutoffFreq',
-         'InterpolatorSnr',
+         'InterpolatorSNR',
          'NotchFilterFrequency',
          'SampleRate',
          'NotchFilterBandwidth',
@@ -7643,6 +8102,7 @@ cid_concepts[3690] = \
          'SampleSkew',
          'TimeOffset']}
 
+name_for_cid[3691] = 'ECGControlVariablesText'
 cid_concepts[3691] = \
 {'MDC': ['Interpolator',
          'HighPassFilter',
@@ -7653,6 +8113,7 @@ cid_concepts[3691] = \
          'BaselineDescription',
          'LowPassFilter']}
 
+name_for_cid[3700] = 'CathDiagnosis'
 cid_concepts[3700] = \
 {'SRT': ['AcuteMyocardialInfarction',
          'StableAngina',
@@ -7663,10 +8124,10 @@ cid_concepts[3700] = \
          'CongestiveHeartFailure',
          'SilentIschemia',
          'RecurrentAnginaPostStent',
-         'RecurrentAnginaPostCabg',
+         'RecurrentAnginaPostCABG',
          'AcuteMitralRegurgitation',
-         'RecurrentAnginaPostPtca',
-         'RecurrentAnginaPostDca',
+         'RecurrentAnginaPostPTCA',
+         'RecurrentAnginaPostDCA',
          'MitralValveDisease',
          'VentricularTachycardia',
          'HeartDiseaseCongenital',
@@ -7698,11 +8159,12 @@ cid_concepts[3700] = \
          'Myocarditis',
          'MitralStenosis',
          'MitralRegurgitation',
-         'SPMiPositiveStressForIschemia',
+         'SPMIPositiveStressForIschemia',
          'SubacuteBacterialEndocarditis',
          'CongestiveCardiomyopathy',
          'RestrictiveCardiomyopathy']}
 
+name_for_cid[3701] = 'CardiacValvesandTracts'
 cid_concepts[3701] = \
 {'SRT': ['AorticValve',
          'PulmonaryValve',
@@ -7710,6 +8172,7 @@ cid_concepts[3701] = \
          'LeftVentricleOutflowTract',
          'TricuspidValve']}
 
+name_for_cid[3703] = 'WallMotion'
 cid_concepts[3703] = \
 {'DCM': ['NotVisualized'],
  'SRT': ['Akinesis',
@@ -7723,10 +8186,12 @@ cid_concepts[3703] = \
          'Dyskinesis',
          'NotEvaluated']}
 
+name_for_cid[3704] = 'MyocardiumWallMorphologyFindings'
 cid_concepts[3704] = \
 {'DCM': ['ScarredMyocardium', 'ThinningMyocardium', 'NormalMyocardium'],
  'SRT': ['VentricularAneurysm']}
 
+name_for_cid[3705] = 'ChamberSize'
 cid_concepts[3705] = \
 {'SRT': ['MarkedlyEnlargedCardiacChamber',
          'NormalSizeCardiacChamber',
@@ -7734,12 +8199,15 @@ cid_concepts[3705] = \
          'AbnormallySmallCardiacChamber',
          'ModeratelyEnlargedCardiacChamber']}
 
+name_for_cid[3706] = 'OverallContractility'
 cid_concepts[3706] = \
 {'SRT': ['Akinesis', 'Hypokinesis', 'Hyperkinesis', 'NormalWallContractility']}
 
+name_for_cid[3707] = 'VSDDescription'
 cid_concepts[3707] = \
 {'SRT': ['NonRestrictive', 'Membranous', 'None', 'Restrictive']}
 
+name_for_cid[3709] = 'AorticRootDescription'
 cid_concepts[3709] = \
 {'SRT': ['NormalAorticRoot',
          'AneurysmOfAorticRoot',
@@ -7748,11 +8216,13 @@ cid_concepts[3709] = \
          'EnlargedAorticRoot',
          'AnnularAbscessOfAorticRoot']}
 
+name_for_cid[3710] = 'CoronaryDominance'
 cid_concepts[3710] = \
 {'SRT': ['BalancedCoronaryDominance',
          'LeftCoronaryDominance',
          'RightCoronaryDominance']}
 
+name_for_cid[3711] = 'ValvularAbnormalities'
 cid_concepts[3711] = \
 {'DCM': ['HeartValveFlail'],
  'SRT': ['Stenosis',
@@ -7761,6 +8231,7 @@ cid_concepts[3711] = \
          'ImmobileHeartValve',
          'CalcifiedHeartValve']}
 
+name_for_cid[3712] = 'VesselDescriptors'
 cid_concepts[3712] = \
 {'SRT': ['Stented',
          'Calcified',
@@ -7777,21 +8248,25 @@ cid_concepts[3712] = \
          'Bifurcation',
          'Tortuous']}
 
+name_for_cid[3713] = 'TIMIFlowCharacteristics'
 cid_concepts[3713] = \
-{'SRT': ['CompletePerfusion_3',
-         'PartialPerfusion_2',
-         'PenetrationWithoutPerfusion_1',
-         'NoPerfusion_0']}
+{'SRT': ['_3CompletePerfusion',
+         '_2PartialPerfusion',
+         '_1PenetrationWithoutPerfusion',
+         '_0NoPerfusion']}
 
+name_for_cid[3714] = 'Thrombus'
 cid_concepts[3714] = \
 {'SRT': ['DefiniteThrombus',
          'SevereThrombus',
          'PossibleThrombus',
          'NoThrombus']}
 
+name_for_cid[3715] = 'LesionMargin'
 cid_concepts[3715] = \
 {'SRT': ['Smooth', 'Irregular', 'MultipleIrregularities', 'Ulcerative']}
 
+name_for_cid[3716] = 'Severity'
 cid_concepts[3716] = \
 {'SRT': ['Mild',
          'MildToModerate',
@@ -7801,6 +8276,7 @@ cid_concepts[3716] = \
          'ModerateToSevere',
          'Fatal']}
 
+name_for_cid[3717] = 'MyocardialWallSegments'
 cid_concepts[3717] = \
 {'SRT': ['LeftVentricleMidAnteriorSegment',
          'LeftVentricleMidAnterolateralSegment',
@@ -7820,6 +8296,7 @@ cid_concepts[3717] = \
          'LeftVentricleBasalInferolateralSegment',
          'LeftVentricleMidInferoseptalSegment']}
 
+name_for_cid[3718] = 'MyocardialWallSegmentsinProjection'
 cid_concepts[3718] = \
 {'SRT': ['LeftVentricleBasalAnteriorSegment',
          'MyocardiumOfAnterolateralRegion',
@@ -7833,13 +8310,15 @@ cid_concepts[3718] = \
          'MyocardiumOfPosterolateralRegion',
          'MyocardiumOfDiaphragmaticRegion']}
 
+name_for_cid[3719] = 'CanadianClinicalClassification'
 cid_concepts[3719] = \
 {'SRT': ['ChestPainNotPresent',
          'AnginaClassI',
-         'AnginaClassIv',
-         'AnginaClassIii',
-         'AnginaClassIi']}
+         'AnginaClassIV',
+         'AnginaClassIII',
+         'AnginaClassII']}
 
+name_for_cid[3721] = 'CardiovascularSurgeries'
 cid_concepts[3721] = \
 {'SRT': ['AblationOperationForArrhythmia',
          'ImplantationOfCardiacPacemaker',
@@ -7851,21 +8330,26 @@ cid_concepts[3721] = \
          'AbdominalAorticAneurysmStenting',
          'HeartTransplant']}
 
+name_for_cid[3722] = 'DiabeticTherapy'
 cid_concepts[3722] = \
 {'SRT': ['DiabeticOnInsulin',
          'DiabeticOnOralTreatment',
          'DiabeticOnDietaryTreatment']}
 
+name_for_cid[3723] = 'MITypes'
 cid_concepts[3723] = \
-{'SRT': ['NonStElevationMyocardialInfarction',
-         'StElevationMyocardialInfarction']}
+{'SRT': ['NonSTElevationMyocardialInfarction',
+         'STElevationMyocardialInfarction']}
 
+name_for_cid[3724] = 'SmokingHistory'
 cid_concepts[3724] = \
 {'SRT': ['NoHistoryOfSmoking', 'FormerSmoker', 'CurrentSmoker']}
 
+name_for_cid[3726] = 'IndicationsforCoronaryIntervention'
 cid_concepts[3726] = \
 {'DCM': ['CoronaryLesion50Stenosis'], 'SRT': ['CardiogenicShock']}
 
+name_for_cid[3727] = 'IndicationsforCatheterization'
 cid_concepts[3727] = \
 {'SRT': ['ValvularHeartDisease',
          'Arrhythmia',
@@ -7877,6 +8361,7 @@ cid_concepts[3727] = \
          'HeartDiseaseCongenital',
          'HeartTransplant']}
 
+name_for_cid[3728] = 'CathFindings'
 cid_concepts[3728] = \
 {'SRT': ['PulmonaryHypertension',
          'PericardialTamponade',
@@ -7913,27 +8398,35 @@ cid_concepts[3728] = \
          'DepressionOfLeftVentricularSystolicFunction',
          'HypertrophicCardiomyopathyWithoutObstruction']}
 
+name_for_cid[3729] = 'AdmissionStatus'
 cid_concepts[3729] = \
 {'SRT': ['Elective', 'Transfer', 'EmergencyDepartment']}
 
+name_for_cid[3730] = 'InsurancePayor'
 cid_concepts[3730] = \
 {}
 
+name_for_cid[3733] = 'PrimaryCauseofDeath'
 cid_concepts[3733] = \
 {}
 
+name_for_cid[3735] = 'AcuteCoronarySyndromeTimePeriod'
 cid_concepts[3735] = \
 {}
 
+name_for_cid[3736] = 'NYHAClassification'
 cid_concepts[3736] = \
-{'SRT': ['NyhaClassI', 'NyhaClassIi', 'NyhaClassIii', 'NyhaClassIv']}
+{'SRT': ['NYHAClassI', 'NYHAClassII', 'NYHAClassIII', 'NYHAClassIV']}
 
+name_for_cid[3737] = 'NoninvasiveTestIschemia'
 cid_concepts[3737] = \
 {}
 
+name_for_cid[3738] = 'PreCathAnginaType'
 cid_concepts[3738] = \
 {}
 
+name_for_cid[3739] = 'CathProcedureType'
 cid_concepts[3739] = \
 {'DCM': ['PercutaneousCoronaryIntervention'],
  'SRT': ['CatheterizationOfBothLeftAndRightHeartWithGraft',
@@ -7941,18 +8434,21 @@ cid_concepts[3739] = \
          'CatheterizationOfBothLeftAndRightHeartWithoutGraft',
          'CatheterizationOfLeftHeart']}
 
+name_for_cid[3740] = 'ThrombolyticAdministration'
 cid_concepts[3740] = \
-{'SRT': ['AdministeredBetween3And6HoursBeforePci',
-         'AdministeredLessThan3HoursBeforePci',
-         'AdministeredBetween6HoursAnd7DaysBeforePci',
+{'SRT': ['AdministeredBetween3And6HoursBeforePCI',
+         'AdministeredLessThan3HoursBeforePCI',
+         'AdministeredBetween6HoursAnd7DaysBeforePCI',
          'Contraindicated']}
 
+name_for_cid[3741] = 'MedicationAdministration,LabVisit'
 cid_concepts[3741] = \
 {'SRT': ['AdministeredAfterLabVisit',
          'Contraindicated',
          'AdministeredDuringLabVisit',
          'AdministeredBeforeLabVisit']}
 
+name_for_cid[3742] = 'MedicationAdministration,PCI'
 cid_concepts[3742] = \
 {'SRT': ['AdministeredDuringPercutaneousCoronaryIntervention',
          'AdministeredPriorToPercutaneousCoronaryIntervention',
@@ -7960,20 +8456,24 @@ cid_concepts[3742] = \
          'Contraindicated',
          'NotAdministered']}
 
+name_for_cid[3743] = 'Clopidogrel/TiclopidineAdministration'
 cid_concepts[3743] = \
-{'SRT': ['AdministeredLessThan72HoursBeforePci',
+{'SRT': ['AdministeredLessThan72HoursBeforePCI',
          'AdministeredAfterPercutaneousCoronaryIntervention',
          'Contraindicated',
          'NotAdministered']}
 
+name_for_cid[3744] = 'EFTestingMethod'
 cid_concepts[3744] = \
 {'SRT': ['Echocardiography',
          'CardiacVentriculography',
          'RadionuclideVentriculography']}
 
+name_for_cid[3745] = 'CalculationMethod'
 cid_concepts[3745] = \
 {'SRT': ['Estimated', 'Calculated']}
 
+name_for_cid[3746] = 'PercutaneousEntrySite'
 cid_concepts[3746] = \
 {'SRT': ['ViaFemoralVein',
          'ViaRadialArtery',
@@ -7983,30 +8483,37 @@ cid_concepts[3746] = \
          'ViaFemoralArtery',
          'ViaBrachialArtery']}
 
+name_for_cid[3747] = 'PercutaneousClosure'
 cid_concepts[3747] = \
 {}
 
+name_for_cid[3748] = 'AngiographicEFTestingMethod'
 cid_concepts[3748] = \
 {'DCM': ['BiPlaneAngiography', 'SinglePlaneAngiography']}
 
+name_for_cid[3749] = 'PCIProcedureResult'
 cid_concepts[3749] = \
 {}
 
+name_for_cid[3750] = 'PreviouslyDilatedLesion'
 cid_concepts[3750] = \
 {}
 
+name_for_cid[3752] = 'GuidewireCrossing'
 cid_concepts[3752] = \
 {'DCM': ['GuidewireCrossingLesionSuccessful',
          'GuidewireCrossingLesionUnsuccessful']}
 
+name_for_cid[3754] = 'VascularComplications'
 cid_concepts[3754] = \
 {'SRT': ['Pseudoaneurysm',
          'Bleeding',
          'ArterialDissection',
-         'AvFistula',
+         'AVFistula',
          'LossOfDistalPulse',
          'OcclusionOfArtery']}
 
+name_for_cid[3755] = 'CathComplications'
 cid_concepts[3755] = \
 {'SRT': ['CardiacArrest',
          'RenalFailure',
@@ -8019,21 +8526,23 @@ cid_concepts[3755] = \
          'CardiogenicShock',
          'EmergencyCoronaryArteryBypass']}
 
+name_for_cid[3756] = 'CardiacPatientRiskFactors'
 cid_concepts[3756] = \
 {'SRT': ['HistoryOfCerebrovascularDisease',
          'HistoryOfMyocardialInfarction',
-         'InsulinDependentMotherIdm',
+         'InsulinDependentMotherIDM',
          'HistoryOfDiabetes',
          'HistoryOfHypercholesterolemia',
          'HistoryOfCongestiveHeartFailure',
          'HistoryOfChronicLungDisease',
          'HistoryOfRenalFailure',
          'Arrhythmia',
-         'HivPositive',
+         'HIVPositive',
          'PeripheralVascularDisease',
          'HistoryOfHypertension'],
  'UMLS': ['InfantOfMotherWithGestationalDiabetes']}
 
+name_for_cid[3757] = 'CardiacDiagnosticProcedures'
 cid_concepts[3757] = \
 {'SRT': ['TransthoracicEchocardiography',
          'CardiacCatheterization',
@@ -8043,23 +8552,24 @@ cid_concepts[3757] = \
          'PharmacologicalStressTest',
          'TransesophagealEchocardiography',
          'PerfusionImagingNuclear',
-         'PetHeartStudy',
-         'CardiacMri',
+         'PETHeartStudy',
+         'CardiacMRI',
          'NuclearMedicineCardiovascularStudy',
          'StressTestUsingCardiacPacing',
-         'CardiacCt',
+         'CardiacCT',
          'ExerciseStressEchocardiography',
-         'CardiacMriStress',
+         'CardiacMRIStress',
          'MagneticResonanceAngiography',
-         'CtAngiographyOfCoronaryArteries',
-         'CardiacCtForCalciumScoring',
+         'CTAngiographyOfCoronaryArteries',
+         'CardiacCTForCalciumScoring',
          'RadionuclideAngiocardiography',
          'PharmacologicAndExerciseStressTest',
-         'Spect',
+         'SPECT',
          'CardiacBloodPoolImagingNuclear',
          'CardiacCathCoronaryAngiogramAndLeftVentriculogram',
          'RadionuclideMyocardialPerfusionStudy']}
 
+name_for_cid[3758] = 'CardiovascularFamilyHistory'
 cid_concepts[3758] = \
 {'SRT': ['NoFamilyHistoryOfDiabetes',
          'FamilyHistoryOfDiabetesMellitus',
@@ -8069,14 +8579,16 @@ cid_concepts[3758] = \
          'FamilyHistoryUnknown',
          'NoFamilyHistoryOfCardiovascularDisease']}
 
+name_for_cid[3760] = 'HypertensionTherapy'
 cid_concepts[3760] = \
 {'SRT': ['CalciumChannelBlocker',
-         'AceInhibitor',
+         'ACEInhibitor',
          'Diuretic',
          'NitrateVasodilator',
-         'AngiotensinIiReceptorAntagonist',
+         'AngiotensinIIReceptorAntagonist',
          'BetaBlocker']}
 
+name_for_cid[3761] = 'AntilipemicAgents'
 cid_concepts[3761] = \
 {'SRT': ['BileAcidSequestrant',
          'FishOils',
@@ -8084,18 +8596,21 @@ cid_concepts[3761] = \
          'Fibrate',
          'AnionExchangeResin']}
 
+name_for_cid[3762] = 'AntiarrhythmicAgents'
 cid_concepts[3762] = \
-{'SRT': ['ClassIvAntiarrhythmicAgent',
+{'SRT': ['ClassIVAntiarrhythmicAgent',
          'ClassIAntiarrhythmicAgent',
-         'ClassIiiAntiarrhythmicAgent',
-         'ClassIiAntiarrhythmicAgent']}
+         'ClassIIIAntiarrhythmicAgent',
+         'ClassIIAntiarrhythmicAgent']}
 
+name_for_cid[3764] = 'MyocardialInfarctionTherapies'
 cid_concepts[3764] = \
 {'SRT': ['CoronaryArteryBypassGraft',
          'InsertionOfCoronaryArteryStent',
          'PercutaneousCoronaryIntervention',
          'ThrombolyticTherapy']}
 
+name_for_cid[3769] = 'ConcernTypes'
 cid_concepts[3769] = \
 {'SRT': ['Disease',
          'Finding',
@@ -8104,6 +8619,7 @@ cid_concepts[3769] = \
          'FunctionalPerformanceAndActivity',
          'FindingReportedByPatientInformant']}
 
+name_for_cid[3770] = 'ProblemStatus'
 cid_concepts[3770] = \
 {'SRT': ['ProblemResolved',
          'WellControlled',
@@ -8115,6 +8631,7 @@ cid_concepts[3770] = \
          'ActiveProblem',
          'InactiveProblem']}
 
+name_for_cid[3772] = 'HealthStatus'
 cid_concepts[3772] = \
 {'SRT': ['Alive',
          'Deceased',
@@ -8127,9 +8644,11 @@ cid_concepts[3772] = \
          'InRemission',
          'SeverelyDisabled']}
 
+name_for_cid[3773] = 'UseStatus'
 cid_concepts[3773] = \
 {'SRT': ['Suspended', 'Ended', 'InProgress']}
 
+name_for_cid[3774] = 'SocialHistory'
 cid_concepts[3774] = \
 {'SRT': ['TobaccoSmokingBehavior',
          'AlcoholConsumption',
@@ -8137,15 +8656,18 @@ cid_concepts[3774] = \
          'Nutrition',
          'DrugMisuseBehavior']}
 
+name_for_cid[3777] = 'ImplantedDevices'
 cid_concepts[3777] = \
 {'SRT': ['CardiacPacemaker',
          'InsulinPump',
          'ImplantableDefibrillator',
          'LeftVentricularAssistDevice']}
 
+name_for_cid[3778] = 'Stages'
 cid_concepts[3778] = \
 {'SRT': ['Stage0', 'Stage3', 'Stage1', 'Stage5', 'Stage2', 'Stage4']}
 
+name_for_cid[3802] = 'PlaqueStructures'
 cid_concepts[3802] = \
 {'SRT': ['Hyperplasia',
          'PathologicCalcification',
@@ -8154,9 +8676,11 @@ cid_concepts[3802] = \
          'Mixed',
          'FattyDegeneration']}
 
+name_for_cid[3804] = 'StenosisMeasurementMethods'
 cid_concepts[3804] = \
-{'DCM': ['Ecst', 'Nascet', 'AreaBasedMethod', 'DiameterBasedMethod']}
+{'DCM': ['ECST', 'NASCET', 'AreaBasedMethod', 'DiameterBasedMethod']}
 
+name_for_cid[3805] = 'StenosisTypes'
 cid_concepts[3805] = \
 {'SRT': ['Thrombosis',
          'Compression',
@@ -8166,14 +8690,17 @@ cid_concepts[3805] = \
          'ArterioscleroticVascularDisease',
          'Fibrous',
          'CysticAdventitialDisease',
-         'RaynaudSDisease']}
+         'RaynaudDisease']}
 
+name_for_cid[3806] = 'StenosisShape'
 cid_concepts[3806] = \
 {'SRT': ['Concentric', 'Eccentric']}
 
+name_for_cid[3807] = 'VolumeMeasurementMethods'
 cid_concepts[3807] = \
 {'DCM': ['VolumeBasedMethod', 'AreaBasedMethod', 'DiameterBasedMethod']}
 
+name_for_cid[3808] = 'AneurysmTypes'
 cid_concepts[3808] = \
 {'SRT': ['MultipleAneurysm',
          'DissectingAneurysm',
@@ -8194,9 +8721,11 @@ cid_concepts[3808] = \
          'ThrombosedAneurysm',
          'CalcifiedAneurysm']}
 
+name_for_cid[3809] = 'AssociatedConditions'
 cid_concepts[3809] = \
-{'SRT': ['TraumaticAbnormality', 'MarfanSSyndrome']}
+{'SRT': ['TraumaticAbnormality', 'MarfanSyndrome']}
 
+name_for_cid[3810] = 'VascularMorphology'
 cid_concepts[3810] = \
 {'SRT': ['Stent',
          'FibromuscularDysplasia',
@@ -8216,13 +8745,16 @@ cid_concepts[3810] = \
          'Aneurysm',
          'Diverticulum']}
 
+name_for_cid[3813] = 'StentFindings'
 cid_concepts[3813] = \
 {'DCM': ['StentFracture', 'StentDisintegration', 'Endoleak'],
  'SRT': ['Hypoplasia', 'MigrationOfImplantOrInternalDevice', 'Stenosis']}
 
+name_for_cid[3814] = 'StentComposition'
 cid_concepts[3814] = \
 {'SRT': ['MetalStent', 'PlasticStent']}
 
+name_for_cid[3815] = 'SourceofVascularFinding'
 cid_concepts[3815] = \
 {'SRT': ['Hyperplasia',
          'Embolism',
@@ -8233,6 +8765,7 @@ cid_concepts[3815] = \
          'Surgical',
          'AfterProcedure']}
 
+name_for_cid[3817] = 'VascularSclerosisTypes'
 cid_concepts[3817] = \
 {'SRT': ['DiffuseFibroelastosis',
          'Phlebosclerosis',
@@ -8252,17 +8785,20 @@ cid_concepts[3817] = \
          'ElasticVascularSclerosis',
          'FattyStreaks']}
 
+name_for_cid[3820] = 'NoninvasiveVascularProcedures'
 cid_concepts[3820] = \
-{'SRT': ['VascularMri',
+{'SRT': ['VascularMRI',
          'PeripheralAngiography',
-         'CardiacMri',
-         'CardiovascularCt',
-         'CtOfAbdominalAorta',
+         'CardiacMRI',
+         'CardiovascularCT',
+         'CTOfAbdominalAorta',
          'TrunkAngiography']}
 
+name_for_cid[3821] = 'PapillaryMuscleIncluded/Excluded'
 cid_concepts[3821] = \
 {'DCM': ['PapillaryMuscleIncluded', 'PapillaryMuscleExcluded']}
 
+name_for_cid[3823] = 'RespiratoryStatus'
 cid_concepts[3823] = \
 {'DCM': ['CentralBreathingPosition'],
  'SRT': ['ValsalvaManeuver',
@@ -8271,18 +8807,20 @@ cid_concepts[3823] = \
          'Inspiration',
          'AutonomousBreathing']}
 
+name_for_cid[3826] = 'HeartRhythm'
 cid_concepts[3826] = \
 {'SRT': ['AtrialArrhythmia', 'NormalSinusRhythm', 'VentricularArrhythmia']}
 
+name_for_cid[3827] = 'VesselSegments'
 cid_concepts[3827] = \
-{'BARI': ['stMarginalCoronaryArteryLaterals_1',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdMarginalCoronaryArteryLaterals_3',
+{'BARI': ['_1stMarginalCoronaryArteryLaterals',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'rdDiagonalCoronaryArteryLaterals_3'],
+          '_3rdDiagonalCoronaryArteryLaterals'],
  'SRT': ['AnteriorCardiacVein',
          'SplenicArtery',
          'InferiorRightPulmonaryVein',
@@ -8334,8 +8872,8 @@ cid_concepts[3827] = \
          'SaphenopoplitealJunction',
          'UterineArtery',
          'UmbilicalArtery',
-         'CockettSPerforatingVein',
-         'BoydSPerforatingVein',
+         'CockettPerforatingVein',
+         'BoydPerforatingVein',
          'RightCoronaryArtery',
          'SubclavianVein',
          'ProfundaFemorisVein',
@@ -8373,10 +8911,10 @@ cid_concepts[3827] = \
          'UlnarVein',
          'MiddleCerebralArteryM1Segment',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
+         '_3rdDiagonalCoronaryArtery',
          'DeepPalmarVenousArch',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'AnteriorCerebralArtery',
          'GreatSaphenousVeinOfThigh',
          'PosteriorTibialArtery',
@@ -8386,27 +8924,27 @@ cid_concepts[3827] = \
          'ExternalIliacVein',
          'CommonIliacArteryBifurcation',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
          'CircumflexCoronaryArtery',
          'RadialVein',
          'BrachialArtery',
          'GreatSaphenousVeinOfCalf',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'MidCircumflexCoronaryArtery',
          'PosteriorCerebralArteryP1Segment',
          'LeftPosterolateralCircumflexCoronaryArtery',
          'CarotidSiphon',
          'MiddleCerebralArteryM2Segment',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
-         'ndMarginalCoronaryArtery_2',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainBranchOfPortalVein',
          'PosteriorCerebralArteryP2Segment',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightMainBranchOfPortalVein',
          'LumbarArtery',
          'PosteriorDescendingRightCoronaryArtery',
@@ -8415,10 +8953,10 @@ cid_concepts[3827] = \
          'AzygosVein',
          'ThighPerforator',
          'PulmonaryVein',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'TerminalInternalCarotidArtery',
          'RenalArtery',
          'InternalCarotidArteryC5Segment',
@@ -8462,7 +9000,7 @@ cid_concepts[3827] = \
          'AxillaryVein',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
          'BrachialVein',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'PosteriorCommunicatingArtery',
          'DorsalisPedisArtery',
          'GastricArtery',
@@ -8474,6 +9012,7 @@ cid_concepts[3827] = \
          'InternalCarotidArteryC6Segment',
          'SegmentalArtery']}
 
+name_for_cid[3829] = 'PulmonaryArteries'
 cid_concepts[3829] = \
 {'SRT': ['SuprapulmonicValveArea',
          'RightPulmonaryArtery',
@@ -8481,26 +9020,31 @@ cid_concepts[3829] = \
          'PulmonaryValveSinuses',
          'LeftPulmonaryArtery']}
 
+name_for_cid[3831] = 'StenosisLength'
 cid_concepts[3831] = \
 {'SRT': ['Long', 'Short']}
 
+name_for_cid[3832] = 'StenosisGrade'
 cid_concepts[3832] = \
 {'SRT': ['Mild', 'Severe', 'Moderate']}
 
+name_for_cid[3833] = 'CardiacEjectionFraction'
 cid_concepts[3833] = \
-{'LN': ['LeftVentricularEjectionFractionByCt',
-        'RightVentricularEjectionFractionByMr',
-        'LeftVentricularEjectionFractionByMr',
-        'RightVentricularEjectionFractionByCt']}
+{'LN': ['LeftVentricularEjectionFractionByCT',
+        'RightVentricularEjectionFractionByMR',
+        'LeftVentricularEjectionFractionByMR',
+        'RightVentricularEjectionFractionByCT']}
 
+name_for_cid[3835] = 'CardiacVolumeMeasurements'
 cid_concepts[3835] = \
-{'DCM': ['LeftAtrialEdVolume', 'LeftAtrialEsVolume'],
- 'LN': ['RightVentricularEsVolume',
-        'LeftVentricularEsVolume',
-        'RightVentricularEdVolume',
-        'LeftVentricularEdVolume'],
+{'DCM': ['LeftAtrialEDVolume', 'LeftAtrialESVolume'],
+ 'LN': ['RightVentricularESVolume',
+        'LeftVentricularESVolume',
+        'RightVentricularEDVolume',
+        'LeftVentricularEDVolume'],
  'SRT': ['StrokeVolume']}
 
+name_for_cid[3836] = 'TimebasedPerfusionMeasurements'
 cid_concepts[3836] = \
 {'DCM': ['SignalTimeToPeak',
          'SignalIncreaseStartTime',
@@ -8508,16 +9052,19 @@ cid_concepts[3836] = \
          'SignalBaselineStart',
          'SignalBaselineEnd']}
 
+name_for_cid[3837] = 'FiducialFeature'
 cid_concepts[3837] = \
 {'SRT': ['AorticBifurcation',
          'CommonIliacBifurcation',
          'Ostium',
          'RenalArtery']}
 
+name_for_cid[3838] = 'DiameterDerivation'
 cid_concepts[3838] = \
 {'DCM': ['AnteriorPosterior'],
  'SRT': ['Transverse', 'Maximum', 'Minimum', 'Mean']}
 
+name_for_cid[3839] = 'CoronaryVeins'
 cid_concepts[3839] = \
 {'SRT': ['AnteriorCardiacVein',
          'SmallCardiacVein',
@@ -8530,6 +9077,7 @@ cid_concepts[3839] = \
          'AtrioventricularVein',
          'AtrialVein']}
 
+name_for_cid[3840] = 'PulmonaryVeins'
 cid_concepts[3840] = \
 {'SRT': ['SuperiorRightPulmonaryVein',
          'LeftPulmonaryVein',
@@ -8539,9 +9087,11 @@ cid_concepts[3840] = \
          'InferiorRightPulmonaryVein',
          'SuperiorLeftPulmonaryVein']}
 
+name_for_cid[3843] = 'MyocardialSubsegment'
 cid_concepts[3843] = \
 {'SRT': ['Endocardial', 'Epicardial']}
 
+name_for_cid[3850] = 'ContrastBolusSubstance'
 cid_concepts[3850] = \
 {'DCM': ['NonIonicIodinatedContrastAgent'],
  'SRT': ['Gadolinium',
@@ -8592,6 +9142,7 @@ cid_concepts[3850] = \
          'Ipodate',
          'IodizedOil']}
 
+name_for_cid[4] = 'AnatomicRegion'
 cid_concepts[4] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -8711,7 +9262,7 @@ cid_concepts[4] = \
          'Brain',
          'OccipitalVein',
          'UmbilicalArtery',
-         'BoydSPerforatingVein',
+         'BoydPerforatingVein',
          'Larynx',
          'Penis',
          'SubclavianVein',
@@ -8731,7 +9282,7 @@ cid_concepts[4] = \
          'Tongue',
          'SystemicVenousAtrium',
          'CommonIliacArtery',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'InferiorLeftPulmonaryVein',
          'Mandible',
          'GreatCardiacVein',
@@ -8929,6 +9480,7 @@ cid_concepts[4] = \
          'UpperArm',
          'Pharynx']}
 
+name_for_cid[400] = 'AuditEventID'
 cid_concepts[400] = \
 {'DCM': ['ApplicationActivity',
          'ProcedureRecord',
@@ -8936,16 +9488,17 @@ cid_concepts[400] = \
          'NetworkEntry',
          'Import',
          'Export',
-         'DicomStudyDeleted',
-         'DicomInstancesTransferred',
-         'DicomInstancesAccessed',
+         'DICOMStudyDeleted',
+         'DICOMInstancesTransferred',
+         'DICOMInstancesAccessed',
          'UserAuthentication',
-         'BeginTransferringDicomInstances',
+         'BeginTransferringDICOMInstances',
          'SecurityAlert',
          'AuditLogUsed',
          'Query',
          'OrderRecord']}
 
+name_for_cid[4005] = 'PartialViewSectionforMammography'
 cid_concepts[4005] = \
 {'SRT': ['Posterior',
          'Inferior',
@@ -8955,6 +9508,7 @@ cid_concepts[4005] = \
          'Lateral',
          'Anterior']}
 
+name_for_cid[4009] = 'DXAnatomyImaged'
 cid_concepts[4009] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -9064,6 +9618,7 @@ cid_concepts[4009] = \
          'Shoulder',
          'UpperArm']}
 
+name_for_cid[401] = 'AuditEventTypeCode'
 cid_concepts[401] = \
 {'DCM': ['AuditRecordingStopped',
          'UseOfRestrictedFunction',
@@ -9094,6 +9649,7 @@ cid_concepts[401] = \
          'Logout',
          'SessionStart']}
 
+name_for_cid[4010] = 'DXView'
 cid_concepts[4010] = \
 {'SRT': ['AnteroPosterior',
          'LateralMedial',
@@ -9138,6 +9694,7 @@ cid_concepts[4010] = \
          'RightLateral',
          'SagittalObliqueAxial']}
 
+name_for_cid[4011] = 'DXViewModifier'
 cid_concepts[4011] = \
 {'DCM': ['Crosstable'],
  'SRT': ['Caudad',
@@ -9148,6 +9705,7 @@ cid_concepts[4011] = \
          'MouthClosed',
          'Transorbital']}
 
+name_for_cid[4012] = 'ProjectionEponymousName'
 cid_concepts[4012] = \
 {'SRT': ['Waters',
          'Lauenstein',
@@ -9254,9 +9812,11 @@ cid_concepts[4012] = \
          'GaynorHart',
          'Fuchs']}
 
+name_for_cid[4013] = 'AnatomicRegionforMammography'
 cid_concepts[4013] = \
 {'SRT': ['Breast']}
 
+name_for_cid[4014] = 'ViewforMammography'
 cid_concepts[4014] = \
 {'SRT': ['LateroMedial',
          'MedioLateralOblique',
@@ -9270,6 +9830,7 @@ cid_concepts[4014] = \
          'MedioLateral',
          'CaudoCranialFromBelow']}
 
+name_for_cid[4015] = 'ViewModifierforMammography'
 cid_concepts[4015] = \
 {'SRT': ['Cleavage',
          'AxillaryTail',
@@ -9286,12 +9847,14 @@ cid_concepts[4015] = \
          'RolledInferior',
          'InfraMammaryFold']}
 
+name_for_cid[4016] = 'AnatomicRegionforIntraoralRadiography'
 cid_concepts[4016] = \
 {'SRT': ['Mandible',
          'Maxilla',
          'TeethGumsAndSupportingStructures',
          'JawRegion']}
 
+name_for_cid[4017] = 'AnatomicRegionModifierforIntraoralRadiography'
 cid_concepts[4017] = \
 {'SRT': ['SecondMolarRegion',
          'CentralIncisorRegion',
@@ -9302,6 +9865,7 @@ cid_concepts[4017] = \
          'CanineRegion',
          'FirstPremolarRegion']}
 
+name_for_cid[4018] = 'PrimaryAnatomicStructureforIntraoralRadiography(PermanentDentitionDesignationofTeeth)'
 cid_concepts[4018] = \
 {'SRT': ['MandibularRightFirstMolarTooth',
          'MaxillaryLeftLateralIncisorTooth',
@@ -9336,6 +9900,7 @@ cid_concepts[4018] = \
          'MaxillaryLeftCentralIncisorTooth',
          'MandibularLeftFirstMolarTooth']}
 
+name_for_cid[4019] = 'PrimaryAnatomicStructureforIntraoralRadiography(DeciduousDentitionDesignationofTeeth)'
 cid_concepts[4019] = \
 {'SRT': ['DeciduousMaxillaryRightCentralIncisorTooth',
          'DeciduousMandibularRightLateralIncisorTooth',
@@ -9358,68 +9923,71 @@ cid_concepts[4019] = \
          'DeciduousMaxillaryLeftCentralIncisorTooth',
          'DeciduousMandibularLeftLateralIncisorTooth']}
 
+name_for_cid[402] = 'AuditActiveParticipantRoleIDCode'
 cid_concepts[402] = \
 {'DCM': ['SourceMedia',
          'DestinationMedia',
-         'SourceRoleId',
-         'DestinationRoleId',
+         'SourceRoleID',
+         'DestinationRoleID',
          'ApplicationLauncher',
          'Application']}
 
+name_for_cid[4020] = 'PETRadionuclide'
 cid_concepts[4020] = \
-{'DCM': ['Manganese_51',
-         'Arsenic_70',
-         'Niobium_90',
-         'Scandium_43',
-         'Terbium_152',
-         'mManganese_52',
-         'Scandium_44'],
- 'SRT': ['mTechnetium_94',
-         'Copper_60',
-         'Copper_62',
-         'Carbon_11',
-         'Copper_64',
-         'Germanium_68',
-         'Nitrogen_13',
-         'Manganese_52',
-         'Copper_61',
-         'Zirconium_89',
-         'Yttrium_86',
-         'Oxygen_15',
-         'Titanium_45',
-         'Yttrium_90',
-         'Oxygen_14',
-         'Zinc_62',
-         'Selenium_73',
-         'Iodine_124',
-         'Potassium_38',
-         'Bromine_77',
-         'Arsenic_72',
-         'Rubidium_82',
-         'Sodium_22',
-         'Bromine_75',
-         'Bromine_76',
-         'Fluorine_18',
-         'Gallium_68',
-         'Gallium_66',
-         'Iron_52']}
+{'DCM': ['_51Manganese',
+         '_70Arsenic',
+         '_90Niobium',
+         '_43Scandium',
+         '_152Terbium',
+         '_52mManganese',
+         '_44Scandium'],
+ 'SRT': ['_94mTechnetium',
+         '_60Copper',
+         '_62Copper',
+         '_11Carbon',
+         '_64Copper',
+         '_68Germanium',
+         '_13Nitrogen',
+         '_52Manganese',
+         '_61Copper',
+         '_89Zirconium',
+         '_86Yttrium',
+         '_15Oxygen',
+         '_45Titanium',
+         '_90Yttrium',
+         '_14Oxygen',
+         '_62Zinc',
+         '_73Selenium',
+         '_124Iodine',
+         '_38Potassium',
+         '_77Bromine',
+         '_72Arsenic',
+         '_82Rubidium',
+         '_22Sodium',
+         '_75Bromine',
+         '_76Bromine',
+         '_18Fluorine',
+         '_68Gallium',
+         '_66Gallium',
+         '_52Iron']}
 
+name_for_cid[4021] = 'PETRadiopharmaceutical'
 cid_concepts[4021] = \
 {'DCM': ['Cetuximab89Zr',
-         'Ro532344189Zr',
+         'RO532344189Zr',
          'J59189Zr',
-         'Ro54290889Zr',
+         'RO54290889Zr',
          'Cu3689Zr',
-         'Ro695894818F',
+         'RO695894818F',
          'Bevacizumab89Zr',
-         'Psma1007F18',
+         'PSMA1007F18',
          'Cg250FAb289Zr',
-         'Psma617Ga68',
+         'PSMA617Ga68',
          'R150789Zr',
-         'E4g1089Zr',
-         'e1189Zr_7',
-         'd1289Zr_7',
-         'h189Zr_28',
+         'E4G1089Zr',
+         '_7E1189Zr',
+         '_7D1289Zr',
+         '_28H189Zr',
          'MonoclonalAntibodyMab64Cu',
          'MonoclonalAntibodyMab89Zr',
          'NanocolloidalAlbumin89Zr',
@@ -9428,11 +9996,11 @@ cid_concepts[4021] = \
          'T807F18',
          'FlubatineF18',
          'CmabU3689Zr',
-         'Dn3089Zr',
+         'DN3089Zr',
          'Fresolimumab89Zr',
-         'Trc10589Zr',
+         'TRC10589Zr',
          'Margetuximab89Zr',
-         'Sar341989Zr',
+         'SAR341989Zr',
          'PittsburghCompoundBC11',
          'Ranibizumab89Zr',
          'Roledumab89Zr',
@@ -9442,8 +10010,8 @@ cid_concepts[4021] = \
          'Rituximab89Zr',
          'Mogamulizumab89Zr',
          'Ublituximab89Zr',
-         'Medi55189Zr',
-         'Ga20189Zr',
+         'MEDI55189Zr',
+         'GA20189Zr',
          'Ecromeximab89Zr',
          'Benralizumab89Zr',
          'Ocaratuzumab89Zr',
@@ -9452,46 +10020,46 @@ cid_concepts[4021] = \
          'PolatuzumabVedotin89Zr',
          'Blinatumomab89Zr',
          'Pegdinetanib89Zr',
-         'Agn15099889Zr',
-         'Ro693164311C',
+         'AGN15099889Zr',
+         'RO693164311C',
          'Obinituzimab89Zr',
-         'Ro692496311C',
+         'RO692496311C',
          'GlutamineF18',
-         'faF18_2',
+         '_2FAF18',
          'NifeneF18',
-         'Clr1404I124',
-         'Clr1404I131',
+         'CLR1404I124',
+         'CLR1404I131',
          'FlurpiridazF18',
          'GlutamineC14',
          'GlutamineC11',
-         'AtsmCu60',
-         'AtsmCu61',
-         'AtsmCu62',
+         'ATSMCu60',
+         'ATSMCu61',
+         'ATSMCu62',
          'CholineC11',
          'FallyprideC11',
          'FallyprideF18',
-         'Flb457C11',
+         'FLB457C11',
          'FluorotrioprideF18',
-         'DfFk89Zr',
-         'DfFkPeg389Zr',
-         'DfFk289Zr',
-         'DfCd4589Zr',
-         'DfFk23peg489Zr'],
- 'NCIt': ['DcfpylF18', 'SarcosineC11', 'DcfbcF18', 'Psma11Ga68'],
+         'DfFK89Zr',
+         'DfFKPEG389Zr',
+         'DfFK289Zr',
+         'DfCD4589Zr',
+         'DfFK23PEG489Zr'],
+ 'NCIt': ['DcfpylF18', 'SarcosineC11', 'DCFBCF18', 'PSMA11Ga68'],
  'SRT': ['FluorocholineF18',
          'FluoroLDopaF18',
          'SpiperoneF18',
-         'ThymidineFltF18',
+         'ThymidineFLTF18',
          'SodiumFluorideF18',
          'FluorodeoxyglucoseF18',
          'FlorbetabenF18',
          'FlumazenilC11',
-         'EdtaGa68',
+         'EDTAGa68',
          'FlumazenilF18',
          'OxygenO15',
          'RubidiumChlorideRb82',
          'ButanolO15',
-         'AtsmCu64',
+         'ATSMCu64',
          'OxygenWaterO15',
          'GlutamateN13',
          'AmmoniaN13',
@@ -9503,7 +10071,7 @@ cid_concepts[4021] = \
          'MonoclonalAntibodyI124',
          'MespiperoneC11',
          'SodiumIodideI124',
-         'PtsmCu62',
+         'PTSMCu62',
          'FluoromethaneF18',
          'FluoromisonidazoleF18',
          'FluorobenzothiazoleF18',
@@ -9518,18 +10086,19 @@ cid_concepts[4021] = \
          'FlorbetapirF18',
          'FlutemetamolF18',
          'FluciclatideF18'],
- 'UMLS': ['Mk6240F18',
-          'Iso1F18',
-          'FluoropropylDihydrotetrabenazineDtbzF18',
+ 'UMLS': ['MK6240F18',
+          'ISO1F18',
+          'FluoropropylDihydrotetrabenazineDTBZF18',
           'FluoroetanidazoleF18',
-          'Thk5317F18',
-          'UcbJC11',
-          'FluoroestradiolFesF18',
+          'THK5317F18',
+          'UCBJC11',
+          'FluoroestradiolFESF18',
           'Tyrosine3OctreotateGa68',
           'EdotreotideGa68',
-          'Thk5351F18',
+          'THK5351F18',
           'FlortaucipirF18']}
 
+name_for_cid[4025] = 'PrimaryAnatomicStructureforIntraoralRadiography(SupernumeraryDentitionDesignationofTeeth)'
 cid_concepts[4025] = \
 {'SRT': ['SupernumeraryPermanentMaxillaryRightSecondPremolarTooth',
          'SupernumeraryPermanentMaxillaryRightFirstMolarTooth',
@@ -9584,6 +10153,7 @@ cid_concepts[4025] = \
          'SupernumeraryDeciduousMandibularLeftFirstMolarTooth',
          'SupernumeraryDeciduousMandibularLeftCanineTooth']}
 
+name_for_cid[4026] = 'PrimaryAnatomicStructureforIntraoralandCraniofacialRadiographyTeeth'
 cid_concepts[4026] = \
 {'SRT': ['SupernumeraryPermanentMaxillaryRightSecondPremolarTooth',
          'SupernumeraryPermanentMaxillaryRightFirstMolarTooth',
@@ -9690,6 +10260,7 @@ cid_concepts[4026] = \
          'SupernumeraryDeciduousMandibularLeftFirstMolarTooth',
          'SupernumeraryDeciduousMandibularLeftCanineTooth']}
 
+name_for_cid[4028] = 'CraniofacialAnatomicRegions'
 cid_concepts[4028] = \
 {'SRT': ['VomerBone',
          'EyeRegion',
@@ -9736,6 +10307,7 @@ cid_concepts[4028] = \
          'Tongue',
          'LacrimalBone']}
 
+name_for_cid[4029] = 'DermatologyAnatomicSites'
 cid_concepts[4029] = \
 {'DCM': ['SkinOfParaspinalAreaOfTheNeck',
          'SkinOfLowerParaspinalRegion',
@@ -9946,6 +10518,7 @@ cid_concepts[4029] = \
          'SkinOfPosteriorSurfaceOfForearm',
          'SkinOfAnteriorSurfaceOfForearm']}
 
+name_for_cid[403] = 'SecurityAlertTypeCode'
 cid_concepts[403] = \
 {'DCM': ['AuditRecordingStopped',
          'UseOfRestrictedFunction',
@@ -9976,6 +10549,7 @@ cid_concepts[403] = \
          'Logout',
          'SessionStart']}
 
+name_for_cid[4030] = 'CT,MRandPETAnatomyImaged'
 cid_concepts[4030] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -10107,6 +10681,7 @@ cid_concepts[4030] = \
          'UpperArm',
          'Thymus']}
 
+name_for_cid[4031] = 'CommonAnatomicRegions'
 cid_concepts[4031] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -10216,6 +10791,7 @@ cid_concepts[4031] = \
          'Shoulder',
          'UpperArm']}
 
+name_for_cid[4032] = 'MRSpectroscopyMetabolites'
 cid_concepts[4032] = \
 {'DCM': ['CreatineCholineCitrateRatio',
          'GlutamateAndGlutamine',
@@ -10234,6 +10810,7 @@ cid_concepts[4032] = \
          'Lipid',
          'NAcetylaspartate']}
 
+name_for_cid[4033] = 'MRProtonSpectroscopyMetabolites'
 cid_concepts[4033] = \
 {'DCM': ['CreatineCholineCitrateRatio',
          'GlutamateAndGlutamine',
@@ -10252,9 +10829,11 @@ cid_concepts[4033] = \
          'Lipid',
          'NAcetylaspartate']}
 
+name_for_cid[404] = 'AuditParticipantObjectIDTypeCode'
 cid_concepts[404] = \
-{'DCM': ['StudyInstanceUid', 'NodeId', 'SopClassUid']}
+{'DCM': ['StudyInstanceUID', 'NodeID', 'SOPClassUID']}
 
+name_for_cid[4040] = 'EndoscopyAnatomicRegions'
 cid_concepts[4040] = \
 {'SRT': ['ExternalAuditoryCanal',
          'Ureter',
@@ -10288,6 +10867,7 @@ cid_concepts[4040] = \
          'PharynxAndLarynx',
          'EsophagusStomachAndDuodenum']}
 
+name_for_cid[4042] = 'XA/XRFAnatomyImaged'
 cid_concepts[4042] = \
 {'DCM': ['Phantom'],
  'SRT': ['Prostate',
@@ -10374,7 +10954,7 @@ cid_concepts[4042] = \
          'IliacArtery',
          'OccipitalVein',
          'UmbilicalArtery',
-         'BoydSPerforatingVein',
+         'BoydPerforatingVein',
          'Larynx',
          'SubclavianVein',
          'AnkleJoint',
@@ -10388,7 +10968,7 @@ cid_concepts[4042] = \
          'PrimitiveAorta',
          'SystemicVenousAtrium',
          'CommonIliacArtery',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'InferiorLeftPulmonaryVein',
          'Mandible',
          'GreatCardiacVein',
@@ -10530,36 +11110,39 @@ cid_concepts[4042] = \
          'Shoulder',
          'UpperArm']}
 
+name_for_cid[405] = 'MediaTypeCode'
 cid_concepts[405] = \
 {'DCM': ['PaperDocument',
-         'Uri',
+         'URI',
          'SecureDigitalCard',
          'MultiMediaCard',
          'CompactFlash',
-         'Dvd',
-         'Cd',
+         'DVD',
+         'CD',
          'Film',
          'Email',
-         'UsbDiskEmulation']}
+         'USBDiskEmulation']}
 
+name_for_cid[4050] = 'DrugorContrastAgentCharacteristics'
 cid_concepts[4050] = \
 {'DCM': ['ContrastBolusIngredientOpaque',
          'ActiveIngredientUndilutedConcentration'],
  'SRT': ['Volume', 'ActiveIngredient']}
 
+name_for_cid[4051] = 'GeneralDevices'
 cid_concepts[4051] = \
 {'DCM': ['Phantom',
-         'AcrAccreditationPhantomCt',
-         'AcrAccreditationPhantomMr',
-         'AcrAccreditationPhantomMammography',
-         'AcrAccreditationPhantomStereotacticBreastBiopsy',
-         'AcrAccreditationPhantomEct',
-         'AcrAccreditationPhantomPet',
-         'AcrAccreditationPhantomEctPet',
-         'AcrAccreditationPhantomPetFaceplate',
-         'IecHeadDosimetryPhantom',
-         'IecBodyDosimetryPhantom',
-         'NemaXr212000Phantom',
+         'ACRAccreditationPhantomCT',
+         'ACRAccreditationPhantomMR',
+         'ACRAccreditationPhantomMammography',
+         'ACRAccreditationPhantomStereotacticBreastBiopsy',
+         'ACRAccreditationPhantomECT',
+         'ACRAccreditationPhantomPET',
+         'ACRAccreditationPhantomECTPET',
+         'ACRAccreditationPhantomPETFaceplate',
+         'IECHeadDosimetryPhantom',
+         'IECBodyDosimetryPhantom',
+         'NEMAXR212000Phantom',
          'Sphere'],
  'SRT': ['Stent',
          'AtherectomyDevice',
@@ -10576,84 +11159,94 @@ cid_concepts[4051] = \
          'MeasuringRuler',
          'Laser']}
 
+name_for_cid[4052] = 'PhantomDevices'
 cid_concepts[4052] = \
-{'DCM': ['IecHeadDosimetryPhantom',
-         'IecBodyDosimetryPhantom',
+{'DCM': ['IECHeadDosimetryPhantom',
+         'IECBodyDosimetryPhantom',
          'Phantom',
-         'NemaXr212000Phantom',
-         'AcrAccreditationPhantomCt',
-         'AcrAccreditationPhantomMr',
-         'AcrAccreditationPhantomMammography',
-         'AcrAccreditationPhantomStereotacticBreastBiopsy',
-         'AcrAccreditationPhantomEct',
-         'AcrAccreditationPhantomPet',
-         'AcrAccreditationPhantomEctPet',
-         'AcrAccreditationPhantomPetFaceplate']}
+         'NEMAXR212000Phantom',
+         'ACRAccreditationPhantomCT',
+         'ACRAccreditationPhantomMR',
+         'ACRAccreditationPhantomMammography',
+         'ACRAccreditationPhantomStereotacticBreastBiopsy',
+         'ACRAccreditationPhantomECT',
+         'ACRAccreditationPhantomPET',
+         'ACRAccreditationPhantomECTPET',
+         'ACRAccreditationPhantomPETFaceplate']}
 
+name_for_cid[4100] = 'T1MeasurementMethods'
 cid_concepts[4100] = \
 {'DCM': ['T1ByInversionRecovery', 'T1ByFixedValue', 'T1ByMultipleFlipAngles']}
 
+name_for_cid[4101] = 'TracerKineticModels'
 cid_concepts[4101] = \
 {'DCM': ['StandardToftsModel',
          'ExtendedToftsModel',
-         'FirstPassLeakageProfileFplpModel',
-         'ShutterSpeedModelSsm',
-         'GammaCapillaryTransitTimeGcttModel',
-         'AdiabaticTissueHomogeneityAthModel',
-         'TwoCompartmentExchange2cxModel']}
+         'FirstPassLeakageProfileFPLPModel',
+         'ShutterSpeedModelSSM',
+         'GammaCapillaryTransitTimeGCTTModel',
+         'AdiabaticTissueHomogeneityATHModel',
+         'TwoCompartmentExchange2CXModel']}
 
+name_for_cid[4102] = 'PerfusionMeasurementMethods'
 cid_concepts[4102] = \
-{'DCM': ['PerfusionAnalysisByStableXenonCtTechnique',
-         'PerfusionAnalysisByIvIodinatedContrastCtTechnique',
-         'PerfusionAnalysisByArterialSpinLabelingMrTechnique',
-         'PerfusionAnalysisBySusceptibilityMrTechnique']}
+{'DCM': ['PerfusionAnalysisByStableXenonCTTechnique',
+         'PerfusionAnalysisByIVIodinatedContrastCTTechnique',
+         'PerfusionAnalysisByArterialSpinLabelingMRTechnique',
+         'PerfusionAnalysisBySusceptibilityMRTechnique']}
 
+name_for_cid[4103] = 'ArterialInputFunctionMeasurementMethods'
 cid_concepts[4103] = \
-{'DCM': ['UserDefinedAifRoi',
-         'AutomaticallyDetectedAifRoi',
-         'BlindEstimationOfAif',
-         'AifIgnored',
-         'PopulationAveragedAif']}
+{'DCM': ['UserDefinedAIFROI',
+         'AutomaticallyDetectedAIFROI',
+         'BlindEstimationOfAIF',
+         'AIFIgnored',
+         'PopulationAveragedAIF']}
 
+name_for_cid[4104] = 'BolusArrivalTimeDerivationMethods'
 cid_concepts[4104] = \
 {'DCM': ['TemporalDerivativeExceedsThreshold',
          'TimeOfPeakConcentration',
          'TimeOfLeadingHalfPeakConcentration']}
 
+name_for_cid[4105] = 'PerfusionAnalysisMethods'
 cid_concepts[4105] = \
-{'DCM': ['LeastMeanSquareLmsDeconvolution',
-         'SingularValueDecompositionSvdDeconvolution']}
+{'DCM': ['LeastMeanSquareLMSDeconvolution',
+         'SingularValueDecompositionSVDDeconvolution']}
 
+name_for_cid[4106] = 'QuantitativeMethodsusedforPerfusionAndTracerKineticModels'
 cid_concepts[4106] = \
 {'DCM': ['T1ByInversionRecovery',
          'TemporalDerivativeExceedsThreshold',
          'T1ByFixedValue',
-         'LeastMeanSquareLmsDeconvolution',
-         'SingularValueDecompositionSvdDeconvolution',
+         'LeastMeanSquareLMSDeconvolution',
+         'SingularValueDecompositionSVDDeconvolution',
          'TimeOfPeakConcentration',
          'T1ByMultipleFlipAngles',
          'TimeOfLeadingHalfPeakConcentration',
          'StandardToftsModel',
-         'UserDefinedAifRoi',
+         'UserDefinedAIFROI',
          'ExtendedToftsModel',
-         'AutomaticallyDetectedAifRoi',
+         'AutomaticallyDetectedAIFROI',
          'ModelFreeConcentrationTimeQuantitification',
-         'BlindEstimationOfAif',
-         'FirstPassLeakageProfileFplpModel',
-         'ShutterSpeedModelSsm',
-         'PerfusionAnalysisByStableXenonCtTechnique',
-         'GammaCapillaryTransitTimeGcttModel',
-         'PerfusionAnalysisByIvIodinatedContrastCtTechnique',
-         'AdiabaticTissueHomogeneityAthModel',
-         'PerfusionAnalysisByArterialSpinLabelingMrTechnique',
-         'TwoCompartmentExchange2cxModel',
-         'PerfusionAnalysisBySusceptibilityMrTechnique',
-         'AifIgnored',
-         'PopulationAveragedAif']}
+         'BlindEstimationOfAIF',
+         'FirstPassLeakageProfileFPLPModel',
+         'ShutterSpeedModelSSM',
+         'PerfusionAnalysisByStableXenonCTTechnique',
+         'GammaCapillaryTransitTimeGCTTModel',
+         'PerfusionAnalysisByIVIodinatedContrastCTTechnique',
+         'AdiabaticTissueHomogeneityATHModel',
+         'PerfusionAnalysisByArterialSpinLabelingMRTechnique',
+         'TwoCompartmentExchange2CXModel',
+         'PerfusionAnalysisBySusceptibilityMRTechnique',
+         'AIFIgnored',
+         'PopulationAveragedAIF']}
 
+name_for_cid[4107] = 'TracerKineticModelParameters'
 cid_concepts[4107] = \
-{'DCM': ['TauM', 'Vp', 'Ktrans', 'Kep', 'Ve']}
+{'DCM': ['', 'Vp', 'Ktrans', 'Kep', 'Ve']}
 
+name_for_cid[4108] = 'PerfusionModelParameters'
 cid_concepts[4108] = \
 {'DCM': ['MeanTransitTime',
          'RegionalCerebralBloodFlow',
@@ -10664,30 +11257,34 @@ cid_concepts[4108] = \
          'OxygenExtractionFraction',
          'Tmax']}
 
+name_for_cid[4109] = 'ModelIndependentDynamicContrastAnalysisParameters'
 cid_concepts[4109] = \
 {'DCM': ['TimeToPeak',
-         'Iauc90bn',
-         'Iauc180bn',
+         'IAUC90BN',
+         'IAUC180BN',
          'TemporalDerivativeThreshold',
-         'Iauc',
+         'IAUC',
          'MaximumSlope',
-         'Iauc60',
+         'IAUC60',
          'MaximumDifference',
-         'Iauc90',
+         'IAUC90',
          'TracerConcentration',
-         'Iauc180',
-         'Iaucbn',
-         'Iauc60bn',
+         'IAUC180',
+         'IAUCBN',
+         'IAUC60BN',
          'TimeOfPeakConcentration',
          'BolusArrivalTime',
          'TimeOfLeadingHalfPeakConcentration']}
 
+name_for_cid[4110] = 'TracerKineticModelingCovariates'
 cid_concepts[4110] = \
 {'LN': ['Hematocrit']}
 
+name_for_cid[4111] = 'ContrastCharacteristics'
 cid_concepts[4111] = \
 {'DCM': ['ContrastLongitudinalRelaxivity']}
 
+name_for_cid[42] = 'NumericValueQualifier'
 cid_concepts[42] = \
 {'DCM': ['ValueUnknown',
          'NegativeInfinity',
@@ -10702,6 +11299,7 @@ cid_concepts[42] = \
          'ValueOutOfRange',
          'CalculationFailure']}
 
+name_for_cid[4200] = 'OphthalmicImagingAgent'
 cid_concepts[4200] = \
 {'SRT': ['TrypanBlue',
          'MethyleneBlue',
@@ -10709,6 +11307,7 @@ cid_concepts[4200] = \
          'IndocyanineGreen',
          'RoseBengal']}
 
+name_for_cid[4201] = 'PatientEyeMovementCommand'
 cid_concepts[4201] = \
 {'SRT': ['ConvergentGaze',
          'LeftUpgaze',
@@ -10721,6 +11320,7 @@ cid_concepts[4201] = \
          'RightUpgaze',
          'LeftGaze']}
 
+name_for_cid[4202] = 'OphthalmicPhotographyAcquisitionDevice'
 cid_concepts[4202] = \
 {'SRT': ['OphthalmicEndoscope',
          'DirectOphthalmoscope',
@@ -10734,6 +11334,7 @@ cid_concepts[4202] = \
          'ExternalCamera',
          'FundusCamera']}
 
+name_for_cid[4203] = 'OphthalmicPhotographyIllumination'
 cid_concepts[4203] = \
 {'DCM': ['ScotopicLight',
          'MesopicLight',
@@ -10748,6 +11349,7 @@ cid_concepts[4203] = \
          'IndirectScleroticScatterIllumination',
          'BroadTangentialDirectIllumination']}
 
+name_for_cid[4204] = 'OphthalmicFilter'
 cid_concepts[4204] = \
 {'DCM': ['NoFilter'],
  'SRT': ['RedOpticalFilter',
@@ -10758,6 +11360,7 @@ cid_concepts[4204] = \
          'BlueOpticalFilter',
          'PolarizingOpticalFilter']}
 
+name_for_cid[4205] = 'OphthalmicLens'
 cid_concepts[4205] = \
 {'SRT': ['ConcaveContactFundusLens',
          'IndirectOphthalmoscopyLens',
@@ -10768,6 +11371,7 @@ cid_concepts[4205] = \
          'ConvexContactFundusLens',
          'ContactFundusLens']}
 
+name_for_cid[4206] = 'OphthalmicChannelDescription'
 cid_concepts[4206] = \
 {'SRT': ['Ultraviolet',
          'Infrared',
@@ -10777,6 +11381,7 @@ cid_concepts[4206] = \
          'Blue',
          'Green']}
 
+name_for_cid[4207] = 'OphthalmicImagePosition'
 cid_concepts[4207] = \
 {'DCM': ['LesionCentered',
          'DiscMaculaCentered',
@@ -10809,6 +11414,7 @@ cid_concepts[4207] = \
          'DiabeticRetinopathyStudyField5',
          'DiabeticRetinopathyStudyField7']}
 
+name_for_cid[4208] = 'MydriaticAgent'
 cid_concepts[4208] = \
 {'SRT': ['Homatropine',
          'Tropicamide',
@@ -10816,6 +11422,7 @@ cid_concepts[4208] = \
          'Cyclopentolate',
          'Phenylephrine']}
 
+name_for_cid[4209] = 'OphthalmicAnatomicStructureImaged'
 cid_concepts[4209] = \
 {'SRT': ['OphthalmicArtery',
          'Eye',
@@ -10838,6 +11445,7 @@ cid_concepts[4209] = \
          'UpperEyelid',
          'LacrimalGland']}
 
+name_for_cid[4210] = 'OphthalmicTomographyAcquisitionDevice'
 cid_concepts[4210] = \
 {'DCM': ['ReflectionBasedCornealTopographer',
          'InterferometryBasedCornealTomographer',
@@ -10848,6 +11456,7 @@ cid_concepts[4210] = \
          'OpticalCoherenceTomographyScanner',
          'RetinalThicknessAnalyzer']}
 
+name_for_cid[4211] = 'OphthalmicOCTAnatomicStructureImaged'
 cid_concepts[4211] = \
 {'SRT': ['CornealEndothelium',
          'Sclera',
@@ -10863,12 +11472,15 @@ cid_concepts[4211] = \
          'CiliaryBody',
          'Lens']}
 
+name_for_cid[4214] = 'OphthalmicHorizontalDirections'
 cid_concepts[4214] = \
 {'SRT': ['Outward', 'Inward']}
 
+name_for_cid[4215] = 'OphthalmicVerticalDirections'
 cid_concepts[4215] = \
 {'SRT': ['Up', 'Down']}
 
+name_for_cid[4216] = 'OphthalmicVisualAcuityType'
 cid_concepts[4216] = \
 {'DCM': ['AutorefractionVisualAcuity',
          'HabitualVisualAcuity',
@@ -10879,13 +11491,16 @@ cid_concepts[4216] = \
          'PotentialAcuityMeterVisualAcuity',
          'BrightnessAcuityTestingVisualAcuity']}
 
+name_for_cid[4220] = 'VisualFixationQualityDuringAcquisition'
 cid_concepts[4220] = \
 {'SRT': ['NotSteady', 'Indeterminate', 'Steady']}
 
+name_for_cid[4221] = 'VisualFixationQualityProblem'
 cid_concepts[4221] = \
 {'DCM': ['EquipmentFailure', 'OperatorError', 'PatientMovement'],
  'SRT': ['EccentricFixation']}
 
+name_for_cid[4222] = 'OphthalmicMacularGridProblem'
 cid_concepts[4222] = \
 {'DCM': ['InterferingTearsOrDrops',
          'PatientPositioningProblem',
@@ -10902,31 +11517,38 @@ cid_concepts[4222] = \
          'PoorVisualFixation',
          'EccentricFixation']}
 
+name_for_cid[4230] = 'OphthalmicUltrasoundAxialMeasurementsType'
 cid_concepts[4230] = \
 {'DCM': ['UltrasoundContact', 'UltrasoundImmersion']}
 
+name_for_cid[4231] = 'LensStatus'
 cid_concepts[4231] = \
-{'SRT': ['PiggybackIol', 'Aphakic', 'Phakic', 'Pseudophakia', 'PhakicIol']}
+{'SRT': ['PiggybackIOL', 'Aphakic', 'Phakic', 'Pseudophakia', 'PhakicIOL']}
 
+name_for_cid[4232] = 'VitreousStatus'
 cid_concepts[4232] = \
 {'SRT': ['SiliconeOil',
          'GasInVitreousCavity',
          'PostVitrectomy',
          'VitreousOnly']}
 
+name_for_cid[4233] = 'OphthalmicAxialLengthMeasurementsSegmentNames'
 cid_concepts[4233] = \
 {'DCM': ['SingleOrAnteriorLens', 'PosteriorLens'],
  'SRT': ['Cornea', 'VitreousCavity', 'AnteriorChamber']}
 
+name_for_cid[4234] = 'RefractiveSurgeryTypes'
 cid_concepts[4234] = \
-{'DCM': ['Smile'], 'SRT': ['Lasik', 'Prk', 'Lasek', 'Rk']}
+{'DCM': ['SMILE'], 'SRT': ['LASIK', 'PRK', 'LASEK', 'RK']}
 
+name_for_cid[4235] = 'KeratometryDescriptors'
 cid_concepts[4235] = \
 {'DCM': ['ManualKeratometry',
          'AutoKeratometry',
          'SimulatedKeratometry',
          'EquivalentKReading']}
 
+name_for_cid[4236] = 'IOLCalculationFormula'
 cid_concepts[4236] = \
 {'DCM': ['Haigis',
          'HaigisL',
@@ -10939,39 +11561,45 @@ cid_concepts[4236] = \
          'BarrettTrueK',
          'Olsen',
          'BarrettTrueKToric',
-         'Srkii',
-         'BarrettUniversalIi',
-         'SrkT']}
+         'SRKII',
+         'BarrettUniversalII',
+         'SRKT']}
 
+name_for_cid[4237] = 'LensConstantType'
 cid_concepts[4237] = \
 {'DCM': ['HaigisA1',
          'HaigisA2',
          'HofferPacdConstant',
          'SurgeonFactor',
          'BarrettLensFactor',
-         'AcdConstant',
+         'ACDConstant',
          'BarrettDesignFactor',
          'HaigisA0'],
  'SRT': ['AConstant']}
 
+name_for_cid[4238] = 'RefractiveErrorTypes'
 cid_concepts[4238] = \
 {'SRT': ['Hyperopia', 'Myopia']}
 
+name_for_cid[4239] = 'AnteriorChamberDepthDefinition'
 cid_concepts[4239] = \
 {'DCM': ['FrontOfCorneaToFrontOfLens', 'BackOfCorneaToFrontOfLens']}
 
+name_for_cid[4240] = 'OphthalmicMeasurementorCalculationDataSource'
 cid_concepts[4240] = \
 {'DCM': ['MeasurementFromThisDevice',
          'ExternalDataSource',
-         'AxialMeasurementsSopInstance',
-         'RefractiveMeasurementsSopInstance',
-         'AutorefractionMeasurementsSopInstance',
+         'AxialMeasurementsSOPInstance',
+         'RefractiveMeasurementsSOPInstance',
+         'AutorefractionMeasurementsSOPInstance',
          'ManualEntry',
-         'KeratometryMeasurementsSopInstance']}
+         'KeratometryMeasurementsSOPInstance']}
 
+name_for_cid[4241] = 'OphthalmicAxialLengthSelectionMethod'
 cid_concepts[4241] = \
 {'DCM': ['MeanValueChosen', 'UserChosenValue']}
 
+name_for_cid[4242] = 'CorneaMeasurementMethodDescriptors'
 cid_concepts[4242] = \
 {'DCM': ['PosteriorCorneaSurfaceMeasurementMethod',
          'ManualKeratometry',
@@ -10980,15 +11608,19 @@ cid_concepts[4242] = \
          'EquivalentKReading',
          'TotalCorneaPowerMeasurementMethod']}
 
+name_for_cid[4243] = 'OphthalmicQualityMetricType'
 cid_concepts[4243] = \
 {'DCM': ['StandardDeviationOfMeasurementsUsed', 'SignalToNoiseRatio']}
 
+name_for_cid[4244] = 'OphthalmicAgentConcentrationUnits'
 cid_concepts[4244] = \
-{'UCUM': ['Percent', 'MgMl']}
+{'UCUM': ['Percent', 'mgml']}
 
+name_for_cid[4245] = 'WideFieldOphthalmicPhotographyTransformationMethod'
 cid_concepts[4245] = \
 {'DCM': ['SphericalProjection', 'SurfaceContourMapping']}
 
+name_for_cid[4250] = 'VisualFieldStaticPerimetryTestPatterns'
 cid_concepts[4250] = \
 {'DCM': ['VisualField604TestPattern',
          'VisualFieldCentralTestPattern',
@@ -11004,33 +11636,35 @@ cid_concepts[4250] = \
          'VisualField102TestPattern',
          'VisualField07TestPattern',
          'VisualField302TestPattern',
-         'VisualFieldLvcTestPattern']}
+         'VisualFieldLVCTestPattern']}
 
+name_for_cid[4251] = 'VisualFieldStaticPerimetryTestStrategies'
 cid_concepts[4251] = \
-{'DCM': ['VisualFieldTopTestStrategy',
-         'VisualFieldClipTestStrategy',
-         'VisualFieldSitaStandardTestStrategy',
+{'DCM': ['VisualFieldTOPTestStrategy',
+         'VisualFieldCLIPTestStrategy',
+         'VisualFieldSITAStandardTestStrategy',
          'VisualFieldDynamicTestStrategy',
-         'VisualFieldClassStrategy',
-         'VisualFieldSitaSwapTestStrategy',
+         'VisualFieldCLASSStrategy',
+         'VisualFieldSITASWAPTestStrategy',
          'VisualFieldNormalTestStrategy',
-         'VisualFieldSitaFastTestStrategy',
-         'VisualField1LtTestStrategy',
+         'VisualFieldSITAFastTestStrategy',
+         'VisualField1LTTestStrategy',
          'VisualFieldFullThresholdTestStrategy',
-         'VisualField2LtTestStrategy',
+         'VisualField2LTTestStrategy',
          'VisualFieldFastpacTestStrategy',
-         'VisualFieldLvsTestStrategy',
+         'VisualFieldLVSTestStrategy',
          'VisualFieldFullFromPriorTestStrategy',
-         'VisualFieldGateTestStrategy',
+         'VisualFieldGATETestStrategy',
          'VisualFieldOptimaTestStrategy',
          'VisualFieldGateiTestStrategy',
          'VisualFieldTwoZoneTestStrategy',
-         'VisualField2ltDynamicTestStrategy',
+         'VisualField2LTDynamicTestStrategy',
          'VisualFieldThreeZoneTestStrategy',
-         'VisualField2ltNormalTestStrategy',
+         'VisualField2LTNormalTestStrategy',
          'VisualFieldQuantifyDefectsTestStrategy',
          'VisualFieldFastThresholdTestStrategy']}
 
+name_for_cid[4252] = 'VisualFieldStaticPerimetryScreeningTestModes'
 cid_concepts[4252] = \
 {'DCM': ['AgeCorrected',
          'ThresholdRelated',
@@ -11039,6 +11673,7 @@ cid_concepts[4252] = \
          'FovealSensitivityRelated',
          'RelatedToNonMacularSensitivity']}
 
+name_for_cid[4253] = 'VisualFieldStaticPerimetryFixationStrategy'
 cid_concepts[4253] = \
 {'DCM': ['AutomatedOptical',
          'BlindSpotMonitoring',
@@ -11046,6 +11681,7 @@ cid_concepts[4253] = \
          'ObservationByExaminer'],
  'SRT': ['None']}
 
+name_for_cid[4254] = 'VisualFieldStaticPerimetryTestAnalysisResults'
 cid_concepts[4254] = \
 {'DCM': ['OutsideNormalLimits',
          'Borderline',
@@ -11054,12 +11690,15 @@ cid_concepts[4254] = \
          'BorderlineAndGeneralReductionInSensitivity'],
  'SRT': ['WithinNormalLimits']}
 
+name_for_cid[4255] = 'VisualFieldIlluminationColor'
 cid_concepts[4255] = \
 {'SRT': ['White', 'Red', 'Blue', 'Green', 'Yellow']}
 
+name_for_cid[4256] = 'VisualFieldProcedureModifier'
 cid_concepts[4256] = \
 {'SRT': ['Screening', 'Diagnostic']}
 
+name_for_cid[4257] = 'VisualFieldGlobalIndexName'
 cid_concepts[4257] = \
 {'DCM': ['VisualFieldIndex',
          'VisualFieldLossDueToDiffuseDefect',
@@ -11067,9 +11706,11 @@ cid_concepts[4257] = \
          'GlaucomaHemifieldTestAnalysis',
          'OpticalFixationMeasurements']}
 
+name_for_cid[4260] = 'OphthalmicMappingUnitsforRealWorldValueMapping'
 cid_concepts[4260] = \
 {'UCUM': ['Micrometer']}
 
+name_for_cid[4261] = 'OphthalmicMappingAcquisitionMethod'
 cid_concepts[4261] = \
 {'DCM': ['RetinalTopography',
          'TimeDomain',
@@ -11077,26 +11718,31 @@ cid_concepts[4261] = \
          'NoCornealCompensation',
          'CornealBirefringenceCompensation']}
 
+name_for_cid[4262] = 'RetinalThicknessDefinition'
 cid_concepts[4262] = \
 {'DCM': ['RetinalNerveFiberLayerThickness',
          'GanglionCellComplexThickness',
-         'TotalRetinalThicknessIlmToIsOs',
-         'TotalRetinalThicknessIlmToRpe',
-         'TotalRetinalThicknessIlmToBm']}
+         'TotalRetinalThicknessILMToISOS',
+         'TotalRetinalThicknessILMToRPE',
+         'TotalRetinalThicknessILMToBM']}
 
+name_for_cid[4263] = 'OphthalmicThicknessMapValueType'
 cid_concepts[4263] = \
 {'DCM': ['AbsoluteOphthalmicThickness',
          'ThicknessDeviationCategoryFromNormativeData',
          'ThicknessDeviationFromNormativeData']}
 
+name_for_cid[4264] = 'OphthalmicMapPurposesofReference'
 cid_concepts[4264] = \
 {'DCM': ['Localizer',
          'SourceImageForImageProcessingOperation',
          'RelatedOphthalmicThicknessMap']}
 
+name_for_cid[4265] = 'OphthalmicThicknessDeviationCategories'
 cid_concepts[4265] = \
 {'DCM': ['P5', 'P5', 'P2', 'P1', 'P05']}
 
+name_for_cid[4266] = 'OphthalmicAnatomicStructureReferencePoint'
 cid_concepts[4266] = \
 {'DCM': ['DiscFovea'],
  'SRT': ['MorphologicallyAbnormalStructure',
@@ -11105,9 +11751,11 @@ cid_concepts[4266] = \
          'Cornea',
          'FoveaCentralis']}
 
+name_for_cid[4267] = 'CornealTopographyMappingUnitsforRealWorldValueMapping'
 cid_concepts[4267] = \
-{'UCUM': ['Mm', 'Micrometer', 'Diopters']}
+{'UCUM': ['mm', 'Micrometer', 'Diopters']}
 
+name_for_cid[4268] = 'CornealTopographyMapValueType'
 cid_concepts[4268] = \
 {'DCM': ['CornealAxialPowerMap',
          'CornealInstantaneousPowerMap',
@@ -11115,15 +11763,17 @@ cid_concepts[4268] = \
          'CornealElevationMap',
          'CornealWavefrontMap']}
 
+name_for_cid[4270] = 'OCTAProcessingAlgorithmFamilies'
 cid_concepts[4270] = \
-{'DCM': ['OctACorrelationMapping',
-         'OctASpeckleVariance',
-         'DopplerOctA',
-         'OctAOneSidedRatioGreater',
-         'OctAOneSidedRatioLesser',
-         'OctAComplexVariance',
-         'OctAAmplitudeDecorrelation']}
+{'DCM': ['OCTACorrelationMapping',
+         'OCTASpeckleVariance',
+         'DopplerOCTA',
+         'OCTAOneSidedRatioGreater',
+         'OCTAOneSidedRatioLesser',
+         'OCTAComplexVariance',
+         'OCTAAmplitudeDecorrelation']}
 
+name_for_cid[4271] = 'EnFaceImageTypes'
 cid_concepts[4271] = \
 {'DCM': ['SuperficialRetinaStructuralReflectanceMap',
          'WholeEyeVasculatureFlow',
@@ -11148,6 +11798,7 @@ cid_concepts[4271] = \
          'RadialPeripapillaryVasculatureFlow',
          'ChoriocapillarisStructuralReflectanceMap']}
 
+name_for_cid[4272] = 'OPTScanPatternTypes'
 cid_concepts[4272] = \
 {'DCM': ['GridBScanPattern',
          'CircleRadialBScanPattern',
@@ -11160,23 +11811,25 @@ cid_concepts[4272] = \
          'CircleRasterBScanPattern',
          'ConcentricCircleBScanPattern']}
 
+name_for_cid[4273] = 'RetinalSegmentationSurfaces'
 cid_concepts[4273] = \
-{'DCM': ['PosteriorSurfaceOfTheRpe',
-         'SurfaceOfTheCenterOfTheRpe',
+{'DCM': ['PosteriorSurfaceOfTheRPE',
+         'SurfaceOfTheCenterOfTheRPE',
          'SurfaceOfTheChoroidScleraInterface',
-         'OuterSurfaceOfRnfl',
-         'OuterSurfaceOfTheBm',
-         'OuterSurfaceOfTheCc',
-         'OuterSurfaceOfIpl',
-         'OuterSurfaceOfGcl',
-         'OuterSurfaceOfOpl',
-         'OuterSurfaceOfInl',
+         'OuterSurfaceOfRNFL',
+         'OuterSurfaceOfTheBM',
+         'OuterSurfaceOfTheCC',
+         'OuterSurfaceOfIPL',
+         'OuterSurfaceOfGCL',
+         'OuterSurfaceOfOPL',
+         'OuterSurfaceOfINL',
          'SurfaceBetweenInnerAndOuterSegmentsOfThePhotoreceptors',
-         'OuterSurfaceOfHfl',
-         'AnteriorSurfaceOfTheRpe',
-         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRpe'],
- 'SRT': ['ElmExternalLimitingMembrane', 'IlmInternalLimitingMembrane']}
+         'OuterSurfaceOfHFL',
+         'AnteriorSurfaceOfTheRPE',
+         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRPE'],
+ 'SRT': ['ELMExternalLimitingMembrane', 'ILMInternalLimitingMembrane']}
 
+name_for_cid[5] = 'TransducerApproach'
 cid_concepts[5] = \
 {'SRT': ['Internal',
          'Capsular',
@@ -11215,9 +11868,11 @@ cid_concepts[5] = \
          'Midline',
          'Medial']}
 
+name_for_cid[50] = 'InstanceAvailabilityStatus'
 cid_concepts[50] = \
 {'DCM': ['Unavailable', 'Nearline', 'Offline', 'Online']}
 
+name_for_cid[501] = 'VolumetricViewDescription'
 cid_concepts[501] = \
 {'SRT': ['AnteroPosterior',
          'FrontalOblique',
@@ -11310,12 +11965,13 @@ cid_concepts[501] = \
          'SuprasternalLongAxisViewOfAorticArch',
          'SubcostalShortAxisViewAtPapillaryMuscleLevel',
          'LateroMedialOblique',
-         'ParasternalLongAxisViewOfTheRvInflowTract',
-         'ParasternalLongAxisViewOfTheRvOutflowTract',
+         'ParasternalLongAxisViewOfTheRVInflowTract',
+         'ParasternalLongAxisViewOfTheRVOutflowTract',
          'RightOblique',
          'Lateral',
          'RightLateral']}
 
+name_for_cid[502] = 'VolumetricViewModifier'
 cid_concepts[502] = \
 {'DCM': ['Crosstable'],
  'SRT': ['FiveChamber',
@@ -11340,6 +11996,7 @@ cid_concepts[502] = \
          'Cephalad',
          'MouthClosed']}
 
+name_for_cid[6] = 'TransducerOrientation'
 cid_concepts[6] = \
 {'SRT': ['Transverse',
          'Coronal',
@@ -11354,6 +12011,7 @@ cid_concepts[6] = \
          'Sagittal',
          'Parasagittal']}
 
+name_for_cid[60] = 'ImagingAgentAdministrationAdverseEvents'
 cid_concepts[60] = \
 {'DCM': ['ExtravasationVisibleInImage', 'PatientConditionPreventedContinuing'],
  'SCT': ['SensationOfBeingWarmFinding'],
@@ -11416,18 +12074,21 @@ cid_concepts[60] = \
          'Anxiety',
          'LaryngealEdema']}
 
+name_for_cid[6000] = 'OverallBreastComposition'
 cid_concepts[6000] = \
 {'SRT': ['ExtremelyDense',
          'HeterogeneouslyDense',
          'ScatteredFibroglandularDensities',
          'AlmostEntirelyFat']}
 
+name_for_cid[6001] = 'OverallBreastCompositionfromBIRADS®'
 cid_concepts[6001] = \
 {'SRT': ['ExtremelyDense',
          'HeterogeneouslyDense',
          'ScatteredFibroglandularDensities',
          'AlmostEntirelyFat']}
 
+name_for_cid[6002] = 'ChangeSinceLastMammogramorPriorSurgery'
 cid_concepts[6002] = \
 {'SRT': ['MoreDefined',
          'IncreaseInSize',
@@ -11441,6 +12102,7 @@ cid_concepts[6002] = \
          'FindingPartiallyRemoved',
          'ImplantRevisedSincePreviousMammogram']}
 
+name_for_cid[6003] = 'ChangeSinceLastMammogramorPriorSurgeryfromBIRADS®'
 cid_concepts[6003] = \
 {'SRT': ['MoreDefined',
          'IncreaseInSize',
@@ -11454,12 +12116,15 @@ cid_concepts[6003] = \
          'FindingPartiallyRemoved',
          'ImplantRevisedSincePreviousMammogram']}
 
+name_for_cid[6004] = 'MammographyCharacteristicsofShape'
 cid_concepts[6004] = \
 {'SRT': ['Irregular', 'RoundShape', 'OvoidShapeOval', 'Lobular']}
 
+name_for_cid[6005] = 'CharacteristicsofShapefromBIRADS®'
 cid_concepts[6005] = \
 {'SRT': ['Irregular', 'RoundShape', 'OvoidShapeOval', 'Lobular']}
 
+name_for_cid[6006] = 'MammographyCharacteristicsofMargin'
 cid_concepts[6006] = \
 {'DCM': ['AngularMargins'],
  'SRT': ['ObscuredLesion',
@@ -11468,6 +12133,7 @@ cid_concepts[6006] = \
          'SpiculatedLesion',
          'IndistinctLesion']}
 
+name_for_cid[6007] = 'CharacteristicsofMarginfromBIRADS®'
 cid_concepts[6007] = \
 {'DCM': ['AngularMargins'],
  'SRT': ['ObscuredLesion',
@@ -11476,24 +12142,28 @@ cid_concepts[6007] = \
          'SpiculatedLesion',
          'IndistinctLesion']}
 
+name_for_cid[6008] = 'DensityModifier'
 cid_concepts[6008] = \
 {'SRT': ['FatContainingRadiolucentLesion',
          'LowDensityNotContainingFatLesion',
          'EqualDensityIsodenseLesion',
          'HighDensityLesion']}
 
+name_for_cid[6009] = 'DensityModifierfromBIRADS®'
 cid_concepts[6009] = \
 {'SRT': ['FatContainingRadiolucentLesion',
          'LowDensityNotContainingFatLesion',
          'EqualDensityIsodenseLesion',
          'HighDensityLesion']}
 
+name_for_cid[601] = 'BiosafetyLevels'
 cid_concepts[601] = \
 {'SRT': ['BiosafetyLevel4',
          'BiosafetyLevel3',
          'BiosafetyLevel1',
          'BiosafetyLevel2']}
 
+name_for_cid[6010] = 'MammographyCalcificationTypes'
 cid_concepts[6010] = \
 {'DCM': ['FinePleomorphicCalcification', 'Macrocalcifications'],
  'SRT': ['CoarsePopcornLikeCalcification',
@@ -11513,6 +12183,7 @@ cid_concepts[6010] = \
          'PunctateCalcification',
          'LucentCenteredCalcification']}
 
+name_for_cid[6011] = 'CalcificationTypesfromBIRADS®'
 cid_concepts[6011] = \
 {'DCM': ['FinePleomorphicCalcification', 'Macrocalcifications'],
  'SRT': ['CoarsePopcornLikeCalcification',
@@ -11532,6 +12203,7 @@ cid_concepts[6011] = \
          'PunctateCalcification',
          'LucentCenteredCalcification']}
 
+name_for_cid[6012] = 'CalcificationDistributionModifier'
 cid_concepts[6012] = \
 {'DCM': ['CalcificationsWithinAMass', 'CalcificationsOutsideOfAMass'],
  'SRT': ['GroupedCalcificationDistribution',
@@ -11540,6 +12212,7 @@ cid_concepts[6012] = \
          'SegmentalCalcificationDistribution',
          'RegionalCalcificationDistribution']}
 
+name_for_cid[6013] = 'CalcificationDistributionModifierfromBIRADS®'
 cid_concepts[6013] = \
 {'DCM': ['CalcificationsWithinAMass', 'CalcificationsOutsideOfAMass'],
  'SRT': ['GroupedCalcificationDistribution',
@@ -11548,9 +12221,10 @@ cid_concepts[6013] = \
          'SegmentalCalcificationDistribution',
          'RegionalCalcificationDistribution']}
 
+name_for_cid[6014] = 'MammographySingleImageFinding'
 cid_concepts[6014] = \
 {'DCM': ['BreastGeometry',
-         'CooperSLigamentChanges',
+         'CooperLigamentChanges',
          'ImageQuality',
          'MassInTheSkin',
          'SelectedRegion',
@@ -11572,8 +12246,9 @@ cid_concepts[6014] = \
          'AxillaryLymphNode',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6015] = 'SingleImageFindingfromBIRADS®'
 cid_concepts[6015] = \
-{'DCM': ['CooperSLigamentChanges', 'MassInTheSkin', 'MassOnTheSkin'],
+{'DCM': ['CooperLigamentChanges', 'MassInTheSkin', 'MassOnTheSkin'],
  'SRT': ['IntramammaryLymphNode',
          'AxillaryAdenopathy',
          'Edema',
@@ -11589,11 +12264,12 @@ cid_concepts[6015] = \
          'AxillaryLymphNode',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6016] = 'MammographyCompositeFeature'
 cid_concepts[6016] = \
 {'DCM': ['BreastGeometry',
          'ImageQuality',
          'NonLesion',
-         'CooperSLigamentChanges',
+         'CooperLigamentChanges',
          'MassInTheSkin',
          'SelectedRegion',
          'MassOnTheSkin',
@@ -11617,93 +12293,106 @@ cid_concepts[6016] = \
          'SkinLesion',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6017] = 'CompositeFeaturefromBIRADS®'
 cid_concepts[6017] = \
 {'SRT': ['AsymmetricBreastTissue',
          'FocalAsymmetricBreastTissue',
          'MammographicBreastMass']}
 
+name_for_cid[6018] = 'ClockfaceLocationorRegion'
 cid_concepts[6018] = \
-{'SRT': ['OClockPosition_3',
+{'SRT': ['_3OClockPosition',
          'AxillaRegion',
-         'OClockPosition_2',
-         'OClockPosition_1',
+         '_2OClockPosition',
+         '_1OClockPosition',
          'CentralRegionOfBreast',
          'AxillaryTailRegion',
          'SubareolarRegion',
          'ChestWall',
-         'OClockPosition_12',
-         'OClockPosition_11',
-         'OClockPosition_10',
-         'OClockPosition_7',
-         'OClockPosition_6',
-         'OClockPosition_5',
-         'OClockPosition_4',
-         'OClockPosition_9',
-         'OClockPosition_8']}
+         '_12OClockPosition',
+         '_11OClockPosition',
+         '_10OClockPosition',
+         '_7OClockPosition',
+         '_6OClockPosition',
+         '_5OClockPosition',
+         '_4OClockPosition',
+         '_9OClockPosition',
+         '_8OClockPosition']}
 
+name_for_cid[6019] = 'ClockfaceLocationorRegionfromBIRADS®'
 cid_concepts[6019] = \
-{'SRT': ['OClockPosition_3',
+{'SRT': ['_3OClockPosition',
          'AxillaRegion',
-         'OClockPosition_2',
-         'OClockPosition_1',
+         '_2OClockPosition',
+         '_1OClockPosition',
          'CentralRegionOfBreast',
          'AxillaryTailRegion',
          'SubareolarRegion',
-         'OClockPosition_12',
-         'OClockPosition_11',
-         'OClockPosition_10',
-         'OClockPosition_7',
-         'OClockPosition_6',
-         'OClockPosition_5',
-         'OClockPosition_4',
-         'OClockPosition_9',
-         'OClockPosition_8']}
+         '_12OClockPosition',
+         '_11OClockPosition',
+         '_10OClockPosition',
+         '_7OClockPosition',
+         '_6OClockPosition',
+         '_5OClockPosition',
+         '_4OClockPosition',
+         '_9OClockPosition',
+         '_8OClockPosition']}
 
+name_for_cid[602] = 'BiosafetyControlReasons'
 cid_concepts[602] = \
 {'SRT': ['BiohazardousMaterial', 'PatientImmunocompromised', 'Carcinogen'],
  'UMLS': ['TransgenicAnimal']}
 
+name_for_cid[6020] = 'QuadrantLocation'
 cid_concepts[6020] = \
 {'SRT': ['LowerInnerQuadrantOfBreast',
          'UpperInnerQuadrantOfBreast',
          'LowerOuterQuadrantOfBreast',
          'UpperOuterQuadrantOfBreast']}
 
+name_for_cid[6021] = 'QuadrantLocationfromBIRADS®'
 cid_concepts[6021] = \
 {'SRT': ['LowerInnerQuadrantOfBreast',
          'UpperInnerQuadrantOfBreast',
          'LowerOuterQuadrantOfBreast',
          'UpperOuterQuadrantOfBreast']}
 
+name_for_cid[6022] = 'Side'
 cid_concepts[6022] = \
 {'SRT': ['BothBreasts', 'RightBreast', 'LeftBreast']}
 
+name_for_cid[6023] = 'SidefromBIRADS®'
 cid_concepts[6023] = \
 {'SRT': ['BothBreasts', 'RightBreast', 'LeftBreast']}
 
+name_for_cid[6024] = 'Depth'
 cid_concepts[6024] = \
 {'SRT': ['Posterior', 'Middle', 'Anterior']}
 
+name_for_cid[6025] = 'DepthfromBIRADS®'
 cid_concepts[6025] = \
 {'SRT': ['Posterior', 'Middle', 'Anterior']}
 
+name_for_cid[6026] = 'MammographyAssessment'
 cid_concepts[6026] = \
 {'DCM': ['PostProcedureMammogramsForMarkerPlacement'],
- 'SRT': ['Suspicious_4',
-         'Negative_1',
-         'IncompleteNeedAdditionalImagingEvaluationPriors_0',
-         'HighlySuggestiveOfMalignancy_5',
-         'ProbablyBenign_3',
-         'Benign_2']}
+ 'SRT': ['_4Suspicious',
+         '_1Negative',
+         '_0IncompleteNeedAdditionalImagingEvaluationPriors',
+         '_5HighlySuggestiveOfMalignancy',
+         '_3ProbablyBenign',
+         '_2Benign']}
 
+name_for_cid[6027] = 'AssessmentfromBIRADS®'
 cid_concepts[6027] = \
-{'SRT': ['Suspicious_4',
-         'Negative_1',
-         'IncompleteNeedAdditionalImagingEvaluationPriors_0',
-         'HighlySuggestiveOfMalignancy_5',
-         'ProbablyBenign_3',
-         'Benign_2']}
+{'SRT': ['_4Suspicious',
+         '_1Negative',
+         '_0IncompleteNeedAdditionalImagingEvaluationPriors',
+         '_5HighlySuggestiveOfMalignancy',
+         '_3ProbablyBenign',
+         '_2Benign']}
 
+name_for_cid[6028] = 'MammographyRecommendedFollowup'
 cid_concepts[6028] = \
 {'DCM': ['NormalIntervalFollowUp',
          'AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment',
@@ -11716,7 +12405,7 @@ cid_concepts[6028] = \
          'SurgicalConsult',
          'AdditionalProjections',
          'SuggestiveOfMalignancyTakeAppropriateAction',
-         'SpotMagnificationViewS',
+         'SpotMagnificationViews',
          'CytologicAnalysis',
          'BiopsyShouldBeStronglyConsidered',
          'OldFilmsForComparison',
@@ -11725,10 +12414,11 @@ cid_concepts[6028] = \
          'NuclearMedicineProcedure',
          'MagnificationViews',
          'SpotCompression',
-         'MriOfBreast',
+         'MRIOfBreast',
          'EvaluationProcedure',
          'MammaryDuctogram']}
 
+name_for_cid[6029] = 'RecommendedFollowupfromBIRADS®'
 cid_concepts[6029] = \
 {'DCM': ['NormalIntervalFollowUp',
          'AnyDecisionToBiopsyShouldBeBasedOnClinicalAssessment',
@@ -11739,7 +12429,7 @@ cid_concepts[6029] = \
          'HistologyUsingCoreBiopsy',
          'AdditionalProjections',
          'SuggestiveOfMalignancyTakeAppropriateAction',
-         'SpotMagnificationViewS',
+         'SpotMagnificationViews',
          'CytologicAnalysis',
          'BiopsyShouldBeStronglyConsidered',
          'OldFilmsForComparison',
@@ -11747,13 +12437,15 @@ cid_concepts[6029] = \
  'SRT': ['DiagnosticUltrasonography',
          'MagnificationViews',
          'SpotCompression',
-         'MriOfBreast',
+         'MRIOfBreast',
          'MammaryDuctogram']}
 
+name_for_cid[603] = 'AnimalRoomTypes'
 cid_concepts[603] = \
 {'DCM': ['AnimalHousingRoom', 'PreparationRoom', 'ImagingProcedureRoom'],
  'SRT': ['InductionRoom', 'RecoveryRoom', 'IsolationRoom']}
 
+name_for_cid[6030] = 'MammographyPathologyCodes'
 cid_concepts[6030] = \
 {'DCM': ['FibroadenomatoidHyperplasia',
          'Fibroadenolipoma',
@@ -11835,8 +12527,8 @@ cid_concepts[6030] = \
          'DuctalHyperplasiaUsual',
          'FatNecrosisOfBreast',
          'InfiltratingDuctCarcinoma',
-         'PagetSDiseaseMammaryOfTheNipple',
-         'HodgkinSDiseaseLymphoma',
+         'PagetDiseaseMammaryOfTheNipple',
+         'HodgkinDiseaseLymphoma',
          'InvasiveCribriformCarcinoma',
          'CystOfBreast',
          'FibrocysticDiseaseOfBreast',
@@ -11868,7 +12560,7 @@ cid_concepts[6030] = \
          'Adenolipoma',
          'SecretoryJuvenileCarcinomaOfTheBreast',
          'ScarTissue',
-         'NonHodgkinSLymphoma',
+         'NonHodgkinLymphoma',
          'InflammatoryCarcinoma',
          'Myofibroblastoma',
          'MammaryDuctEctasia',
@@ -11877,7 +12569,7 @@ cid_concepts[6030] = \
          'Hemangioma',
          'Neurofibroma',
          'IntramammaryLymphNode',
-         'ThrombophlebitisOfBreastMondorSDisease',
+         'ThrombophlebitisOfBreastMondorDisease',
          'ComedocarcinomaIntraductal',
          'BreastLobularHyperplasia',
          'GranularCellTumor',
@@ -11906,6 +12598,7 @@ cid_concepts[6030] = \
          'IntraductalPapilloma',
          'Galactocele']}
 
+name_for_cid[6031] = 'BenignPathologyCodesfromBIRADS®'
 cid_concepts[6031] = \
 {'DCM': ['FibroadenomatoidHyperplasia',
          'Fibroadenolipoma',
@@ -11951,7 +12644,7 @@ cid_concepts[6031] = \
          'Angiomatosis',
          'Seroma',
          'IntramammaryLymphNode',
-         'ThrombophlebitisOfBreastMondorSDisease',
+         'ThrombophlebitisOfBreastMondorDisease',
          'BreastLobularHyperplasia',
          'GranularCellTumor',
          'EpidermalInclusionCyst',
@@ -11986,6 +12679,7 @@ cid_concepts[6031] = \
          'IntraductalPapilloma',
          'Galactocele']}
 
+name_for_cid[6032] = 'HighRiskLesionsPathologyCodesfromBIRADS®'
 cid_concepts[6032] = \
 {'DCM': ['PeripheralDuctPapillomas'],
  'SRT': ['AtypicalIntraductalHyperplasia',
@@ -11993,6 +12687,7 @@ cid_concepts[6032] = \
          'LobularCarcinomaInSituOfBreast',
          'AtypicalLobularHyperplasia']}
 
+name_for_cid[6033] = 'MalignantPathologyCodesfromBIRADS®'
 cid_concepts[6033] = \
 {'DCM': ['SquamousCellCarcinomaOfTheNipple',
          'IntraductalCarcinomaHighGrade',
@@ -12027,7 +12722,7 @@ cid_concepts[6033] = \
  'SRT': ['CarcinomaInSituOfMaleBreast',
          'SecretoryJuvenileCarcinomaOfTheBreast',
          'ApocrineAdenocarcinoma',
-         'NonHodgkinSLymphoma',
+         'NonHodgkinLymphoma',
          'Chondrosarcoma',
          'MedullaryCarcinoma',
          'InflammatoryCarcinoma',
@@ -12043,8 +12738,8 @@ cid_concepts[6033] = \
          'LipidRichLipidSecretingCarcinoma',
          'Carcinosarcoma',
          'InvasiveLobularCarcinoma',
-         'PagetSDiseaseMammaryOfTheNipple',
-         'HodgkinSDiseaseLymphoma',
+         'PagetDiseaseMammaryOfTheNipple',
+         'HodgkinDiseaseLymphoma',
          'PhyllodesTumorMalignant',
          'NeoplasmOfTheMammarySkin',
          'InvasiveCribriformCarcinoma',
@@ -12062,22 +12757,26 @@ cid_concepts[6033] = \
          'AdenoidCysticCarcinoma',
          'IntraductalCarcinomaMicroPapillary']}
 
+name_for_cid[6034] = 'IntendedUseofCADOutput'
 cid_concepts[6034] = \
 {'DCM': ['PresentationRequiredRenderingDeviceIsExpectedToPresent',
          'PresentationOptionalRenderingDeviceMayPresent',
          'NotForPresentationRenderingDeviceExpectedNotToPresent']}
 
+name_for_cid[6035] = 'CompositeFeatureRelations'
 cid_concepts[6035] = \
 {'DCM': ['TargetContentItemsAreRelatedTemporally',
          'TargetContentItemsAreRelatedSpatially',
          'TargetContentItemsAreRelatedContraLaterally']}
 
+name_for_cid[6036] = 'ScopeofFeature'
 cid_concepts[6036] = \
 {'DCM': ['FeatureDetectedOnTheOnlyImage',
          'FeatureDetectedOnOnlyOneOfTheImages',
          'FeatureDetectedOnMultipleImages',
          'FeatureDetectedOnImagesFromMultipleModalities']}
 
+name_for_cid[6037] = 'MammographyQuantitativeTemporalDifferenceType'
 cid_concepts[6037] = \
 {'SRT': ['DifferenceInSize',
          'DifferenceInNumberOfCalcifications',
@@ -12085,15 +12784,19 @@ cid_concepts[6037] = \
          'DifferenceInLocation',
          'DifferenceInOpacity']}
 
+name_for_cid[6038] = 'MammographyQualitativeTemporalDifferenceType'
 cid_concepts[6038] = \
 {'SRT': ['DifferenceInSymmetry', 'DifferenceInMargin', 'DifferenceInShape']}
 
+name_for_cid[6039] = 'NippleCharacteristic'
 cid_concepts[6039] = \
 {'SRT': ['NippleRetraction', 'NormalShape']}
 
+name_for_cid[604] = 'DeviceReuse'
 cid_concepts[604] = \
 {'DCM': ['Unused', 'Reused']}
 
+name_for_cid[6040] = 'NonlesionObjectType'
 cid_concepts[6040] = \
 {'DCM': ['OtherMarker', 'Unspecified'],
  'SRT': ['OpaqueMarker',
@@ -12104,14 +12807,15 @@ cid_concepts[6040] = \
          'CardiacPacemaker',
          'ScarTissue',
          'Collimator',
-         'IdPlate',
+         'IDPlate',
          'ContrastAgent',
          'Suture',
          'Staple',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'Bullet',
          'Clip']}
 
+name_for_cid[6041] = 'MammographyImageQualityFinding'
 cid_concepts[6041] = \
 {'DCM': ['ViewAndLateralityMarkerIsPartiallyObscured',
          'ViewAndLateralityMarkerIsIncorrect',
@@ -12123,25 +12827,25 @@ cid_concepts[6041] = \
          'FlashDoesnTIncludeDateOfExamination',
          'UnknownFailure',
          'FlashDoesnTIncludeFacilityNameAndLocation',
-         'MloEvidenceOfMotionBlur',
+         'MLOEvidenceOfMotionBlur',
          'ViewAndLateralityMarkerIsNotNearTheAxilla',
          'ViewAndLateralityMarkerOverlapsBreastTissue',
          'Positioning',
-         'MloInframammaryFoldIsNotOpen',
-         'CcNotAllMedialTissueVisualized',
-         'CcNippleNotCenteredOnImage',
-         'CcPosteriorNippleLineDoesNotMeasureWithin1CmOfMlo',
+         'MLOInframammaryFoldIsNotOpen',
+         'CCNotAllMedialTissueVisualized',
+         'CCNippleNotCenteredOnImage',
+         'CCPosteriorNippleLineDoesNotMeasureWithin1cmOfMLO',
          'NippleNotInProfile',
          'InsufficientImplantDisplacementIncorrect',
-         'GridArtifactS',
+         'GridArtifacts',
          'DateStickerIsMissing',
          'TechnicalFactorsMissing',
          'CollimationTooCloseToBreast',
          'InadequateCompression',
-         'MloInsufficientPectoralMuscle',
-         'MloNoFatIsVisualizedPosteriorToFibroglandularTissues',
+         'MLOInsufficientPectoralMuscle',
+         'MLONoFatIsVisualizedPosteriorToFibroglandularTissues',
          'ViewAndLateralityMarkerIsMissing',
-         'MloPoorSeparationOfDeepAndSuperficialBreastTissues',
+         'MLOPoorSeparationOfDeepAndSuperficialBreastTissues',
          'MotionBlur',
          'ViewAndLateralityMarkerDoesNotHaveBothViewAndLaterality',
          'UnderExposed',
@@ -12151,16 +12855,18 @@ cid_concepts[6041] = \
          'ViewAndLateralityMarkerDoesNotHaveApprovedCodes',
          'OverExposed',
          'NoImage',
-         'DetectorArtifactS',
-         'ArtifactSOtherThanGridOrDetectorArtifact',
+         'DetectorArtifacts',
+         'ArtifactsOtherThanGridOrDetectorArtifact',
          'MechanicalFailure',
          'ElectricalFailure',
          'SoftwareFailure',
          'InappropriateImageProcessing']}
 
+name_for_cid[6042] = 'StatusofResults'
 cid_concepts[6042] = \
 {'DCM': ['Succeeded', 'PartiallySucceeded', 'Failed', 'NotAttempted']}
 
+name_for_cid[6043] = 'TypesofMammographyCADAnalysis'
 cid_concepts[6043] = \
 {'DCM': ['IndividualImpressionRecommendationAnalysis',
          'OverallImpressionRecommendationAnalysis'],
@@ -12172,19 +12878,23 @@ cid_concepts[6043] = \
          'BreastCompositionAnalysis',
          'SpatialCollocationAnalysis']}
 
+name_for_cid[6044] = 'TypesofImageQualityAssessment'
 cid_concepts[6044] = \
 {'DCM': ['UnusableQualityRendersImageUnusable',
          'UsableDoesNotMeetTheQualityControlStandard',
          'UsableMeetsTheQualityControlStandard']}
 
+name_for_cid[6045] = 'MammographyTypesofQualityControlStandard'
 cid_concepts[6045] = \
 {'DCM': ['InstitutionallyDefinedQualityControlStandard',
-         'MammographyQualityControlManual1999Acr',
-         'Title21CfrSection900SubpartB']}
+         'MammographyQualityControlManual1999ACR',
+         'Title21CFRSection900SubpartB']}
 
+name_for_cid[6046] = 'UnitsofFollowupInterval'
 cid_concepts[6046] = \
 {'UCUM': ['Year', 'Day', 'Week', 'Month']}
 
+name_for_cid[6047] = 'CADProcessingandFindingsSummary'
 cid_concepts[6047] = \
 {'DCM': ['AllAlgorithmsSucceededWithoutFindings',
          'AllAlgorithmsSucceededWithFindings',
@@ -12192,6 +12902,7 @@ cid_concepts[6047] = \
          'NotAllAlgorithmsSucceededWithFindings',
          'NoAlgorithmsSucceededWithoutFindings']}
 
+name_for_cid[6048] = 'CADOperatingPointAxisLabel'
 cid_concepts[6048] = \
 {'DCM': ['ImageSpecificity',
          'CaseSpecificity',
@@ -12202,6 +12913,7 @@ cid_concepts[6048] = \
          'FalseMarkersPerCase',
          'FalseMarkersPerImage']}
 
+name_for_cid[605] = 'AnimalBeddingMaterial'
 cid_concepts[605] = \
 {'DCM': ['AspenShavingBedding',
          'CornCobBedding',
@@ -12210,12 +12922,13 @@ cid_concepts[605] = \
          'PineShavingBedding',
          'AspenChipBedding']}
 
+name_for_cid[6050] = 'BreastProcedureReported'
 cid_concepts[6050] = \
 {'DCM': ['MarkerPlacement',
          'FilmScreenMammography',
          'DigitalMammography',
          'SurgicalConsult',
-         'MammographyCad'],
+         'MammographyCAD'],
  'LN': ['BreastRightMammogram',
         'BreastFfdMammogram',
         'BreastUnilateralMrWoAndWContrastIv',
@@ -12241,8 +12954,8 @@ cid_concepts[6050] = \
  'SRT': ['PreBiopsyLocalizationOfBreastLesion',
          'RadioisotopeScanOfLymphaticSystem',
          'RadionuclideLocalizationOfTumorLimitedArea',
-         'CtOfBreast',
-         'MriOfBreast',
+         'CTOfBreast',
+         'MRIOfBreast',
          'MammaryDuctogram',
          'BreastSurgicalBiopsy',
          'UltrasonographyOfBreast',
@@ -12254,6 +12967,7 @@ cid_concepts[6050] = \
          'ExaminationOfBreast',
          'SpecimenRadiographyOfBreast']}
 
+name_for_cid[6051] = 'BreastProcedureReason'
 cid_concepts[6051] = \
 {'DCM': ['NeedleLocalizationAndBiopsy',
          'HistoryOfBenignBreastBiopsy',
@@ -12282,6 +12996,7 @@ cid_concepts[6051] = \
          'RadiationTherapy',
          'PersonalHistoryOfBreastCancer']}
 
+name_for_cid[6052] = 'BreastImagingReportSectionTitle'
 cid_concepts[6052] = \
 {'DCM': ['Findings',
          'ProcedureReported',
@@ -12295,6 +13010,7 @@ cid_concepts[6052] = \
  'LN': ['Impressions'],
  'SRT': ['BreastComposition']}
 
+name_for_cid[6053] = 'BreastImagingReportElements'
 cid_concepts[6053] = \
 {'DCM': ['ProcedureReported',
          'Conclusion',
@@ -12307,6 +13023,7 @@ cid_concepts[6053] = \
          'Finding'],
  'SRT': ['BreastComposition']}
 
+name_for_cid[6054] = 'BreastImagingFindings'
 cid_concepts[6054] = \
 {'DCM': ['ComplexCyst',
          'IntracysticLesion',
@@ -12323,7 +13040,7 @@ cid_concepts[6054] = \
          'Extravasation',
          'ComplicatedCyst',
          'CystFill',
-         'CooperSLigamentChanges',
+         'CooperLigamentChanges',
          'MassInTheSkin',
          'SelectedRegion',
          'MassOnTheSkin',
@@ -12356,6 +13073,7 @@ cid_concepts[6054] = \
          'SkinLesion',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6055] = 'BreastClinicalFindingorIndicatedProblem'
 cid_concepts[6055] = \
 {'DCM': ['CancerElsewhere',
          'NonBloodyDischargeFromNipple',
@@ -12378,8 +13096,9 @@ cid_concepts[6055] = \
          'BreastLump',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6056] = 'AssociatedFindingsforBreast'
 cid_concepts[6056] = \
-{'DCM': ['CooperSLigamentChanges', 'MassInTheSkin', 'MassOnTheSkin'],
+{'DCM': ['CooperLigamentChanges', 'MassInTheSkin', 'MassOnTheSkin'],
  'SRT': ['BreastHematoma',
          'IntramammaryLymphNode',
          'SurgicalScar',
@@ -12398,6 +13117,7 @@ cid_concepts[6056] = \
          'AxillaryLymphNode',
          'SkinRetractionOfBreast']}
 
+name_for_cid[6057] = 'DuctographyFindingsforBreast'
 cid_concepts[6057] = \
 {'DCM': ['DuctNarrowing',
          'NormalBreastTissue',
@@ -12408,6 +13128,7 @@ cid_concepts[6057] = \
          'Extravasation'],
  'SRT': ['MammaryDuctEctasia']}
 
+name_for_cid[6058] = 'ProcedureModifiersforBreast'
 cid_concepts[6058] = \
 {'DCM': ['SalineImplant',
          'PolyurethaneImplant',
@@ -12427,13 +13148,13 @@ cid_concepts[6058] = \
          'QualityControl'],
  'SRT': ['MMode',
          'PowerDoppler',
-         'dMode_3',
+         '_3DMode',
          'Mammography',
          'MagneticResonanceImagingGuidedBiopsy',
          'ComputedTomographyGuidedBiopsy',
          'Screening',
          'QuadrantectomyOfBreast',
-         'dMode_2',
+         '_2DMode',
          'DopplerContinuousWave',
          'DopplerColorFlow',
          'DopplerPulsed',
@@ -12446,6 +13167,7 @@ cid_concepts[6058] = \
          'UltrasonicGuidanceProcedure'],
  'UMLS': ['Mastectomy']}
 
+name_for_cid[6059] = 'BreastImplantTypes'
 cid_concepts[6059] = \
 {'DCM': ['SalineImplant',
          'PolyurethaneImplant',
@@ -12455,9 +13177,11 @@ cid_concepts[6059] = \
          'RetroPectoralImplant'],
  'SRT': ['SiliconeGelImplant', 'BreastImplantTypeNotSpecified']}
 
+name_for_cid[606] = 'AnimalShelterTypes'
 cid_concepts[606] = \
 {'DCM': ['Igloo', 'RedTranslucentIgloo'], 'SRT': ['None']}
 
+name_for_cid[6060] = 'BreastBiopsyTechniques'
 cid_concepts[6060] = \
 {'DCM': ['VacuumAssisted',
          'MammographicCrosshair',
@@ -12472,6 +13196,7 @@ cid_concepts[6060] = \
          'ComputedTomographyGuidedBiopsy'],
  'UMLS': ['Mastectomy']}
 
+name_for_cid[6061] = 'BreastImagingProcedureModifiers'
 cid_concepts[6061] = \
 {'DCM': ['Calibration',
          'NeedleLocalizationAndBiopsy',
@@ -12481,6 +13206,7 @@ cid_concepts[6061] = \
          'Survey'],
  'SRT': ['Screening', 'Diagnostic']}
 
+name_for_cid[6062] = 'InterventionalProcedureComplications'
 cid_concepts[6062] = \
 {'DCM': ['AbnormalDischarge', 'NoComplications'],
  'SRT': ['HealthcareAssociatedInfection',
@@ -12493,6 +13219,7 @@ cid_concepts[6062] = \
          'HemorrhagePostprocedure',
          'Pneumothorax']}
 
+name_for_cid[6063] = 'InterventionalProcedureResults'
 cid_concepts[6063] = \
 {'SRT': ['Benign',
          'Malignant',
@@ -12500,6 +13227,7 @@ cid_concepts[6063] = \
          'InsufficientSample',
          'HighRiskTumor']}
 
+name_for_cid[6064] = 'UltrasoundFindingsforBreast'
 cid_concepts[6064] = \
 {'DCM': ['ComplexCyst',
          'ComplicatedCyst',
@@ -12513,6 +13241,7 @@ cid_concepts[6064] = \
          'ForeignBody',
          'CystOfBreast']}
 
+name_for_cid[6065] = 'InstrumentApproach'
 cid_concepts[6065] = \
 {'DCM': ['InferolateralToSuperomedial',
          'InferomedialToSuperolateral',
@@ -12520,6 +13249,7 @@ cid_concepts[6065] = \
          'SuperomedialToInferolateral'],
  'SRT': ['Inferior', 'Superior', 'Medial', 'Lateral']}
 
+name_for_cid[6066] = 'TargetConfirmation'
 cid_concepts[6066] = \
 {'DCM': ['TargetContainedInTheSpecimen',
          'TargetPartiallyObtainedInTheSpecimen',
@@ -12529,6 +13259,7 @@ cid_concepts[6066] = \
          'LesionPartiallyRemoved',
          'FluidObtained']}
 
+name_for_cid[6067] = 'FluidColor'
 cid_concepts[6067] = \
 {'DCM': ['LightBrownColor',
          'DarkRedColor',
@@ -12543,34 +13274,40 @@ cid_concepts[6067] = \
          'YellowColor',
          'BrownColor']}
 
+name_for_cid[6068] = 'TumorStagesFromAJCC'
 cid_concepts[6068] = \
 {'DCM': ['Stage0',
          'StageI',
-         'StageIia',
-         'StageIib',
-         'StageIiia',
-         'StageIiib',
-         'StageIiic',
-         'StageIv']}
+         'StageIIA',
+         'StageIIB',
+         'StageIIIA',
+         'StageIIIB',
+         'StageIIIC',
+         'StageIV']}
 
+name_for_cid[6069] = 'NottinghamCombinedHistologicGrade'
 cid_concepts[6069] = \
 {'SRT': ['NottinghamCombinedGradeI35Points',
-         'NottinghamCombinedGradeIi67Points',
-         'NottinghamCombinedGradeIii89Points',
+         'NottinghamCombinedGradeII67Points',
+         'NottinghamCombinedGradeIII89Points',
          'NottinghamCombinedGradeCannotBeDetermined']}
 
+name_for_cid[607] = 'AnimalFeedTypes'
 cid_concepts[607] = \
-{'DCM': ['Nih31', 'Nih07', 'Ain76', 'Ain93g', 'Ain93m']}
+{'DCM': ['NIH31', 'NIH07', 'AIN76', 'AIN93G', 'AIN93M']}
 
+name_for_cid[6070] = 'BloomRichardsonHistologicGrade'
 cid_concepts[6070] = \
 {'SRT': ['Grade1WellDifferentiated',
          'Grade2ModeratelyDifferentiated',
          'Grade3PoorlyDifferentiated',
          'Grade4Undifferentiated']}
 
+name_for_cid[6071] = 'HistologicGradingMethod'
 cid_concepts[6071] = \
 {'DCM': ['BloomRichardsonGrade'], 'SRT': ['NottinghamCombinedGrade']}
 
+name_for_cid[6072] = 'BreastImplantFindings'
 cid_concepts[6072] = \
 {'DCM': ['DistortedImplant',
          'SiliconeLadenLymphNodes',
@@ -12582,9 +13319,11 @@ cid_concepts[6072] = \
          'CalcifiedImplant'],
  'SRT': ['RuptureOfBreastImplant']}
 
+name_for_cid[608] = 'AnimalFeedSources'
 cid_concepts[608] = \
 {'DCM': ['LocallyManufacturedProduct'], 'UMLS': ['CommercialProduct']}
 
+name_for_cid[6080] = 'GynecologicalHormones'
 cid_concepts[6080] = \
 {'DCM': ['UnspecifiedGynecologicalHormone'],
  'SRT': ['EstrogenProduct',
@@ -12594,6 +13333,7 @@ cid_concepts[6080] = \
          'Anastrozole',
          'Contraceptives']}
 
+name_for_cid[6081] = 'BreastCancerRiskFactors'
 cid_concepts[6081] = \
 {'DCM': ['IntermediateFamilyHistoryOfBreastCancer',
          'PersonalBreastCancerHistory',
@@ -12605,20 +13345,22 @@ cid_concepts[6081] = \
          'HistoryOfHighRiskLesionOnPreviousBiopsy',
          'PostMenopausalPatient',
          'LateChildBearingAfter30',
-         'Brca1BreastCancerGene',
-         'Brca2BreastCancerGene',
-         'Brca3BreastCancerGene',
+         'BRCA1BreastCancerGene',
+         'BRCA2BreastCancerGene',
+         'BRCA3BreastCancerGene',
          'WeakFamilyHistoryOfBreastCancer'],
  'SRT': ['FamilyHistoryOfBreastCancer',
          'Nulliparous',
          'NoFamilyHistoryOfBreastCarcinoma']}
 
+name_for_cid[6082] = 'GynecologicalProcedures'
 cid_concepts[6082] = \
 {'SRT': ['Hysterectomy', 'DilationAndCurettage', 'EndometrialBiopsy']}
 
+name_for_cid[6083] = 'ProceduresforBreast'
 cid_concepts[6083] = \
 {'DCM': ['SurgicalConsult',
-         'MammographyCad',
+         'MammographyCAD',
          'MarkerPlacement',
          'FilmScreenMammography',
          'DigitalMammography',
@@ -12648,7 +13390,7 @@ cid_concepts[6083] = \
  'SRT': ['PreBiopsyLocalizationOfBreastLesion',
          'BoneMarrowTransplant',
          'RadionuclideLocalizationOfTumorLimitedArea',
-         'MriOfBreast',
+         'MRIOfBreast',
          'MammaryDuctogram',
          'Chemotherapy',
          'RemovalOfBreastImplant',
@@ -12659,7 +13401,7 @@ cid_concepts[6083] = \
          'RadioisotopeScanOfLymphaticSystem',
          'ReductionMammoplasty',
          'HormoneTherapy',
-         'CtOfBreast',
+         'CTOfBreast',
          'BreastSurgicalBiopsy',
          'UltrasonographyOfBreast',
          'InsertionOfCatheter',
@@ -12669,18 +13411,21 @@ cid_concepts[6083] = \
          'BreastReconstruction',
          'CoreNeedleBiopsyOfBreast']}
 
+name_for_cid[6084] = 'MammoplastyProcedures'
 cid_concepts[6084] = \
 {'SRT': ['RemovalOfBreastImplant',
          'BreastImplantation',
          'BreastReconstruction',
          'ReductionMammoplasty']}
 
+name_for_cid[6085] = 'TherapiesforBreast'
 cid_concepts[6085] = \
 {'SRT': ['Chemotherapy',
          'BoneMarrowTransplant',
          'RadiationTherapy',
          'HormoneTherapy']}
 
+name_for_cid[6086] = 'MenopausalPhase'
 cid_concepts[6086] = \
 {'SRT': ['PostsurgicalMenopause',
          'AfterMenopause',
@@ -12688,6 +13433,7 @@ cid_concepts[6086] = \
          'ArtificialMenopauseState',
          'BeforeMenopause']}
 
+name_for_cid[6087] = 'GeneralRiskFactors'
 cid_concepts[6087] = \
 {'DCM': ['IntermediateFamilyHistoryOfBreastCancer',
          'VeryStrongFamilyHistoryOfBreastCancer',
@@ -12697,9 +13443,9 @@ cid_concepts[6087] = \
          'SpontaneousAbortion',
          'GynecologicCondition',
          'GynecologicSurgery',
-         'PreviousLbwOrIugrBirth',
+         'PreviousLBWOrIUGRBirth',
          'PreviousFetalMalformationSyndrome',
-         'PreviousRhNegativeOrBloodDyscrasiaAtBirth',
+         'PreviousRHNegativeOrBloodDyscrasiaAtBirth',
          'HistoryOfMultipleFetuses',
          'PersonalBreastCancerHistory',
          'CurrentPregnancyKnownOrSuspectedMalformationsSyndromes',
@@ -12709,9 +13455,9 @@ cid_concepts[6087] = \
          'HistoryOfHighRiskLesionOnPreviousBiopsy',
          'PostMenopausalPatient',
          'LateChildBearingAfter30',
-         'Brca1BreastCancerGene',
-         'Brca2BreastCancerGene',
-         'Brca3BreastCancerGene',
+         'BRCA1BreastCancerGene',
+         'BRCA2BreastCancerGene',
+         'BRCA3BreastCancerGene',
          'WeakFamilyHistoryOfBreastCancer'],
  'SRT': ['FamilyHistoryOfBreastCancer',
          'Nulliparous',
@@ -12729,9 +13475,10 @@ cid_concepts[6087] = \
          'HistoryOfCardiovascularDisease',
          'HistoryOfInfertility']}
 
+name_for_cid[6088] = 'OBGYNMaternalRiskFactors'
 cid_concepts[6088] = \
 {'DCM': ['PreviousFetalMalformationSyndrome',
-         'PreviousRhNegativeOrBloodDyscrasiaAtBirth',
+         'PreviousRHNegativeOrBloodDyscrasiaAtBirth',
          'HistoryOfMultipleFetuses',
          'CurrentPregnancyKnownOrSuspectedMalformationsSyndromes',
          'FamilyHistoryFetalMalformationSyndrome',
@@ -12739,7 +13486,7 @@ cid_concepts[6088] = \
          'SpontaneousAbortion',
          'GynecologicCondition',
          'GynecologicSurgery',
-         'PreviousLbwOrIugrBirth'],
+         'PreviousLBWOrIUGRBirth'],
  'SRT': ['MultiplePregnancy',
          'HistoryOfObesity',
          'HistoryOfEclampsia',
@@ -12753,6 +13500,7 @@ cid_concepts[6088] = \
          'HistoryOfCardiovascularDisease',
          'HistoryOfInfertility']}
 
+name_for_cid[6089] = 'Substances'
 cid_concepts[6089] = \
 {'SRT': ['Methlyphenidate',
          'Caffeine',
@@ -12769,15 +13517,18 @@ cid_concepts[6089] = \
          'Mescaline',
          'Methadone']}
 
+name_for_cid[609] = 'AnimalFeedingMethods'
 cid_concepts[609] = \
 {'DCM': ['FoodTreat'],
  'NCIt': ['AdLibitum'],
  'SRT': ['Gavage'],
  'UMLS': ['RestrictedDiet']}
 
+name_for_cid[6090] = 'RelativeUsage,ExposureAmount'
 cid_concepts[6090] = \
 {'DCM': ['High', 'Medium', 'NoKnownExposure', 'Low']}
 
+name_for_cid[6091] = 'RelativeFrequencyofEventValues'
 cid_concepts[6091] = \
 {'SRT': ['Infrequent',
          'AsRequired',
@@ -12786,34 +13537,42 @@ cid_concepts[6091] = \
          'SingleEvent',
          'MidFrequency']}
 
+name_for_cid[6092] = 'QuantitativeConceptsforUsage,Exposure'
 cid_concepts[6092] = \
 {'DCM': ['VolumeOfUse', 'DoseFrequency', 'RateOfExposure'], 'SRT': ['Dosage']}
 
+name_for_cid[6093] = 'QualitativeConceptsforUsage,ExposureAmount'
 cid_concepts[6093] = \
 {'DCM': ['RelativeDoseAmount',
          'RelativeAmountOfExposure',
          'RelativeAmountOfUse']}
 
+name_for_cid[6094] = 'QualitativeConceptsforUsage,ExposureFrequency'
 cid_concepts[6094] = \
 {'DCM': ['RelativeDoseFrequency',
          'RelativeFrequencyOfExposure',
          'RelativeFrequencyOfUse']}
 
+name_for_cid[6095] = 'NumericPropertiesofProcedures'
 cid_concepts[6095] = \
 {'DCM': ['NeedleGauge', 'NeedleLength']}
 
+name_for_cid[6096] = 'PregnancyStatus'
 cid_concepts[6096] = \
 {'SRT': ['PossiblePregnancy',
          'Unknown',
          'NotPregnant',
          'PatientCurrentlyPregnant']}
 
+name_for_cid[6097] = 'SideofFamily'
 cid_concepts[6097] = \
 {'DCM': ['Maternal'], 'SRT': ['Paternal']}
 
+name_for_cid[6098] = 'ClinicalCourseofDisease'
 cid_concepts[6098] = \
 {'NCIt': ['NoEvidenceOfDisease', 'RecurrentDisease']}
 
+name_for_cid[6099] = 'RacialGroup'
 cid_concepts[6099] = \
 {'NCIt': ['NativeHawaiianOrOtherPacificIslander'],
  'SRT': ['AmericanIndianOrAlaskaNative',
@@ -12821,14 +13580,17 @@ cid_concepts[6099] = \
          'CaucasianRace',
          'AsianRace']}
 
+name_for_cid[61] = 'TimeRelativetoProcedure'
 cid_concepts[61] = \
 {'SRT': ['BeforeProcedure', 'DuringProcedure', 'AfterProcedure']}
 
+name_for_cid[610] = 'WaterTypes'
 cid_concepts[610] = \
 {'DCM': ['ReverseOsmosisPurifiedWater',
          'ReverseOsmosisPurifiedHclAcidifiedWater'],
  'SRT': ['TapWater', 'DistilledWater']}
 
+name_for_cid[6100] = 'ChestComponentCategories'
 cid_concepts[6100] = \
 {'DCM': ['Bronchovascular', 'Osseous'],
  'SRT': ['Heart',
@@ -12838,6 +13600,7 @@ cid_concepts[6100] = \
          'Muscular',
          'SystemicVascularStructure']}
 
+name_for_cid[6101] = 'ChestFindingorFeature'
 cid_concepts[6101] = \
 {'DCM': ['AbnormalLucency',
          'AbnormalCalcifications',
@@ -12847,22 +13610,23 @@ cid_concepts[6101] = \
          'NonLesion',
          'RadiographicAnatomy',
          'SelectedRegion',
-         'AbnormalLines1d']}
+         'AbnormalLines1D']}
 
+name_for_cid[6102] = 'ChestFindingorFeatureModifier'
 cid_concepts[6102] = \
-{'BARI': ['stMarginalCoronaryArteryLaterals_1',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdMarginalCoronaryArteryLaterals_3',
+{'BARI': ['_1stMarginalCoronaryArteryLaterals',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'rdDiagonalCoronaryArteryLaterals_3'],
+          '_3rdDiagonalCoronaryArteryLaterals'],
  'DCM': ['KerleyBLine',
          'KerleyCLines',
          'ParenchymalBand',
          'ReticularPattern',
-         'SeptalLineS',
+         'SeptalLines',
          'SubpleuralLine',
          'TramlineShadow',
          'TubularShadow',
@@ -12873,7 +13637,7 @@ cid_concepts[6102] = \
          'AirFluidLevel',
          'CoronaRadiata',
          'HoneycombPattern',
-         'FleischnerSLineS',
+         'FleischnerLines',
          'IntralobularLines',
          'KerleyALine',
          'MosaicPattern',
@@ -12993,11 +13757,11 @@ cid_concepts[6102] = \
          'VenaCavaFilter',
          'Trachea',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'Scapula',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
@@ -13005,15 +13769,15 @@ cid_concepts[6102] = \
          'HeartValveProsthesis',
          'BrachialArtery',
          'Vertebra',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
-         'ndMarginalCoronaryArtery_2',
-         'stMarginalCoronaryArtery_1',
+         '_2ndMarginalCoronaryArtery',
+         '_1stMarginalCoronaryArtery',
          'LymphNode',
          'PosteriorDescendingRightCoronaryArtery',
          'AzygosVein',
@@ -13023,10 +13787,10 @@ cid_concepts[6102] = \
          'Rib',
          'CervicalCollar',
          'LobeOfLung',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'LigamentumArteriosum',
          'AirwayStructure',
          'Mass',
@@ -13065,7 +13829,7 @@ cid_concepts[6102] = \
          'AxillaryFascia',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
          'CarotidBody',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'Clavicle',
          'TeresMajorMuscle',
          'MitralValve',
@@ -13082,24 +13846,26 @@ cid_concepts[6102] = \
          'Sternum',
          'Pin']}
 
+name_for_cid[6103] = 'AbnormalLinesFindingorFeature'
 cid_concepts[6103] = \
 {'DCM': ['ReticulonodularPattern',
          'KerleyBLine',
          'KerleyCLines',
          'ParenchymalBand',
          'ReticularPattern',
-         'SeptalLineS',
+         'SeptalLines',
          'AirFluidLevel',
          'SubpleuralLine',
          'CoronaRadiata',
          'TramlineShadow',
          'HoneycombPattern',
          'TubularShadow',
-         'FleischnerSLineS',
+         'FleischnerLines',
          'IntralobularLines',
          'KerleyALine'],
  'SRT': ['PlateLikeAtelectasis']}
 
+name_for_cid[6104] = 'AbnormalOpacityFindingorFeature'
 cid_concepts[6104] = \
 {'DCM': ['ReticulonodularPattern',
          'GroundGlassOpacity',
@@ -13121,10 +13887,12 @@ cid_concepts[6104] = \
          'DependentOpacity'],
  'SRT': ['Mass', 'Nodule', 'PulmonaryEmbolism', 'CoinLesion']}
 
+name_for_cid[6105] = 'AbnormalLucencyFindingorFeature'
 cid_concepts[6105] = \
 {'DCM': ['HaloSign', 'AirBronchiologram', 'AirBronchogram', 'AirCrescent'],
  'SRT': ['AirTrapping', 'Pneumomediastinum', 'Pneumothorax']}
 
+name_for_cid[6106] = 'AbnormalTextureFindingorFeature'
 cid_concepts[6106] = \
 {'DCM': ['MosaicPattern',
          'ReticulonodularPattern',
@@ -13136,21 +13904,24 @@ cid_concepts[6106] = \
          'HoneycombPattern',
          'MiliaryPattern']}
 
+name_for_cid[6107] = 'WidthDescriptor'
 cid_concepts[6107] = \
 {'DCM': ['Vasoconstriction', 'Vasodilation'], 'SRT': ['Narrow', 'Enlarged']}
 
+name_for_cid[6108] = 'ChestAnatomicStructureAbnormalDistribution'
 cid_concepts[6108] = \
 {'DCM': ['ArchitecturalDistortion', 'MosaicPerfusion', 'Pleonemia', 'Oligemia'],
  'SRT': ['AirTrapping']}
 
+name_for_cid[6109] = 'RadiographicAnatomyFindingorFeature'
 cid_concepts[6109] = \
-{'BARI': ['stDiagonalCoronaryArteryLaterals_1',
-          'stMarginalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_1stDiagonalCoronaryArteryLaterals',
+          '_1stMarginalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'rdMarginalCoronaryArteryLaterals_3',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'DCM': ['AorticKnob',
          'ArchOfTheAzygosVein',
@@ -13186,12 +13957,12 @@ cid_concepts[6109] = \
          'Trachea',
          'MidLeftAnteriorDescendingCoronaryArtery',
          'AorticArch',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'SuperiorPhrenicArtery',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'Scapula',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
@@ -13199,17 +13970,17 @@ cid_concepts[6109] = \
          'BrachialArtery',
          'SubscapularisMuscle',
          'Vertebra',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
          'AorticIsthmus',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
          'VertebralArtery',
-         'ndMarginalCoronaryArtery_2',
-         'stMarginalCoronaryArtery_1',
+         '_2ndMarginalCoronaryArtery',
+         '_1stMarginalCoronaryArtery',
          'InternalThoracicArtery',
          'BrachiocephalicVein',
          'LymphNode',
@@ -13223,10 +13994,10 @@ cid_concepts[6109] = \
          'Esophagus',
          'TricuspidValve',
          'LobeOfLung',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'LigamentumArteriosum',
          'AirwayStructure',
          'PericardiophrenicArtery',
@@ -13280,7 +14051,7 @@ cid_concepts[6109] = \
          'AxillaryFascia',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
          'CarotidBody',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'Clavicle',
          'TeresMajorMuscle',
          'MitralValve',
@@ -13302,6 +14073,7 @@ cid_concepts[6109] = \
          'TrabeculaeCarnae',
          'ThymusGland']}
 
+name_for_cid[611] = 'AnesthesiaCategoryCodeTypeforSmallAnimalAnesthesia'
 cid_concepts[611] = \
 {'SRT': ['LocalAnesthesia',
          'TopicalLocalAnesthesia',
@@ -13310,20 +14082,24 @@ cid_concepts[611] = \
          'EpiduralAnesthesia',
          'Sedation',
          'RegionalAnesthesia',
-         'MonitoredAnesthesiaCareMac']}
+         'MonitoredAnesthesiaCareMAC']}
 
+name_for_cid[6110] = 'LungAnatomyFindingorFeature'
 cid_concepts[6110] = \
 {'DCM': ['MidlungWindow', 'SecondaryPulmonaryLobule'],
  'SRT': ['SegmentOfLung', 'LobeOfLung']}
 
+name_for_cid[6111] = 'BronchovascularAnatomyFindingorFeature'
 cid_concepts[6111] = \
 {'DCM': ['CarinaAngle', 'CentrilobularStructures'],
  'SRT': ['AirwayStructure', 'Bronchus', 'Carina', 'HilumOfLung']}
 
+name_for_cid[6112] = 'PleuraAnatomyFindingorFeature'
 cid_concepts[6112] = \
 {'DCM': ['AnteriorJunctionLine', 'PosteriorJunctionLine'],
  'SRT': ['FissureOfLung']}
 
+name_for_cid[6113] = 'MediastinumAnatomyFindingorFeature'
 cid_concepts[6113] = \
 {'DCM': ['Hiatus',
          'AzygoesophagealRecessInterface',
@@ -13357,6 +14133,7 @@ cid_concepts[6113] = \
          'RightMainBronchus',
          'LeftMainBronchus']}
 
+name_for_cid[6114] = 'OsseousAnatomyFindingorFeature'
 cid_concepts[6114] = \
 {'SRT': ['Vertebra',
          'Scapula',
@@ -13366,6 +14143,7 @@ cid_concepts[6114] = \
          'Rib',
          'Spine']}
 
+name_for_cid[6115] = 'OsseousAnatomyModifiers'
 cid_concepts[6115] = \
 {'DCM': ['RibScaleneTubercle',
          'VertebralIntervertebralNotch',
@@ -13402,6 +14180,7 @@ cid_concepts[6115] = \
          'ClavicularNotchOfSternum',
          'GlenoidCavityOfScapula']}
 
+name_for_cid[6116] = 'MuscularAnatomy'
 cid_concepts[6116] = \
 {'SRT': ['LatissimusDorsiMuscle',
          'LevatoresCostarumMuscles',
@@ -13432,13 +14211,14 @@ cid_concepts[6116] = \
          'SupraspinatusMuscle',
          'TrabeculaeCarnae']}
 
+name_for_cid[6117] = 'VascularAnatomy'
 cid_concepts[6117] = \
-{'BARI': ['ndMarginalCoronaryArteryLaterals_2',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'rdMarginalCoronaryArteryLaterals_3',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'stMarginalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_2ndMarginalCoronaryArteryLaterals',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_1stMarginalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'DCM': ['AorticKnob', 'ArchOfTheAzygosVein'],
@@ -13455,16 +14235,16 @@ cid_concepts[6117] = \
          'DorsalScapularArtery',
          'MidLeftAnteriorDescendingCoronaryArtery',
          'AorticArch',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'BronchialArtery',
          'CommonCarotidArtery',
          'SuperiorVenaCava',
          'SuperiorPhrenicArtery',
          'RightCoronaryArtery',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'SubclavianVein',
          'DistalCircumflexCoronaryArtery',
          'ProximalCircumflexCoronaryArtery',
@@ -13473,19 +14253,19 @@ cid_concepts[6117] = \
          'EsophagealArtery',
          'MidRightCoronaryArtery',
          'InternalJugularVein',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
          'DistalRightCoronaryArtery',
          'AorticIsthmus',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'ProximalRightCoronaryArtery',
          'IntermediateArteryRamus',
          'VertebralArtery',
-         'ndMarginalCoronaryArtery_2',
-         'stMarginalCoronaryArtery_1',
+         '_2ndMarginalCoronaryArtery',
+         '_1stMarginalCoronaryArtery',
          'RightCoronaryArteryOstium',
          'InternalThoracicArtery',
          'BrachiocephalicVein',
@@ -13495,13 +14275,13 @@ cid_concepts[6117] = \
          'AzygosVein',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
          'PulmonaryVein',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'DescendingAorta',
          'BrachialPlexus',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'InferiorVenaCava',
          'ThyrocervicalTrunk',
          'BrachiocephalicTrunk',
@@ -13510,14 +14290,17 @@ cid_concepts[6117] = \
          'LeftMainCoronaryArteryOstium',
          'LeftMainCoronaryArtery']}
 
+name_for_cid[6118] = 'SizeDescriptor'
 cid_concepts[6118] = \
 {'DCM': ['ExtremelySmall', 'VerySmall', 'TooSmall'],
  'SRT': ['Small', 'Medium', 'Enlarged', 'Large']}
 
+name_for_cid[6119] = 'ChestBorderShape'
 cid_concepts[6119] = \
 {'DCM': ['Elliptic', 'Lobulated', 'Spiculated'],
  'SRT': ['Irregular', 'RoundShape']}
 
+name_for_cid[612] = 'AnesthesiaCategoryCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[612] = \
 {'SRT': ['LocalAnesthesia',
          'TopicalLocalAnesthesia',
@@ -13526,8 +14309,9 @@ cid_concepts[612] = \
          'EpiduralAnesthesia',
          'Sedation',
          'RegionalAnesthesia',
-         'MonitoredAnesthesiaCareMac']}
+         'MonitoredAnesthesiaCareMAC']}
 
+name_for_cid[6120] = 'ChestBorderDefinition'
 cid_concepts[6120] = \
 {'DCM': ['SharplyDemarcated',
          'PoorlyDemarcated',
@@ -13537,13 +14321,16 @@ cid_concepts[6120] = \
          'WellDemarcated'],
  'SRT': ['WellDefined', 'PoorlyDefined']}
 
+name_for_cid[6121] = 'ChestOrientationDescriptor'
 cid_concepts[6121] = \
 {'SRT': ['Horizontal', 'Oblique', 'Vertical']}
 
+name_for_cid[6122] = 'ChestContentDescriptor'
 cid_concepts[6122] = \
 {'DCM': ['Air', 'SoftTissue', 'Calcium'],
  'SRT': ['Fat', 'ForeignMaterialIodizedOilMercuryTalc']}
 
+name_for_cid[6123] = 'ChestOpacityDescriptor'
 cid_concepts[6123] = \
 {'DCM': ['Linear',
          'Profusion',
@@ -13553,6 +14340,7 @@ cid_concepts[6123] = \
          'Fibronodular',
          'Fluffy']}
 
+name_for_cid[6124] = 'LocationinChest'
 cid_concepts[6124] = \
 {'DCM': ['Subpleural'],
  'SRT': ['MiddleLobeOfLung',
@@ -13569,9 +14357,11 @@ cid_concepts[6124] = \
          'LowerZoneOfLung',
          'UpperLobeOfLung']}
 
+name_for_cid[6125] = 'GeneralChestLocation'
 cid_concepts[6125] = \
 {'SRT': ['Peripheral', 'Apical', 'Central', 'Basal']}
 
+name_for_cid[6126] = 'LocationinLung'
 cid_concepts[6126] = \
 {'DCM': ['Subpleural'],
  'SRT': ['MiddleLobeOfLung',
@@ -13581,13 +14371,15 @@ cid_concepts[6126] = \
          'LowerZoneOfLung',
          'UpperLobeOfLung']}
 
+name_for_cid[6127] = 'SegmentLocationinLung'
 cid_concepts[6127] = \
 {'SRT': ['AnteriorSegmentOfRightUpperLobe',
          'PosteriorSegmentOfRightUpperLobe',
          'AnteriorSegmentOfLeftUpperLobe']}
 
+name_for_cid[6128] = 'ChestDistributionDescriptor'
 cid_concepts[6128] = \
-{'DCM': ['BatSWingDistribution',
+{'DCM': ['BatWingDistribution',
          'ButterflyDistribution',
          'Centrilobular',
          'Coalescent',
@@ -13601,6 +14393,7 @@ cid_concepts[6128] = \
          'Segmental',
          'Discoid']}
 
+name_for_cid[6129] = 'ChestSiteInvolvement'
 cid_concepts[6129] = \
 {'DCM': ['Lobar'],
  'SRT': ['Bronchial',
@@ -13613,6 +14406,7 @@ cid_concepts[6129] = \
          'Mediastinum',
          'HilumOfLung']}
 
+name_for_cid[613] = 'AnesthesiaInductionCodeTypeforSmallAnimalAnesthesia'
 cid_concepts[613] = \
 {'SRT': ['PerRectum',
          'ByInhalation',
@@ -13620,13 +14414,16 @@ cid_concepts[613] = \
          'IntravenousRoute',
          'IntraperitonealRoute']}
 
+name_for_cid[6130] = 'SeverityDescriptor'
 cid_concepts[6130] = \
 {'DCM': ['HyperAcute'],
  'SRT': ['Mild', 'Chronic', 'Subacute', 'Severe', 'Moderate', 'AcuteOnset']}
 
+name_for_cid[6131] = 'ChestTextureDescriptor'
 cid_concepts[6131] = \
 {'DCM': ['Inhomogeneous', 'HomogeneousUniformOpacity']}
 
+name_for_cid[6132] = 'ChestCalcificationDescriptor'
 cid_concepts[6132] = \
 {'DCM': ['Target', 'Fibrocalcific', 'Flocculent'],
  'SRT': ['Laminated',
@@ -13635,9 +14432,11 @@ cid_concepts[6132] = \
          'EggshellCalcification',
          'Nodular']}
 
+name_for_cid[6133] = 'ChestQuantitativeTemporalDifferenceType'
 cid_concepts[6133] = \
 {'SRT': ['DifferenceInLocation', 'DifferenceInSize']}
 
+name_for_cid[6134] = 'ChestQualitativeTemporalDifferenceType'
 cid_concepts[6134] = \
 {'SRT': ['MoreDefined',
          'IncreaseInSize',
@@ -13652,6 +14451,7 @@ cid_concepts[6134] = \
          'DifferenceInSiteInvolvement',
          'FindingPartiallyRemoved']}
 
+name_for_cid[6135] = 'ImageQualityFinding'
 cid_concepts[6135] = \
 {'DCM': ['OtherFailure',
          'MotionBlur',
@@ -13660,29 +14460,32 @@ cid_concepts[6135] = \
          'Positioning',
          'OverExposed',
          'NoImage',
-         'DetectorArtifactS',
-         'ArtifactSOtherThanGridOrDetectorArtifact',
+         'DetectorArtifacts',
+         'ArtifactsOtherThanGridOrDetectorArtifact',
          'MechanicalFailure',
          'ElectricalFailure',
          'SoftwareFailure',
-         'GridArtifactS',
+         'GridArtifacts',
          'InappropriateImageProcessing'],
  'RADLEX': ['BeamHardeningArtifact']}
 
+name_for_cid[6136] = 'ChestTypesofQualityControlStandard'
 cid_concepts[6136] = \
-{'DCM': ['PerformanceOfPediatricAndAdultThoracicCt',
-         'PerformanceOfCtForDetectionOfPulmonaryEmbolismInAdults',
+{'DCM': ['PerformanceOfPediatricAndAdultThoracicCT',
+         'PerformanceOfCTForDetectionOfPulmonaryEmbolismInAdults',
          'InstitutionallyDefinedQualityControlStandard',
-         'PerformanceOfHighResolutionCtOfTheLungsInAdults',
-         'PerformanceOfPediatricAndAdultChestRadiographyAcr',
-         'AcrPositionStatement']}
+         'PerformanceOfHighResolutionCTOfTheLungsInAdults',
+         'PerformanceOfPediatricAndAdultChestRadiographyACR',
+         'ACRPositionStatement']}
 
+name_for_cid[6137] = 'TypesofCADAnalysis'
 cid_concepts[6137] = \
 {'SRT': ['ImageQualityAnalysis',
          'SpatialProximityAnalysis',
          'TemporalCorrelation',
          'SpatialCollocationAnalysis']}
 
+name_for_cid[6138] = 'ChestNonlesionObjectType'
 cid_concepts[6138] = \
 {'DCM': ['Portacath',
          'ChestTube',
@@ -13712,12 +14515,15 @@ cid_concepts[6138] = \
          'Bullet',
          'UretericStent']}
 
+name_for_cid[6139] = 'NonlesionModifiers'
 cid_concepts[6139] = \
 {'SRT': ['Internal', 'External']}
 
+name_for_cid[614] = 'AnesthesiaInductionCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[614] = \
 {'SRT': ['PerRectum', 'ByInhalation', 'IntramuscularRoute', 'IntravenousRoute']}
 
+name_for_cid[6140] = 'CalculationMethods'
 cid_concepts[6140] = \
 {'DCM': ['UnspecifiedMethodOfCalculation',
          'AgatstonScoringMethod',
@@ -13727,6 +14533,7 @@ cid_concepts[6140] = \
          'ThreeDimensionalMethod'],
  'SRT': ['Estimated']}
 
+name_for_cid[6141] = 'AttenuationCoefficientMeasurements'
 cid_concepts[6141] = \
 {'DCM': ['StandardDeviationOfAttenuationCoefficient',
          'AttenuationCoefficient',
@@ -13735,6 +14542,7 @@ cid_concepts[6141] = \
          'MeanAttenuationCoefficient',
          'MedianAttenuationCoefficient']}
 
+name_for_cid[6142] = 'CalculatedValue'
 cid_concepts[6142] = \
 {'DCM': ['MassOfParenchymalTissue',
          'MassOfBreast',
@@ -13752,6 +14560,7 @@ cid_concepts[6142] = \
          'CalcificationExtentAsPercentOfSurface',
          'CalcificationExtentAsPercentOfVolume']}
 
+name_for_cid[6143] = 'LesionResponse'
 cid_concepts[6143] = \
 {'DCM': ['TargetLesionCompleteResponse',
          'TargetLesionPartialResponse',
@@ -13761,6 +14570,7 @@ cid_concepts[6143] = \
          'NonTargetLesionIncompleteResponseOrStableDisease',
          'NonTargetLesionProgressiveDisease']}
 
+name_for_cid[6144] = 'RECISTDefinedLesionResponse'
 cid_concepts[6144] = \
 {'DCM': ['TargetLesionCompleteResponse',
          'TargetLesionPartialResponse',
@@ -13770,42 +14580,52 @@ cid_concepts[6144] = \
          'NonTargetLesionIncompleteResponseOrStableDisease',
          'NonTargetLesionProgressiveDisease']}
 
+name_for_cid[6145] = 'BaselineCategory'
 cid_concepts[6145] = \
 {'DCM': ['TargetLesionAtBaseline',
          'NonTargetLesionAtBaseline',
          'NonLesionAtBaseline']}
 
+name_for_cid[6146] = 'TimePointTypes'
 cid_concepts[6146] = \
 {'DCM': ['Posttreatment', 'Eligibility'],
  'UMLS': ['Unscheduled', 'Baseline', 'Pretreatment', 'Nadir']}
 
+name_for_cid[6147] = 'ResponseCriteria'
 cid_concepts[6147] = \
-{'DCM': ['Recist10', 'Recist11', 'Who'], 'NCIt': ['Rano']}
+{'DCM': ['RECIST10', 'RECIST11', 'WHO'], 'NCIt': ['RANO']}
 
+name_for_cid[615] = 'AnesthesiaMaintenanceCodeTypeforSmallAnimalAnesthesia'
 cid_concepts[615] = \
 {'SRT': ['InhalationAnesthesiaSystemClosedNoRebreathingPrimaryAgent',
          'InhalationAnesthesiaSystemClosedRebreathingPrimaryAgent']}
 
+name_for_cid[6151] = 'BackgroundEchotexture'
 cid_concepts[6151] = \
 {'DCM': ['HomogeneousFatEchotexture',
          'HomogeneousFibroglandularEchotexture',
          'HeterogeneousEchotexture']}
 
+name_for_cid[6152] = 'Orientation'
 cid_concepts[6152] = \
 {'DCM': ['Parallel', 'NotParallel']}
 
+name_for_cid[6153] = 'LesionBoundary'
 cid_concepts[6153] = \
 {'DCM': ['AbruptInterface', 'EchogenicHalo']}
 
+name_for_cid[6154] = 'EchoPattern'
 cid_concepts[6154] = \
 {'DCM': ['Anechoic', 'Hyperechoic', 'Complex', 'Hypoechoic', 'Isoechoic']}
 
+name_for_cid[6155] = 'PosteriorAcousticFeatures'
 cid_concepts[6155] = \
 {'DCM': ['CombinedPosteriorEnhancementAndShadowing',
          'NoPosteriorAcousticFeatures',
          'PosteriorEnhancement',
          'PosteriorShadowing']}
 
+name_for_cid[6157] = 'Vascularity'
 cid_concepts[6157] = \
 {'DCM': ['VascularityNotPresent',
          'VascularityNotAssessed',
@@ -13813,66 +14633,75 @@ cid_concepts[6157] = \
          'VascularityPresentImmediatelyAdjacentToLesion',
          'DiffuselyIncreasedVascularityInSurroundingTissue']}
 
+name_for_cid[6158] = 'CorrelationtoOtherFindings'
 cid_concepts[6158] = \
 {'DCM': ['CorrelatesToPhysicalExamFindings',
          'CorrelatesToMammographyFindings',
-         'CorrelatesToMriFindings',
+         'CorrelatesToMRIFindings',
          'CorrelatesToUltrasoundFindings',
          'CorrelatesToOtherImagingFindings',
          'NoCorrelationToOtherImagingFindings',
          'NoCorrelationToClinicalFindings']}
 
+name_for_cid[6159] = 'MalignancyType'
 cid_concepts[6159] = \
 {'DCM': ['InvasiveBreastCarcinoma', 'OtherMalignancyType'],
  'SRT': ['IntraductalCarcinomaNonInfiltrating']}
 
+name_for_cid[616] = 'AnesthesiaMaintenanceCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[616] = \
 {'SRT': ['InhalationAnesthesiaSystemClosedNoRebreathingPrimaryAgent',
          'InhalationAnesthesiaSystemClosedRebreathingPrimaryAgent']}
 
+name_for_cid[6160] = 'BreastPrimaryTumorAssessmentFromAJCC'
 cid_concepts[6160] = \
 {'SRT': ['T0NoEvidenceOfPrimaryTumorBreast',
          'T4bTumorOfAnySizeWithEdemaIncludingPeauDOrange',
          'T4aTumorOfAnySizeWithExtensionToChestWallNotIncl',
-         'TxPrimaryTumorCannotBeAssessedBreast',
+         'TXPrimaryTumorCannotBeAssessedBreast',
          'T4InflammatoryCarcinomaBreast',
          'T4cTumorOfAnySizeWithDirectExtensionToChestWall',
          'TisCarcinomaInSituBreast',
-         'T1Tumor2CmOrLessInGreatestDimensionBreast',
+         'T1Tumor2cmOrLessInGreatestDimensionBreast',
          'TisLobularCarcinomaInSituBreast',
          'TisDuctalCarcinomaInSituBreast',
-         'T1micMicroinvasion01CmOrLessInGreatestDimension',
-         'TisPagetSDiseaseOfTheNippleWithNoTumor',
-         'T2TumorMoreThan2CmButNotMoreThan5Cm',
-         'T1cTumorMoreThan1CmButNotMoreThan2Cm',
+         'T1micMicroinvasion01cmOrLessInGreatestDimension',
+         'TisPagetDiseaseOfTheNippleWithNoTumor',
+         'T2TumorMoreThan2cmButNotMoreThan5cm',
+         'T1cTumorMoreThan1cmButNotMoreThan2cm',
          'T4TumorOfAnySizeWithDirectExtensionToChestWall',
-         'T3TumorMoreThan5CmInGreatestDimensionBreast',
-         'T1bTumorMoreThan05CmButNotMoreThan1Cm',
-         'T1aTumorMoreThan01CmButNotMoreThan05Cm']}
+         'T3TumorMoreThan5cmInGreatestDimensionBreast',
+         'T1bTumorMoreThan05cmButNotMoreThan1cm',
+         'T1aTumorMoreThan01cmButNotMoreThan05cm']}
 
+name_for_cid[6161] = 'ClinicalRegionalLymphNodeAssessmentforBreast'
 cid_concepts[6161] = \
 {'SRT': ['N2bMetastasisInClinicallyApparentInternalNodes',
-         'N2aMetastasisIn4To9AxillaryLymphNodes20Mm',
-         'N3MetastasisToIpsilateralInternalMammaryLymphNodeS',
+         'N2aMetastasisIn4To9AxillaryLymphNodes20mm',
+         'N3MetastasisToIpsilateralInternalMammaryLymphNodes',
          'N3aMetastasisIn10OrMoreAxillaryLymphNodes',
          'N0NoRegionalLymphNodeMetastasisHistologically',
          'N2MetastasisIn4To9AxillaryLymphNodes',
          'N1MetastasisIn1To3AxillaryLymphNodes',
-         'NxRegionalLymphNodesCannotBeAssessed',
+         'NXRegionalLymphNodesCannotBeAssessed',
          'N3cMetastasisInIpsilateralSupraclavicularLymphNodes',
          'N3bMetastasisInClinicallyApparentIpsilateralInternal']}
 
+name_for_cid[6162] = 'AssessmentofMetastasisforBreast'
 cid_concepts[6162] = \
 {'SRT': ['M0NoDistantMetastasisBreast',
-         'MxDistantMetastasisCannotBeAssessedBreast',
+         'MXDistantMetastasisCannotBeAssessedBreast',
          'M1DistantMetastasisBreast']}
 
+name_for_cid[6163] = 'MenstrualCyclePhase'
 cid_concepts[6163] = \
-{'DCM': ['stWeek_1', 'ndWeek_2', 'rdWeek_3'], 'SRT': ['MenstruationPresent']}
+{'DCM': ['_1stWeek', '_2ndWeek', '_3rdWeek'], 'SRT': ['MenstruationPresent']}
 
+name_for_cid[6164] = 'TimeIntervals'
 cid_concepts[6164] = \
-{'DCM': ['MonthsAgo_3', 'MonthsTo1YearAgo_4', 'YearAgo_1', 'NotSure']}
+{'DCM': ['_3MonthsAgo', '_4MonthsTo1YearAgo', '_1YearAgo', 'NotSure']}
 
+name_for_cid[6165] = 'BreastLinearMeasurements'
 cid_concepts[6165] = \
 {'DCM': ['Distance',
          'Height',
@@ -13894,6 +14723,7 @@ cid_concepts[6165] = \
          'DiameterOfCircumscribedCircle',
          'Length']}
 
+name_for_cid[6166] = 'CADGeometrySecondaryGraphicalRepresentation'
 cid_concepts[6166] = \
 {'DCM': ['OrthogonalLocationArcInnerMargin',
          'OrthogonalLocationArcOuterMargin',
@@ -13906,9 +14736,10 @@ cid_concepts[6166] = \
          'OrthogonalLocationArc'],
  'SRT': ['ShortAxis', 'LongAxis']}
 
+name_for_cid[617] = 'AirwayManagementMethodCodeTypeforSmallAnimalAnesthesia'
 cid_concepts[617] = \
 {'DCM': ['NoseCone', 'NasalCannula'],
- 'SRT': ['LaryngealMaskAirwayLma',
+ 'SRT': ['LaryngealMaskAirwayLMA',
          'OxygenTherapy',
          'IntubationOfRespiratoryTract',
          'AnestheticFaceMask',
@@ -13916,9 +14747,10 @@ cid_concepts[617] = \
          'ArtificialRespiration',
          'ControlledVentilation']}
 
+name_for_cid[618] = 'AirwayManagementMethodCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[618] = \
 {'DCM': ['NasalCannula'],
- 'SRT': ['LaryngealMaskAirwayLma',
+ 'SRT': ['LaryngealMaskAirwayLMA',
          'OxygenTherapy',
          'IntubationOfRespiratoryTract',
          'AnestheticFaceMask',
@@ -13926,24 +14758,28 @@ cid_concepts[618] = \
          'ArtificialRespiration',
          'ControlledVentilation']}
 
+name_for_cid[619] = 'AirwayManagementSubMethodCodeTypeforSmallAnimalAnesthesia'
 cid_concepts[619] = \
 {'SRT': ['ContinuousFlowVentilation',
          'TranstrachealJetVentilation',
          'HighFrequencyVentilation'],
  'UMLS': ['InverseRatioVentilation']}
 
+name_for_cid[62] = 'ImagingAgentAdministrationPhaseType'
 cid_concepts[62] = \
 {'DCM': ['AutomaticAdministrationPhase',
          'AutomaticProgrammedHoldPhase',
          'AutomaticWithManualInjectPhase',
          'AutomaticWithManualHoldPhase']}
 
+name_for_cid[620] = 'AirwayManagementSubMethodCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[620] = \
 {'SRT': ['ContinuousFlowVentilation',
          'TranstrachealJetVentilation',
          'HighFrequencyVentilation'],
  'UMLS': ['InverseRatioVentilation']}
 
+name_for_cid[6200] = 'ColonOverallAssessment'
 cid_concepts[6200] = \
 {'DCM': ['C0InadequateStudyAwaitingPriorComparisons',
          'C1NormalColonOrBenignLesion',
@@ -13951,6 +14787,7 @@ cid_concepts[6200] = \
          'C3PolypPossiblyAdvancedAdenoma',
          'C4ColonicMassLikelyMalignant']}
 
+name_for_cid[6201] = 'ColonFindingorFeature'
 cid_concepts[6201] = \
 {'DCM': ['ImageQuality', 'SelectedRegion', 'NonLesion', 'AnatomicNonColon'],
  'SRT': ['TumorOfColon',
@@ -13966,6 +14803,7 @@ cid_concepts[6201] = \
          'Diverticulum',
          'PolypOfColon']}
 
+name_for_cid[6202] = 'ColonFindingorFeatureModifier'
 cid_concepts[6202] = \
 {'DCM': ['ChestTube', 'KidneyStent', 'PancreaticStent', 'Coin', 'FiducialMark'],
  'SRT': ['JejunostomyTube',
@@ -14009,6 +14847,7 @@ cid_concepts[6202] = \
          'Bullet',
          'UreteralStent']}
 
+name_for_cid[6203] = 'ColonNonlesionObjectType'
 cid_concepts[6203] = \
 {'DCM': ['ChestTube', 'KidneyStent', 'PancreaticStent', 'Coin', 'FiducialMark'],
  'SRT': ['JejunostomyTube',
@@ -14032,6 +14871,7 @@ cid_concepts[6203] = \
          'Bullet',
          'UreteralStent']}
 
+name_for_cid[6204] = 'AnatomicNoncolonFindings'
 cid_concepts[6204] = \
 {'SRT': ['Spleen',
          'Prostate',
@@ -14054,48 +14894,54 @@ cid_concepts[6204] = \
          'BloodVessel',
          'Bone']}
 
+name_for_cid[6205] = 'ClockfaceLocationforColon'
 cid_concepts[6205] = \
-{'SRT': ['OClockPosition_3',
-         'OClockPosition_12',
-         'OClockPosition_2',
-         'OClockPosition_11',
-         'OClockPosition_1',
-         'OClockPosition_10',
-         'OClockPosition_7',
-         'OClockPosition_6',
-         'OClockPosition_5',
-         'OClockPosition_4',
-         'OClockPosition_9',
-         'OClockPosition_8']}
+{'SRT': ['_3OClockPosition',
+         '_12OClockPosition',
+         '_2OClockPosition',
+         '_11OClockPosition',
+         '_1OClockPosition',
+         '_10OClockPosition',
+         '_7OClockPosition',
+         '_6OClockPosition',
+         '_5OClockPosition',
+         '_4OClockPosition',
+         '_9OClockPosition',
+         '_8OClockPosition']}
 
+name_for_cid[6206] = 'RecumbentPatientOrientationforColon'
 cid_concepts[6206] = \
 {'SRT': ['RightLateralDecubitus', 'LeftLateralDecubitus', 'Supine', 'Prone']}
 
+name_for_cid[6207] = 'ColonQuantitativeTemporalDifferenceType'
 cid_concepts[6207] = \
 {'SRT': ['DifferenceInLocation', 'DifferenceInAttenuation', 'DifferenceInSize']}
 
+name_for_cid[6208] = 'ColonTypesofQualityControlStandard'
 cid_concepts[6208] = \
 {'DCM': ['InstitutionallyDefinedQualityControlStandard',
-         'AcrPositionStatement',
-         'AcrGuidelinePerformanceOfAdultCtColonography',
-         'AcrStandardCtMedicalPhysicsPerformanceMonitoring']}
+         'ACRPositionStatement',
+         'ACRGuidelinePerformanceOfAdultCTColonography',
+         'ACRStandardCTMedicalPhysicsPerformanceMonitoring']}
 
+name_for_cid[6209] = 'ColonMorphologyDescriptor'
 cid_concepts[6209] = \
 {'SRT': ['Circumferential', 'Ulcer', 'Flat', 'Sessile', 'Pedunculated']}
 
+name_for_cid[621] = 'TypeofMedicationforSmallAnimalAnesthesia'
 cid_concepts[621] = \
 {'DCM': ['CarrierGas'],
  'SRT': ['BetaBlocker',
          'SkeletalMuscleRelaxant',
          'Antibiotic',
          'BloodProduct',
-         'Nsaid',
+         'NSAID',
          'Oxytocic',
          'Bronchodilator',
          'Potassium',
          'AminoglycosideAntibiotic',
          'Barbiturate',
-         'NeuromuscularBlockingNmbDepolarizing',
+         'NeuromuscularBlockingNMBDepolarizing',
          'ThyroidHormone',
          'Antihypertensive',
          'BetaLactamAntibiotic',
@@ -14131,7 +14977,7 @@ cid_concepts[621] = \
          'MacrolideAntibiotic',
          'Anticoagulant',
          'Antiemetic',
-         'NeuromuscularBlockingNmbNonDepolarizing',
+         'NeuromuscularBlockingNMBNonDepolarizing',
          'OcularLubricant',
          'Antihistamine',
          'TetracyclineAntibiotic',
@@ -14150,6 +14996,7 @@ cid_concepts[621] = \
          'Vitamin'],
  'UMLS': ['H2Antagonist', 'NarcoticAnalgesic', 'Antihypoglycemic']}
 
+name_for_cid[6210] = 'LocationinIntestinalTract'
 cid_concepts[6210] = \
 {'SRT': ['Rectum',
          'TransverseColon',
@@ -14160,25 +15007,28 @@ cid_concepts[6210] = \
          'DescendingColon',
          'HepaticFlexureOfColon']}
 
+name_for_cid[6211] = 'ColonCADMaterialDescription'
 cid_concepts[6211] = \
 {'DCM': ['SoftTissue'], 'SRT': ['Fat', 'Air', 'BoneMatrix']}
 
+name_for_cid[6212] = 'CalculatedValueforColonFindings'
 cid_concepts[6212] = \
 {'DCM': ['PolypStalkWidth', 'DistanceFromAnus'],
  'SRT': ['PolypStalkLength', 'PolypSizeLargestDimension']}
 
+name_for_cid[622] = 'MedicationTypeCodeTypefromAnesthesiaQualityInitiative(AQI)'
 cid_concepts[622] = \
 {'SRT': ['BetaBlocker',
          'SkeletalMuscleRelaxant',
          'Antibiotic',
          'BloodProduct',
-         'Nsaid',
+         'NSAID',
          'Oxytocic',
          'Bronchodilator',
          'Potassium',
          'AminoglycosideAntibiotic',
          'Barbiturate',
-         'NeuromuscularBlockingNmbDepolarizing',
+         'NeuromuscularBlockingNMBDepolarizing',
          'ThyroidHormone',
          'Antihypertensive',
          'BetaLactamAntibiotic',
@@ -14214,7 +15064,7 @@ cid_concepts[622] = \
          'MacrolideAntibiotic',
          'Anticoagulant',
          'Antiemetic',
-         'NeuromuscularBlockingNmbNonDepolarizing',
+         'NeuromuscularBlockingNMBNonDepolarizing',
          'OcularLubricant',
          'Antihistamine',
          'TetracyclineAntibiotic',
@@ -14233,6 +15083,7 @@ cid_concepts[622] = \
          'Vitamin'],
  'UMLS': ['H2Antagonist', 'NarcoticAnalgesic', 'Antihypoglycemic']}
 
+name_for_cid[623] = 'MedicationforSmallAnimalAnesthesia'
 cid_concepts[623] = \
 {'SRT': ['Pancuronium',
          'Alphachloralose',
@@ -14275,6 +15126,7 @@ cid_concepts[623] = \
          'Diazepam'],
  'UMLS': ['RoomAir', 'Alphaxalone', 'Fluanisone', 'Metomidate']}
 
+name_for_cid[624] = 'InhalationalAnesthesiaAgentsforSmallAnimalAnesthesia'
 cid_concepts[624] = \
 {'SRT': ['Desflurane',
          'Chloroform',
@@ -14287,6 +15139,7 @@ cid_concepts[624] = \
          'NitrousOxide',
          'Sevoflurane']}
 
+name_for_cid[625] = 'InjectableAnesthesiaAgentsforSmallAnimalAnesthesia'
 cid_concepts[625] = \
 {'SRT': ['Methohexital',
          'Alphachloralose',
@@ -14310,24 +15163,31 @@ cid_concepts[625] = \
          'Diazepam'],
  'UMLS': ['Alphaxalone', 'Fluanisone', 'Metomidate']}
 
+name_for_cid[626] = 'PremedicationAgentsforSmallAnimalAnesthesia'
 cid_concepts[626] = \
 {'SRT': ['Chlorpromazine', 'Acepromazine']}
 
+name_for_cid[627] = 'NeuromuscularBlockingAgentsforSmallAnimalAnesthesia'
 cid_concepts[627] = \
 {'SRT': ['Pancuronium', 'Succinylcholine']}
 
+name_for_cid[628] = 'AncillaryMedicationsforSmallAnimalAnesthesia'
 cid_concepts[628] = \
 {}
 
+name_for_cid[629] = 'CarrierGasesforSmallAnimalAnesthesia'
 cid_concepts[629] = \
 {'SRT': ['MedicalAir', 'OxygenGas'], 'UMLS': ['RoomAir']}
 
+name_for_cid[63] = 'ImagingAgentAdministrationMode'
 cid_concepts[63] = \
 {'DCM': ['ManualAdministration', 'AutomatedAdministration']}
 
+name_for_cid[630] = 'LocalAnestheticsforSmallAnimalAnesthesia'
 cid_concepts[630] = \
 {'SRT': ['Bupivacaine', 'Lidocaine', 'LidocainePrilocaine']}
 
+name_for_cid[6300] = 'ProstateSectorAnatomy'
 cid_concepts[6300] = \
 {'SRT': ['RightSeminalVesicle',
          'RightAnteriorMiddlePeripheralZoneOfProstate',
@@ -14384,6 +15244,7 @@ cid_concepts[6300] = \
          'LeftPosteromedialApicalPeripheralZoneOfProstate',
          'RightLateralMiddlePeripheralZoneOfProstate']}
 
+name_for_cid[6301] = 'ProstateSectorAnatomyfromPIRADSv2'
 cid_concepts[6301] = \
 {'SRT': ['RightSeminalVesicle',
          'LeftPosteriorMiddleTransitionZoneOfProstate',
@@ -14425,6 +15286,7 @@ cid_concepts[6301] = \
          'LeftPosteromedialApicalPeripheralZoneOfProstate',
          'RightPosteromedialApicalPeripheralZoneOfProstate']}
 
+name_for_cid[6302] = 'ProstateSectorAnatomyfromEuropeanConcensus16Sector(Minimal)Model'
 cid_concepts[6302] = \
 {'SRT': ['RightSeminalVesicle',
          'LeftSeminalVesicle',
@@ -14446,6 +15308,7 @@ cid_concepts[6302] = \
          'LeftApicalTransitionZoneOfProstate',
          'RightLateralMiddlePeripheralZoneOfProstate']}
 
+name_for_cid[6303] = 'ProstateSectorAnatomyfromEuropeanConcensus27Sector(Optimal)Model'
 cid_concepts[6303] = \
 {'SRT': ['RightSeminalVesicle',
          'RightAnteriorMiddlePeripheralZoneOfProstate',
@@ -14478,6 +15341,7 @@ cid_concepts[6303] = \
          'RightPosteromedialApicalPeripheralZoneOfProstate',
          'LeftApicalTransitionZoneOfProstate']}
 
+name_for_cid[631] = 'PhaseofProcedureRequiringAnesthesia'
 cid_concepts[631] = \
 {'SRT': ['Intraoperative',
          'BeforeProcedure',
@@ -14486,12 +15350,15 @@ cid_concepts[631] = \
          'DuringProcedure',
          'AfterProcedure']}
 
+name_for_cid[632] = 'PhaseofSurgicalProcedureRequiringAnesthesia'
 cid_concepts[632] = \
 {'SRT': ['Intraoperative', 'Postoperative', 'Preoperative']}
 
+name_for_cid[633] = 'PhaseofImagingProcedureRequiringAnesthesia'
 cid_concepts[633] = \
 {'SRT': ['BeforeProcedure', 'DuringProcedure', 'AfterProcedure']}
 
+name_for_cid[634] = 'PhaseofAnimalHandling'
 cid_concepts[634] = \
 {'DCM': ['InHomeCage',
          'DuringTransport',
@@ -14500,6 +15367,7 @@ cid_concepts[634] = \
  'SRT': ['ImagingProcedure', 'AnesthesiaInduction'],
  'UMLS': ['AnesthesiaRecoveryPeriod']}
 
+name_for_cid[635] = 'HeatingMethod'
 cid_concepts[635] = \
 {'DCM': ['HeatedWaterBlanket',
          'PreHeatedPad',
@@ -14516,22 +15384,25 @@ cid_concepts[635] = \
          'WarmerDevice'],
  'UMLS': ['HeatLamp']}
 
+name_for_cid[636] = 'TemperatureSensorDeviceComponentTypeforSmallAnimalProcedures'
 cid_concepts[636] = \
 {'DCM': ['CarrierTemperatureSensor'],
  'SRT': ['RectalTemperature'],
  'UMLS': ['Thermography']}
 
+name_for_cid[637] = 'ExogenousSubstanceTypes'
 cid_concepts[637] = \
 {'DCM': ['TumorGraft'],
  'SRT': ['Cytokine', 'Fibril', 'Toxin', 'Virus', 'GraftMaterial']}
 
+name_for_cid[638] = 'ExogenousSubstance'
 cid_concepts[638] = \
 {'DCM': ['HumanAlphaSynucleinPreformedFibrils',
          'MouseAlphaSynucleinPreformedFibrils',
          'HumanTauPreformedFibrils',
          'MouseTauPreformedFibrils'],
  'NCIt': ['BronchioloalveolarAdenocarcinoma'],
- 'PUBCHEM_CID': ['Hydroxydopamine_6'],
+ 'PUBCHEM_CID': ['_6Hydroxydopamine'],
  'SRT': ['VascularEndothelialGrowthFactor',
          'Adenocarcinoma',
          'SmallCellCarcinoma',
@@ -14545,7 +15416,7 @@ cid_concepts[638] = \
          'InterferonGamma',
          'AmelanoticMelanoma',
          'Glioblastoma',
-         'TheilerSMurineEncephalomyelitisVirus',
+         'TheilerMurineEncephalomyelitisVirus',
          'MixedSmallCellCarcinoma',
          'SquamousCellCarcinoma',
          'Leukemia',
@@ -14561,6 +15432,7 @@ cid_concepts[638] = \
          'Osteosarcoma'],
  'UMLS': ['EthidiumBromide']}
 
+name_for_cid[639] = 'TumorGraftHistologicType'
 cid_concepts[639] = \
 {'NCIt': ['BronchioloalveolarAdenocarcinoma'],
  'SRT': ['SquamousCellCarcinoma',
@@ -14584,6 +15456,7 @@ cid_concepts[639] = \
          'MixedSmallCellCarcinoma',
          'Osteosarcoma']}
 
+name_for_cid[64] = 'ImagingAgentAdministrationPatientState'
 cid_concepts[64] = \
 {'DCM': ['AcuteUnilateralRenalBlockage',
          'LowThyroidUptake',
@@ -14606,12 +15479,14 @@ cid_concepts[64] = \
          'Cardiomyopathy',
          'HistoryOfHypertension']}
 
+name_for_cid[640] = 'Fibrils'
 cid_concepts[640] = \
 {'DCM': ['HumanAlphaSynucleinPreformedFibrils',
          'MouseAlphaSynucleinPreformedFibrils',
          'HumanTauPreformedFibrils',
          'MouseTauPreformedFibrils']}
 
+name_for_cid[6401] = 'NonlesionObjectTypePhysicalObjects'
 cid_concepts[6401] = \
 {'DCM': ['OtherMarker'],
  'SRT': ['OpaqueMarker',
@@ -14621,19 +15496,22 @@ cid_concepts[6401] = \
          'CompressionPaddle',
          'CardiacPacemaker',
          'Collimator',
-         'IdPlate',
+         'IDPlate',
          'Suture',
          'Staple',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'Bullet',
          'Clip']}
 
+name_for_cid[6402] = 'NonlesionObjectTypeSubstances'
 cid_concepts[6402] = \
 {'SRT': ['ContrastAgent']}
 
+name_for_cid[6403] = 'NonlesionObjectTypeTissues'
 cid_concepts[6403] = \
 {'SRT': ['ScarTissue']}
 
+name_for_cid[6404] = 'ChestNonlesionObjectTypePhysicalObjects'
 cid_concepts[6404] = \
 {'DCM': ['Portacath',
          'ChestTube',
@@ -14662,26 +15540,32 @@ cid_concepts[6404] = \
          'Bullet',
          'UretericStent']}
 
+name_for_cid[6405] = 'ChestNonlesionObjectTypeTissues'
 cid_concepts[6405] = \
 {'SRT': ['ScarTissue']}
 
+name_for_cid[641] = 'Viruses'
 cid_concepts[641] = \
-{'SRT': ['TheilerSMurineEncephalomyelitisVirus', 'AdenoAssociatedVirusGroup']}
+{'SRT': ['TheilerMurineEncephalomyelitisVirus', 'AdenoAssociatedVirusGroup']}
 
+name_for_cid[642] = 'Cytokines'
 cid_concepts[642] = \
 {'SRT': ['VascularEndothelialGrowthFactor',
          'InterferonGamma',
          'TumorNecrosisFactorAlpha']}
 
+name_for_cid[643] = 'Toxins'
 cid_concepts[643] = \
-{'PUBCHEM_CID': ['Hydroxydopamine_6'],
+{'PUBCHEM_CID': ['_6Hydroxydopamine'],
  'SRT': ['Lysophosphatidylcholine', 'Lipopolysaccharide'],
  'UMLS': ['EthidiumBromide']}
 
+name_for_cid[644] = 'ExogenousSubstanceAdministrationSites'
 cid_concepts[644] = \
 {'NCIt': ['MouseMammaryFatPad'],
  'SRT': ['BoneMarrow', 'Liver', 'Flank', 'Tumor', 'Brain']}
 
+name_for_cid[645] = 'ExogenousSubstanceTissueofOrigin'
 cid_concepts[645] = \
 {'DCM': ['EmbryonicKidney'],
  'SRT': ['Prostate',
@@ -14701,22 +15585,25 @@ cid_concepts[645] = \
          'Breast',
          'Brain']}
 
+name_for_cid[646] = 'PreclinicalSmallAnimalImagingProcedures'
 cid_concepts[646] = \
-{'DCM': ['SpectOfWholeBody', 'SpectCtOfWholeBody'],
- 'LN': ['MriWholeBody',
-        'HeadCt',
+{'DCM': ['SPECTOfWholeBody', 'SPECTCTOfWholeBody'],
+ 'LN': ['MRIWholeBody',
+        'HeadCT',
         'RadionuclideScanOfWholeBody',
-        'BrainMri',
+        'BrainMRI',
         'RadionuclideBrainScan',
-        'PetWholeBody',
-        'WholeBodyCt',
-        'BrainPet',
-        'BrainSpect'],
+        'PETWholeBody',
+        'WholeBodyCT',
+        'BrainPET',
+        'BrainSPECT'],
  'SRT': ['UltrasonographyOfTotalBody']}
 
+name_for_cid[647] = 'PositionReferenceIndicatorforFrameofReference'
 cid_concepts[647] = \
 {'FMA': ['Bregma', 'Lambda']}
 
+name_for_cid[65] = 'PreMedicationforImagingAgentAdministration'
 cid_concepts[65] = \
 {'SCT': ['Remifentanil', 'Sufentanil'],
  'SRT': ['Prednisone',
@@ -14732,10 +15619,12 @@ cid_concepts[65] = \
          'HydrocortisoneSodiumSuccinate',
          'DexamethasoneSodiumSulfate']}
 
+name_for_cid[66] = 'MedicationforImagingAgentAdministration'
 cid_concepts[66] = \
 {'SCT': ['Remifentanil', 'Sufentanil'],
  'SRT': ['Midazolam', 'Propofol', 'Alfentanil']}
 
+name_for_cid[67] = 'ImagingAgentAdministrationCompletionStatus'
 cid_concepts[67] = \
 {'DCM': ['TerminatedDueToFlowRateAboveTerminationLimit',
          'TerminatedDueToConsumableRemoval',
@@ -14749,10 +15638,12 @@ cid_concepts[67] = \
          'TerminatedDueToUnspecifiedInjectorFailure'],
  'SRT': ['Complete']}
 
+name_for_cid[68] = 'ImagingAgentAdministrationPharmaceuticalUnitofPresentation'
 cid_concepts[68] = \
 {'SCT': ['Syringe'],
  'SRT': ['ParenteralEnteralSolutionBag', 'Bottle', 'Cartridge']}
 
+name_for_cid[69] = 'ImagingAgentAdministrationConsumables'
 cid_concepts[69] = \
 {'SRT': ['TubeDevicePhysicalObject',
          'Bottle',
@@ -14761,6 +15652,7 @@ cid_concepts[69] = \
          'Needle',
          'Syringe']}
 
+name_for_cid[7] = 'UltrasoundBeamPath'
 cid_concepts[7] = \
 {'SRT': ['TransPancreatic',
          'TransEsophageal',
@@ -14777,24 +15669,26 @@ cid_concepts[7] = \
          'TransPleural',
          'TransRenal']}
 
+name_for_cid[70] = 'Flush'
 cid_concepts[70] = \
 {'SRT': ['Saline', 'LactatedRingerS', 'Dextran']}
 
+name_for_cid[7000] = 'DiagnosticImagingReportDocumentTitles'
 cid_concepts[7000] = \
 {'DCM': ['BreastImagingReport'],
- 'LN': ['MriHeadReport',
+ 'LN': ['MRIHeadReport',
         'XRayReport',
-        'CtAbdomenReport',
+        'CTAbdomenReport',
         'EchocardiographyReport',
-        'EcgReport',
-        'CtChestReport',
-        'CtHeadReport',
+        'ECGReport',
+        'CTChestReport',
+        'CTHeadReport',
         'CardiacCatheterizationReport',
         'FluoroscopyStudyReport',
         'UltrasoundReport',
-        'DexaSkeletalSystemStudyReport',
+        'DEXASkeletalSystemStudyReport',
         'DiagnosticImagingReport',
-        'CtReport',
+        'CTReport',
         'DiagnosticInterventionalRadiologyReport',
         'MammographyScreeningReport',
         'CardiacElectrophysiologyReport',
@@ -14803,11 +15697,12 @@ cid_concepts[7000] = \
         'RadiologyReport',
         'HolterStudyReport',
         'ExerciseStressTestReport',
-        'PetScanReport',
+        'PETScanReport',
         'NuclearMedicineReport',
-        'MriSpineReport',
-        'MriReport']}
+        'MRISpineReport',
+        'MRIReport']}
 
+name_for_cid[7001] = 'DiagnosticImagingReportHeadings'
 cid_concepts[7001] = \
 {'LN': ['Addendum',
         'ClinicalInformation',
@@ -14829,6 +15724,7 @@ cid_concepts[7001] = \
         'CurrentProcedureDescriptions',
         'Request']}
 
+name_for_cid[7002] = 'DiagnosticImagingReportElements'
 cid_concepts[7002] = \
 {'DCM': ['PreviousFinding',
          'Conclusion',
@@ -14841,21 +15737,24 @@ cid_concepts[7002] = \
  'LN': ['History', 'Request'],
  'SRT': ['ComplicationOfProcedure']}
 
+name_for_cid[7003] = 'DiagnosticImagingReportPurposesofReference'
 cid_concepts[7003] = \
 {'DCM': ['BestIllustrationOfFinding',
          'Baseline',
          'SourceOfMeasurement',
-         'IllustrationOfRoi']}
+         'IllustrationOfROI']}
 
+name_for_cid[7004] = 'WaveformPurposesofReference'
 cid_concepts[7004] = \
 {'DCM': ['SimultaneousRespiratoryWaveform',
          'SimultaneousArterialPulseWaveform',
-         'SimultaneousEcg',
+         'SimultaneousECG',
          'SimultaneousVoiceNarrative',
          'SimultaneousDoppler',
          'SimultaneousHemodynamic',
          'SimultaneousPhonocardiographicWaveform']}
 
+name_for_cid[7005] = 'ContributingEquipmentPurposesofReference'
 cid_concepts[7005] = \
 {'DCM': ['PortableMediaImporterEquipment',
          'FilmDigitizer',
@@ -14868,24 +15767,27 @@ cid_concepts[7005] = \
          'AcquisitionEquipment',
          'DocumentDigitizerEquipment']}
 
+name_for_cid[7006] = 'SRDocumentPurposesofReference'
 cid_concepts[7006] = \
 {'DCM': ['ExtendedRenderingForPresentation',
          'SourceDocument',
          'CompleteRenderingForPresentation',
          'PartialRenderingForPresentation',
-         'EquivalentCdaDocument']}
+         'EquivalentCDADocument']}
 
+name_for_cid[7008] = 'MediaImport'
 cid_concepts[7008] = \
 {'DCM': ['InstancesImported',
          'StudiesImported',
-         'ModImported',
-         'DvdImported',
-         'CdImported',
+         'MODImported',
+         'DVDImported',
+         'CDImported',
          'PaperDigitized',
          'VideoTapeDigitized',
          'CineFilmDigitized',
          'SheetFilmDigitized']}
 
+name_for_cid[7009] = 'PurposeofReferencetoPredecessorReport'
 cid_concepts[7009] = \
 {'DCM': ['PartialReport',
          'AddendedReport',
@@ -14893,9 +15795,11 @@ cid_concepts[7009] = \
          'ReplacedReport',
          'CurrentProcedureEvidence']}
 
+name_for_cid[701] = 'ContentAssessmentTypes'
 cid_concepts[701] = \
-{'DCM': ['RtPreTreatmentConsistencyCheck', 'RtPreTreatmentDoseCheck']}
+{'DCM': ['RTPreTreatmentConsistencyCheck', 'RTPreTreatmentDoseCheck']}
 
+name_for_cid[7010] = 'KeyObjectSelectionDocumentTitle'
 cid_concepts[7010] = \
 {'DCM': ['OfInterest',
          'RejectedForQualityReasons',
@@ -14904,10 +15808,10 @@ cid_concepts[7010] = \
          'ForTeaching',
          'ContouringInputUsed',
          'DiagnosisInputUsed',
-         'RtTreatmentPlanningInputUsed',
-         'RtPrescriptionInputUsed',
+         'RTTreatmentPlanningInputUsed',
+         'RTPrescriptionInputUsed',
          'PhysicianReviewInputUsed',
-         'RtPlanSummationInputUsed',
+         'RTPlanSummationInputUsed',
          'PlanQualityAssuranceInputUsed',
          'PhysicistReviewInputUsed',
          'PatientSetupVerificationInputUsed',
@@ -14927,8 +15831,8 @@ cid_concepts[7010] = \
          'RejectedForPatientSafetyReasons',
          'ForTumorRegistry',
          'ForClinicalTrialSubmission',
-         'RtWorkflowInputUsed',
-         'ForRtPlanSummation',
+         'RTWorkflowInputUsed',
+         'ForRTPlanSummation',
          'ForPhysicistReview',
          'ForPhysicianReview',
          'ForPlanQualityAssurance',
@@ -14945,33 +15849,34 @@ cid_concepts[7010] = \
          'ForPlanComparison',
          'ForTeachingFileExport',
          'ForClinicalTrialExport',
-         'RtTreatmentSessionResult',
+         'RTTreatmentSessionResult',
          'PatientSetupVerificationResult',
-         'RtTreatmentQaResult',
-         'RtTreatmentCourseSummary',
+         'RTTreatmentQAResult',
+         'RTTreatmentCourseSummary',
          'ForSegmentation',
          'ForDiagnosis',
-         'ForRtTreatmentPlanning',
-         'ForRtPrescription',
+         'ForRTTreatmentPlanning',
+         'ForRTPrescription',
          'QualityIssue',
          'BestInSet',
          'DosimetricResult',
          'TumorRegistryInputUsed',
-         'RtPlanningResult',
+         'RTPlanningResult',
          'TumorBoardInputUsed',
-         'RtTreatmentSimulationResult',
+         'RTTreatmentSimulationResult',
          'ClinicalTrialSubmissionInputUsed',
          'DiagnosticSourceImages',
-         'ForRtWorkflow',
+         'ForRTWorkflow',
          'ForPrinting',
          'RegistrationResult',
          'SegmentationResult',
-         'RtPrescriptionResult',
+         'RTPrescriptionResult',
          'PrePlanningResult',
          'PlanComparisonInputUsed',
          'CoordinateAlignmentImageSeries',
          'DoseCalculationImageSeries']}
 
+name_for_cid[7011] = 'RejectedforQualityReasons'
 cid_concepts[7011] = \
 {'DCM': ['OtherFailure',
          'MotionBlur',
@@ -14981,30 +15886,34 @@ cid_concepts[7011] = \
          'Positioning',
          'OverExposed',
          'NoImage',
-         'DetectorArtifactS',
-         'ArtifactSOtherThanGridOrDetectorArtifact',
+         'DetectorArtifacts',
+         'ArtifactsOtherThanGridOrDetectorArtifact',
          'MechanicalFailure',
          'ElectricalFailure',
-         'ImageArtifactS',
+         'ImageArtifacts',
          'SoftwareFailure',
-         'GridArtifactS',
+         'GridArtifacts',
          'InappropriateImageProcessing']}
 
+name_for_cid[7012] = 'BestinSet'
 cid_concepts[7012] = \
 {'DCM': ['Study', 'Series', 'PerformedProcedureStep', 'StageView']}
 
+name_for_cid[7013] = 'NonImageSourceInstancePurposesofReference'
 cid_concepts[7013] = \
 {'DCM': ['SourceMeasurement',
          'SourceRawData',
          'SourceReport',
          'SourceRealWorldValueMap']}
 
+name_for_cid[7014] = 'ExportAdditionalInformationDocumentTitles'
 cid_concepts[7014] = \
 {'DCM': ['ForTeachingFileExport',
          'ForClinicalTrialExport',
          'ForPublicationExport',
          'ForResearchCollectionExport']}
 
+name_for_cid[7015] = 'ExportDelayReasons'
 cid_concepts[7015] = \
 {'DCM': ['DelayExportUntilPatientDies',
          'DelayExportUntilPatientIsDischarged',
@@ -15015,9 +15924,11 @@ cid_concepts[7015] = \
          'DelayExportUntilConfirmationOfDiagnosisIsAvailable',
          'DelayExportUntilOtherLaboratoryResultsAreAvailable']}
 
+name_for_cid[7016] = 'LevelofDifficulty'
 cid_concepts[7016] = \
 {'DCM': ['PrimaryLevel', 'AdvancedLevel', 'IntermediateLevel']}
 
+name_for_cid[7017] = 'CategoryofTeachingMaterialImaging'
 cid_concepts[7017] = \
 {'DCM': ['CardiovascularImagingSubjectMatter',
          'GenitourinaryImagingSubjectMatter',
@@ -15031,90 +15942,102 @@ cid_concepts[7017] = \
          'PulmonaryImagingSubjectMatter',
          'MusculoskeletalImagingSubjectMatter']}
 
+name_for_cid[7018] = 'MiscellaneousDocumentTitles'
 cid_concepts[7018] = \
 {'DCM': ['AdditionalTeachingFileInformation']}
 
+name_for_cid[7019] = 'SegmentationNonImageSourcePurposesofReference'
 cid_concepts[7019] = \
 {'DCM': ['SourceRealWorldValueMap']}
 
+name_for_cid[702] = 'RTContentAssessmentTypes'
 cid_concepts[702] = \
-{'DCM': ['RtPreTreatmentConsistencyCheck', 'RtPreTreatmentDoseCheck']}
+{'DCM': ['RTPreTreatmentConsistencyCheck', 'RTPreTreatmentDoseCheck']}
 
+name_for_cid[7021] = 'MeasurementReportDocumentTitles'
 cid_concepts[7021] = \
 {'DCM': ['ImagingMeasurementReport',
          'OncologyMeasurementReport',
-         'DynamicContrastMrMeasurementReport',
-         'PetMeasurementReport']}
+         'DynamicContrastMRMeasurementReport',
+         'PETMeasurementReport']}
 
+name_for_cid[7022] = 'RadiotherapyPurposesofReference'
 cid_concepts[7022] = \
 {'DCM': ['RegistrationCreatedDuringTreatment',
-         'RtTreatmentPlanForThePositionBeingVerified',
+         'RTTreatmentPlanForThePositionBeingVerified',
          'RegistrationUsedInPlanning']}
 
+name_for_cid[7023] = 'RTProcessOutput'
 cid_concepts[7023] = \
-{'DCM': ['RtPlanningResult',
-         'RtTreatmentSimulationResult',
+{'DCM': ['RTPlanningResult',
+         'RTTreatmentSimulationResult',
          'DosimetricResult',
-         'RtTreatmentSessionResult',
+         'RTTreatmentSessionResult',
          'PatientSetupVerificationResult',
-         'RtTreatmentQaResult',
-         'RtTreatmentCourseSummary',
-         'RtPrescriptionResult',
+         'RTTreatmentQAResult',
+         'RTTreatmentCourseSummary',
+         'RTPrescriptionResult',
          'PrePlanningResult',
          'CoordinateAlignmentImageSeries',
          'DoseCalculationImageSeries']}
 
+name_for_cid[7024] = 'RTProcessInput'
 cid_concepts[7024] = \
-{'DCM': ['ForRtPlanSummation',
+{'DCM': ['ForRTPlanSummation',
          'ForPhysicistReview',
          'ForPhysicianReview',
          'ForPlanQualityAssurance',
          'ForPatientSetupVerification',
          'ForMachineQualityAssurance',
-         'ForRtWorkflow',
-         'ForRtTreatmentPlanning',
-         'ForRtPrescription']}
+         'ForRTWorkflow',
+         'ForRTTreatmentPlanning',
+         'ForRTPrescription']}
 
+name_for_cid[7025] = 'RTProcessInputUsed'
 cid_concepts[7025] = \
-{'DCM': ['RtTreatmentPlanningInputUsed',
-         'RtPrescriptionInputUsed',
+{'DCM': ['RTTreatmentPlanningInputUsed',
+         'RTPrescriptionInputUsed',
          'PhysicianReviewInputUsed',
-         'RtPlanSummationInputUsed',
+         'RTPlanSummationInputUsed',
          'PlanQualityAssuranceInputUsed',
          'PhysicistReviewInputUsed',
          'PatientSetupVerificationInputUsed',
          'MachineQualityAssuranceInputUsed',
-         'RtWorkflowInputUsed']}
+         'RTWorkflowInputUsed']}
 
+name_for_cid[7026] = 'RadiotherapeuticDoseMeasurementDevices'
 cid_concepts[7026] = \
-{'DCM': ['dGel_3',
+{'DCM': ['_3DGel',
          'IonChamberArray',
          'DiodeArray',
          'LiquidIonChamber',
          'Diode',
          'IonChamber',
-         'Osld',
+         'OSLD',
          'DiamondDetector'],
  'SRT': ['ThermoluminescentRadiationDosimeter',
-         'MosfetRadiationTherapyDosimetrySystemDosimeter',
+         'MOSFETRadiationTherapyDosimetrySystemDosimeter',
          'MedicalXRayFilm',
          'DigitalImager']}
 
+name_for_cid[7027] = 'SegmentedRadiotherapeuticDoseMeasurementDevices'
 cid_concepts[7027] = \
 {'DCM': ['IonChamberArray',
          'DiodeArray',
          'LiquidIonChamber',
          'Diode',
          'IonChamber',
-         'Osld',
+         'OSLD',
          'DiamondDetector'],
  'SRT': ['ThermoluminescentRadiationDosimeter',
-         'MosfetRadiationTherapyDosimetrySystemDosimeter',
+         'MOSFETRadiationTherapyDosimetrySystemDosimeter',
          'DigitalImager']}
 
+name_for_cid[703] = 'BasisofAssessment'
 cid_concepts[703] = \
 {'DCM': ['AssessmentByRules', 'AssessmentByComparison']}
 
+name_for_cid[7030] = 'InstitutionalDepartments,UnitsandServices'
 cid_concepts[7030] = \
 {'DCM': ['PediatricRadiology',
          'ThoracicRadiology',
@@ -15203,44 +16126,51 @@ cid_concepts[7030] = \
          'PediatricOncology'],
  'UMLS': ['Neuroradiology']}
 
+name_for_cid[7035] = 'ActionableFindingClassification'
 cid_concepts[7035] = \
-{'RADLEX': ['AcrCategory2ActionableFinding',
-            'AcrCategory1ActionableFinding',
-            'AcrCategory3ActionableFinding']}
+{'RADLEX': ['ACRCategory2ActionableFinding',
+            'ACRCategory1ActionableFinding',
+            'ACRCategory3ActionableFinding']}
 
+name_for_cid[7036] = 'ImageQualityAssessment'
 cid_concepts[7036] = \
 {'RADLEX': ['NonDiagnosticQuality', 'LimitedQuality', 'DiagnosticQuality']}
 
+name_for_cid[7039] = 'PediatricSizeCategories'
 cid_concepts[7039] = \
-{'SRT': ['BroselowLutenRedZone89Kg',
-         'BroselowLutenWhiteZone1518Kg',
-         'BroselowLutenYellowZone1214Kg',
-         'BroselowLutenPinkZone67Kg',
-         'BroselowLutenPurpleZone1011Kg',
-         'BroselowLutenOrangeZone2429Kg',
-         'BroselowLutenGreenZone3036Kg',
-         'BroselowLutenBlueZone1923Kg']}
+{'SRT': ['BroselowLutenRedZone89kg',
+         'BroselowLutenWhiteZone1518kg',
+         'BroselowLutenYellowZone1214kg',
+         'BroselowLutenPinkZone67kg',
+         'BroselowLutenPurpleZone1011kg',
+         'BroselowLutenOrangeZone2429kg',
+         'BroselowLutenGreenZone3036kg',
+         'BroselowLutenBlueZone1923kg']}
 
+name_for_cid[7040] = 'BroselowLutenPediatricSizeCategories'
 cid_concepts[7040] = \
-{'SRT': ['BroselowLutenRedZone89Kg',
-         'BroselowLutenWhiteZone1518Kg',
-         'BroselowLutenYellowZone1214Kg',
-         'BroselowLutenPinkZone67Kg',
-         'BroselowLutenPurpleZone1011Kg',
-         'BroselowLutenOrangeZone2429Kg',
-         'BroselowLutenGreenZone3036Kg',
-         'BroselowLutenBlueZone1923Kg']}
+{'SRT': ['BroselowLutenRedZone89kg',
+         'BroselowLutenWhiteZone1518kg',
+         'BroselowLutenYellowZone1214kg',
+         'BroselowLutenPinkZone67kg',
+         'BroselowLutenPurpleZone1011kg',
+         'BroselowLutenOrangeZone2429kg',
+         'BroselowLutenGreenZone3036kg',
+         'BroselowLutenBlueZone1923kg']}
 
+name_for_cid[7041] = 'CalciumScoringPatientSizeCategories'
 cid_concepts[7041] = \
-{'DCM': ['Small320CmLateralThickness',
-         'Medium320380CmLateralThickness',
-         'Large380CmLateralThickness']}
+{'DCM': ['Small320cmLateralThickness',
+         'Medium320380cmLateralThickness',
+         'Large380cmLateralThickness']}
 
+name_for_cid[7042] = 'CMDCTECCCalciumScoringPatientSizeCategories'
 cid_concepts[7042] = \
-{'DCM': ['Small320CmLateralThickness',
-         'Medium320380CmLateralThickness',
-         'Large380CmLateralThickness']}
+{'DCM': ['Small320cmLateralThickness',
+         'Medium320380cmLateralThickness',
+         'Large380cmLateralThickness']}
 
+name_for_cid[7050] = 'DeidentificationMethod'
 cid_concepts[7050] = \
 {'DCM': ['RetainUidsOption',
          'BasicApplicationConfidentialityProfile',
@@ -15256,6 +16186,7 @@ cid_concepts[7050] = \
          'RetainPatientCharacteristicsOption',
          'RetainDeviceIdentityOption']}
 
+name_for_cid[7060] = 'EncapsulatedDocumentSourcePurposesofReference'
 cid_concepts[7060] = \
 {'DCM': ['SourceMeasurement',
          'SourceRawData',
@@ -15263,20 +16194,24 @@ cid_concepts[7060] = \
          'SourceReport',
          'SourceRealWorldValueMap']}
 
+name_for_cid[7061] = 'ModelDocumentTitles'
 cid_concepts[7061] = \
-{'DCM': ['Us3dCamModel',
+{'DCM': ['US3DCAMModel',
          'SourceImage',
-         'MixedModality3dCamModel',
-         'LaserScanning3dCamModel',
-         'PhotogrammetricImaging3dCamModel'],
- 'LN': ['Ct3dCamModel', 'Mr3dCamModel']}
+         'MixedModality3DCAMModel',
+         'LaserScanning3DCAMModel',
+         'PhotogrammetricImaging3DCAMModel'],
+ 'LN': ['CT3DCAMModel', 'MR3DCAMModel']}
 
+name_for_cid[7062] = 'PurposeofReferencetoPredecessor3DModel'
 cid_concepts[7062] = \
 {'DCM': ['EditedModel', 'ComponentModel']}
 
+name_for_cid[7063] = 'ModelScaleUnits'
 cid_concepts[7063] = \
-{'UCUM': ['Mm', 'M', 'Cm', 'Um']}
+{'UCUM': ['mm', 'M', 'cm', 'um']}
 
+name_for_cid[7064] = 'ModelUsage'
 cid_concepts[7064] = \
 {'DCM': ['ToolFabrication',
          'PlanningIntent',
@@ -15287,6 +16222,7 @@ cid_concepts[7064] = \
          'EducationalIntent'],
  'SRT': ['DiagnosticIntent']}
 
+name_for_cid[71] = 'ImagingAgentAdministrationInjectorEventType'
 cid_concepts[71] = \
 {'DCM': ['TerminatedDueToUnspecifiedInjectorFailure',
          'FlowRateAboveAdjustmentLimit',
@@ -15311,6 +16247,7 @@ cid_concepts[71] = \
          'TerminatedDueToExcessiveDurationPause',
          'ResourceInadequate']}
 
+name_for_cid[7100] = 'RCSRegistrationMethodType'
 cid_concepts[7100] = \
 {'DCM': ['VisualAlignment',
          'ImageContentBasedAlignment',
@@ -15318,6 +16255,7 @@ cid_concepts[7100] = \
          'FiducialAlignment',
          'FrameOfReferenceIdentity']}
 
+name_for_cid[7101] = 'BrainAtlasFiducials'
 cid_concepts[7101] = \
 {'DCM': ['InterHemisphericPlane',
          'LeftHemisphereMostInferior',
@@ -15330,12 +16268,14 @@ cid_concepts[7101] = \
          'RightHemisphereMostAnterior'],
  'SRT': ['PosteriorCommissure', 'AnteriorCommissure']}
 
+name_for_cid[7110] = 'FiducialsCategories'
 cid_concepts[7110] = \
 {'DCM': ['FiducialMark'],
  'SRT': ['AnatomicalPoint', 'BodyReferencePointMarker', 'BodySurfacePoint']}
 
+name_for_cid[7111] = 'Fiducials'
 cid_concepts[7111] = \
-{'DCM': ['MrMarker',
+{'DCM': ['MRMarker',
          'InfraredReflectorMarker',
          'CoilMarker',
          'CylinderMarker',
@@ -15367,11 +16307,12 @@ cid_concepts[7111] = \
          'RadioactiveImplant',
          'FibrousPlaque',
          'CollateralBranchOfVessel',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'Clip']}
 
+name_for_cid[7112] = 'RadiotherapyFiducials'
 cid_concepts[7112] = \
-{'DCM': ['MrMarker',
+{'DCM': ['MRMarker',
          'InfraredReflectorMarker',
          'VisibleReflectorMarker',
          'CoilMarker',
@@ -15382,9 +16323,10 @@ cid_concepts[7112] = \
  'SRT': ['Catheter',
          'RadioactiveImplant',
          'ContrastMedia',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'Clip']}
 
+name_for_cid[7140] = 'BrainStructuresforVolumetricMeasurements'
 cid_concepts[7140] = \
 {'DCM': ['WhiteMatterT2Hyperintensity',
          'WhiteMatterT1Hypointensity',
@@ -15411,6 +16353,7 @@ cid_concepts[7140] = \
          'CaudateNucleus',
          'ThirdVentricle']}
 
+name_for_cid[7150] = 'SegmentationPropertyCategories'
 cid_concepts[7150] = \
 {'SRT': ['Tissue',
          'MorphologicallyAbnormalStructure',
@@ -15421,14 +16364,15 @@ cid_concepts[7150] = \
          'Substance',
          'SpatialAndRelationalConcept']}
 
+name_for_cid[7151] = 'SegmentationPropertyTypes'
 cid_concepts[7151] = \
-{'BARI': ['stMarginalCoronaryArteryLaterals_1',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdMarginalCoronaryArteryLaterals_3',
+{'BARI': ['_1stMarginalCoronaryArteryLaterals',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
           'RamusLaterals',
-          'rdDiagonalCoronaryArteryLaterals_3',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+          '_3rdDiagonalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'DCM': ['Phantom',
          'AorticKnob',
@@ -15438,7 +16382,7 @@ cid_concepts[7151] = \
          'LiquidIonChamber',
          'Diode',
          'IonChamber',
-         'Osld',
+         'OSLD',
          'DiamondDetector',
          'Portacath',
          'ChestTube',
@@ -15451,8 +16395,8 @@ cid_concepts[7151] = \
          'RegistrationInput',
          'Background',
          'SurfaceOfTheChoroidScleraInterface',
-         'OuterSurfaceOfTheBm',
-         'OuterSurfaceOfTheCc',
+         'OuterSurfaceOfTheBM',
+         'OuterSurfaceOfTheCC',
          'Mold',
          'HeadAndNeckMask',
          'HeadMask',
@@ -15464,17 +16408,17 @@ cid_concepts[7151] = \
          'VacuumMold',
          'RectalBalloon',
          'VaginalCylinder',
-         'PosteriorSurfaceOfTheRpe',
-         'SurfaceOfTheCenterOfTheRpe',
-         'OuterSurfaceOfIpl',
-         'OuterSurfaceOfGcl',
-         'OuterSurfaceOfOpl',
-         'OuterSurfaceOfInl',
+         'PosteriorSurfaceOfTheRPE',
+         'SurfaceOfTheCenterOfTheRPE',
+         'OuterSurfaceOfIPL',
+         'OuterSurfaceOfGCL',
+         'OuterSurfaceOfOPL',
+         'OuterSurfaceOfINL',
          'SurfaceBetweenInnerAndOuterSegmentsOfThePhotoreceptors',
-         'OuterSurfaceOfHfl',
-         'AnteriorSurfaceOfTheRpe',
-         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRpe',
-         'OuterSurfaceOfRnfl',
+         'OuterSurfaceOfHFL',
+         'AnteriorSurfaceOfTheRPE',
+         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRPE',
+         'OuterSurfaceOfRNFL',
          'Sphere',
          'OtherMarker',
          'SecondaryPulmonaryLobule',
@@ -15505,7 +16449,7 @@ cid_concepts[7151] = \
          'ParietalBone',
          'MuscleOfNeck',
          'FeedingTube',
-         'IlmInternalLimitingMembrane',
+         'ILMInternalLimitingMembrane',
          'Duodenum',
          'BloodClot',
          'Thrombus',
@@ -15534,7 +16478,7 @@ cid_concepts[7151] = \
          'InternalMammaryArtery',
          'InnominateVein',
          'SkinOfChest',
-         'ElmExternalLimitingMembrane',
+         'ELMExternalLimitingMembrane',
          'GastroduodenalArtery',
          'Perineum',
          'OccipitalBone',
@@ -15615,9 +16559,9 @@ cid_concepts[7151] = \
          'Cerebellum',
          'Ileum',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'AnteriorCerebralArtery',
          'InternalCarotidArtery',
          'PortalVein',
@@ -15628,17 +16572,17 @@ cid_concepts[7151] = \
          'SubstantiaNigra',
          'Vertebra',
          'RightAtrium',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'Tooth',
          'MidCircumflexCoronaryArtery',
          'LeftPosterolateralCircumflexCoronaryArtery',
          'CarotidSiphon',
-         'AvGrooveContinuationOfCircumflexArtery',
-         'ndMarginalCoronaryArtery_2',
+         'AVGrooveContinuationOfCircumflexArtery',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainBranchOfPortalVein',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightMainBranchOfPortalVein',
          'VomerBone',
          'CerebralArtery',
@@ -15652,7 +16596,7 @@ cid_concepts[7151] = \
          'SellaTurcica',
          'Hemorrhage',
          'Chair',
-         'IdPlate',
+         'IDPlate',
          'RenalArtery',
          'CircleOfWillis',
          'AirwayStructure',
@@ -15700,7 +16644,7 @@ cid_concepts[7151] = \
          'GastricVein',
          'FallopianTube',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'Skull',
          'OpticCanal',
          'CranialNerve',
@@ -15781,7 +16725,7 @@ cid_concepts[7151] = \
          'Hypopharynx',
          'PrimitiveAorta',
          'SystemicVenousAtrium',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'OrbitalStructure',
          'CervicalSpine',
          'ThoracicSpine',
@@ -15961,8 +16905,8 @@ cid_concepts[7151] = \
          'LowerLimb',
          'Carina',
          'UrinarySystem',
-         'CockettSPerforatingVein',
-         'BoydSPerforatingVein',
+         'CockettPerforatingVein',
+         'BoydPerforatingVein',
          'Larynx',
          'SubclavianVein',
          'ScalenousAnteriorMuscle',
@@ -15973,7 +16917,7 @@ cid_concepts[7151] = \
          'HunterianPerforatingVein',
          'Skin',
          'AutonomicNerve',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'InferiorLeftPulmonaryVein',
          'AnteriorTibialVein',
          'AcromioclavicularJoint',
@@ -16012,7 +16956,7 @@ cid_concepts[7151] = \
          'ExternalIliacVein',
          'CommonIliacArteryBifurcation',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'PancreaticDuct',
          'CoronaryArtery',
          'GreatSaphenousVeinOfCalf',
@@ -16030,10 +16974,10 @@ cid_concepts[7151] = \
          'Omentum',
          'MuscleOfUpperLimb',
          'EntireBody',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'TesticularArtery',
          'LigamentumArteriosum',
          'OphthalmicArtery',
@@ -16152,7 +17096,7 @@ cid_concepts[7151] = \
          'LeftAuricularAppendage',
          'AbdominalCavity',
          'Urethra',
-         'MosfetRadiationTherapyDosimetrySystemDosimeter',
+         'MOSFETRadiationTherapyDosimetrySystemDosimeter',
          'RotationalAtherectomyDevice',
          'EmbolizationCoil',
          'Artery',
@@ -16236,6 +17180,7 @@ cid_concepts[7151] = \
          'GrayMatter',
          'MiddleCerebellarPeduncle']}
 
+name_for_cid[7152] = 'CardiacStructureSegmentationTypes'
 cid_concepts[7152] = \
 {'SRT': ['Heart',
          'PericardialCavity',
@@ -16244,6 +17189,7 @@ cid_concepts[7152] = \
          'LeftVentricle',
          'RightVentricle']}
 
+name_for_cid[7153] = 'CNSSegmentationTypes'
 cid_concepts[7153] = \
 {'FMA': ['ArcuateFasciculus'],
  'SRT': ['SubarachnoidSpace',
@@ -16309,6 +17255,7 @@ cid_concepts[7153] = \
          'MiddleCerebellarPeduncle',
          'ThirdVentricle']}
 
+name_for_cid[7154] = 'AbdominalSegmentationTypes'
 cid_concepts[7154] = \
 {'SRT': ['UrinarySystem',
          'Spleen',
@@ -16328,6 +17275,7 @@ cid_concepts[7154] = \
          'Liver',
          'AbdominalAorta']}
 
+name_for_cid[7155] = 'ThoracicSegmentationTypes'
 cid_concepts[7155] = \
 {'SRT': ['SkinOfChest',
          'ChestWallMuscle',
@@ -16350,6 +17298,7 @@ cid_concepts[7155] = \
          'LowerLobeOfLung',
          'UpperLobeOfLung']}
 
+name_for_cid[7156] = 'VascularSegmentationTypes'
 cid_concepts[7156] = \
 {'SRT': ['Intima',
          'Media',
@@ -16361,6 +17310,7 @@ cid_concepts[7156] = \
          'VascularSclerosis',
          'SystemicVein']}
 
+name_for_cid[7157] = 'DeviceSegmentationTypes'
 cid_concepts[7157] = \
 {'DCM': ['BrachytherapyChannel',
          'RectalBalloon',
@@ -16391,9 +17341,11 @@ cid_concepts[7157] = \
          'BonePin',
          'Table']}
 
+name_for_cid[7158] = 'ArtifactSegmentationTypes'
 cid_concepts[7158] = \
 {'SRT': ['Clothing', 'ForeignBody', 'Table']}
 
+name_for_cid[7159] = 'LesionSegmentationTypes'
 cid_concepts[7159] = \
 {'SRT': ['Mass',
          'NeoplasmSecondary',
@@ -16409,6 +17361,7 @@ cid_concepts[7159] = \
          'Edema',
          'Inflammation']}
 
+name_for_cid[7160] = 'PelvicOrganSegmentationTypes'
 cid_concepts[7160] = \
 {'SRT': ['Prostate',
          'MaleInternalGenitalia',
@@ -16426,9 +17379,11 @@ cid_concepts[7160] = \
          'Bladder',
          'VasDeferens']}
 
+name_for_cid[7161] = 'PhysiologySegmentationTypes'
 cid_concepts[7161] = \
 {'SRT': ['Perfusion']}
 
+name_for_cid[7162] = 'SurfaceProcessingAlgorithmFamilies'
 cid_concepts[7162] = \
 {'DCM': ['ManualProcessing',
          'MultispectralProcessing',
@@ -16442,11 +17397,13 @@ cid_concepts[7162] = \
          'DeformableModels',
          'ArtificialIntelligence']}
 
+name_for_cid[7165] = 'AbstractSegmentationTypes'
 cid_concepts[7165] = \
 {'DCM': ['RegistrationInput', 'Background', 'SingleSubjectExtractedFromGroup'],
  'NCIt': ['ReferenceRegion'],
  'SRT': ['Tissue', 'WasteMaterial']}
 
+name_for_cid[7166] = 'CommonTissueSegmentationTypes'
 cid_concepts[7166] = \
 {'SRT': ['Capillary',
          'Blood',
@@ -16469,6 +17426,7 @@ cid_concepts[7166] = \
          'BloodVessel',
          'Bone']}
 
+name_for_cid[7167] = 'PeripheralNervousSystemSegmentationTypes'
 cid_concepts[7167] = \
 {'SRT': ['CranialNerve',
          'VagusNerve',
@@ -16477,6 +17435,7 @@ cid_concepts[7167] = \
          'AutonomicNerve',
          'PeripheralNervousSystem']}
 
+name_for_cid[7180] = 'AbstractMultidimensionalImageModelComponentSemantics'
 cid_concepts[7180] = \
 {'DCM': ['ApparentDiffusionCoefficient',
          'DiffusionWeighted',
@@ -16488,54 +17447,54 @@ cid_concepts[7180] = \
          'FractionalProbabilisticSegmentation',
          'BinarySegmentation',
          'WaterFraction',
-         'MrSignalIntensity',
+         'MRSignalIntensity',
          'XRayAttenuation',
          'FatFraction',
-         'YbrIctCrComponent',
+         'YBRICTCRComponent',
          'R2Coefficient',
-         'YbrIctCbComponent',
+         'YBRICTCBComponent',
          'ChiSquare',
-         'YbrIctYComponent',
+         'YBRICTYComponent',
          'DW',
-         'YbrPartialCrComponent',
-         'Aic',
-         'YbrPartialCbComponent',
-         'Bic',
-         'YbrPartialYComponent',
+         'YBRPARTIALCRComponent',
+         'AIC',
+         'YBRPARTIALCBComponent',
+         'BIC',
+         'YBRPARTIALYComponent',
          'Echogenicity',
-         'YbrRctCrComponent',
-         'YbrRctCbComponent',
-         'YbrRctYComponent',
-         'RgbRComponent',
+         'YBRRCTCRComponent',
+         'YBRRCTCBComponent',
+         'YBRRCTYComponent',
+         'RGBRComponent',
          'UltrasoundAttenuation',
-         'TauM',
+         '',
          'SpeedOfSound',
          'Vp',
          'Perfusion',
          'Elasticity',
          'EquivalentDose',
          'AbsorbedDose',
-         'YbrFullCrComponent',
-         'YbrFullCbComponent',
-         'YbrFullYComponent',
-         'RgbBComponent',
-         'RgbGComponent',
+         'YBRFULLCRComponent',
+         'YBRFULLCBComponent',
+         'YBRFULLYComponent',
+         'RGBBComponent',
+         'RGBGComponent',
          'CreatineCholineCitrateRatio',
          'MagnetizationTransferRatio',
-         'Iauc90bn',
-         'Iauc180bn',
+         'IAUC90BN',
+         'IAUC180BN',
          'CreatineAndCholine',
          'LipidAndLactate',
          'SpatialDisplacementYComponent',
          'SpatialDisplacementXComponent',
          'NuclearMedicineTomographicActivity',
-         'Iauc',
+         'IAUC',
          'NuclearMedicineProjectionActivity',
-         'Iauc60',
-         'Iauc90',
-         'Iauc180',
-         'Iaucbn',
-         'Iauc60bn',
+         'IAUC60',
+         'IAUC90',
+         'IAUC180',
+         'IAUCBN',
+         'IAUC60BN',
          'FlowVariance',
          'FlowVelocity',
          'TissueVelocity',
@@ -16557,10 +17516,10 @@ cid_concepts[7180] = \
          'Kep',
          'Ve',
          'BloodOxygenationLevel',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodFlow',
-         'T1WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T1WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodVolume',
          'VolumetricDiffusionDzzComponent',
          'OxygenExtractionFraction',
@@ -16570,22 +17529,22 @@ cid_concepts[7180] = \
          'VolumetricDiffusionDyyComponent',
          'VelocityEncoded',
          'ZScore',
-         'ContrastAgentAngioMrSignalIntensity',
-         'SpinTaggingPerfusionMrSignalIntensity',
+         'ContrastAgentAngioMRSignalIntensity',
+         'SpinTaggingPerfusionMRSignalIntensity',
          'RelativeAnisotropy',
          'FractionalAnisotropy',
-         'FieldMapMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T1WeightedMrSignalIntensity',
-         'ProtonDensityWeightedMrSignalIntensity',
-         'TimeOfFlightAngioMrSignalIntensity',
+         'FieldMapMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T1WeightedMRSignalIntensity',
+         'ProtonDensityWeightedMRSignalIntensity',
+         'TimeOfFlightAngioMRSignalIntensity',
          'T1',
          'T2',
          'T2',
          'TimeCourseOfSignal',
          'TemperatureEncoded',
-         'StudentSTTest',
+         'StudentTTest',
          'TimeToPeak',
          'SignalToNoise',
          'TemporalDerivativeThreshold',
@@ -16632,12 +17591,13 @@ cid_concepts[7180] = \
          'Citrate',
          'Lactate']}
 
+name_for_cid[7181] = 'AbstractMultidimensionalImageModelComponentUnits'
 cid_concepts[7181] = \
 {'UCUM': ['Centimeter2Milliliter',
           'Mm2S',
           'CubicCentimeter',
           'SquareCentimeter',
-          'Um2Ms',
+          'Um2ms',
           'StandardizedUptakeValueBodySurfaceArea',
           'StandardizedUptakeValueLeanBodyMassJanma',
           'Millitesla',
@@ -16647,16 +17607,16 @@ cid_concepts[7181] = \
           'SquareMillimeter',
           'MilligramsMinuteMilliliter',
           'StandardizedUptakeValueIdealBodyWeight',
-          'Mm2S_106',
+          '_106Mm2S',
           'BecquerelsMilliliter',
           'Micrometer',
-          'MillimolesPerKgWetWeight',
+          'MillimolesPerkgWetWeight',
           'Gy',
           'MicromoleMinuteMilliliter',
           'Decibel',
           'ArbitraryUnit',
           'WoodUM2',
-          'DynSCm5',
+          'DynScm5',
           'MilliliterMinuteGram',
           'Um2S',
           'StandardizedUptakeValueBodyWeight',
@@ -16688,7 +17648,7 @@ cid_concepts[7181] = \
           'SquareMicrometer',
           'Counts',
           'Millisecond',
-          'DynSCm5M2',
+          'DynScm5M2',
           'Percent',
           'S',
           'NoUnits',
@@ -16699,9 +17659,11 @@ cid_concepts[7181] = \
           'StandardizedUptakeValueLeanBodyMassJames',
           'Hertz']}
 
+name_for_cid[7182] = 'AbstractMultidimensionalImageModelDimensionSemantics'
 cid_concepts[7182] = \
 {'DCM': ['LinearDisplacement', 'Angle', 'Time', 'PhotonEnergy']}
 
+name_for_cid[7183] = 'AbstractMultidimensionalImageModelDimensionUnits'
 cid_concepts[7183] = \
 {'UCUM': ['Millimeter',
           'Radian',
@@ -16711,6 +17673,7 @@ cid_concepts[7183] = \
           'Millisecond',
           'Second']}
 
+name_for_cid[7184] = 'AbstractMultidimensionalImageModelAxisDirection'
 cid_concepts[7184] = \
 {'DCM': ['SeptumWallAxis',
          'AnteriorInferiorAxis',
@@ -16719,6 +17682,7 @@ cid_concepts[7184] = \
          'HeadFootAxis',
          'LeftRightAxis']}
 
+name_for_cid[7185] = 'AbstractMultidimensionalImageModelAxisOrientation'
 cid_concepts[7185] = \
 {'DCM': ['LeftToRight',
          'RightToLeft',
@@ -16733,35 +17697,36 @@ cid_concepts[7185] = \
          'FootToHead',
          'HeadToFoot']}
 
+name_for_cid[7186] = 'AbstractMultidimensionalImageModelQualitativeDimensionSampleSemantics'
 cid_concepts[7186] = \
 {'DCM': ['GlutamateAndGlutamine',
          'CholineCreatineRatio',
          'NAcetylaspartateCreatineRatio',
          'NAcetylaspartateCholineRatio',
          'VolumetricDiffusionDxzComponent',
-         'RgbRComponent',
+         'RGBRComponent',
          'VolumetricDiffusionDxyComponent',
          'VolumetricDiffusionDxxComponent',
-         'YbrFullCrComponent',
-         'YbrFullCbComponent',
+         'YBRFULLCRComponent',
+         'YBRFULLCBComponent',
          'VolumetricDiffusionDzzComponent',
-         'YbrFullYComponent',
+         'YBRFULLYComponent',
          'VolumetricDiffusionDyzComponent',
-         'RgbBComponent',
+         'RGBBComponent',
          'VolumetricDiffusionDyyComponent',
-         'RgbGComponent',
+         'RGBGComponent',
          'CreatineCholineCitrateRatio',
          'CreatineAndCholine',
          'LipidAndLactate',
-         'YbrIctCrComponent',
-         'YbrIctCbComponent',
-         'YbrIctYComponent',
-         'YbrPartialCrComponent',
-         'YbrPartialCbComponent',
-         'YbrPartialYComponent',
-         'YbrRctCrComponent',
-         'YbrRctCbComponent',
-         'YbrRctYComponent'],
+         'YBRICTCRComponent',
+         'YBRICTCBComponent',
+         'YBRICTYComponent',
+         'YBRPARTIALCRComponent',
+         'YBRPARTIALCBComponent',
+         'YBRPARTIALYComponent',
+         'YBRRCTCRComponent',
+         'YBRRCTCBComponent',
+         'YBRRCTYComponent'],
  'SRT': ['Inositol',
          'Creatine',
          'Citrate',
@@ -16772,6 +17737,7 @@ cid_concepts[7186] = \
          'Glutamine',
          'Lipid']}
 
+name_for_cid[7191] = 'TissueSegmentationPropertyTypes'
 cid_concepts[7191] = \
 {'SRT': ['Capillary',
          'Blood',
@@ -16795,14 +17761,15 @@ cid_concepts[7191] = \
          'BloodVessel',
          'Bone']}
 
+name_for_cid[7192] = 'AnatomicalStructureSegmentationPropertyTypes'
 cid_concepts[7192] = \
-{'BARI': ['stMarginalCoronaryArteryLaterals_1',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdMarginalCoronaryArteryLaterals_3',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_1stMarginalCoronaryArteryLaterals',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'rdDiagonalCoronaryArteryLaterals_3',
+          '_3rdDiagonalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'DCM': ['Phantom',
          'AorticKnob',
@@ -16820,19 +17787,19 @@ cid_concepts[7192] = \
          'AnteriorJunctionLine',
          'PosteriorJunctionLine',
          'SurfaceOfTheChoroidScleraInterface',
-         'OuterSurfaceOfTheBm',
-         'OuterSurfaceOfTheCc',
-         'PosteriorSurfaceOfTheRpe',
-         'SurfaceOfTheCenterOfTheRpe',
-         'OuterSurfaceOfIpl',
-         'OuterSurfaceOfGcl',
-         'OuterSurfaceOfOpl',
-         'OuterSurfaceOfInl',
+         'OuterSurfaceOfTheBM',
+         'OuterSurfaceOfTheCC',
+         'PosteriorSurfaceOfTheRPE',
+         'SurfaceOfTheCenterOfTheRPE',
+         'OuterSurfaceOfIPL',
+         'OuterSurfaceOfGCL',
+         'OuterSurfaceOfOPL',
+         'OuterSurfaceOfINL',
          'SurfaceBetweenInnerAndOuterSegmentsOfThePhotoreceptors',
-         'OuterSurfaceOfHfl',
-         'AnteriorSurfaceOfTheRpe',
-         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRpe',
-         'OuterSurfaceOfRnfl'],
+         'OuterSurfaceOfHFL',
+         'AnteriorSurfaceOfTheRPE',
+         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRPE',
+         'OuterSurfaceOfRNFL'],
  'FMA': ['ArcuateFasciculus'],
  'SRT': ['Prostate',
          'AnteriorCardiacVein',
@@ -16846,7 +17813,7 @@ cid_concepts[7192] = \
          'DeltoidMuscle',
          'ParietalBone',
          'MuscleOfNeck',
-         'IlmInternalLimitingMembrane',
+         'ILMInternalLimitingMembrane',
          'IlealVein',
          'Duodenum',
          'FemaleInternalGenitalia',
@@ -16904,7 +17871,7 @@ cid_concepts[7192] = \
          'SkinOfChest',
          'LeftPulmonaryVein',
          'RightPulmonaryVein',
-         'ElmExternalLimitingMembrane',
+         'ELMExternalLimitingMembrane',
          'Eyeball',
          'LingualArtery',
          'RenalVein',
@@ -16968,8 +17935,8 @@ cid_concepts[7192] = \
          'Carina',
          'UrinarySystem',
          'OccipitalVein',
-         'CockettSPerforatingVein',
-         'BoydSPerforatingVein',
+         'CockettPerforatingVein',
+         'BoydPerforatingVein',
          'Larynx',
          'SubclavianVein',
          'Penis',
@@ -16986,7 +17953,7 @@ cid_concepts[7192] = \
          'HunterianPerforatingVein',
          'LacrimalBone',
          'AutonomicNerve',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'UpperLobeOfLung',
          'InferiorLeftPulmonaryVein',
          'AnteriorTibialVein',
@@ -17043,9 +18010,9 @@ cid_concepts[7192] = \
          'MedialLemniscus',
          'LacrimalArteryOfRightEye',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'AnteriorCerebralArtery',
          'InternalCarotidArtery',
          'PortalVein',
@@ -17055,7 +18022,7 @@ cid_concepts[7192] = \
          'ExternalIliacVein',
          'CommonIliacArteryBifurcation',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'PancreaticDuct',
          'Eye',
          'DistalCircumflexCoronaryArtery',
@@ -17066,9 +18033,9 @@ cid_concepts[7192] = \
          'SubstantiaNigra',
          'Vertebra',
          'RightAtrium',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'Tooth',
          'MidCircumflexCoronaryArtery',
          'PosteriorCerebralArteryP1Segment',
@@ -17076,13 +18043,13 @@ cid_concepts[7192] = \
          'CarotidSiphon',
          'MiddleCerebralArteryM2Segment',
          'IliacAndOrFemoralArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
          'PharynxAndLarynx',
-         'ndMarginalCoronaryArtery_2',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainBranchOfPortalVein',
          'PosteriorCerebralArteryP2Segment',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightMainBranchOfPortalVein',
          'VomerBone',
          'LumbarArtery',
@@ -17101,10 +18068,10 @@ cid_concepts[7192] = \
          'MuscleOfUpperLimb',
          'SellaTurcica',
          'EntireBody',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'RenalArtery',
          'TesticularArtery',
          'LigamentumArteriosum',
@@ -17179,7 +18146,7 @@ cid_concepts[7192] = \
          'TrunkOfPulmonaryArtery',
          'FallopianTube',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'Peritioneum',
          'Clavicle',
          'Skull',
@@ -17481,6 +18448,7 @@ cid_concepts[7192] = \
          'GrayMatter',
          'MiddleCerebellarPeduncle']}
 
+name_for_cid[7193] = 'PhysicalObjectSegmentationPropertyTypes'
 cid_concepts[7193] = \
 {'DCM': ['OtherMarker',
          'Mold',
@@ -17510,7 +18478,7 @@ cid_concepts[7193] = \
          'LiquidIonChamber',
          'Diode',
          'IonChamber',
-         'Osld',
+         'OSLD',
          'DiamondDetector',
          'Sphere'],
  'SRT': ['JejunostomyTube',
@@ -17542,7 +18510,7 @@ cid_concepts[7193] = \
          'EndotrachealTube',
          'MeasuringRuler',
          'Laser',
-         'BbShotLeadPellet',
+         'BBShotLeadPellet',
          'Bullet',
          'UretericStent',
          'AtherectomyDevice',
@@ -17550,11 +18518,11 @@ cid_concepts[7193] = \
          'CervicalCollar',
          'Collimator',
          'Headrest',
-         'IdPlate',
+         'IDPlate',
          'Suture',
          'LeftVentricularAssistDevice',
          'Needle',
-         'MosfetRadiationTherapyDosimetrySystemDosimeter',
+         'MOSFETRadiationTherapyDosimetrySystemDosimeter',
          'Glue',
          'RotationalAtherectomyDevice',
          'EmbolizationCoil',
@@ -17568,6 +18536,7 @@ cid_concepts[7193] = \
          'Table',
          'Clip']}
 
+name_for_cid[7194] = 'MorphologicallyAbnormalStructureSegmentationPropertyTypes'
 cid_concepts[7194] = \
 {'SRT': ['Mass',
          'NeoplasmSecondary',
@@ -17583,9 +18552,11 @@ cid_concepts[7194] = \
          'Edema',
          'Inflammation']}
 
+name_for_cid[7195] = 'FunctionSegmentationPropertyTypes'
 cid_concepts[7195] = \
 {'SRT': ['Perfusion']}
 
+name_for_cid[7196] = 'SpatialandRelationalConceptSegmentationPropertyTypes'
 cid_concepts[7196] = \
 {'DCM': ['Lucency',
          'RegistrationInput',
@@ -17596,18 +18567,22 @@ cid_concepts[7196] = \
  'NCIt': ['ReferenceRegion'],
  'SRT': ['Tissue', 'WasteMaterial']}
 
+name_for_cid[7197] = 'BodySubstanceSegmentationPropertyTypes'
 cid_concepts[7197] = \
 {'SRT': ['Gas', 'BodyFluid', 'Feces', 'Bile', 'Urine']}
 
+name_for_cid[7198] = 'SubstanceSegmentationPropertyTypes'
 cid_concepts[7198] = \
 {'SRT': ['ContrastAgent']}
 
+name_for_cid[72] = 'ImagingAgentAdministrationStepType'
 cid_concepts[72] = \
 {'DCM': ['DiagnosticAdministration',
          'TransitTimeTestInjection',
          'PatencyTestInjection',
          'FlushAdministration']}
 
+name_for_cid[7201] = 'ReferencedImagePurposesofReference'
 cid_concepts[7201] = \
 {'DCM': ['ImagesRelatedToStandaloneObject',
          'AnatomicImage',
@@ -17629,6 +18604,7 @@ cid_concepts[7201] = \
          'DeviceLocalizer',
          'SpectralFilteredImage']}
 
+name_for_cid[7202] = 'SourceImagePurposesofReference'
 cid_concepts[7202] = \
 {'DCM': ['PredecessorContainingGroupOfImagingSubjects',
          'ForProcessingPredecessor',
@@ -17640,6 +18616,7 @@ cid_concepts[7202] = \
          'StructuralImageForImageProcessing',
          'SourceImageForMontage']}
 
+name_for_cid[7203] = 'ImageDerivation'
 cid_concepts[7203] = \
 {'DCM': ['SpatialResampling',
          'PixelByPixelAddition',
@@ -17673,15 +18650,17 @@ cid_concepts[7203] = \
          'MultiplanarReformatting',
          'PixelByPixelMinimum',
          'CurvedMultiplanarReformatting',
-         'OctBScanAnalysis']}
+         'OCTBScanAnalysis']}
 
+name_for_cid[7205] = 'PurposeofReferencetoAlternateRepresentation'
 cid_concepts[7205] = \
 {'DCM': ['FullFidelityImage',
          'AlternatePhotometricInterpretationImage',
          'LossyCompressedImage',
-         'AlternateSopClassInstance',
+         'AlternateSOPClassInstance',
          'SourceImage']}
 
+name_for_cid[7210] = 'RelatedSeriesPurposesofReference'
 cid_concepts[7210] = \
 {'DCM': ['ForAttenuationCorrection',
          'SameAnatomy',
@@ -17689,52 +18668,61 @@ cid_concepts[7210] = \
          'SameIndication',
          'SimultaneouslyAcquired']}
 
+name_for_cid[7215] = 'SpectroscopyPurposeofReference'
 cid_concepts[7215] = \
 {'DCM': ['SpectroscopyDataForWaterPhaseCorrection']}
 
+name_for_cid[7220] = 'RTDoseDerivation'
 cid_concepts[7220] = \
 {'DCM': ['ComposedFromPriorDoses', 'ComposedFromPriorDosesAndCurrentPlan']}
 
+name_for_cid[7221] = 'RTDosePurposeofReference'
 cid_concepts[7221] = \
 {'DCM': ['SourceDoseForComposingCurrentDose']}
 
+name_for_cid[7222] = 'ParametricMapDerivationImagePurposeofReference'
 cid_concepts[7222] = \
 {'DCM': ['SourceImageForImageProcessingOperation']}
 
+name_for_cid[7250] = 'MultiFrameSubsetType'
 cid_concepts[7250] = \
 {'DCM': ['ReferencedFrames', 'ReferencedSegment']}
 
+name_for_cid[7260] = 'DiffusionAcquisitionValueTypes'
 cid_concepts[7260] = \
-{'DCM': ['Hardi',
-         'Dki',
-         'Dti',
-         'Dsi',
-         'Lsdi',
-         'SingleShotEpi',
-         'MultipleShotEpi',
+{'DCM': ['HARDI',
+         'DKI',
+         'DTI',
+         'DSI',
+         'LSDI',
+         'SingleShotEPI',
+         'MultipleShotEPI',
          'ParallelImaging']}
 
+name_for_cid[7261] = 'DiffusionModelValueTypes'
 cid_concepts[7261] = \
 {'DCM': ['SingleTensor',
          'MultiTensor',
          'ModelFree',
-         'Charmed',
-         'Dsi',
-         'Dot',
-         'Pas',
+         'CHARMED',
+         'DSI',
+         'DOT',
+         'PAS',
          'SphericalDeconvolution']}
 
+name_for_cid[7262] = 'DiffusionTractographyAlgorithmFamilies'
 cid_concepts[7262] = \
 {'DCM': ['Deterministic',
          'Probabilistic',
          'Global',
-         'Fact',
+         'FACT',
          'Streamline',
-         'Tend',
+         'TEND',
          'Bootstrap',
          'Euler',
          'RungeKutta']}
 
+name_for_cid[7263] = 'DiffusionTractographyMeasurementTypes'
 cid_concepts[7263] = \
 {'DCM': ['ApparentDiffusionCoefficient',
          'Trace',
@@ -17755,6 +18743,7 @@ cid_concepts[7263] = \
          'VolumetricDiffusionDyzComponent',
          'VolumetricDiffusionDyyComponent']}
 
+name_for_cid[7270] = 'MRDiffusionComponentSemantics'
 cid_concepts[7270] = \
 {'DCM': ['VolumetricDiffusionDxzComponent',
          'VolumetricDiffusionDxyComponent',
@@ -17764,9 +18753,11 @@ cid_concepts[7270] = \
          'VolumetricDiffusionDyzComponent',
          'VolumetricDiffusionDyyComponent']}
 
+name_for_cid[7271] = 'MRDiffusionAnisotropyIndices'
 cid_concepts[7271] = \
 {'DCM': ['VolumeRatio', 'RelativeAnisotropy', 'FractionalAnisotropy']}
 
+name_for_cid[7272] = 'MRDiffusionModelParameters'
 cid_concepts[7272] = \
 {'DCM': ['ApparentDiffusionCoefficient',
          'KurtosisDiffusionCoefficient',
@@ -17781,14 +18772,16 @@ cid_concepts[7272] = \
          'FastDiffusionCoefficient',
          'FastDiffusionCoefficientFraction']}
 
+name_for_cid[7273] = 'MRDiffusionModels'
 cid_concepts[7273] = \
 {'DCM': ['MonoExponentialDiffusionModel',
-         'BiExponentialIvimDiffusionModel',
+         'BiExponentialIVIMDiffusionModel',
          'KurtosisDiffusionModel',
          'GammaDistributionModel',
          'StretchedExponentialDiffusionModel',
          'TruncatedGaussianDiffusionModel']}
 
+name_for_cid[7274] = 'MRDiffusionModelFittingMethods'
 cid_concepts[7274] = \
 {'DCM': ['LeastSquaresFitOfMultipleSamples',
          'LevenbergMarquardt',
@@ -17799,18 +18792,23 @@ cid_concepts[7274] = \
          'BayesianProbability',
          'LogOfRatioOfTwoSamples']}
 
+name_for_cid[7275] = 'MRDiffusionModelSpecificMethods'
 cid_concepts[7275] = \
 {'DCM': ['VoxelwiseSelectionOfBValue']}
 
+name_for_cid[7276] = 'MRDiffusionModelInputs'
 cid_concepts[7276] = \
 {'DCM': ['SourceImageDiffusionBValue']}
 
+name_for_cid[7277] = 'UnitsofDiffusionRateAreaOverTime'
 cid_concepts[7277] = \
-{'UCUM': ['Mm2S', 'Um2Ms', 'Mm2S_106', 'Um2S']}
+{'UCUM': ['Mm2S', 'Um2ms', '_106Mm2S', 'Um2S']}
 
+name_for_cid[73] = 'BolusShapingCurves'
 cid_concepts[73] = \
 {'DCM': ['LinearCurve', 'NegativeExponential']}
 
+name_for_cid[7300] = 'ImplantMaterials'
 cid_concepts[7300] = \
 {'SRT': ['StainlessSteelMaterial',
          'Polymer',
@@ -17818,18 +18816,22 @@ cid_concepts[7300] = \
          'NickelTitanium',
          'GoldAlloy']}
 
+name_for_cid[7301] = 'InterventionTypes'
 cid_concepts[7301] = \
 {'SRT': ['HipJointReconstruction',
          'InsertionOfHipProsthesis',
          'ResurfacingOfThePatella',
          'ResurfacingOfTheFemoralHead']}
 
+name_for_cid[7302] = 'ImplantTemplatesViewOrientations'
 cid_concepts[7302] = \
 {'SRT': ['AnteroPosterior', 'LateralMedial', 'MedioLateral']}
 
+name_for_cid[7303] = 'ImplantTemplatesModifiedViewOrientations'
 cid_concepts[7303] = \
-{'DCM': ['Ap45', 'Ap45']}
+{'DCM': ['AP45', 'AP45']}
 
+name_for_cid[7304] = 'ImplantTargetAnatomy'
 cid_concepts[7304] = \
 {'SRT': ['DistalTibia',
          'WristJoint',
@@ -17877,16 +18879,19 @@ cid_concepts[7304] = \
          'ProximalRadius',
          'DistalRadius']}
 
+name_for_cid[7305] = 'ImplantPlanningLandmarks'
 cid_concepts[7305] = \
 {'DCM': ['AnatomicalAxisOfFemur',
          'AcetabularCenterOfRotation',
          'FemurHeadCenterOfRotation']}
 
+name_for_cid[7306] = 'HumanHipImplantPlanningLandmarks'
 cid_concepts[7306] = \
 {'DCM': ['AnatomicalAxisOfFemur',
          'AcetabularCenterOfRotation',
          'FemurHeadCenterOfRotation']}
 
+name_for_cid[7307] = 'ImplantComponentTypes'
 cid_concepts[7307] = \
 {'DCM': ['FemoralStem',
          'FemoralStemDistalComponent',
@@ -17902,8 +18907,9 @@ cid_concepts[7307] = \
          'FemoralHeadResurfacingComponent',
          'AcetabularCupMonoblock',
          'FemoralHeadBallComponent'],
- 'SRT': ['FemoralHeadProsthesis', 'DhsPlate', 'BoneNail', 'BonePlate', 'Screw']}
+ 'SRT': ['FemoralHeadProsthesis', 'DHSPlate', 'BoneNail', 'BonePlate', 'Screw']}
 
+name_for_cid[7308] = 'HumanHipImplantComponentTypes'
 cid_concepts[7308] = \
 {'DCM': ['FemoralStem',
          'FemoralStemDistalComponent',
@@ -17921,9 +18927,11 @@ cid_concepts[7308] = \
          'FemoralHeadBallComponent'],
  'SRT': ['FemoralHeadProsthesis']}
 
+name_for_cid[7309] = 'HumanTraumaImplantComponentTypes'
 cid_concepts[7309] = \
-{'SRT': ['DhsPlate', 'BoneNail', 'BonePlate', 'Screw']}
+{'SRT': ['DHSPlate', 'BoneNail', 'BonePlate', 'Screw']}
 
+name_for_cid[7310] = 'ImplantFixationMethod'
 cid_concepts[7310] = \
 {'DCM': ['Bolting', 'Wedging', 'Pinning', 'Sewing'],
  'SRT': ['InternalFixationUsingPlate',
@@ -17937,25 +18945,29 @@ cid_concepts[7310] = \
          'Gluing',
          'CementedComponentFixation']}
 
+name_for_cid[7320] = 'PlanningMethods'
 cid_concepts[7320] = \
-{'DCM': ['Generic2dPlanning',
-         'Generic3dPlanning',
+{'DCM': ['Generic2DPlanning',
+         'Generic3DPlanning',
          'GenericPlanningForHipReplacement',
          'GenericPlanningForKneeReplacement',
-         'MÜLlerMethodPlanningForHipReplacement']}
+         'MüllerMethodPlanningForHipReplacement']}
 
+name_for_cid[74] = 'ImagingAgentAdministrationConsumableCatheterType'
 cid_concepts[74] = \
 {'SRT': ['CentralVenousCatheter',
          'ImplantableVenousAccessPort',
          'PeripheralIntravenousCatheter',
          'RectalCatheter']}
 
+name_for_cid[7445] = 'DeviceParticipatingRoles'
 cid_concepts[7445] = \
 {'DCM': ['Recording', 'XRayReadingDevice', 'IrradiatingDevice']}
 
+name_for_cid[7449] = 'ReaderSpecialty'
 cid_concepts[7449] = \
 {'DCM': ['OncologicImagingSpecialty',
-         'ObGynImagingSpecialty',
+         'OBGynImagingSpecialty',
          'ThoracicImagingSpecialty',
          'OncologySpecialty',
          'AbdominalImagingSpecialty',
@@ -17967,6 +18979,7 @@ cid_concepts[7449] = \
          'NeuroradiologyImagingSpecialty',
          'NeurologySpecialty']}
 
+name_for_cid[7450] = 'PersonRoles'
 cid_concepts[7450] = \
 {'DCM': ['Patient',
          'AdministratorOfRadiologyDepartment',
@@ -18011,6 +19024,7 @@ cid_concepts[7450] = \
           'RadiationPhysicist',
           'Sonographer']}
 
+name_for_cid[7451] = 'FamilyMember'
 cid_concepts[7451] = \
 {'SRT': ['Aunt',
          'Uncle',
@@ -18027,6 +19041,7 @@ cid_concepts[7451] = \
          'FemaleFirstCousin',
          'NaturalDaughter']}
 
+name_for_cid[7452] = 'OrganizationalRoles'
 cid_concepts[7452] = \
 {'DCM': ['AdministratorOfRadiologyDepartment',
          'HeadOfCardiology',
@@ -18054,6 +19069,7 @@ cid_concepts[7452] = \
           'RadiationPhysicist',
           'Sonographer']}
 
+name_for_cid[7453] = 'PerformingRoles'
 cid_concepts[7453] = \
 {'DCM': ['Standby',
          'IrradiationAdministering',
@@ -18071,6 +19087,7 @@ cid_concepts[7453] = \
  'SRT': ['CirculatingNurse'],
  'UMLS': ['Referring']}
 
+name_for_cid[7454] = 'AnimalTaxonomicRankValues'
 cid_concepts[7454] = \
 {'ITIS_TSN': ['PeromyscusLeucopusAmericanWhiteFootedMouse',
               'PeromyscusManiculatusDeerMouse',
@@ -18101,6 +19118,7 @@ cid_concepts[7454] = \
          'CapraHircusDomesticGoat',
          'Rattus']}
 
+name_for_cid[7455] = 'Sex'
 cid_concepts[7455] = \
 {'DCM': ['MalePseudohermaphrodite',
          'UnknownSex',
@@ -18114,26 +19132,32 @@ cid_concepts[7455] = \
          'Male',
          'FemaleChangedToMale']}
 
+name_for_cid[7456] = 'UnitsofMeasureforAge'
 cid_concepts[7456] = \
 {'UCUM': ['Year', 'Minute', 'Hour', 'Week', 'Day', 'Month']}
 
+name_for_cid[7457] = 'SexMaleFemaleorBoth'
 cid_concepts[7457] = \
 {'DCM': ['MixedSex', 'Female', 'Male']}
 
+name_for_cid[7460] = 'UnitsofLinearMeasurement'
 cid_concepts[7460] = \
 {'UCUM': ['Millimeter', 'Centimeter', 'Micrometer']}
 
+name_for_cid[7461] = 'UnitsofAreaMeasurement'
 cid_concepts[7461] = \
 {'UCUM': ['SquareMillimeter', 'SquareCentimeter', 'SquareMicrometer']}
 
+name_for_cid[7462] = 'UnitsofVolumeMeasurement'
 cid_concepts[7462] = \
 {'UCUM': ['CubicMillimeter',
           'CubicCentimeter',
           'CubicMicrometer',
           'CubicDecimeter']}
 
+name_for_cid[7464] = 'GeneralRegionofInterestMeasurementModifiers'
 cid_concepts[7464] = \
-{'DCM': ['Skewness', 'Kurtosis', 'PeakValueWithinRoi'],
+{'DCM': ['Skewness', 'Kurtosis', 'PeakValueWithinROI'],
  'SRT': ['Mode',
          'Total',
          'Median',
@@ -18143,22 +19167,24 @@ cid_concepts[7464] = \
          'StandardDeviation'],
  'UMLS': ['CoefficientOfVariance', 'Variance', 'RootMeanSquare']}
 
+name_for_cid[7465] = 'MeasurementsDerivedFromMultipleROIMeasurements'
 cid_concepts[7465] = \
 {'DCM': ['PercentileRankingOfMeasurement',
          'ZScoreOfMeasurement',
          'StandardDeviationOfPopulation',
-         'SigmaDeviationOfPopulation_2'],
- 'SRT': ['thPercentileValueOfPopulation_10',
-         'SigmaLowerValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_2',
-         'SigmaUpperValueOfPopulation_1',
-         'thPercentileValueOfPopulation_5',
+         '_2SigmaDeviationOfPopulation'],
+ 'SRT': ['_10thPercentileValueOfPopulation',
+         '_2SigmaLowerValueOfPopulation',
+         '_2SigmaUpperValueOfPopulation',
+         '_1SigmaUpperValueOfPopulation',
+         '_5thPercentileValueOfPopulation',
          'MedianValueOfPopulation',
-         'thPercentileValueOfPopulation_95',
-         'SigmaLowerValueOfPopulation_1',
+         '_95thPercentileValueOfPopulation',
+         '_1SigmaLowerValueOfPopulation',
          'MeanValueOfPopulation',
-         'thPercentileValueOfPopulation_90']}
+         '_90thPercentileValueOfPopulation']}
 
+name_for_cid[7466] = 'PETRegionofInterestMeasurements'
 cid_concepts[7466] = \
 {'DCM': ['MetabolicVolume',
          'TotalLesionGlycolysis',
@@ -18167,15 +19193,18 @@ cid_concepts[7466] = \
          'ProliferativeActivity',
          'StandardizedAddedMetabolicActivity',
          'StandardizedAddedMetabolicActivityBackground',
-         'LesionToBackgroundSuvRatio',
-         'BackgroundForLesionToBackgroundSuvRatio']}
+         'LesionToBackgroundSUVRatio',
+         'BackgroundForLesionToBackgroundSUVRatio']}
 
+name_for_cid[7467] = 'GrayLevelCooccurrenceMatrixMeasurements'
 cid_concepts[7467] = \
-{'DCM': ['RootAngularSecondMomentOfGlcm']}
+{'DCM': ['RootAngularSecondMomentOfGLCM']}
 
+name_for_cid[7468] = 'TextureMeasurements'
 cid_concepts[7468] = \
-{'DCM': ['RootAngularSecondMomentOfGlcm', 'FractalDimension']}
+{'DCM': ['RootAngularSecondMomentOfGLCM', 'FractalDimension']}
 
+name_for_cid[7469] = 'GenericIntensityandSizeMeasurements'
 cid_concepts[7469] = \
 {'DCM': ['ApparentDiffusionCoefficient',
          'DiffusionWeighted',
@@ -18188,63 +19217,63 @@ cid_concepts[7469] = \
          'FractionalProbabilisticSegmentation',
          'BinarySegmentation',
          'WaterFraction',
-         'MrSignalIntensity',
+         'MRSignalIntensity',
          'XRayAttenuation',
          'VolumeOfCircumscribedSphere',
          'VolumeOfEllipsoid',
          'FatFraction',
-         'VolumeEstimatedFromThreeOrMoreNonCoplanar2dRegions',
-         'VolumeEstimatedFromTwoNonCoplanar2dRegions',
-         'VolumeEstimatedFromSingle2dRegion',
+         'VolumeEstimatedFromThreeOrMoreNonCoplanar2DRegions',
+         'VolumeEstimatedFromTwoNonCoplanar2DRegions',
+         'VolumeEstimatedFromSingle2DRegion',
          'PathLength',
          'VolumeOfBoundingThreeDimensionalRegion',
-         'YbrIctCrComponent',
+         'YBRICTCRComponent',
          'R2Coefficient',
-         'YbrIctCbComponent',
+         'YBRICTCBComponent',
          'ChiSquare',
-         'YbrIctYComponent',
+         'YBRICTYComponent',
          'DW',
-         'YbrPartialCrComponent',
-         'Aic',
-         'YbrPartialCbComponent',
-         'Bic',
-         'YbrPartialYComponent',
+         'YBRPARTIALCRComponent',
+         'AIC',
+         'YBRPARTIALCBComponent',
+         'BIC',
+         'YBRPARTIALYComponent',
          'Echogenicity',
-         'YbrRctCrComponent',
-         'YbrRctCbComponent',
-         'YbrRctYComponent',
+         'YBRRCTCRComponent',
+         'YBRRCTCBComponent',
+         'YBRRCTYComponent',
          'Distance',
          'Height',
-         'RgbRComponent',
+         'RGBRComponent',
          'UltrasoundAttenuation',
-         'TauM',
+         '',
          'SpeedOfSound',
          'Vp',
          'Perfusion',
          'Elasticity',
          'EquivalentDose',
          'AbsorbedDose',
-         'YbrFullCrComponent',
-         'YbrFullCbComponent',
-         'YbrFullYComponent',
-         'RgbBComponent',
-         'RgbGComponent',
+         'YBRFULLCRComponent',
+         'YBRFULLCBComponent',
+         'YBRFULLYComponent',
+         'RGBBComponent',
+         'RGBGComponent',
          'CreatineCholineCitrateRatio',
          'MagnetizationTransferRatio',
-         'Iauc90bn',
-         'Iauc180bn',
+         'IAUC90BN',
+         'IAUC180BN',
          'CreatineAndCholine',
          'LipidAndLactate',
          'SpatialDisplacementYComponent',
          'SpatialDisplacementXComponent',
          'NuclearMedicineTomographicActivity',
-         'Iauc',
+         'IAUC',
          'NuclearMedicineProjectionActivity',
-         'Iauc60',
-         'Iauc90',
-         'Iauc180',
-         'Iaucbn',
-         'Iauc60bn',
+         'IAUC60',
+         'IAUC90',
+         'IAUC180',
+         'IAUCBN',
+         'IAUC60BN',
          'FlowVariance',
          'FlowVelocity',
          'TissueVelocity',
@@ -18266,10 +19295,10 @@ cid_concepts[7469] = \
          'Kep',
          'Ve',
          'BloodOxygenationLevel',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
-         'T2WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
+         'T2WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodFlow',
-         'T1WeightedDynamicContrastEnhancedMrSignalIntensity',
+         'T1WeightedDynamicContrastEnhancedMRSignalIntensity',
          'RegionalBloodVolume',
          'VolumetricDiffusionDzzComponent',
          'OxygenExtractionFraction',
@@ -18279,22 +19308,22 @@ cid_concepts[7469] = \
          'VolumetricDiffusionDyyComponent',
          'VelocityEncoded',
          'ZScore',
-         'ContrastAgentAngioMrSignalIntensity',
-         'SpinTaggingPerfusionMrSignalIntensity',
+         'ContrastAgentAngioMRSignalIntensity',
+         'SpinTaggingPerfusionMRSignalIntensity',
          'RelativeAnisotropy',
          'FractionalAnisotropy',
-         'FieldMapMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T2WeightedMrSignalIntensity',
-         'T1WeightedMrSignalIntensity',
-         'ProtonDensityWeightedMrSignalIntensity',
-         'TimeOfFlightAngioMrSignalIntensity',
+         'FieldMapMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T2WeightedMRSignalIntensity',
+         'T1WeightedMRSignalIntensity',
+         'ProtonDensityWeightedMRSignalIntensity',
+         'TimeOfFlightAngioMRSignalIntensity',
          'T1',
          'T2',
          'T2',
          'TimeCourseOfSignal',
          'TemperatureEncoded',
-         'StudentSTTest',
+         'StudentTTest',
          'TimeToPeak',
          'SignalToNoise',
          'TemporalDerivativeThreshold',
@@ -18357,6 +19386,7 @@ cid_concepts[7469] = \
          'Citrate',
          'Lactate']}
 
+name_for_cid[7470] = 'LinearMeasurements'
 cid_concepts[7470] = \
 {'DCM': ['Distance', 'Height', 'PathLength'],
  'SRT': ['Diameter',
@@ -18373,43 +19403,53 @@ cid_concepts[7470] = \
          'DiameterOfCircumscribedCircle',
          'Length']}
 
+name_for_cid[7471] = 'AreaMeasurements'
 cid_concepts[7471] = \
 {'SRT': ['AreaOfDefinedRegion', 'Area']}
 
+name_for_cid[7472] = 'VolumeMeasurements'
 cid_concepts[7472] = \
-{'DCM': ['VolumeEstimatedFromThreeOrMoreNonCoplanar2dRegions',
-         'VolumeEstimatedFromTwoNonCoplanar2dRegions',
-         'VolumeEstimatedFromSingle2dRegion',
+{'DCM': ['VolumeEstimatedFromThreeOrMoreNonCoplanar2DRegions',
+         'VolumeEstimatedFromTwoNonCoplanar2DRegions',
+         'VolumeEstimatedFromSingle2DRegion',
          'VolumeOfSphere',
          'VolumeOfCircumscribedSphere',
          'VolumeOfEllipsoid',
          'VolumeOfBoundingThreeDimensionalRegion'],
  'SRT': ['Volume']}
 
+name_for_cid[7473] = 'GeneralAreaCalculationMethods'
 cid_concepts[7473] = \
-{'DCM': ['AreaOfAClosedNurbs', 'AreaOfClosedIrregularPolygon']}
+{'DCM': ['AreaOfAClosedNURBS', 'AreaOfClosedIrregularPolygon']}
 
+name_for_cid[7474] = 'GeneralVolumeCalculationMethods'
 cid_concepts[7474] = \
 {'DCM': ['IntegrationOfSumOfClosedAreasOnContiguousSlices',
          'SumOfSegmentedVoxelVolumes']}
 
+name_for_cid[7475] = 'GrayLevelRunLengthBasedFeatures'
 cid_concepts[7475] = \
 {}
 
+name_for_cid[7476] = 'GrayLevelSizeZoneBasedFeatures'
 cid_concepts[7476] = \
 {}
 
+name_for_cid[7477] = 'GlobalShapeDescriptors'
 cid_concepts[7477] = \
 {}
 
+name_for_cid[7478] = 'IntensityHistogramFeatures'
 cid_concepts[7478] = \
 {}
 
+name_for_cid[7479] = 'GreyLevelDistanceZoneBasedFeatures'
 cid_concepts[7479] = \
 {}
 
+name_for_cid[7480] = 'Breed'
 cid_concepts[7480] = \
-{'SRT': ['OicPigBreed',
+{'SRT': ['OICPigBreed',
          'OxfordSandyBlockPigBreed',
          'PalousePigBreed',
          'VitoriaPigBreed',
@@ -18433,13 +19473,13 @@ cid_concepts[7480] = \
          'SanPierrePigBreed',
          'SpottedPigBreed',
          'TamworthPigBreed',
-         'ChryakPicPigBreed',
+         'ChryakPICPigBreed',
          'CanadianRoyalBluePigBreed',
-         'DruTerminalsPigBreed',
+         'DRUTerminalsPigBreed',
          'Camborough22PigBreed',
          'Camborough15PigBreed',
-         'Pr1050PigBreed',
-         'Pr1075PigBreed',
+         'PR1050PigBreed',
+         'PR1075PigBreed',
          'PicPigBreed',
          'PicCambourghPigBreed',
          'PicLinePig24PigBreed',
@@ -18487,7 +19527,7 @@ cid_concepts[7480] = \
          'ZlotnikiWhitePigBreed',
          'SiskaPigBreed',
          'SumadijaPigBreed',
-         'DlsSheepBreed',
+         'DLSSheepBreed',
          'MoraRomagnolaPigBreed',
          'MukotaPigBreed',
          'MinzhuPigBreed',
@@ -18510,12 +19550,12 @@ cid_concepts[7480] = \
          'LatvianWhitePigBreed',
          'LithuanianWhitePigBreed',
          'BarbadoSheepBreed',
-         'Bkb1PigBreed',
+         'BKB1PigBreed',
          'BaluchiSheepBreed',
          'BelorusBlackPiedPigBreed',
          'MalteseGoatBreed',
          'MirgorodPigBreed',
-         'ProvenÇAleGoatBreed',
+         'ProvençaleGoatBreed',
          'FroxfieldPygmyPigBreed',
          'WalachenschafSheepBreed',
          'OutaouaisArcottSheepBreed',
@@ -18580,7 +19620,7 @@ cid_concepts[7480] = \
          'CreoleAntillesGoatBreed',
          'BeetalGoatBreed',
          'GoldenGuernseyGoatBreed',
-         'CanindÉGoatBreed',
+         'CanindéGoatBreed',
          'CanaryIslandGoatBreed',
          'DaeraDinPanahGoatBreed',
          'BritishAlpineGoatBreed',
@@ -18589,7 +19629,7 @@ cid_concepts[7480] = \
          'BenadirGoatBreed',
          'BagotGoatBreed',
          'RussianWhiteGoatBreed',
-         'MoxotÓGoatBreed',
+         'MoxotóGoatBreed',
          'MyotonicGoatBreed',
          'NachiGoatBreed',
          'NigerianDwarfGoatBreed',
@@ -18608,7 +19648,7 @@ cid_concepts[7480] = \
          'SomaliGoatBreed',
          'SpanishGoatBreed',
          'RoveGoatBreed',
-         'SrdGoatBreed',
+         'SRDGoatBreed',
          'VerataGoatBreed',
          'VerzascaGoatBreed',
          'NorwegianGoatBreed',
@@ -18617,7 +19657,7 @@ cid_concepts[7480] = \
          'PhilippineGoatBreed',
          'LoashanGoatBreed',
          'BritishToggenburgGoatBreed',
-         'BÜNdnerGoatBreed',
+         'BündnerGoatBreed',
          'BlancaAndaluzaGoatBreed',
          'BlancaCeltibericaGoatBreed',
          'BraviaGoatBreed',
@@ -18667,7 +19707,7 @@ cid_concepts[7480] = \
          'WoodenLegGoatBreed',
          'AlpineChamoiseeGoatBreed',
          'MassifCentralGoatBreed',
-         'MalagueÑAGoatBreed',
+         'MalagueñaGoatBreed',
          'AlgarviaGoatBreed',
          'ShanxiBlackPigBreed',
          'GanzhouWhitePigBreed',
@@ -18678,7 +19718,7 @@ cid_concepts[7480] = \
          'XinjiangWhitePigBreed',
          'XinjinNingAnPigBreed',
          'ÍPigBreed',
-         'DbiPigBreed',
+         'DBIPigBreed',
          'XinjinXinjinPigBreed',
          'MeixinPigBreed',
          'NorthEastChinaSpottedPigBreed',
@@ -18692,7 +19732,7 @@ cid_concepts[7480] = \
          'BentheimBlackPiedPigBreed',
          'BaldingerSpottedPigBreed',
          'GermanRedPiedPigBreed',
-         'BsiPigBreed',
+         'BSIPigBreed',
          'MongCaiPigBreed',
          'LangHongPigBreed',
          'MuongKhuongPigBreed',
@@ -18736,7 +19776,7 @@ cid_concepts[7480] = \
          'KulaPigBreed',
          'NghiaBinhPigBreed',
          'GermanCornwallPigBreed',
-         'GÖTtingenMiniaturePigBreed',
+         'GöttingenMiniaturePigBreed',
          'MunichMiniaturePigBreed',
          'LeicomaPigBreed',
          'SchwerfurtMeatPigBreed',
@@ -18818,7 +19858,7 @@ cid_concepts[7480] = \
          'NepaleseHillZebuCattleBreed',
          'NorthBangladeshGrayCattleBreed',
          'NkediCattleBreed',
-         'Coopelso93CattleBreed',
+         'COOPELSO93CattleBreed',
          'PolledGuzeratCattleBreed',
          'ThraceCattleBreed',
          'NorthSomaliZebuCattleBreed',
@@ -18846,9 +19886,9 @@ cid_concepts[7480] = \
          'BoarPowerPig616PigBreed',
          'NitraHybridPigBreed',
          'BoarPowerPig656PigBreed',
-         'SyntheticSl98PigBreed',
+         'SyntheticSL98PigBreed',
          'BoarPowerPig747PigBreed',
-         'Sl96PigBreed',
+         'SL96PigBreed',
          'FerrandaisCattleBreed',
          'BoarPowerPig828PigBreed',
          'FinnishAyrshireCattleBreed',
@@ -18883,7 +19923,7 @@ cid_concepts[7480] = \
          'BoarPowerPig414PigBreed',
          'PrewakwaCattleBreed',
          'BoarPowerPig454PigBreed',
-         'ChienFranÇAisBlancEtNoirDogBreed',
+         'ChienFrançaisBlancEtNoirDogBreed',
          'CaptainCookerPigBreed',
          'BurlinaCattleBreed',
          'AustralianFriesianSahiwalXZebuCattleBreed',
@@ -18932,7 +19972,7 @@ cid_concepts[7480] = \
          'BestuzhevCattleBreed',
          'BetizuakCattleBreed',
          'BlackBaldyCattleBreed',
-         'AlanoEspaÑOlDogBreed',
+         'AlanoEspañolDogBreed',
          'BlackForrestCattleBreed',
          'AustralianKelpieDogBreed',
          'BlackIberianCattleBreed',
@@ -18953,10 +19993,10 @@ cid_concepts[7480] = \
          'ChinookDogBreed',
          'BanatWhitePigBreed',
          'JamaicaHopeXZebuCattleBreed',
-         'ChienFranÇAisBlancEtOrangeDogBreed',
+         'ChienFrançaisBlancEtOrangeDogBreed',
          'BaznaPigBreed',
          'KaranSwissXZebuCattleBreed',
-         'BraqueFranÇAisDeGrandTailleDogBreed',
+         'BraqueFrançaisDeGrandTailleDogBreed',
          'DobrogeaBlackPigBreed',
          'KaranFriesXZebuCattleBreed',
          'StreiPigBreed',
@@ -18990,10 +20030,10 @@ cid_concepts[7480] = \
          'CanaanDogBreed',
          'CalvanaCattleBreed',
          'MampatiCattleBreed',
-         'ChienFranÇAisTricoloreDogBreed',
-         'DkPig61PigBreed',
-         'DkPig63PigBreed',
-         'DkPig77PigBreed',
+         'ChienFrançaisTricoloreDogBreed',
+         'DKPig61PigBreed',
+         'DKPig63PigBreed',
+         'DKPig77PigBreed',
          'DurocPigBreed',
          'CanadianLandracePigBreed',
          'CanadianYorkshirePigBreed',
@@ -19003,15 +20043,15 @@ cid_concepts[7480] = \
          'SinoGasconyPigBreed',
          'GuadeloupeCreolePigBreed',
          'ManagraPigBreed',
-         'DkPigBreed',
-         'DkPig30PigBreed',
-         'DkPig31PigBreed',
-         'DkPig33PigBreed',
-         'DkPig51PigBreed',
-         'FhcElitePig6PigBreed',
-         'FhcElitePig7PigBreed',
-         'FhcElitePig8PigBreed',
-         'FhcElitePig9PigBreed',
+         'DKPigBreed',
+         'DKPig30PigBreed',
+         'DKPig31PigBreed',
+         'DKPig33PigBreed',
+         'DKPig51PigBreed',
+         'FHCElitePig6PigBreed',
+         'FHCElitePig7PigBreed',
+         'FHCElitePig8PigBreed',
+         'FHCElitePig9PigBreed',
          'GloucesterOldSpotPigBreed',
          'PitmanMooreMiniaturePigBreed',
          'VitaVetLabMinipigPigBreed',
@@ -19027,12 +20067,12 @@ cid_concepts[7480] = \
          'MergellandSheepBreed',
          'OuessantSheepBreed',
          'CanadianArcottSheepBreed',
-         'FhcPigBreed',
-         'FhcElitePig1PigBreed',
-         'FhcElitePig2PigBreed',
-         'FhcElitePig3PigBreed',
-         'FhcElitePig4PigBreed',
-         'FhcElitePig5PigBreed',
+         'FHCPigBreed',
+         'FHCElitePig1PigBreed',
+         'FHCElitePig2PigBreed',
+         'FHCElitePig3PigBreed',
+         'FHCElitePig4PigBreed',
+         'FHCElitePig5PigBreed',
          'ManorHybridPigBreed',
          'NadbuzanskaPigBreed',
          'BushuevXZebuCattleBreed',
@@ -19091,7 +20131,7 @@ cid_concepts[7480] = \
          'CharfordXZebuCattleBreed',
          'HampenPigBreed',
          'ThillariCattleBreed',
-         'SpmPigBreed',
+         'SPMPigBreed',
          'TaraiCattleBreed',
          'HighConformationWhitePigBreed',
          'ToronkeCattleBreed',
@@ -19100,7 +20140,7 @@ cid_concepts[7480] = \
          'ToupouriCattleBreed',
          'SouthMalawiZebuCattleBreed',
          'TabapuaCattleBreed',
-         'CpfPigBreed',
+         'CPFPigBreed',
          'SudaneseFulaniCattleBreed',
          'TanzanianZebuCattleBreed',
          'TamankaduwaCattleBreed',
@@ -19110,7 +20150,7 @@ cid_concepts[7480] = \
          'DamiettaCattleBreed',
          'HorroCattleBreed',
          'KuriCattleBreed',
-         'SmallMÜNsterlÄNderDogBreed',
+         'SmallMünsterländerDogBreed',
          'SlovakCuvakDogBreed',
          'ShilohShepherdDogBreed',
          'ShibaInuDogBreed',
@@ -19209,9 +20249,9 @@ cid_concepts[7480] = \
          'AmericanBerkshirePigBreed',
          'CamboroughBluePigBreed',
          'Camborough12PigBreed',
-         'CanastrÃOZabumbaPigBreed',
+         'CanastrãoZabumbaPigBreed',
          'TunisSheepBreed',
-         'CanastrÃOCabanoPigBreed',
+         'CanastrãoCabanoPigBreed',
          'TyrolMountainSheepBreed',
          'BrownSwissCowBreed',
          'UdaSheepBreed',
@@ -19222,7 +20262,7 @@ cid_concepts[7480] = \
          'SchapendoesDogBreed',
          'SarplaninacDogBreed',
          'RussoLaikaDogBreed',
-         'CanastrÃOVermelhoPigBreed',
+         'CanastrãoVermelhoPigBreed',
          'BosnianHoundDogBreed',
          'PiauCarunchoPiauPigBreed',
          'RatTerrierDogBreed',
@@ -19249,13 +20289,13 @@ cid_concepts[7480] = \
          'KleenLeenWhitePigBreed',
          'BriquetBassetGriffonVendeenDogBreed',
          'LacombePigBreed',
-         'CanastrÃOPigBreed',
+         'CanastrãoPigBreed',
          'BlackMouthCurDogBreed',
          'ThalliSheepBreed',
-         'CanastrÃOJunqueiraPigBreed',
+         'CanastrãoJunqueiraPigBreed',
          'TongSheepBreed',
          'BlondeDAquitaineCowBreed',
-         'CanastrÃOCapitÃOChicoPigBreed',
+         'CanastrãoCapitãoChicoPigBreed',
          'TouabireSheepBreed',
          'BrahmaCowBreed',
          'DamaraCattleBreed',
@@ -19312,7 +20352,7 @@ cid_concepts[7480] = \
          'InkukuCattleBreed',
          'SouthWalesMountainSheepBreed',
          'IskarCattleBreed',
-         'SpÆLsauSheepBreed',
+         'SpælsauSheepBreed',
          'SpiegelSheepBreed',
          'StCroixSheepBreed',
          'ShorthornCowBreed',
@@ -19324,7 +20364,7 @@ cid_concepts[7480] = \
          'TarentaiseCowBreed',
          'SarPlaninaSheepBreed',
          'BlackWelshCowBreed',
-         'SantaInÊSSheepBreed',
+         'SantaInêsSheepBreed',
          'BrownWelshCowBreed',
          'SahelTypeSheepBreed',
          'WhiteParkCowBreed',
@@ -19353,7 +20393,7 @@ cid_concepts[7480] = \
          'PetitGriffonBleuDeGascogneDogBreed',
          'WelshPonyOfCobTypeHorseBreed',
          'OldeEnglishBulldoggeDogBreed',
-         'LÖWchenDogBreed',
+         'LöwchenDogBreed',
          'PolskiOwczarekNizinnyDogBreed',
          'PolishHoundDogBreed',
          'PoitevinDogBreed',
@@ -19394,7 +20434,7 @@ cid_concepts[7480] = \
          'LoenbergerDogBreed',
          'ChiTerrierDogBreed',
          'KraskyOvcarDogBreed',
-         'KromfohrlÄNderDogBreed',
+         'KromfohrländerDogBreed',
          'HavaneseDogBreed',
          'AmericanLamaleseDogBreed',
          'MarchigianaCowBreed',
@@ -19419,7 +20459,7 @@ cid_concepts[7480] = \
          'PhilippineNativeJalajalaPigBreed',
          'MangalistaPigBreed',
          'AlentejanaPigBreed',
-         'BelgianLandraceBnPigBreed',
+         'BelgianLandraceBNPigBreed',
          'FrenchLargeWhitePigBreed',
          'HyperLargeWhitePigBreed',
          'TiaMeslanPigBreed',
@@ -19433,7 +20473,7 @@ cid_concepts[7480] = \
          'NorthSiberianPigBreed',
          'SiberianBlackPiedPigBreed',
          'KemerovoPigBreed',
-         'GÜSsingForestPigPigBreed',
+         'GüssingForestPigPigBreed',
          'SwissEdelschweinPigBreed',
          'NorthCaucasusPigBreed',
          'DonPigBreed',
@@ -19513,7 +20553,7 @@ cid_concepts[7480] = \
          'AwassiSheepBreed',
          'ArapawaIslandSheepBreed',
          'ArabiSheepBreed',
-         'PelibÜEySheepBreed',
+         'PelibüeySheepBreed',
          'MoradaNovaSheepBreed',
          'LimousinPigBreed',
          'HarbinWhitePigBreed',
@@ -19522,14 +20562,14 @@ cid_concepts[7480] = \
          'HuangHuaiHaiBlackShenxianPigBreed',
          'HuangHuaiHaiBlackPigBreed',
          'BameiPigBreed',
-         'Km1PigBreed',
-         'AksaÎBlackPiedPigBreed',
+         'KM1PigBreed',
+         'AksaîBlackPiedPigBreed',
          'SemirechenskPigBreed',
          'MinPigBreed',
          'SanjiangWhitePigBreed',
          'BasqueBlackPiedPigBreed',
          'CorsicanPigBreed',
-         'CrÉOlePigBreed',
+         'CréolePigBreed',
          'GasconyPigBreed',
          'KoreanImprovedPigBreed',
          'PenbukPigBreed',
@@ -19552,7 +20592,7 @@ cid_concepts[7480] = \
          'GhanaSangaXZebuCattleBreed',
          'VietnameseYellowCattleBreed',
          'HattonXZebuCattleBreed',
-         'WatusiUsaCattleBreed',
+         'WatusiUSACattleBreed',
          'GuzerandoXZebuCattleBreed',
          'WenshanCattleBreed',
          'IraqiXZebuCattleBreed',
@@ -19597,7 +20637,7 @@ cid_concepts[7480] = \
          'JersindXZebuCattleBreed',
          'KetekuXZebuCattleBreed',
          'KanemXZebuCattleBreed',
-         'AlbÈResCattlebreed',
+         'AlbèresCattlebreed',
          'AlentejanaCattlebreed',
          'AmericanWhiteParkCattleBreed',
          'AmerifaxcattleBreed',
@@ -19648,7 +20688,7 @@ cid_concepts[7480] = \
          'GlanCattleBreed',
          'GloucesterCattleBreed',
          'GroningenWhiteheadedCattleBreed',
-         'HartÓNCattleBreed',
+         'HartónCattleBreed',
          'LargeBlackPigBreed',
          'LargeWhitePigBreed',
          'LuciePigBreed',
@@ -19656,7 +20696,7 @@ cid_concepts[7480] = \
          'OrehlaDeColherPigBreed',
          'VenezuelanBlackPigBreed',
          'BolivianPigBreed',
-         'PelÓNPigBreed',
+         'PelónPigBreed',
          'MexicanWattledPigBreed',
          'Dalland080PigBreed',
          'GermanPasturePigBreed',
@@ -19695,16 +20735,16 @@ cid_concepts[7480] = \
          'BerrendasCattleBreed',
          'PittIslandSheepBreed',
          'BlacksidedTrondheimAndNorlandCattleBreed',
-         'DØLafeCattleBreed',
+         'DølafeCattleBreed',
          'DutchBeltedCattleBreed',
          'ToubouXZebuCattleBreed',
          'DutchFriesianCattleBreed',
          'ThibarXZebuCattleBreed',
          'EnglishLonghornCattleBreed',
-         'Tssh1XZebuCattleBreed',
+         'TSSH1XZebuCattleBreed',
          'EstonianRedCattleBreed',
          'TropicalXZebuCattleBreed',
-         'EvolÈNeCattleBreed',
+         'EvolèneCattleBreed',
          'FightingBullCattleBreed',
          'FjallCattleBreed',
          'FloridaCrackerPineywoodsCattleBreed',
@@ -19717,7 +20757,7 @@ cid_concepts[7480] = \
          'SunandiniXZebuCattleBreed',
          'ChineseBlackAndWhiteCattleBreed',
          'CorrienteCattleBreed',
-         'CosteÑOConCuernosCattleBreed',
+         'CosteñoConCuernosCattleBreed',
          'DamascusCattleBreed',
          'DanishRedCattleBreed',
          'DevonCattleBreed',
@@ -19901,11 +20941,11 @@ cid_concepts[7480] = \
          'HuertanaCattleBreed',
          'DongolaHorseBreed',
          'ImprovedRodopiCattleBreed',
-         'DØLeHorseBreed',
+         'DøleHorseBreed',
          'HungarofriesCattleBreed',
          'DjermaHorseBreed',
          'ItalianBrownCattleBreed',
-         'Inra95CattleBreed',
+         'INRA95CattleBreed',
          'JapaneseBlackCattleBreed',
          'ItalianRedPiedCattleBreed',
          'Setter',
@@ -19961,7 +21001,7 @@ cid_concepts[7480] = \
          'NGabouCattleBreed',
          'ShetlandPonyHorseBreed',
          'OulmesBlondCattleBreed',
-         'AriÉGeoisPonyHorseBreed',
+         'AriégeoisPonyHorseBreed',
          'OropaCattleBreed',
          'QuarterHorseBreed',
          'SombaCattleBreed',
@@ -20159,7 +21199,7 @@ cid_concepts[7480] = \
          'AmericanCreamDraftHorseBreed',
          'KirhizDogBreed',
          'AltaiHorseBreed',
-         'MagyarAgÅRDogBreed',
+         'MagyarAgårDogBreed',
          'AkhalTekeHorseBreed',
          'MiddleAsianOvtcharkaDogBreed',
          'AbyssinianHorseBreed',
@@ -20202,7 +21242,7 @@ cid_concepts[7480] = \
          'AustralianStockHorseHorseBreed',
          'RastreadorBrasileiroDogBreed',
          'BasutoPonyHorseBreed',
-         'SabuesosEspaÑOlesDogBreed',
+         'SabuesosEspañolesDogBreed',
          'BashkirCurlyHorseBreed',
          'VaynolCattleBreed',
          'SchillerHoundDogBreed',
@@ -20226,7 +21266,7 @@ cid_concepts[7480] = \
          'UralBlackPiedCattleBreed',
          'AmericanEskimoToyDogBreed',
          'HequHorseBreed',
-         'BassetGriffonVendÉEnDogBreed',
+         'BassetGriffonVendéenDogBreed',
          'ConnemaraPonyHorseBreed',
          'BatardDogBreed',
          'ColoradoRangerHorseBreed',
@@ -20250,7 +21290,7 @@ cid_concepts[7480] = \
          'LeopardCurDogBreed',
          'SouthwestSpanishMustangHorseBreed',
          'PatterdaleTerrierDogBreed',
-         'PetitBrabaÇOnDogBreed',
+         'PetitBrabaçonDogBreed',
          'SpanishAmericanHorseHorseBreed',
          'AidiDogBreed',
          'SpanishAngloArabHorseBreed',
@@ -20268,7 +21308,7 @@ cid_concepts[7480] = \
          'FoutaHorseBreed',
          'JapaneseSpitzDogBreed',
          'FloridaCrackerHorseBreed',
-         'JÄMthundDogBreed',
+         'JämthundDogBreed',
          'GuangxiHorseBreed',
          'JindoDogBreed',
          'ArdennesHorseBreed',
@@ -20282,11 +21322,11 @@ cid_concepts[7480] = \
          'SiameseCat',
          'SingapuraCat',
          'SomaliCat',
-         'CÃODaSerraDeAiresDogBreed',
+         'CãoDaSerraDeAiresDogBreed',
          'HokkaidoHorseBreed',
-         'CÃODeCastroLaboreiroDogBreed',
+         'CãoDeCastroLaboreiroDogBreed',
          'HighlandPonyHorseBreed',
-         'CÃODeFilaMiguelDogBreed',
+         'CãoDeFilaMiguelDogBreed',
          'GroningenHorseBreed',
          'CatalanSheepdogBreed',
          'CubanPintoHorseBreed',
@@ -20357,7 +21397,7 @@ cid_concepts[7480] = \
          'PixieBobCatBreed',
          'JavaHorseBreed',
          'RojhanCattleBreed',
-         'VendÉEnSheepBreed',
+         'VendéenSheepBreed',
          'CzechWarmbloodHorseBreed',
          'HungarianGrayCattleBreed',
          'JinhongHorseBreed',
@@ -20448,7 +21488,7 @@ cid_concepts[7480] = \
          'VestlandFjordCattleBreed',
          'VestlandRedPolledCattleBreed',
          'WagyuCattleBreed',
-         'WhiteCÁCeresCattleBreed',
+         'WhiteCáceresCattleBreed',
          'XinjiangBrownCattleBreed',
          'TelemarkCattleBreed',
          'TexasLonghornCattleBreed',
@@ -20542,7 +21582,7 @@ cid_concepts[7480] = \
          'MurbodenCattleBreed',
          'SanMartineroCattleBreed',
          'RussianBlackPiedCattleBreed',
-         'Rx3CattleBreed',
+         'RX3CattleBreed',
          'SalornCattleBreed',
          'TimorHorseBreed',
          'TrakyaHorseBreed',
@@ -20558,10 +21598,10 @@ cid_concepts[7480] = \
          'RetintaCattleBreed',
          'RomosinuanoCattleBreed',
          'PolishRedCattleBreed',
-         'RÄTienGrayCattleBreed',
+         'RätienGrayCattleBreed',
          'RedAndWhiteCattleBreed',
          'RedAngusCattleBreed',
-         'RedPolledØStlandCattleBreed',
+         'RedPolledØstlandCattleBreed',
          'RedSteppeCattleBreed',
          'DutchTuigpaardHorseBreed',
          'EastAndSoutheastAnadoluHorseBreed',
@@ -20574,8 +21614,8 @@ cid_concepts[7480] = \
          'EntlebucherDogBreed',
          'FrenchGuardDogBreed',
          'FrenchSpanielDogBreed',
-         'CotonDeTulÉArDogBreed',
-         'HamiltonstÖVareDogBreed',
+         'CotonDeTuléarDogBreed',
+         'HamiltonstövareDogBreed',
          'DanishBroholmerDogBreed',
          'EnglishShepherdDogBreed',
          'DrentsePatrijshondDogBreed',
@@ -20680,7 +21720,7 @@ cid_concepts[7480] = \
          'AppenzellerDogBreed',
          'KoronadalPigBreed',
          'AustralianBrafordXZebuCattleBreed',
-         'AriÉGeoisDogBreed',
+         'AriégeoisDogBreed',
          'OhminiPigBreed',
          'AmericanBisonXCattleBreed',
          'KinniyaCattleBreed',
@@ -20721,7 +21761,7 @@ cid_concepts[7480] = \
          'JagdterrierDogBreed',
          'GermanSpanielDogBreed',
          'AbyssinianShorthornedZebuCattleBreed',
-         'GrandAngloFranÇAisDogBreed',
+         'GrandAngloFrançaisDogBreed',
          'AbyssinianHighlandZebuCattleBreed',
          'GrandBassettGriffonVendeenDogBreed',
          'DialiCattleBreed',
@@ -20747,7 +21787,7 @@ cid_concepts[7480] = \
          'AinuDogBreed',
          'AlambadiCattleBreed',
          'MixedBreedPig',
-         'BassetArtÉSianNormandDogBreed',
+         'BassetArtésianNormandDogBreed',
          'AfghanCattleBreed',
          'BavarianMountainHoundDogBreed',
          'HissarCattleBreed',
@@ -20832,7 +21872,7 @@ cid_concepts[7480] = \
          'DreverDog',
          'EnglishToySpaniel',
          'DebouilletSheepBreed',
-         'BÜNdnerOberlandSheepBreed',
+         'BündnerOberlandSheepBreed',
          'EskimoDog',
          'AmericanEskimoDogBreed',
          'CanadianEskimoDogBreed',
@@ -20980,9 +22020,9 @@ cid_concepts[7480] = \
          'BloodhoundStHubertDogBreed',
          'BloodhoundSouthernHoundDogBreed',
          'BrandlbrackeDogBreed',
-         'BraqueDAriÉGeDogBreed',
+         'BraqueDAriégeDogBreed',
          'PortugueseGuardDogBreed',
-         'GreatMÜNsterlÄNderDogBreed',
+         'GreatMünsterländerDogBreed',
          'ManchesterTerrierSuperbreedDogBreed',
          'StandardManchesterTerrier',
          'ToyManchesterTerrier',
@@ -21038,7 +22078,7 @@ cid_concepts[7480] = \
          'PindosHorseBreed',
          'FaeroesCattleBreed',
          'PiquiraPonyHorseBreed',
-         'FrsCattleBreed',
+         'FRSCattleBreed',
          'PlevenHorseBreed',
          'FrijolilloCattleBreed',
          'PolishDraftHorseBreed',
@@ -21055,7 +22095,7 @@ cid_concepts[7480] = \
          'YakutHorseBreed',
          'PolishSimmentalCattleBreed',
          'TawleedHorseBreed',
-         'PolledShorthornUsCattleBreed',
+         'PolledShorthornUSCattleBreed',
          'WesternSudanPonyHorseBreed',
          'PolledLincolnRedCattleBreed',
          'GorynCattleBreed',
@@ -21112,6 +22152,7 @@ cid_concepts[7480] = \
          'NorthSwedishTrotterHorseBreed',
          'OrientalHorseHorseBreed']}
 
+name_for_cid[7481] = 'BreedRegistry'
 cid_concepts[7481] = \
 {'DCM': ['CanadianBorderCollieAssociation',
          'UnitedKennelClub',
@@ -21131,12 +22172,13 @@ cid_concepts[7481] = \
          'CanineFederationOfCanada',
          'WorldKennelClub',
          'WorkingCanineAssociationOfCanada',
-         'AmericaSPetRegistryInc',
+         'AmericaPetRegistryInc',
          'DogRegistryOfAmerica',
          'AmericaKennelClub',
          'ContinentalKennelClub',
          'WorldWideKennelClub']}
 
+name_for_cid[7482] = 'DXAnatomyImagedforAnimals'
 cid_concepts[7482] = \
 {'SRT': ['NavicularOfForefoot',
          'CalcanealTubercle',
@@ -21195,6 +22237,7 @@ cid_concepts[7482] = \
          'Wing'],
  'UMLS': ['DistalPhalanx']}
 
+name_for_cid[7483] = 'CommonAnatomicRegionsforAnimals'
 cid_concepts[7483] = \
 {'SRT': ['NavicularOfForefoot',
          'CalcanealTubercle',
@@ -21253,6 +22296,7 @@ cid_concepts[7483] = \
          'Wing'],
  'UMLS': ['DistalPhalanx']}
 
+name_for_cid[7484] = 'DXViewforAnimals'
 cid_concepts[7484] = \
 {'DCM': ['Caudal10DegreeDistalCranioproximalOblique'],
  'SRT': ['Right30DegreeCaudalLeftRostralOblique',
@@ -21335,6 +22379,7 @@ cid_concepts[7484] = \
          'DorsolateralPlantaromedialOblique',
          'LeftRightLateral']}
 
+name_for_cid[7486] = 'MixedBreeds'
 cid_concepts[7486] = \
 {'SRT': ['MixedBreedSheep',
          'MixedBreedGoat',
@@ -21345,22 +22390,28 @@ cid_concepts[7486] = \
          'MixedBreedHorse',
          'MixedBreedCattle']}
 
+name_for_cid[7490] = 'ResearchAnimalSourceRegistries'
 cid_concepts[7490] = \
-{'DCM': ['Ilcr']}
+{'DCM': ['ILCR']}
 
+name_for_cid[75] = 'LowHighEqual'
 cid_concepts[75] = \
 {'SRT': ['High', 'Low', 'Equal']}
 
+name_for_cid[7500] = 'NeighbourhoodGreyToneDifferenceBasedFeatures'
 cid_concepts[7500] = \
 {}
 
+name_for_cid[7501] = 'NeighbouringGreyLevelDependenceBasedFeatures'
 cid_concepts[7501] = \
 {}
 
+name_for_cid[76] = 'TypeofPreMedication'
 cid_concepts[76] = \
 {'DCM': ['ContrastReactionProphylacticAgent', 'PreMedication'],
  'SRT': ['Sedative', 'Antiemetic']}
 
+name_for_cid[7600] = 'LymphNodeAnatomicSites'
 cid_concepts[7600] = \
 {'SRT': ['ExternalIliacLymphNode',
          'ApicalAxillaryLymphNode',
@@ -21563,6 +22614,7 @@ cid_concepts[7600] = \
          'LateralAxillaryLymphNode',
          'SuperiorMedialInguinalLymphNode']}
 
+name_for_cid[7601] = 'HeadandNeckCancerAnatomicSites'
 cid_concepts[7601] = \
 {'SRT': ['Supraglottis',
          'Nasopharynx',
@@ -21580,7 +22632,7 @@ cid_concepts[7601] = \
          'PalatineTonsil',
          'TonsilAndAdenoid',
          'Glottis',
-         'OropharyngealTonsilWaldeyerSRing',
+         'OropharyngealTonsilWaldeyerRing',
          'LingualTonsil',
          'FloorOfMouth',
          'OralCavity',
@@ -21592,6 +22644,7 @@ cid_concepts[7601] = \
          'Tongue'],
  'UMLS': ['UnknownPrimaryNeoplasiaSite']}
 
+name_for_cid[7701] = 'FiberTractsInBrainstem'
 cid_concepts[7701] = \
 {'SRT': ['LateralLemniscus',
          'MedialLongitudinalFasciculus',
@@ -21601,12 +22654,13 @@ cid_concepts[7701] = \
          'MiddleCerebellarPeduncle',
          'SuperiorCerebellarPeduncle']}
 
+name_for_cid[7702] = 'ProjectionandThalamicFibers'
 cid_concepts[7702] = \
 {'NEU': ['CorticobulbarTract',
          'AnteriorThalamicRadiation',
-         'SuperiorOpticRadiationBaumSLoop',
+         'SuperiorOpticRadiationBaumLoop',
          'CorticospinalTract',
-         'InferiorOpticRadiationMeyerSLoop',
+         'InferiorOpticRadiationMeyerLoop',
          'SuperiorThalamicRadiation',
          'InferiorThalamicRadiation',
          'PosteriorThalamicRadiation'],
@@ -21615,9 +22669,10 @@ cid_concepts[7702] = \
          'AuditoryRadiation',
          'OpticRadiation']}
 
+name_for_cid[7703] = 'AssociationFibers'
 cid_concepts[7703] = \
-{'DCM': ['SuperiorLongitudinalFasciculusIii',
-         'SuperiorLongitudinalFasciculusIi',
+{'DCM': ['SuperiorLongitudinalFasciculusIII',
+         'SuperiorLongitudinalFasciculusII',
          'SuperiorLongitudinalFasciculusI'],
  'NEU': ['ArcuateFasciculus', 'SuperiorLongitudinalFasciculus'],
  'SRT': ['UncinateFasciculus',
@@ -21626,9 +22681,11 @@ cid_concepts[7703] = \
          'VerticalOccipitalFasciculus',
          'SuperiorFrontoOccipitalFasciculus']}
 
+name_for_cid[7704] = 'LimbicSystemTracts'
 cid_concepts[7704] = \
 {'NEU': ['StriaTerminalis'], 'SRT': ['Cingulum', 'Fornix']}
 
+name_for_cid[7705] = 'CommissuralFibers'
 cid_concepts[7705] = \
 {'SRT': ['CorpusCallosum',
          'SpleniumOfCorpusCallosum',
@@ -21640,6 +22697,7 @@ cid_concepts[7705] = \
          'HabenularCommissure',
          'ForcepsMajor']}
 
+name_for_cid[7706] = 'CranialNerves'
 cid_concepts[7706] = \
 {'SRT': ['OlfactoryTract',
          'TrochlearNerve',
@@ -21654,25 +22712,27 @@ cid_concepts[7706] = \
          'HypoglossalNerve',
          'VestibulocochlearNerve']}
 
+name_for_cid[7707] = 'SpinalCordFibers'
 cid_concepts[7707] = \
 {'SRT': ['VentralFuniculus', 'LateralFuniculus', 'DorsalFuniculus']}
 
+name_for_cid[7710] = 'TractographyAnatomicSites'
 cid_concepts[7710] = \
 {'DCM': ['Phantom',
          'PerilesionalWhiteMatter',
-         'SuperiorLongitudinalFasciculusIii',
-         'SuperiorLongitudinalFasciculusIi',
+         'SuperiorLongitudinalFasciculusIII',
+         'SuperiorLongitudinalFasciculusII',
          'SuperiorLongitudinalFasciculusI'],
  'NEU': ['SuperiorLongitudinalFasciculus',
          'SuperiorThalamicRadiation',
          'InferiorThalamicRadiation',
          'PosteriorThalamicRadiation',
          'StriaTerminalis',
-         'InferiorOpticRadiationMeyerSLoop',
+         'InferiorOpticRadiationMeyerLoop',
          'CorticospinalTract',
          'CorticobulbarTract',
          'ArcuateFasciculus',
-         'SuperiorOpticRadiationBaumSLoop',
+         'SuperiorOpticRadiationBaumLoop',
          'AnteriorThalamicRadiation'],
  'SRT': ['ExternalCapsule',
          'UncinateFasciculus',
@@ -21724,6 +22784,7 @@ cid_concepts[7710] = \
          'VerticalOccipitalFasciculus',
          'ForcepsMajor']}
 
+name_for_cid[8] = 'AngiographicInterventionalDevices'
 cid_concepts[8] = \
 {'DCM': ['Sphere'],
  'SRT': ['Glue',
@@ -21740,6 +22801,7 @@ cid_concepts[8] = \
          'Laser',
          'EmbolizationParticulate']}
 
+name_for_cid[800] = 'ProtocolAssertionCodes'
 cid_concepts[800] = \
 {'DCM': ['ApprovedForUseInTheClinicalTrial',
          'IneligibleForReimbursement',
@@ -21765,6 +22827,7 @@ cid_concepts[800] = \
          'DisapprovedForUseAtTheInstitution',
          'DisapprovedForExperimentalUse']}
 
+name_for_cid[8101] = 'ContainerTypes'
 cid_concepts[8101] = \
 {'SRT': ['SpecimenWell',
          'SpecimenVial',
@@ -21774,6 +22837,7 @@ cid_concepts[8101] = \
          'TissueCassette',
          'ElectronMicroscopyGrid']}
 
+name_for_cid[8102] = 'ContainerComponentTypes'
 cid_concepts[8102] = \
 {'SRT': ['MicroscopeSlideCoverSlip',
          'SpecimenWell',
@@ -21786,6 +22850,7 @@ cid_concepts[8102] = \
          'TissueCassette',
          'ElectronMicroscopyGrid']}
 
+name_for_cid[8103] = 'AnatomicPathologySpecimenTypes'
 cid_concepts[8103] = \
 {'SRT': ['TissueSection',
          'SpecimenFromBreastObtainedByCoreNeedleBiopsy',
@@ -21813,6 +22878,7 @@ cid_concepts[8103] = \
          'CoreSampleOfTissueBlock',
          'SmearSample']}
 
+name_for_cid[8104] = 'BreastTissueSpecimenTypes'
 cid_concepts[8104] = \
 {'SRT': ['SpecimenFromBreastObtainedByCoreNeedleBiopsy',
          'FrozenSectionBreastSample',
@@ -21826,6 +22892,7 @@ cid_concepts[8104] = \
          'SpecimenFromBreastObtainedByImageGuidedCoreBiopsy',
          'SpecimenFromBreastObtainedByTotalMastectomy']}
 
+name_for_cid[8109] = 'SpecimenCollectionProcedure'
 cid_concepts[8109] = \
 {'SRT': ['Biopsy',
          'Excision',
@@ -21837,6 +22904,7 @@ cid_concepts[8109] = \
          'TakingOfSwab',
          'SpecimenCollection']}
 
+name_for_cid[8110] = 'SpecimenSamplingProcedure'
 cid_concepts[8110] = \
 {'DCM': ['DissectionWithEntireSpecimenSubmission',
          'DissectionWithRepresentativeSectionsSubmission'],
@@ -21849,6 +22917,7 @@ cid_concepts[8110] = \
          'BlockSurfaceRecut',
          'BlockStepSectioning']}
 
+name_for_cid[8111] = 'SpecimenPreparationProcedure'
 cid_concepts[8111] = \
 {'DCM': ['SpecimenStorage'],
  'SRT': ['SpecimenProcessing',
@@ -21857,10 +22926,11 @@ cid_concepts[8111] = \
          'SpecimenReceiving',
          'Staining']}
 
+name_for_cid[8112] = 'SpecimenStains'
 cid_concepts[8112] = \
-{'SRT': ['AlizarinYellowGgStain',
+{'SRT': ['AlizarinYellowGGStain',
          'BrilliantCresylBlueStain',
-         'TropaeolinOoStain',
+         'TropaeolinOOStain',
          'WaterSolubleNigrosineStain',
          'CelestineBlueBStain',
          'TropaeolinOStain',
@@ -21868,7 +22938,7 @@ cid_concepts[8112] = \
          'GallocyanineStain',
          'AlcoholSolubleNigrosineStain',
          'MetanilYellowStain',
-         'FieldSStain',
+         'FieldStain',
          'ImmunofluorescentStain',
          'FlagellarStain',
          'MeldolaBlueStain',
@@ -21895,17 +22965,17 @@ cid_concepts[8112] = \
          'IndophenolFromNaphtholStain',
          'ChrysoidineYStain',
          'ThioflavineTStain',
-         'AzocarmineGGxStain',
+         'AzocarmineGGXStain',
          'MethylRedStain',
          'NeutralRedStain',
-         'SudanIiStain',
-         'AlbertSStain',
+         'SudanIIStain',
+         'AlbertStain',
          'AcidPhosphataseStain',
          'BetaGlucuronidaseStain',
          'AuramineStain',
          'FeulgenReactionStain',
          'ChloroacetateEsteraseStain',
-         'SolochromeAzurineBsStain',
+         'SolochromeAzurineBSStain',
          'ChromeAzurolSStain',
          'LissamineGreenBStain',
          'VictoriaBlueBStain',
@@ -21916,16 +22986,16 @@ cid_concepts[8112] = \
          'DibromofluoresceinStain',
          'LissamineRhodamineStain',
          'PageBlue83Stain',
-         'AlkaliBlue5b4bStain',
+         'AlkaliBlue5B4BStain',
          'FuchsinAcidStain',
          'SolochromeCyanineRStain',
          'AuramineOStain',
          'FluorescentStain',
          'RosolicAcidSodiumSaltStain',
-         'AtebrinFsStain',
+         'AtebrinFSStain',
          'WaysonStain',
          'AuramineGStain',
-         'AlkaliBlue6bStain',
+         'AlkaliBlue6BStain',
          'WaterSolubleAnilineBlueStain',
          'MethylBlueStain',
          'SpiritSolubleAnilineBlueStain',
@@ -21943,32 +23013,32 @@ cid_concepts[8112] = \
          'PageBlueG90Stain',
          'MethylVioletStain',
          'FuchsinBasicStain',
-         'FastGreenFcfStain',
+         'FastGreenFCFStain',
          'PatentBlueVSodiumSaltStain',
-         'XyleneCyanolFfStain',
-         'LightGreenSfStain',
+         'XyleneCyanolFFStain',
+         'LightGreenSFStain',
          'ProtargolSStain',
          'ThioflavineSStain',
-         'MethylViolet2bStain',
-         'VictoriaBlue4rStain',
-         'MethylViolet6bStain',
+         'MethylViolet2BStain',
+         'VictoriaBlue4RStain',
+         'MethylViolet6BStain',
          'NewFuchsinStain',
          'MalachiteGreenStain',
          'FastVioletBSaltStain',
-         'FastBlueRrSaltStain',
-         'FastRedTrSaltStain',
-         'SiriusRedF3bStain',
-         'FastRedItrStain',
+         'FastBlueRRSaltStain',
+         'FastRedTRSaltStain',
+         'SiriusRedF3BStain',
+         'FastRedITRStain',
          'FastRedBSaltStain',
          'SilverNitrateStain',
          'ChromicAcidStain',
          'AnilineBlueStain',
          'TrichromeStain',
          'ModifiedTrichromeStain',
-         'FastGarnetGbcSaltStain',
-         'FastBlueBbSaltStain',
+         'FastGarnetGBCSaltStain',
+         'FastBlueBBSaltStain',
          'FastBlueBSaltStain',
-         'VerhoeffSHematoxylinStain',
+         'VerhoeffHematoxylinStain',
          'PonceauSStain',
          'FastSulfonBlackFStain',
          'GiemsaStain',
@@ -21982,38 +23052,38 @@ cid_concepts[8112] = \
          'AldehydeFuchsinStain',
          'FouchetStain',
          'HanselStain',
-         'BauerSChromicAcidLeucofuchsinStain',
+         'BauerChromicAcidLeucofuchsinStain',
          'DurazolRedStain',
          'PotassiumHydroxideStain',
          'AzoBlackStain',
          'BenzoFastScarletStain',
          'BrilliantYellowStain',
-         'PontamineSkyBlue6bxStain',
-         'FatRed7bStain',
+         'PontamineSkyBlue6BXStain',
+         'FatRed7BStain',
          'VitalNewRedStain',
          'InsolubleBerlinBlueStain',
          'TrypanBlueStain',
          'CochinealStain',
          'ErieGarnetStain',
-         'PontamineSkyBlue5bxStain',
+         'PontamineSkyBlue5BXStain',
          'EvansBlueStain',
          'SolubleBerlinBlueStain',
          'TerminalDeoxynucleotidylTransferaseStain',
          'IndiaInkStain',
          'AlkalinePhosphataseStain',
          'PeroxidaseStain',
-         'NaphtholAsDChloracetateEsteraseStain',
+         'NaphtholASDChloracetateEsteraseStain',
          'AcidFastStain',
-         'SudanIvStain',
-         'SudanIiiStain',
+         'SudanIVStain',
+         'SudanIIIStain',
          'HemateinStain',
-         'NaphthaleneBlack12bStain',
+         'NaphthaleneBlack12BStain',
          'CurcuminStain',
          'TitanYellowStain',
          'BismarkBrownYStain',
          'CresylEchtVioletStain',
          'HematoxylinStain',
-         'AlcianBlue8gxStain',
+         'AlcianBlue8GXStain',
          'AzophloxinStain',
          'IndigoCarmineStain',
          'LissamineFastRedBStain',
@@ -22032,7 +23102,7 @@ cid_concepts[8112] = \
          'CongoRedStain',
          'CarmineStain',
          'ThioninStain',
-         'ProcionBrilliantBlueMrsStain',
+         'ProcionBrilliantBlueMRSStain',
          'NuclearFastRedStain',
          'ColloidalIronStain',
          'SudanBlueStain',
@@ -22046,9 +23116,9 @@ cid_concepts[8112] = \
          'WaterSolubleAnthraceneBrownStain',
          'AlizarinRedSStain',
          'OrangeGStain',
-         'EriochromeBlueBlackSeStain',
+         'EriochromeBlueBlackSEStain',
          'AlizarinCyanineGreenStain',
-         'Chromotrope2rStain',
+         'Chromotrope2RStain',
          'VanGiesonStain',
          'LuxolFastBlueStain',
          'MalloryBleachStain',
@@ -22056,7 +23126,7 @@ cid_concepts[8112] = \
          'AlizarinBlueSStain',
          'CresylVioletStain',
          'AzureAStain',
-         'OrangeIiStain',
+         'OrangeIIStain',
          'AzureCStain',
          'NitrazineYellowStain',
          'DiamondBlackStain',
@@ -22068,17 +23138,18 @@ cid_concepts[8112] = \
          'CarmoisineAStain',
          'ThionineStain',
          'LacmoidStain',
-         'SolochromeBlack6bStain',
+         'SolochromeBlack6BStain',
          'PonceauXylidineStain',
-         'SunsetYellowFcfStain',
+         'SunsetYellowFCFStain',
          'WrightStain',
-         'Ponceau3rStain',
+         'Ponceau3RStain',
          'SudanStain',
          'ZiehlNeelsenStain',
          'SudanBlackStain',
          'SporeStain',
          'RomanowskyStain']}
 
+name_for_cid[8113] = 'SpecimenPreparationSteps'
 cid_concepts[8113] = \
 {'SRT': ['SpecimenSteamHeating',
          'SpecimenFreezing',
@@ -22087,6 +23158,7 @@ cid_concepts[8113] = \
          'SpecimenMicrowaveHeating',
          'ProteaseDigestionOfTissueSpecimen']}
 
+name_for_cid[8114] = 'SpecimenFixatives'
 cid_concepts[8114] = \
 {'SRT': ['AceticAcid',
          'OsmiumTetroxide',
@@ -22095,19 +23167,20 @@ cid_concepts[8114] = \
          'Formaldehyde',
          'Paraformaldehyde',
          'Methanol',
-         'BouinSFluid',
+         'BouinFluid',
          'PicricAcid',
-         'ZenkerSFluid',
-         'HellySFluid',
+         'ZenkerFluid',
+         'HellyFluid',
          'MercuricChloride',
-         'CarnoySFluid',
+         'CarnoyFluid',
          'PotassiumDichromate',
          'Formalin',
-         'MichelSMedium',
+         'MichelMedium',
          'NeutralBufferedFormalin',
          'Ethanol',
          'ChromiumTrioxide']}
 
+name_for_cid[8115] = 'SpecimenEmbeddingMedia'
 cid_concepts[8115] = \
 {'SRT': ['ParaffinWax',
          'Agar',
@@ -22116,6 +23189,7 @@ cid_concepts[8115] = \
          'TissueFreezingMedium',
          'AcrylicResin']}
 
+name_for_cid[8120] = 'WSIReferencedImagePurposesofReference'
 cid_concepts[8120] = \
 {'DCM': ['ImagedContainerLabel',
          'Localizer',
@@ -22124,12 +23198,15 @@ cid_concepts[8120] = \
          'SameAcquisitionAtLowerResolution',
          'SameAcquisitionAtHigherResolution']}
 
+name_for_cid[8121] = 'MicroscopyLensType'
 cid_concepts[8121] = \
 {'SRT': ['OilImmersionLens', 'HighPowerNonImmersionLens', 'SlideOverviewLens']}
 
+name_for_cid[8122] = 'MicroscopyIlluminatorandSensorColor'
 cid_concepts[8122] = \
 {'SRT': ['Ultraviolet', 'Infrared', 'FullSpectrum', 'Red', 'Green', 'Blue']}
 
+name_for_cid[8123] = 'MicroscopyIlluminationMethod'
 cid_concepts[8123] = \
 {'DCM': ['DifferentialInterferenceContrast',
          'TotalInternalReflectionFluorescence',
@@ -22141,9 +23218,10 @@ cid_concepts[8123] = \
          'ObliqueIllumination',
          'PhaseContrastIllumination']}
 
+name_for_cid[8124] = 'MicroscopyFilter'
 cid_concepts[8124] = \
 {'DCM': ['NoFilter'],
- 'SRT': ['DeSÉNarmontCompensator',
+ 'SRT': ['DeSénarmontCompensator',
          'RedOpticalFilter',
          'VioletOpticalFilter',
          'HoffmanModulator',
@@ -22159,6 +23237,7 @@ cid_concepts[8124] = \
          'GreenOpticalFilter',
          'PolarizingOpticalFilter']}
 
+name_for_cid[8125] = 'MicroscopyIlluminatorType'
 cid_concepts[8125] = \
 {'SRT': ['Laser',
          'MercuryArcLamp',
@@ -22166,25 +23245,30 @@ cid_concepts[8125] = \
          'TungstenHalogenLamp',
          'XenonArcLamp']}
 
+name_for_cid[8130] = 'StainingProtocols'
 cid_concepts[8130] = \
 {'SRT': ['HematoxylinAndEosinStainMethod', 'Staining']}
 
+name_for_cid[8131] = 'PathologyImagingProtocols'
 cid_concepts[8131] = \
-{'DCM': ['Wsi40xRgb',
+{'DCM': ['WSI40XRGB',
          'PeriOperativePhotographicImaging',
          'GrossSpecimenImaging',
          'SlideMicroscopy',
          'WholeSlideImaging',
-         'Wsi20xRgb']}
+         'WSI20XRGB']}
 
+name_for_cid[8132] = 'MagnificationSelection'
 cid_concepts[8132] = \
-{'DCM': ['x_10', 'x_20', 'x_40', 'x_5']}
+{'DCM': ['_10X', '_20X', '_40X', '_5X']}
 
+name_for_cid[8133] = 'TissueSelection'
 cid_concepts[8133] = \
 {'DCM': ['NominalEmptyTileSuppression',
          'HighThresholdEmptyTileSuppression',
          'NoEmptyTileSuppression']}
 
+name_for_cid[8201] = 'SurfaceScanAcquisitionTypes'
 cid_concepts[8201] = \
 {'DCM': ['TimeOfFlight',
          'LaserScanning',
@@ -22195,12 +23279,15 @@ cid_concepts[8201] = \
          'ShapeFromMotion',
          'PointCloudAlgorithmic']}
 
+name_for_cid[8202] = 'SurfaceScanModeTypes'
 cid_concepts[8202] = \
 {'DCM': ['HighResolution', 'FastMode', 'Checkerboard', 'TurntableScanMethod']}
 
+name_for_cid[8203] = 'SurfaceScanRegistrationMethodTypes'
 cid_concepts[8203] = \
 {'DCM': ['IterativeClosestPoint', 'Freehand', 'FiducialAlignment']}
 
+name_for_cid[83] = 'UnitsforRealWorldValueMapping'
 cid_concepts[83] = \
 {'UCUM': ['MicromoleMinuteMilliliter',
           'Centimeter2Milliliter',
@@ -22224,6 +23311,7 @@ cid_concepts[83] = \
           'StandardizedUptakeValueLeanBodyMassJames',
           'StandardizedUptakeValueLeanBodyMassJames128Multiplier']}
 
+name_for_cid[8300] = 'VisualEvaluationMethods'
 cid_concepts[8300] = \
 {'DCM': ['GrayscaleResolutionEvaluation',
          'OverallImageQualityEvaluation',
@@ -22236,128 +23324,132 @@ cid_concepts[8300] = \
          'GeometricalImageEvaluation',
          'VeilingGlareEvaluation']}
 
+name_for_cid[8301] = 'TestPatternCodes'
 cid_concepts[8301] = \
-{'DCM': ['Tg18Lpv50Pattern',
-         'Tg18Lph50Pattern',
-         'Tg18Lph10Pattern',
-         'Tg18Lpv10Pattern',
-         'Tg18Lph89Pattern',
-         'Tg18Rv89Pattern',
-         'Tg18Rv50Pattern',
-         'Tg18CxPattern',
-         'Tg18PxPattern',
-         'Tg18Rv10Pattern',
-         'Bn05Pattern',
-         'Bn04Pattern',
-         'Bn06Pattern',
-         'Bn01Pattern',
-         'GdPattern',
-         'Bn03Pattern',
-         'Bn02Pattern',
-         'Tg18GqPattern',
-         'Tg18GvnPattern',
-         'Tg18GqbPattern',
-         'AngPattern',
-         'Tg18GqnPattern',
-         'OiqPattern',
-         'Tg18Ns50Pattern',
-         'Tg18Ns10Pattern',
-         'Tg18GvPattern',
-         'Tg18Ns89Pattern',
-         'Tg18AfcPattern',
-         'Tg18Lpv89Pattern',
-         'Tg18Ln1216Pattern',
-         'Tg18Ln1215Pattern',
-         'Tg18Ln1217Pattern',
-         'Tg18Ln1212Pattern',
-         'Tg18Ln1211Pattern',
-         'Tg18Ln1214Pattern',
-         'Tg18Ln1213Pattern',
-         'Tg18Ln1208Pattern',
-         'Tg18Ln1210Pattern',
-         'Tg18Ln1209Pattern',
-         'Tg18Rh89Pattern',
-         'Tg18Rh50Pattern',
-         'Tg18AdPattern',
-         'Tg18Unl80Pattern',
-         'Tg18Rh10Pattern',
-         'Tg18MpPattern',
-         'Tg18Un10Pattern',
-         'Tg18Ln1218Pattern',
-         'Tg18Unl10Pattern',
-         'Tg18Un80Pattern',
-         'Tg18Ln815Pattern',
-         'Tg18Ln812Pattern',
-         'Tg18Ln811Pattern',
-         'Tg18Ln814Pattern',
-         'Tg18Ln813Pattern',
-         'Tg18Ln808Pattern',
-         'DinResolutionPattern',
-         'Tg18Ln807Pattern',
-         'DinGrayscalePattern',
-         'Tg18Ln810Pattern',
-         'Tg18Ln809Pattern',
-         'Tg18Ln806Pattern',
-         'DinGeometryPattern',
-         'Tg18Ln1205Pattern',
-         'Tg18Ln1204Pattern',
-         'Tg18Ln1207Pattern',
-         'Tg18Ln1206Pattern',
-         'Tg18Ln1201Pattern',
-         'Tg18Ln818Pattern',
-         'SmptePattern',
-         'Tg18Ln1203Pattern',
-         'Tg18Ln1202Pattern',
-         'Tg18Ln817Pattern',
-         'Tg18Ln816Pattern',
+{'DCM': ['TG18LPV50Pattern',
+         'TG18LPH50Pattern',
+         'TG18LPH10Pattern',
+         'TG18LPV10Pattern',
+         'TG18LPH89Pattern',
+         'TG18RV89Pattern',
+         'TG18RV50Pattern',
+         'TG18CXPattern',
+         'TG18PXPattern',
+         'TG18RV10Pattern',
+         'BN05Pattern',
+         'BN04Pattern',
+         'BN06Pattern',
+         'BN01Pattern',
+         'GDPattern',
+         'BN03Pattern',
+         'BN02Pattern',
+         'TG18GQPattern',
+         'TG18GVNPattern',
+         'TG18GQBPattern',
+         'ANGPattern',
+         'TG18GQNPattern',
+         'OIQPattern',
+         'TG18NS50Pattern',
+         'TG18NS10Pattern',
+         'TG18GVPattern',
+         'TG18NS89Pattern',
+         'TG18AFCPattern',
+         'TG18LPV89Pattern',
+         'TG18LN1216Pattern',
+         'TG18LN1215Pattern',
+         'TG18LN1217Pattern',
+         'TG18LN1212Pattern',
+         'TG18LN1211Pattern',
+         'TG18LN1214Pattern',
+         'TG18LN1213Pattern',
+         'TG18LN1208Pattern',
+         'TG18LN1210Pattern',
+         'TG18LN1209Pattern',
+         'TG18RH89Pattern',
+         'TG18RH50Pattern',
+         'TG18ADPattern',
+         'TG18UNL80Pattern',
+         'TG18RH10Pattern',
+         'TG18MPPattern',
+         'TG18UN10Pattern',
+         'TG18LN1218Pattern',
+         'TG18UNL10Pattern',
+         'TG18UN80Pattern',
+         'TG18LN815Pattern',
+         'TG18LN812Pattern',
+         'TG18LN811Pattern',
+         'TG18LN814Pattern',
+         'TG18LN813Pattern',
+         'TG18LN808Pattern',
+         'DINResolutionPattern',
+         'TG18LN807Pattern',
+         'DINGrayscalePattern',
+         'TG18LN810Pattern',
+         'TG18LN809Pattern',
+         'TG18LN806Pattern',
+         'DINGeometryPattern',
+         'TG18LN1205Pattern',
+         'TG18LN1204Pattern',
+         'TG18LN1207Pattern',
+         'TG18LN1206Pattern',
+         'TG18LN1201Pattern',
+         'TG18LN818Pattern',
+         'SMPTEPattern',
+         'TG18LN1203Pattern',
+         'TG18LN1202Pattern',
+         'TG18LN817Pattern',
+         'TG18LN816Pattern',
          'WhitePattern',
-         'Bn16Pattern',
-         'Bn15Pattern',
-         'Bn12Pattern',
-         'Bn11Pattern',
-         'Bn14Pattern',
-         'Bn13Pattern',
-         'Tg18ChImage',
-         'Bn08Pattern',
-         'Tg18Ga30Pattern',
-         'Bn07Pattern',
-         'Bn10Pattern',
-         'Tg18KnImage',
-         'Bn09Pattern',
-         'Tg18Ga15Pattern',
-         'Tg18Ga10Pattern',
-         'Tg18Ga25Pattern',
-         'Tg18Ga20Pattern',
-         'Tg18Ga03Pattern',
-         'Tg18Ga08Pattern',
-         'Tg18Ga05Pattern',
-         'Tg18Ln805Pattern',
-         'Tg18Ln804Pattern',
-         'Tg18Ln801Pattern',
-         'Tg18CtPattern',
-         'Tg18Ln803Pattern',
-         'Tg18Ln802Pattern',
-         'Tg18QcPattern',
-         'Bn18Pattern',
-         'Tg18PqcPattern',
-         'Tg18BrPattern',
-         'Bn17Pattern',
-         'Tg18Mm2Image',
-         'Tg18Mm1Image']}
+         'BN16Pattern',
+         'BN15Pattern',
+         'BN12Pattern',
+         'BN11Pattern',
+         'BN14Pattern',
+         'BN13Pattern',
+         'TG18CHImage',
+         'BN08Pattern',
+         'TG18GA30Pattern',
+         'BN07Pattern',
+         'BN10Pattern',
+         'TG18KNImage',
+         'BN09Pattern',
+         'TG18GA15Pattern',
+         'TG18GA10Pattern',
+         'TG18GA25Pattern',
+         'TG18GA20Pattern',
+         'TG18GA03Pattern',
+         'TG18GA08Pattern',
+         'TG18GA05Pattern',
+         'TG18LN805Pattern',
+         'TG18LN804Pattern',
+         'TG18LN801Pattern',
+         'TG18CTPattern',
+         'TG18LN803Pattern',
+         'TG18LN802Pattern',
+         'TG18QCPattern',
+         'BN18Pattern',
+         'TG18PQCPattern',
+         'TG18BRPattern',
+         'BN17Pattern',
+         'TG18MM2Image',
+         'TG18MM1Image']}
 
+name_for_cid[8302] = 'MeasurementPatternCodes'
 cid_concepts[8302] = \
-{'DCM': ['Tg18Unl80Pattern', 'Tg18Unl10Pattern']}
+{'DCM': ['TG18UNL80Pattern', 'TG18UNL10Pattern']}
 
+name_for_cid[8303] = 'DisplayDeviceType'
 cid_concepts[8303] = \
-{'DCM': ['CrtFrontProjectionSystem',
-         'DlpRearProjectionSystem',
-         'Oled',
-         'CrtRearProjectionSystem',
-         'DlpFrontProjectionSystem',
-         'CrtDisplay',
+{'DCM': ['CRTFrontProjectionSystem',
+         'DLPRearProjectionSystem',
+         'OLED',
+         'CRTRearProjectionSystem',
+         'DLPFrontProjectionSystem',
+         'CRTDisplay',
          'PlasmaDisplay',
          'LiquidCrystalDisplay']}
 
+name_for_cid[84] = 'PETUnits'
 cid_concepts[84] = \
 {'UCUM': ['MicromoleMinuteMilliliter',
           'Centimeter2Milliliter',
@@ -22380,6 +23472,7 @@ cid_concepts[84] = \
           'StandardizedUptakeValueLeanBodyMassJames',
           'StandardizedUptakeValueLeanBodyMassJames128Multiplier']}
 
+name_for_cid[85] = 'SUVUnits'
 cid_concepts[85] = \
 {'UCUM': ['StandardizedUptakeValueIdealBodyWeight',
           'StandardizedUptakeValueBodySurfaceArea',
@@ -22388,6 +23481,7 @@ cid_concepts[85] = \
           'StandardizedUptakeValueLeanBodyMassJames',
           'StandardizedUptakeValueLeanBodyMassJames128Multiplier']}
 
+name_for_cid[9] = 'ImageGuidedTherapeuticProcedures'
 cid_concepts[9] = \
 {'SRT': ['Biopsy',
          'UltrasonicGuidanceForAmniocentesis',
@@ -22421,9 +23515,11 @@ cid_concepts[9] = \
          'Vasoconstriction',
          'ProstaglandinInjection']}
 
+name_for_cid[9000] = 'PhysicalQuantityDescriptors'
 cid_concepts[9000] = \
 {'DCM': ['Derivation'], 'SRT': ['MeasurementMethod', 'Quantity']}
 
+name_for_cid[91] = 'FunctionalConditionPresentDuringAcquisition'
 cid_concepts[91] = \
 {'DCM': ['DuringVoiding', 'PostVoiding', 'PriorToVoiding'],
  'SRT': ['ValsalvaManeuver',
@@ -22441,6 +23537,7 @@ cid_concepts[91] = \
          'Phonation',
          'ExerciseChallenge']}
 
+name_for_cid[92] = 'JointPositionDuringAcquisition'
 cid_concepts[92] = \
 {'DCM': ['NeutralMusculoskeletalPosition'],
  'SRT': ['Adduction',
@@ -22453,6 +23550,7 @@ cid_concepts[92] = \
          'Supination',
          'Pronation']}
 
+name_for_cid[9231] = 'WorkitemDefinition'
 cid_concepts[9231] = \
 {'DCM': ['NoSubsequentWorkitems',
          'AddAddendumToReport',
@@ -22466,56 +23564,63 @@ cid_concepts[9231] = \
          'MediaImport',
          'ImageProcessing']}
 
+name_for_cid[9233] = 'RequestedReportTypes'
 cid_concepts[9233] = \
 {'DCM': ['FinalReport', 'PreliminaryReport']}
 
+name_for_cid[9241] = 'RadiotherapyGeneralWorkitemDefinition'
 cid_concepts[9241] = \
-{'DCM': ['RtPatientSetup',
-         'RtPatientPositionInTreatmentSessionReview',
-         'RtTreatmentQaByRtIonPlanDifferenceCheck',
-         'RtTreatmentSimulationWithInternalVerification',
-         'RtBrachyTreatment',
-         'RtTreatmentQaByRtPlanDifferenceCheck',
-         'RtPatientPositionAdjustment',
-         'RtTreatmentQaByRtIonPlanDoseCheck',
-         'RtMachineQa',
-         'RtTreatmentQaByRtPlanDoseCheck',
-         'RtTreatmentQaWithExternalVerification',
-         'RtTreatmentWithExternalVerification',
-         'RtTreatmentQaWithInternalVerification',
-         'RtTreatmentSimulationWithExternalVerification',
-         'RtTreatmentWithInternalVerification']}
+{'DCM': ['RTPatientSetup',
+         'RTPatientPositionInTreatmentSessionReview',
+         'RTTreatmentQAByRTIonPlanDifferenceCheck',
+         'RTTreatmentSimulationWithInternalVerification',
+         'RTBrachyTreatment',
+         'RTTreatmentQAByRTPlanDifferenceCheck',
+         'RTPatientPositionAdjustment',
+         'RTTreatmentQAByRTIonPlanDoseCheck',
+         'RTMachineQA',
+         'RTTreatmentQAByRTPlanDoseCheck',
+         'RTTreatmentQAWithExternalVerification',
+         'RTTreatmentWithExternalVerification',
+         'RTTreatmentQAWithInternalVerification',
+         'RTTreatmentSimulationWithExternalVerification',
+         'RTTreatmentWithInternalVerification']}
 
+name_for_cid[9242] = 'RadiotherapyAcquisitionWorkitemDefinition'
 cid_concepts[9242] = \
-{'DCM': ['RtPatientPositionAcquisitionSinglePlaneMv',
-         'RtPatientPositionAcquisitionUltrasound',
-         'RtPatientPositionAcquisitionSpatialFiducials',
-         'RtPatientPositionAcquisitionOptical',
-         'RtPatientPositionAcquisitionCtKv',
-         'RtPatientPositionAcquisitionCtMv',
-         'RtPatientPositionAcquisitionDualPlaneKv',
-         'RtPatientPositionAcquisitionDualPlaneKvMv',
-         'RtPatientPositionAcquisitionDualPlaneMv',
-         'RtPatientPositionAcquisitionSinglePlaneKv']}
+{'DCM': ['RTPatientPositionAcquisitionSinglePlaneMV',
+         'RTPatientPositionAcquisitionUltrasound',
+         'RTPatientPositionAcquisitionSpatialFiducials',
+         'RTPatientPositionAcquisitionOptical',
+         'RTPatientPositionAcquisitionCTKv',
+         'RTPatientPositionAcquisitionCTMV',
+         'RTPatientPositionAcquisitionDualPlaneKv',
+         'RTPatientPositionAcquisitionDualPlaneKvMV',
+         'RTPatientPositionAcquisitionDualPlaneMV',
+         'RTPatientPositionAcquisitionSinglePlaneKv']}
 
+name_for_cid[9243] = 'RadiotherapyRegistrationWorkitemDefinition'
 cid_concepts[9243] = \
-{'DCM': ['RtPatientPositionRegistrationSinglePlane',
-         'RtPatientPositionRegistrationDualPlane',
-         'RtPatientPositionRegistrationSpatialFiducials',
-         'RtPatientPositionRegistrationUltrasound',
-         'RtPatientPositionRegistration2dOn3dReference',
-         'RtPatientPositionRegistrationOptical',
-         'RtPatientPositionRegistration3dCtVolumeBased',
-         'RtPatientPositionRegistration3dOn2dReference',
-         'RtPatientPositionRegistration3dCtGeneral',
-         'RtPatientPositionRegistration3dCtMarkerBased']}
+{'DCM': ['RTPatientPositionRegistrationSinglePlane',
+         'RTPatientPositionRegistrationDualPlane',
+         'RTPatientPositionRegistrationSpatialFiducials',
+         'RTPatientPositionRegistrationUltrasound',
+         'RTPatientPositionRegistration2DOn3DReference',
+         'RTPatientPositionRegistrationOptical',
+         'RTPatientPositionRegistration3DCTVolumeBased',
+         'RTPatientPositionRegistration3DOn2DReference',
+         'RTPatientPositionRegistration3DCTGeneral',
+         'RTPatientPositionRegistration3DCTMarkerBased']}
 
+name_for_cid[9250] = 'ScheduledProcessingParameterConceptCodesforRTTreatment'
 cid_concepts[9250] = \
 {'DCM': ['TreatmentDeliveryType']}
 
+name_for_cid[93] = 'JointPositioningMethod'
 cid_concepts[93] = \
 {'SRT': ['PassiveMovement', 'ManipulationOfJoint']}
 
+name_for_cid[9300] = 'ProcedureDiscontinuationReasons'
 cid_concepts[9300] = \
 {'DCM': ['WorkitemExpired',
          'WorkitemAssignmentRejectedByAssignedResource',
@@ -22606,6 +23711,7 @@ cid_concepts[9300] = \
          'Anxiety',
          'LaryngealEdema']}
 
+name_for_cid[9301] = 'ModalityPPSDiscontinuationReasons'
 cid_concepts[9301] = \
 {'DCM': ['PatientDied',
          'PatientConditionPreventedContinuing',
@@ -22626,6 +23732,7 @@ cid_concepts[9301] = \
          'EquipmentChange'],
  'SRT': ['RadiopharmaceuticalAdverseReaction', 'InjectionSiteExtravasation']}
 
+name_for_cid[9302] = 'MediaImportPPSDiscontinuationReasons'
 cid_concepts[9302] = \
 {'DCM': ['IncorrectWorklistEntrySelected',
          'MediaFailure',
@@ -22636,6 +23743,7 @@ cid_concepts[9302] = \
          'ObjectsIncorrectlyFormatted',
          'DuplicateOrder']}
 
+name_for_cid[9303] = 'InterpretationRequestDiscontinuationReasons'
 cid_concepts[9303] = \
 {'DCM': ['ResourcePreEmpted',
          'PatientDied',
@@ -22649,37 +23757,42 @@ cid_concepts[9303] = \
          'WorkitemAssignmentRejectedByAssignedResource',
          'ChangeOfProcedureForCorrectCharging']}
 
+name_for_cid[94] = 'PhysicalForceAppliedDuringAcquisition'
 cid_concepts[94] = \
 {'SRT': ['TractionAction', 'CompressionAction', 'RotationAction']}
 
+name_for_cid[9401] = 'IEC61217DevicePositionParameters'
 cid_concepts[9401] = \
-{'DCM': ['Iec61217TableTopLongitudinalPosition',
-         'Iec61217TableTopVerticalPosition',
-         'Iec61217GantryContinuousRollAngle',
-         'Iec61217GantryContinuousPitchAngle',
-         'Iec61217GantryContinuousYawAngle',
-         'Iec61217PatientSupportContinuousAngle',
-         'Iec61217TableTopContinuousPitchAngle',
-         'Iec61217TableTopContinuousRollAngle',
-         'Iec61217TableTopEccentricAxisDistance',
-         'Iec61217TableTopContinuousEccentricAngle',
-         'Iec61217TableTopLateralPosition']}
+{'DCM': ['IEC61217TableTopLongitudinalPosition',
+         'IEC61217TableTopVerticalPosition',
+         'IEC61217GantryContinuousRollAngle',
+         'IEC61217GantryContinuousPitchAngle',
+         'IEC61217GantryContinuousYawAngle',
+         'IEC61217PatientSupportContinuousAngle',
+         'IEC61217TableTopContinuousPitchAngle',
+         'IEC61217TableTopContinuousRollAngle',
+         'IEC61217TableTopEccentricAxisDistance',
+         'IEC61217TableTopContinuousEccentricAngle',
+         'IEC61217TableTopLateralPosition']}
 
+name_for_cid[9402] = 'IEC61217GantryPositionParameters'
 cid_concepts[9402] = \
-{'DCM': ['Iec61217GantryContinuousRollAngle',
-         'Iec61217GantryContinuousPitchAngle',
-         'Iec61217GantryContinuousYawAngle']}
+{'DCM': ['IEC61217GantryContinuousRollAngle',
+         'IEC61217GantryContinuousPitchAngle',
+         'IEC61217GantryContinuousYawAngle']}
 
+name_for_cid[9403] = 'IEC61217PatientSupportPositionParameters'
 cid_concepts[9403] = \
-{'DCM': ['Iec61217TableTopLongitudinalPosition',
-         'Iec61217TableTopVerticalPosition',
-         'Iec61217PatientSupportContinuousAngle',
-         'Iec61217TableTopContinuousPitchAngle',
-         'Iec61217TableTopContinuousRollAngle',
-         'Iec61217TableTopEccentricAxisDistance',
-         'Iec61217TableTopContinuousEccentricAngle',
-         'Iec61217TableTopLateralPosition']}
+{'DCM': ['IEC61217TableTopLongitudinalPosition',
+         'IEC61217TableTopVerticalPosition',
+         'IEC61217PatientSupportContinuousAngle',
+         'IEC61217TableTopContinuousPitchAngle',
+         'IEC61217TableTopContinuousRollAngle',
+         'IEC61217TableTopEccentricAxisDistance',
+         'IEC61217TableTopContinuousEccentricAngle',
+         'IEC61217TableTopLateralPosition']}
 
+name_for_cid[9500] = 'DosimetricObjectiveTypes'
 cid_concepts[9500] = \
 {'DCM': ['SpecifiedConformationNumber',
          'SpecifiedHealthyTissueConformityIndex',
@@ -22700,23 +23813,27 @@ cid_concepts[9500] = \
          'PrescriptionRadiationDose',
          'MaximumEquivalentUniformDose']}
 
+name_for_cid[9501] = 'PrescriptionAnatomyCategories'
 cid_concepts[9501] = \
 {'DCM': ['ExternalBodyModel', 'NonSpecificVolume'],
  'SRT': ['PhysicalObject', 'AnatomicalStructure']}
 
+name_for_cid[9502] = 'RTSegmentAnnotationCategories'
 cid_concepts[9502] = \
 {'DCM': ['ExternalBodyModel',
          'NonSpecificVolume',
          'BrachytherapyDevice',
          'FixationOrPositioningDevice',
-         'RtGeometricInformation',
-         'RtDoseCalculationStructure',
-         'RtTarget'],
+         'RTGeometricInformation',
+         'RTDoseCalculationStructure',
+         'RTTarget'],
  'SRT': ['PhysicalObject']}
 
+name_for_cid[9503] = 'RadiotherapyTherapeuticRoleCategories'
 cid_concepts[9503] = \
-{'DCM': ['RtDoseCalculationStructure', 'RtTarget']}
+{'DCM': ['RTDoseCalculationStructure', 'RTTarget']}
 
+name_for_cid[9504] = 'RTGeometricInformation'
 cid_concepts[9504] = \
 {'DCM': ['PatientSetupPoint',
          'ReferenceAcquisitionPoint',
@@ -22724,6 +23841,7 @@ cid_concepts[9504] = \
          'RoomLaserPatientSetupPoint',
          'IsocentricTreatmentLocationPoint']}
 
+name_for_cid[9505] = 'FixationorPositioningDevices'
 cid_concepts[9505] = \
 {'DCM': ['RectalBalloon',
          'Mold',
@@ -22738,43 +23856,51 @@ cid_concepts[9505] = \
          'VacuumMold'],
  'SRT': ['BiteBlock', 'Chair', 'Headrest', 'Table']}
 
+name_for_cid[9506] = 'BrachytherapyDevices'
 cid_concepts[9506] = \
 {'DCM': ['BrachytherapyChannelShield',
          'BrachytherapySourceApplicator',
          'BrachytherapyChannel']}
 
+name_for_cid[9507] = 'ExternalBodyModels'
 cid_concepts[9507] = \
 {'DCM': ['ExtendedPatientAnatomyModel', 'PatientAnatomyModel']}
 
+name_for_cid[9508] = 'NonspecificVolumes'
 cid_concepts[9508] = \
 {'DCM': ['UnclassifiedVolume', 'UnclassifiedCombination']}
 
+name_for_cid[9509] = 'PurposeofReferenceforRTPhysicianIntentInput'
 cid_concepts[9509] = \
-{'DCM': ['HistoricalRtPrescription',
-         'RtPrescriptionInputImages',
+{'DCM': ['HistoricalRTPrescription',
+         'RTPrescriptionInputImages',
          'DiagnosticSourceImages',
          'RegistrationResult',
          'SegmentationResult'],
  'LN': ['RelevantDiagnosticTestsAndOrLaboratoryData']}
 
+name_for_cid[9510] = 'PurposeofReferenceforRTTreatmentPlanningInput'
 cid_concepts[9510] = \
-{'DCM': ['RtTreatmentPlanningInputImages',
+{'DCM': ['RTTreatmentPlanningInputImages',
          'DiagnosticSourceImages',
          'RegistrationResult',
          'SegmentationResult',
-         'RtPrescriptionResult']}
+         'RTPrescriptionResult']}
 
+name_for_cid[9511] = 'GeneralExternalRadiotherapyProcedureTechniques'
 cid_concepts[9511] = \
 {'DCM': ['StaticBeam',
          'SlidingWindowBeam',
          'StepAndShootBeam',
          'ConformalArcBeam',
          'ArcBeam',
-         'Vmat']}
+         'VMAT']}
 
+name_for_cid[9512] = 'TomotherapeuticRadiotherapyProcedureTechniques'
 cid_concepts[9512] = \
 {'DCM': ['TopographicBeam', 'HelicalBeam']}
 
+name_for_cid[9513] = 'FixationDevices'
 cid_concepts[9513] = \
 {'DCM': ['RectalBalloon',
          'Mold',
@@ -22789,14 +23915,15 @@ cid_concepts[9513] = \
          'VacuumMold'],
  'SRT': ['BiteBlock', 'Headrest']}
 
+name_for_cid[9514] = 'AnatomicalStructuresforRadiotherapy'
 cid_concepts[9514] = \
-{'BARI': ['stMarginalCoronaryArteryLaterals_1',
-          'ndMarginalCoronaryArteryLaterals_2',
-          'rdMarginalCoronaryArteryLaterals_3',
-          'stDiagonalCoronaryArteryLaterals_1',
-          'ndDiagonalCoronaryArteryLaterals_2',
+{'BARI': ['_1stMarginalCoronaryArteryLaterals',
+          '_2ndMarginalCoronaryArteryLaterals',
+          '_3rdMarginalCoronaryArteryLaterals',
+          '_1stDiagonalCoronaryArteryLaterals',
+          '_2ndDiagonalCoronaryArteryLaterals',
           'RamusLaterals',
-          'rdDiagonalCoronaryArteryLaterals_3',
+          '_3rdDiagonalCoronaryArteryLaterals',
           'PosteriorDescendingSeptalPerforators'],
  'DCM': ['Phantom',
          'AorticKnob',
@@ -22814,19 +23941,19 @@ cid_concepts[9514] = \
          'AnteriorJunctionLine',
          'PosteriorJunctionLine',
          'SurfaceOfTheChoroidScleraInterface',
-         'OuterSurfaceOfTheBm',
-         'OuterSurfaceOfTheCc',
-         'PosteriorSurfaceOfTheRpe',
-         'SurfaceOfTheCenterOfTheRpe',
-         'OuterSurfaceOfIpl',
-         'OuterSurfaceOfGcl',
-         'OuterSurfaceOfOpl',
-         'OuterSurfaceOfInl',
+         'OuterSurfaceOfTheBM',
+         'OuterSurfaceOfTheCC',
+         'PosteriorSurfaceOfTheRPE',
+         'SurfaceOfTheCenterOfTheRPE',
+         'OuterSurfaceOfIPL',
+         'OuterSurfaceOfGCL',
+         'OuterSurfaceOfOPL',
+         'OuterSurfaceOfINL',
          'SurfaceBetweenInnerAndOuterSegmentsOfThePhotoreceptors',
-         'OuterSurfaceOfHfl',
-         'AnteriorSurfaceOfTheRpe',
-         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRpe',
-         'OuterSurfaceOfRnfl'],
+         'OuterSurfaceOfHFL',
+         'AnteriorSurfaceOfTheRPE',
+         'SurfaceOfTheInterdigitatingZoneBetweenRetinaAndRPE',
+         'OuterSurfaceOfRNFL'],
  'FMA': ['ArcuateFasciculus'],
  'SRT': ['Prostate',
          'AnteriorCardiacVein',
@@ -22840,7 +23967,7 @@ cid_concepts[9514] = \
          'DeltoidMuscle',
          'ParietalBone',
          'MuscleOfNeck',
-         'IlmInternalLimitingMembrane',
+         'ILMInternalLimitingMembrane',
          'IlealVein',
          'Duodenum',
          'FemaleInternalGenitalia',
@@ -22898,7 +24025,7 @@ cid_concepts[9514] = \
          'SkinOfChest',
          'LeftPulmonaryVein',
          'RightPulmonaryVein',
-         'ElmExternalLimitingMembrane',
+         'ELMExternalLimitingMembrane',
          'Eyeball',
          'LingualArtery',
          'RenalVein',
@@ -22962,8 +24089,8 @@ cid_concepts[9514] = \
          'Carina',
          'UrinarySystem',
          'OccipitalVein',
-         'CockettSPerforatingVein',
-         'BoydSPerforatingVein',
+         'CockettPerforatingVein',
+         'BoydPerforatingVein',
          'Larynx',
          'SubclavianVein',
          'Penis',
@@ -22980,7 +24107,7 @@ cid_concepts[9514] = \
          'HunterianPerforatingVein',
          'LacrimalBone',
          'AutonomicNerve',
-         'DoddSPerforatingVein',
+         'DoddPerforatingVein',
          'UpperLobeOfLung',
          'InferiorLeftPulmonaryVein',
          'AnteriorTibialVein',
@@ -23037,9 +24164,9 @@ cid_concepts[9514] = \
          'MedialLemniscus',
          'LacrimalArteryOfRightEye',
          'MidLeftAnteriorDescendingCoronaryArtery',
-         'rdDiagonalCoronaryArtery_3',
-         'ndDiagonalCoronaryArtery_2',
-         'stDiagonalCoronaryArtery_1',
+         '_3rdDiagonalCoronaryArtery',
+         '_2ndDiagonalCoronaryArtery',
+         '_1stDiagonalCoronaryArtery',
          'AnteriorCerebralArtery',
          'InternalCarotidArtery',
          'PortalVein',
@@ -23049,7 +24176,7 @@ cid_concepts[9514] = \
          'ExternalIliacVein',
          'CommonIliacArteryBifurcation',
          'CoronaryArteryGraft',
-         'stSeptalCoronaryArtery_1',
+         '_1stSeptalCoronaryArtery',
          'PancreaticDuct',
          'Eye',
          'DistalCircumflexCoronaryArtery',
@@ -23060,9 +24187,9 @@ cid_concepts[9514] = \
          'SubstantiaNigra',
          'Vertebra',
          'RightAtrium',
-         'ndLeftPosterolateralCoronaryArtery_2',
-         'stLeftPosterolateralCoronaryArtery_1',
-         'rdMarginalCoronaryArtery_3',
+         '_2ndLeftPosterolateralCoronaryArtery',
+         '_1stLeftPosterolateralCoronaryArtery',
+         '_3rdMarginalCoronaryArtery',
          'Tooth',
          'MidCircumflexCoronaryArtery',
          'PosteriorCerebralArteryP1Segment',
@@ -23070,13 +24197,13 @@ cid_concepts[9514] = \
          'CarotidSiphon',
          'MiddleCerebralArteryM2Segment',
          'IliacAndOrFemoralArtery',
-         'AvGrooveContinuationOfCircumflexArtery',
+         'AVGrooveContinuationOfCircumflexArtery',
          'IntermediateArteryRamus',
          'PharynxAndLarynx',
-         'ndMarginalCoronaryArtery_2',
+         '_2ndMarginalCoronaryArtery',
          'LeftMainBranchOfPortalVein',
          'PosteriorCerebralArteryP2Segment',
-         'stMarginalCoronaryArtery_1',
+         '_1stMarginalCoronaryArtery',
          'RightMainBranchOfPortalVein',
          'VomerBone',
          'LumbarArtery',
@@ -23095,10 +24222,10 @@ cid_concepts[9514] = \
          'MuscleOfUpperLimb',
          'SellaTurcica',
          'EntireBody',
-         'rdRightPosterolateralCoronaryArtery_3',
-         'ndRightPosterolateralCoronaryArtery_2',
-         'stRightPosterolateralCoronaryArtery_1',
-         'RightPosteriorAvCoronaryArtery',
+         '_3rdRightPosterolateralCoronaryArtery',
+         '_2ndRightPosterolateralCoronaryArtery',
+         '_1stRightPosterolateralCoronaryArtery',
+         'RightPosteriorAVCoronaryArtery',
          'RenalArtery',
          'TesticularArtery',
          'LigamentumArteriosum',
@@ -23173,7 +24300,7 @@ cid_concepts[9514] = \
          'TrunkOfPulmonaryArtery',
          'FallopianTube',
          'LeftPosteriorDescendingCircumflexCoronaryArtery',
-         'rdLeftPosterolateralCoronaryArtery_3',
+         '_3rdLeftPosterolateralCoronaryArtery',
          'Clavicle',
          'Skull',
          'Peritioneum',
@@ -23475,21 +24602,27 @@ cid_concepts[9514] = \
          'GrayMatter',
          'MiddleCerebellarPeduncle']}
 
+name_for_cid[9515] = 'RTPatientSupportDevices'
 cid_concepts[9515] = \
 {'SRT': ['Chair', 'Table']}
 
+name_for_cid[9516] = 'RadiotherapyBolusDeviceTypes'
 cid_concepts[9516] = \
 {'SRT': ['SurfaceBolus']}
 
+name_for_cid[9517] = 'RadiotherapyBlockDeviceTypes'
 cid_concepts[9517] = \
 {'DCM': ['ApertureBlock'], 'SRT': ['ShieldingBlock']}
 
+name_for_cid[9518] = 'RadiotherapyAccessoryNoSlotHolderDeviceTypes'
 cid_concepts[9518] = \
 {'DCM': ['AccessoryTray']}
 
+name_for_cid[9519] = 'RadiotherapyAccessorySlotHolderDeviceTypes'
 cid_concepts[9519] = \
 {'DCM': ['RadiotherapyApplicator']}
 
+name_for_cid[9520] = 'SegmentedRTAccessoryDevices'
 cid_concepts[9520] = \
 {'DCM': ['BrachytherapyChannel',
          'RectalBalloon',
@@ -23515,15 +24648,19 @@ cid_concepts[9520] = \
          'Headrest',
          'Table']}
 
+name_for_cid[9521] = 'RadiotherapyTreatmentEnergyUnit'
 cid_concepts[9521] = \
 {'UCUM': ['Kilovolt', 'Megavolt', 'Megaelectronvolt']}
 
+name_for_cid[9522] = 'MultiSourceRadiotherapyProcedureTechniques'
 cid_concepts[9522] = \
 {'DCM': ['MultipleFixedSources']}
 
+name_for_cid[9523] = 'RoboticRadiotherapyProcedureTechniques'
 cid_concepts[9523] = \
 {'DCM': ['SynchronizedRoboticTreatment', 'NonSynchronizedRoboticTreatment']}
 
+name_for_cid[9524] = 'RadiotherapyProcedureTechniques'
 cid_concepts[9524] = \
 {'DCM': ['StaticBeam',
          'SlidingWindowBeam',
@@ -23534,39 +24671,44 @@ cid_concepts[9524] = \
          'ArcBeam',
          'TopographicBeam',
          'HelicalBeam',
-         'Vmat',
+         'VMAT',
          'NonSynchronizedRoboticTreatment']}
 
+name_for_cid[9525] = 'RadiationTherapyParticle'
 cid_concepts[9525] = \
 {'SRT': ['Electron', 'Photon']}
 
+name_for_cid[9526] = 'IonTherapyParticle'
 cid_concepts[9526] = \
-{'DCM': ['OxygenNucleus_16',
-         'CarbonNucleus_12',
-         'HeliumNucleus_4',
-         'HeliumNucleus_3'],
+{'DCM': ['_16OxygenNucleus',
+         '_12CarbonNucleus',
+         '_4HeliumNucleus',
+         '_3HeliumNucleus'],
  'SRT': ['Proton', 'Electron']}
 
+name_for_cid[9527] = 'TeletherapyIsotope'
 cid_concepts[9527] = \
-{'SRT': ['Cobalt_60']}
+{'SRT': ['_60Cobalt']}
 
+name_for_cid[9528] = 'BrachytherapyIsotope'
 cid_concepts[9528] = \
-{'SRT': ['Gold_198',
-         'Iodine_125',
-         'Radium_226',
-         'Radon_222',
-         'Californium_252',
-         'Cobalt_60',
-         'Phosphorus_32',
-         'Strontium_90',
-         'Iridium_192',
-         'Palladium_103',
-         'Ruthenium_106',
-         'Yttrium_90',
-         'Cesium_131',
-         'Cesium_137',
-         'Ytterbium_169']}
+{'SRT': ['_198Gold',
+         '_125Iodine',
+         '_226Radium',
+         '_222Radon',
+         '_252Californium',
+         '_60Cobalt',
+         '_32Phosphorus',
+         '_90Strontium',
+         '_192Iridium',
+         '_103Palladium',
+         '_106Ruthenium',
+         '_90Yttrium',
+         '_131Cesium',
+         '_137Cesium',
+         '_169Ytterbium']}
 
+name_for_cid[9529] = 'SingleDoseDosimetricObjectives'
 cid_concepts[9529] = \
 {'DCM': ['MinimumRadiationDose',
          'MaximumSurfaceRadiationDose',
@@ -23578,17 +24720,21 @@ cid_concepts[9529] = \
          'PrescriptionRadiationDose',
          'MaximumEquivalentUniformDose']}
 
+name_for_cid[9530] = 'PercentageandDoseDosimetricObjectives'
 cid_concepts[9530] = \
 {'DCM': ['MinimumPercentVolumeAtRadiationDose',
          'MaximumPercentVolumeAtRadiationDose']}
 
+name_for_cid[9531] = 'VolumeandDoseDosimetricObjectives'
 cid_concepts[9531] = \
 {'DCM': ['MaximumAbsoluteVolumeAtRadiationDose',
          'MinimumAbsoluteVolumeAtRadiationDose']}
 
+name_for_cid[9532] = 'NoParameterDosimetricObjectives'
 cid_concepts[9532] = \
 {'DCM': ['MinimizeMeterset']}
 
+name_for_cid[9533] = 'DeliveryTimeStructure'
 cid_concepts[9533] = \
 {'DCM': ['ContinuousPermanent',
          'ContinuousTemporary',
@@ -23597,20 +24743,22 @@ cid_concepts[9533] = \
          'StandardFractionation',
          'SingleFraction']}
 
+name_for_cid[9534] = 'RadiotherapyTargets'
 cid_concepts[9534] = \
-{'DCM': ['CtvPrimary',
-         'PtvPrimary',
-         'PtvNodal',
+{'DCM': ['CTVPrimary',
+         'PTVPrimary',
+         'PTVNodal',
          'RadiationDoseReferencePoint',
-         'GtvPrimary',
+         'GTVPrimary',
          'RadiationDoseNormalizationPoint',
-         'GtvNodal',
-         'Itv',
+         'GTVNodal',
+         'ITV',
          'EntireBodyTargetVolume',
-         'CtvNodal',
+         'CTVNodal',
          'TreatedVolume'],
- 'SRT': ['IrradiatedVolume', 'Ctv', 'Ptv', 'Gtv']}
+ 'SRT': ['IrradiatedVolume', 'CTV', 'PTV', 'GTV']}
 
+name_for_cid[9535] = 'RadiotherapyDoseCalculationRoles'
 cid_concepts[9535] = \
 {'DCM': ['AvoidanceVolume',
          'PlanningOrganAtRiskVolume',
@@ -23620,6 +24768,7 @@ cid_concepts[9535] = \
          'DoseCalculationBoundingVolume',
          'ConformalityShell']}
 
+name_for_cid[9536] = 'RadiotherapyPrescribingandSegmentingPersonRoles'
 cid_concepts[9536] = \
 {'DCM': ['LeadRadiologicTechnologist'],
  'SRT': ['MedicalPractitioner',
@@ -23629,13 +24778,16 @@ cid_concepts[9536] = \
          'RadiationTherapist'],
  'UMLS': ['ConsultingPhysician', 'RadiationPhysicist', 'MedicalPhysicist']}
 
+name_for_cid[9537] = 'EffectiveDoseCalculationMethodCategories'
 cid_concepts[9537] = \
 {'DCM': ['FractionationBasedOrTemporallyBasedMethods',
          'RadiationTransportBasedMethods']}
 
+name_for_cid[9538] = 'RadiationTransportBasedEffectiveDoseMethodModifiers'
 cid_concepts[9538] = \
 {'DCM': ['LocalEffectModel', 'MicrodosimetricKineticModel']}
 
+name_for_cid[9539] = 'FractionationBasedEffectiveDoseMethodModifers'
 cid_concepts[9539] = \
 {'DCM': ['LinearQuadraticModelForLowDoseRateBrachytherapy',
          'LinearQuadraticLinearModel',

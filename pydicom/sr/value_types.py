@@ -1,7 +1,6 @@
 """DICOM structured reporting content item value types."""
 from enum import Enum
 
-import six
 from pydicom.dataset import Dataset
 from pydicom.valuerep import DA, TM, DT, PersonName
 

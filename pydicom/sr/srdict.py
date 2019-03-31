@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2019 pydicom authors. See LICENSE file for details.
 # -*- coding: utf-8 -*-
 """Access SR dictionary information"""
 
@@ -6,8 +6,11 @@ from itertools import chain
 import inspect
 
 from pydicom.sr._concepts_dict import concepts
-from pydicom.sr._cid_dict import cid_concepts
+from pydicom.sr._cid_dict import name_for_cid, cid_concepts
 from pydicom.sr.value_types import CodedConcept
+
+# Reverse lookup for cid names
+cid_for_name = {v:k for k,v in name_for_cid.items()}
 
 def _filtered(allnames, filters):
     """Helper function for dir() methods"""
