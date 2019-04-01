@@ -7,10 +7,11 @@ import inspect
 
 from pydicom.sr._concepts_dict import concepts
 from pydicom.sr._cid_dict import name_for_cid, cid_concepts
-from pydicom.sr.value_types import CodedConcept
+from pydicom.sr.value_types import Concept
 
 # Reverse lookup for cid names
 cid_for_name = {v:k for k,v in name_for_cid.items()}
+
 
 def _filtered(allnames, filters):
     """Helper function for dir() methods"""
@@ -27,9 +28,13 @@ def _filtered(allnames, filters):
 
 
 class _CID_Dict(object):
+    repr_format = "{} = {}"
+    str_format = "{:20} {:12} {:8} {}\n"
+    
     def __init__(self, cid):
         self.cid = cid
-
+        self._concepts = None
+    
     def __dir__(self):
         """Gives a list of available SR identifiers.
 
@@ -70,11 +75,31 @@ class _CID_Dict(object):
                     msg = "{} had multiple code matches for cid{}".format(name, cid)
                     raise AssertionError(msg)
                 code, val = matches[0]
-            return CodedConcept(value=code,
-                                meaning=val[0],
-                                scheme_designator=scheme
-                               )
+            return Concept(value=code,
+                           meaning=val[0],
+                           scheme_designator=scheme
+                          )
 
+    def concepts(self):
+        if self._concepts:
+            return self._concepts
+        self._concepts = {name: getattr(self, name) for name in self.dir()}
+        return self._concepts
+    
+    def __repr__(self):
+        heading = "CID{}\n".format(self.cid)
+        concepts = [self.repr_format.format(name, concept)
+                    for name, concept in self.concepts().items()]
+        return heading + "\n".join(concepts)
+    
+    def __str__(self):
+        heading = "CID{}\n".format(self.cid)
+        fmt = self.str_format
+        line2 = self.str_format.format("Business name", "value",
+                                       "scheme", "meaning")
+        lines = "".join(fmt.format(name, *concept)
+                        for name, concept in self.concepts().items())
+        return heading + line2 + lines
         
     def dir(self, *filters):
         """Return an alphabetical list of SR identifiers based on a partial match.
@@ -130,6 +155,7 @@ class _ConceptsDict(object):
         return alldir
         
     def __getattr__(self, name):
+        # for codes.X, X must be a CID or a scheme designator
         if name.startswith("cid"):
             if not self.scheme:
                 return _CID_Dict(int(name[3:]))
@@ -137,30 +163,29 @@ class _ConceptsDict(object):
         if name in self._dict.keys():
             # Return concepts limited only the specified scheme designator
             return _ConceptsDict(scheme=name)
-        # else try to find in any scheme
-        if self.scheme:
-            scheme = self.scheme
-        else:
-            matches = [scheme for scheme, codes in self._dict.items()
-                       if name in codes]
-            if len(matches) == 1:
-                scheme = matches[0]
-            else:
-                msg = "Name '{}' is present in multiple schemes: {}"
-                msg += "Please access through codes.<scheme or cid>.<name> format"
-                raise KeyError(msg.format(name, matches))
+
+        # If not already narrowed to a particular scheme, is an error
+        if not self.scheme:
+            msg = "'{}' not recognized as a CID or scheme designator"
+            raise AttributeError(msg.format(name))
         
-        val = self._dict[scheme][name]
+        # else try to find in this scheme
+        scheme = self.scheme
+        try:
+            val = self._dict[scheme][name]
+        except KeyError:
+            msg = "Unknown code name '{}' for scheme '{}'"
+            raise AttributeError(msg.format(name, scheme))
         # val is like {code1: (meaning, cid_list}, code2: ...}
         if len(val) > 1: # more than one code for this name 
             raise NotImplementedError("Need cid to disambiguate")
         else:
             code = list(val.keys())[0] # get first and only
             meaning, cids = val[code]
-            return CodedConcept(value=code,
-                                meaning=meaning,
-                                scheme_designator=scheme
-                               )
+            return Concept(value=code,
+                           meaning=meaning,
+                           scheme_designator=scheme
+                           )
 
     def dir(self, *filters):
         """Return an alphabetical list of SR identifiers based on a partial match.

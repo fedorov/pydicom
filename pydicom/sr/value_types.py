@@ -1,10 +1,14 @@
 """DICOM structured reporting content item value types."""
 from enum import Enum
+from collections import namedtuple
 
 from pydicom.dataset import Dataset
 from pydicom.valuerep import DA, TM, DT, PersonName
 
 # FIXME: graphic data encoding?
+
+Concept = namedtuple('Concept', "value scheme_designator meaning ".split())
+
 
 class ValueTypes(Enum):
 
@@ -77,12 +81,14 @@ class CodedConcept(Dataset):
 
     """Coded concept of a DICOM SR document content module attribute."""
 
-    def __init__(self, value, meaning, scheme_designator, scheme_version=None):
+    def __init__(self, value, scheme_designator=None, meaning=None, scheme_version=None):
         """
         Parameters
         ----------
-        value: str
-            the actual code
+        value: str or Concept
+            If str, the actual code
+            If a Concept instance, then code, scheme, and meaning
+               are taken from that, other parameters not used
         meaning: str
             meaning of the code
         scheme_designator: str
@@ -92,9 +98,17 @@ class CodedConcept(Dataset):
 
         """
         super(CodedConcept, self).__init__()
+        
+        if isinstance(value, Concept):
+            value, scheme_designator, meaning = value
+        if scheme_designator is None or meaning is None:
+            raise TypeError("Required parameters missing")
+
+        # Populate the Dataset
         self.CodeValue = str(value)
         self.CodeMeaning = str(meaning)
         self.CodingSchemeDesignator = str(scheme_designator)
+ 
         if scheme_version is not None:
             self.CodingSchemeVersion = str(scheme_version)
         # TODO: Enhanced Code Sequence Macro Attributes
