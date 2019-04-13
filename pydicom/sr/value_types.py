@@ -5,10 +5,6 @@ from collections import namedtuple
 from pydicom.dataset import Dataset
 from pydicom.valuerep import DA, TM, DT, PersonName
 
-# FIXME: graphic data encoding?
-
-Concept = namedtuple('Concept', "value scheme_designator meaning ".split())
-
 
 class ValueTypes(Enum):
 

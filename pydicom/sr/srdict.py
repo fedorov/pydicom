@@ -7,7 +7,7 @@ import inspect
 
 from pydicom.sr._concepts_dict import concepts
 from pydicom.sr._cid_dict import name_for_cid, cid_concepts
-from pydicom.sr.value_types import Concept
+from pydicom.sr.value_types import CodedConcept
 
 # Reverse lookup for cid names
 cid_for_name = {v:k for k,v in name_for_cid.items()}
@@ -24,17 +24,17 @@ def _filtered(allnames, filters):
         names = sorted(matches.keys())
         return names
     else:
-        return sorted(allnames)  
+        return sorted(allnames)
 
 
 class _CID_Dict(object):
     repr_format = "{} = {}"
     str_format = "{:20} {:12} {:8} {}\n"
-    
+
     def __init__(self, cid):
         self.cid = cid
         self._concepts = None
-    
+
     def __dir__(self):
         """Gives a list of available SR identifiers.
 
@@ -60,7 +60,7 @@ class _CID_Dict(object):
         elif len(matches) > 1:
             # Should never happen, but just in case
             msg = "Multiple schemes found for '{}' in cid{}".format(name, cid)
-            raise AssertionError(msg)       
+            raise AssertionError(msg)
         else:
             scheme = matches[0]
             concept = concepts[scheme][name]
@@ -75,23 +75,24 @@ class _CID_Dict(object):
                     msg = "{} had multiple code matches for cid{}".format(name, cid)
                     raise AssertionError(msg)
                 code, val = matches[0]
-            return Concept(value=code,
-                           meaning=val[0],
-                           scheme_designator=scheme
-                          )
+            return CodedConcept(
+                value=code,
+               meaning=val[0],
+               scheme_designator=scheme
+            )
 
     def concepts(self):
         if self._concepts:
             return self._concepts
         self._concepts = {name: getattr(self, name) for name in self.dir()}
         return self._concepts
-    
+
     def __repr__(self):
         heading = "CID{}\n".format(self.cid)
         concepts = [self.repr_format.format(name, concept)
                     for name, concept in self.concepts().items()]
         return heading + "\n".join(concepts)
-    
+
     def __str__(self):
         heading = "CID{}\n".format(self.cid)
         fmt = self.str_format
@@ -100,7 +101,7 @@ class _CID_Dict(object):
         lines = "".join(fmt.format(name, *concept)
                         for name, concept in self.concepts().items())
         return heading + line2 + lines
-        
+
     def dir(self, *filters):
         """Return an alphabetical list of SR identifiers based on a partial match.
 
@@ -129,7 +130,7 @@ class _CID_Dict(object):
         """
         return dir(self)
 
-        
+
 class _ConceptsDict(object):
     def __init__(self, scheme=None):
         self.scheme = scheme
@@ -153,7 +154,7 @@ class _ConceptsDict(object):
         sr_names = set(self.dir())
         alldir = sorted(props | meths | sr_names)
         return alldir
-        
+
     def __getattr__(self, name):
         # for codes.X, X must be a CID or a scheme designator
         if name.startswith("cid"):
@@ -168,7 +169,7 @@ class _ConceptsDict(object):
         if not self.scheme:
             msg = "'{}' not recognized as a CID or scheme designator"
             raise AttributeError(msg.format(name))
-        
+
         # else try to find in this scheme
         scheme = self.scheme
         try:
@@ -182,10 +183,11 @@ class _ConceptsDict(object):
         else:
             code = list(val.keys())[0] # get first and only
             meaning, cids = val[code]
-            return Concept(value=code,
-                           meaning=meaning,
-                           scheme_designator=scheme
-                           )
+            return CodedConcept(
+                value=code,
+                meaning=meaning,
+                scheme_designator=scheme
+            )
 
     def dir(self, *filters):
         """Return an alphabetical list of SR identifiers based on a partial match.
