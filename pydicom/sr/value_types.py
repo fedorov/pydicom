@@ -3,6 +3,7 @@ from enum import Enum
 from collections import namedtuple
 
 from pydicom.dataset import Dataset
+from pydicom.sequence import Sequence
 from pydicom.valuerep import DA, TM, DT, PersonName
 
 
@@ -220,6 +221,201 @@ class ContentItem(Dataset):
         if relationship_type is not None:
             relationship_type = RelationshipTypes(relationship_type)
             self.RelationshipType = relationship_type.value
+
+    def __setattr__(self, name, value):
+        if name == 'ContentSequence':
+            super(ContentItem, self).__setattr__(name, ContentSequence(value))
+        else:
+            super(ContentItem, self).__setattr__(name, value)
+
+    @property
+    def name(self):
+        """CodedConcept: coded name of the content item"""
+        return self.ConceptNameCodeSequence[0]
+
+    @property
+    def value_type(self):
+        """str: type of the content item
+        (see `pydicom.sr.value_types.ValueTypes`)
+
+        """
+        return self.ValueType
+
+    @property
+    def relationship_type(self):
+        """str: type of relationship the content item has with its parent
+        (see `pydicom.sr.value_types.RelationshipTypes`)
+
+        """
+        return getattr(self, 'RelationshipType', None)
+
+    @property
+    def children(self):
+        """pydicom.sr.value_types.ContentSequence[pydicom.sr.value_types.ContentItem]:
+        contained items
+
+        """
+        try:
+            return self.ContentSequence
+        except AttributeError:
+            raise AttributeError(
+                'Content item "{}" has no children.'.format(self.name.meaning)
+            )
+
+    def child_items(self, name=None, value_type=None, relationship_type=None):
+        """Gets child content items, i.e. items contained in content sequence.
+
+        Parameters
+        ----------
+        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None]
+            coded name that an item should have
+        value_type: Union[pydicom.sr.value_types.ValueTypes, None]
+            type of value that an item should have
+            (e.g. ``pydicom.sr.value_types.ValueTypes.CONTAINER``)
+        relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, None]
+            type of relationship that an item should have with its parent
+            (e.g. ``pydicom.sr.value_types.RelationshipTypes.CONTAINS``)
+
+        Returns
+        -------
+        pydicom.sr.value_types.ContentSequence[pydicom.sr.value_types.ContentItem]
+            matched child content items
+
+        """  #noqa
+        def has_matching_name(item):
+            if name is None:
+                return True
+            return item.name == name
+
+        def has_matching_value_type(item):
+            if value_type is None:
+                return True
+            return item.value_type == value_type.value
+
+        def has_matching_relationship_type(item):
+            if relationship_type is None:
+                return True
+            return item.relationship_type == relationship_type.value
+
+        return ContentSequence([
+            item for item in self.ContentSequence
+            if has_matching_name(item)
+            and has_matching_value_type(item)
+            and has_matching_relationship_type(item)
+        ])
+
+
+
+class ContentSequence(Sequence):
+
+    """Sequence of DICOM SR Content Items."""
+
+    def __init__(self, iterable=None):
+        if iterable is not None:
+            for item in iterable:
+                if not isinstance(item, ContentItem):
+                    raise TypeError(
+                        'Items of "{}" must have type ContentItem.'.format(
+                            self.__class__.__name__
+                        )
+                    )
+        super(ContentSequence, self).__init__(iterable)
+
+    def __setitem__(self, position, item):
+        self.insert(position, item)
+
+    def child_nodes(self):
+        """Gets content items that represent nodes in the content tree, i.e.
+        that have a `ContentSequence` attribute.
+
+        Returns
+        -------
+        pydicom.sr.value_types.ContentSequence[pydicom.sr.value_types.ContentItem]
+            matched content items
+
+        """
+        return self.__class__([
+            item for item in self
+            if hasattr(item, 'ContentSequence')
+        ])
+
+    def items(self, name=None, value_type=None, relationship_type=None):
+        """Gets content items.
+
+        Parameters
+        ----------
+        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None]
+            coded name that an item should have
+        value_type: Union[pydicom.sr.value_types.ValueTypes, None]
+            type of value that an item should have
+            (e.g. ``pydicom.sr.value_types.ValueTypes.CONTAINER``)
+        relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, None]
+            type of relationship that an item should have with its parent
+            (e.g. ``pydicom.sr.value_types.RelationshipTypes.CONTAINS``)
+
+        Returns
+        -------
+        pydicom.sr.value_types.ContentSequence[pydicom.sr.value_types.ContentItem]
+            matched content items
+
+        """  #noqa
+        def has_matching_name(item):
+            if name is None:
+                return True
+            return item.name == name
+
+        def has_matching_value_type(item):
+            if value_type is None:
+                return True
+            return item.value_type == value_type.value
+
+        def has_matching_relationship_type(item):
+            if relationship_type is None:
+                return True
+            return item.relationship_type == relationship_type.value
+
+        return self.__class__([
+            item for item in self
+            if has_matching_name(item)
+            and has_matching_value_type(item)
+            and has_matching_relationship_type(item)
+        ])
+
+    def append(self, item):
+        """Appends a content item to the sequence.
+
+        Parameters
+        ----------
+        item: pydicom.sr.value_types.ContentItem
+            content item
+
+        """
+        if not isinstance(item, ContentItem):
+            raise TypeError(
+                'Items of "{}" must have type ContentItem.'.format(
+                    self.__class__.__name__
+                )
+            )
+        super(ContentSequence, self).append(item)
+
+    def insert(self, position, item):
+        """Inserts a content item into the sequence at a given position.
+
+        Parameters
+        ----------
+        position: int
+            index position
+        item: pydicom.sr.value_types.ContentItem
+            content item
+
+        """
+        if not isinstance(item, ContentItem):
+            raise TypeError(
+                'Items of "{}" must have type ContentItem.'.format(
+                    self.__class__.__name__
+                )
+            )
+        super(ContentSequence, self).insert(position, item)
 
 
 class CodeContentItem(ContentItem):

@@ -1,3 +1,6 @@
+# Copyright 2008-2019 pydicom authors. See LICENSE file for details.
+"""Module for SR Document classes"""
+
 import collections
 import datetime
 
