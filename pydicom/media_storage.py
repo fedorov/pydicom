@@ -16,3 +16,7 @@ class SRStorage(MediaStorage):
 
     pass
 
+class WaveformStorage(MediaStorage):
+
+    pass
+
