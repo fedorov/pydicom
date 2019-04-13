@@ -7,7 +7,7 @@ import inspect
 
 from pydicom.sr._concepts_dict import concepts
 from pydicom.sr._cid_dict import name_for_cid, cid_concepts
-from pydicom.sr.value_types import CodedConcept
+from pydicom.sr.value_types import Code
 
 # Reverse lookup for cid names
 cid_for_name = {v:k for k,v in name_for_cid.items()}
@@ -75,10 +75,10 @@ class _CID_Dict(object):
                     msg = "{} had multiple code matches for cid{}".format(name, cid)
                     raise AssertionError(msg)
                 code, val = matches[0]
-            return CodedConcept(
+            return Code(
                 value=code,
-               meaning=val[0],
-               scheme_designator=scheme
+                meaning=val[0],
+                scheme_designator=scheme
             )
 
     def concepts(self):
@@ -103,9 +103,10 @@ class _CID_Dict(object):
         return heading + line2 + lines
 
     def dir(self, *filters):
-        """Return an alphabetical list of SR identifiers based on a partial match.
+        """Return an alphabetical list of SR identifiers based on a partial
+        match.
 
-        Intended mainly for use in interactive Python sessions. 
+        Intended mainly for use in interactive Python sessions.
 
         Parameters
         ----------
@@ -131,7 +132,7 @@ class _CID_Dict(object):
         return dir(self)
 
 
-class _ConceptsDict(object):
+class _CodesDict(object):
     def __init__(self, scheme=None):
         self.scheme = scheme
         if scheme:
@@ -163,7 +164,7 @@ class _ConceptsDict(object):
             raise AttributeError("Cannot call cid selector on scheme dict")
         if name in self._dict.keys():
             # Return concepts limited only the specified scheme designator
-            return _ConceptsDict(scheme=name)
+            return _CodesDict(scheme=name)
 
         # If not already narrowed to a particular scheme, is an error
         if not self.scheme:
@@ -183,16 +184,17 @@ class _ConceptsDict(object):
         else:
             code = list(val.keys())[0] # get first and only
             meaning, cids = val[code]
-            return CodedConcept(
+            return Code(
                 value=code,
                 meaning=meaning,
                 scheme_designator=scheme
             )
 
     def dir(self, *filters):
-        """Return an alphabetical list of SR identifiers based on a partial match.
+        """Return an alphabetical list of SR identifiers based on a partial
+        match.
 
-        Intended mainly for use in interactive Python sessions. 
+        Intended mainly for use in interactive Python sessions.
 
         Parameters
         ----------
@@ -221,5 +223,5 @@ class _ConceptsDict(object):
         return dir(self)
 
 
-codes = _ConceptsDict()
+codes = _CodesDict()
 

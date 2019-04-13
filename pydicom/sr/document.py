@@ -64,7 +64,8 @@ class Comprehensive3DSR(Dataset):
                  institution_name, institution_department_name, manufacturer,
                  is_complete=False, is_final=False, is_verified=False,
                  verifying_observer_name=None, verifying_organization=None,
-                 performed_procedure_codes=None, requested_procedures=None):
+                 performed_procedure_codes=None, requested_procedures=None,
+                 previous_versions=None):
         '''
         Parameters
         ----------
@@ -115,6 +116,8 @@ class Comprehensive3DSR(Dataset):
         requested_procedures: List[pydicom.dataset.Dataset]
             requested procedures that are being fullfilled by creation of the
             SR document
+        previous_versions: List[pydicom.dataset.Dataset]
+            instances, which represent previous versions of the SR document
 
         '''
         super(Comprehensive3DSR, self).__init__()
@@ -177,31 +180,54 @@ class Comprehensive3DSR(Dataset):
         for tag, value in content.items():
             self[tag] = value
 
-        ref_series_collection = collections.defaultdict(list)
-        for ref in evidence:
-            if ref.StudyInstanceUID != evidence[0].StudyInstanceUID:
+        evd_collection = collections.defaultdict(list)
+        for evd in evidence:
+            if evd.StudyInstanceUID != evidence[0].StudyInstanceUID:
                 raise ValueError(
                     'Referenced data sets must all belong to the same study.'
                 )
-            ref_instance_item = Dataset()
-            ref_instance_item.ReferencedSOPClassUID = ref.SOPClassUID
-            ref_instance_item.ReferencedSOPInstanceUID = ref.SOPInstanceUID
-            ref_series_collection[ref.SeriesInstanceUID].append(
-                ref_instance_item
+            evd_instance_item = Dataset()
+            evd_instance_item.ReferencedSOPClassUID = evd.SOPClassUID
+            evd_instance_item.ReferencedSOPInstanceUID = evd.SOPInstanceUID
+            evd_collection[evd.SeriesInstanceUID].append(
+                evd_instance_item
             )
-        ref_study_item = Dataset()
-        ref_study_item.StudyInstanceUID = evidence[0].StudyInstanceUID
-        ref_study_item.ReferencedSeriesSequence = []
-        for ref_series_uid, ref_instance_items in ref_series_collection.items():
-            ref_series_item = Dataset()
-            ref_series_item.SeriesInstanceUID = ref_series_uid
-            ref_series_item.ReferencedSOPSequence = ref_instance_items
-            ref_study_item.ReferencedSeriesSequence.append(ref_series_item)
+        evd_study_item = Dataset()
+        evd_study_item.StudyInstanceUID = evidence[0].StudyInstanceUID
+        evd_study_item.ReferencedSeriesSequence = []
+        for evd_series_uid, evd_instance_items in evd_collection.items():
+            evd_series_item = Dataset()
+            evd_series_item.SeriesInstanceUID = evd_series_uid
+            evd_series_item.ReferencedSOPSequence = evd_instance_items
+            evd_study_item.ReferencedSeriesSequence.append(evd_series_item)
         if requested_procedures is not None:
             self.ReferencedRequestSequence = requested_procedures
-            self.CurrentRequestedProcedureEvidenceSequence = [ref_study_item]
+            self.CurrentRequestedProcedureEvidenceSequence = [evd_study_item]
         else:
-            self.PertinentOtherEvidenceSequence = [ref_study_item]
+            self.PertinentOtherEvidenceSequence = [evd_study_item]
+
+        if previous_versions is not None:
+            pre_collection = collections.defaultdict(list)
+            for pre in previous_versions:
+                if pre.StudyInstanceUID != evidence[0].StudyInstanceUID:
+                    raise ValueError(
+                        'Previous version data sets must belong to the same study.'
+                    )
+                pre_instance_item = Dataset()
+                pre_instance_item.ReferencedSOPClassUID = pre.SOPClassUID
+                pre_instance_item.ReferencedSOPInstanceUID = pre.SOPInstanceUID
+                pre_collection[pre.SeriesInstanceUID].append(
+                    pre_instance_item
+                )
+            pre_study_item = Dataset()
+            pre_study_item.StudyInstanceUID = previous_versions[0].StudyInstanceUID
+            pre_study_item.ReferencedSeriesSequence = []
+            for pre_series_uid, pre_instance_items in pre_collection.items():
+                pre_series_item = Dataset()
+                pre_series_item.SeriesInstanceUID = pre_series_uid
+                pre_series_item.ReferencedSOPSequence = pre_instance_items
+                pre_study_item.ReferencedSeriesSequence.append(pre_series_item)
+            self.PredecessorDocumentsSequence = [pre_study_item]
 
         if performed_procedure_codes is not None:
             self.PerformedProcedureCodeSequence = performed_procedure_codes

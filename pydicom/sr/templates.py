@@ -4,13 +4,13 @@ from enum import Enum
 from pydicom.dataset import Dataset
 from pydicom.sequence import Sequence
 from pydicom.sr.value_types import (
-    CodedConcept, CodeContentItem, CompositeContentItem, ContainerContentItem,
-    GraphicTypes, GraphicTypes3D, ImageContentItem, NumContentItem,
-    PixelOriginInterpretations, RelationshipTypes,
-    ScoordContentItem, Scoord3DContentItem, TextContentItem, UIDRefContentItem,
+    Code, CodedConcept, CodeContentItem, CompositeContentItem,
+    ContainerContentItem, ContentSequence, GraphicTypes, GraphicTypes3D,
+    ImageContentItem, NumContentItem, PixelOriginInterpretations,
+    RelationshipTypes, ScoordContentItem, Scoord3DContentItem, TextContentItem,
+    UIDRefContentItem,
 )
-from pydicom.sr.context_groups.cid_270 import PERSON, DEVICE
-from pydicom.sr.context_groups.cid_7021 import IMAGING_MEASUREMENT_REPORT
+from pydicom.sr import codes
 
 
 DEFAULT_LANGUAGE = CodedConcept(
@@ -20,7 +20,7 @@ DEFAULT_LANGUAGE = CodedConcept(
 )
 
 
-class Template(Sequence):
+class Template(ContentSequence):
 
     """Abstract base class for a DICOM SR template."""
 
@@ -46,23 +46,23 @@ class Measurement(Template):
             identifier for tracking measurements
         value: Union[int, float, None], optional
             numeric measurement value
-        unit: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        unit: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             unit of the numeric measurement value
             (see CID 7181 "Abstract Multi-dimensional Image Model Component
             Units" for options)
-        qualifier: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        qualifier: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             qualification of numeric measurement value or as an alternative
             qualitative description
         algorithm_id: Union[pydicom.sr.templates.AlgorithmIdentification, None], optional
             identification of algorithm
-        derivation: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        derivation: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             how the value was computed
             (see CID 7464 "General Region of Interest Measurement Modifiers"
             for options)
         finding_sites: Union[List[pydicom.sr.template.FindingSite], None], optional
             coded description of one or more anatomic locations corresonding
             to the image region from which measurement was taken
-        method: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        method: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             measurement method
             (see CID 6147 "Response Criteria" for options)
         properties: Union[pydicom.sr.templates.MeasurementProperties, None], optional
@@ -88,7 +88,7 @@ class Measurement(Template):
             qualifier=qualifier,
             relationship_type=RelationshipTypes.CONTAINS
         )
-        value_item.ContentSequence = []
+        value_item.ContentSequence = ContentSequence()
         if not isinstance(tracking_identifier, TrackingIdentifier):
             raise TypeError(
                 'Argument "tracking_identifier" must have type '
@@ -193,13 +193,13 @@ class MeasurementProperties(Template):
         '''
         Parameters
         ----------
-        normality: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        normality: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             the extend to which the measurement is considered normal or abnormal
             (see CID 222 "Normality Codes" for options)
-        level_of_significance: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        level_of_significance: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             the extend to which the measurement is considered normal or abnormal
             (see CID 220 "Level of Significance" for options)
-        selection_status: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        selection_status: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             how the measurement value was selected or computed from a set of
             available values
             (see CID 224 "Selection Method" for options)
@@ -395,6 +395,7 @@ class NormalRangeProperties(Template):
             self.append(authority_item)
 
 
+# TODO
 class EquationOrTable(Template):
 
     """TID 315 Equation or Table"""
@@ -490,7 +491,7 @@ class ObserverContext(Template):
             relationship_type=RelationshipTypes.HAS_OBS_CONTEXT
         )
         self.append(observer_type_item)
-        if observer_type == PERSON:
+        if observer_type == codes.cid270.Person:
             if not isinstance(observer_identifying_attributes,
                               PersonObserverIdentifyingAttributes):
                 raise TypeError(
@@ -500,7 +501,7 @@ class ObserverContext(Template):
                         observer_type.meaning
                     )
                 )
-        elif observer_type == DEVICE:
+        elif observer_type == codes.cid270.Device:
             if not isinstance(observer_identifying_attributes,
                               DeviceObserverIdentifyingAttributes):
                 raise TypeError(
@@ -532,9 +533,9 @@ class PersonObserverIdentifyingAttributes(Template):
             login name of the person
         organization_name: Union[str, None], optional
             name of the person's organization
-        role_in_organization: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        role_in_organization: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             role of the person within the organization
-        role_in_procedure: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        role_in_procedure: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             role of the person in the reported procedure
 
         '''  # noqa
@@ -953,7 +954,7 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
-        finding_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        finding_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             type of object that was measured, e.g., organ or tumor
         session: Union[str, None], optional
             description of the session
@@ -979,7 +980,7 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
             ),
             relationship_type=RelationshipTypes.CONTAINS
         )
-        group_item.ContentSequence = []
+        group_item.ContentSequence = ContentSequence()
         if not isinstance(tracking_identifier, TrackingIdentifier):
             raise TypeError(
                 'Argument "tracking_identifier" must have type '
@@ -1114,7 +1115,7 @@ class PlanarROIMeasurementsAndQualitativeEvaluations(
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
-        finding_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        finding_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             type of object that was measured, e.g., organ or tumor
         session: Union[str, None], optional
             description of the session
@@ -1186,7 +1187,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
-        finding_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        finding_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             type of object that was measured, e.g., organ or tumor
         session: Union[str, None], optional
             description of the session
@@ -1245,9 +1246,9 @@ class LongitudinalTemporalOffsetFromEvent(NumContentItem):
         ----------
         value: Union[int, float, None], optional
             offset in time from a particular event of significance
-        unit: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        unit: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             unit of time, e.g., "Days" or "Seconds"
-        event_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        event_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             type of event to which offset is relative,
             e.g., "Baseline" or "Enrollment"
 
@@ -1455,7 +1456,7 @@ class ReferencedVolume(Scoord3DContentItem):
             graphic_data=graphic_data,
             relationship_type=RelationshipTypes.CONTAINS
         )
-        self.ContentSequence = []
+        self.ContentSequence = ContentSequence()
         if source_images is not None:
             for image in source_images:
                 if not isinstance(image, SourceImageForSegmentation):
@@ -1610,12 +1611,12 @@ class FindingSite(CodeContentItem):
         '''
         Parameters
         ----------
-        anatomic_location: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        anatomic_location: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             coded anatomic location (region or structure)
-        laterality: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        laterality: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             coded laterality
             (see CID 244 "Laterality" for options)
-        topographical_modifier: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        topographical_modifier: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             coded modifier value for anatomic location
 
         '''  # noqa
@@ -1628,7 +1629,7 @@ class FindingSite(CodeContentItem):
             value=anatomic_location,
             relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
         )
-        self.ContentSequence = []
+        self.ContentSequence = ContentSequence()
         if laterality is not None:
             laterality_item = CodeContentItem(
                 name=CodedConcept(
@@ -1663,7 +1664,7 @@ class ROIMeasurements(Template):
         ----------
         measurements: List[pydicom.sr.templates.Measurement]
             individual measurements
-        method: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        method: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             coded measurement method
             (see CID 6147 "Response Criteria" for options)
         finding_sites: Union[List[pydicom.sr.templates.FindingSite], None], optional
@@ -1712,7 +1713,7 @@ class MeasurementReport(ContainerContentItem):
                  imaging_measurements=None,
                  derived_imaging_measurements=None,
                  qualitative_evaluations=None,
-                 title=IMAGING_MEASUREMENT_REPORT,
+                 title=codes.cid7021.ImagingMeasurementReport,
                  language_of_content_item_and_descendants=None
                 ):
         '''
@@ -1720,7 +1721,7 @@ class MeasurementReport(ContainerContentItem):
         ----------
         observation_context: pydicom.sr.templates.ObservationContext
             description of the observation context
-        procedure_reported: Union[pydicom.sr.value_types.CodedConcept, List[pydicom.sr.value_types.CodedConcept]]
+        procedure_reported: Union[Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code], List[Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]]]
             one or more coded description(s) of the procedure
             (see CID 100 Quantitative Diagnostic Imaging Procedures for options)
         imaging_measurements: Union[List[Union[pydicom.sr.templates.PlanarROIMeasurementsAndQualitativeEvaluations, pydicom.sr.templates.VolumetricROIMeasurementsAndQualitativeEvaluations, pydicom.sr.templates.MeasurementAndQualitativeEvaluationGroup]], None], optional
@@ -1742,13 +1743,15 @@ class MeasurementReport(ContainerContentItem):
         `qualitative_evaluations` should be specified.
 
         ''' # noqa
-        if not isinstance(title, CodedConcept):
-            raise TypeError('Argument "title" must have type CodedConcept.')
+        if not isinstance(title, (CodedConcept, Code, )):
+            raise TypeError(
+                'Argument "title" must have type CodedConcept or Code.'
+            )
         super(MeasurementReport, self).__init__(
             name=title,
             template_id='TID1500'
         )
-        self.ContentSequence = []
+        self.ContentSequence = ContentSequence()
         if language_of_content_item_and_descendants is None:
             language_of_content_item_and_descendants = \
                 LanguageOfContentItemAndDescendants(DEFAULT_LANGUAGE)
@@ -1756,7 +1759,7 @@ class MeasurementReport(ContainerContentItem):
             language_of_content_item_and_descendants
         )
         self.ContentSequence.extend(observation_context)
-        if not isinstance(procedure_reported, (list, tuple)):
+        if isinstance(procedure_reported, (CodedConcept, Code, )):
             procedure_reported = [procedure_reported]
         for procedure in procedure_reported:
             procedure_item = CodeContentItem(
@@ -1835,7 +1838,7 @@ class TimePointContext(Template):
         ----------
         time_point: str
             actual value represention of the time point
-        time_point_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        time_point_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             coded type of time point, e.g., "Baseline" or "Posttreatment"
             (see CID 646 "Time Point Types" for options)
         time_point_order: Union[int, None], optional
@@ -1852,7 +1855,7 @@ class TimePointContext(Template):
         temporal_offset_from_event: Union[pydicom.sr.template.LongitudinalTemporalOffsetFromEvent, None], optional
             offset in time from a particular event of significance, e.g., the
             baseline of an imaging study or enrollment into a clincal trial
-        temporal_event_type: Union[pydicom.sr.value_types.CodedConcept, None], optional
+        temporal_event_type: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
             type of event to which `temporal_offset_from_event` is relative,
             e.g., "Baseline" or "Enrollment"
             (required if `temporal_offset_from_event` is provided)
