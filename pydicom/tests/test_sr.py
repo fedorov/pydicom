@@ -3,22 +3,7 @@ import unittest
 import pytest
 
 from pydicom.dataset import Dataset
-from pydicom.uid import generate_uid
-from pydicom.valuerep import DS
-
-from pydicom.sr.context_groups.cid_2 import APICAL
-from pydicom.sr.context_groups.cid_100 import CT_PERFUSION_HEAD_WITH_CONTRAST_IV
-from pydicom.sr.context_groups.cid_244 import RIGHT
-from pydicom.sr.context_groups.cid_270 import PERSON, DEVICE
-from pydicom.sr.context_groups.cid_271 import SPECIMEN
-from pydicom.sr.context_groups.cid_6300 import (
-    RIGHT_ANTERIOR_MIDDLE_PERIPHERAL_ZONE_OF_PROSTATE
-)
-from pydicom.sr.context_groups.cid_7151 import LOBE_OF_LUNG
-from pydicom.sr.context_groups.cid_7181 import SQUARE_MILLIMETER
-from pydicom.sr.context_groups.cid_7473 import AREA_OF_CLOSED_IRREGULAR_POLYGON
-from pydicom.sr.context_groups.cid_7464 import TOTAL
-from pydicom.sr.context_groups.cid_7469 import AREA
+from pydicom.sr import codes
 from pydicom.sr.document import Comprehensive3DSR
 from pydicom.sr.templates import (
     DEFAULT_LANGUAGE,
@@ -46,6 +31,8 @@ from pydicom.sr.value_types import (
     GraphicTypes3D,
     NumContentItem,
 )
+from pydicom.uid import generate_uid
+from pydicom.valuerep import DS
 
 
 class TestObservationContext(unittest.TestCase):
@@ -56,19 +43,19 @@ class TestObservationContext(unittest.TestCase):
         self._device_uid = generate_uid()
         self._specimen_uid = generate_uid()
         self._observer_person_context = ObserverContext(
-            observer_type=PERSON,
+            observer_type=codes.cid270.Person,
             observer_identifying_attributes=PersonObserverIdentifyingAttributes(
                 name=self._person_name
             )
         )
         self._observer_device_context = ObserverContext(
-            observer_type=DEVICE,
+            observer_type=codes.cid270.Device,
             observer_identifying_attributes=DeviceObserverIdentifyingAttributes(
                 uid=self._device_uid
             )
         )
         self._subject_context = SubjectContext(
-            subject_class=SPECIMEN,
+            subject_class=codes.cid271.Specimen,
             subject_class_specific_context=SubjectContextSpecimen(
                 uid=self._specimen_uid
             )
@@ -84,7 +71,7 @@ class TestObservationContext(unittest.TestCase):
         assert len(self._observer_person_context) == 2
         item = self._observer_person_context[0]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121005'
-        assert item.ConceptCodeSequence[0] == PERSON
+        assert item.ConceptCodeSequence[0] == codes.cid270.Person
         item = self._observer_person_context[1]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121008'
         assert item.TextValue == self._person_name
@@ -92,7 +79,7 @@ class TestObservationContext(unittest.TestCase):
         assert len(self._observer_device_context) == 2
         item = self._observer_device_context[0]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121005'
-        assert item.ConceptCodeSequence[0] == DEVICE
+        assert item.ConceptCodeSequence[0] == codes.cid270.Device
         item = self._observer_device_context[1]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121012'
         assert item.UID == self._device_uid
@@ -101,7 +88,7 @@ class TestObservationContext(unittest.TestCase):
         assert len(self._subject_context) == 2
         item = self._subject_context[0]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121024'
-        assert item.ConceptCodeSequence[0] == SPECIMEN
+        assert item.ConceptCodeSequence[0] == codes.cid271.Specimen
         item = self._subject_context[1]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121039'
         assert item.UID == self._specimen_uid
@@ -114,9 +101,9 @@ class TestFindingSiteOptional(unittest.TestCase):
 
     def setUp(self):
         super(TestFindingSiteOptional, self).setUp()
-        self._location = LOBE_OF_LUNG
-        self._laterality = RIGHT
-        self._modifier = APICAL
+        self._location = codes.cid7151.LobeOfLung
+        self._laterality = codes.cid244.Right
+        self._modifier = codes.cid2.Apical
         self._finding_site = FindingSite(
             anatomic_location=self._location,
             laterality=self._laterality,
@@ -144,7 +131,7 @@ class TestFindingSite(unittest.TestCase):
 
     def setUp(self):
         super(TestFindingSite, self).setUp()
-        self._location = RIGHT_ANTERIOR_MIDDLE_PERIPHERAL_ZONE_OF_PROSTATE
+        self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
         self._finding_site = FindingSite(
             anatomic_location=self._location
         )
@@ -198,12 +185,12 @@ class TestMeasurement(unittest.TestCase):
     def setUp(self):
         super(TestMeasurement, self).setUp()
         self._value = 10.0
-        self._unit = SQUARE_MILLIMETER
+        self._unit = codes.cid7181.SquareMillimeter
         self._tracking_identifier = TrackingIdentifier(
             uid=generate_uid(),
             identifier='prostate zone size measurement'
         )
-        self._name = AREA
+        self._name = codes.cid7469.Area
         self._measurement = Measurement(
             name=self._name,
             value=self._value,
@@ -243,14 +230,14 @@ class TestMeasurementOptional(unittest.TestCase):
         derivation, method and reference to an image region.'''
         super(TestMeasurementOptional, self).setUp()
         self._value = 10
-        self._unit = SQUARE_MILLIMETER
+        self._unit = codes.cid7181.SquareMillimeter
         self._tracking_identifier = TrackingIdentifier(
             uid=generate_uid(),
             identifier='prostate zone size measurement'
         )
-        self._derivation = TOTAL
-        self._method = AREA_OF_CLOSED_IRREGULAR_POLYGON
-        self._location = RIGHT_ANTERIOR_MIDDLE_PERIPHERAL_ZONE_OF_PROSTATE
+        self._derivation = codes.cid7464.Total
+        self._method = codes.cid7473.AreaOfClosedIrregularPolygon
+        self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
         self._finding_site = FindingSite(
             anatomic_location=self._location
         )
@@ -263,7 +250,7 @@ class TestMeasurementOptional(unittest.TestCase):
             graphic_data=[1.0, 1.0],
             source_image=self._image
         )
-        self._name = AREA
+        self._name = codes.cid7469.Area
         self._measurement = Measurement(
             name=self._name,
             value=self._value,
@@ -298,7 +285,7 @@ class TestROIMeasurements(unittest.TestCase):
     def setUp(self):
         super(TestROIMeasurements, self).setUp()
         self._values = [10, 20.0, 30.5]
-        self._unit = SQUARE_MILLIMETER
+        self._unit = codes.cid7181.SquareMillimeter
         self._tracking_identifiers = [
             TrackingIdentifier(
                 uid=generate_uid(),
@@ -306,7 +293,7 @@ class TestROIMeasurements(unittest.TestCase):
             )
             for i in ('first', 'second', 'third')
         ]
-        self._name = AREA
+        self._name = codes.cid7469.Area
         self._measurements = [
             Measurement(
                 name=self._name,
@@ -316,8 +303,8 @@ class TestROIMeasurements(unittest.TestCase):
             )
             for i in range(len(self._values))
         ]
-        self._method = AREA_OF_CLOSED_IRREGULAR_POLYGON
-        self._location = RIGHT_ANTERIOR_MIDDLE_PERIPHERAL_ZONE_OF_PROSTATE
+        self._method = codes.cid7473.AreaOfClosedIrregularPolygon
+        self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
         self._finding_site = FindingSite(
             anatomic_location=self._location
         )
@@ -524,13 +511,13 @@ class TestMeasurementReport(unittest.TestCase):
     def setUp(self):
         super(TestMeasurementReport, self).setUp()
         self._observer_person_context = ObserverContext(
-            observer_type=PERSON,
+            observer_type=codes.cid270.Person,
             observer_identifying_attributes=PersonObserverIdentifyingAttributes(
                 name='Foo Bar'
             )
         )
         self._observer_device_context = ObserverContext(
-            observer_type=DEVICE,
+            observer_type=codes.cid270.Device,
             observer_identifying_attributes=DeviceObserverIdentifyingAttributes(
                 uid=generate_uid()
             )
@@ -539,7 +526,7 @@ class TestMeasurementReport(unittest.TestCase):
             observer_person_context=self._observer_person_context,
             observer_device_context=self._observer_device_context
         )
-        self._procedure_reported = CT_PERFUSION_HEAD_WITH_CONTRAST_IV
+        self._procedure_reported = codes.cid100.CTPerfusionHeadWithContrastIV
         self._tracking_identifier = TrackingIdentifier(
             uid=generate_uid(),
             identifier='planar roi measurements'
