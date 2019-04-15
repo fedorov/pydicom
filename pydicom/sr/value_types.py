@@ -250,7 +250,8 @@ class ContentItem(Dataset):
 
     def get_content_items(self, name=None, value_type=None,
                           relationship_type=None):
-        """Gets content items, i.e. items contained in the content sequence.
+        """Gets content items, i.e. items contained in the content sequence,
+        optionally filtering them based on specified criteria.
 
         Parameters
         ----------
@@ -282,7 +283,7 @@ class ContentItem(Dataset):
                     self.name.meaning
                 )
             )
-        return content_sequence.get_items(
+        return content_sequence.filter(
             name=name,
             value_type=value_type,
             relationship_type=relationship_type
@@ -323,8 +324,8 @@ class ContentSequence(Sequence):
             if hasattr(item, 'ContentSequence')
         ])
 
-    def get_items(self, name=None, value_type=None, relationship_type=None):
-        """Gets content items.
+    def filter(self, name=None, value_type=None, relationship_type=None):
+        """Filters content items.
 
         Parameters
         ----------
