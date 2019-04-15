@@ -38,7 +38,6 @@ class GraphicTypes(Enum):
 
 class GraphicTypes3D(Enum):
 
-    CIRCLE = 'CIRCLE'
     ELLIPSE = 'ELLIPSE'
     ELLIPSOID = 'ELLIPSOID'
     MULTIPOINT = 'MULTIPOINT'
