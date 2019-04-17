@@ -1,9 +1,9 @@
 """DICOM structured reporting content item value types."""
 from enum import Enum
-from collections import namedtuple
 
 from pydicom.dataset import Dataset
 from pydicom.sequence import Sequence
+from pydicom.sr.coding import Code, CodedConcept
 from pydicom.valuerep import DA, TM, DT, PersonName
 
 
@@ -73,123 +73,6 @@ class PixelOriginInterpretations(Enum):
     VOLUME = 'VOLUME'
 
 
-Code = namedtuple(
-    'Code',
-    ('value', 'scheme_designator', 'meaning', 'scheme_version')
-)
-Code.__new__.__defaults__ = (None, )
-
-
-class CodedConcept(Dataset):
-
-    """Coded concept of a DICOM SR document content module attribute."""
-
-    def __init__(self, value, scheme_designator, meaning, scheme_version=None):
-        """
-        Parameters
-        ----------
-        value: str
-            code
-        meaning: str
-            meaning of the code
-        scheme_designator: str
-            designator of coding scheme
-        scheme_version: Union[str, None], optional
-            version of coding scheme
-
-        """
-        super(CodedConcept, self).__init__()
-
-        # Populate the Dataset
-        self.CodeValue = str(value)
-        self.CodeMeaning = str(meaning)
-        self.CodingSchemeDesignator = str(scheme_designator)
-
-        if scheme_version is not None:
-            self.CodingSchemeVersion = str(scheme_version)
-        # TODO: Enhanced Code Sequence Macro Attributes
-
-    def __eq__(self, other):
-        """Compares `self` and `other` for equality.
-
-        Returns
-        -------
-        bool
-            whether `self` and `other` are considered equal
-
-        """
-        if not isinstance(other, (self.__class__, Code)):
-            return False
-        if isinstance(other, Code):
-            equality_criteria = [
-                self.CodeValue == other.value,
-                self.CodingSchemeDesignator == other.scheme_designator,
-                self.CodeMeaning == other.meaning,
-            ]
-            if (len(other) == 4 and
-                    hasattr(self, 'CodingSchemeVersion')):
-                equality_criteria.append(
-                    self.CodingSchemeVersion == other.scheme_version
-                )
-            return all(equality_criteria)
-        if not hasattr(other, 'CodeValue'):
-            return False
-        equality_criteria = [
-            self.CodeValue == other.CodeValue,
-            self.CodingSchemeDesignator == other.CodingSchemeDesignator,
-        ]
-        if (hasattr(other, 'CodingSchemeVersion') and
-                hasattr(self, 'CodingSchemeVersion')):
-            equality_criteria.append(
-                self.CodingSchemeVersion == other.CodingSchemeVersion
-            )
-        return all(equality_criteria)
-
-    def __ne__(self, other):
-        """Compares `self` and `other` for inequality.
-
-        Returns
-        -------
-        bool
-            whether `self` and `other` are not considered equal
-
-        """
-        return not (self == other)
-
-    @property
-    def value(self):
-        """str: value of the code"""
-        return self.CodeValue
-
-    @property
-    def meaning(self):
-        """str: meaning of the code"""
-        return self.CodeMeaning
-
-    @property
-    def scheme_designator(self):
-        """str: designator of the coding scheme (e.g. ``"DCM"``)"""
-        return self.CodeMeaning
-        return self.CodingSchemeDesignator
-
-    @property
-    def scheme_version(self):
-        """Union[str, None]: version of the coding scheme (if available)"""
-        return getattr(self, 'CodingSchemeVersion', None)
-
-    def to_json(self):
-        """Serializes object in DICOM JSON format.
-
-        Returns
-        -------
-        str
-            serialized object
-
-        """
-        # TODO
-        raise NotImplementedError()
-
-
 class ContentItem(Dataset):
 
     """Abstract base class for a collection of attributes contained in the
@@ -201,7 +84,7 @@ class ContentItem(Dataset):
         ----------
         value_type: str
             type of value encoded in a content item
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             coded name or an enumerated item representing a coded name
         relationship_type: Union[str, None]
             type of relationship with parent content item
@@ -255,7 +138,7 @@ class ContentItem(Dataset):
 
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None]
             coded name that items should have
         value_type: Union[pydicom.sr.value_types.ValueTypes, None]
             type of value that items should have
@@ -288,7 +171,6 @@ class ContentItem(Dataset):
             value_type=value_type,
             relationship_type=relationship_type
         )
-
 
 
 class ContentSequence(Sequence):
@@ -329,7 +211,7 @@ class ContentSequence(Sequence):
 
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None]
             coded name that items should have
         value_type: Union[pydicom.sr.value_types.ValueTypes, None]
             type of value that items should have
@@ -425,9 +307,9 @@ class CodeContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
-        value: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        value: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             coded value or an enumerated item representing a coded value
         relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, str, None]
             type of relationship with parent content item
@@ -453,7 +335,7 @@ class PnameContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: str
             name of the person
@@ -475,7 +357,7 @@ class TextContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: str
             description of the concept in free text
@@ -497,7 +379,7 @@ class TimeContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: pydicom.valuerep.TM
             time
@@ -519,7 +401,7 @@ class DateContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: Union[pydicom.valuerep.DA, str]
             date
@@ -541,7 +423,7 @@ class DateTimeContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: Union[pydicom.valuerep.DT, str]
             datetime
@@ -563,7 +445,7 @@ class UIDRefContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: Union[pydicom.uid.UID, str]
             unique identifier
@@ -586,13 +468,13 @@ class NumContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         value: Union[int, float], optional
             numeric value
-        unit: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
+        unit: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             coded units of measurement
-        qualifier: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code, None], optional
+        qualifier: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             qualification of numeric value or as an alternative to
             numeric value
         relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, str, None], optional
@@ -649,7 +531,7 @@ class ContainerContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         relationship_type: Union[str, None], optional
             type of relationship with parent content item
@@ -688,7 +570,7 @@ class CompositeContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, str]
             type of relationship with parent content item
@@ -720,7 +602,7 @@ class ImageContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         referenced_sop_class_uid: Union[pydicom.uid.UID, str]
             SOP Class UID of the referenced image object
@@ -765,7 +647,7 @@ class ScoordContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         graphic_type: Union[pydicom.sr.value_types.GraphicTypes, str]
             name of the graphic type
@@ -873,7 +755,7 @@ class Scoord3DContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         graphic_type: Union[pydicom.sr.value_types.GraphicTypes, str]
             name of the graphic type
@@ -959,7 +841,7 @@ class TcoordContentItem(ContentItem):
         """
         Parameters
         ----------
-        name: Union[pydicom.sr.value_types.CodedConcept, pydicom.sr.value_types.Code]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code]
             concept name
         temporal_range_type: Union[pydicom.sr.value_types.TemporalRangeTypes, str]
             name of the temporal range type
