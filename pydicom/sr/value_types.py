@@ -918,14 +918,7 @@ class Scoord3DContentItem(ContentItem):
             are_all_points = all([
                 is_point(coordinates) for coordinates in graphic_data
             ])
-            if graphic_type == GraphicTypes3D.CIRCLE:
-                if len(graphic_data) != 2 or not(are_all_points):
-                    raise ValueError(
-                        'Graphic data of a 3D scoord of graphic type "CIRCLE" '
-                        'must be (x, y, z) triplets in three-dimensional '
-                        'patient or slide coordinate space.'
-                    )
-            elif graphic_type == GraphicTypes3D.ELLIPSE:
+            if graphic_type == GraphicTypes3D.ELLIPSE:
                 if len(graphic_data) != 4 or not(are_all_points):
                     raise ValueError(
                         'Graphic data of a 3D scoord of graphic type "ELLIPSE" '
