@@ -11,6 +11,13 @@ from pydicom.sr.value_types import (
     RelationshipTypes, ScoordContentItem, Scoord3DContentItem, TextContentItem,
     UIDRefContentItem,
 )
+from pydicom.sr.derived_value_types import (
+    FindingSiteContentItem, LongitudinalTemporalOffsetFromEventContentItem,
+    ReferencedRegionContentItem, ReferencedVolumeContentItem,
+    ReferencedRealWorldValueMapContentItem, SourceImageForRegionContentItem,
+    SourceImageForSegmentationContentItem,
+    SourceSeriesForSegmentationContentItem
+)
 from pydicom.sr import codes
 
 
@@ -25,6 +32,9 @@ class Template(ContentSequence):
 
     """Abstract base class for a DICOM SR template."""
 
+    def __init__(self, iterable=None):
+        super(Template, self).__init__(iterable)
+
 
 class Measurement(Template):
 
@@ -36,7 +46,7 @@ class Measurement(Template):
                  referenced_regions=None, referenced_volume=None,
                  referenced_segmentation=None,
                  referenced_real_world_value_map=None):
-        '''
+        """
         Parameters
         ----------
         name: pydicom.sr.coding.CodedConcept
@@ -60,7 +70,7 @@ class Measurement(Template):
             how the value was computed
             (see CID 7464 "General Region of Interest Measurement Modifiers"
             for options)
-        finding_sites: Union[List[pydicom.sr.template.FindingSite], None], optional
+        finding_sites: Union[List[pydicom.sr.template.FindingSiteContentItem], None], optional
             coded description of one or more anatomic locations corresonding
             to the image region from which measurement was taken
         method: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
@@ -73,14 +83,14 @@ class Measurement(Template):
         referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, pydicom.sr.templates.ReferencedSegmentation, None], optional
             referenced segmentation that specifies the segment for regions of
             interest in the source images
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
+        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegionContentItem], None], optional
             regions of interest in source images
-        referenced_volume: Union[pydicom.sr.templates.ReferencedVolume, None], optional
+        referenced_volume: Union[pydicom.sr.templates.ReferencedVolumeContentItem, None], optional
             referenced volume surface of interest in source images
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
             referenced real world value map for region of interest
 
-        '''  # noqa
+        """  # noqa
         super(Measurement, self).__init__()
         value_item = NumContentItem(
             name=name,
@@ -125,10 +135,10 @@ class Measurement(Template):
 
                 )
             for site in finding_sites:
-                if not isinstance(site, FindingSite):
+                if not isinstance(site, FindingSiteContentItem):
                     raise TypeError(
                         'Items of argument "finding_sites" must have '
-                        'type FindingSite.'
+                        'type FindingSiteContentItem.'
                     )
                 value_item.ContentSequence.append(site)
         if properties is not None:
@@ -140,17 +150,17 @@ class Measurement(Template):
             value_item.ContentSequence.extend(properties)
         if referenced_regions is not None:
             for region in referenced_regions:
-                if not isinstance(region, ReferencedRegion):
+                if not isinstance(region, ReferencedRegionContentItem):
                     raise TypeError(
                         'Items of argument "referenced_region" must have type '
-                        'ReferencedRegion.'
+                        'ReferencedRegionContentItem.'
                     )
                 value_item.ContentSequence.append(region)
         elif referenced_volume is not None:
-            if not isinstance(referenced_volume, ReferencedVolume):
+            if not isinstance(referenced_volume, ReferencedVolumeContentItem):
                 raise TypeError(
                     'Argument "referenced_volume" must have type '
-                    'ReferencedVolume.'
+                    'ReferencedVolumeContentItem.'
                 )
             value_item.ContentSequence.append(referenced_volume)
         elif referenced_segmentation is not None:
@@ -166,10 +176,10 @@ class Measurement(Template):
             value_item.ContentSequence.append(referenced_segmentation)
         if referenced_real_world_value_map is not None:
             if not isinstance(referenced_real_world_value_map,
-                              ReferencedRealWorldValueMap):
+                              ReferencedRealWorldValueMapContentItem):
                 raise TypeError(
                     'Argument "referenced_real_world_value_map" must have type '
-                    'ReferencedRealWorldValueMap.'
+                    'ReferencedRealWorldValueMapContentItem.'
                 )
             value_item.ContentSequence.append(referenced_real_world_value_map)
         if algorithm_id is not None:
@@ -191,7 +201,7 @@ class MeasurementProperties(Template):
                  normal_range_properties=None,
                  upper_measurement_uncertainty=None,
                  lower_measurement_uncertainty=None):
-        '''
+        """
         Parameters
         ----------
         normality: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
@@ -215,7 +225,7 @@ class MeasurementProperties(Template):
         lower_measurement_uncertainty: Union[int, float, None], optional
             lower range of measurment uncertainty
 
-        '''  # noqa
+        """  # noqa
         super(MeasurementProperties, self).__init__()
         if normality is not None:
             normality_item = CodeContentItem(
@@ -295,7 +305,7 @@ class MeasurementStatisticalProperties(Template):
     """TID 311 Measurement Statistical Properties"""
 
     def __init__(self, values, description=None, authority=None):
-        '''
+        """
         Parameters
         ----------
         values: List[pydicom.sr.value_types.NumContentItem]
@@ -309,7 +319,7 @@ class MeasurementStatisticalProperties(Template):
             authority for a description of the reference population of
             measurements
 
-        '''
+        """
         super(MeasurementStatisticalProperties, self).__init__()
         if not isinstance(values, (list, tuple)):
             raise TypeError('Argument "values" must be a list.')
@@ -349,7 +359,7 @@ class NormalRangeProperties(Template):
     """TID 312 Normal Range Properties"""
 
     def __init__(self, values, description=None, authority=None):
-        '''
+        """
         Parameters
         ----------
         values: List[pydicom.sr.value_types.NumContentItem]
@@ -361,7 +371,7 @@ class NormalRangeProperties(Template):
         authority: Union[str, None], optional
             authority for the description of the normal range
 
-        '''
+        """
         super(NormalRangeProperties, self).__init__()
         if not isinstance(values, (list, tuple)):
             raise TypeError('Argument "values" must be a list.')
@@ -423,7 +433,7 @@ class ObservationContext(Template):
 
     def __init__(self, observer_person_context, observer_device_context=None,
                  subject_context=None):
-        '''
+        """
         Parameters
         ----------
         observer_person_context: pydicom.sr.templates.ObserverContext
@@ -437,7 +447,7 @@ class ObservationContext(Template):
             a whole-slide microscopy image, a fetus in an ultrasound image, or
             a pacemaker device in a chest X-ray image)
 
-        '''
+        """
         super(ObservationContext, self).__init__()
         if not isinstance(observer_person_context, ObserverContext):
             raise TypeError(
@@ -471,7 +481,7 @@ class ObserverContext(Template):
     """TID 1002 Observer Context"""
 
     def __init__(self, observer_type, observer_identifying_attributes):
-        '''
+        """
         Parameters
         ----------
         observer_type: pydicom.sr.coding.CodedConcept
@@ -480,7 +490,7 @@ class ObserverContext(Template):
         observer_identifying_attributes: Union[pydicom.sr.templates.PersonObserverIdentifyingAttributes, pydicom.sr.templates.DeviceObserverIdentifyingAttributes]
             observer identifying attributes
 
-        '''
+        """
         super(ObserverContext, self).__init__()
         observer_type_item = CodeContentItem(
             name=CodedConcept(
@@ -525,7 +535,7 @@ class PersonObserverIdentifyingAttributes(Template):
 
     def __init__(self, name, login_name=None, organization_name=None,
                  role_in_organization=None, role_in_procedure=None):
-        '''
+        """
         Parameters
         ----------
         name: str
@@ -539,7 +549,7 @@ class PersonObserverIdentifyingAttributes(Template):
         role_in_procedure: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             role of the person in the reported procedure
 
-        '''  # noqa
+        """  # noqa
         super(PersonObserverIdentifyingAttributes, self).__init__()
         name_item = TextContentItem(
             name=CodedConcept(
@@ -608,7 +618,7 @@ class DeviceObserverIdentifyingAttributes(Template):
                  serial_number=None,
                  physical_location=None,
                  role_in_procedure=None):
-        '''
+        """
         Parameters
         ----------
         uid: str
@@ -626,7 +636,7 @@ class DeviceObserverIdentifyingAttributes(Template):
         role_in_procedure: Union[str, None], optional
             role of the device in the reported procedure
 
-        '''
+        """
         super(DeviceObserverIdentifyingAttributes, self).__init__()
         device_observer_item = UIDRefContentItem(
             name=CodedConcept(
@@ -700,7 +710,7 @@ class SubjectContext(Template):
     """TID 1006 Subject Context"""
 
     def __init__(self, subject_class, subject_class_specific_context=None):
-        '''
+        """
         Parameters
         ----------
         subject_class: pydicom.sr.coding.CodedConcept
@@ -709,7 +719,7 @@ class SubjectContext(Template):
         subject_class_specific_context: Union[pydicom.sr.templates.SubjectContextFetus, pydicom.sr.templates.SubjectContextSpecimen, pydicom.sr.templates.SubjectContextDevice, None], optional
             additional context information specific to `subject_class`
 
-        '''  # noqa
+        """  # noqa
         super(SubjectContext, self).__init__()
         subject_class_item = CodeContentItem(
             name=CodedConcept(
@@ -729,13 +739,13 @@ class SubjectContextFetus(Template):
     """TID 1008 Subject Context Fetus"""
 
     def __init__(self, subject_id):
-        '''
+        """
         Parameters
         ----------
         subject_id: str
             identifier of the fetus for longitudinal tracking
 
-        '''
+        """
         subject_id_item = TextContentItem(
             name=CodedConcept(
                 value='121030',
@@ -754,7 +764,7 @@ class SubjectContextSpecimen(Template):
 
     def __init__(self, uid, identifier=None,
                  container_identifier=None, specimen_type=None):
-        '''
+        """
         Parameters
         ----------
         uid: str
@@ -769,7 +779,7 @@ class SubjectContextSpecimen(Template):
             type of the specimen
             (see CID 8103 "Anatomic Pathology Specimen Types" for options)
 
-        '''
+        """
         super(SubjectContextSpecimen, self).__init__()
         specimen_uid_item = UIDRefContentItem(
             name=CodedConcept(
@@ -822,7 +832,7 @@ class SubjectContextDevice(Template):
 
     def __init__(self, name, uid=None, manufacturer_name=None,
                  model_name=None, serial_number=None, physical_location=None):
-        '''
+        """
         Parameters
         ----------
         name: str
@@ -838,7 +848,7 @@ class SubjectContextDevice(Template):
         physical_location: str, optional
             physical location of the observed device during the procedure
 
-        '''
+        """
         device_name_item = TextContentItem(
             name=CodedConcept(
                 value='121193',
@@ -911,13 +921,13 @@ class LanguageOfContentItemAndDescendants(Template):
     """TID 1204 Language of Content Item and Descendants"""
 
     def __init__(self, language):
-        '''
+        """
         Parameters
         ----------
         language: pydicom.sr.coding.CodedConcept
             language used for content items included in report
 
-        '''
+        """
         super(LanguageOfContentItemAndDescendants, self).__init__()
         language_item = CodeContentItem(
             name=CodedConcept(
@@ -931,27 +941,21 @@ class LanguageOfContentItemAndDescendants(Template):
         self.append(language_item)
 
 
-class _ROIMeasurementsAndQualitativeEvaluations(Template):
+class _MeasurementsAndQualitatitiveEvaluations(Template):
 
     """Abstract base class for ROI Measurements and Qualitative Evaluation
     templates."""
 
     def __init__(self, tracking_identifier,
-                 referenced_regions=None, referenced_volume=None,
-                 referenced_segmentation=None,
                  referenced_real_world_value_map=None,
                  time_point_context=None, finding_type=None, session=None,
                  measurements=None, qualitative_evaluations=None):
-        '''
+        """
         Parameters
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
-            regions of interest in source image(s)
-        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, pydicom.sr.templates.ReferencedSegmentationFrame, None], optional
-            segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -965,21 +969,14 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
             coded name-value (question-answer) pairs that describe the
             measurements in qualitative terms
 
-        Note
-        ----
-        Either a segmentation, a list of regions, or a volume needs to
-        referenced together with the corresponding source image(s) or series.
-        Derived classes determine which of the above will be allowed.
-
-        '''  # noqa
-        super(_ROIMeasurementsAndQualitativeEvaluations, self).__init__()
+        """  # noqa
+        super(_MeasurementsAndQualitatitiveEvaluations, self).__init__()
         group_item = ContainerContentItem(
             name=CodedConcept(
                 value='125007',
                 meaning='Measurement Group',
                 scheme_designator='DCM'
-            ),
-            relationship_type=RelationshipTypes.CONTAINS
+            )
         )
         group_item.ContentSequence = ContentSequence()
         if not isinstance(tracking_identifier, TrackingIdentifier):
@@ -1023,6 +1020,79 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
                     'TimePointContext.'
                 )
             group_item.ContentSequence.append(time_point_context)
+        if referenced_real_world_value_map is not None:
+            if not isinstance(referenced_real_world_value_map,
+                              ReferencedRealWorldValueMapContentItem):
+                raise TypeError(
+                    'Argument "referenced_real_world_value_map" must have type '
+                    'ReferencedRealWorldValueMapContentItem.'
+                )
+            group_item.ContentSequence.append(referenced_real_world_value_map)
+        if measurements is not None:
+            group_item.ContentSequence.extend(measurements)
+        if qualitative_evaluations is not None:
+            for evaluation in qualitative_evaluations:
+                if not isinstance(evaluation, CodeContentItem):
+                    raise TypeError(
+                        'Items of argument "qualitative_evaluations" must have '
+                        'type CodeContentItem.'
+                    )
+                group_item.ContentSequence.append(evaluation)
+        self.append(group_item)
+
+
+class _ROIMeasurementsAndQualitativeEvaluations(
+        _MeasurementsAndQualitatitiveEvaluations):
+
+    """Abstract base class for ROI Measurements and Qualitative Evaluation
+    templates."""
+
+    def __init__(self, tracking_identifier,
+                 referenced_regions=None, referenced_volume=None,
+                 referenced_segmentation=None,
+                 referenced_real_world_value_map=None,
+                 time_point_context=None, finding_type=None, session=None,
+                 measurements=None, qualitative_evaluations=None):
+        """
+        Parameters
+        ----------
+        tracking_identifier: pydicom.sr.templates.TrackingIdentifier
+            identifier for tracking measurements
+        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegionContentItem], None], optional
+            regions of interest in source image(s)
+        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, pydicom.sr.templates.ReferencedSegmentationFrame, None], optional
+            segmentation for region of interest in source image
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
+            referenced real world value map for region of interest
+        time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
+            description of the time point context
+        finding_type: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
+            type of object that was measured, e.g., organ or tumor
+        session: Union[str, None], optional
+            description of the session
+        measurements: Union[pydicom.sr.templates.ROIMeasurements, None], optional
+            measurements
+        qualitative_evaluations: Union[List[pydicom.sr.coding.CodeContentItem], None], optional
+            coded name-value (question-answer) pairs that describe the
+            measurements in qualitative terms
+
+        Note
+        ----
+        Either a segmentation, a list of regions, or a volume needs to
+        referenced together with the corresponding source image(s) or series.
+        Derived classes determine which of the above will be allowed.
+
+        """  # noqa
+        super(_ROIMeasurementsAndQualitativeEvaluations, self).__init__(
+            tracking_identifier=tracking_identifier,
+            referenced_real_world_value_map=referenced_real_world_value_map,
+            time_point_context=time_point_context,
+            finding_type=finding_type,
+            session=session,
+            measurements=measurements,
+            qualitative_evaluations=qualitative_evaluations
+        )
+        group_item = self[0]
         were_references_provided = [
             referenced_regions is not None,
             referenced_volume is not None,
@@ -1046,17 +1116,17 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
                     'Argument "referenced_region" must have non-zero length.'
                 )
             for region in referenced_regions:
-                if not isinstance(region, ReferencedRegion):
+                if not isinstance(region, ReferencedRegionContentItem):
                     raise TypeError(
                         'Items of argument "referenced_regions" must have type '
-                        'ReferencedRegion.'
+                        'ReferencedRegionContentItem.'
                     )
                 group_item.ContentSequence.append(region)
         elif referenced_volume is not None:
-            if not isinstance(referenced_volume, ReferencedVolume):
+            if not isinstance(referenced_volume, ReferencedVolumeContentItem):
                 raise TypeError(
                     'Items of argument "referenced_volume" must have type '
-                    'ReferencedVolume.'
+                    'ReferencedVolumeContentItem.'
                 )
             group_item.ContentSequence.append(referenced_volume)
         elif referenced_segmentation is not None:
@@ -1070,30 +1140,10 @@ class _ROIMeasurementsAndQualitativeEvaluations(Template):
                     'ReferencedSegmentationFrame.'
                 )
             group_item.ContentSequence.append(referenced_segmentation)
-        if referenced_real_world_value_map is not None:
-            if not isinstance(referenced_real_world_value_map,
-                              ReferencedRealWorldValueMap):
-                raise TypeError(
-                    'Argument "referenced_real_world_value_map" must have type '
-                    'ReferencedRealWorldValueMap.'
-                )
-            group_item.ContentSequence.append(referenced_real_world_value_map)
-        if measurements is not None:
-            group_item.ContentSequence.extend(measurements)
-        if qualitative_evaluations is not None:
-            for evaluation in qualitative_evaluations:
-                if not isinstance(evaluation, CodeContentItem):
-                    raise TypeError(
-                        'Items of argument "qualitative_evaluations" must have '
-                        'type CodeContentItem.'
-                    )
-                group_item.ContentSequence.append(evaluation)
-        self.append(group_item)
 
 
 class PlanarROIMeasurementsAndQualitativeEvaluations(
-        _ROIMeasurementsAndQualitativeEvaluations
-    ):
+        _ROIMeasurementsAndQualitativeEvaluations):
 
     """TID 1410 Planar ROI Measurements and Qualitative Evaluations"""
 
@@ -1103,16 +1153,16 @@ class PlanarROIMeasurementsAndQualitativeEvaluations(
                  referenced_real_world_value_map=None,
                  time_point_context=None, finding_type=None, session=None,
                  measurements=None, qualitative_evaluations=None):
-        '''
+        """
         Parameters
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_region: Union[pydicom.sr.templates.ReferencedRegion, None], optional
+        referenced_region: Union[pydicom.sr.templates.ReferencedRegionContentItem, None], optional
             region of interest in source image
         referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentationFrame, None], optional
             segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1132,7 +1182,7 @@ class PlanarROIMeasurementsAndQualitativeEvaluations(
         together with the corresponding source image from which the
         segmentation or region was obtained.
 
-        '''  # noqa
+        """  # noqa
         were_references_provided = [
             referenced_region is not None,
             referenced_segmentation is not None,
@@ -1161,8 +1211,7 @@ class PlanarROIMeasurementsAndQualitativeEvaluations(
 
 
 class VolumetricROIMeasurementsAndQualitativeEvaluations(
-        _ROIMeasurementsAndQualitativeEvaluations
-    ):
+        _ROIMeasurementsAndQualitativeEvaluations):
 
     """TID 1411 Volumetric ROI Measurements and Qualitative Evaluations"""
 
@@ -1173,18 +1222,18 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
                  referenced_real_world_value_map=None,
                  time_point_context=None, finding_type=None, session=None,
                  measurements=None, qualitative_evaluations=None):
-        '''
+        """
         Parameters
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
+        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegionContentItem], None], optional
             regions of interest in source image(s)
-        referenced_volume: Union[pydicom.sr.templates.ReferencedVolume, None], optional
+        referenced_volume: Union[pydicom.sr.templates.ReferencedVolumeContentItem, None], optional
             volume of interest in source image(s)
         referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, None], optional
             segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1203,7 +1252,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
         Either a segmentation, a list of regions or volume needs to referenced
         together with the corresponding source image(s) or series.
 
-        '''  # noqa
+        """  # noqa
         super(VolumetricROIMeasurementsAndQualitativeEvaluations, self).__init__(
             measurements=measurements,
             tracking_identifier=tracking_identifier,
@@ -1222,262 +1271,82 @@ class MeasurementsDerivedFromMultipleROIMeasurements(Template):
 
     """TID 1420 Measurements Derived From Multiple ROI Measurements"""
 
-    def __init__(self, derivation, ):
-        '''
+    def __init__(self, derivation, measurement_groups,
+                 measurement_properties=None):
+        """
         Parameters
         ----------
-        derivation: pydicom.sr.coding.CodedConcept
-            method for derivation of measurements from multiple ROIs
+        derivation: List[pydicom.sr.coding.CodedConcept]
+            methods for derivation of measurements from multiple ROIs
             measurements
             (see CID 7465 "Measurements Derived From Multiple ROI Measurements"
             for otions)
+        measurement_groups: Union[List[pydicom.sr.templates.PlanarROIMeasurementsAndQualitativeEvaluations], List[pydicom.sr.templates.VolumetricROIMeasurementsAndQualitativeEvaluations]]
+            one or more groups of either planar or volumetric ROI measurements
+            and qualitative evaluations
+        measurement_properties: 
 
-        '''
-        # TODO: how to do R-INFERRED FROM relationship?
-
-
-
-class LongitudinalTemporalOffsetFromEvent(NumContentItem):
-
-    """Content item for Longitudinal Temporal Offset From Event."""
-
-    def __init__(self, value, unit, event_type):
-        '''
-        Parameters
-        ----------
-        value: Union[int, float, None], optional
-            offset in time from a particular event of significance
-        unit: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            unit of time, e.g., "Days" or "Seconds"
-        event_type: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            type of event to which offset is relative,
-            e.g., "Baseline" or "Enrollment"
-
-        '''
-        super(LongitudinalTemporalOffsetFromEvent, self).__init__(
-            name=CodedConcept(
-                value='128740',
-                meaning='Longitudinal Temporal Offset from Event',
-                scheme_designator='DCM'
-            ),
-            value=value,
-            unit=unit,
-            relationship_type=RelationshipTypes.HAS_OBS_CONTEXT
+        """
+        value_item = NumContentItem(
+            name=derivation
         )
-        event_type_item = CodeContentItem(
-            name=CodedConcept(
-                value='128741',
-                meaning='Longitudinal Temporal Event Type',
-                scheme_designator='DCM'
-            ),
-            value=event_type,
-            relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
-        )
-        self.ContentSequence.append(event_type_item)
-
-
-class SourceImageForRegion(ImageContentItem):
-
-    """Content item for Source Image for Region"""
-
-    def __init__(self, sop_class_uid, sop_instance_uid, frame_numbers=None):
-        '''
-        Parameters
-        ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
-            SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
-            SOP Instance UID of the referenced image object
-        frame_numbers: Union[List[int], None], optional
-            numbers of the frames to which the reference applies in case the
-            referenced image is a multi-frame image
-
-        '''
-        super(SourceImageForRegion, self).__init__(
-            name=CodedConcept(
-                value='121324',
-                meaning='Source Image',
-                scheme_designator='DCM'
-            ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_numbers,
-            relationship_type=RelationshipTypes.SELECTED_FROM
-        )
-
-
-class SourceImageForSegmentation(ImageContentItem):
-
-    """Content item for Source Image for Segmentation"""
-
-    def __init__(self, sop_class_uid, sop_instance_uid, frame_number=None):
-        '''
-        Parameters
-        ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
-            SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
-            SOP Instance UID of the referenced image object
-        frame_number: Union[int, List[int], None], optional
-            number of the frame(s) to which the reference applies in case the
-            referenced image is a multi-frame image
-
-        '''
-        super(SourceImageForSegmentation, self).__init__(
-            name=CodedConcept(
-                value='121233',
-                meaning='Source Image for Segmentation',
-                scheme_designator='DCM'
-            ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_number,
-            relationship_type=RelationshipTypes.CONTAINS
-        )
-
-
-class SourceSeriesForSegmentation(UIDRefContentItem):
-
-    """Content item for Source Series for Segmentation"""
-
-    def __init__(self, series_instance_uid):
-        '''
-        Parameters
-        ----------
-        series_instance_uid: Union[pydicom.uid.UID, str]
-            Series Instance UID
-
-        '''
-        super(SourceImageForSegmentation, self).__init__(
-            name=CodedConcept(
-                value='121232',
-                meaning='Source Series for Segmentation',
-                scheme_designator='DCM'
-            ),
-            value=series_instance_uid,
-            relationship_type=RelationshipTypes.CONTAINS
-        )
-
-
-class ReferencedRegion(ScoordContentItem):
-
-    """Content item for a refrenced region of interest"""
-
-    def __init__(self, graphic_type, graphic_data, source_image,
-                 pixel_origin_interpretation=PixelOriginInterpretations.VOLUME):
-        '''
-        Parameters
-        ----------
-        graphic_type: Union[pydicom.sr.value_types.GraphicTypes, str]
-            name of the graphic type
-        graphic_data: List[List[int]]
-            ordered set of (row, column) coordinate pairs
-        source_image: pydicom.sr.template.SourceImageForRegion
-            source image to which `graphic_data` relate
-        pixel_origin_interpretation: Union[pydicom.sr.value_types.PixelOriginInterpretations, str, None], optional
-            whether pixel coordinates specified by `graphic_data` are defined
-            relative to the total pixel matrix
-            (``pydicom.sr.value_types.PixelOriginInterpretations.VOLUME``) or
-            relative to an individual frame
-            (``pydicom.sr.value_types.PixelOriginInterpretations.FRAME``)
-            of the source image
-            (default: ``pydicom.sr.value_types.PixelOriginInterpretations.VOLUME``)
-
-        '''  # noqa
-        graphic_type = GraphicTypes(graphic_type)
-        if graphic_type == GraphicTypes.MULTIPOINT:
-            raise ValueError(
-                'Graphic type "MULTIPOINT" is not valid for region.'
-            )
-        if not isinstance(source_image, SourceImageForRegion):
-            raise TypeError(
-                'Arguement "source_image" must have type '
-                'SourceImageForRegion.'
-            )
-        if pixel_origin_interpretation == PixelOriginInterpretations.FRAME:
-            if (not hasattr(source_image, 'ReferencedFrameNumber') or
-                source_image.ReferencedFrameNumber is None):
-                raise ValueError(
-                    'Frame number of source image must be specified when value '
-                    'of argument "pixel_origin_interpretation" is "FRAME".'
-                )
-        super(ReferencedRegion, self).__init__(
-            name=CodedConcept(
-                value='111030',
-                meaning='Image Region',
-                scheme_designator='DCM'
-            ),
-            graphic_type=graphic_type,
-            graphic_data=graphic_data,
-            pixel_origin_interpretation=pixel_origin_interpretation,
-            relationship_type=RelationshipTypes.CONTAINS
-        )
-        self.ContentSequence = [source_image]
-
-
-class ReferencedVolume(Scoord3DContentItem):
-
-    """Referenced volume surface"""
-
-    def __init__(self, graphic_type, graphic_data, frame_of_reference_uid,
-                 source_images=None, source_series=None):
-        '''
-        Parameters
-        ----------
-        graphic_type: Union[pydicom.sr.value_types.GraphicTypes, str]
-            name of the graphic type
-        graphic_data: List[List[int]]
-            ordered set of (row, column, frame) coordinate pairs
-        frame_of_reference_uid: Union[pydicom.uid.UID, str]
-            unique identifier of the frame of reference within which the
-            coordinates are defined
-        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentation], None], optional
-            source images for segmentation
-        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentation, None], optional
-            source series for segmentation
-
-        Note
-        ----
-        Either one or more source images or one source series must be provided.
-
-        '''
-        graphic_type = GraphicTypes3D(graphic_type)
-        if graphic_type != GraphicTypes3D.ELLIPSOID:
-            raise ValueError(
-                'Graphic type for volume surface must be "ELLIPSOID".'
-            )
-        super(ReferencedVolume, self).__init__(
-            name=CodedConcept(
-                value='121231',
-                meaning='Volume Surface',
-                scheme_designator='DCM'
-            ),
-            frame_of_reference_uid=frame_of_reference_uid,
-            graphic_type=graphic_type,
-            graphic_data=graphic_data,
-            relationship_type=RelationshipTypes.CONTAINS
-        )
-        self.ContentSequence = ContentSequence()
-        if source_images is not None:
-            for image in source_images:
-                if not isinstance(image, SourceImageForSegmentation):
-                    raise TypeError(
-                        'Items of argument "source_image" must have type '
-                        'SourceImageForSegmentation.'
-                    )
-                self.ContentSequence.append(image)
-        elif source_series is not None:
-            if not isinstance(source_series, SourceSeriesForSegmentation):
+        for group in measurement_groups:
+            if not (isinstance(group, PlanarROIMeasurementsAndQualitativeEvaluations) or
+                    isinstance(group, VolumetricROIMeasurementsAndQualitativeEvaluations)):
                 raise TypeError(
-                    'Argument "source_series" must have type '
-                    'SourceSeriesForSegmentation.'
+                    'Items of argument "measurement_groups" must have '
+                    'type PlanarROIMeasurementsAndQualitativeEvaluations or '
+                    'VolumetricROIMeasurementsAndQualitativeEvaluations.'
+
                 )
-            self.ContentSequence.append(source_series)
-        else:
-            raise ValueError(
-                'One of the following two arguments must be provided: '
-                '"source_images" or "source_series".'
-            )
+            group[0].RelationshipType = 'R-INFERRED FROM'
+            value_item.ContentSequence.extend(group)
+        if measurement_properties is not None:
+            if not isinstance(measurement_properties, MeasurementProperties):
+                raise TypeError(
+                    'Argument "measurement_properties" must have '
+                    'type MeasurementProperties.'
+                )
+            value_item.ContentSequence.extend(measurement_properties)
+        # TODO: how to do R-INFERRED FROM relationship?
+        self.append(value_item)
+
+
+class MeasurementAndQualitativeEvaluationGroup(
+        _MeasurementsAndQualitatitiveEvaluations):
+
+    """TID 1501 Measurement and Qualitative Evaluation Group"""
+
+    def __init__(self):
+        """
+        Parameters
+        ----------
+        tracking_identifier: pydicom.sr.templates.TrackingIdentifier
+            identifier for tracking measurements
+        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
+            referenced real world value map for region of interest
+        time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
+            description of the time point context
+        finding_type: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
+            type of object that was measured, e.g., organ or tumor
+        session: Union[str, None], optional
+            description of the session
+        measurements: Union[pydicom.sr.templates.ROIMeasurements, None], optional
+            measurements
+        qualitative_evaluations: Union[List[pydicom.sr.coding.CodeContentItem], None], optional
+            coded name-value (question-answer) pairs that describe the
+            measurements in qualitative terms
+
+        """  # noqa
+        super(MeasurementAndQualitativeEvaluationGroup, self).__init__(
+            measurements=measurements,
+            tracking_identifier=tracking_identifier,
+            referenced_real_world_value_map=referenced_real_world_value_map,
+            time_point_context=time_point_context,
+            finding_type=finding_type,
+            session=session,
+            qualitative_evaluations=qualitative_evaluations
+        )
 
 
 class ReferencedSegmentationFrame(Sequence):
@@ -1486,21 +1355,21 @@ class ReferencedSegmentationFrame(Sequence):
 
     def __init__(self, sop_class_uid, sop_instance_uid, source_image,
                  segment_number, frame_numbers=None):
-        '''
+        """
         Parameters
         ----------
         sop_class_uid: Union[pydicom.uid.UID, str]
             SOP Class UID of the referenced image object
         sop_instance_uid: Union[pydicom.uid.UID, str]
             SOP Instance UID of the referenced image object
-        source_image: pydicom.sr.templates.SourceImageForSegmentation
+        source_image: pydicom.sr.templates.SourceImageForSegmentationContentItem
             source image for segmentation
         segment_number: int
             number of the segment to which the refernce applies
         frame_number: int
             number of the frame to which the reference applies
 
-        '''
+        """
         super(ReferencedSegmentationFrame, self).__init__()
         segmentation_item = ImageContentItem(
             name=CodedConcept(
@@ -1514,10 +1383,10 @@ class ReferencedSegmentationFrame(Sequence):
             referenced_segment_number=segment_number
         )
         self.append(segmentation_item)
-        if not isinstance(source_image, SourceImageForSegmentation):
+        if not isinstance(source_image, SourceImageForSegmentationContentItem):
             raise TypeError(
                 'Arguement "source_image" must have type '
-                'SourceImageForSegmentation.'
+                'SourceImageForSegmentationContentItem.'
             )
         self.append(source_image)
 
@@ -1528,7 +1397,7 @@ class ReferencedSegmentation(Sequence):
 
     def __init__(self, sop_class_uid, sop_instance_uid, segment_number,
                  frame_numbers, source_images=None, source_series=None):
-        '''
+        """
         Parameters
         ----------
         sop_class_uid: Union[pydicom.uid.UID, str]
@@ -1539,12 +1408,12 @@ e           SOP Instance UID of the referenced image object
             numbers of the frames to which the reference applies
         segment_number: int
             number of the segment to which the refernce applies
-        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentation], None], optional
+        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentationContentItem], None], optional
             source images for segmentation
-        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentation, None], optional
+        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentationContentItem, None], optional
             source series for segmentation
 
-        '''
+        """
         super(ReferencedSegmentation, self).__init__()
         segmentation_item = ImageContentItem(
             name=CodedConcept(
@@ -1560,17 +1429,18 @@ e           SOP Instance UID of the referenced image object
         self.append(segmentation_item)
         if source_images is not None:
             for image in source_images:
-                if not isinstance(image, SourceImageForSegmentation):
+                if not isinstance(image, SourceImageForSegmentationContentItem):
                     raise TypeError(
                         'Items of argument "source_image" must have type '
-                        'SourceImageForSegmentation.'
+                        'SourceImageForSegmentationContentItem.'
                     )
                 self.append(image)
         elif source_series is not None:
-            if not isinstance(source_series, SourceSeriesForSegmentation):
+            if not isinstance(source_series,
+                              SourceSeriesForSegmentationContentItem):
                 raise TypeError(
                     'Argument "source_series" must have type '
-                    'SourceSeriesForSegmentation.'
+                    'SourceSeriesForSegmentationContentItem.'
                 )
             self.append(source_series)
         else:
@@ -1580,87 +1450,12 @@ e           SOP Instance UID of the referenced image object
             )
 
 
-
-class ReferencedRealWorldValueMap(CompositeContentItem):
-
-    """Referenced real world value map"""
-
-    def __init__(self, sop_instance_uid):
-        '''
-        Parameters
-        ----------
-        sop_instance_uid: Union[pydicom.uid.UID, str]
-            SOP Instance UID of the referenced object
-
-        '''
-        super(ReferencedRealWorldValueMap, self).__init__(
-            name=CodedConcept(
-                value='126100',
-                meaning='Real World Value Map used for measurement',
-                scheme_designator='DCM'
-            ),
-            referenced_sop_class_uid='1.2.840.10008.5.1.4.1.1.67',
-            referenced_sop_instance_uid=sop_instance_uid,
-            relationship_type=RelationshipTypes.CONTAINS
-        )
-
-
-class FindingSite(CodeContentItem):
-
-    def __init__(self, anatomic_location, laterality=None,
-                 topographical_modifier=None):
-        '''
-        Parameters
-        ----------
-        anatomic_location: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            coded anatomic location (region or structure)
-        laterality: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            coded laterality
-            (see CID 244 "Laterality" for options)
-        topographical_modifier: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            coded modifier value for anatomic location
-
-        '''  # noqa
-        super(FindingSite, self).__init__(
-            name=CodedConcept(
-                value='G-C0E3',
-                meaning='Finding Site',
-                scheme_designator='SRT'
-            ),
-            value=anatomic_location,
-            relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
-        )
-        self.ContentSequence = ContentSequence()
-        if laterality is not None:
-            laterality_item = CodeContentItem(
-                name=CodedConcept(
-                    value='G-C171',
-                    meaning='Laterality',
-                    scheme_designator='SRT'
-                ),
-                value=laterality,
-                relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
-            )
-            self.ContentSequence.append(laterality_item)
-        if topographical_modifier is not None:
-            modifier_item = CodeContentItem(
-                name=CodedConcept(
-                    value='G-A1F8',
-                    meaning='Topographical Modifier',
-                    scheme_designator='SRT'
-                ),
-                value=topographical_modifier,
-                relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
-            )
-            self.ContentSequence.append(modifier_item)
-
-
 class ROIMeasurements(Template):
 
     """TID 1419 ROI Measurements"""
 
     def __init__(self, measurements, method=None, finding_sites=None):
-        '''
+        """
         Parameters
         ----------
         measurements: List[pydicom.sr.templates.Measurement]
@@ -1668,11 +1463,11 @@ class ROIMeasurements(Template):
         method: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             coded measurement method
             (see CID 6147 "Response Criteria" for options)
-        finding_sites: Union[List[pydicom.sr.templates.FindingSite], None], optional
+        finding_sites: Union[List[pydicom.sr.templates.FindingSiteContentItem], None], optional
             coded description of one or more anatomic locations corresonding
             to the image region from which measurement was taken
 
-        '''  # noqa
+        """  # noqa
         super(ROIMeasurements, self).__init__()
         if method is not None:
             method_item = CodeContentItem(
@@ -1687,10 +1482,10 @@ class ROIMeasurements(Template):
             self.append(method_item)
         if finding_sites is not None:
             for site in finding_sites:
-                if not isinstance(site, FindingSite):
+                if not isinstance(site, FindingSiteContentItem):
                     raise TypeError(
                         'Items of argument "finding_sites" must have '
-                        'type FindingSite.'
+                        'type FindingSiteContentItem.'
                     )
                 self.append(site)
         if len(measurements) == 0:
@@ -1704,7 +1499,7 @@ class ROIMeasurements(Template):
             self.extend(m)
 
 
-class MeasurementReport(ContainerContentItem):
+class MeasurementReport(Template):
 
     """TID 1500 Measurement Report"""
 
@@ -1717,7 +1512,7 @@ class MeasurementReport(ContainerContentItem):
                  title=codes.cid7021.ImagingMeasurementReport,
                  language_of_content_item_and_descendants=None
                 ):
-        '''
+        """
         Parameters
         ----------
         observation_context: pydicom.sr.templates.ObservationContext
@@ -1743,23 +1538,24 @@ class MeasurementReport(ContainerContentItem):
         Only one of `imaging_measurements`, `derived_imaging_measurement`, or
         `qualitative_evaluations` should be specified.
 
-        ''' # noqa
+        """ # noqa
+        super(MeasurementReport, self).__init__()
         if not isinstance(title, (CodedConcept, Code, )):
             raise TypeError(
                 'Argument "title" must have type CodedConcept or Code.'
             )
-        super(MeasurementReport, self).__init__(
+        item = ContainerContentItem(
             name=title,
             template_id='TID1500'
         )
-        self.ContentSequence = ContentSequence()
+        item.ContentSequence = ContentSequence()
         if language_of_content_item_and_descendants is None:
             language_of_content_item_and_descendants = \
                 LanguageOfContentItemAndDescendants(DEFAULT_LANGUAGE)
-        self.ContentSequence.extend(
+        item.ContentSequence.extend(
             language_of_content_item_and_descendants
         )
-        self.ContentSequence.extend(observation_context)
+        item.ContentSequence.extend(observation_context)
         if isinstance(procedure_reported, (CodedConcept, Code, )):
             procedure_reported = [procedure_reported]
         for procedure in procedure_reported:
@@ -1772,9 +1568,9 @@ class MeasurementReport(ContainerContentItem):
                 value=procedure,
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
             )
-            self.ContentSequence.append(procedure_item)
+            item.ContentSequence.append(procedure_item)
         image_library_item = ImageLibrary()
-        self.ContentSequence.extend(image_library_item)
+        item.ContentSequence.extend(image_library_item)
 
         num_arguments_provided = sum([
             imaging_measurements is not None,
@@ -1817,14 +1613,8 @@ class MeasurementReport(ContainerContentItem):
                 relationship_type=RelationshipTypes.CONTAINS
             )
             container_item.ContentSequence = qualitative_evaluations
-        self.ContentSequence.append(container_item)
-
-
-class MeasurementAndQualitativeEvaluationGroup(Template):
-
-    """TID 1501 Measurement and Qualitative Evaluation Group"""
-
-    # TODO
+        item.ContentSequence.append(container_item)
+        self.append(item)
 
 
 class TimePointContext(Template):
@@ -1834,7 +1624,7 @@ class TimePointContext(Template):
     def __init__(self, time_point, time_point_type=None, time_point_order=None,
                  subject_time_point_identifier=None,
                  protocol_time_point_identifier=None):
-        '''
+        """
         Parameters
         ----------
         time_point: str
@@ -1853,7 +1643,7 @@ class TimePointContext(Template):
            identifier of a specific time point in a time series, which is
            unique within an appropriate local context and specific to a
            particular protocol using the same value for different subjects
-        temporal_offset_from_event: Union[pydicom.sr.template.LongitudinalTemporalOffsetFromEvent, None], optional
+        temporal_offset_from_event: Union[pydicom.sr.template.LongitudinalTemporalOffsetFromEventContentItem, None], optional
             offset in time from a particular event of significance, e.g., the
             baseline of an imaging study or enrollment into a clincal trial
         temporal_event_type: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
@@ -1861,7 +1651,7 @@ class TimePointContext(Template):
             e.g., "Baseline" or "Enrollment"
             (required if `temporal_offset_from_event` is provided)
 
-        '''  # noqa
+        """  # noqa
         time_point_item = TextContentItem(
             name=CodedConcept(
                 value='C2348792',
@@ -1918,10 +1708,10 @@ class TimePointContext(Template):
             self.append(protocol_time_point_identifier_item)
         if temporal_offset_from_event is not None:
             if not isinstance(temporal_offset_from_event,
-                              LongitudinalTemporalOffsetFromEvent):
+                              LongitudinalTemporalOffsetFromEventContentItem):
                 raise TypeError(
                     'Argument "temporal_offset_from_event" must have type '
-                    'LongitudinalTemporalOffsetFromEvent.'
+                    'LongitudinalTemporalOffsetFromEventContentItem.'
                 )
             self.append(temporal_offset_from_event)
 
@@ -1931,12 +1721,12 @@ class ImageLibrary(Template):
     """TID 1600 Image Library"""
 
     def __init__(self):
-        '''
+        """
         Note
         ----
         Image Library Entry Descriptors are not included.
 
-        '''
+        """
         super(ImageLibrary, self).__init__()
         library_item = ContainerContentItem(
             name=CodedConcept(
@@ -1954,7 +1744,7 @@ class AlgorithmIdentification(Template):
     """TID 4019 Algorithm Identification"""
 
     def __init__(self, name, version, parameters=None):
-        '''
+        """
         Parameters
         ----------
         name: str
@@ -1964,7 +1754,7 @@ class AlgorithmIdentification(Template):
         parameters: Union[List[str], None], optional
             parameters of the algorithm
 
-        '''
+        """
         super(AlgorithmIdentification, self).__init__()
         name_item = TextContentItem(
             name=CodedConcept(
@@ -2005,7 +1795,7 @@ class TrackingIdentifier(Template):
     """TID 4108 Tracking Identifier"""
 
     def __init__(self, uid, identifier=None):
-        '''
+        """
         Parameters
         ----------
         uid: Union[pydicom.uid.UID, str]
@@ -2013,7 +1803,7 @@ class TrackingIdentifier(Template):
         identifier: Union[str, None], optional
             human readable identifier
 
-        '''
+        """
         super(TrackingIdentifier, self).__init__()
         if identifier is not None:
             tracking_identifier_item = TextContentItem(

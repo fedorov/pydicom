@@ -114,7 +114,7 @@ class Comprehensive3DSR(Dataset):
         verifying_organization: str
             name of the organization that verfied the SR document
             (required if `is_verified`)
-        performed_procedure_codes: List[pydicom.sr.value_types.CodedConcept]
+        performed_procedure_codes: List[pydicom.sr.coding.CodedConcept]
             codes of the performed procedures that resulted in the SR document
         requested_procedures: List[pydicom.dataset.Dataset]
             requested procedures that are being fullfilled by creation of the
