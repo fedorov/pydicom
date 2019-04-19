@@ -45,22 +45,23 @@ class LongitudinalTemporalOffsetFromEventContentItem(NumContentItem):
             value=event_type,
             relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
         )
-        self.ContentSequence.append(event_type_item)
+        self.ContentSequence = ContentSequence([event_type_item])
 
 
 class SourceImageForRegionContentItem(ImageContentItem):
 
     """Content item for Source Image for Region"""
 
-    def __init__(self, sop_class_uid, sop_instance_uid, frame_numbers=None):
+    def __init__(self, referenced_sop_class_uid, referenced_sop_instance_uid,
+                 referenced_frame_numbers=None):
         """
         Parameters
         ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
+        referenced_sop_class_uid: Union[pydicom.uid.UID, str]
             SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
+        referenced_sop_instance_uid: Union[pydicom.uid.UID, str]
             SOP Instance UID of the referenced image object
-        frame_numbers: Union[List[int], None], optional
+        referenced_frame_numbers: Union[List[int], None], optional
             numbers of the frames to which the reference applies in case the
             referenced image is a multi-frame image
 
@@ -71,9 +72,9 @@ class SourceImageForRegionContentItem(ImageContentItem):
                 meaning='Source Image',
                 scheme_designator='DCM'
             ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_numbers,
+            referenced_sop_class_uid=referenced_sop_class_uid,
+            referenced_sop_instance_uid=referenced_sop_instance_uid,
+            referenced_frame_numbers=referenced_frame_numbers,
             relationship_type=RelationshipTypes.SELECTED_FROM
         )
 
@@ -82,16 +83,17 @@ class SourceImageForSegmentationContentItem(ImageContentItem):
 
     """Content item for Source Image for Segmentation"""
 
-    def __init__(self, sop_class_uid, sop_instance_uid, frame_number=None):
+    def __init__(self, referenced_sop_class_uid, referenced_sop_instance_uid,
+                 referenced_frame_numbers=None):
         """
         Parameters
         ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
+        referenced_sop_class_uid: Union[pydicom.uid.UID, str]
             SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
+        referenced_sop_instance_uid: Union[pydicom.uid.UID, str]
             SOP Instance UID of the referenced image object
-        frame_number: Union[int, List[int], None], optional
-            number of the frame(s) to which the reference applies in case the
+        referenced_frame_numbers: Union[List[int], None], optional
+            numbers of the frames to which the reference applies in case the
             referenced image is a multi-frame image
 
         """
@@ -101,9 +103,9 @@ class SourceImageForSegmentationContentItem(ImageContentItem):
                 meaning='Source Image for Segmentation',
                 scheme_designator='DCM'
             ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_number,
+            referenced_sop_class_uid=referenced_sop_class_uid,
+            referenced_sop_instance_uid=referenced_sop_instance_uid,
+            referenced_frame_numbers=referenced_frame_numbers,
             relationship_type=RelationshipTypes.CONTAINS
         )
 
@@ -257,11 +259,11 @@ class ReferencedRealWorldValueMapContentItem(CompositeContentItem):
 
     """Referenced real world value map"""
 
-    def __init__(self, sop_instance_uid):
+    def __init__(self, referenced_sop_instance_uid):
         """
         Parameters
         ----------
-        sop_instance_uid: Union[pydicom.uid.UID, str]
+        referenced_sop_instance_uid: Union[pydicom.uid.UID, str]
             SOP Instance UID of the referenced object
 
         """
@@ -272,7 +274,7 @@ class ReferencedRealWorldValueMapContentItem(CompositeContentItem):
                 scheme_designator='DCM'
             ),
             referenced_sop_class_uid='1.2.840.10008.5.1.4.1.1.67',
-            referenced_sop_instance_uid=sop_instance_uid,
+            referenced_sop_instance_uid=referenced_sop_instance_uid,
             relationship_type=RelationshipTypes.CONTAINS
         )
 

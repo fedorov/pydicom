@@ -8,28 +8,30 @@ from pydicom.sr.document import Comprehensive3DSR
 from pydicom.sr.templates import (
     DEFAULT_LANGUAGE,
     DeviceObserverIdentifyingAttributes,
-    FindingSite,
     Measurement,
     MeasurementReport,
     ObservationContext,
     ObserverContext,
     PersonObserverIdentifyingAttributes,
     PlanarROIMeasurementsAndQualitativeEvaluations,
-    ReferencedRegion,
-    ReferencedVolume,
     ROIMeasurements,
-    SourceImageForRegion,
-    SourceImageForSegmentation,
     SubjectContext,
     SubjectContextSpecimen,
     TrackingIdentifier,
     VolumetricROIMeasurementsAndQualitativeEvaluations,
 )
+from pydicom.sr.coding import CodedConcept
 from pydicom.sr.value_types import (
-    CodedConcept,
     GraphicTypes,
     GraphicTypes3D,
     NumContentItem,
+)
+from pydicom.sr.derived_value_types import (
+    FindingSiteContentItem,
+    ReferencedRegionContentItem,
+    ReferencedVolumeContentItem,
+    SourceImageForRegionContentItem,
+    SourceImageForSegmentationContentItem,
 )
 from pydicom.uid import generate_uid
 from pydicom.valuerep import DS
@@ -97,14 +99,14 @@ class TestObservationContext(unittest.TestCase):
         assert len(self._observation_context) == 6
 
 
-class TestFindingSiteOptional(unittest.TestCase):
+class TestFindingSiteContentItemOptional(unittest.TestCase):
 
     def setUp(self):
-        super(TestFindingSiteOptional, self).setUp()
+        super(TestFindingSiteContentItemOptional, self).setUp()
         self._location = codes.cid7151.LobeOfLung
         self._laterality = codes.cid244.Right
         self._modifier = codes.cid2.Apical
-        self._finding_site = FindingSite(
+        self._finding_site = FindingSiteContentItem(
             anatomic_location=self._location,
             laterality=self._laterality,
             topographical_modifier=self._modifier
@@ -127,12 +129,12 @@ class TestFindingSiteOptional(unittest.TestCase):
         assert item.ConceptCodeSequence[0] == self._modifier
 
 
-class TestFindingSite(unittest.TestCase):
+class TestFindingSiteContentItem(unittest.TestCase):
 
     def setUp(self):
-        super(TestFindingSite, self).setUp()
+        super(TestFindingSiteContentItem, self).setUp()
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSite(
+        self._finding_site = FindingSiteContentItem(
             anatomic_location=self._location
         )
 
@@ -238,14 +240,14 @@ class TestMeasurementOptional(unittest.TestCase):
         self._derivation = codes.cid7464.Total
         self._method = codes.cid7473.AreaOfClosedIrregularPolygon
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSite(
+        self._finding_site = FindingSiteContentItem(
             anatomic_location=self._location
         )
-        self._image = SourceImageForRegion(
-            sop_class_uid=generate_uid(),
-            sop_instance_uid=generate_uid()
+        self._image = SourceImageForRegionContentItem(
+            referenced_sop_class_uid=generate_uid(),
+            referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ReferencedRegionContentItem(
             graphic_type=GraphicTypes.POINT,
             graphic_data=[1.0, 1.0],
             source_image=self._image
@@ -305,7 +307,7 @@ class TestROIMeasurements(unittest.TestCase):
         ]
         self._method = codes.cid7473.AreaOfClosedIrregularPolygon
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSite(
+        self._finding_site = FindingSiteContentItem(
             anatomic_location=self._location
         )
         self._roi_measurements = ROIMeasurements(
@@ -369,13 +371,13 @@ class TestROIMeasurements(unittest.TestCase):
         assert subitem.MeasurementUnitsCodeSequence[0] == self._unit
 
 
-class TestReferencedRegion(unittest.TestCase):
+class TestReferencedRegionContentItem(unittest.TestCase):
 
     def setUp(self):
         pass
 
 
-class TestReferencedVolume(unittest.TestCase):
+class TestReferencedVolumeContentItem(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -401,11 +403,11 @@ class TestPlanarROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             uid=generate_uid(),
             identifier='planar roi measurements'
         )
-        self._image = SourceImageForRegion(
-            sop_class_uid=generate_uid(),
-            sop_instance_uid=generate_uid()
+        self._image = SourceImageForRegionContentItem(
+            referenced_sop_class_uid=generate_uid(),
+            referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ReferencedRegionContentItem(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image
@@ -450,14 +452,14 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             identifier='volumetric roi measurements'
         )
         self._images = [
-            SourceImageForRegion(
-                sop_class_uid=generate_uid(),
-                sop_instance_uid=generate_uid()
+            SourceImageForRegionContentItem(
+                referenced_sop_class_uid=generate_uid(),
+                referenced_sop_instance_uid=generate_uid()
             )
             for i in range(3)
         ]
         self._regions = [
-            ReferencedRegion(
+            ReferencedRegionContentItem(
                 graphic_type=GraphicTypes.POLYLINE,
                 graphic_data=[[1.0, 1.0], [2.0, 2.0], [3.0, 3.0], [1.0, 1.0]],
                 source_image=self._images[i]
@@ -470,11 +472,11 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
         )
 
     def test_constructed_with_volume(self):
-        image = SourceImageForSegmentation(
-            sop_class_uid=generate_uid(),
-            sop_instance_uid=generate_uid()
+        image = SourceImageForSegmentationContentItem(
+            referenced_sop_class_uid=generate_uid(),
+            referenced_sop_instance_uid=generate_uid()
         )
-        volume = ReferencedVolume(
+        volume = ReferencedVolumeContentItem(
             graphic_type=GraphicTypes3D.ELLIPSOID,
             graphic_data=[
                 [1.0, 2.0, 2.0], [3.0, 2.0, 2.0],
@@ -531,11 +533,11 @@ class TestMeasurementReport(unittest.TestCase):
             uid=generate_uid(),
             identifier='planar roi measurements'
         )
-        self._image = SourceImageForRegion(
-            sop_class_uid=generate_uid(),
-            sop_instance_uid=generate_uid()
+        self._image = SourceImageForRegionContentItem(
+            referenced_sop_class_uid=generate_uid(),
+            referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ReferencedRegionContentItem(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image
@@ -551,37 +553,37 @@ class TestMeasurementReport(unittest.TestCase):
         )
 
     def test_container(self):
-        item = self._measurement_report
+        item = self._measurement_report[0]
         assert len(item.ContentSequence) == 8
         subitem = item.ContentTemplateSequence[0]
         assert subitem.TemplateIdentifier == 'TID1500'
 
     def test_language(self):
-        item = self._measurement_report.ContentSequence[0]
+        item = self._measurement_report[0].ContentSequence[0]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121049'
         assert item.ConceptCodeSequence[0] == DEFAULT_LANGUAGE
 
     def test_observation_context(self):
-        item = self._measurement_report.ContentSequence[1]
+        item = self._measurement_report[0].ContentSequence[1]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121005'
-        item = self._measurement_report.ContentSequence[2]
+        item = self._measurement_report[0].ContentSequence[2]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121008'
-        item = self._measurement_report.ContentSequence[3]
+        item = self._measurement_report[0].ContentSequence[3]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121005'
-        item = self._measurement_report.ContentSequence[4]
+        item = self._measurement_report[0].ContentSequence[4]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121012'
 
     def test_procedure_reported(self):
-        item = self._measurement_report.ContentSequence[5]
+        item = self._measurement_report[0].ContentSequence[5]
         assert item.ConceptNameCodeSequence[0].CodeValue == '121058'
         assert item.ConceptCodeSequence[0] == self._procedure_reported
 
     def test_image_library(self):
-        item = self._measurement_report.ContentSequence[6]
+        item = self._measurement_report[0].ContentSequence[6]
         assert item.ConceptNameCodeSequence[0].CodeValue == '111028'
 
     def test_imaging_measurements(self):
-        item = self._measurement_report.ContentSequence[7]
+        item = self._measurement_report[0].ContentSequence[7]
         assert item.ConceptNameCodeSequence[0].CodeValue == '126010'
         subitem = item.ContentSequence[0]
         assert subitem.ConceptNameCodeSequence[0].CodeValue == '125007'

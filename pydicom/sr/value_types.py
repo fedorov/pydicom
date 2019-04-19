@@ -558,6 +558,7 @@ class ContainerContentItem(ContentItem):
             item.MappingResource = 'DCMR'
             item.TemplateIdentifier = str(template_id)
             self.ContentTemplateSequence = [item]
+        self.ContentSequence = ContentSequence()
 
 
 class CompositeContentItem(ContentItem):
@@ -597,7 +598,7 @@ class ImageContentItem(ContentItem):
 
     def __init__(self, name,
                  referenced_sop_class_uid, referenced_sop_instance_uid,
-                 referenced_frame_number=None, referenced_segment_number=None,
+                 referenced_frame_numbers=None, referenced_segment_numbers=None,
                  relationship_type=None):
         """
         Parameters
@@ -608,10 +609,10 @@ class ImageContentItem(ContentItem):
             SOP Class UID of the referenced image object
         referenced_sop_instance_uid: Union[pydicom.uid.UID, str]
             SOP Instance UID of the referenced image object
-        referenced_frame_number: Union[int, List[int], None], optional
+        referenced_frame_numbers: Union[int, List[int], None], optional
             number of frame(s) to which the reference applies in case of a
             multi-frame image
-        referenced_segment_number: Union[int, List[int], None], optional
+        referenced_segment_numbers: Union[int, List[int], None], optional
             number of segment(s) to which the refernce applies in case of a
             segmentation image
         relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, str, None], optional
@@ -624,10 +625,10 @@ class ImageContentItem(ContentItem):
         item = Dataset()
         item.ReferencedSOPClassUID = str(referenced_sop_class_uid)
         item.ReferencedSOPInstanceUID = str(referenced_sop_instance_uid)
-        if referenced_frame_number is not None:
-            item.ReferencedFrameNumber = referenced_frame_number
-        if referenced_segment_number is not None:
-            item.ReferencedSegmentNumber = referenced_segment_number
+        if referenced_frame_numbers is not None:
+            item.ReferencedFrameNumber = referenced_frame_numbers
+        if referenced_segment_numbers is not None:
+            item.ReferencedSegmentNumber = referenced_segment_numbers
         self.ReferencedSOPSequence = [item]
 
 

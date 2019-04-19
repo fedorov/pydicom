@@ -1403,7 +1403,7 @@ class ReferencedSegmentation(Sequence):
         sop_class_uid: Union[pydicom.uid.UID, str]
             SOP Class UID of the referenced image object
         sop_instance_uid: Union[pydicom.uid.UID, str]
-e           SOP Instance UID of the referenced image object
+            SOP Instance UID of the referenced image object
         frame_numbers: List[int]
             numbers of the frames to which the reference applies
         segment_number: int
