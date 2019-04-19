@@ -860,6 +860,7 @@ class TcoordContentItem(ContentItem):
             ValueTypes.TSCOORD, name, relationship_type
         )
         temporal_range_type = TemporalRangeTypes(temporal_range_type)
+        self.TemporalRangeType = temporal_range_type.value
         if referenced_sample_positions is not None:
             self.ReferencedSamplePositions = [
                 int(v) for v in referenced_sample_positions
