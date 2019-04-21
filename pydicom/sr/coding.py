@@ -29,12 +29,15 @@ class CodedConcept(Dataset):
 
         """
         super(CodedConcept, self).__init__()
-
-        # Populate the Dataset
-        self.CodeValue = str(value)
+        if len(value) > 16:
+            if value.startswith('urn') or '://' in value:
+                self.URNCodeValue = str(value)
+            else:
+                self.LongCodeValue = str(value)
+        else:
+            self.CodeValue = str(value)
         self.CodeMeaning = str(meaning)
         self.CodingSchemeDesignator = str(scheme_designator)
-
         if scheme_version is not None:
             self.CodingSchemeVersion = str(scheme_version)
         # TODO: Enhanced Code Sequence Macro Attributes
