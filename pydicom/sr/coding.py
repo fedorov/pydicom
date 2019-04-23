@@ -42,6 +42,21 @@ class CodedConcept(Dataset):
             self.CodingSchemeVersion = str(scheme_version)
         # TODO: Enhanced Code Sequence Macro Attributes
 
+    @property
+    def code_value(self):
+        """str: value of either `CodeValue`, `LongCodeValue` or `URNCodeValue`
+        attribute"""
+        return getattr(
+            self, 'CodeValue',
+            getattr(
+                self, 'LongCodeValue',
+                getattr(
+                    self, 'URNCodeValue',
+                    None
+                )
+            )
+        )
+
     def __eq__(self, other):
         """Compares `self` and `other` for equality.
 
@@ -55,7 +70,7 @@ class CodedConcept(Dataset):
             return False
         if isinstance(other, Code):
             equality_criteria = [
-                self.CodeValue == other.value,
+                self.code_value == other.value,
                 self.CodingSchemeDesignator == other.scheme_designator,
                 self.CodeMeaning == other.meaning,
             ]
@@ -65,10 +80,8 @@ class CodedConcept(Dataset):
                     self.CodingSchemeVersion == other.scheme_version
                 )
             return all(equality_criteria)
-        if not hasattr(other, 'CodeValue'):
-            return False
         equality_criteria = [
-            self.CodeValue == other.CodeValue,
+            self.code_value == other.code_value,
             self.CodingSchemeDesignator == other.CodingSchemeDesignator,
         ]
         if (hasattr(other, 'CodingSchemeVersion') and
