@@ -1,11 +1,10 @@
 """Custom content items derived from DICOM value types."""
 from pydicom.sr.coding import Code, CodedConcept
 from pydicom.sr.value_types import (
-    CodeContentItem, CompositeContentItem,
-    ContentSequence, GraphicTypes, GraphicTypes3D,
-    ImageContentItem, NumContentItem, PixelOriginInterpretations,
-    RelationshipTypes, ScoordContentItem, Scoord3DContentItem,
-    UIDRefContentItem,
+    CodeContentItem, CompositeContentItem, ContentSequence, GraphicTypes,
+    GraphicTypes3D, ImageContentItem, NumContentItem,
+    PixelOriginInterpretations, RelationshipTypes, ScoordContentItem,
+    Scoord3DContentItem, UIDRefContentItem,
 )
 
 
@@ -114,11 +113,11 @@ class SourceSeriesForSegmentationContentItem(UIDRefContentItem):
 
     """Content item for Source Series for Segmentation"""
 
-    def __init__(self, series_instance_uid):
+    def __init__(self, referenced_series_instance_uid):
         """
         Parameters
         ----------
-        series_instance_uid: Union[pydicom.uid.UID, str]
+        referenced_series_instance_uid: Union[pydicom.uid.UID, str]
             Series Instance UID
 
         """
@@ -128,7 +127,7 @@ class SourceSeriesForSegmentationContentItem(UIDRefContentItem):
                 meaning='Source Series for Segmentation',
                 scheme_designator='DCM'
             ),
-            value=series_instance_uid,
+            value=referenced_series_instance_uid,
             relationship_type=RelationshipTypes.CONTAINS
         )
 
@@ -165,7 +164,7 @@ class ReferencedRegionContentItem(ScoordContentItem):
             )
         if not isinstance(source_image, SourceImageForRegionContentItem):
             raise TypeError(
-                'Arguement "source_image" must have type '
+                'Argument "source_image" must have type '
                 'SourceImageForRegionContentItem.'
             )
         if pixel_origin_interpretation == PixelOriginInterpretations.FRAME:
@@ -327,5 +326,4 @@ class FindingSiteContentItem(CodeContentItem):
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
             )
             self.ContentSequence.append(modifier_item)
-
 

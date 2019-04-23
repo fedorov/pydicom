@@ -1,15 +1,11 @@
 """DICOM structured reporting templates."""
-from enum import Enum
-
 from pydicom.dataset import Dataset
 from pydicom.sequence import Sequence
 from pydicom.sr.coding import Code, CodedConcept
 from pydicom.sr.value_types import (
-    CodeContentItem, CompositeContentItem,
-    ContainerContentItem, ContentSequence, GraphicTypes, GraphicTypes3D,
-    ImageContentItem, NumContentItem, PixelOriginInterpretations,
-    RelationshipTypes, ScoordContentItem, Scoord3DContentItem, TextContentItem,
-    UIDRefContentItem,
+    CodeContentItem, ContainerContentItem, ContentSequence,
+    ImageContentItem, NumContentItem, RelationshipTypes,
+    TextContentItem, UIDRefContentItem,
 )
 from pydicom.sr.derived_value_types import (
     FindingSiteContentItem, LongitudinalTemporalOffsetFromEventContentItem,
@@ -746,6 +742,7 @@ class SubjectContextFetus(Template):
             identifier of the fetus for longitudinal tracking
 
         """
+        super(SubjectContextFetus, self).__init__()
         subject_id_item = TextContentItem(
             name=CodedConcept(
                 value='121030',
@@ -849,6 +846,7 @@ class SubjectContextDevice(Template):
             physical location of the observed device during the procedure
 
         """
+        super(SubjectContextDevice, self).__init__()
         device_name_item = TextContentItem(
             name=CodedConcept(
                 value='121193',
@@ -1284,9 +1282,12 @@ class MeasurementsDerivedFromMultipleROIMeasurements(Template):
         measurement_groups: Union[List[pydicom.sr.templates.PlanarROIMeasurementsAndQualitativeEvaluations], List[pydicom.sr.templates.VolumetricROIMeasurementsAndQualitativeEvaluations]]
             one or more groups of either planar or volumetric ROI measurements
             and qualitative evaluations
-        measurement_properties: 
+        measurement_properties: Union[pydicom.sr.templates.MeasurementProperties, None], optional
+            measurement properties, including evaluations of its normality
+            and/or significance, its relationship to a reference population,
+            and an indication of its selection from a set of measurements
 
-        """
+        """  # noqa
         value_item = NumContentItem(
             name=derivation
         )
