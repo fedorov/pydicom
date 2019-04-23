@@ -473,10 +473,12 @@ class NumContentItem(ContentItem):
         value: Union[int, float], optional
             numeric value
         unit: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
-            coded units of measurement
+            coded units of measurement (see CID 7181 "Abstract Multi-dimensional
+            Image Model Component Units")
         qualifier: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             qualification of numeric value or as an alternative to
-            numeric value
+            numeric value, e.g., reason for absence of numeric value
+            (see CID 42 "Numeric Value Qualifier" for options)
         relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, str, None], optional
             type of relationship with parent content item
 
