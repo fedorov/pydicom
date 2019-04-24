@@ -188,7 +188,7 @@ class ReferencedRegionContentItem(ScoordContentItem):
         self.ContentSequence = [source_image]
 
 
-class ReferencedVolumeContentItem(Scoord3DContentItem):
+class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
 
     """Referenced volume surface"""
 
@@ -219,7 +219,7 @@ class ReferencedVolumeContentItem(Scoord3DContentItem):
             raise ValueError(
                 'Graphic type for volume surface must be "ELLIPSOID".'
             )
-        super(ReferencedVolumeContentItem, self).__init__(
+        super(ReferencedVolumeSurfaceContentItem, self).__init__(
             name=CodedConcept(
                 value='121231',
                 meaning='Volume Surface',

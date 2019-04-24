@@ -9,7 +9,7 @@ from pydicom.sr.value_types import (
 )
 from pydicom.sr.derived_value_types import (
     FindingSiteContentItem, LongitudinalTemporalOffsetFromEventContentItem,
-    ReferencedRegionContentItem, ReferencedVolumeContentItem,
+    ReferencedRegionContentItem, ReferencedVolumeSurfaceContentItem,
     ReferencedRealWorldValueMapContentItem, SourceImageForRegionContentItem,
     SourceImageForSegmentationContentItem,
     SourceSeriesForSegmentationContentItem
@@ -39,7 +39,7 @@ class Measurement(Template):
     def __init__(self, name, tracking_identifier, value=None, unit=None,
                  qualifier=None, algorithm_id=None, derivation=None,
                  finding_sites=None, method=None, properties=None,
-                 referenced_regions=None, referenced_volume=None,
+                 referenced_regions=None, referenced_volume_surface=None,
                  referenced_segmentation=None,
                  referenced_real_world_value_map=None):
         """
@@ -81,7 +81,7 @@ class Measurement(Template):
             interest in the source images
         referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegionContentItem], None], optional
             regions of interest in source images
-        referenced_volume: Union[pydicom.sr.templates.ReferencedVolumeContentItem, None], optional
+        referenced_volume_surface: Union[pydicom.sr.templates.ReferencedVolumeSurfaceContentItem, None], optional
             referenced volume surface of interest in source images
         referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMapContentItem, None], optional
             referenced real world value map for region of interest
@@ -152,13 +152,14 @@ class Measurement(Template):
                         'ReferencedRegionContentItem.'
                     )
                 value_item.ContentSequence.append(region)
-        elif referenced_volume is not None:
-            if not isinstance(referenced_volume, ReferencedVolumeContentItem):
+        elif referenced_volume_surface is not None:
+            if not isinstance(referenced_volume_surface,
+                              ReferencedVolumeSurfaceContentItem):
                 raise TypeError(
-                    'Argument "referenced_volume" must have type '
-                    'ReferencedVolumeContentItem.'
+                    'Argument "referenced_volume_surface" must have type '
+                    'ReferencedVolumeSurfaceContentItem.'
                 )
-            value_item.ContentSequence.append(referenced_volume)
+            value_item.ContentSequence.append(referenced_volume_surface)
         elif referenced_segmentation is not None:
             if not isinstance(referenced_segmentation,
                               (ReferencedSegmentation,
@@ -1046,7 +1047,7 @@ class _ROIMeasurementsAndQualitativeEvaluations(
     templates."""
 
     def __init__(self, tracking_identifier,
-                 referenced_regions=None, referenced_volume=None,
+                 referenced_regions=None, referenced_volume_surface=None,
                  referenced_segmentation=None,
                  referenced_real_world_value_map=None,
                  time_point_context=None, finding_type=None, session=None,
@@ -1093,19 +1094,19 @@ class _ROIMeasurementsAndQualitativeEvaluations(
         group_item = self[0]
         were_references_provided = [
             referenced_regions is not None,
-            referenced_volume is not None,
+            referenced_volume_surface is not None,
             referenced_segmentation is not None,
         ]
         if sum(were_references_provided) == 0:
             raise ValueError(
                 'One of the following arguments must be provided: '
-                '"referenced_regions", "referenced_volume", or '
+                '"referenced_regions", "referenced_volume_surface", or '
                 '"referenced_segmentation".'
             )
         elif sum(were_references_provided) > 1:
             raise ValueError(
                 'Only one of the following arguments should be provided: '
-                '"referenced_regions", "referenced_volume", or '
+                '"referenced_regions", "referenced_volume_surface", or '
                 '"referenced_segmentation".'
             )
         if referenced_regions is not None:
@@ -1120,13 +1121,14 @@ class _ROIMeasurementsAndQualitativeEvaluations(
                         'ReferencedRegionContentItem.'
                     )
                 group_item.ContentSequence.append(region)
-        elif referenced_volume is not None:
-            if not isinstance(referenced_volume, ReferencedVolumeContentItem):
+        elif referenced_volume_surface is not None:
+            if not isinstance(referenced_volume_surface,
+                              ReferencedVolumeSurfaceContentItem):
                 raise TypeError(
-                    'Items of argument "referenced_volume" must have type '
-                    'ReferencedVolumeContentItem.'
+                    'Items of argument "referenced_volume_surface" must have type '
+                    'ReferencedVolumeSurfaceContentItem.'
                 )
-            group_item.ContentSequence.append(referenced_volume)
+            group_item.ContentSequence.append(referenced_volume_surface)
         elif referenced_segmentation is not None:
             if not isinstance(referenced_segmentation,
                               (ReferencedSegmentation,
@@ -1215,7 +1217,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
 
     def __init__(self, tracking_identifier,
                  referenced_regions=None,
-                 referenced_volume=None,
+                 referenced_volume_surface=None,
                  referenced_segmentation=None,
                  referenced_real_world_value_map=None,
                  time_point_context=None, finding_type=None, session=None,
@@ -1227,7 +1229,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
             identifier for tracking measurements
         referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegionContentItem], None], optional
             regions of interest in source image(s)
-        referenced_volume: Union[pydicom.sr.templates.ReferencedVolumeContentItem, None], optional
+        referenced_volume_surface: Union[pydicom.sr.templates.ReferencedVolumeSurfaceContentItem, None], optional
             volume of interest in source image(s)
         referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, None], optional
             segmentation for region of interest in source image
@@ -1255,7 +1257,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
             measurements=measurements,
             tracking_identifier=tracking_identifier,
             referenced_regions=referenced_regions,
-            referenced_volume=referenced_volume,
+            referenced_volume_surface=referenced_volume_surface,
             referenced_segmentation=referenced_segmentation,
             referenced_real_world_value_map=referenced_real_world_value_map,
             time_point_context=time_point_context,

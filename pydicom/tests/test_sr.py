@@ -29,7 +29,7 @@ from pydicom.sr.value_types import (
 from pydicom.sr.derived_value_types import (
     FindingSiteContentItem,
     ReferencedRegionContentItem,
-    ReferencedVolumeContentItem,
+    ReferencedVolumeSurfaceContentItem,
     SourceImageForRegionContentItem,
     SourceImageForSegmentationContentItem,
 )
@@ -377,7 +377,7 @@ class TestReferencedRegionContentItem(unittest.TestCase):
         pass
 
 
-class TestReferencedVolumeContentItem(unittest.TestCase):
+class TestReferencedVolumeSurfaceContentItem(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -476,7 +476,7 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        volume = ReferencedVolumeContentItem(
+        volume = ReferencedVolumeSurfaceContentItem(
             graphic_type=GraphicTypes3D.ELLIPSOID,
             graphic_data=[
                 [1.0, 2.0, 2.0], [3.0, 2.0, 2.0],
@@ -488,7 +488,7 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
         )
         measurements = VolumetricROIMeasurementsAndQualitativeEvaluations(
             tracking_identifier=self._tracking_identifier,
-            referenced_volume=volume
+            referenced_volume_surface=volume
         )
         assert len(measurements) == 1
         assert len(measurements[0].ContentSequence) == 3
@@ -504,7 +504,7 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             VolumetricROIMeasurementsAndQualitativeEvaluations(
                 tracking_identifier=self._tracking_identifier,
                 referenced_regions=self._regions,
-                referenced_volume=self._regions
+                referenced_volume_surface=self._regions
             )
 
 
