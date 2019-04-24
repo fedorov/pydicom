@@ -75,24 +75,24 @@ def camel_case(s):
 def keyword_from_meaning(name):
     """Return a camel case valid python identifier"""
     # Try to adhere to keyword scheme in DICOM (CP850)
-    
-    # singular/plural alternative forms are made plural 
+
+    # singular/plural alternative forms are made plural
     #     e.g., “Physician(s) of Record” becomes “PhysiciansOfRecord”
     name = name.replace("(s)", "s")
-    
-    # “Patient’s Name” -> “PatientName” 
+
+    # “Patient’s Name” -> “PatientName”
     # “Operators’ Name” -> “OperatorsName”
     name = name.replace("’s ", " ")
     name = name.replace("'s ", " ")
     name = name.replace("s’ ", "s ")
     name = name.replace("s' ", "s ")
-    
+
     name = camel_case(name.strip())
 
     # Python variables must not begin with a number.
     if re.match(r'[0-9]', name):
         name = "_" + name
-    
+
     return name
 
 def download_fhir(local_dir):
@@ -121,7 +121,7 @@ def download_fhir(local_dir):
             with open(local_filename, 'wb') as f_local:
                 f_local.write(content)
     finally:
-        ftp.quit()    
+        ftp.quit()
 
 def write_concepts(concepts, cid_concepts, cid_lists, name_for_cid):
     from pprint import pprint
@@ -134,15 +134,15 @@ def write_concepts(concepts, cid_concepts, cid_lists, name_for_cid):
              '# Most keyword identifiers map to a single code, but not all\n',
              '\n',
             ]
-                
+
     with open("_concepts_dict.py", 'w', encoding="UTF8") as f_concepts:
         f_concepts.writelines(lines)
         f_concepts.write("concepts = {}\n") # start with empty dict
-        for scheme, value in concepts.items():          
+        for scheme, value in concepts.items():
             f_concepts.write("\nconcepts['{}'] = \\\n".format(scheme))
             pprint(value, f_concepts)
 
-    lines = (lines[:3] + 
+    lines = (lines[:3] +
              ['# Dict with cid number as keys; value format is:\n',
               '#   {scheme designator: <list of keywords for current cid>\n',
               '#    scheme_designator: ...}\n',
@@ -163,24 +163,24 @@ def write_concepts(concepts, cid_concepts, cid_lists, name_for_cid):
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    
+
     local_dir = tempfile.gettempdir()
     fhir_dir = os.path.join(local_dir, "fhir")
-    
+
     if not os.path.exists(fhir_dir) or not os.listdir(fhir_dir):
         download_fhir(fhir_dir)
     else:
         msg = "Using locally downloaded files\n"
         msg += "from directory " + fhir_dir
         logging.info(msg)
-    
+
     ftp_files = glob.glob(os.path.join(fhir_dir, "*"))
     cid_pattern = re.compile('^dicom-cid-([0-9]+)-[a-zA-Z]+')
-    
+
     concepts = dict()
     cid_lists = dict()
     name_for_cid = dict()
-    
+
     # XXX = 0
     try:
         for ftp_filepath in ftp_files:
@@ -193,7 +193,7 @@ if __name__ == '__main__':
 
             cid_match = cid_pattern.search(value_set['id'])
             cid = int(cid_match.group(1)) # can take int off to store as string
-            
+
             name_for_cid[cid] = value_set['name']
             cid_concepts = {}
             for group in value_set['compose']['include']:
@@ -207,12 +207,12 @@ if __name__ == '__main__':
                     )
                 if scheme_designator not in concepts:
                     concepts[scheme_designator] = dict()
-                
+
                 for concept in group['concept']:
                     name = keyword_from_meaning(concept['display'])
                     code = concept['code'].strip()
                     display = concept['display'].strip()
-                    
+
                     # If new name under this scheme, start dict of codes/cids that use that code
                     if name not in concepts[scheme_designator]:
                         concepts[scheme_designator][name] = {code: (display, [cid])}
@@ -235,6 +235,10 @@ if __name__ == '__main__':
                     # Keep track of this cid referencing that name
                     if scheme_designator not in cid_concepts:
                         cid_concepts[scheme_designator] = []
+                    if name in cid_concepts[scheme_designator]:
+                      msg = "'{}': Meaning '{}' in cid_{} is duplicated!"
+                      msg = msg.format(name, concept['display'], cid)
+                      logger.warning(msg)
                     cid_concepts[scheme_designator].append(name)
             cid_lists[cid] = cid_concepts
             # if XXX > 3:
@@ -242,6 +246,6 @@ if __name__ == '__main__':
             # XXX += 1
     finally:
         # If any error or KeyboardInterrupt, close up and write what we have
-        
-        
+
+
         write_concepts(concepts, cid_concepts, cid_lists, name_for_cid)
