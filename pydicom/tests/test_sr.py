@@ -28,8 +28,8 @@ from pydicom.sr.value_types import (
 )
 from pydicom.sr.content_items import (
     FindingSite,
-    ReferencedRegion,
-    ReferencedVolumeSurface,
+    ImageRegion,
+    VolumeSurface,
     SourceImageForRegion,
     SourceImageForSegmentation,
 )
@@ -247,7 +247,7 @@ class TestMeasurementOptional(unittest.TestCase):
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ImageRegion(
             graphic_type=GraphicTypes.POINT,
             graphic_data=[1.0, 1.0],
             source_image=self._image
@@ -371,13 +371,13 @@ class TestROIMeasurements(unittest.TestCase):
         assert subitem.MeasurementUnitsCodeSequence[0] == self._unit
 
 
-class TestReferencedRegion(unittest.TestCase):
+class TestImageRegion(unittest.TestCase):
 
     def setUp(self):
         pass
 
 
-class TestReferencedVolumeSurface(unittest.TestCase):
+class TestVolumeSurface(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -407,7 +407,7 @@ class TestPlanarROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ImageRegion(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image
@@ -459,7 +459,7 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             for i in range(3)
         ]
         self._regions = [
-            ReferencedRegion(
+            ImageRegion(
                 graphic_type=GraphicTypes.POLYLINE,
                 graphic_data=[[1.0, 1.0], [2.0, 2.0], [3.0, 3.0], [1.0, 1.0]],
                 source_image=self._images[i]
@@ -476,7 +476,7 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        volume = ReferencedVolumeSurface(
+        volume = VolumeSurface(
             graphic_type=GraphicTypes3D.ELLIPSOID,
             graphic_data=[
                 [1.0, 2.0, 2.0], [3.0, 2.0, 2.0],
@@ -537,7 +537,7 @@ class TestMeasurementReport(unittest.TestCase):
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegion(
+        self._region = ImageRegion(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image

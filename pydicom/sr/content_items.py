@@ -140,9 +140,9 @@ class SourceSeriesForSegmentation(UIDRefContentItem):
         )
 
 
-class ReferencedRegion(ScoordContentItem):
+class ImageRegion(ScoordContentItem):
 
-    """Content item for a refrenced region of interest"""
+    """Content item for a referenced image region of interest"""
 
     def __init__(self, graphic_type, graphic_data, source_image,
                  pixel_origin_interpretation=PixelOriginInterpretations.VOLUME):
@@ -182,7 +182,7 @@ class ReferencedRegion(ScoordContentItem):
                     'Frame number of source image must be specified when value '
                     'of argument "pixel_origin_interpretation" is "FRAME".'
                 )
-        super(ReferencedRegion, self).__init__(
+        super(ImageRegion, self).__init__(
             name=CodedConcept(
                 value='111030',
                 meaning='Image Region',
@@ -196,7 +196,7 @@ class ReferencedRegion(ScoordContentItem):
         self.ContentSequence = [source_image]
 
 
-class ReferencedVolumeSurface(Scoord3DContentItem):
+class VolumeSurface(Scoord3DContentItem):
 
     """Referenced volume surface"""
 
@@ -212,9 +212,9 @@ class ReferencedVolumeSurface(Scoord3DContentItem):
         frame_of_reference_uid: Union[pydicom.uid.UID, str]
             unique identifier of the frame of reference within which the
             coordinates are defined
-        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentation], None], optional
+        source_images: Union[List[pydicom.sr.content_items.SourceImageForSegmentation], None], optional
             source images for segmentation
-        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentation, None], optional
+        source_series: Union[pydicom.sr.content_items.SourceSeriesForSegmentation, None], optional
             source series for segmentation
 
         Note
@@ -227,7 +227,7 @@ class ReferencedVolumeSurface(Scoord3DContentItem):
             raise ValueError(
                 'Graphic type for volume surface must be "ELLIPSOID".'
             )
-        super(ReferencedVolumeSurface, self).__init__(
+        super(VolumeSurface, self).__init__(
             name=CodedConcept(
                 value='121231',
                 meaning='Volume Surface',
@@ -261,7 +261,7 @@ class ReferencedVolumeSurface(Scoord3DContentItem):
             )
 
 
-class ReferencedRealWorldValueMap(CompositeContentItem):
+class RealWorldValueMap(CompositeContentItem):
 
     """Referenced real world value map"""
 
@@ -273,7 +273,7 @@ class ReferencedRealWorldValueMap(CompositeContentItem):
             SOP Instance UID of the referenced object
 
         """
-        super(ReferencedRealWorldValueMap, self).__init__(
+        super(RealWorldValueMap, self).__init__(
             name=CodedConcept(
                 value='126100',
                 meaning='Real World Value Map used for measurement',
@@ -333,4 +333,102 @@ class FindingSite(CodeContentItem):
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
             )
             self.ContentSequence.append(modifier_item)
+
+
+class ReferencedSegmentationFrame(ContentSequence):
+
+    def __init__(self, sop_class_uid, sop_instance_uid, frame_number,
+                 segment_number, source_image):
+        """
+        Parameters
+        ----------
+        sop_class_uid: Union[pydicom.uid.UID, str]
+            SOP Class UID of the referenced image object
+        sop_instance_uid: Union[pydicom.uid.UID, str]
+            SOP Instance UID of the referenced image object
+        segment_number: int
+            number of the segment to which the refernce applies
+        frame_number: int
+            number of the frame to which the reference applies
+        source_image: pydicom.sr.content_items.SourceImageForSegmentation
+            source image for segmentation
+
+        """
+        super(ReferencedSegmentationFrame, self).__init__()
+        segmentation_item = ImageContentItem(
+            name=CodedConcept(
+                value='121214',
+                meaning='Referenced Segmentation Frame',
+                scheme_designator='DCM'
+            ),
+            referenced_sop_class_uid=sop_class_uid,
+            referenced_sop_instance_uid=sop_instance_uid,
+            referenced_frame_number=frame_number,
+            referenced_segment_number=segment_number
+        )
+        self.append(segmentation_item)
+        if not isinstance(source_image, SourceImageForSegmentation):
+            raise TypeError(
+                'Argument "source_image" must have type '
+                'SourceImageForSegmentation.'
+            )
+        self.append(source_image)
+
+
+class ReferencedSegmentation(ContentSequence):
+
+    def __init__(self, sop_class_uid, sop_instance_uid, segment_number,
+                 frame_numbers, source_images=None, source_series=None):
+        """
+        Parameters
+        ----------
+        sop_class_uid: Union[pydicom.uid.UID, str]
+            SOP Class UID of the referenced image object
+        sop_instance_uid: Union[pydicom.uid.UID, str]
+            SOP Instance UID of the referenced image object
+        frame_numbers: List[int]
+            numbers of the frames to which the reference applies
+        segment_number: int
+            number of the segment to which the refernce applies
+        source_images: Union[List[pydicom.sr.content_items.SourceImageForSegmentation], None], optional
+            source images for segmentation
+        source_series: Union[pydicom.sr.content_items.SourceSeriesForSegmentation, None], optional
+            source series for segmentation
+
+        """
+        super(ReferencedSegmentation, self).__init__()
+        segmentation_item = ImageContentItem(
+            name=CodedConcept(
+                value='121191',
+                meaning='Referenced Segment',
+                scheme_designator='DCM'
+            ),
+            referenced_sop_class_uid=sop_class_uid,
+            referenced_sop_instance_uid=sop_instance_uid,
+            referenced_frame_number=frame_numbers,
+            referenced_segment_number=segment_number
+        )
+        self.append(segmentation_item)
+        if source_images is not None:
+            for image in source_images:
+                if not isinstance(image, SourceImageForSegmentation):
+                    raise TypeError(
+                        'Items of argument "source_image" must have type '
+                        'SourceImageForSegmentation.'
+                    )
+                self.append(image)
+        elif source_series is not None:
+            if not isinstance(source_series,
+                              SourceSeriesForSegmentation):
+                raise TypeError(
+                    'Argument "source_series" must have type '
+                    'SourceSeriesForSegmentation.'
+                )
+            self.append(source_series)
+        else:
+            raise ValueError(
+                'One of the following two arguments must be provided: '
+                '"source_images" or "source_series".'
+            )
+
 

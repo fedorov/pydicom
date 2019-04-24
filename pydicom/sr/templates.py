@@ -15,9 +15,11 @@ from pydicom.sr.value_types import (
 from pydicom.sr.content_items import (
     FindingSite,
     LongitudinalTemporalOffsetFromEvent,
-    ReferencedRegion,
-    ReferencedVolumeSurface,
-    ReferencedRealWorldValueMap,
+    ImageRegion,
+    VolumeSurface,
+    RealWorldValueMap,
+    ReferencedSegmentation,
+    ReferencedSegmentationFrame,
     SourceImageForRegion,
     SourceImageForSegmentation,
     SourceSeriesForSegmentation,
@@ -84,14 +86,14 @@ class Measurement(Template):
             measurement properties, including evaluations of its normality
             and/or significance, its relationship to a reference population,
             and an indication of its selection from a set of measurements
-        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, pydicom.sr.templates.ReferencedSegmentation, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, pydicom.sr.content_items.ReferencedSegmentation, None], optional
             referenced segmentation that specifies the segment for regions of
             interest in the source images
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
+        referenced_regions: Union[List[pydicom.sr.content_items.ImageRegion], None], optional
             regions of interest in source images
-        referenced_volume_surface: Union[pydicom.sr.templates.ReferencedVolumeSurface, None], optional
+        referenced_volume_surface: Union[pydicom.sr.content_items.VolumeSurface, None], optional
             referenced volume surface of interest in source images
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
 
         """  # noqa
@@ -154,18 +156,18 @@ class Measurement(Template):
             value_item.ContentSequence.extend(properties)
         if referenced_regions is not None:
             for region in referenced_regions:
-                if not isinstance(region, ReferencedRegion):
+                if not isinstance(region, ImageRegion):
                     raise TypeError(
                         'Items of argument "referenced_region" must have type '
-                        'ReferencedRegion.'
+                        'ImageRegion.'
                     )
                 value_item.ContentSequence.append(region)
         elif referenced_volume_surface is not None:
             if not isinstance(referenced_volume_surface,
-                              ReferencedVolumeSurface):
+                              VolumeSurface):
                 raise TypeError(
                     'Argument "referenced_volume_surface" must have type '
-                    'ReferencedVolumeSurface.'
+                    'VolumeSurface.'
                 )
             value_item.ContentSequence.append(referenced_volume_surface)
         elif referenced_segmentation is not None:
@@ -181,10 +183,10 @@ class Measurement(Template):
             value_item.ContentSequence.append(referenced_segmentation)
         if referenced_real_world_value_map is not None:
             if not isinstance(referenced_real_world_value_map,
-                              ReferencedRealWorldValueMap):
+                              RealWorldValueMap):
                 raise TypeError(
                     'Argument "referenced_real_world_value_map" must have type '
-                    'ReferencedRealWorldValueMap.'
+                    'RealWorldValueMap.'
                 )
             value_item.ContentSequence.append(referenced_real_world_value_map)
         if algorithm_id is not None:
@@ -962,7 +964,7 @@ class _MeasurementsAndQualitatitiveEvaluations(Template):
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1029,10 +1031,10 @@ class _MeasurementsAndQualitatitiveEvaluations(Template):
             group_item.ContentSequence.append(time_point_context)
         if referenced_real_world_value_map is not None:
             if not isinstance(referenced_real_world_value_map,
-                              ReferencedRealWorldValueMap):
+                              RealWorldValueMap):
                 raise TypeError(
                     'Argument "referenced_real_world_value_map" must have type '
-                    'ReferencedRealWorldValueMap.'
+                    'RealWorldValueMap.'
                 )
             group_item.ContentSequence.append(referenced_real_world_value_map)
         if measurements is not None:
@@ -1065,11 +1067,11 @@ class _ROIMeasurementsAndQualitativeEvaluations(
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
+        referenced_regions: Union[List[pydicom.sr.content_items.ImageRegion], None], optional
             regions of interest in source image(s)
-        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, pydicom.sr.templates.ReferencedSegmentationFrame, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, pydicom.sr.content_items.ReferencedSegmentationFrame, None], optional
             segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1123,18 +1125,18 @@ class _ROIMeasurementsAndQualitativeEvaluations(
                     'Argument "referenced_region" must have non-zero length.'
                 )
             for region in referenced_regions:
-                if not isinstance(region, ReferencedRegion):
+                if not isinstance(region, ImageRegion):
                     raise TypeError(
                         'Items of argument "referenced_regions" must have type '
-                        'ReferencedRegion.'
+                        'ImageRegion.'
                     )
                 group_item.ContentSequence.append(region)
         elif referenced_volume_surface is not None:
             if not isinstance(referenced_volume_surface,
-                              ReferencedVolumeSurface):
+                              VolumeSurface):
                 raise TypeError(
                     'Items of argument "referenced_volume_surface" must have type '
-                    'ReferencedVolumeSurface.'
+                    'VolumeSurface.'
                 )
             group_item.ContentSequence.append(referenced_volume_surface)
         elif referenced_segmentation is not None:
@@ -1166,11 +1168,11 @@ class PlanarROIMeasurementsAndQualitativeEvaluations(
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_region: Union[pydicom.sr.templates.ReferencedRegion, None], optional
+        referenced_region: Union[pydicom.sr.content_items.ImageRegion, None], optional
             region of interest in source image
-        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentationFrame, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentationFrame, None], optional
             segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1235,13 +1237,13 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_regions: Union[List[pydicom.sr.templates.ReferencedRegion], None], optional
+        referenced_regions: Union[List[pydicom.sr.content_items.ImageRegion], None], optional
             regions of interest in source image(s)
-        referenced_volume_surface: Union[pydicom.sr.templates.ReferencedVolumeSurface, None], optional
+        referenced_volume_surface: Union[pydicom.sr.content_items.VolumeSurface, None], optional
             volume of interest in source image(s)
-        referenced_segmentation: Union[pydicom.sr.templates.ReferencedSegmentation, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, None], optional
             segmentation for region of interest in source image
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1334,7 +1336,7 @@ class MeasurementAndQualitativeEvaluationGroup(
         ----------
         tracking_identifier: pydicom.sr.templates.TrackingIdentifier
             identifier for tracking measurements
-        referenced_real_world_value_map: Union[pydicom.sr.templates.ReferencedRealWorldValueMap, None], optional
+        referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
         time_point_context: Union[pydicom.sr.templates.TimePointContext, None], optional
             description of the time point context
@@ -1358,107 +1360,6 @@ class MeasurementAndQualitativeEvaluationGroup(
             session=session,
             qualitative_evaluations=qualitative_evaluations
         )
-
-
-class ReferencedSegmentationFrame(Sequence):
-
-    """Referenced segmentation frame"""
-
-    def __init__(self, sop_class_uid, sop_instance_uid, source_image,
-                 segment_number, frame_numbers=None):
-        """
-        Parameters
-        ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
-            SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
-            SOP Instance UID of the referenced image object
-        source_image: pydicom.sr.templates.SourceImageForSegmentation
-            source image for segmentation
-        segment_number: int
-            number of the segment to which the refernce applies
-        frame_number: int
-            number of the frame to which the reference applies
-
-        """
-        super(ReferencedSegmentationFrame, self).__init__()
-        segmentation_item = ImageContentItem(
-            name=CodedConcept(
-                value='121214',
-                meaning='Referenced Segmentation Frame',
-                scheme_designator='DCM'
-            ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_number,
-            referenced_segment_number=segment_number
-        )
-        self.append(segmentation_item)
-        if not isinstance(source_image, SourceImageForSegmentation):
-            raise TypeError(
-                'Arguement "source_image" must have type '
-                'SourceImageForSegmentation.'
-            )
-        self.append(source_image)
-
-
-class ReferencedSegmentation(Sequence):
-
-    """Referenced segmentation"""
-
-    def __init__(self, sop_class_uid, sop_instance_uid, segment_number,
-                 frame_numbers, source_images=None, source_series=None):
-        """
-        Parameters
-        ----------
-        sop_class_uid: Union[pydicom.uid.UID, str]
-            SOP Class UID of the referenced image object
-        sop_instance_uid: Union[pydicom.uid.UID, str]
-            SOP Instance UID of the referenced image object
-        frame_numbers: List[int]
-            numbers of the frames to which the reference applies
-        segment_number: int
-            number of the segment to which the refernce applies
-        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentation], None], optional
-            source images for segmentation
-        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentation, None], optional
-            source series for segmentation
-
-        """
-        super(ReferencedSegmentation, self).__init__()
-        segmentation_item = ImageContentItem(
-            name=CodedConcept(
-                value='121191',
-                meaning='Referenced Segment',
-                scheme_designator='DCM'
-            ),
-            referenced_sop_class_uid=sop_class_uid,
-            referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_numbers,
-            referenced_segment_number=segment_number
-        )
-        self.append(segmentation_item)
-        if source_images is not None:
-            for image in source_images:
-                if not isinstance(image, SourceImageForSegmentation):
-                    raise TypeError(
-                        'Items of argument "source_image" must have type '
-                        'SourceImageForSegmentation.'
-                    )
-                self.append(image)
-        elif source_series is not None:
-            if not isinstance(source_series,
-                              SourceSeriesForSegmentation):
-                raise TypeError(
-                    'Argument "source_series" must have type '
-                    'SourceSeriesForSegmentation.'
-                )
-            self.append(source_series)
-        else:
-            raise ValueError(
-                'One of the following two arguments must be provided: '
-                '"source_images" or "source_series".'
-            )
 
 
 class ROIMeasurements(Template):
