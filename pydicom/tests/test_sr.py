@@ -26,12 +26,12 @@ from pydicom.sr.value_types import (
     GraphicTypes3D,
     NumContentItem,
 )
-from pydicom.sr.derived_value_types import (
-    FindingSiteContentItem,
-    ReferencedRegionContentItem,
-    ReferencedVolumeSurfaceContentItem,
-    SourceImageForRegionContentItem,
-    SourceImageForSegmentationContentItem,
+from pydicom.sr.content_items import (
+    FindingSite,
+    ReferencedRegion,
+    ReferencedVolumeSurface,
+    SourceImageForRegion,
+    SourceImageForSegmentation,
 )
 from pydicom.uid import generate_uid
 from pydicom.valuerep import DS
@@ -99,14 +99,14 @@ class TestObservationContext(unittest.TestCase):
         assert len(self._observation_context) == 6
 
 
-class TestFindingSiteContentItemOptional(unittest.TestCase):
+class TestFindingSiteOptional(unittest.TestCase):
 
     def setUp(self):
-        super(TestFindingSiteContentItemOptional, self).setUp()
+        super(TestFindingSiteOptional, self).setUp()
         self._location = codes.cid7151.LobeOfLung
         self._laterality = codes.cid244.Right
         self._modifier = codes.cid2.Apical
-        self._finding_site = FindingSiteContentItem(
+        self._finding_site = FindingSite(
             anatomic_location=self._location,
             laterality=self._laterality,
             topographical_modifier=self._modifier
@@ -129,12 +129,12 @@ class TestFindingSiteContentItemOptional(unittest.TestCase):
         assert item.ConceptCodeSequence[0] == self._modifier
 
 
-class TestFindingSiteContentItem(unittest.TestCase):
+class TestFindingSite(unittest.TestCase):
 
     def setUp(self):
-        super(TestFindingSiteContentItem, self).setUp()
+        super(TestFindingSite, self).setUp()
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSiteContentItem(
+        self._finding_site = FindingSite(
             anatomic_location=self._location
         )
 
@@ -240,14 +240,14 @@ class TestMeasurementOptional(unittest.TestCase):
         self._derivation = codes.cid7464.Total
         self._method = codes.cid7473.AreaOfClosedIrregularPolygon
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSiteContentItem(
+        self._finding_site = FindingSite(
             anatomic_location=self._location
         )
-        self._image = SourceImageForRegionContentItem(
+        self._image = SourceImageForRegion(
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegionContentItem(
+        self._region = ReferencedRegion(
             graphic_type=GraphicTypes.POINT,
             graphic_data=[1.0, 1.0],
             source_image=self._image
@@ -307,7 +307,7 @@ class TestROIMeasurements(unittest.TestCase):
         ]
         self._method = codes.cid7473.AreaOfClosedIrregularPolygon
         self._location = codes.cid6300.RightAnteriorMiddlePeripheralZoneOfProstate
-        self._finding_site = FindingSiteContentItem(
+        self._finding_site = FindingSite(
             anatomic_location=self._location
         )
         self._roi_measurements = ROIMeasurements(
@@ -371,13 +371,13 @@ class TestROIMeasurements(unittest.TestCase):
         assert subitem.MeasurementUnitsCodeSequence[0] == self._unit
 
 
-class TestReferencedRegionContentItem(unittest.TestCase):
+class TestReferencedRegion(unittest.TestCase):
 
     def setUp(self):
         pass
 
 
-class TestReferencedVolumeSurfaceContentItem(unittest.TestCase):
+class TestReferencedVolumeSurface(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -403,11 +403,11 @@ class TestPlanarROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             uid=generate_uid(),
             identifier='planar roi measurements'
         )
-        self._image = SourceImageForRegionContentItem(
+        self._image = SourceImageForRegion(
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegionContentItem(
+        self._region = ReferencedRegion(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image
@@ -452,14 +452,14 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
             identifier='volumetric roi measurements'
         )
         self._images = [
-            SourceImageForRegionContentItem(
+            SourceImageForRegion(
                 referenced_sop_class_uid=generate_uid(),
                 referenced_sop_instance_uid=generate_uid()
             )
             for i in range(3)
         ]
         self._regions = [
-            ReferencedRegionContentItem(
+            ReferencedRegion(
                 graphic_type=GraphicTypes.POLYLINE,
                 graphic_data=[[1.0, 1.0], [2.0, 2.0], [3.0, 3.0], [1.0, 1.0]],
                 source_image=self._images[i]
@@ -472,11 +472,11 @@ class TestVolumetricROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
         )
 
     def test_constructed_with_volume(self):
-        image = SourceImageForSegmentationContentItem(
+        image = SourceImageForSegmentation(
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        volume = ReferencedVolumeSurfaceContentItem(
+        volume = ReferencedVolumeSurface(
             graphic_type=GraphicTypes3D.ELLIPSOID,
             graphic_data=[
                 [1.0, 2.0, 2.0], [3.0, 2.0, 2.0],
@@ -533,11 +533,11 @@ class TestMeasurementReport(unittest.TestCase):
             uid=generate_uid(),
             identifier='planar roi measurements'
         )
-        self._image = SourceImageForRegionContentItem(
+        self._image = SourceImageForRegion(
             referenced_sop_class_uid=generate_uid(),
             referenced_sop_instance_uid=generate_uid()
         )
-        self._region = ReferencedRegionContentItem(
+        self._region = ReferencedRegion(
             graphic_type=GraphicTypes.CIRCLE,
             graphic_data=[[1.0, 1.0], [2.0, 2.0]],
             source_image=self._image

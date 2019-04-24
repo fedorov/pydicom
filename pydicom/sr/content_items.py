@@ -1,14 +1,22 @@
 """Custom content items derived from DICOM value types."""
 from pydicom.sr.coding import Code, CodedConcept
 from pydicom.sr.value_types import (
-    CodeContentItem, CompositeContentItem, ContentSequence, GraphicTypes,
-    GraphicTypes3D, ImageContentItem, NumContentItem,
-    PixelOriginInterpretations, RelationshipTypes, ScoordContentItem,
-    Scoord3DContentItem, UIDRefContentItem,
+    CodeContentItem,
+    CompositeContentItem,
+    ContentSequence,
+    GraphicTypes,
+    GraphicTypes3D,
+    ImageContentItem,
+    NumContentItem,
+    PixelOriginInterpretations,
+    RelationshipTypes,
+    ScoordContentItem,
+    Scoord3DContentItem,
+    UIDRefContentItem,
 )
 
 
-class LongitudinalTemporalOffsetFromEventContentItem(NumContentItem):
+class LongitudinalTemporalOffsetFromEvent(NumContentItem):
 
     """Content item for Longitudinal Temporal Offset From Event."""
 
@@ -25,7 +33,7 @@ class LongitudinalTemporalOffsetFromEventContentItem(NumContentItem):
             e.g., "Baseline" or "Enrollment"
 
         """
-        super(LongitudinalTemporalOffsetFromEventContentItem, self).__init__(
+        super(LongitudinalTemporalOffsetFromEvent, self).__init__(
             name=CodedConcept(
                 value='128740',
                 meaning='Longitudinal Temporal Offset from Event',
@@ -47,7 +55,7 @@ class LongitudinalTemporalOffsetFromEventContentItem(NumContentItem):
         self.ContentSequence = ContentSequence([event_type_item])
 
 
-class SourceImageForRegionContentItem(ImageContentItem):
+class SourceImageForRegion(ImageContentItem):
 
     """Content item for Source Image for Region"""
 
@@ -65,7 +73,7 @@ class SourceImageForRegionContentItem(ImageContentItem):
             referenced image is a multi-frame image
 
         """
-        super(SourceImageForRegionContentItem, self).__init__(
+        super(SourceImageForRegion, self).__init__(
             name=CodedConcept(
                 value='121324',
                 meaning='Source Image',
@@ -78,7 +86,7 @@ class SourceImageForRegionContentItem(ImageContentItem):
         )
 
 
-class SourceImageForSegmentationContentItem(ImageContentItem):
+class SourceImageForSegmentation(ImageContentItem):
 
     """Content item for Source Image for Segmentation"""
 
@@ -96,7 +104,7 @@ class SourceImageForSegmentationContentItem(ImageContentItem):
             referenced image is a multi-frame image
 
         """
-        super(SourceImageForSegmentationContentItem, self).__init__(
+        super(SourceImageForSegmentation, self).__init__(
             name=CodedConcept(
                 value='121233',
                 meaning='Source Image for Segmentation',
@@ -109,7 +117,7 @@ class SourceImageForSegmentationContentItem(ImageContentItem):
         )
 
 
-class SourceSeriesForSegmentationContentItem(UIDRefContentItem):
+class SourceSeriesForSegmentation(UIDRefContentItem):
 
     """Content item for Source Series for Segmentation"""
 
@@ -121,7 +129,7 @@ class SourceSeriesForSegmentationContentItem(UIDRefContentItem):
             Series Instance UID
 
         """
-        super(SourceImageForSegmentationContentItem, self).__init__(
+        super(SourceImageForSegmentation, self).__init__(
             name=CodedConcept(
                 value='121232',
                 meaning='Source Series for Segmentation',
@@ -132,7 +140,7 @@ class SourceSeriesForSegmentationContentItem(UIDRefContentItem):
         )
 
 
-class ReferencedRegionContentItem(ScoordContentItem):
+class ReferencedRegion(ScoordContentItem):
 
     """Content item for a refrenced region of interest"""
 
@@ -162,10 +170,10 @@ class ReferencedRegionContentItem(ScoordContentItem):
             raise ValueError(
                 'Graphic type "MULTIPOINT" is not valid for region.'
             )
-        if not isinstance(source_image, SourceImageForRegionContentItem):
+        if not isinstance(source_image, SourceImageForRegion):
             raise TypeError(
                 'Argument "source_image" must have type '
-                'SourceImageForRegionContentItem.'
+                'SourceImageForRegion.'
             )
         if pixel_origin_interpretation == PixelOriginInterpretations.FRAME:
             if (not hasattr(source_image, 'ReferencedFrameNumber') or
@@ -174,7 +182,7 @@ class ReferencedRegionContentItem(ScoordContentItem):
                     'Frame number of source image must be specified when value '
                     'of argument "pixel_origin_interpretation" is "FRAME".'
                 )
-        super(ReferencedRegionContentItem, self).__init__(
+        super(ReferencedRegion, self).__init__(
             name=CodedConcept(
                 value='111030',
                 meaning='Image Region',
@@ -188,7 +196,7 @@ class ReferencedRegionContentItem(ScoordContentItem):
         self.ContentSequence = [source_image]
 
 
-class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
+class ReferencedVolumeSurface(Scoord3DContentItem):
 
     """Referenced volume surface"""
 
@@ -204,9 +212,9 @@ class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
         frame_of_reference_uid: Union[pydicom.uid.UID, str]
             unique identifier of the frame of reference within which the
             coordinates are defined
-        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentationContentItem], None], optional
+        source_images: Union[List[pydicom.sr.templates.SourceImageForSegmentation], None], optional
             source images for segmentation
-        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentationContentItem, None], optional
+        source_series: Union[pydicom.sr.templates.SourceSeriesForSegmentation, None], optional
             source series for segmentation
 
         Note
@@ -219,7 +227,7 @@ class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
             raise ValueError(
                 'Graphic type for volume surface must be "ELLIPSOID".'
             )
-        super(ReferencedVolumeSurfaceContentItem, self).__init__(
+        super(ReferencedVolumeSurface, self).__init__(
             name=CodedConcept(
                 value='121231',
                 meaning='Volume Surface',
@@ -233,18 +241,17 @@ class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
         self.ContentSequence = ContentSequence()
         if source_images is not None:
             for image in source_images:
-                if not isinstance(image, SourceImageForSegmentationContentItem):
+                if not isinstance(image, SourceImageForSegmentation):
                     raise TypeError(
                         'Items of argument "source_image" must have type '
-                        'SourceImageForSegmentationContentItem.'
+                        'SourceImageForSegmentation.'
                     )
                 self.ContentSequence.append(image)
         elif source_series is not None:
-            if not isinstance(source_series,
-                              SourceSeriesForSegmentationContentItem):
+            if not isinstance(source_series, SourceSeriesForSegmentation):
                 raise TypeError(
                     'Argument "source_series" must have type '
-                    'SourceSeriesForSegmentationContentItem.'
+                    'SourceSeriesForSegmentation.'
                 )
             self.ContentSequence.append(source_series)
         else:
@@ -254,7 +261,7 @@ class ReferencedVolumeSurfaceContentItem(Scoord3DContentItem):
             )
 
 
-class ReferencedRealWorldValueMapContentItem(CompositeContentItem):
+class ReferencedRealWorldValueMap(CompositeContentItem):
 
     """Referenced real world value map"""
 
@@ -266,7 +273,7 @@ class ReferencedRealWorldValueMapContentItem(CompositeContentItem):
             SOP Instance UID of the referenced object
 
         """
-        super(ReferencedRealWorldValueMapContentItem, self).__init__(
+        super(ReferencedRealWorldValueMap, self).__init__(
             name=CodedConcept(
                 value='126100',
                 meaning='Real World Value Map used for measurement',
@@ -278,7 +285,7 @@ class ReferencedRealWorldValueMapContentItem(CompositeContentItem):
         )
 
 
-class FindingSiteContentItem(CodeContentItem):
+class FindingSite(CodeContentItem):
 
     def __init__(self, anatomic_location, laterality=None,
                  topographical_modifier=None):
@@ -294,7 +301,7 @@ class FindingSiteContentItem(CodeContentItem):
             coded modifier value for anatomic location
 
         """  # noqa
-        super(FindingSiteContentItem, self).__init__(
+        super(FindingSite, self).__init__(
             name=CodedConcept(
                 value='G-C0E3',
                 meaning='Finding Site',
