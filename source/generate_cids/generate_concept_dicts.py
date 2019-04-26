@@ -28,10 +28,10 @@ logger = logging.getLogger(__name__)
     "compose":{
         "include":[
             {
-                "system":"http://snomed.info/srt",
+                "system":"http://snomed.info/sct",
                 "concept":[
                     {
-                        "code":"F-B2135",
+                        "code":"387362001",
                         "display":"Epinephrine"
                     },
 

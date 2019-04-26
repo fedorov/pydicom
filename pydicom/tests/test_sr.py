@@ -114,18 +114,18 @@ class TestFindingSiteOptional(unittest.TestCase):
 
     def test_finding_site(self):
         item = self._finding_site
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C0E3'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '363698007'
         assert item.ConceptCodeSequence[0] == self._location
         assert len(item.ContentSequence) == 2
 
     def test_laterality(self):
         item = self._finding_site.ContentSequence[0]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C171'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '272741003'
         assert item.ConceptCodeSequence[0] == self._laterality
 
     def test_topographical_modifier(self):
         item = self._finding_site.ContentSequence[1]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-A1F8'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '106233006'
         assert item.ConceptCodeSequence[0] == self._modifier
 
 
@@ -140,7 +140,7 @@ class TestFindingSite(unittest.TestCase):
 
     def test_finding_site(self):
         item = self._finding_site
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C0E3'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '363698007'
         assert item.ConceptCodeSequence[0] == self._location
         assert len(item.ContentSequence) == 0
 
@@ -266,7 +266,7 @@ class TestMeasurementOptional(unittest.TestCase):
 
     def test_method(self):
         item = self._measurement[0].ContentSequence[2]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C036'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '370129005'
         assert item.ConceptCodeSequence[0] == self._method
 
     def test_derivation(self):
@@ -276,7 +276,7 @@ class TestMeasurementOptional(unittest.TestCase):
 
     def test_finding_site(self):
         item = self._measurement[0].ContentSequence[4]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C0E3'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '363698007'
         assert item.ConceptCodeSequence[0] == self._location
         # Laterality and topological modifier were not specified
         assert len(item.ContentSequence) == 0
@@ -333,17 +333,17 @@ class TestROIMeasurements(unittest.TestCase):
 
     def test_method(self):
         item = self._roi_measurements[0]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C036'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '370129005'
         assert item.ConceptCodeSequence[0] == self._method
 
     def test_finding_site(self):
         item = self._roi_measurements[1]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-C0E3'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '363698007'
         assert item.ConceptCodeSequence[0] == self._location
 
     def test_measurement_1(self):
         item = self._roi_measurements[2]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-A166'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '42798000'
         assert len(item.MeasuredValueSequence) == 1
         assert len(item.MeasuredValueSequence[0]) == 2
         subitem = item.MeasuredValueSequence[0]
@@ -352,7 +352,7 @@ class TestROIMeasurements(unittest.TestCase):
 
     def test_measurement_2(self):
         item = self._roi_measurements[3]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-A166'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '42798000'
         assert len(item.MeasuredValueSequence) == 1
         assert len(item.MeasuredValueSequence[0]) == 3
         subitem = item.MeasuredValueSequence[0]
@@ -362,7 +362,7 @@ class TestROIMeasurements(unittest.TestCase):
 
     def test_measurement_3(self):
         item = self._roi_measurements[4]
-        assert item.ConceptNameCodeSequence[0].CodeValue == 'G-A166'
+        assert item.ConceptNameCodeSequence[0].CodeValue == '42798000'
         assert len(item.MeasuredValueSequence) == 1
         assert len(item.MeasuredValueSequence[0]) == 3
         subitem = item.MeasuredValueSequence[0]

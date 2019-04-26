@@ -303,9 +303,9 @@ class FindingSite(CodeContentItem):
         """  # noqa
         super(FindingSite, self).__init__(
             name=CodedConcept(
-                value='G-C0E3',
+                value='363698007',
                 meaning='Finding Site',
-                scheme_designator='SRT'
+                scheme_designator='SCT'
             ),
             value=anatomic_location,
             relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
@@ -314,9 +314,9 @@ class FindingSite(CodeContentItem):
         if laterality is not None:
             laterality_item = CodeContentItem(
                 name=CodedConcept(
-                    value='G-C171',
+                    value='272741003',
                     meaning='Laterality',
-                    scheme_designator='SRT'
+                    scheme_designator='SCT'
                 ),
                 value=laterality,
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
@@ -325,9 +325,9 @@ class FindingSite(CodeContentItem):
         if topographical_modifier is not None:
             modifier_item = CodeContentItem(
                 name=CodedConcept(
-                    value='G-A1F8',
+                    value='106233006',
                     meaning='Topographical Modifier',
-                    scheme_designator='SRT'
+                    scheme_designator='SCT'
                 ),
                 value=topographical_modifier,
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD

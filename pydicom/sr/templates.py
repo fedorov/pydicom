@@ -115,9 +115,9 @@ class Measurement(Template):
         if method is not None:
             method_item = CodeContentItem(
                 name=CodedConcept(
-                    value='G-C036',
+                    value='370129005',
                     meaning='Measurement Method',
-                    scheme_designator='SRT'
+                    scheme_designator='SCT'
                 ),
                 value=method,
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
@@ -286,9 +286,9 @@ class MeasurementProperties(Template):
         if upper_measurement_uncertainty is not None:
             upper_measurement_uncertainty_item = CodeContentItem(
                 name=CodedConcept(
-                    value='R-00364',
-                    meaning='Range of Upper Measurement Uncertainty',
-                    scheme_designator='SRT'
+                    value='371886008',
+                    meaning='+, range of upper measurement uncertainty',
+                    scheme_designator='SCT'
                 ),
                 value=upper_measurement_uncertainty,
                 relationship_type=RelationshipTypes.HAS_PROPERTIES
@@ -297,9 +297,9 @@ class MeasurementProperties(Template):
         if lower_measurement_uncertainty is not None:
             lower_measurement_uncertainty_item = CodeContentItem(
                 name=CodedConcept(
-                    value='R-00362',
-                    meaning='Range of Lower Measurement Uncertainty',
-                    scheme_designator='SRT'
+                    value='371885007',
+                    meaning='-, range of lower measurement uncertainty',
+                    scheme_designator='SCT'
                 ),
                 value=lower_measurement_uncertainty,
                 relationship_type=RelationshipTypes.HAS_PROPERTIES
@@ -1384,9 +1384,9 @@ class ROIMeasurements(Template):
         if method is not None:
             method_item = CodeContentItem(
                 name=CodedConcept(
-                    value='G-C036',
+                    value='370129005',
                     meaning='Measurement Method',
-                    scheme_designator='SRT'
+                    scheme_designator='SCT'
                 ),
                 value=method,
                 relationship_type=RelationshipTypes.HAS_CONCEPT_MOD
