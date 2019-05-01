@@ -211,12 +211,12 @@ class ContentSequence(Sequence):
 
         Parameters
         ----------
-        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None]
+        name: Union[pydicom.sr.coding.CodedConcept, pydicom.sr.coding.Code, None], optional
             coded name that items should have
-        value_type: Union[pydicom.sr.value_types.ValueTypes, None]
+        value_type: Union[pydicom.sr.value_types.ValueTypes, None], optional
             type of value that items should have
             (e.g. ``pydicom.sr.value_types.ValueTypes.CONTAINER``)
-        relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, None]
+        relationship_type: Union[pydicom.sr.value_types.RelationshipTypes, None], optional
             type of relationship that items should have with its parent
             (e.g. ``pydicom.sr.value_types.RelationshipTypes.CONTAINS``)
 

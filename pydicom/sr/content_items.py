@@ -413,7 +413,7 @@ class ReferencedSegmentation(ContentSequence):
             for image in source_images:
                 if not isinstance(image, SourceImageForSegmentation):
                     raise TypeError(
-                        'Items of argument "source_image" must have type '
+                        'Items of argument "source_images" must have type '
                         'SourceImageForSegmentation.'
                     )
                 self.append(image)

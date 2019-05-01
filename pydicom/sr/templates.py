@@ -1303,14 +1303,17 @@ class MeasurementsDerivedFromMultipleROIMeasurements(Template):
         value_item = NumContentItem(
             name=derivation
         )
+        value_item.ContentSequence = ContentSequence()
         for group in measurement_groups:
-            if not (isinstance(group, PlanarROIMeasurementsAndQualitativeEvaluations) or
-                    isinstance(group, VolumetricROIMeasurementsAndQualitativeEvaluations)):
+            allowed_group_types = (
+                PlanarROIMeasurementsAndQualitativeEvaluations,
+                VolumetricROIMeasurementsAndQualitativeEvaluations,
+            )
+            if not isinstance(group, allowed_group_types):
                 raise TypeError(
-                    'Items of argument "measurement_groups" must have '
-                    'type PlanarROIMeasurementsAndQualitativeEvaluations or '
+                    'Items of argument "measurement_groups" must have type '
+                    'PlanarROIMeasurementsAndQualitativeEvaluations or '
                     'VolumetricROIMeasurementsAndQualitativeEvaluations.'
-
                 )
             group[0].RelationshipType = 'R-INFERRED FROM'
             value_item.ContentSequence.extend(group)
@@ -1679,7 +1682,7 @@ class AlgorithmIdentification(Template):
         )
         self.append(name_item)
         version_item = TextContentItem(
-            version=CodedConcept(
+            name=CodedConcept(
                 value='111003',
                 meaning='Algorithm Version',
                 scheme_designator='DCM'
@@ -1691,7 +1694,7 @@ class AlgorithmIdentification(Template):
         if parameters is not None:
             for param in parameters:
                 parameter_item = TextContentItem(
-                    version=CodedConcept(
+                    name=CodedConcept(
                         value='111002',
                         meaning='Algorithm Parameter',
                         scheme_designator='DCM'
