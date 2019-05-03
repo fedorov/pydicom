@@ -4,7 +4,7 @@ import pytest
 
 from pydicom.dataset import Dataset
 from pydicom.sr import codes
-from pydicom.sr.document import Comprehensive3DSR
+from pydicom.sr.documents import Comprehensive3DSR
 from pydicom.sr.templates import (
     DEFAULT_LANGUAGE,
     DeviceObserverIdentifyingAttributes,
@@ -608,7 +608,7 @@ class TestComprehensive3DSR(unittest.TestCase):
         self._sop_instance_uid = generate_uid()
         self._instance_number = 4
         self._institution_name = 'institute'
-        self._institution_department_name = 'department'
+        self._institutional_department_name = 'department'
         self._manufacturer = 'manufacturer'
         self._report = Comprehensive3DSR(
             evidence=[self._ref_dataset],
@@ -619,7 +619,7 @@ class TestComprehensive3DSR(unittest.TestCase):
             sop_instance_uid=self._sop_instance_uid,
             instance_number=self._instance_number,
             institution_name=self._institution_name,
-            institution_department_name=self._institution_department_name,
+            institutional_department_name=self._institutional_department_name,
             manufacturer=self._manufacturer
         )
 
