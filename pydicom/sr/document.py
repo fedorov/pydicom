@@ -63,9 +63,9 @@ class Comprehensive3DSR(Dataset):
 
     def __init__(self, evidence, content,
                  series_instance_uid, series_number, series_description,
-                 sop_instance_uid, instance_number,
-                 institution_name, institution_department_name, manufacturer,
+                 sop_instance_uid, instance_number, manufacturer,
                  is_complete=False, is_final=False, is_verified=False,
+                 institution_name=None, institutional_department_name=None,
                  verifying_observer_name=None, verifying_organization=None,
                  performed_procedure_codes=None, requested_procedures=None,
                  previous_versions=None):
@@ -90,10 +90,10 @@ class Comprehensive3DSR(Dataset):
             SOP instance UID that should be assigned to the SR document instance
         instance_number: int
             number that should be assigned to this SR document instance
-        institution_name: str
+        institution_name: str, optional
             name of the institution of the person or device that creates the
             SR document instance
-        institution_department_name: str
+        institutional_department_name: str, optional
             name of the department of the person or device that creates the
             SR document instance
         manufacturer: str
@@ -144,9 +144,11 @@ class Comprehensive3DSR(Dataset):
         self.SeriesNumber = series_number
         self.InstanceNumber = instance_number
 
-        self.InstitutionName = institution_name
-        self.InstitutionalDepartmentName = institution_department_name
         self.Manufacturer = manufacturer
+        if institution_name is not None:
+            self.InstitutionName = institution_name
+            if institutional_department_name is not None:
+                self.InstitutionalDepartmentName = institutional_department_name
 
         now = datetime.datetime.now()
         if is_complete:
