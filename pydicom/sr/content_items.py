@@ -142,7 +142,8 @@ class SourceSeriesForSegmentation(UIDRefContentItem):
 
 class ImageRegion(ScoordContentItem):
 
-    """Content item for a referenced image region of interest"""
+    """Content item for a referenced image region of interest in the
+    two-dimensional image coordinate space in pixel unit"""
 
     def __init__(self, graphic_type, graphic_data, source_image,
                  pixel_origin_interpretation=PixelOriginInterpretations.VOLUME):
@@ -153,8 +154,8 @@ class ImageRegion(ScoordContentItem):
             name of the graphic type
         graphic_data: List[List[int]]
             ordered set of (row, column) coordinate pairs
-        source_image: pydicom.sr.template.SourceImageForRegionContentItem
-            source image to which `graphic_data` relate
+        source_image: pydicom.sr.template.SourceImageForRegion
+            source image to which `graphic_data` relates
         pixel_origin_interpretation: Union[pydicom.sr.value_types.PixelOriginInterpretations, str, None], optional
             whether pixel coordinates specified by `graphic_data` are defined
             relative to the total pixel matrix
@@ -194,6 +195,55 @@ class ImageRegion(ScoordContentItem):
             relationship_type=RelationshipTypes.CONTAINS
         )
         self.ContentSequence = [source_image]
+
+
+class ImageRegion3D(Scoord3DContentItem):
+
+    """Content item for a referenced image region of interest in the
+    three-dimensional patient/slide coordinate space in millimeter unit"""
+
+    def __init__(self, graphic_type, graphic_data, frame_of_reference_uid,
+                 source_images):
+        """
+        Parameters
+        ----------
+        graphic_type: Union[pydicom.sr.value_types.GraphicTypes3D, str]
+            name of the graphic type
+        graphic_data: List[List[int]]
+            ordered set of (x, y, z) coordinate triplets
+        frame_of_reference_uid: Union[pydicom.uid.UID, str, None]
+            UID of the frame of reference
+        source_images: List[pydicom.sr.template.SourceImageForRegion]
+            source images to which `graphic_data` relate
+
+        """  # noqa
+        graphic_type = GraphicTypes3D(graphic_type)
+        if graphic_type == GraphicTypes3D.MULTIPOINT:
+            raise ValueError(
+                'Graphic type "MULTIPOINT" is not valid for region.'
+            )
+        if graphic_type == GraphicTypes3D.ELLIPSOID:
+            raise ValueError(
+                'Graphic type "ELLIPSOID" is not valid for region.'
+            )
+        for img in source_images:
+            if not isinstance(img, SourceImageForRegion):
+                raise TypeError(
+                    'Items of argument "source_image" must have type '
+                    'SourceImageForRegion.'
+                )
+        super(ImageRegion3D, self).__init__(
+            name=CodedConcept(
+                value='111030',
+                meaning='Image Region',
+                scheme_designator='DCM'
+            ),
+            graphic_type=graphic_type,
+            graphic_data=graphic_data,
+            frame_of_reference_uid=frame_of_reference_uid,
+            relationship_type=RelationshipTypes.CONTAINS
+        )
+        self.ContentSequence = source_images
 
 
 class VolumeSurface(Scoord3DContentItem):
