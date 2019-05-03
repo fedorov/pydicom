@@ -1001,7 +1001,7 @@ class _MeasurementsAndQualitatitiveEvaluations(Template):
             )
         group_item.ContentSequence.extend(tracking_identifier)
         if session is not None:
-            session_item = CodeContentItem(
+            session_item = TextContentItem(
                 name=CodedConcept(
                     value='C67447',
                     meaning='Activity Session',
