@@ -829,7 +829,7 @@ class Scoord3DContentItem(ContentItem):
                 float(coordinate) for triplet in graphic_data
                 for coordinate in triplet
             ]
-        self.FrameOfReferenceUID = frame_of_reference_uid
+        self.ReferencedFrameOfReferenceUID = frame_of_reference_uid
         if fiducial_uid is not None:
             self.FiducialUID = fiducial_uid
 
