@@ -591,7 +591,7 @@ class CompositeContentItem(ContentItem):
         item = Dataset()
         item.ReferencedSOPClassUID = str(referenced_sop_class_uid)
         item.ReferencedSOPInstanceUID = str(referenced_sop_instance_uid)
-        self.ReferenceSOPSequence = [item]
+        self.ReferencedSOPSequence = [item]
 
 
 class ImageContentItem(ContentItem):
