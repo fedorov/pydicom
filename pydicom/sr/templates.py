@@ -1413,7 +1413,7 @@ class MeasurementReport(Template):
             )
         item = ContainerContentItem(
             name=title,
-            template_id='TID1500'
+            template_id='1500'
         )
         item.ContentSequence = ContentSequence()
         if language_of_content_item_and_descendants is None:

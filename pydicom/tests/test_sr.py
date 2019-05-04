@@ -260,8 +260,7 @@ class TestMeasurementOptional(unittest.TestCase):
             tracking_identifier=self._tracking_identifier,
             method=self._method,
             derivation=self._derivation,
-            finding_sites=[self._finding_site, ],
-            referenced_regions=[self._region]
+            finding_sites=[self._finding_site, ]
         )
 
     def test_method(self):
@@ -556,7 +555,7 @@ class TestMeasurementReport(unittest.TestCase):
         item = self._measurement_report[0]
         assert len(item.ContentSequence) == 8
         subitem = item.ContentTemplateSequence[0]
-        assert subitem.TemplateIdentifier == 'TID1500'
+        assert subitem.TemplateIdentifier == '1500'
 
     def test_language(self):
         item = self._measurement_report[0].ContentSequence[0]

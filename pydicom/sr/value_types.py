@@ -552,15 +552,10 @@ class ContainerContentItem(ContentItem):
         else:
             self.ContinuityOfContent = 'SEPARATE'
         if template_id is not None:
-            if not template_id.startswith('TID'):
-                raise ValueError(
-                    'Invalid template identifier: "{}"'.format(template_id)
-                )
             item = Dataset()
             item.MappingResource = 'DCMR'
             item.TemplateIdentifier = str(template_id)
             self.ContentTemplateSequence = [item]
-        self.ContentSequence = ContentSequence()
 
 
 class CompositeContentItem(ContentItem):
