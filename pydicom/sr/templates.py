@@ -49,9 +49,7 @@ class Measurement(Template):
     def __init__(self, name, tracking_identifier, value=None, unit=None,
                  qualifier=None, algorithm_id=None, derivation=None,
                  finding_sites=None, method=None, properties=None,
-                 referenced_regions=None, referenced_volume_surface=None,
-                 referenced_segmentation=None,
-                 referenced_real_world_value_map=None):
+                 referenced_image=None, referenced_real_world_value_map=None):
         """
         Parameters
         ----------
@@ -86,13 +84,8 @@ class Measurement(Template):
             measurement properties, including evaluations of its normality
             and/or significance, its relationship to a reference population,
             and an indication of its selection from a set of measurements
-        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, pydicom.sr.content_items.ReferencedSegmentation, None], optional
-            referenced segmentation that specifies the segment for regions of
-            interest in the source images
-        referenced_regions: Union[List[pydicom.sr.content_items.ImageRegion], None], optional
-            regions of interest in source images
-        referenced_volume_surface: Union[pydicom.sr.content_items.VolumeSurface, None], optional
-            referenced volume surface of interest in source images
+        referenced_image: Union[pydicom.sr.content_item.SourceImageForProcessing, None], optional
+            referenced image from which quantitative features were extracted
         referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
 
@@ -154,33 +147,13 @@ class Measurement(Template):
                     'type MeasurementProperties.'
                 )
             value_item.ContentSequence.extend(properties)
-        if referenced_regions is not None:
-            for region in referenced_regions:
-                if not isinstance(region, ImageRegion):
-                    raise TypeError(
-                        'Items of argument "referenced_region" must have type '
-                        'ImageRegion.'
-                    )
-                value_item.ContentSequence.append(region)
-        elif referenced_volume_surface is not None:
-            if not isinstance(referenced_volume_surface,
-                              VolumeSurface):
+        if referenced_image is not None:
+            if not isinstance(referenced_image, SourceImageForProcessing):
                 raise TypeError(
-                    'Argument "referenced_volume_surface" must have type '
-                    'VolumeSurface.'
+                    'Argument "referenced_image" must have type '
+                    'SourceImageForProcessing.'
                 )
-            value_item.ContentSequence.append(referenced_volume_surface)
-        elif referenced_segmentation is not None:
-            if not isinstance(referenced_segmentation,
-                              (ReferencedSegmentation,
-                               ReferencedSegmentationFrame)
-                             ):
-                raise TypeError(
-                    'Argument "referenced_segmentation" must have type '
-                    'ReferencedSegmentation or '
-                    'ReferencedSegmentationFrame.'
-                )
-            value_item.ContentSequence.append(referenced_segmentation)
+            value_item.ContentSequence.append(referenced_image)
         if referenced_real_world_value_map is not None:
             if not isinstance(referenced_real_world_value_map,
                               RealWorldValueMap):
@@ -411,27 +384,6 @@ class NormalRangeProperties(Template):
                 relationship_type=RelationshipTypes.HAS_PROPERTIES
             )
             self.append(authority_item)
-
-
-# TODO
-class EquationOrTable(Template):
-
-    """TID 315 Equation or Table"""
-
-
-class ImageOrSpatialCoordinates(Template):
-
-    """TID 320 Image or Spatial Coordinates"""
-
-
-class WaveformOrTemporalCoordinates(Template):
-
-    """TID 321 Waveform or Temporal Coordinates"""
-
-
-class Quotation(Template):
-
-    """TID 1000 Quotation"""
 
 
 class ObservationContext(Template):
