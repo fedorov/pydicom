@@ -29,8 +29,8 @@ from pydicom.sr import codes
 
 DEFAULT_LANGUAGE = CodedConcept(
     value='en-US',
-    meaning='English as used in the United States',
-    scheme_designator='RFC5646'
+    scheme_designator='RFC5646',
+    meaning='English (United States)'
 )
 
 
