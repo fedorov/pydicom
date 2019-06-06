@@ -57,7 +57,7 @@ class LongitudinalTemporalOffsetFromEvent(NumContentItem):
 
 class SourceImageForRegion(ImageContentItem):
 
-    """Content item for Source Image for Region"""
+    """Content item for Source Image"""
 
     def __init__(self, referenced_sop_class_uid, referenced_sop_instance_uid,
                  referenced_frame_numbers=None):
@@ -75,8 +75,8 @@ class SourceImageForRegion(ImageContentItem):
         """
         super(SourceImageForRegion, self).__init__(
             name=CodedConcept(
-                value='121324',
-                meaning='Source Image',
+                value='121322',
+                meaning='Source image for image processing operation',
                 scheme_designator='DCM'
             ),
             referenced_sop_class_uid=referenced_sop_class_uid,
@@ -173,8 +173,7 @@ class ImageRegion(ScoordContentItem):
             )
         if not isinstance(source_image, SourceImageForRegion):
             raise TypeError(
-                'Argument "source_image" must have type '
-                'SourceImageForRegion.'
+                'Argument "source_image" must have type SourceImageForRegion.'
             )
         if pixel_origin_interpretation == PixelOriginInterpretations.FRAME:
             if (not hasattr(source_image, 'ReferencedFrameNumber') or
@@ -202,8 +201,7 @@ class ImageRegion3D(Scoord3DContentItem):
     """Content item for a referenced image region of interest in the
     three-dimensional patient/slide coordinate space in millimeter unit"""
 
-    def __init__(self, graphic_type, graphic_data, frame_of_reference_uid,
-                 source_images):
+    def __init__(self, graphic_type, graphic_data, frame_of_reference_uid):
         """
         Parameters
         ----------
@@ -213,8 +211,6 @@ class ImageRegion3D(Scoord3DContentItem):
             ordered set of (x, y, z) coordinate triplets
         frame_of_reference_uid: Union[pydicom.uid.UID, str, None]
             UID of the frame of reference
-        source_images: List[pydicom.sr.template.SourceImageForRegion]
-            source images to which `graphic_data` relate
 
         """  # noqa
         graphic_type = GraphicTypes3D(graphic_type)
@@ -226,12 +222,6 @@ class ImageRegion3D(Scoord3DContentItem):
             raise ValueError(
                 'Graphic type "ELLIPSOID" is not valid for region.'
             )
-        for img in source_images:
-            if not isinstance(img, SourceImageForRegion):
-                raise TypeError(
-                    'Items of argument "source_image" must have type '
-                    'SourceImageForRegion.'
-                )
         super(ImageRegion3D, self).__init__(
             name=CodedConcept(
                 value='111030',
@@ -243,7 +233,6 @@ class ImageRegion3D(Scoord3DContentItem):
             frame_of_reference_uid=frame_of_reference_uid,
             relationship_type=RelationshipTypes.CONTAINS
         )
-        self.ContentSequence = source_images
 
 
 class VolumeSurface(Scoord3DContentItem):
