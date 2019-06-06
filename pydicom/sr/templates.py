@@ -388,12 +388,13 @@ class ObservationContext(Template):
 
     """TID 1001 Observation Context"""
 
-    def __init__(self, observer_person_context, observer_device_context=None,
+    def __init__(self, observer_person_context=None,
+                 observer_device_context=None,
                  subject_context=None):
         """
         Parameters
         ----------
-        observer_person_context: pydicom.sr.templates.ObserverContext
+        observer_person_context: [pydicom.sr.templates.ObserverContext, None], optional
             description of the person that reported the observation
         observer_device_context: Union[pydicom.sr.templates.ObserverContext, None], optional
             description of the device that was involved in reporting the
@@ -406,14 +407,15 @@ class ObservationContext(Template):
 
         """
         super(ObservationContext, self).__init__()
-        if not isinstance(observer_person_context, ObserverContext):
-            raise TypeError(
-                'Argument "observer_person_context" must '
-                'have type {}'.format(
-                    ObserverContext.__name__
+        if observer_person_context is not None:
+            if not isinstance(observer_person_context, ObserverContext):
+                raise TypeError(
+                    'Argument "observer_person_context" must '
+                    'have type {}'.format(
+                        ObserverContext.__name__
+                    )
                 )
-            )
-        self.extend(observer_person_context)
+            self.extend(observer_person_context)
         if observer_device_context is not None:
             if not isinstance(observer_device_context, ObserverContext):
                 raise TypeError(
