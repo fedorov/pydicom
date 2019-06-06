@@ -131,12 +131,9 @@ class Comprehensive3DSR(Dataset):
         self.is_little_endian = True
         self.preamble = b'\x00' * 128
         self.file_meta = Dataset()
-        self.file_meta.MediaStorageSOPClassUID = self.SOPClassUID
-        self.file_meta.MediaStorageSOPInstanceUID = self.SOPInstanceUID
         self.file_meta.TransferSyntaxUID = ExplicitVRLittleEndian
-        self.file_meta.ImplementationClassUID = PYDICOM_IMPLEMENTATION_UID
-        self.file_meta.FileMetaInformationGroupLength = 0
         self.file_meta.FileMetaInformationVersion = b'\x00\x01'
+        self.fix_meta_info(enforce_standard=True)
 
         self.Modality = 'SR'
         self.SeriesDescription = str(series_description)
