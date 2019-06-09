@@ -7,14 +7,21 @@ resources.
 
 """
 
-import ftplib
+from io import BytesIO
 import json
+import ftplib
+import glob
 import logging
 import os
 import re
-from io import BytesIO
+import sys
 import tempfile
-import glob
+from xml.etree import ElementTree as ET
+
+if sys.version_info[0] < 3:
+    import urllib as urllib_request
+else:
+    import urllib.request as urllib_request
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +48,6 @@ logger = logging.getLogger(__name__)
 # http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_8.html#table_8-1
 FHIR_SYSTEM_TO_DICOM_SCHEME_DESIGNATOR = {
     'http://snomed.info/sct': 'SCT',
-    'http://snomed.info/srt': 'SRT',
     'http://dicom.nema.org/resources/ontology/DCM': 'DCM',
     'http://loinc.org': 'LN',
     'http://www.radlex.org': 'RADLEX',
@@ -64,6 +70,7 @@ leave_alone = ['mm', 'cm', 'km', 'um',
                'mg', 'kg',
                ]  # ... probably need others
 
+
 def camel_case(s):
     return ''.join(word.capitalize() if word != word.upper()
                    and word not in leave_alone
@@ -71,6 +78,7 @@ def camel_case(s):
                    for word in re.split(r"\W", s, flags=re.UNICODE)
                    if word.isalnum()
                    )
+
 
 def keyword_from_meaning(name):
     """Return a camel case valid python identifier"""
@@ -87,6 +95,18 @@ def keyword_from_meaning(name):
     name = name.replace("s’ ", "s ")
     name = name.replace("s' ", "s ")
 
+    # Mathematical symbols
+    name = name.replace("%", " Percent ")
+    name = name.replace(">", " Greater Than ")
+    name = name.replace("=", " Equals ")
+    name = name.replace("<", " Lesser Than ")
+
+    name = re.sub(r'([0-9]+)\.([0-9]+)', '\\1 Point \\2', name)
+    name = re.sub(r'\s([0-9.]+)-([0-9.]+)\s', ' \\1 To \\2 ', name)
+
+    name = re.sub(r'([0-9]+)day', '\\1 Day', name)
+    name = re.sub(r'([0-9]+)y', '\\1 Years', name)
+
     name = camel_case(name.strip())
 
     # Python variables must not begin with a number.
@@ -95,7 +115,8 @@ def keyword_from_meaning(name):
 
     return name
 
-def download_fhir(local_dir):
+
+def download_fhir_value_sets(local_dir):
     ftp_host = 'medical.nema.org'
 
     if not os.path.exists(local_dir):
@@ -107,13 +128,13 @@ def download_fhir(local_dir):
 
     ftp_path = 'medical/dicom/resources/valuesets/fhir/json'
     logger.info('list files in directory "{}"'.format(ftp_path))
-    ftp_files = ftp.nlst(ftp_path)
+    fhir_value_set_files = ftp.nlst(ftp_path)
     ftp_url = 'ftp://{host}/{path}'.format(host=ftp_host, path=ftp_path)
 
     try:
-        for ftp_filepath in ftp_files:
+        for ftp_filepath in fhir_value_set_files:
             ftp_filename = os.path.basename(ftp_filepath)
-            logger.info('retrieve file "{}"'.format(ftp_filename))
+            logger.info('retrieve value set file "{}"'.format(ftp_filename))
             with BytesIO() as fp:
                 ftp.retrbinary('RETR {}'.format(ftp_filepath), fp.write)
                 content = fp.getvalue()
@@ -122,6 +143,56 @@ def download_fhir(local_dir):
                 f_local.write(content)
     finally:
         ftp.quit()
+
+
+def _parse_html(content):
+    # from lxml import html
+    # doc = html.document_fromstring(content)
+    return ET.fromstring(content, parser=ET.XMLParser(encoding='utf-8'))
+
+
+def _download_html(url):
+    response = urllib_request.urlopen(url)
+    return response.read()
+
+
+def _get_text(element):
+    text = "".join(element.itertext())
+    return text.strip()
+
+
+def get_table_o1():
+    url = 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_O.html#table_O-1'
+    root = _parse_html(_download_html(url))
+    namespaces = {'w3': root.tag.split('}')[0].strip('{')}
+    body = root.find('w3:body', namespaces=namespaces)
+    table = body.findall('.//w3:tbody', namespaces=namespaces)[0]
+    rows = table.findall('./w3:tr', namespaces=namespaces)
+    return [
+        (
+            _get_text(row[0].findall('.//w3:a', namespaces=namespaces)[-1]),
+            _get_text(row[1].findall('.//w3:p', namespaces=namespaces)[0]),
+            _get_text(row[2].findall('.//w3:p', namespaces=namespaces)[0]),
+        )
+        for row in rows
+    ]
+
+
+def get_table_d1():
+    url = 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#table_D-1'
+    root = _parse_html(_download_html(url))
+    namespaces = {'w3': root.tag.split('}')[0].strip('{')}
+    body = root.find('w3:body', namespaces=namespaces)
+    table = body.findall('.//w3:tbody', namespaces=namespaces)[0]
+    rows = table.findall('./w3:tr', namespaces=namespaces)
+    return [
+        (
+             _get_text(row[0].findall('.//w3:p', namespaces=namespaces)[0]),
+             _get_text(row[1].findall('.//w3:p', namespaces=namespaces)[0])
+        )
+        for row in rows
+    ]
+
 
 def write_concepts(concepts, cid_concepts, cid_lists, name_for_cid):
     from pprint import pprint
@@ -168,13 +239,13 @@ if __name__ == '__main__':
     fhir_dir = os.path.join(local_dir, "fhir")
 
     if not os.path.exists(fhir_dir) or not os.listdir(fhir_dir):
-        download_fhir(fhir_dir)
+        download_fhir_value_sets(fhir_dir)
     else:
         msg = "Using locally downloaded files\n"
         msg += "from directory " + fhir_dir
         logging.info(msg)
 
-    ftp_files = glob.glob(os.path.join(fhir_dir, "*"))
+    fhir_value_set_files = glob.glob(os.path.join(fhir_dir, "*"))
     cid_pattern = re.compile('^dicom-cid-([0-9]+)-[a-zA-Z]+')
 
     concepts = dict()
@@ -183,7 +254,7 @@ if __name__ == '__main__':
 
     # XXX = 0
     try:
-        for ftp_filepath in ftp_files:
+        for ftp_filepath in fhir_value_set_files:
             ftp_filename = os.path.basename(ftp_filepath)
             logger.info('process file "{}"'.format(ftp_filename))
 
@@ -244,8 +315,31 @@ if __name__ == '__main__':
             # if XXX > 3:
                 # break
             # XXX += 1
+
+
+        scheme_designator = 'SCT'
+        snomed_codes = get_table_o1()
+        for code, srt_code, meaning in snomed_codes:
+            name = keyword_from_meaning(meaning)
+            if name not in concepts[scheme_designator]:
+                concepts[scheme_designator][name] = {code: (meaning, [])}
+            else:
+                prior = concepts[scheme_designator][name]
+                if code not in prior:
+                    prior[code] = (meaning, [])
+
+        scheme_designator = 'DCM'
+        dicom_codes = get_table_d1()
+        for code, meaning in dicom_codes:
+            name = keyword_from_meaning(meaning)
+            if name not in concepts[scheme_designator]:
+                concepts[scheme_designator][name] = {code: (meaning, [])}
+            else:
+                prior = concepts[scheme_designator][name]
+                if code not in prior:
+                    prior[code] = (meaning, [])
+
     finally:
         # If any error or KeyboardInterrupt, close up and write what we have
-
 
         write_concepts(concepts, cid_concepts, cid_lists, name_for_cid)

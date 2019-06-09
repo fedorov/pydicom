@@ -147,9 +147,9 @@ cid_concepts[6200] = \
 
 name_for_cid[7041] = 'CalciumScoringPatientSizeCategories'
 cid_concepts[7041] = \
-{'DCM': ['Small320cmLateralThickness',
-         'Medium320380cmLateralThickness',
-         'Large380cmLateralThickness']}
+{'DCM': ['SmallLesserThan32Point0cmLateralThickness',
+         'Medium32Point0To38Point0cmLateralThickness',
+         'LargeGreaterThan38Point0cmLateralThickness']}
 
 name_for_cid[3239] = 'PerceivedExertionScales'
 cid_concepts[3239] = \
@@ -830,7 +830,7 @@ cid_concepts[230] = \
 
 name_for_cid[4250] = 'VisualFieldStaticPerimetryTestPatterns'
 cid_concepts[4250] = \
-{'DCM': ['VisualField604TestPattern',
+{'DCM': ['VisualField60To4TestPattern',
          'VisualFieldCentralTestPattern',
          'VisualFieldMaculaTestPattern',
          'VisualFieldCentral40PointTestPattern',
@@ -839,11 +839,11 @@ cid_concepts[4250] = \
          'VisualFieldFullField81PointTestPattern',
          'VisualFieldFullField120PointTestPattern',
          'VisualFieldGTestPattern',
-         'VisualField242TestPattern',
+         'VisualField24To2TestPattern',
          'VisualFieldMTestPattern',
-         'VisualField102TestPattern',
+         'VisualField10To2TestPattern',
          'VisualField07TestPattern',
-         'VisualField302TestPattern',
+         'VisualField30To2TestPattern',
          'VisualFieldLVCTestPattern']}
 
 name_for_cid[6113] = 'MediastinumAnatomyFindingorFeature'
@@ -1288,7 +1288,7 @@ cid_concepts[12200] = \
         'PeakGradient',
         'LeftVentricleInternalEndDiastolicDimension',
         'LeftVentricleDiastolicMajorAxis',
-        'InterventricularSeptumThickening',
+        'InterventricularSeptumPercentThickening',
         'PeakInstantaneousFlowRate',
         'DecelerationTime',
         'AccelerationTime',
@@ -1302,7 +1302,7 @@ cid_concepts[12200] = \
         'TimeAveragedPeakVelocity',
         'InterventricularSeptumToPosteriorWallThicknessRatio',
         'VelocityOfFlowPropagation',
-        'LeftVentriclePosteriorWallThickening',
+        'LeftVentriclePosteriorWallPercentThickening',
         'AliasVelocity',
         'PressureHalfTime',
         'EVelocityToAnnulusEVelocityRatio',
@@ -1535,7 +1535,7 @@ cid_concepts[25] = \
          'TechnetiumTc99mStannousEtidronate',
          'FluorodeoxyglucoseF18',
          'IodinatedI125RoseBengal',
-         'Indium111FeOH3',
+         'Indium111FeOHGreaterThan3LesserThan',
          'TechnetiumTc99mLidofenin',
          'SelenomethionioneSe75',
          'FibrinogenI123',
@@ -1652,7 +1652,7 @@ cid_concepts[12257] = \
         'EFSlope',
         'TimeToLeftVentricleETissueVelocity',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave',
@@ -2052,7 +2052,10 @@ cid_concepts[3736] = \
 
 name_for_cid[6164] = 'TimeIntervals'
 cid_concepts[6164] = \
-{'DCM': ['_3MonthsAgo', '_4MonthsTo1YearAgo', '_1YearAgo', 'NotSure']}
+{'DCM': ['LesserThan3MonthsAgo',
+         '_4MonthsTo1YearAgo',
+         'GreaterThan1YearAgo',
+         'NotSure']}
 
 name_for_cid[3448] = 'AirwayAssessment'
 cid_concepts[3448] = \
@@ -3415,15 +3418,15 @@ cid_concepts[6036] = \
 
 name_for_cid[3664] = 'OxygenConsumptionEquationsandTables'
 cid_concepts[3664] = \
-{'DCM': ['VO2Vestpd10FIO2FE02',
-         'Vo2maleBSA13811149LogeAge0378Hrf',
-         'Vo2femaleBSA13811704LogeAge0378Hrf',
+{'DCM': ['VO2EqualsVestpd10FIO2FE02',
+         'Vo2maleEqualsBSA138Point111Point49LogeAge0Point378Hrf',
+         'Vo2femaleEqualsBSA138Point117Point04LogeAge0Point378Hrf',
          'FleischTable',
          'BoothbyTable',
-         'VO2176BSA',
+         'VO2Equals176BSA',
          'RobertsonReidTable',
-         'VO2152BSA',
-         'VO2175BSA']}
+         'VO2Equals152BSA',
+         'VO2Equals175BSA']}
 
 name_for_cid[3721] = 'CardiovascularSurgeries'
 cid_concepts[3721] = \
@@ -3899,8 +3902,8 @@ name_for_cid[12201] = 'LeftVentricleLinear'
 cid_concepts[12201] = \
 {'LN': ['LeftVentricleInternalEndDiastolicDimension',
         'LeftVentricleDiastolicMajorAxis',
-        'InterventricularSeptumThickening',
-        'LeftVentriclePosteriorWallThickening',
+        'InterventricularSeptumPercentThickening',
+        'LeftVentriclePosteriorWallPercentThickening',
         'LeftVentricleInternalSystolicDimension',
         'LeftVentricularFractionalShortening',
         'LeftVentricleSystolicMajorAxis',
@@ -4922,7 +4925,7 @@ cid_concepts[12271] = \
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
         'TimeToLeftVentricleETissueVelocity',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'BCSlope',
         'PreEjectionPeriod',
@@ -5067,18 +5070,18 @@ cid_concepts[3233] = \
 
 name_for_cid[3663] = 'BodySurfaceAreaEquations'
 cid_concepts[3663] = \
-{'DCM': ['BSA0038189WT0423HT0362',
-         'BSA132103433WT',
-         'BSA0010265WT0423HT0651',
-         'BSA00004688WT0816800154LogWT',
-         'BSA0008883WT0444HT0663',
-         'BSA0024265WT05378Htcm03964',
-         'BSAHTWT3605',
-         'BSA0007358WT0425HT0725',
-         'BSA0007184WT0425HT0725',
-         'BSA00235WT051456Htcm042246',
-         'BSA0003207WT0728500188LogWTHT03',
-         'BSA0009568WT0473HT0655']}
+{'DCM': ['BSAEquals0Point038189WT0Point423HT0Point362',
+         'BSAEquals13210Point3433WT',
+         'BSAEquals0Point010265WT0Point423HT0Point651',
+         'BSAEquals0Point0004688WT0Point8168To0Point0154LogWT',
+         'BSAEquals0Point008883WT0Point444HT0Point663',
+         'BSAEquals0Point024265WT0Point5378Htcm0Point3964',
+         'BSAEqualsHTWT360Point5',
+         'BSAEquals0Point007358WT0Point425HT0Point725',
+         'BSAEquals0Point007184WT0Point425HT0Point725',
+         'BSAEquals0Point0235WT0Point51456Htcm0Point42246',
+         'BSAEquals0Point003207WT0Point7285To0Point0188LogWTHT0Point3',
+         'BSAEquals0Point009568WT0Point473HT0Point655']}
 
 name_for_cid[7270] = 'MRDiffusionComponentSemantics'
 cid_concepts[7270] = \
@@ -5103,7 +5106,8 @@ cid_concepts[10020] = \
 
 name_for_cid[3726] = 'IndicationsforCoronaryIntervention'
 cid_concepts[3726] = \
-{'DCM': ['CoronaryLesion50Stenosis'], 'SCT': ['CardiogenicShock']}
+{'DCM': ['CoronaryLesionGreaterThanEquals50PercentStenosis'],
+ 'SCT': ['CardiogenicShock']}
 
 name_for_cid[3419] = 'FindingsTitles'
 cid_concepts[3419] = \
@@ -5175,7 +5179,7 @@ cid_concepts[12267] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -5330,12 +5334,12 @@ name_for_cid[3337] = 'HemodynamicAnnotations'
 cid_concepts[3337] = \
 {'DCM': ['BeatDetectedRejected',
          'AWavePeakPressure',
-         '_70OfThermalDyeDilutionCO',
+         '_70PercentOfThermalDyeDilutionCO',
          'ValveOpen',
          'BeatDetectedAccepted',
          'AWavePressureAverage',
          'VWavePeakPressure',
-         '_35OfThermalDyeDilutionCO',
+         '_35PercentOfThermalDyeDilutionCO',
          'ValveClose',
          'VWavePressureAverage',
          'StartOfInspiration',
@@ -8284,7 +8288,7 @@ cid_concepts[3117] = \
 
 name_for_cid[3455] = 'IndexMethods'
 cid_concepts[3455] = \
-{'DCM': ['BSA1219'], 'LN': ['BSA']}
+{'DCM': ['BSA1Point219'], 'LN': ['BSA']}
 
 name_for_cid[3005] = 'RespirationWaveform'
 cid_concepts[3005] = \
@@ -8753,7 +8757,7 @@ cid_concepts[12266] = \
         'MitralValveESeptalSeparation',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -9052,7 +9056,7 @@ cid_concepts[12270] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -9608,7 +9612,7 @@ cid_concepts[12009] = \
 name_for_cid[6160] = 'BreastPrimaryTumorAssessmentFromAJCC'
 cid_concepts[6160] = \
 {'SCT': ['TXPrimaryTumorCannotBeAssessedBreast',
-         'T1bTumorMoreThan05cmButNotMoreThan1cm',
+         'T1bTumorMoreThan0Point5cmButNotMoreThan1cm',
          'T4InflammatoryCarcinomaBreast',
          'T1Tumor2cmOrLessInGreatestDimensionBreast',
          'T0NoEvidenceOfPrimaryTumorBreast',
@@ -9617,10 +9621,10 @@ cid_concepts[6160] = \
          'T2TumorMoreThan2cmButNotMoreThan5cm',
          'T1cTumorMoreThan1cmButNotMoreThan2cm',
          'TisPagetDiseaseOfTheNippleWithNoTumor',
-         'T1aTumorMoreThan01cmButNotMoreThan05cm',
+         'T1aTumorMoreThan0Point1cmButNotMoreThan0Point5cm',
          'T4aTumorOfAnySizeWithExtensionToChestWallNotIncl',
          'T4bTumorOfAnySizeWithEdemaIncludingPeauDOrange',
-         'T1micMicroinvasion01cmOrLessInGreatestDimension',
+         'T1micMicroinvasion0Point1cmOrLessInGreatestDimension',
          'T4TumorOfAnySizeWithDirectExtensionToChestWall',
          'T4cTumorOfAnySizeWithDirectExtensionToChestWall',
          'TisLobularCarcinomaInSituBreast',
@@ -10733,13 +10737,13 @@ cid_concepts[12300] = \
         'MitralRegurgitationVmax',
         'LeftVentricularEjectionFractionSinglePlane4CMOD',
         'InterventricularSeptumSystolicDimensionMM',
-        'LeftVentricularMassDimensionMethodMMHeight27',
+        'LeftVentricularMassDimensionMethodMMHeight2Point7',
         'LVMidSeptalTimeToSVmaxTsMidSeptal',
         'AorticSinotubularJunctionDimension',
         'LeftVentricularInternalDiastolicDimensionBSA',
         'TricuspidRegurgitationPISARadius',
         'InferiorVenaCavaDiameter',
-        'AorticRegurgitantJetWidthLVOTWidth',
+        'AorticRegurgitantJetWidthLVOTWidthPercent',
         'MitralValveMeanGradient',
         'RightVentricularEjectionTime',
         'MitralAnnulusDiastolicDiameterA2C',
@@ -10799,7 +10803,7 @@ cid_concepts[12300] = \
         'MitralRegurgitantFractionPISA',
         'RightPulmonaryArteryDiameter',
         'AorticRegurgitationPISAVelocity',
-        'LeftVentricularMassAreaLengthHeight27',
+        'LeftVentricularMassAreaLengthHeight2Point7',
         'AorticValveAreaContinuityVTI',
         'PulmonicValveEjectionTime',
         'PulmonicValvePeakGradient',
@@ -10808,7 +10812,7 @@ cid_concepts[12300] = \
         'LeftVentricularEpicardialAreaSAXPMLevel',
         'MitralValveAreaPISA',
         'LeftAtrialEndSystolicArea2C',
-        'LeftVentricularMassDimensionMethod2DHeight27',
+        'LeftVentricularMassDimensionMethod2DHeight2Point7',
         'LeftVentricularEndDiastolicVolumeBiplaneMOD',
         'LeftVentricularOutflowTractVmax',
         'MitralValvePressureHalfTime',
@@ -10860,7 +10864,7 @@ cid_concepts[12300] = \
         'LeftVentricularEjectionFraction3D',
         'LeftVentricularEndDiastolicVolumeSinglePlane2CMOD',
         'LeftVentricularEndSystolicVolumeSinglePlane4CMOD',
-        'LeftVentricularMassTruncatedEllipseHeight27',
+        'LeftVentricularMassTruncatedEllipseHeight2Point7',
         'AorticRegurgitationVmax',
         'TricuspidAnnulusDiameter',
         'TricuspidValveSPrimeVmax',
@@ -10911,7 +10915,7 @@ cid_concepts[12300] = \
         'LeftVentricularEndSystolicVolumeBiplaneMODBSA',
         'TricuspidValveDecelerationTime',
         'AscendingAortaDimension',
-        'AorticRegurgitantJetAreaLVOTArea',
+        'AorticRegurgitantJetAreaLVOTAreaPercent',
         'MitralAnnulusDiastolicDiameterA4C',
         'PulmonicValveAccelerationTime']}
 
@@ -12035,9 +12039,9 @@ cid_concepts[8132] = \
 
 name_for_cid[6069] = 'NottinghamCombinedHistologicGrade'
 cid_concepts[6069] = \
-{'SCT': ['NottinghamCombinedGradeI35Points',
-         'NottinghamCombinedGradeII67Points',
-         'NottinghamCombinedGradeIII89Points',
+{'SCT': ['NottinghamCombinedGradeI3To5Points',
+         'NottinghamCombinedGradeII6To7Points',
+         'NottinghamCombinedGradeIII8To9Points',
          'NottinghamCombinedGradeCannotBeDetermined']}
 
 name_for_cid[7101] = 'BrainAtlasFiducials'
@@ -12452,7 +12456,7 @@ cid_concepts[12268] = \
         'MitralValveESeptalSeparation',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -16008,7 +16012,7 @@ cid_concepts[12252] = \
 {'LN': ['HRCorrectedMeanVelocityOfCircumferentialFiberShortening',
         'MeanVelocityOfCircumferentialFiberShorteningMeanVcfv',
         'FractionalShortening',
-        'Thickening'],
+        'PercentThickening'],
  'SCT': ['CardiacEjectionFraction']}
 
 name_for_cid[9534] = 'RadiotherapyTargets'
@@ -16101,7 +16105,7 @@ cid_concepts[12272] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'BCSlope',
         'PreEjectionPeriod',
@@ -16951,7 +16955,7 @@ cid_concepts[12264] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -17050,7 +17054,7 @@ cid_concepts[6161] = \
          'NXRegionalLymphNodesCannotBeAssessed',
          'N2MetastasisIn4To9AxillaryLymphNodes',
          'N3bMetastasisInClinicallyApparentIpsilateralInternal',
-         'N2aMetastasisIn4To9AxillaryLymphNodes20mm']}
+         'N2aMetastasisIn4To9AxillaryLymphNodes2Point0mm']}
 
 name_for_cid[3676] = 'LeadMeasurementTechnique'
 cid_concepts[3676] = \
@@ -17295,10 +17299,10 @@ cid_concepts[3524] = \
 {'LN': ['BloodCarbonDioxidePartialPressure',
         'BloodOxygenPartialPressure',
         'VenousOxygenPartialPressure',
-        'OxygenPartialPressureAt50SaturationP50',
-        'ArterialOxygenPartialPressureAt50Saturation',
+        'OxygenPartialPressureAt50PercentSaturationP50',
+        'ArterialOxygenPartialPressureAt50PercentSaturation',
         'VenousBloodCarbonDioxidePartialPressure',
-        'VenousOxygenPartialPressureAt50Saturation',
+        'VenousOxygenPartialPressureAt50PercentSaturation',
         'ArterialOxygenPartialPressure',
         'ArterialBloodCarbonDioxidePartialPressure']}
 
@@ -20580,7 +20584,7 @@ cid_concepts[12259] = \
         'EFSlope',
         'TimeToLeftVentricleETissueVelocity',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'TissueVelocityTimeIntegralVTIForTheAreaUnderLeftVentricleEWave',
@@ -21305,7 +21309,7 @@ cid_concepts[12263] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'BCSlope',
         'PreEjectionPeriod',
@@ -22208,7 +22212,7 @@ cid_concepts[12274] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'PreEjectionPeriod',
         'AWavePeakVelocity',
@@ -22270,7 +22274,11 @@ cid_concepts[7449] = \
 
 name_for_cid[4265] = 'OphthalmicThicknessDeviationCategories'
 cid_concepts[4265] = \
-{'DCM': ['P5', 'P5', 'P2', 'P1', 'P05']}
+{'DCM': ['PGreaterThan5Percent',
+         'PLesserThan5Percent',
+         'PLesserThan2Percent',
+         'PLesserThan1Percent',
+         'PLesserThan0Point5Percent']}
 
 name_for_cid[12018] = 'OBGYNSummary'
 cid_concepts[12018] = \
@@ -22284,7 +22292,7 @@ cid_concepts[10025] = \
          '_15cmFromTableCenterline',
          'InDetectorPlane',
          '_30cmAboveTabletop',
-         'EntranceExposureToA42cmBreastThickness',
+         'EntranceExposureToA4Point2cmBreastThickness',
          'AtSurfaceOfPatient']}
 
 name_for_cid[3689] = 'ECGGlobalWaveformDurations'
@@ -22426,12 +22434,12 @@ cid_concepts[4009] = \
 
 name_for_cid[3666] = 'P50Equations'
 cid_concepts[3666] = \
-{'DCM': ['IfAge30dayP50246',
-         'IfAge18yP50272',
-         'IfPremAge3daysP50199',
-         'IfAge1dayP50216',
-         'IfAge60yP50293',
-         'IfAge40yP50274']}
+{'DCM': ['IfAgeLesserThan30DayP50Equals24Point6',
+         'IfAgeLesserThan18YearsP50Equals27Point2',
+         'IfPremAgeLesserThan3DaysP50Equals19Point9',
+         'IfAgeLesserThan1DayP50Equals21Point6',
+         'IfAgeGreaterThan60YearsP50Equals29Point3',
+         'IfAgeLesserThan40YearsP50Equals27Point4']}
 
 name_for_cid[5] = 'TransducerApproach'
 cid_concepts[5] = \
@@ -22509,7 +22517,7 @@ cid_concepts[12262] = \
         'AccelerationTime',
         'EFSlope',
         'PeakReversalVelocityDuringAtrialContraction',
-        'Thickening',
+        'PercentThickening',
         'ACInterval',
         'BCSlope',
         'PreEjectionPeriod',
@@ -23271,9 +23279,9 @@ cid_concepts[12106] = \
 
 name_for_cid[7042] = 'CMDCTECCCalciumScoringPatientSizeCategories'
 cid_concepts[7042] = \
-{'DCM': ['Small320cmLateralThickness',
-         'Medium320380cmLateralThickness',
-         'Large380cmLateralThickness']}
+{'DCM': ['SmallLesserThan32Point0cmLateralThickness',
+         'Medium32Point0To38Point0cmLateralThickness',
+         'LargeGreaterThan38Point0cmLateralThickness']}
 
 name_for_cid[3451] = 'CalibrationObjects'
 cid_concepts[3451] = \
@@ -23771,7 +23779,7 @@ cid_concepts[3715] = \
 
 name_for_cid[6147] = 'ResponseCriteria'
 cid_concepts[6147] = \
-{'DCM': ['RECIST10', 'RECIST11', 'WHO'], 'NCIt': ['RANO']}
+{'DCM': ['RECIST1Point0', 'RECIST1Point1', 'WHO'], 'NCIt': ['RANO']}
 
 name_for_cid[7306] = 'HumanHipImplantPlanningLandmarks'
 cid_concepts[7306] = \
@@ -24094,7 +24102,9 @@ cid_concepts[3484] = \
 
 name_for_cid[12215] = 'EchocardiographyVenaCavae'
 cid_concepts[12215] = \
-{'LN': ['InferiorVenaCavaDiameter', 'InferiorVenaCavaCollapse', 'HeartRate']}
+{'LN': ['InferiorVenaCavaDiameter',
+        'InferiorVenaCavaPercentCollapse',
+        'HeartRate']}
 
 name_for_cid[7202] = 'SourceImagePurposesofReference'
 cid_concepts[7202] = \
