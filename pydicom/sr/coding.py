@@ -1,6 +1,7 @@
 from collections import namedtuple
 
 from pydicom.dataset import Dataset
+from pydicom.sr._snomed_dict import mapping as snomed_mapping
 
 
 Code = namedtuple(
@@ -42,8 +43,74 @@ class CodedConcept(Dataset):
             self.CodingSchemeVersion = str(scheme_version)
         # TODO: Enhanced Code Sequence Macro Attributes
 
+    def __eq__(self, other):
+        """Compares `self` and `other` for equality.
+
+        Parameters
+        ----------
+        other: Union[CodedConcept, pydicom.sr.coding.Code]
+            code
+
+        Returns
+        -------
+        bool
+            whether `self` and `other` are considered equal
+
+        """
+        if not isinstance(other, (self.__class__, Code)):
+            return False
+        if self.scheme_designator == 'SRT':
+            self_mapped = CodedConcept(
+                value=snomed_mapping['SRT'][self.value],
+                meaning='',
+                scheme_designator='SCT',
+                scheme_version=self.scheme_version
+            )
+        else:
+            self_mapped = CodedConcept(
+                value=self.value,
+                meaning='',
+                scheme_designator=self.scheme_designator,
+                scheme_version=self.scheme_version
+            )
+        if other.scheme_designator == 'SRT':
+            other_mapped = CodedConcept(
+                value=snomed_mapping['SRT'][other.value],
+                meaning='',
+                scheme_designator='SCT',
+                scheme_version=other.scheme_version
+            )
+        else:
+            other_mapped = CodedConcept(
+                value=other.value,
+                meaning='',
+                scheme_designator=other.scheme_designator,
+                scheme_version=other.scheme_version
+            )
+        return all([
+            self_mapped.value == other_mapped.value,
+            self_mapped.scheme_designator == other_mapped.scheme_designator,
+            self_mapped.scheme_version == other_mapped.scheme_version,
+        ])
+
+    def __ne__(self, other):
+        """Compares `self` and `other` for inequality.
+
+        Parameters
+        ----------
+        other: Union[CodedConcept, pydicom.sr.coding.Code]
+            code
+
+        Returns
+        -------
+        bool
+            whether `self` and `other` are not considered equal
+
+        """
+        return not (self == other)
+
     @property
-    def code_value(self):
+    def value(self):
         """str: value of either `CodeValue`, `LongCodeValue` or `URNCodeValue`
         attribute"""
         return getattr(
@@ -57,56 +124,6 @@ class CodedConcept(Dataset):
             )
         )
 
-    def __eq__(self, other):
-        """Compares `self` and `other` for equality.
-
-        Returns
-        -------
-        bool
-            whether `self` and `other` are considered equal
-
-        """
-        if not isinstance(other, (self.__class__, Code)):
-            return False
-        if isinstance(other, Code):
-            equality_criteria = [
-                self.code_value == other.value,
-                self.CodingSchemeDesignator == other.scheme_designator,
-                self.CodeMeaning == other.meaning,
-            ]
-            if (len(other) == 4 and
-                    hasattr(self, 'CodingSchemeVersion')):
-                equality_criteria.append(
-                    self.CodingSchemeVersion == other.scheme_version
-                )
-            return all(equality_criteria)
-        equality_criteria = [
-            self.code_value == other.code_value,
-            self.CodingSchemeDesignator == other.CodingSchemeDesignator,
-        ]
-        if (hasattr(other, 'CodingSchemeVersion') and
-                hasattr(self, 'CodingSchemeVersion')):
-            equality_criteria.append(
-                self.CodingSchemeVersion == other.CodingSchemeVersion
-            )
-        return all(equality_criteria)
-
-    def __ne__(self, other):
-        """Compares `self` and `other` for inequality.
-
-        Returns
-        -------
-        bool
-            whether `self` and `other` are not considered equal
-
-        """
-        return not (self == other)
-
-    @property
-    def value(self):
-        """str: value of the code"""
-        return self.CodeValue
-
     @property
     def meaning(self):
         """str: meaning of the code"""
@@ -115,12 +132,11 @@ class CodedConcept(Dataset):
     @property
     def scheme_designator(self):
         """str: designator of the coding scheme (e.g. ``"DCM"``)"""
-        return self.CodeMeaning
         return self.CodingSchemeDesignator
 
     @property
     def scheme_version(self):
-        """Union[str, None]: version of the coding scheme (if available)"""
+        """Union[str, None]: version of the coding scheme (if specified)"""
         return getattr(self, 'CodingSchemeVersion', None)
 
     def to_json(self):
