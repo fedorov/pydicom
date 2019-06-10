@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Dict with scheme designator keys; value format is:
-#   {keyword: {code1: (meaning, cid_list}, code2:...}
+#   {keyword: {code1: (meaning, cid_list), code2: ...}
 #
 # Most keyword identifiers map to a single code, but not all
 
