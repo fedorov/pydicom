@@ -91,7 +91,7 @@ class SourceImageForSegmentation(ImageContentItem):
     """Content item for Source Image for Segmentation"""
 
     def __init__(self, referenced_sop_class_uid, referenced_sop_instance_uid,
-                 referenced_frame_numbers=None):
+                 referenced_frame_number=None):
         """
         Parameters
         ----------
@@ -112,7 +112,7 @@ class SourceImageForSegmentation(ImageContentItem):
             ),
             referenced_sop_class_uid=referenced_sop_class_uid,
             referenced_sop_instance_uid=referenced_sop_instance_uid,
-            referenced_frame_numbers=referenced_frame_numbers,
+            referenced_frame_number=referenced_frame_number,
             relationship_type=RelationshipTypes.CONTAINS
         )
 
