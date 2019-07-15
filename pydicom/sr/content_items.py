@@ -374,7 +374,7 @@ class FindingSite(CodeContentItem):
             self.ContentSequence.append(modifier_item)
 
 
-class ReferencedSegmentationFrame(ContentSequence):
+class ReferencedSegmentationFrame(ImageContentItem):
 
     def __init__(self, sop_class_uid, sop_instance_uid, frame_number,
                  segment_number, source_image):
@@ -393,8 +393,7 @@ class ReferencedSegmentationFrame(ContentSequence):
             source image for segmentation
 
         """
-        super(ReferencedSegmentationFrame, self).__init__()
-        segmentation_item = ImageContentItem(
+        super(ReferencedSegmentationFrame, self).__init__(
             name=CodedConcept(
                 value='121214',
                 meaning='Referenced Segmentation Frame',
@@ -405,16 +404,16 @@ class ReferencedSegmentationFrame(ContentSequence):
             referenced_frame_number=frame_number,
             referenced_segment_number=segment_number
         )
-        self.append(segmentation_item)
+        self.ContentSequence = ContentSequence()
         if not isinstance(source_image, SourceImageForSegmentation):
             raise TypeError(
                 'Argument "source_image" must have type '
                 'SourceImageForSegmentation.'
             )
-        self.append(source_image)
+        self.ContentSequence.append(source_image)
 
 
-class ReferencedSegmentation(ContentSequence):
+class ReferencedSegment(ImageContentItem):
 
     def __init__(self, sop_class_uid, sop_instance_uid, segment_number,
                  frame_numbers, source_images=None, source_series=None):
@@ -428,15 +427,14 @@ class ReferencedSegmentation(ContentSequence):
         frame_numbers: List[int]
             numbers of the frames to which the reference applies
         segment_number: int
-            number of the segment to which the refernce applies
+            number of the segment to which the reference applies
         source_images: Union[List[pydicom.sr.content_items.SourceImageForSegmentation], None], optional
             source images for segmentation
         source_series: Union[pydicom.sr.content_items.SourceSeriesForSegmentation, None], optional
             source series for segmentation
 
         """
-        super(ReferencedSegmentation, self).__init__()
-        segmentation_item = ImageContentItem(
+        super(ReferencedSegment, self).__init__(
             name=CodedConcept(
                 value='121191',
                 meaning='Referenced Segment',
@@ -444,10 +442,10 @@ class ReferencedSegmentation(ContentSequence):
             ),
             referenced_sop_class_uid=sop_class_uid,
             referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_numbers,
-            referenced_segment_number=segment_number
+            referenced_frame_numbers=frame_numbers,
+            referenced_segment_numbers=segment_number
         )
-        self.append(segmentation_item)
+        self.ContentSequence = ContentSequence()
         if source_images is not None:
             for image in source_images:
                 if not isinstance(image, SourceImageForSegmentation):
@@ -455,7 +453,7 @@ class ReferencedSegmentation(ContentSequence):
                         'Items of argument "source_images" must have type '
                         'SourceImageForSegmentation.'
                     )
-                self.append(image)
+                self.ContentSequence.append(image)
         elif source_series is not None:
             if not isinstance(source_series,
                               SourceSeriesForSegmentation):
@@ -463,7 +461,7 @@ class ReferencedSegmentation(ContentSequence):
                     'Argument "source_series" must have type '
                     'SourceSeriesForSegmentation.'
                 )
-            self.append(source_series)
+            self.ContentSequence.append(source_series)
         else:
             raise ValueError(
                 'One of the following two arguments must be provided: '

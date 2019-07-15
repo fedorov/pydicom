@@ -19,7 +19,7 @@ from pydicom.sr.content_items import (
     ImageRegion3D,
     VolumeSurface,
     RealWorldValueMap,
-    ReferencedSegmentation,
+    ReferencedSegment,
     ReferencedSegmentationFrame,
 )
 from pydicom.sr import codes
@@ -1030,7 +1030,7 @@ class _ROIMeasurementsAndQualitativeEvaluations(
             identifier for tracking measurements
         referenced_regions: Union[List[pydicom.sr.content_items.ImageRegion], List[pydicom.sr.content_items.ImageRegion3D], None], optional
             regions of interest in source image(s)
-        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, pydicom.sr.content_items.ReferencedSegmentationFrame, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegment, pydicom.sr.content_items.ReferencedSegmentationFrame, None], optional
             segmentation for region of interest in source image
         referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
@@ -1102,12 +1102,12 @@ class _ROIMeasurementsAndQualitativeEvaluations(
             group_item.ContentSequence.append(referenced_volume_surface)
         elif referenced_segmentation is not None:
             if not isinstance(referenced_segmentation,
-                              (ReferencedSegmentation,
+                              (ReferencedSegment,
                                ReferencedSegmentationFrame)
                              ):
                 raise TypeError(
                     'Argument "referenced_segmentation" must have type '
-                    'ReferencedSegmentation or '
+                    'ReferencedSegment or '
                     'ReferencedSegmentationFrame.'
                 )
             group_item.ContentSequence.append(referenced_segmentation)
@@ -1202,7 +1202,7 @@ class VolumetricROIMeasurementsAndQualitativeEvaluations(
             regions of interest in source image(s)
         referenced_volume_surface: Union[pydicom.sr.content_items.VolumeSurface, None], optional
             volume of interest in source image(s)
-        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegmentation, None], optional
+        referenced_segmentation: Union[pydicom.sr.content_items.ReferencedSegment, None], optional
             segmentation for region of interest in source image
         referenced_real_world_value_map: Union[pydicom.sr.content_items.RealWorldValueMap, None], optional
             referenced real world value map for region of interest
