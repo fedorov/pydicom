@@ -129,7 +129,7 @@ class SourceSeriesForSegmentation(UIDRefContentItem):
             Series Instance UID
 
         """
-        super(SourceImageForSegmentation, self).__init__(
+        super(SourceSeriesForSegmentation, self).__init__(
             name=CodedConcept(
                 value='121232',
                 meaning='Source Series for Segmentation',
