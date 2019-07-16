@@ -401,8 +401,8 @@ class ReferencedSegmentationFrame(ImageContentItem):
             ),
             referenced_sop_class_uid=sop_class_uid,
             referenced_sop_instance_uid=sop_instance_uid,
-            referenced_frame_number=frame_number,
-            referenced_segment_number=segment_number
+            referenced_frame_numbers=frame_number,
+            referenced_segment_numbers=segment_number
         )
         self.ContentSequence = ContentSequence()
         if not isinstance(source_image, SourceImageForSegmentation):

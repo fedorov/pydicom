@@ -32,6 +32,9 @@ from pydicom.sr.content_items import (
     VolumeSurface,
     SourceImageForRegion,
     SourceImageForSegmentation,
+    ReferencedSegment,
+    ReferencedSegmentationFrame,
+    SourceSeriesForSegmentation
 )
 from pydicom.uid import generate_uid
 from pydicom.valuerep import DS
@@ -382,16 +385,43 @@ class TestVolumeSurface(unittest.TestCase):
         pass
 
 
-class TestReferencedSegmentation(unittest.TestCase):
+class TestReferencedSegment(unittest.TestCase):
 
     def setUp(self):
-        pass
+        super(TestReferencedSegment, self).setUp()
+        self._sop_class_uid = generate_uid()
+        self._sop_instance_uid = generate_uid()
+        self._segment_number = 1
+        self._frame_numbers = [1,2]
+        self._source_series = SourceSeriesForSegmentation(referenced_series_instance_uid=generate_uid())
+
+    def test_construction(self):
+        with ReferencedSegment(sop_class_uid=self._sop_class_uid,
+                               sop_instance_uid=self._sop_instance_uid,
+                               segment_number=self._segment_number,
+                               frame_numbers=self._frame_numbers,
+                               source_series=self._source_series):
+            pass
 
 
 class TestReferencedSegmentationFrame(unittest.TestCase):
 
     def setUp(self):
-        pass
+        super(TestReferencedSegmentationFrame, self).setUp()
+        self._sop_class_uid = generate_uid()
+        self._sop_instance_uid = generate_uid()
+        self._segment_number = 1
+        self._frame_number = 1
+        self._source_image = SourceImageForSegmentation(referenced_sop_class_uid=generate_uid(),
+                                                        referenced_sop_instance_uid=generate_uid())
+
+    def test_construction(self):
+        with ReferencedSegmentationFrame(sop_class_uid=self._sop_class_uid,
+                                         sop_instance_uid=self._sop_instance_uid,
+                                         segment_number=self._segment_number,
+                                         frame_number=self._frame_number,
+                                         source_image=self._source_image):
+            pass
 
 
 class TestPlanarROIMeasurementsAndQualitativeEvaluations(unittest.TestCase):
